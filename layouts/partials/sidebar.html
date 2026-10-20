@@ -2,7 +2,7 @@
 <aside class="sidebar">
   <h2 class="sidebar-title">Product Category</h2>
   <ul class="sidebar-list">
-    {{- range site.Data.categories }}
+    {{- range site.Data.sidebar }}
     <li>
       <a href="{{ .url | relURL }}" class="{{ if hasPrefix $current .url }}is-active{{ end }}">{{ .name }}</a>
     </li>

@@ -13,6 +13,12 @@
         {{- end }}
 
         {{- $pages := .Pages.ByWeight }}
+        {{- with .Params.list_from }}
+          {{- with site.GetPage . }}
+            {{- $pages = .Pages.ByWeight }}
+          {{- end }}
+        {{- end }}
+
         {{- if $pages }}
         <div class="product-grid">
           {{- range $pages }}
