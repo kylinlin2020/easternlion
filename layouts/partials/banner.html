@@ -1,0 +1,16 @@
+{{- $image := .Params.banner_image | default "images/banner/about.jpg" -}}
+{{- $title := .Params.banner_title | default .Title -}}
+<section class="page-banner{{ if .Params.banner_hide_title }} page-banner--plain{{ end }}" style="background-image:url('{{ $image | relURL }}')">
+  <div class="banner-inner">
+    {{- if .Params.banner_logo }}
+    <img class="banner-logo" src="{{ "images/logo-white.png" | relURL }}" alt="{{ site.Params.company }}">
+    {{- end }}
+    {{- with .Params.banner_sub }}
+    <p class="banner-sub">{{ . }}</p>
+    {{- end }}
+    <h1{{ if .Params.banner_hide_title }} class="sr-only"{{ end }}>{{ $title }}</h1>
+    {{- with .Params.banner_text }}
+    <p class="banner-text">{{ . }}</p>
+    {{- end }}
+  </div>
+</section>

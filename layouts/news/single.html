@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <article class="rich" style="max-width:900px;margin:0 auto">
+      <h1 style="color:#fff;margin-bottom:16px">{{ .Title }}</h1>
+      <div class="article-meta">
+        {{ .Date.Format "2006-01-02" }}
+        {{- with .Params.author }} &nbsp;|&nbsp; Author: {{ . }}{{ end }}
+      </div>
+      {{ .Content }}
+      <p style="margin-top:40px"><a href="{{ "news/" | relURL }}">&laquo; Back to News</a></p>
+    </article>
+  </div>
+</section>
+{{ end }}

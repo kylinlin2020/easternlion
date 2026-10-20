@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <div class="inner-layout">
+      {{ partial "sidebar.html" . }}
+
+      <div>
+        {{- with .Content }}
+        <div class="rich" style="margin-bottom:28px">{{ . }}</div>
+        {{- end }}
+
+        {{- $pages := .Pages.ByWeight }}
+        {{- if $pages }}
+        <div class="product-grid">
+          {{- range $pages }}
+          {{ partial "product-card.html" . }}
+          {{- end }}
+        </div>
+        {{- else }}
+        <p>Products coming soon. Please contact us for the full catalogue.</p>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

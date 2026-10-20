@@ -1,0 +1,101 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+{{- $cols := .Params.columns -}}
+{{- $rows := .Params.rows -}}
+{{- $product := .Title -}}
+{{- $diesel := eq (len $cols) 11 -}}
+{{- $catURL := "/products/" -}}
+{{- if eq .Params.category "Diesel Generator Set" }}{{ $catURL = "/products/diesel-generator-set/" }}{{ end -}}
+
+<section class="inner-main">
+  <div class="container">
+    <div class="inner-layout">
+      {{ partial "sidebar.html" . }}
+
+      <div>
+        <div class="product-hero">
+          <div class="product-gallery">
+            <div class="gallery-main">
+              <img id="productImage" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            </div>
+            {{- if gt (len .Params.images) 1 }}
+            <div class="thumbs">
+              {{- range $i, $im := .Params.images }}
+              <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" data-src="{{ $im | relURL }}" aria-label="Image {{ add $i 1 }}">
+                <img src="{{ $im | relURL }}" alt="{{ $product }} thumbnail {{ add $i 1 }}" loading="lazy">
+              </button>
+              {{- end }}
+            </div>
+            {{- end }}
+          </div>
+
+          <div class="product-info">
+            <h1>{{ .Title }}</h1>
+            <p class="product-meta">Category: <a href="{{ $catURL | relURL }}">{{ .Params.category }}</a></p>
+
+            <div class="qty">
+              <button type="button" data-delta="-1" aria-label="Decrease quantity">&minus;</button>
+              <input type="text" value="1" aria-label="Quantity">
+              <button type="button" data-delta="1" aria-label="Increase quantity">+</button>
+            </div>
+
+            <div class="product-actions">
+              <a class="btn btn-inquire" href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Inquire</a>
+              <a class="btn btn-basket" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="desc-head">
+          <span class="red">Product Description</span>
+          <span class="bar"></span>
+        </div>
+
+        {{- if $rows }}
+        <div class="table-scroll">
+          <table class="spec-table">
+            <thead>
+              {{- if $diesel }}
+              <tr>
+                <th colspan="5">Genset Specification 400/230V 50HZ</th>
+                <th class="blue" colspan="2">Engine</th>
+                <th colspan="2">Brushless Alternator</th>
+                <th class="blue">Controller</th>
+                <th>Datasheet</th>
+              </tr>
+              {{- end }}
+              <tr>
+                {{- range $cols }}
+                <th>{{ . }}</th>
+                {{- end }}
+              </tr>
+            </thead>
+            <tbody>
+              {{- range $rows }}
+              <tr>
+                {{- range $i, $c := . }}
+                {{- if and $diesel (eq $i 10) }}
+                <td><a href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Detail</a></td>
+                {{- else }}
+                <td>{{ $c }}</td>
+                {{- end }}
+                {{- end }}
+              </tr>
+              {{- end }}
+            </tbody>
+          </table>
+        </div>
+        {{- end }}
+
+        <div class="rich" style="margin-top:30px">
+          {{ .Content }}
+        </div>
+
+        <p class="spec-note">Ratings are indicative. Please contact us for the latest datasheet and confirmation of availability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

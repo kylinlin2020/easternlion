@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    {{- with .Content }}
+    <div class="rich" style="max-width:900px;margin:0 auto 34px">{{ . }}</div>
+    {{- end }}
+
+    <div class="news-list">
+      {{- range .Pages.ByDate.Reverse }}
+      <article class="news-item">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+        <p>{{ .Summary | plainify | truncate 190 }}</p>
+        <p style="margin-top:12px"><a href="{{ .RelPermalink }}">Read More &raquo;</a></p>
+      </article>
+      {{- else }}
+      <p>No news yet.</p>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{ end }}

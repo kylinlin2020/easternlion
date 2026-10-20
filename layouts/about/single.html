@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <h2 class="inner-title">{{ .Params.about_heading | default "About Us" }}</h2>
+    {{ partial "about-nav.html" . }}
+    <div class="rich">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

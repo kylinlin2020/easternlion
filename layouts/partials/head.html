@@ -1,0 +1,29 @@
+{{- $title := .Title -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s - %s" site.Title (site.Params.slogan | default "Golden Supplier in China") -}}
+{{- else -}}
+  {{- $title = printf "%s - %s" .Title site.Title -}}
+{{- end -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+{{- $desc := .Description | default .Params.summary | default site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+<meta name="keywords" content="{{ .Params.keywords | default "diesel generator set, brush alternator, brushless alternator, generator manufacturer, Eastern Lion" }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+
+<link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}">
+
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+{{ block "head" . }}{{ end }}

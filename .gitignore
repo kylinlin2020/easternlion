@@ -1,0 +1,16 @@
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# local
+node_modules/
+.openchamber/
+.wrangler/

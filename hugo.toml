@@ -1,0 +1,85 @@
+# =============================================================
+#  Fuan Eastern Lion Electric Machines Co., Ltd
+#  Hugo static site  |  Cloudflare Pages ready
+# =============================================================
+
+baseURL              = "https://www.easternlion.cn/"
+title                = "Fuan Eastern Lion Electric Machines Co., Ltd"
+languageCode         = "en-US"
+defaultContentLanguage = "en"
+enableRobotsTXT      = true
+enableGitInfo        = false
+summaryLength        = 30
+timeZone             = "Asia/Shanghai"
+capitalizeListTitles = false
+
+[params]
+  company       = "Fuan Eastern Lion Electric Machines Co., Ltd"
+  tagline       = "Golden Supplier in China"
+  slogan        = "Thirty Years Professional Quality"
+  phone         = "+86-591-87559333"
+  mobile        = "+86-13950513258"
+  whatsapp      = "8613950513258"
+  fax           = "+86-0593-6158886"
+  email         = "sales@easternlion.cn"
+  emailService  = "service@easternlion.cn"
+  website       = "www.easternlion.cn"
+  address       = "No.36, XiaYang, BanZhong Industry Area, Fuan, Fujian, China"
+  officeAddress = "Office 23, 4/F, Building #2, Part 12, Rongxinyangzhong City, East Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China"
+  description   = "Fuan Eastern Lion Electric Machines Co., Ltd is a professional manufacturer of famous Chinese generator and diesel generator set, with more than 30 years of development."
+  facebook      = "https://www.facebook.com/"
+  linkedin      = "https://www.linkedin.com/"
+  youtube       = "https://www.youtube.com/"
+  instagram     = "https://www.instagram.com/"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
+
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[minify]
+  disableXML = true
+
+[imaging]
+  quality        = 82
+  resampleFilter = "Lanczos"
+
+[[menu.main]]
+  name   = "Home"
+  url    = "/"
+  weight = 1
+
+[[menu.main]]
+  name   = "Products"
+  url    = "/products/"
+  weight = 2
+
+[[menu.main]]
+  name   = "Company Profile"
+  url    = "/about/"
+  weight = 3
+
+[[menu.main]]
+  name   = "Service"
+  url    = "/service/"
+  weight = 4
+
+[[menu.main]]
+  name   = "Video"
+  url    = "/video/"
+  weight = 5
+
+[[menu.main]]
+  name   = "FAQ"
+  url    = "/faq/"
+  weight = 6
+
+[[menu.main]]
+  name   = "Contact Us"
+  url    = "/contact/"
+  weight = 7

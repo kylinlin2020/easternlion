@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="color:#fff">{{ .Title }}</h2>
+    </div>
+
+    <div class="category-grid">
+      {{- range site.Data.categories }}
+      <a class="category-card" href="{{ .url | relURL }}">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+        <span class="label">{{ .name }}</span>
+      </a>
+      {{- end }}
+    </div>
+
+    {{- with .Content }}
+    <div class="rich" style="max-width:900px;margin:44px auto 0">
+      {{ . }}
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

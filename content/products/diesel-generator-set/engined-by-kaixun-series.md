@@ -1,0 +1,201 @@
+{
+  "title": "Engined By Kaixun Series",
+  "description": "Kaixun series diesel generator set, 50 Hz, prime and standby power ratings with engine, alternator and controller details.",
+  "summary": "Kaixun series diesel generator set, 50 Hz, prime and standby power ratings with engine, alternator and controller details.",
+  "banner_image": "/images/banner/product.jpg",
+  "banner_title": "Product Detail",
+  "image": "/images/products/engined-by-kaixun-series.jpg",
+  "images": [
+    "/images/products/engined-by-kaixun-series.jpg"
+  ],
+  "category": "Diesel Generator Set",
+  "weight": 90,
+  "breadcrumb": [
+    {
+      "name": "Products",
+      "url": "/products/"
+    },
+    {
+      "name": "Diesel Generator Set",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "Engined By Kaixun Series"
+    }
+  ],
+  "columns": [
+    "Model",
+    "Prime power (kW)",
+    "Prime power (kVA)",
+    "Standby power (kW)",
+    "Standby power (kVA)",
+    "Engine model",
+    "Engine power (kW)",
+    "Alternator model",
+    "Alternator power (kW)",
+    "Controller",
+    "Datasheet"
+  ],
+  "rows": [
+    [
+      "GFS-167K",
+      "120",
+      "150",
+      "133",
+      "167",
+      "KP8D220D2",
+      "171",
+      "EL 274F",
+      "128",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-222K",
+      "160",
+      "200",
+      "178",
+      "222",
+      "KP8D280D2",
+      "206",
+      "EL 274H",
+      "160",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-250K",
+      "180",
+      "225",
+      "200",
+      "250",
+      "KP9D310D2",
+      "227",
+      "EL 274J",
+      "180",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-306K",
+      "220",
+      "275",
+      "244",
+      "306",
+      "G128ZLD11",
+      "308",
+      "EL 314DS",
+      "220",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-333K",
+      "240",
+      "300",
+      "267",
+      "333",
+      "G128ZLD11",
+      "308",
+      "EL 314D",
+      "240",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-361K",
+      "260",
+      "325",
+      "289",
+      "361",
+      "G128ZLD22",
+      "330",
+      "EL 314E",
+      "260",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-444K",
+      "320",
+      "400",
+      "356",
+      "444",
+      "KP425",
+      "425",
+      "EL 314G",
+      "320",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-556K",
+      "400",
+      "500",
+      "444",
+      "556",
+      "KP515",
+      "515",
+      "EL 354D",
+      "400",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-750K",
+      "540",
+      "675",
+      "600",
+      "750",
+      "KPV630",
+      "630",
+      "EL 354GS",
+      "540",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-889K",
+      "640",
+      "800",
+      "711",
+      "889",
+      "KPV780",
+      "780",
+      "EL 404D",
+      "640",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFS-1111K",
+      "800",
+      "1000",
+      "889",
+      "1111",
+      "KPV1100",
+      "1030",
+      "EL 404F",
+      "800",
+      "Mebay 6120",
+      "Detail"
+    ],
+    [
+      "GFC-1839K",
+      "1000",
+      "1250",
+      "1111",
+      "1389",
+      "KPV4TDS",
+      "1310",
+      "EL 404H",
+      "1000",
+      "Mebay 6120",
+      "Detail"
+    ]
+  ]
+}
+
+Eastern Lion Kaixun series diesel generator sets combine Kaixun diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
+
+All generator sets are tested at full load before shipment. Please contact us for a detailed datasheet, pricing and delivery time.

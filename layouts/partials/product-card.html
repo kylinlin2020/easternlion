@@ -1,0 +1,14 @@
+{{- $img := .Params.image -}}
+<article class="product-card">
+  <a href="{{ .RelPermalink }}">
+    <div class="thumb">
+      {{- with $img }}
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      {{- else }}
+      <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Title }}" loading="lazy">
+      {{- end }}
+    </div>
+    <h3>{{ .Title }}</h3>
+    <span class="more">View details</span>
+  </a>
+</article>

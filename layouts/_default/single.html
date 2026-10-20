@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+<section class="inner-main">
+  <div class="container">
+    {{ with .Params.about_nav }}{{ partial "about-nav.html" $ }}{{ end }}
+    <div class="rich">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

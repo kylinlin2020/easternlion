@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="{{ if .IsHome }}is-home{{ else }}is-inner{{ end }}">
+  <a class="sr-only" href="#content">Skip to content</a>
+  {{ partial "header.html" . }}
+
+  <main id="content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ if .IsHome }}
+    {{ partial "footer.html" (dict "light" true "page" .) }}
+  {{ else }}
+    {{ partial "footer.html" (dict "light" false "page" .) }}
+  {{ end }}
+
+  {{ partial "float-rail.html" . }}
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('mainNav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      var top = document.getElementById('backToTop');
+      if (top) {
+        top.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      var hero = document.querySelector('.hero');
+      if (hero) {
+        var slides = hero.querySelectorAll('.hero-slide');
+        var dots = hero.querySelectorAll('.hero-dots button');
+        var index = 0;
+        var show = function (i) {
+          index = (i + slides.length) % slides.length;
+          slides.forEach(function (s, k) { s.classList.toggle('is-active', k === index); });
+          dots.forEach(function (d, k) { d.classList.toggle('is-active', k === index); });
+        };
+        dots.forEach(function (d, k) {
+          d.addEventListener('click', function () { show(k); });
+        });
+        if (slides.length > 1) {
+          setInterval(function () { show(index + 1); }, 5500);
+        }
+      }
+
+      var mainImg = document.querySelector('.gallery-main img');
+      var thumbs = document.querySelectorAll('.thumbs button');
+      if (mainImg && thumbs.length) {
+        thumbs.forEach(function (b) {
+          b.addEventListener('click', function () {
+            mainImg.src = b.getAttribute('data-src');
+            thumbs.forEach(function (x) { x.classList.remove('is-active'); });
+            b.classList.add('is-active');
+          });
+        });
+      }
+
+      var qtyInput = document.querySelector('.qty input');
+      if (qtyInput) {
+        document.querySelectorAll('.qty button').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var v = parseInt(qtyInput.value, 10) || 1;
+            v += parseInt(b.getAttribute('data-delta'), 10) || 0;
+            qtyInput.value = Math.max(1, v);
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

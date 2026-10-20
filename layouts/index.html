@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{- $hero := .Params.hero -}}
+<section class="hero" aria-label="Featured">
+  {{- range $i, $s := $hero }}
+  <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
+    <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+  </div>
+  {{- end }}
+  {{- if gt (len $hero) 1 }}
+  <div class="hero-dots">
+    {{- range $i, $s := $hero }}
+    <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" aria-label="Slide {{ add $i 1 }}"></button>
+    {{- end }}
+  </div>
+  {{- end }}
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">{{ .Params.product_title | default "Product Center" }}</h2>
+      <div class="section-lead rich">{{ .Content }}</div>
+    </div>
+
+    <div class="category-grid">
+      {{- range site.Data.categories }}
+      <a class="category-card" href="{{ .url | relURL }}">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+        <span class="label">{{ .name }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{- with .Params.extra_section }}
+<section class="section" style="background:#0b0b0b;color:#cfcfcf;">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" style="color:#fff">{{ .title }}</h2>
+    </div>
+    <div class="rich" style="max-width:900px;margin:0 auto">{{ .text | markdownify }}</div>
+  </div>
+</section>
+{{- end }}
+{{ end }}

@@ -1,0 +1,14 @@
+{{- $p := .RelPermalink -}}
+{{- $items := slice
+  (dict "name" "Company Profile" "url" "/about/")
+  (dict "name" "Development History" "url" "/about/history/")
+  (dict "name" "Our Team" "url" "/about/team/")
+  (dict "name" "Qualification" "url" "/about/qualification/")
+  (dict "name" "News Center" "url" "/news/")
+  (dict "name" "Our Workshop" "url" "/about/workshop/")
+-}}
+<nav class="about-nav" aria-label="About navigation">
+  {{- range $items }}
+  <a href="{{ .url | relURL }}" class="{{ if eq $p .url }}is-active{{ end }}">{{ .name }}</a>
+  {{- end }}
+</nav>
