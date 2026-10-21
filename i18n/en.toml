@@ -273,3 +273,24 @@ other = "Write another inquiry"
 
 [compare_title]
 other = "Other series in the same power range"
+
+[latest_news]
+other = "Latest news"
+
+[spec_at_a_glance]
+other = "Specification at a glance"
+[spec_category]
+other = "Category"
+[spec_type]
+other = "Type"
+[spec_frequency]
+other = "Frequency"
+[spec_power]
+other = "Power range"
+[spec_models]
+other = "Models"
+[spec_note]
+other = "Power ranges are taken from the standard 50 / 60 Hz rating tables on each product page. Other voltages and ratings are available on request."
+
+[skip_to_content]
+other = "Skip to content"

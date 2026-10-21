@@ -7,11 +7,11 @@
 - name: Diesel Generator Set
   key: cat_diesel_generator_set
   url: /products/diesel-generator-set/
-  image: /images/home/cat-diesel.png
+  image: /images/home/cat-diesel.jpg
   description: 50 Hz and 60 Hz generator sets powered by Cummins, Perkins, Yuchai, YTO and other engines.
 
 - name: Brushless Alternator
   key: cat_brushless_alternator
   url: /products/brushless-alternator/
-  image: /images/home/cat-brushless.png
+  image: /images/home/cat-brushless.jpg
   description: EL series brushless alternators with SAE couplings.

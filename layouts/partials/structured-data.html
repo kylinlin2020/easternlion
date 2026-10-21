@@ -1,0 +1,108 @@
+{{- $site := site -}}
+{{- $company := site.Params.company -}}
+
+{{/* ---------- Organization + WebSite (all pages) ---------- */}}
+<script type="application/ld+json">
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "@id" (printf "%s#organization" site.Home.Permalink)
+  "name" $company
+  "alternateName" "Easternlion"
+  "url" site.Home.Permalink
+  "logo" (printf "%simages/logo.png" site.Home.Permalink)
+  "image" (printf "%simages/logo.png" site.Home.Permalink)
+  "description" site.Params.description
+  "foundingDate" "1987"
+  "email" site.Params.email
+  "telephone" site.Params.phone
+  "faxNumber" site.Params.fax
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" "No.36 XiaYang, BanZhong Industry Area"
+    "addressLocality" "Fuan"
+    "addressRegion" "Fujian"
+    "postalCode" "355000"
+    "addressCountry" "CN")
+  "contactPoint" (slice (dict
+    "@type" "ContactPoint"
+    "telephone" site.Params.phone
+    "email" site.Params.email
+    "contactType" "sales"
+    "areaServed" (slice "CN" "Asia" "Europe" "Africa" "America")
+    "availableLanguage" (slice "en" "zh")))
+-}}
+{{- $website := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "@id" (printf "%s#website" site.Home.Permalink)
+  "url" site.Home.Permalink
+  "name" $company
+  "publisher" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "inLanguage" site.Language.Lang
+-}}
+{{- dict "@context" "https://schema.org" "@graph" (slice $org $website) | jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+
+{{- if .IsHome }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "name" site.Title
+  "url" .Permalink
+  "isPartOf" (dict "@id" (printf "%s#website" site.Home.Permalink))
+  "about" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default site.Params.description)
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- if and .IsPage .Params.columns }}
+<script type="application/ld+json">
+{{- $model := "" -}}
+{{- with .Params.rows }}{{ $model = index . 0 0 }}{{ end -}}
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "Product"
+  "name" .Title
+  "description" (.Description | default (.Summary | plainify))
+  "sku" $model
+  "mpn" $model
+  "image" (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" (.Params.image | default "")))
+  "category" .Params.category
+  "brand" (dict "@type" "Brand" "name" "Eastern Lion")
+  "manufacturer" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "additionalProperty" (slice
+    (dict "@type" "PropertyValue" "name" "Frequency" "value" (printf "%v Hz" .Params.hz))
+    (dict "@type" "PropertyValue" "name" "Power range" "value" (printf "%v – %v kW" .Params.power_min .Params.power_max))
+    (dict "@type" "PropertyValue" "name" "Type" "value" .Params.product_kind))
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- if .Params.breadcrumb }}
+<script type="application/ld+json">
+{{- $items := slice -}}
+{{- $i := 1 -}}
+{{- range .Params.breadcrumb -}}
+  {{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" $i
+      "name" .name
+      "item" (cond (isset . "url") (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" .url)) .Permalink)) -}}
+  {{- $i = add $i 1 -}}
+{{- end -}}
+{{- $items = $items | append (dict
+    "@type" "ListItem"
+    "position" $i
+    "name" $.Title
+    "item" $.Permalink) -}}
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "BreadcrumbList"
+  "itemListElement" $items
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}

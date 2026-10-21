@@ -1,24 +1,47 @@
 {{- $title := .Title -}}
 {{- if .IsHome -}}
-  {{- $title = printf "%s - %s" site.Title (site.Params.slogan | default "Golden Supplier in China") -}}
+  {{- $title = printf "%s - %s" site.Params.company site.Params.slogan -}}
 {{- else -}}
-  {{- $title = printf "%s - %s" .Title site.Title -}}
+  {{- $title = printf "%s | %s" .Title site.Params.company -}}
 {{- end -}}
+{{- $desc := .Description | default (.Summary | plainify | truncate 160) | default site.Params.description -}}
+{{- $img := .Params.image | default .Params.banner_image | default "images/logo.png" -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ $title }}</title>
-{{- $desc := .Description | default .Params.summary | default site.Params.description }}
 <meta name="description" content="{{ $desc }}">
-<meta name="keywords" content="{{ .Params.keywords | default "diesel generator set, brush alternator, brushless alternator, generator manufacturer, Eastern Lion" }}">
+{{- with .Params.keywords }}
+<meta name="keywords" content="{{ . }}">
+{{- else }}
+<meta name="keywords" content="diesel generator set, brush alternator, brushless alternator, generator manufacturer, Eastern Lion, 福建东方电机">
+{{- end }}
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a1622">
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- /* language alternates */}}
+{{- range .Translations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- if .IsTranslated }}
+<link rel="alternate" hreflang="x-default" href="{{ (index (where site.Home.AllTranslations "Language.Lang" "en") 0).Permalink }}">
+{{- end }}
+
+{{- /* Open Graph / Twitter */}}
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ site.Params.company }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{- with .Params.image }}
-<meta property="og:image" content="{{ . | absURL }}">
+<meta property="og:image" content="{{ $img | absURL }}">
+<meta property="og:locale" content="{{ if eq site.Language.Lang "zh" }}zh_CN{{ else }}en_US{{ end }}">
+{{- if .IsPage }}
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 {{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img | absURL }}">
 
 <link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
 <link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}">
@@ -26,4 +49,5 @@
 {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
+{{ partial "structured-data.html" . }}
 {{ block "head" . }}{{ end }}

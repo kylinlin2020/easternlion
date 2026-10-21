@@ -4,17 +4,89 @@
 
 <section class="inner-main">
   <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ i18n "product_center_eyebrow" }}</span>
+      <h2>{{ i18n "product_center" }}</h2>
+    </div>
+
     <div class="category-grid">
       {{- range site.Data.categories }}
-      <a class="category-card" href="{{ .url | relLangURL }}">
-        <img src="{{ .image | relURL }}" alt="{{ i18n .key }}" loading="lazy">
-        <span class="label">{{ .name }}</span>
+      <a class="card category-card" href="{{ .url | relLangURL }}">
+        <span class="media">
+          <img src="{{ .image | relURL }}" alt="{{ i18n .key }}" loading="lazy">
+          <span class="label">{{ i18n .key }}</span>
+        </span>
+        <span class="body">
+          <h3>{{ i18n .key }}</h3>
+          <p>{{ .description | default (i18n .key) }}</p>
+          <span class="more">
+            {{ i18n "view_details" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          </span>
+        </span>
       </a>
       {{- end }}
     </div>
 
+    <h3 class="block-title" style="margin-top:56px">{{ i18n "spec_at_a_glance" }}</h3>
+    <div class="separator"></div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>{{ i18n "spec_category" }}</th>
+              <th>{{ i18n "spec_type" }}</th>
+              <th>{{ i18n "spec_frequency" }}</th>
+              <th>{{ i18n "spec_power" }}</th>
+              <th>{{ i18n "spec_models" }}</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- $specs := slice
+              (dict "key" "cat_brush_alternator" "path" "/products/brush-alternator/")
+              (dict "key" "cat_brushless_alternator" "path" "/products/brushless-alternator/")
+              (dict "key" "cat_diesel_generator_set" "path" "/products/diesel-generator-set/")
+              (dict "key" "cat_50hz_diesel_generator_set" "path" "/products/50hz-diesel-generator-set/")
+              (dict "key" "cat_60hz_diesel_generator_set" "path" "/products/60hz-diesel-generator-set/")
+            -}}
+            {{- range $specs }}
+            {{- $sec := site.GetPage .path -}}
+            {{- $ps := $sec.Pages -}}
+            {{- with $sec.Params.list_from -}}
+              {{- with site.GetPage . }}{{ $ps = .Pages }}{{ end -}}
+            {{- end -}}
+            {{- $ps = where $ps "Params.product_kind" "!=" nil -}}
+            {{- $min := 99999.0 -}}
+            {{- $max := 0.0 -}}
+            {{- $kind := "" -}}
+            {{- $hz := 50 -}}
+            {{- range $ps -}}
+              {{- if lt .Params.power_min $min }}{{ $min = .Params.power_min }}{{ end -}}
+              {{- if gt .Params.power_max $max }}{{ $max = .Params.power_max }}{{ end -}}
+              {{- if not $kind }}{{ $kind = .Params.product_kind }}{{ end -}}
+              {{- if eq .Params.hz 60 }}{{ $hz = 60 }}{{ end -}}
+            {{- end -}}
+            {{- if eq $min 99999.0 }}{{ $min = 0.0 }}{{ end -}}
+            <tr>
+              <td><a href="{{ .path | relLangURL }}">{{ i18n .key }}</a></td>
+              <td>{{ if eq $kind "alternator" }}{{ i18n "filter_alternator" }}{{ else }}{{ i18n "filter_genset" }}{{ end }}</td>
+              <td>{{ $hz }}Hz</td>
+              <td>{{ $min }} – {{ $max }} kW</td>
+              <td>{{ len $ps }}</td>
+              <td><a href="{{ .path | relLangURL }}">{{ i18n "view_details" }} →</a></td>
+            </tr>
+            {{- end }}
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">{{ i18n "spec_note" }}</p>
+    </div>
+
     {{- with .Content }}
-    <div class="rich" style="max-width:900px;margin:44px auto 0">
+    <div class="rich" style="max-width:900px;margin:40px auto 0">
       {{ . }}
     </div>
     {{- end }}

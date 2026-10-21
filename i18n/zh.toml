@@ -272,3 +272,24 @@ other = "再写一条询价"
 
 [compare_title]
 other = "同功率段的其他系列"
+
+[latest_news]
+other = "最新动态"
+
+[spec_at_a_glance]
+other = "规格速查"
+[spec_category]
+other = "产品分类"
+[spec_type]
+other = "类型"
+[spec_frequency]
+other = "频率"
+[spec_power]
+other = "功率范围"
+[spec_models]
+other = "机型数"
+[spec_note]
+other = "功率范围取自各产品页的标准 50 / 60 Hz 额定表，其他电压与功率可另行定制。"
+
+[skip_to_content]
+other = "跳到主要内容"
