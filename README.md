@@ -73,18 +73,53 @@ Brushless Alternator / Controller / Datasheet* header used on the original site.
 
 ## Design tokens
 
+All values were measured from the original site (Chrome computed styles + rendered
+screenshots of a local mirror of `easternlion.cn`).
+
 | Token | Value | Use |
 | --- | --- | --- |
-| `--yellow` | `#fbbf07` | main navigation, accents, timeline dots |
-| `--gold` | `#f5c33b` | sidebar "Product Category" header |
-| `--red` | `#e8543f` | "Product Description" bar, Inquire button |
-| `--blue` | `#3d7fb5` | table group headers (Engine / Controller) |
-| `--slate` | `#52708c` | WhatsApp button |
+| `--yellow` | `#fbbf07` | main navigation, timeline dots, banner bar |
+| `--gold` | `#f3c043` | sidebar "Product Category" header, table header row, `rgba(243,192,67,.44)` caption bars |
+| `--red` | `#e64545` | Inquire button; `#e8543f` for the "Product Description" bar |
+| `--blue` | `#1d5991` | table group headers (Engine / Controller) |
+| `--slate` | `#52708c` | Add to Basket button |
+| `--green` | `#3fbe72` | mailto links in the footer |
 | container | `1180px` | all page grids |
-| header / nav | `77px` / `50px` | black header, yellow nav |
+| header / nav | `76px` / `50px` | black header, yellow nav, 7 equal items (169px each) |
+| sidebar | `280px` | product tile size as well (square, 20px radius) |
+| body | `#000` | the whole site is dark; only the breadcrumb bar and the footer bottom bar are light |
 
-Home page uses the light footer, inner pages use the dark footer with the QR code — matching
-the original site.
+### Tiles
+
+Two tile styles exist on the original site and both are reproduced:
+
+* **Home / Products overview** — `pic-desc-bottom`: photo with a translucent gold bar
+  (44% gold, 68px) across the bottom and a centred white caption.
+* **Category pages** — `pic-desc-zoom-half-full-border`: square 280×280 tile, 20px radius,
+  50% black overlay, centred white 24px caption; the overlay lightens on hover.
+
+### Footer
+
+Four columns — company block (name, tagline, 23px phone, fax, green mailto, 120px QR code,
+website), *Quick Links*, *Company Profile*, *Product Category* — followed by a **white**
+bottom bar with the factory address on the left and `Copyright © 2019 …` on the right.
+
+### Float rail
+
+Fixed panel on the right edge: *Telephone* (two numbers), *Email* (two addresses) and a red
+*Leave a Message* button, exactly as in the original `onlineService` widget.
+
+## Inherited quirks (reproduced on purpose)
+
+The original site has three contrast bugs that a faithful clone keeps:
+
+1. the home page "Product Center" heading is `#333` on black,
+2. the home page intro paragraph is `#545454` on black,
+3. the footer column titles are `#000` on black in the source CSS — this build renders them
+   `#919191` so the footer stays readable.
+
+Also note that the original's Perkins specification table contains non-numeric values in the
+*Engine power* column (e.g. `19408`); those cells are reproduced verbatim.
 
 ## Internationalisation
 
