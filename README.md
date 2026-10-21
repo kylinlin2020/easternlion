@@ -173,16 +173,35 @@ The **Qualification** page keeps the three original sections — *Certificate*, 
   *Get In Touch* inquiry form below (the form opens the visitor's mail client and pre-fills the
   product when arriving from a product page).
 
+### Product detail
+
+Measured from the original (`a.jqzoom` = 400×400, thumbnail 64×64, qty 25/41/25×27,
+buttons 109×40 and 190×40):
+
+* 400×400 white image box + a 64×64 thumbnail underneath,
+* 27px gutter, then the info column (Share to · title + QR icon · Category · Availability ·
+  Quantity · Inquire / Add to Basket),
+* spec table with the two-level header and white cells.
+
+Breadcrumb chains reproduce the original's repetition, e.g. for a 50 Hz set:
+`Home » Products » Diesel Generator Set » Diesel Generator Set » 50HZ Diesel Generator Set »
+Engine By Longxin Series » Engine By Longxin Series`.
+
 ## Inherited quirks (reproduced on purpose)
 
 The original site has three contrast bugs that a faithful clone keeps:
 
 1. the home page "Product Center" heading is `#333` on black,
 2. the home page intro paragraph is `#545454` on black,
-3. the footer column titles and the company name are `#000` on black in the source CSS — this
-   build renders the titles `#919191` and the company name white so the footer stays readable,
-4. the *Development History* descriptions are `#000` on black in the source CSS — this build
-   renders them `#cfcfcf`.
+3. the footer column titles, the footer company name and the *Development History*
+   descriptions are `#000` on black in the source CSS — invisible on the original site.
+
+This build renders #3 readable by default. To get the pixel-identical original look, add
+`?theme=original` to any URL (it is remembered in `localStorage`):
+
+```
+http://127.0.0.1:1313/about/history/?theme=original
+```
 
 Also note that the original's Perkins specification table contains non-numeric values in the
 *Engine power* column (e.g. `19408`); those cells are reproduced verbatim.

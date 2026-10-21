@@ -20,6 +20,17 @@
       "url": "/products/diesel-generator-set/"
     },
     {
+      "name": "Diesel Generator Set",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "50HZ Diesel Generator Set",
+      "url": "/products/50hz-diesel-generator-set/"
+    },
+    {
+      "name": "Engine By Yangdong Series"
+    },
+    {
       "name": "Engine By Yangdong Series"
     }
   ],

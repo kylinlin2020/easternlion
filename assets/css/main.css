@@ -670,46 +670,75 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- product detail ---------- */
 .product-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: 40px;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 27px;
   margin-bottom: 30px;
 }
 
 .gallery-main {
   background: #fff;
-  min-height: 430px;
+  width: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 16px;
 }
 
 .gallery-main img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: 100%;
   width: auto;
   object-fit: contain;
 }
 
-.thumbs { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.thumbs { display: flex; gap: 10px; margin-top: 17px; flex-wrap: wrap; }
 
 .thumbs button {
-  width: 72px; height: 72px;
-  padding: 3px;
+  width: 64px; height: 64px;
+  padding: 2px;
   border: 1px solid #333;
   background: #fff;
-  opacity: .65;
+  opacity: .8;
 }
 
 .thumbs button.is-active { opacity: 1; border-color: var(--yellow); }
 .thumbs img { width: 100%; height: 100%; object-fit: cover; }
 
-.product-info h1 {
-  font-size: 24px;
-  color: #9a9a9a;
-  margin-bottom: 10px;
-  line-height: 1.4;
+.product-share {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8a8a8a;
+  font-size: 13px;
+  margin-bottom: 8px;
 }
+
+.product-share a {
+  width: 22px; height: 22px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid #444;
+  color: #8a8a8a;
+}
+
+.product-share a:hover { color: var(--yellow); border-color: var(--yellow); }
+.product-share svg { width: 11px; height: 11px; fill: currentColor; }
+
+.product-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.product-info h1 {
+  font-size: 18px;
+  color: #9a9a9a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.product-title-row .qr { width: 16px; height: 16px; fill: #8a8a8a; }
 
 .product-meta {
   color: #8a8a8a;
@@ -737,46 +766,53 @@ button { font-family: inherit; cursor: pointer; }
 
 .qty {
   display: flex;
-  align-items: stretch;
-  margin: 6px 0 26px;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 30px;
 }
 
+.qty-label { color: #9a9a9a; font-size: 14px; }
+
 .qty button {
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 27px;
   background: #111;
   border: 1px solid #444;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .qty input {
-  width: 76px;
-  height: 36px;
+  width: 41px;
+  height: 27px;
   border: 1px solid #444;
   background: #fff;
   color: #333;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.product-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.product-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 20px;
+  height: 40px;
+  padding: 0 20px;
   font-size: 16px;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
-.btn-inquire { background: var(--red); }
+.btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+.btn-inquire { background: var(--red); min-width: 109px; }
 .btn-inquire:hover { background: #c93a3a; color: #fff; }
 
-.btn-basket { background: var(--slate); }
+.btn-basket { background: var(--slate); min-width: 190px; }
 .btn-basket:hover { background: #3f5a73; color: #fff; }
 
 .desc-head {
@@ -1229,6 +1265,15 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14px;
 }
 .pagination .current { background: var(--yellow); border-color: var(--yellow); color: #fff; }
+
+/* ---------- fidelity switch ----------
+   The original site renders three text blocks in #000 on a black background, so they are
+   invisible there. This build keeps them readable by default; add ?theme=original to any
+   URL (or toggle it in the console) to get the pixel-identical original look. */
+html.theme-original .footer-title { color: #000; }
+html.theme-original .footer-info-top .company { color: #000; }
+html.theme-original .tl-desc { color: #000; }
+html.theme-original .footer-info-top { border-bottom-color: #e5e5e5; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {

@@ -16,8 +16,19 @@
       "url": "/products/"
     },
     {
+      "name": "Diesel Generator Set",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "Diesel Generator Set",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
       "name": "60HZ Diesel Generator Set",
       "url": "/products/60hz-diesel-generator-set/"
+    },
+    {
+      "name": "60 HZ Engine By Cummins Series 2"
     },
     {
       "name": "60 HZ Engine By Cummins Series 2"
