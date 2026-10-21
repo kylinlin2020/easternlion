@@ -2,7 +2,10 @@
 title: "Our Team"
 description: "Eastern Lion has an experienced technical team implementing modern management, a complete quality system and strict production testing."
 banner_image: "/images/banner/about.jpg"
-banner_title: "Our Team"
+banner_logo: true
+banner_hide_title: true
+banner_sub: "Golden Supplier in China"
+banner_text: "Fuan Eastern Lion Electric Machines Co., Ltd is a professional manufacturer of famous Chinese generator and diesel generator set, has a history of more than 30 years of development, has production base in Fujian, Jiangsu, Shanghai and other city, marketing all over the country."
 breadcrumb:
   - name: Company Profile
     url: /about/
@@ -21,14 +24,15 @@ Eastern Lion has an experienced technical team, implementing modern management, 
   <a href="/images/team/7.jpg"><img src="/images/team/7.jpg" alt="Eastern Lion team" loading="lazy"></a>
 </div>
 
-## Thirty Years Professional Quality
+<h3 class="block-title">Thirty Years Professional Quality</h3>
+<div class="separator"></div>
 
-Our quality control covers every key process:
-
-- Leakage detection
-- Bending machine operation
-- Solder joint inspection
-- Silent detection
-- Rotor detection
-- Internal pressure detection
-- Storage inspection
+<ul>
+  <li>Leakage detection</li>
+  <li>Bending machine operation</li>
+  <li>Solder joint inspection</li>
+  <li>Silent detection</li>
+  <li>Rotor detection</li>
+  <li>Internal pressure detection</li>
+  <li>Storage inspection</li>
+</ul>
