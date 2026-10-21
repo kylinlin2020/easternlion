@@ -204,22 +204,6 @@ other = "30+ years of building generators that keep running"
 [why_us_text]
 other = "From stator winding to full-load test, every unit is assembled and verified in our own workshops in Fujian and Jiangsu."
 
-[[why_us_items]]
-title = "In-house manufacturing"
-text = "Alternators and generator sets are designed, wound, assembled and tested in our own workshops — no outsourcing in the critical path."
-
-[[why_us_items]]
-title = "Full-load tested"
-text = "Every machine is load-tested before it leaves the factory, with rotor dynamic balance, pressure resistance and whole-unit checks."
-
-[[why_us_items]]
-title = "Global delivery"
-text = "Shipped to Russia, Indonesia, the Philippines, South Africa, Pakistan, the UK and beyond, with full spare-part support."
-
-[[why_us_items]]
-title = "Service network"
-text = "35 sales and service bases in China plus online technical support and spare-parts supply for installed fleets."
-
 [product_center_eyebrow]
 other = "What we manufacture"
 [hero_cta_note]

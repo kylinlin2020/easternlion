@@ -421,13 +421,66 @@ label.label {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(100deg, rgba(10, 22, 34, .94) 0%, rgba(10, 22, 34, .86) 42%, rgba(10, 22, 34, .45) 75%, rgba(10, 22, 34, .3) 100%),
-    radial-gradient(120% 90% at 80% 10%, rgba(245, 158, 11, .22), transparent 60%);
+    linear-gradient(100deg, rgba(10, 22, 34, .95) 0%, rgba(10, 22, 34, .88) 42%, rgba(10, 22, 34, .5) 78%, rgba(10, 22, 34, .34) 100%),
+    radial-gradient(120% 90% at 82% 8%, rgba(245, 158, 11, .26), transparent 62%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .045) 0 1px, transparent 1px 68px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, .045) 0 1px, transparent 1px 68px);
 }
 
 .hero .container { position: relative; padding: 72px 0; }
 
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 48px;
+  align-items: center;
+}
+
 .hero-copy { max-width: 660px; color: #fff; }
+
+/* floating featured model */
+.hero-card {
+  display: block;
+  background: rgba(255, 255, 255, .96);
+  border-radius: var(--r-lg);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .38);
+  overflow: hidden;
+  transform: translateY(6px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.hero-card:hover { transform: translateY(0); box-shadow: 0 36px 80px rgba(0, 0, 0, .45); }
+
+.hc-media { display: block; aspect-ratio: 16 / 10; background: var(--surface-2); overflow: hidden; }
+.hc-media img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+
+.hc-body { display: block; padding: 18px 22px 20px; }
+
+.hc-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--amber-600);
+  background: var(--amber-50);
+  border-radius: var(--r-xs);
+}
+
+.hc-body strong { display: block; font-size: 18px; color: var(--ink); line-height: 1.35; }
+
+.hc-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--amber-600);
+}
+
+.hc-more svg { width: 14px; height: 14px; fill: currentColor; transition: transform .2s ease; }
+.hero-card:hover .hc-more svg { transform: translateX(4px); }
 
 .hero-copy .eyebrow { color: var(--amber); margin-bottom: 18px; }
 
@@ -1479,6 +1532,8 @@ label.label {
   .nav-list > li:hover .submenu { opacity: 1; }
 
   .hero { min-height: 440px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+  .hero-card { max-width: 420px; }
   .hero .container { padding: 56px 0; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .hero::after { background: linear-gradient(180deg, rgba(10, 22, 34, .9), rgba(10, 22, 34, .74)); }

@@ -9,7 +9,7 @@
     {{- end }}
   </div>
 
-  <div class="container">
+  <div class="container hero-inner">
     <div class="hero-copy">
       {{- with .Params.hero_eyebrow }}
       <span class="eyebrow">{{ . }}</span>
@@ -34,6 +34,23 @@
       </div>
       {{- end }}
     </div>
+
+    {{- with .Params.hero_feature }}
+    {{- with site.GetPage . }}
+    <a class="hero-card" href="{{ .RelPermalink }}">
+      <span class="hc-media">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
+      </span>
+      <span class="hc-body">
+        <span class="hc-tag">{{ .Params.hz | default 50 }}Hz · {{ .Params.power_min | default 0 }}–{{ .Params.power_max | default 0 }} kW</span>
+        <strong>{{ .Title }}</strong>
+        <span class="hc-more">{{ i18n "view_details" }}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+        </span>
+      </span>
+    </a>
+    {{- end }}
+    {{- end }}
   </div>
 
   {{- if gt (len $hero) 1 }}
@@ -82,10 +99,11 @@
       <p>{{ i18n "why_us_text" }}</p>
     </div>
     <div class="feature-grid">
-      {{- range $i, $f := (i18n "why_us_items" | default slice) }}
+      {{- $features := index site.Data.features site.Language.Lang -}}
+      {{- range $i, $f := $features }}
       <div class="feature">
         <div class="ico">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          {{ partial "icon.html" (dict "name" $f.icon) }}
         </div>
         <h3>{{ $f.title }}</h3>
         <p>{{ $f.text }}</p>

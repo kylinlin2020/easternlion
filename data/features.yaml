@@ -1,0 +1,27 @@
+en:
+  - icon: factory
+    title: "In-house manufacturing"
+    text: "Alternators and generator sets are designed, wound, assembled and tested in our own workshops — no outsourcing in the critical path."
+  - icon: check
+    title: "Full-load tested"
+    text: "Every machine is load-tested before it leaves the factory, with rotor dynamic balance, pressure resistance and whole-unit checks."
+  - icon: globe
+    title: "Global delivery"
+    text: "Shipped to Russia, Indonesia, the Philippines, South Africa, Pakistan, the UK and beyond, with full spare-part support."
+  - icon: support
+    title: "Service network"
+    text: "35 sales and service bases in China plus online technical support and spare-parts supply for installed fleets."
+
+zh:
+  - icon: factory
+    title: "自有工厂制造"
+    text: "发电机与发电机组自主设计、绕制、装配并检测，关键工序全部自有完成。"
+  - icon: check
+    title: "满载测试出厂"
+    text: "所有机组出厂前均进行满载测试，并完成转子动平衡、耐压与整机检测。"
+  - icon: globe
+    title: "全球交付"
+    text: "产品出口俄罗斯、印度尼西亚、菲律宾、南非、巴基斯坦、英国等地，并提供完整备件支持。"
+  - icon: support
+    title: "服务网络"
+    text: "国内 35 个销售与办事处，叠加在线技术支持与备件供应，覆盖已安装机组。"
