@@ -140,15 +140,16 @@ moves the language switcher into the drawer and stacks the grids.
 
 | Feature | Where | How |
 | --- | --- | --- |
-| **Site search** | header | `layouts/index.json` emits `search-index.json` (title, url, description, category, kW range, **every model number**) per language; `static/js/search.js` fetches it and shows a ranked dropdown (title > category > section > description > model) plus **category shortcuts** for the top matches. Model queries are normalised, so `gfs-w33`, `gfs w33` and `GFSW33` all hit. The query is reflected in the URL. |
+| **Site search** | header | `layouts/index.json` emits `search-index.json` (title, url, description, category, kW range, frequency and **every model with its power ratings**) per language; `assets/js/search.js` fetches it and shows a ranked dropdown (title > category > section > description > model) plus **category shortcuts**. Model queries are normalised, so `gfs-w33`, `gfs w33` and `GFSW33` all hit. The dropdown is keyboard navigable (↑ ↓ Enter Esc). |
 | **Product filters** | category pages | type / power band / frequency chips; each card carries `data-kind`, `data-hz`, `data-min`, `data-max`. The power band matches when a series *covers* it. State is written to the query string. |
 | **Power coverage list** | category pages | collapsible table of every series with its frequency and kW range, so buyers can see which engine covers which band before opening a spec sheet. |
 | **Model quick-jump** | product pages | a *Jump to model* select over all models in the spec table; picking one scrolls to the row and highlights it. |
-| **Inquiry form** | contact page | `static/js/contact.js` validates name / e-mail / message, shows inline errors, then swaps the form for a green confirmation panel and hands the inquiry to the visitor's mail client. |
+| **Inquiry form** | contact page | `static/js/contact.js` validates name / e-mail / message, shows inline errors, then swaps the form for a green confirmation panel and hands the inquiry to the visitor's mail client. | A selection made in the power finder is handed over through the url (`?product=…&series=…&load=…&hz=…`): the form fills in the model and pre-writes the load into the message. |
 | **Lightbox** | certificates, family photos | `static/js/lightbox.js` opens any `a[data-lb]` in a full-screen overlay (Esc / backdrop / ✕ to close). |
 | **Sticky action bar** | product pages (mobile) | product name + call button + *Inquire* pinned to the bottom of the viewport. |
 | **Power-band comparison** | product pages | `comparables` in the front matter lists the series whose power range overlaps the current one. |
 | **Power finder** | home, products overview, category pages | a dark panel under the hero: type the load in kW (or pick 50/100/200/500/1000 kW) and a 50/60 Hz toggle, and every series that covers the load is listed with the closest model, its kW rating, the other matching models and a *Get a quote* button. `layouts/partials/finder-data.html` derives the model/kW pairs from the specification tables at build time, `static/js/finder.js` does the matching. When nothing covers the load it points at the nearest unit. |
+| **Spec search** | header | typing `200kw` or `200kw 60hz` into the search box lists every model that covers that load at that frequency, with its kW rating and a deep link to the row in the spec table. The same model/power data powers the power finder, the comparison tool and the search index. |
 | **Model comparison** | category & product pages | the **+** button on every card adds a model to a comparison tray (max 4); a docked bar opens a side-by-side table of power range, frequency, model count, engine, alternator and controller. `layouts/partials/compare-data.html` emits the data as JSON, `static/js/compare.js` renders the tray and the dialog, every string is localised. |
 | **Sortable spec tables** | product pages | the header of a specification table sorts the rows by that column (numbers and model numbers numerically, text alphabetically). |
 | **Container alignment audit** | whole site | `scripts/check-alignment.js` fails the build when a page-level block is narrower than the 1280px container. |
@@ -242,6 +243,12 @@ crawled site (`http://127.0.0.1:8899/site/index.html`).
 The original's Perkins specification table contains non-numeric values in the *Engine power*
 column (e.g. `19408`); those cells are reproduced verbatim.
 
+## Assets
+
+The stylesheet and every script are served through Hugo Pipes (`resources.Get | minify | fingerprint`),
+so the file name carries a content hash: the browser can cache them forever and a changed file
+always gets a new url. The scripts live in `assets/js/` (not `static/`) for that reason.
+
 ## Internationalisation
 
 The site ships **two languages**:
@@ -298,6 +305,7 @@ Validation scripts (also used by CI):
 | `scripts/check-alignment.js [dir]` | fails when a built page contains a block narrower than the 1280px container (89 pages checked) |
 | `scripts/check-seo.js [dir]` | checks every indexable page for one `<h1>`, a title and meta description of a sane length, canonical link, hreflang alternates, og tags, `alt` on every image and duplicate titles per language (86 pages checked, language-aware limits) |
 | `scripts/check-language.js [dir] [lang]` | finds English text left inside the Chinese pages (brand names, model codes and e-mails are allowed). `node scripts/check-language.js public en` runs the same rules over the English pages as a self test |
+| `scripts/check-js.js [dir]` | parses every script with the javascript engine — a syntax error silently disables a feature, so it belongs in CI (6 files) |
 
 ## Deployment
 

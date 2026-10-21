@@ -31,10 +31,10 @@
     {{- range .Params.rows -}}
       {{- $name := index . 0 -}}
       {{- $prime := 0 }}{{ $standby := 0 }}{{ $o50 := 0 }}{{ $o60 := 0 }}
-      {{- if ge $iPrime 0 -}}{{- with index . $iPrime -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $prime = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
-      {{- if ge $iStandby 0 -}}{{- with index . $iStandby -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $standby = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
-      {{- if ge $i50 0 -}}{{- with index . $i50 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $o50 = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
-      {{- if ge $i60 0 -}}{{- with index . $i60 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $o60 = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $iPrime 0 -}}{{- with index . $iPrime -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $prime = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $iStandby 0 -}}{{- with index . $iStandby -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $standby = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $i50 0 -}}{{- with index . $i50 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $o50 = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $i60 0 -}}{{- with index . $i60 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $o60 = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
       {{- $cap := 0 -}}
       {{- if gt $standby 0 }}{{ $cap = $standby }}{{ else if gt $prime 0 }}{{ $cap = $prime }}{{ else if gt $o50 0 }}{{ $cap = $o50 }}{{ else if gt $o60 0 }}{{ $cap = $o60 }}{{ end -}}
       {{- if gt $cap 0 -}}

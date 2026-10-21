@@ -169,7 +169,12 @@
         html += '</div>';
         html += '<div class="fi-actions">';
         html += '<a class="btn btn-outline btn-sm" href="' + s.u + '">' + esc(t('finder_open', 'Open spec sheet')) + '</a>';
-        html += '<a class="btn btn-primary btn-sm" href="' + t('finder_inquire_url', '/contact/') + '?product=' + encodeURIComponent(s.t) + '">' + esc(t('finder_inquire', 'Get a quote')) + '</a>';
+        var q = t('finder_inquire_url', '/contact/') +
+          '?product=' + encodeURIComponent(best.m) +
+          '&series=' + encodeURIComponent(s.t) +
+          '&load=' + encodeURIComponent(kw) +
+          '&hz=' + encodeURIComponent(freq);
+        html += '<a class="btn btn-primary btn-sm" href="' + esc(q) + '">' + esc(t('finder_inquire', 'Get a quote')) + '</a>';
         html += '</div>';
         html += '</article>';
       });

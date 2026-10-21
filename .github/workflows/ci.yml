@@ -43,6 +43,9 @@ jobs:
       - name: Check the Chinese pages for untranslated english
         run: node scripts/check-language.js public
 
+      - name: Check the javascript syntax
+        run: node scripts/check-js.js assets/js
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:

@@ -17,7 +17,8 @@
 
         {{ partial "finder.html" (dict "id" "finder") }}
         {{ partial "finder-data.html" (dict "page" . "scope" "category") }}
-        <script src="{{ "js/finder.js" | relURL }}" defer></script>
+        {{- $jsFinder := resources.Get "js/finder.js" | minify | fingerprint }}
+  <script src="{{ $jsFinder.RelPermalink }}" defer></script>
 
         {{ partial "filter-bar.html" . }}
 
@@ -30,7 +31,8 @@
         <p class="filter-empty" id="filterEmpty" hidden>{{ i18n "filter_empty" }}</p>
         {{ partial "filter-bar.js.html" . }}
         {{ partial "compare-data.html" . }}
-        <script src="{{ "js/compare.js" | relURL }}" defer></script>
+        {{- $jsCompare := resources.Get "js/compare.js" | minify | fingerprint }}
+  <script src="{{ $jsCompare.RelPermalink }}" defer></script>
         {{- else }}
         <p>{{ i18n "products_coming_soon" }}</p>
         {{- end }}

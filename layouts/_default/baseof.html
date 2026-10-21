@@ -15,9 +15,12 @@
 
   {{ partial "float-rail.html" . }}
 
-  <script src="{{ "js/search.js" | relURL }}" defer></script>
-  <script src="{{ "js/lightbox.js" | relURL }}" defer></script>
-  <script src="{{ "js/spec-table.js" | relURL }}" defer></script>
+  {{- $jsSearch := resources.Get "js/search.js" | minify | fingerprint }}
+  {{- $jsLightbox := resources.Get "js/lightbox.js" | minify | fingerprint }}
+  {{- $jsSpecTable := resources.Get "js/spec-table.js" | minify | fingerprint }}
+  <script src="{{ $jsSearch.RelPermalink }}" defer></script>
+  <script src="{{ $jsLightbox.RelPermalink }}" defer></script>
+  <script src="{{ $jsSpecTable.RelPermalink }}" defer></script>
   <script>
     (function () {
       var toggle = document.querySelector('.nav-toggle');

@@ -522,3 +522,20 @@ other = "prime"
 other = "output"
 [finder_more_series]
 other = "Show {n} more series"
+
+[search_spec]
+other = "Models that cover {kw} kW at {hz} Hz"
+[search_spec_none]
+other = "No model covers {kw} kW — tell us your load and we will size it."
+[search_cover]
+other = "standby"
+[search_standby]
+other = "standby"
+[search_prime]
+other = "prime"
+[search_output]
+other = "output"
+[inquiry_model]
+other = "Model"
+[inquiry_power]
+other = "Required power"

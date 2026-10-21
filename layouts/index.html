@@ -56,7 +56,8 @@
   <div class="container">
     {{ partial "finder.html" (dict "id" "finder") }}
     {{ partial "finder-data.html" (dict "page" . "scope" "all") }}
-    <script src="{{ "js/finder.js" | relURL }}" defer></script>
+    {{- $jsFinder := resources.Get "js/finder.js" | minify | fingerprint }}
+  <script src="{{ $jsFinder.RelPermalink }}" defer></script>
   </div>
 </section>
 

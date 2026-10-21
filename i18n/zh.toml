@@ -521,3 +521,20 @@ other = "额定功率"
 other = "输出功率"
 [finder_more_series]
 other = "展开其余 {n} 个系列"
+
+[search_spec]
+other = "可覆盖 {kw} kW（{hz} Hz）的机型"
+[search_spec_none]
+other = "暂无覆盖 {kw} kW 的机型——把负载要求发给我们，我来为您选型。"
+[search_cover]
+other = "备用功率"
+[search_standby]
+other = "备用功率"
+[search_prime]
+other = "额定功率"
+[search_output]
+other = "输出功率"
+[inquiry_model]
+other = "机型"
+[inquiry_power]
+other = "需求功率"

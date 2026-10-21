@@ -1,9 +1,28 @@
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
   {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
-  {{- $models := slice -}}
+  {{- $cols := .Params.columns -}}
+  {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $i50 := -1 }}{{ $i60 := -1 }}
+  {{- range $i, $c := $cols -}}
+    {{- if eq $c "Prime power (kW)" }}{{ $iPrime = $i }}{{ end -}}
+    {{- if eq $c "Standby power (kW)" }}{{ $iStandby = $i }}{{ end -}}
+    {{- if eq $c "50Hz Output (kW)" }}{{ $i50 = $i }}{{ end -}}
+    {{- if eq $c "60Hz Output (kW)" }}{{ $i60 = $i }}{{ end -}}
+  {{- end -}}
+  {{- /* every model with its power ratings: name, prime, standby, 50Hz, 60Hz */ -}}
+  {{- $mm := slice -}}
   {{- range .Params.rows -}}
-    {{- $models = $models | append (index . 0) -}}
+    {{- $name := index . 0 -}}
+    {{- $prime := 0 }}{{ $standby := 0 }}{{ $o50 := 0 }}{{ $o60 := 0 }}
+    {{- if ge $iPrime 0 -}}{{- with index . $iPrime -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $prime = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+    {{- if ge $iStandby 0 -}}{{- with index . $iStandby -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $standby = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+    {{- if ge $i50 0 -}}{{- with index . $i50 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $o50 = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+    {{- if ge $i60 0 -}}{{- with index . $i60 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?" . -}}{{- $o60 = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}{{- end -}}{{- end -}}
+    {{- $cap := 0 -}}
+    {{- if gt $standby 0 }}{{ $cap = $standby }}{{ else if gt $prime 0 }}{{ $cap = $prime }}{{ else if gt $o50 0 }}{{ $cap = $o50 }}{{ else if gt $o60 0 }}{{ $cap = $o60 }}{{ end -}}
+    {{- if gt $cap 0 -}}
+      {{- $mm = $mm | append (dict "n" $name "p" $prime "s" $standby "a" $o50 "b" $o60) -}}
+    {{- end -}}
   {{- end -}}
   {{- $out = $out | append (dict
       "t" .Title
@@ -14,7 +33,7 @@
       "g" (.Params.power_min | default 0)
       "p" (.Params.power_max | default 0)
       "h" (.Params.hz | default 0)
-      "m" $models
+      "mm" $mm
   ) -}}
 {{- end -}}
 

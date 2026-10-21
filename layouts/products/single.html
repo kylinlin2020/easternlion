@@ -194,7 +194,8 @@
     {{ partial "related.html" . }}
 
     {{ partial "compare-data.html" . }}
-    <script src="{{ "js/compare.js" | relURL }}" defer></script>
+    {{- $jsCompare := resources.Get "js/compare.js" | minify | fingerprint }}
+  <script src="{{ $jsCompare.RelPermalink }}" defer></script>
   </div>
 </section>
 

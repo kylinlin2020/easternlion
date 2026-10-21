@@ -79,7 +79,7 @@
             <p class="field-hint">{{ i18n "contact_drawing_hint" }}</p>
           </div>
           <div class="field">
-            <textarea class="textarea" name="message" placeholder="{{ i18n "contact_message" }}" data-required></textarea>
+            <textarea class="textarea" name="message" id="messageField" placeholder="{{ i18n "contact_message" }}" data-required></textarea>
             <p class="field-error" hidden></p>
           </div>
 
@@ -104,12 +104,30 @@
   </div>
 </section>
 
-<script src="{{ "js/contact.js" | relURL }}" defer></script>
+{{- $jsContact := resources.Get "js/contact.js" | minify | fingerprint }}
+  <script src="{{ $jsContact.RelPermalink }}" defer></script>
 <script>
+  /* the power finder hands over the model, the series and the load */
   (function () {
-    var p = new URLSearchParams(window.location.search).get('product');
+    var q = new URLSearchParams(window.location.search);
+    var model = q.get('product');
+    var series = q.get('series');
+    var load = q.get('load');
+    var hz = q.get('hz');
+
     var f = document.getElementById('productField');
-    if (p && f && !f.value) f.value = p;
+    if (model && f && !f.value) f.value = model;
+
+    var m = document.getElementById('messageField');
+    if (!m || m.value.trim()) return;
+
+    var lines = [];
+    if (model) lines.push('{{ i18n "inquiry_model" }}: ' + model + (series ? ' (' + series + ')' : ''));
+    if (load) lines.push('{{ i18n "inquiry_power" }}: ' + load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : ''));
+    if (lines.length) {
+      m.value = lines.join('\n') + '\n\n';
+      m.focus();
+    }
   })();
 </script>
 
