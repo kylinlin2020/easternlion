@@ -27,17 +27,6 @@ breadcrumb:
   <p>Eastern lion compacted domestic market, and actively expand the international market, stride forward to the global market. Products sold in the Middle East, Southeast Asia, Africa, South America and parts of Europe, relying on excellent product quality and performance, widely used in many foreign countries, such as construction, commercial centers and real estate.</p>
 </div>
 
-<div class="app-grid">
-  <div class="app-card">
-    <h3>Applications 1</h3>
-    <p>Domestic application example: China Railway twelve Bureau Enshi tunnel project, China Railway thirteen Bureau Yangtze River bridge project, Hubei National Tax Bureau, Wuhan Tongji Hospital, Zhejiang Wenzhou third middle school, Zhejiang lingkun apartment</p>
-  </div>
-  <div class="app-card">
-    <h3>Applications 2</h3>
-    <p>Hubei Yangtze River Highway Bridge project of the thirteen Railway Bureau of China Railway Bureau.</p>
-  </div>
-  <div class="app-card">
-    <h3>Applications 3</h3>
-    <p>Enshi tunnel project of the twelve Railway Bureau of China Railway Administration.</p>
-  </div>
-</div>
+{{< service-steps >}}
+
+{{< applications >}}

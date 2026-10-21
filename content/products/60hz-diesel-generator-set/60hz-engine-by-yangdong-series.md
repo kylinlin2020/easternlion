@@ -254,6 +254,10 @@
       "g": 20,
       "p": 444,
       "h": 60,
+      "n": 26,
+      "e": "4BTA3.9-G2",
+      "a": "ELS 314G",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
     },
     {
@@ -261,6 +265,10 @@
       "g": 27,
       "p": 178,
       "h": 60,
+      "n": 13,
+      "e": "1003G",
+      "a": "ELS 274C",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
     },
     {
@@ -268,9 +276,18 @@
       "g": 24,
       "p": 371,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
     }
-  ]
+  ],
+  "model_count": 15,
+  "engine_top": "YD380D",
+  "alternator_top": "ELS 164C",
+  "controller_top": "RUIFEN6120",
+  "sae_top": ""
 }
 
 Eastern Lion Engine By Yangdong series diesel generator sets for 60 Hz operation combine Engine By Yangdong diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 60 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

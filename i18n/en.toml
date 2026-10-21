@@ -323,3 +323,43 @@ other = "Categories"
 other = "Which series covers which power range?"
 [footer_qr]
 other = "Scan to contact our sales team"
+
+[service_process]
+other = "How we work with you"
+[step1_title]
+other = "Requirement"
+[step1_text]
+other = "Tell us the power, voltage, frequency and application — or send us a model from our range."
+[step2_title]
+other = "Solution & quotation"
+[step2_text]
+other = "Our engineers select the engine, alternator and controller, then send a full quotation with lead time."
+[step3_title]
+other = "Production & testing"
+[step3_text]
+other = "The unit is assembled in our own workshop and load-tested before it leaves the factory."
+[step4_title]
+other = "Delivery & support"
+[step4_text]
+other = "Sea or air freight, commissioning guidance, spare parts and lifetime technical support."
+[applications]
+other = "Applications"
+[app1_alt]
+other = "Eastern Lion generator sets"
+[app2_alt]
+other = "Eastern Lion packing and export"
+[app3_alt]
+other = "Eastern Lion production base"
+
+[app1_title]
+other = "Applications 1"
+[app1_text]
+other = "Domestic application example: China Railway twelve Bureau Enshi tunnel project, China Railway thirteen Bureau Yangtze River bridge project, Hubei National Tax Bureau, Wuhan Tongji Hospital, Zhejiang Wenzhou third middle school, Zhejiang lingkun apartment"
+[app2_title]
+other = "Applications 2"
+[app2_text]
+other = "Hubei Yangtze River Highway Bridge project of the thirteen Railway Bureau of China Railway Bureau."
+[app3_title]
+other = "Applications 3"
+[app3_text]
+other = "Enshi tunnel project of the twelve Railway Bureau of China Railway Administration."

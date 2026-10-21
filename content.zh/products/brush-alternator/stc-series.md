@@ -183,6 +183,11 @@
   "power_max": 350,
   "hz": 50,
   "product_kind": "alternator",
-  "comparables": []
+  "comparables": [],
+  "model_count": 21,
+  "engine_top": "",
+  "alternator_top": "",
+  "controller_top": "",
+  "sae_top": ""
 }
 STC 系列有刷发电机采用凸极转子与电刷励磁系统，是备用电源、农业机械、工程机械及小型工业电站常用的高性价比选择。

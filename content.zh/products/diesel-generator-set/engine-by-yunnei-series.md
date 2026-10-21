@@ -280,6 +280,10 @@
       "g": 22,
       "p": 444,
       "h": 50,
+      "n": 40,
+      "e": "4BTA3.9-G2",
+      "a": "EL 274K",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-cummins/"
     },
     {
@@ -287,6 +291,10 @@
       "g": 13,
       "p": 289,
       "h": 50,
+      "n": 27,
+      "e": "2105D",
+      "a": "EL 224C",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-huachai-series/"
     },
     {
@@ -294,6 +302,10 @@
       "g": 10,
       "p": 338,
       "h": 50,
+      "n": 24,
+      "e": "K4100DS",
+      "a": "EL 184G",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-kofo-series/"
     },
     {
@@ -301,6 +313,10 @@
       "g": 24,
       "p": 289,
       "h": 50,
+      "n": 19,
+      "e": "R6105IZLD",
+      "a": "EL 224E",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-longxin-series/"
     },
     {
@@ -308,6 +324,10 @@
       "g": 25,
       "p": 158,
       "h": 50,
+      "n": 13,
+      "e": "1003G",
+      "a": "EL 274C",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-lovol-series/"
     },
     {
@@ -315,9 +335,40 @@
       "g": 7.2,
       "p": 2000,
       "h": 50,
+      "n": 54,
+      "e": "403A-15G1",
+      "a": "EL 224G",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-perkins-series/"
+    },
+    {
+      "t": "无锡发动机系列",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 52,
+      "e": "WD129TAD23/1500",
+      "a": "EL 354C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
+    },
+    {
+      "t": "扬动发动机系列",
+      "g": 8,
+      "p": 56,
+      "h": 50,
+      "n": 15,
+      "e": "YD380D",
+      "a": "EL 164C",
+      "c": "RUIFEN6120",
+      "u": "/products/diesel-generator-set/engine-by-yangdong-series/"
     }
-  ]
+  ],
+  "model_count": 17,
+  "engine_top": "YN48GBZ",
+  "alternator_top": "EL 184G",
+  "controller_top": "RUIFEN6120",
+  "sae_top": ""
 }
 东方电机云内系列柴油发电机组采用云内柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

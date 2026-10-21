@@ -228,6 +228,10 @@
       "g": 20,
       "p": 444,
       "h": 60,
+      "n": 26,
+      "e": "4BTA3.9-G2",
+      "a": "ELS 314G",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
     },
     {
@@ -235,6 +239,10 @@
       "g": 10,
       "p": 59,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
     },
     {
@@ -242,9 +250,18 @@
       "g": 24,
       "p": 371,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
     }
-  ]
+  ],
+  "model_count": 13,
+  "engine_top": "1003G",
+  "alternator_top": "ELS 274C",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 东方电机潍柴系列柴油发电机组采用潍柴柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、60Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

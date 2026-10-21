@@ -345,6 +345,10 @@
       "g": 20,
       "p": 444,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
     },
     {
@@ -352,9 +356,18 @@
       "g": 24,
       "p": 371,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
     }
-  ]
+  ],
+  "model_count": 22,
+  "engine_top": "NT855-GA",
+  "alternator_top": "ELS 314E",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 东方电机康明斯系列柴油发电机组采用康明斯柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、60Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

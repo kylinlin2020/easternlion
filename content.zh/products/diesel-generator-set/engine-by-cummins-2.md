@@ -501,6 +501,10 @@
       "g": 22,
       "p": 444,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-cummins/"
     },
     {
@@ -508,6 +512,10 @@
       "g": 13,
       "p": 289,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-huachai-series/"
     },
     {
@@ -515,6 +523,10 @@
       "g": 10,
       "p": 338,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-kofo-series/"
     },
     {
@@ -522,6 +534,10 @@
       "g": 24,
       "p": 289,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-longxin-series/"
     },
     {
@@ -529,6 +545,10 @@
       "g": 7.2,
       "p": 2000,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-perkins-series/"
     },
     {
@@ -536,9 +556,40 @@
       "g": 128,
       "p": 889,
       "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/diesel-generator-set/engine-by-woling-series/"
+    },
+    {
+      "t": "无锡发动机系列",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
+    },
+    {
+      "t": "玉柴发动机系列（YTO）",
+      "g": 26,
+      "p": 356,
+      "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
+      "u": "/products/diesel-generator-set/engine-by-yto-series/"
     }
-  ]
+  ],
+  "model_count": 34,
+  "engine_top": "MTA11-G2A",
+  "alternator_top": "EL 314E",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 东方电机康明斯（CCEC）系列柴油发电机组采用康明斯（CCEC）柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

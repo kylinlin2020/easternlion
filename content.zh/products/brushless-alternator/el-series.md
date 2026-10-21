@@ -479,6 +479,11 @@
   "power_max": 1760,
   "hz": 50,
   "product_kind": "alternator",
-  "comparables": []
+  "comparables": [],
+  "model_count": 49,
+  "engine_top": "",
+  "alternator_top": "3#11.5",
+  "controller_top": "",
+  "sae_top": "3#11.5"
 }
 EL 系列无刷发电机采用旋转整流与无刷励磁系统，维护成本低、电压稳定、电机启动性能好，可配 SAE 法兰接口适配大多数工业柴油机。

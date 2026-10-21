@@ -322,3 +322,43 @@ other = "产品分类"
 other = "各系列功率覆盖范围"
 [footer_qr]
 other = "扫码联系销售团队"
+
+[service_process]
+other = "我们的服务流程"
+[step1_title]
+other = "需求沟通"
+[step1_text]
+other = "告诉我们功率、电压、频率与使用场景，或直接从产品系列中挑选型号。"
+[step2_title]
+other = "方案与报价"
+[step2_text]
+other = "工程师完成发动机、发电机与控制器的选型，提供含交期的完整报价。"
+[step3_title]
+other = "生产与测试"
+[step3_text]
+other = "机组在自有车间完成装配，出厂前进行满载测试。"
+[step4_title]
+other = "交付与售后"
+[step4_text]
+other = "海运或空运报关、提供调试指导、备件供应与长期技术支持。"
+[applications]
+other = "应用案例"
+[app1_alt]
+other = "东方电机发电机组"
+[app2_alt]
+other = "东方电机包装与出口"
+[app3_alt]
+other = "东方电机生产基地"
+
+[app1_title]
+other = "应用案例 1"
+[app1_text]
+other = "国内应用实例：中国铁路十二局恩施隧道项目、中国铁路十三局长江大桥项目、湖北省国税局、武汉同济医院、浙江温州三中、浙江瓯坤公寓"
+[app2_title]
+other = "应用案例 2"
+[app2_text]
+other = "中国铁路十三局承建的湖北长江公路大桥项目。"
+[app3_title]
+other = "应用案例 3"
+[app3_text]
+other = "中国铁路十二局承建的恩施隧道项目。"

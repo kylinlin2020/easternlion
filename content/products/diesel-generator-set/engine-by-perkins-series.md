@@ -762,6 +762,10 @@
       "g": 200,
       "p": 1311,
       "h": 50,
+      "n": 34,
+      "e": "MTA11-G2A",
+      "a": "EL 314E",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-cummins-2/"
     },
     {
@@ -769,6 +773,10 @@
       "g": 22,
       "p": 444,
       "h": 50,
+      "n": 40,
+      "e": "4BTA3.9-G2",
+      "a": "EL 274K",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-cummins/"
     },
     {
@@ -776,6 +784,10 @@
       "g": 13,
       "p": 289,
       "h": 50,
+      "n": 27,
+      "e": "2105D",
+      "a": "EL 224C",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-huachai-series/"
     },
     {
@@ -783,6 +795,10 @@
       "g": 10,
       "p": 338,
       "h": 50,
+      "n": 24,
+      "e": "K4100DS",
+      "a": "EL 184G",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-kofo-series/"
     },
     {
@@ -790,6 +806,10 @@
       "g": 24,
       "p": 289,
       "h": 50,
+      "n": 19,
+      "e": "R6105IZLD",
+      "a": "EL 224E",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-longxin-series/"
     },
     {
@@ -797,9 +817,40 @@
       "g": 25,
       "p": 158,
       "h": 50,
+      "n": 13,
+      "e": "1003G",
+      "a": "EL 274C",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-lovol-series/"
+    },
+    {
+      "t": "Engine By Woling Series",
+      "g": 128,
+      "p": 889,
+      "h": 50,
+      "n": 22,
+      "e": "D114系列WLD171",
+      "a": "EL 404D",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-woling-series/"
+    },
+    {
+      "t": "Engine By Wuxi Series",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 52,
+      "e": "WD129TAD23/1500",
+      "a": "EL 354C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
     }
-  ]
+  ],
+  "model_count": 54,
+  "engine_top": "403A-15G1",
+  "alternator_top": "EL 224G",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 
 Eastern Lion Perkins series diesel generator sets combine Perkins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

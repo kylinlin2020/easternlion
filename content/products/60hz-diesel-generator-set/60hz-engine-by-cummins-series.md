@@ -397,6 +397,10 @@
       "g": 200,
       "p": 1222,
       "h": 60,
+      "n": 22,
+      "e": "NT855-GA",
+      "a": "ELS 314E",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series-2/"
     },
     {
@@ -404,6 +408,10 @@
       "g": 27,
       "p": 178,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
     },
     {
@@ -411,6 +419,10 @@
       "g": 10,
       "p": 59,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
     },
     {
@@ -418,9 +430,18 @@
       "g": 24,
       "p": 371,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
     }
-  ]
+  ],
+  "model_count": 26,
+  "engine_top": "4BTA3.9-G2",
+  "alternator_top": "ELS 314G",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 
 Eastern Lion Engine By Cummins series diesel generator sets for 60 Hz operation combine Engine By Cummins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 60 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

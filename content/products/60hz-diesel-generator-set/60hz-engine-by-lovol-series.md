@@ -228,6 +228,10 @@
       "g": 20,
       "p": 444,
       "h": 60,
+      "n": 26,
+      "e": "4BTA3.9-G2",
+      "a": "ELS 314G",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
     },
     {
@@ -235,6 +239,10 @@
       "g": 10,
       "p": 59,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
     },
     {
@@ -242,9 +250,18 @@
       "g": 24,
       "p": 371,
       "h": 60,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
     }
-  ]
+  ],
+  "model_count": 13,
+  "engine_top": "1003G",
+  "alternator_top": "ELS 274C",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 
 Eastern Lion Engine By Lovol series diesel generator sets for 60 Hz operation combine Engine By Lovol diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 60 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

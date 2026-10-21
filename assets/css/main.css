@@ -1935,6 +1935,57 @@ a[data-lb] { cursor: zoom-in; }
   color: rgba(255, 255, 255, .55);
 }
 
+
+/* ---------- service process ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 26px 24px 28px;
+  box-shadow: var(--sh-xs);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.step:hover { transform: translateY(-3px); box-shadow: var(--sh-md); }
+
+.step-no {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--surface-3);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+
+.step-ico {
+  width: 46px; height: 46px;
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--amber-50);
+  color: var(--amber-600);
+  margin-bottom: 16px;
+}
+
+.step-ico svg { width: 23px; height: 23px; fill: currentColor; }
+.step h4 { font-size: 17px; margin-bottom: 8px; }
+.step p { color: var(--muted); font-size: 14.5px; line-height: 1.75; margin: 0; }
+
+/* ---------- application cards with media ---------- */
+.app-card--media { padding: 0 0 28px; overflow: hidden; }
+.app-card--media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 22px; }
+.app-card--media h3 { padding: 0 26px; }
+.app-card--media p { padding: 0 26px; }
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
@@ -2028,6 +2079,7 @@ a[data-lb] { cursor: zoom-in; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
   .photo-strip { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
   .coverage-list { grid-template-columns: 1fr; }
   .check-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .workshop-top { grid-template-columns: 1fr; }
@@ -2055,6 +2107,7 @@ a[data-lb] { cursor: zoom-in; }
   .mobile-langs a { padding: 12px 4px; font-size: 15px; font-weight: 600; color: var(--ink-2); }
   .mobile-langs a.is-current { color: var(--amber-600); }
   .product-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   .error-search { flex-direction: column; }
   .model-jump { flex-direction: column; align-items: flex-start; }
   .model-jump select { max-width: 100%; }

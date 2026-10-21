@@ -762,6 +762,10 @@
       "g": 200,
       "p": 1311,
       "h": 50,
+      "n": 34,
+      "e": "MTA11-G2A",
+      "a": "EL 314E",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-cummins-2/"
     },
     {
@@ -769,6 +773,10 @@
       "g": 22,
       "p": 444,
       "h": 50,
+      "n": 40,
+      "e": "4BTA3.9-G2",
+      "a": "EL 274K",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-cummins/"
     },
     {
@@ -776,6 +784,10 @@
       "g": 13,
       "p": 289,
       "h": 50,
+      "n": 27,
+      "e": "2105D",
+      "a": "EL 224C",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-huachai-series/"
     },
     {
@@ -783,6 +795,10 @@
       "g": 10,
       "p": 338,
       "h": 50,
+      "n": 24,
+      "e": "K4100DS",
+      "a": "EL 184G",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-kofo-series/"
     },
     {
@@ -790,6 +806,10 @@
       "g": 24,
       "p": 289,
       "h": 50,
+      "n": 19,
+      "e": "R6105IZLD",
+      "a": "EL 224E",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-longxin-series/"
     },
     {
@@ -797,9 +817,40 @@
       "g": 25,
       "p": 158,
       "h": 50,
+      "n": 13,
+      "e": "1003G",
+      "a": "EL 274C",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-lovol-series/"
+    },
+    {
+      "t": "卧龙发动机系列",
+      "g": 128,
+      "p": 889,
+      "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
+      "u": "/products/diesel-generator-set/engine-by-woling-series/"
+    },
+    {
+      "t": "无锡发动机系列",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 0,
+      "e": "—",
+      "a": "—",
+      "c": "—",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
     }
-  ]
+  ],
+  "model_count": 54,
+  "engine_top": "403A-15G1",
+  "alternator_top": "EL 224G",
+  "controller_top": "Smartgen 6120",
+  "sae_top": ""
 }
 东方电机珀金斯系列柴油发电机组采用珀金斯柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

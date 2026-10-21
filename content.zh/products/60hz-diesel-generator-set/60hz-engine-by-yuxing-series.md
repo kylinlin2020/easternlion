@@ -332,6 +332,10 @@
       "g": 200,
       "p": 1222,
       "h": 60,
+      "n": 22,
+      "e": "NT855-GA",
+      "a": "ELS 314E",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series-2/"
     },
     {
@@ -339,6 +343,10 @@
       "g": 20,
       "p": 444,
       "h": 60,
+      "n": 26,
+      "e": "4BTA3.9-G2",
+      "a": "ELS 314G",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
     },
     {
@@ -346,6 +354,10 @@
       "g": 27,
       "p": 178,
       "h": 60,
+      "n": 13,
+      "e": "1003G",
+      "a": "ELS 274C",
+      "c": "Smartgen 6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
     },
     {
@@ -353,9 +365,18 @@
       "g": 10,
       "p": 59,
       "h": 60,
+      "n": 15,
+      "e": "YD380D",
+      "a": "ELS 164C",
+      "c": "RUIFEN6120",
       "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
     }
-  ]
+  ],
+  "model_count": 21,
+  "engine_top": "K4100D",
+  "alternator_top": "ELS 224E",
+  "controller_top": "RUIFEN6120",
+  "sae_top": ""
 }
 东方电机玉兴系列柴油发电机组采用玉兴柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、60Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 
