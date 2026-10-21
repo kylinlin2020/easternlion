@@ -4,19 +4,47 @@
 
 <section class="inner-main">
   <div class="container">
-    <h2 class="inner-title">About Us</h2>
-    <div class="separator"></div>
-    {{ partial "about-nav.html" . }}
+    <div class="inner-layout">
+      <aside class="sidebar news-side">
+        <h2 class="sidebar-title">News</h2>
+        <ul class="sidebar-list">
+          {{- with site.GetPage "/news" }}
+          {{- range .Pages }}
+          <li>
+            <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{ .Title }}</a>
+          </li>
+          {{- end }}
+          {{- end }}
+        </ul>
+      </aside>
 
-    <article class="rich" style="max-width:900px;margin:0 auto">
-      <h1 style="color:#fff;font-size:22px;margin-bottom:12px">{{ .Title }}</h1>
-      <div class="article-meta">
-        {{ .Date.Format "2006-01-02" }}
-        {{- with .Params.author }} &nbsp;|&nbsp; Author: {{ . }}{{ end }}
-      </div>
-      {{ .Content }}
-      <p style="margin-top:40px"><a href="{{ "news/" | relURL }}">&laquo; Back to News</a></p>
-    </article>
+      <article class="rich news-article">
+        <h1 style="color:#fff;font-size:26px;margin-bottom:12px">{{ .Title }}</h1>
+        <div class="article-meta">
+          Views: <span id="newsViews">31</span>
+          {{- with .Params.author }} &nbsp;|&nbsp; Author: {{ . }}{{ end }}
+          {{- with .Date }} &nbsp;|&nbsp; Publish Time: {{ .Format "2006-01-02" }}{{ end }}
+          &nbsp;|&nbsp; Origin: Site
+        </div>
+        {{ .Content }}
+        <p style="margin-top:40px"><a href="{{ "news/" | relURL }}">&laquo; Back to News</a></p>
+      </article>
+    </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var el = document.getElementById('newsViews');
+    if (!el) return;
+    try {
+      var key = 'el-views-' + {{ .RelPermalink }};
+      var n = parseInt(localStorage.getItem(key), 10);
+      if (!n) { n = 31; }
+      else { n += 1; }
+      localStorage.setItem(key, n);
+      el.textContent = n;
+    } catch (e) { /* private mode */ }
+  })();
+</script>
 {{ end }}
