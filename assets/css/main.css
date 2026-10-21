@@ -1719,6 +1719,15 @@ a[data-lb] { cursor: zoom-in; }
 .news-list--home .news-item .more a { color: var(--amber-600); }
 
 
+
+/* grid/flex children must be allowed to shrink, otherwise a wide table
+   (the spec tables are 820px min) pushes the whole page sideways */
+.inner-layout > *,
+.product-hero > *,
+.split > *,
+.compare-grid > *,
+.news-list > * { min-width: 0; }
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
