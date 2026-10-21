@@ -1062,7 +1062,7 @@ label.label {
 .slider img { width: 220px; height: 220px; object-fit: cover; border-radius: var(--r-md); scroll-snap-align: start; flex: 0 0 auto; }
 
 /* timeline */
-.timeline { position: relative; max-width: 920px; margin: 0 auto; padding: 10px 0 0; }
+.timeline { position: relative; max-width: 920px; margin: 0; padding: 10px 0 0; }
 
 .timeline::before {
   content: "";
@@ -1194,7 +1194,7 @@ label.label {
 .contact-line a:hover { color: var(--amber-600); }
 
 /* news */
-.news-list { display: grid; gap: 18px; max-width: 900px; margin: 0 auto; }
+.news-list { display: grid; gap: 18px; max-width: none; margin: 0; }
 
 .news-item {
   background: #fff;
