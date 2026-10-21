@@ -180,3 +180,47 @@ other = "Engine By Yunnei Series"
 [cat_engine_yuxing]
 other = "Engine By Yuxing Series"
 
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Get a Quote"
+[topbar_hours]
+other = "Mon – Sat 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Need a generator set for your project?"
+[cta_text]
+other = "Tell us the power, voltage and application — our engineers will reply within one working day."
+[cta_button]
+other = "Send an inquiry"
+[hero_cta_products]
+other = "Explore products"
+[hero_cta_quote]
+other = "Request a quotation"
+[view_details]
+other = "View details"
+[why_us]
+other = "Why Eastern Lion"
+[why_us_title]
+other = "30+ years of building generators that keep running"
+[why_us_text]
+other = "From stator winding to full-load test, every unit is assembled and verified in our own workshops in Fujian and Jiangsu."
+
+[[why_us_items]]
+title = "In-house manufacturing"
+text = "Alternators and generator sets are designed, wound, assembled and tested in our own workshops — no outsourcing in the critical path."
+
+[[why_us_items]]
+title = "Full-load tested"
+text = "Every machine is load-tested before it leaves the factory, with rotor dynamic balance, pressure resistance and whole-unit checks."
+
+[[why_us_items]]
+title = "Global delivery"
+text = "Shipped to Russia, Indonesia, the Philippines, South Africa, Pakistan, the UK and beyond, with full spare-part support."
+
+[[why_us_items]]
+title = "Service network"
+text = "35 sales and service bases in China plus online technical support and spare-parts supply for installed fleets."
+
+[product_center_eyebrow]
+other = "What we manufacture"
+[hero_cta_note]
+other = "Reply within one working day"

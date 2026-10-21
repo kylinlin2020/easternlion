@@ -102,23 +102,39 @@ Product pages use JSON front matter so the specification tables stay machine-rea
 A row of eleven cells is rendered with the two-level *Genset Specification / Engine /
 Brushless Alternator / Controller / Datasheet* header used on the original site.
 
-## Design tokens
+## Design system
 
-All values were measured from the original site (Chrome computed styles + rendered
-screenshots of a local mirror of `easternlion.cn`).
+The site was rebuilt as a modern B2B industrial layout (Generac / Cummins Power Systems /
+Atlas Copco patterns) while keeping all of the original content, data and page structure.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--yellow` | `#fbbf07` | main navigation, timeline dots, banner bar |
-| `--gold` | `#f3c043` | sidebar "Product Category" header, table header row, `rgba(243,192,67,.44)` caption bars |
-| `--red` | `#e64545` | Inquire button; `#e8543f` for the "Product Description" bar |
-| `--blue` | `#1d5991` | table group headers (Engine / Controller) |
-| `--slate` | `#52708c` | Add to Basket button |
-| `--green` | `#3fbe72` | mailto links in the footer |
-| container | `1180px` | all page grids |
-| header / nav | `76px` / `50px` | black header, yellow nav, 7 equal items (169px each) |
-| sidebar | `280px` | product tile size as well (square, 20px radius) |
-| body | `#000` | the whole site is dark; only the breadcrumb bar and the footer bottom bar are light |
+| `--navy-900 … --navy-600` | `#0a1622 → #1e425e` | header, banner, footer, dark surfaces |
+| `--amber` / `--amber-600` | `#f59e0b` / `#d97706` | the single accent (CTAs, markers, hover states) |
+| `--blue` | `#2563eb` | links inside body copy |
+| `--surface / -2 / -3` | `#fff` / `#f8fafc` / `#f1f5f9` | content backgrounds |
+| `--line` | `#e2e8f0` | 1px borders |
+| radii | 6 / 10 / 14 / 20 / 28 / pill | cards, buttons, images |
+| elevation | 4 soft shadows | hover lift on cards |
+| container | **1280px** (24px gutters) | all grids |
+
+Layout rules:
+
+* **Top utility bar** (address, hours, e-mail, phone) → **sticky white header** (logo, search,
+  language switcher, *Get a Quote* CTA) → **white nav** with an amber underline on the active item
+  and a hover dropdown;
+* **Hero** – dark navy stage, gradient + amber radial glow, eyebrow, 2-line headline, sub-copy,
+  two CTAs and a 4-cell stat strip; sliders use 30px amber progress dashes;
+* **Cards** – white, 1px border, 20px radius, lift on hover; product cards use a light image
+  plate with the title underneath;
+* **Tables** – rounded card shell, sticky navy header, zebra rows, amber hover row;
+* **Sidebar** – sticky white card, navy title bar, list rows with a chevron, active row in amber;
+* **Footer** – a CTA band (navy gradient + amber top rule) above a 4-column navy footer and a
+  slim bottom bar;
+* **Float rail** – three icon tabs on the right edge that expand on hover.
+
+Responsive: 980px collapses the nav into a drawer, 640px hides the search and the quote button,
+moves the language switcher into the drawer and stacks the grids.
 
 ### Hero and banners
 

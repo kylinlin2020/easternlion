@@ -1,11 +1,41 @@
 {{ define "main" }}
 {{- $hero := .Params.hero | default (slice) -}}
 <section class="hero" aria-label="Featured">
-  {{- range $i, $s := $hero }}
-  <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
-    <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+  <div class="hero-slides">
+    {{- range $i, $s := $hero }}
+    <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
+      <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+    </div>
+    {{- end }}
   </div>
-  {{- end }}
+
+  <div class="container">
+    <div class="hero-copy">
+      {{- with .Params.hero_eyebrow }}
+      <span class="eyebrow">{{ . }}</span>
+      {{- end }}
+      <h1>{{ .Params.hero_title | default site.Params.company }}</h1>
+      {{- with .Params.hero_text }}
+      <p>{{ . }}</p>
+      {{- end }}
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ .Params.hero_cta | default "/products/" | relLangURL }}">{{ i18n "hero_cta_products" }}</a>
+        <a class="btn btn-ghost" href="{{ .Params.hero_cta2 | default "/contact/" | relLangURL }}">{{ i18n "hero_cta_quote" }}</a>
+      </div>
+
+      {{- with .Params.hero_stats }}
+      <div class="hero-stats">
+        {{- range . }}
+        <div class="hero-stat">
+          <b>{{ .value }}</b>
+          <span>{{ .label }}</span>
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+
   {{- if gt (len $hero) 1 }}
   <div class="hero-dots">
     {{- range $i, $s := $hero }}
@@ -15,19 +45,51 @@
   {{- end }}
 </section>
 
-<section class="section section-dark">
+<section class="section">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">{{ .Params.product_title | default (i18n "product_center") }}</h2>
-      <div class="section-lead rich">{{ .Content }}</div>
+      <span class="eyebrow">{{ i18n "product_center_eyebrow" }}</span>
+      <h2>{{ .Params.product_title | default (i18n "product_center") }}</h2>
+      <div class="rich">{{ .Content }}</div>
     </div>
 
     <div class="category-grid">
       {{- range site.Data.categories }}
-      <a class="category-card" href="{{ .url | relLangURL }}">
-        <img src="{{ .image | relURL }}" alt="{{ i18n .key }}" loading="lazy">
-        <span class="label">{{ .name }}</span>
+      <a class="card category-card" href="{{ .url | relLangURL }}">
+        <span class="media">
+          <img src="{{ .image | relURL }}" alt="{{ i18n .key }}" loading="lazy">
+          <span class="label">{{ i18n .key }}</span>
+        </span>
+        <span class="body">
+          <h3>{{ i18n .key }}</h3>
+          <p>{{ .description | default (i18n .key) }}</p>
+          <span class="more">
+            {{ i18n "view_details" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          </span>
+        </span>
       </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ i18n "why_us" }}</span>
+      <h2>{{ i18n "why_us_title" }}</h2>
+      <p>{{ i18n "why_us_text" }}</p>
+    </div>
+    <div class="feature-grid">
+      {{- range $i, $f := (i18n "why_us_items" | default slice) }}
+      <div class="feature">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+        </div>
+        <h3>{{ $f.title }}</h3>
+        <p>{{ $f.text }}</p>
+      </div>
       {{- end }}
     </div>
   </div>
