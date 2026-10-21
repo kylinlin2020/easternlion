@@ -11,7 +11,6 @@ breadcrumb:
   - name: Welcome to my site!
 ---
 
-Welcome to my site!
 
 Fuan Eastern Lion Electric Machines Co., Ltd is a professional manufacturer of diesel generator sets, brush alternators and brushless alternators. With more than 30 years of development, we serve customers in construction, telecommunications, healthcare, education, oil fields and many other industries.
 

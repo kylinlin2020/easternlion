@@ -21,7 +21,7 @@
       </aside>
 
       <article class="rich news-article">
-        <h1 style="color:#fff;font-size:26px;margin-bottom:12px">{{ .Title }}</h1>
+        <h1 class="article-title">{{ .Title }}</h1>
         <div class="article-meta">
           {{ i18n "news_views" }}: <span id="newsViews">31</span>
           {{- with .Params.author }} &nbsp;|&nbsp; {{ i18n "news_author" }}: {{ . }}{{ end }}

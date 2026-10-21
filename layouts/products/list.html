@@ -67,7 +67,7 @@
               {{- if lt .Params.power_min $min }}{{ $min = .Params.power_min }}{{ end -}}
               {{- if gt .Params.power_max $max }}{{ $max = .Params.power_max }}{{ end -}}
               {{- if not $kind }}{{ $kind = .Params.product_kind }}{{ end -}}
-              {{- if eq .Params.hz 60 }}{{ $hz = 60 }}{{ end -}}
+              {{- if eq (printf "%v" .Params.hz) "60" }}{{ $hz = 60 }}{{ end -}}
             {{- end -}}
             {{- if eq $min 99999.0 }}{{ $min = 0.0 }}{{ end -}}
             <tr>
