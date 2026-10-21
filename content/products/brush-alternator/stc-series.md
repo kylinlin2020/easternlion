@@ -186,6 +186,7 @@
   "alternator_top": "",
   "controller_top": "",
   "sae_top": ""
-}The STC series brush alternator is a synchronous generator with a salient-pole rotor and brush excitation. It is a proven, cost-effective choice for standby power, agricultural machinery, construction sites and small industrial plants.
+}
+The STC series brush alternator is a synchronous generator with a salient-pole rotor and brush excitation. It is a proven, cost-effective choice for standby power, agricultural machinery, construction sites and small industrial plants.
 
 Please contact us for a detailed datasheet, drawings, pricing and delivery time.

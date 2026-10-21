@@ -482,6 +482,7 @@
   "alternator_top": "3#11.5",
   "controller_top": "",
   "sae_top": "3#11.5"
-}The EL series brushless alternator uses a rotating rectifier and brushless excitation system, giving low maintenance, stable voltage and excellent motor-starting performance. It is available with SAE couplings to suit most industrial diesel engines.
+}
+The EL series brushless alternator uses a rotating rectifier and brushless excitation system, giving low maintenance, stable voltage and excellent motor-starting performance. It is available with SAE couplings to suit most industrial diesel engines.
 
 Please contact us for a detailed datasheet, drawings, pricing and delivery time.

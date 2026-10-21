@@ -814,6 +814,7 @@
   "alternator_top": "EL 354C",
   "controller_top": "Smartgen 6120",
   "sae_top": ""
-}Eastern Lion Wuxi series diesel generator sets combine Wuxi diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
+}
+Eastern Lion Wuxi series diesel generator sets combine Wuxi diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
 
 All generator sets are tested at full load before shipment. Please contact us for a detailed datasheet, pricing and delivery time.

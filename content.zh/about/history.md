@@ -12,7 +12,8 @@
       "url": "/about/"
     }
   ]
-}<div class="timeline">
+}
+<div class="timeline">
   <div class="tl-item tl-odd">
     <div class="tl-year">1987</div>
     <div class="tl-node"></div>

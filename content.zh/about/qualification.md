@@ -12,7 +12,8 @@
       "url": "/about/"
     }
   ]
-}<h3 class="block-title">证书</h3>
+}
+<h3 class="block-title">证书</h3>
 <div class="separator"></div>
 
 <div class="cert-grid">
