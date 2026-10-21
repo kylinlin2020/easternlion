@@ -4,10 +4,6 @@
 
 <section class="inner-main">
   <div class="container">
-    <div class="section-head">
-      <h2 class="section-title" style="color:#fff">{{ .Title }}</h2>
-    </div>
-
     <div class="category-grid">
       {{- range site.Data.categories }}
       <a class="category-card" href="{{ .url | relURL }}">

@@ -8,10 +8,6 @@
       {{ partial "sidebar.html" . }}
 
       <div>
-        {{- with .Content }}
-        <div class="rich" style="margin-bottom:28px">{{ . }}</div>
-        {{- end }}
-
         {{- $pages := .Pages.ByWeight }}
         {{- with .Params.list_from }}
           {{- with site.GetPage . }}
@@ -27,6 +23,10 @@
         </div>
         {{- else }}
         <p>Products coming soon. Please contact us for the full catalogue.</p>
+        {{- end }}
+
+        {{- with .Content }}
+        <div class="rich" style="margin-top:30px">{{ . }}</div>
         {{- end }}
       </div>
     </div>

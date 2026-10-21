@@ -11,11 +11,7 @@
     {{ block "main" . }}{{ end }}
   </main>
 
-  {{ if .IsHome }}
-    {{ partial "footer.html" (dict "light" true "page" .) }}
-  {{ else }}
-    {{ partial "footer.html" (dict "light" false "page" .) }}
-  {{ end }}
+  {{ partial "footer.html" (dict "page" .) }}
 
   {{ partial "float-rail.html" . }}
 

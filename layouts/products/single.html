@@ -8,6 +8,8 @@
 {{- $diesel := eq (len $cols) 11 -}}
 {{- $catURL := "/products/" -}}
 {{- if eq .Params.category "Diesel Generator Set" }}{{ $catURL = "/products/diesel-generator-set/" }}{{ end -}}
+{{- if eq .Params.category "60HZ Diesel Generator Set" }}{{ $catURL = "/products/60hz-diesel-generator-set/" }}{{ end -}}
+{{- if eq .Params.category "50HZ Diesel Generator Set" }}{{ $catURL = "/products/50hz-diesel-generator-set/" }}{{ end -}}
 
 <section class="inner-main">
   <div class="container">
@@ -35,7 +37,18 @@
             <h1>{{ .Title }}</h1>
             <p class="product-meta">Category: <a href="{{ $catURL | relURL }}">{{ .Params.category }}</a></p>
 
+            <div class="availability">
+              <span>Availability:</span>
+              <select aria-label="Availability">
+                <option>In Stock</option>
+                <option>7 Days</option>
+                <option>15 Days</option>
+                <option>30 Days</option>
+              </select>
+            </div>
+
             <div class="qty">
+              <span class="availability" style="margin:0 12px 0 0">Quantity:</span>
               <button type="button" data-delta="-1" aria-label="Decrease quantity">&minus;</button>
               <input type="text" value="1" aria-label="Quantity">
               <button type="button" data-delta="1" aria-label="Increase quantity">+</button>
@@ -43,7 +56,7 @@
 
             <div class="product-actions">
               <a class="btn btn-inquire" href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Inquire</a>
-              <a class="btn btn-basket" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn btn-basket" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener">Add to Basket</a>
             </div>
           </div>
         </div>

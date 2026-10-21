@@ -11,4 +11,4 @@ hero:
 product_title: "Product Center"
 ---
 
-Diesel generator sets are made of famous brand Cummins, Perkins and Yuchai engines for the domestic market and abroad. The generator is independently researched and produced by Eastern Lion, or equipped with Stamford, Marathon, Engga, Leroy-Somer and other well-known international brands.
+Diesel generator sets are made of famous brand, Cummins, Perkins, Yuchai engine for domestic market and abroad, the generator independent R & D and production of Eastern Lion or Stamdford, Marathon, Engga, Leroysomer and other domestic and international famous brands.

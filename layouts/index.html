@@ -15,7 +15,7 @@
   {{- end }}
 </section>
 
-<section class="section section-light">
+<section class="section section-dark">
   <div class="container">
     <div class="section-head">
       <h2 class="section-title">{{ .Params.product_title | default "Product Center" }}</h2>
@@ -32,15 +32,4 @@
     </div>
   </div>
 </section>
-
-{{- with .Params.extra_section }}
-<section class="section" style="background:#0b0b0b;color:#cfcfcf;">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title" style="color:#fff">{{ .title }}</h2>
-    </div>
-    <div class="rich" style="max-width:900px;margin:0 auto">{{ .text | markdownify }}</div>
-  </div>
-</section>
-{{- end }}
 {{ end }}
