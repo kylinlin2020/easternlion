@@ -272,6 +272,10 @@ Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese 
 
 ## Tooling
 
+> Note: the dev server injects a `livereload.js` snippet into Hugo's render cache. Always stop
+> `hugo server` before a production build (`make build` clears `resources/` for you), otherwise
+> the snippet leaks into the built HTML and the link check reports it as broken.
+
 ```bash
 make dev       # hugo server on http://127.0.0.1:1313 (auto rebuild + livereload)
 make build     # production build into ./public

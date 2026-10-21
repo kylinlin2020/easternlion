@@ -19,6 +19,8 @@ dev:
 	$(HUGO) server --port $(PORT) --bind 127.0.0.1 --navigateToChanged
 
 build:
+	@# the dev server injects a livereload snippet into the render cache, so clear it first
+	rm -rf resources
 	$(HUGO) --gc --minify --noBuildLock
 
 preview:

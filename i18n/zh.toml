@@ -379,3 +379,19 @@ other = "更多动态"
 other = "图纸 / 技术要求编号（选填）"
 [contact_drawing_hint]
 other = "回复邮件时可附上图纸文件，工程师将按图纸精确报价。"
+
+[zoom_image]
+other = "点击放大"
+[video_facade]
+other = "播放视频"
+
+[video_title]
+other = "观看我们的设备"
+[video_intro]
+other = "车间实况、生产线与机组测试视频，点击播放后才会加载播放器。"
+[video_1]
+other = "发电机组与包装"
+[video_2]
+other = "生产线"
+[video_3]
+other = "生产基地"

@@ -380,3 +380,19 @@ other = "More news"
 other = "Drawing / specification reference (optional)"
 [contact_drawing_hint]
 other = "Give a drawing number or attach the file when replying to our e-mail — our engineers then quote exactly to your drawing."
+
+[zoom_image]
+other = "Click to enlarge"
+[video_facade]
+other = "Play video"
+
+[video_title]
+other = "Watch our machines"
+[video_intro]
+other = "Factory tour, production line and generator set test videos. The player only loads when you press play."
+[video_1]
+other = "Generator sets and packing"
+[video_2]
+other = "Production line"
+[video_3]
+other = "Production base"

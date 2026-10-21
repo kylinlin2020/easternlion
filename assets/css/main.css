@@ -1166,7 +1166,6 @@ label.label {
 
 .video-box {
   position: relative;
-  padding-top: 56.25%;
   background: var(--navy-900);
   border-radius: var(--r-lg);
   overflow: hidden;
@@ -2108,6 +2107,94 @@ a[data-lb] { cursor: zoom-in; }
   font-size: 12.5px;
   color: var(--muted-2);
   line-height: 1.6;
+}
+
+
+/* ---------- sortable spec table ---------- */
+.spec-table th.is-sortable {
+  cursor: pointer;
+  user-select: none;
+  position: sticky;
+  transition: background-color .15s ease;
+}
+
+.spec-table th.is-sortable:hover { background: var(--navy-600); }
+
+.spec-table th.is-sortable::after {
+  content: "\2195";
+  margin-left: 7px;
+  font-size: 11px;
+  opacity: .45;
+}
+
+.spec-table th.is-sorted-asc::after { content: "\2191"; opacity: 1; color: var(--amber); }
+.spec-table th.is-sorted-desc::after { content: "\2193"; opacity: 1; color: var(--amber); }
+
+/* ---------- product image zoom ---------- */
+.gallery-main a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+
+/* ---------- video facade ---------- */
+.video-facade {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--navy-900);
+  background-image: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--sh-sm);
+}
+
+.video-facade .vf-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.video-facade:hover .vf-play { transform: translate(-50%, -50%) scale(1.08); background: var(--amber-500); }
+.video-facade .vf-play svg { width: 26px; height: 26px; fill: #1a1200; margin-left: 4px; }
+.video-facade .vf-label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .6);
+}
+
+.video-facade iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-intro {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 15.5px;
 }
 
 /* ---------- accessibility ---------- */

@@ -1,0 +1,22 @@
+<h2 class="inner-title">{{ i18n "video_title" }}</h2>
+<div class="separator"></div>
+<p class="video-intro">{{ i18n "video_intro" }}</p>
+
+<div class="video-grid">
+  {{- $videos := slice
+    (dict "id" "3B7j9BCd3Nk" "poster" "/images/workshop/8.jpg" "label" (i18n "video_1"))
+    (dict "id" "Jv_twi3nzOc" "poster" "/images/workshop/1.jpg" "label" (i18n "video_2"))
+    (dict "id" "gGUXjCl4JKg" "poster" "/images/about/factory.jpg" "label" (i18n "video_3"))
+  -}}
+  {{- range $videos }}
+  <div class="video-box">
+    <button class="video-facade" type="button"
+            data-video="https://www.youtube.com/embed/{{ .id }}?showinfo=0&loop=1&rel=0&iv_load_policy=3&autoplay=1"
+            data-title="{{ .label }}"
+            style="background-image:url('{{ .poster | relURL }}')">
+      <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vf-label">{{ .label }}</span>
+    </button>
+  </div>
+  {{- end }}
+</div>
