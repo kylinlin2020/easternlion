@@ -875,40 +875,35 @@ button { font-family: inherit; cursor: pointer; }
 .tl-even .tl-connector { left: 50%; transform: translateX(32px); }
 
 /* ---------- FAQ ---------- */
-.faq-list { max-width: 900px; margin: 0 auto; }
+.faq-list { max-width: 1180px; margin: 0 auto; }
 
-.faq-list details {
-  border-bottom: 1px solid #262626;
-  padding: 18px 0;
+.faq-item {
+  border: 1px solid #3d3d3d;
+  padding: 20px 24px;
+  margin-bottom: 22px;
 }
 
-.faq-list summary {
-  cursor: pointer;
-  list-style: none;
-  color: #eee;
+.faq-q {
+  color: #a08c2a;
   font-size: 16px;
-  padding-left: 30px;
-  position: relative;
+  line-height: 1.6;
 }
 
-.faq-list summary::-webkit-details-marker { display: none; }
+.faq-q b { color: #a08c2a; font-weight: 400; margin-right: 10px; }
 
-.faq-list summary::before {
-  content: "Q";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--yellow);
-  font-weight: 700;
+.faq-a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 8px;
+  color: #9a9a9a;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-.faq-list details[open] summary { color: var(--yellow); }
+.faq-a svg { width: 20px; height: 20px; fill: #9a9a9a; flex-shrink: 0; margin-top: 2px; }
 
-.faq-list .answer {
-  color: #b5b5b5;
-  padding: 12px 0 0 30px;
-  line-height: 1.9;
-}
+.inner-title--left { text-align: left; }
 
 /* ---------- service page ---------- */
 .narrow {

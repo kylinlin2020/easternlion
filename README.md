@@ -109,14 +109,43 @@ bottom bar with the factory address on the left and `Copyright © 2019 …` on t
 Fixed panel on the right edge: *Telephone* (two numbers), *Email* (two addresses) and a red
 *Leave a Message* button, exactly as in the original `onlineService` widget.
 
+### Company pages (Company Profile)
+
+`content/about/*` and `content/news/*` all use the same shell as the original:
+
+* banner with the **white** logo, the tagline *Golden Supplier in China* and the company
+  description, dimmed by a 45% black overlay,
+* breadcrumb → *About Us* heading → separator → the six yellow buttons
+  (Company Profile · Development History · Our Team · Qualification · News Center · Our Workshop),
+* then the page content.
+
+The **Development History** page reproduces the original `addImgdevelopment` component: a
+`#fcc92f` centre line, 42px white nodes with a 12px yellow dot, a 30px dashed connector and the
+year alternating left/right in 18px `#4c4c4c`.
+
+The **Qualification** page keeps the three original sections — *Certificate*, *Exhibition*
+(horizontal slider) and *Our Partners*.
+
+### Service / Video / FAQ / Contact
+
+* **Service** — title, narrow centred column with the market text, then the three white
+  *Applications 1/2/3* cards with the orange underline.
+* **Video** — the three original YouTube embeds in a 3-column grid.
+* **FAQ** — left-aligned *FAQ* heading and the five bordered Q&A boxes.
+* **Contact Us** — *International Department* | *Manufacturer* on top, the office photo and the
+  *Get In Touch* inquiry form below (the form opens the visitor's mail client and pre-fills the
+  product when arriving from a product page).
+
 ## Inherited quirks (reproduced on purpose)
 
 The original site has three contrast bugs that a faithful clone keeps:
 
 1. the home page "Product Center" heading is `#333` on black,
 2. the home page intro paragraph is `#545454` on black,
-3. the footer column titles are `#000` on black in the source CSS — this build renders them
-   `#919191` so the footer stays readable.
+3. the footer column titles and the company name are `#000` on black in the source CSS — this
+   build renders the titles `#919191` and the company name white so the footer stays readable,
+4. the *Development History* descriptions are `#000` on black in the source CSS — this build
+   renders them `#cfcfcf`.
 
 Also note that the original's Perkins specification table contains non-numeric values in the
 *Engine power* column (e.g. `19408`); those cells are reproduced verbatim.
