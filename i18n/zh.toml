@@ -315,3 +315,10 @@ other = "东方电机发电机生产"
 other = "东方电机无刷发电机"
 [alt_packing]
 other = "东方电机包装与检测"
+
+[search_cats]
+other = "产品分类"
+[coverage_title]
+other = "各系列功率覆盖范围"
+[footer_qr]
+other = "扫码联系销售团队"

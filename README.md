@@ -140,12 +140,15 @@ moves the language switcher into the drawer and stacks the grids.
 
 | Feature | Where | How |
 | --- | --- | --- |
-| **Site search** | header | `layouts/index.json` emits `search-index.json` (title, url, description, category, kW range) per language; `static/js/search.js` fetches it and shows a ranked dropdown (title > category > section > description) with a "see all" link. The query is reflected in the URL. |
+| **Site search** | header | `layouts/index.json` emits `search-index.json` (title, url, description, category, kW range, **every model number**) per language; `static/js/search.js` fetches it and shows a ranked dropdown (title > category > section > description > model) plus **category shortcuts** for the top matches. Model queries are normalised, so `gfs-w33`, `gfs w33` and `GFSW33` all hit. The query is reflected in the URL. |
 | **Product filters** | category pages | type / power band / frequency chips; each card carries `data-kind`, `data-hz`, `data-min`, `data-max`. The power band matches when a series *covers* it. State is written to the query string. |
+| **Power coverage list** | category pages | collapsible table of every series with its frequency and kW range, so buyers can see which engine covers which band before opening a spec sheet. |
+| **Model quick-jump** | product pages | a *Jump to model* select over all models in the spec table; picking one scrolls to the row and highlights it. |
 | **Inquiry form** | contact page | `static/js/contact.js` validates name / e-mail / message, shows inline errors, then swaps the form for a green confirmation panel and hands the inquiry to the visitor's mail client. |
 | **Lightbox** | certificates, family photos | `static/js/lightbox.js` opens any `a[data-lb]` in a full-screen overlay (Esc / backdrop / ✕ to close). |
 | **Sticky action bar** | product pages (mobile) | product name + call button + *Inquire* pinned to the bottom of the viewport. |
 | **Power-band comparison** | product pages | `comparables` in the front matter lists the series whose power range overlaps the current one. |
+| **Clickable hero stats** | home page | each figure links to the matching page (history, service, alternators, generator sets). |
 
 Product meta used by these features is derived from the specification tables at build time
 (`power_min`, `power_max`, `hz`, `product_kind`, `comparables`).

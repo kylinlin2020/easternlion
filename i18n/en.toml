@@ -316,3 +316,10 @@ other = "Eastern Lion alternator production"
 other = "Eastern Lion brushless alternators"
 [alt_packing]
 other = "Eastern Lion packing and testing"
+
+[search_cats]
+other = "Categories"
+[coverage_title]
+other = "Which series covers which power range?"
+[footer_qr]
+other = "Scan to contact our sales team"

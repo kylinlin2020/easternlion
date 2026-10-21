@@ -1840,6 +1840,101 @@ a[data-lb] { cursor: zoom-in; }
   background: var(--surface-3);
 }
 
+
+/* ---------- search: category shortcuts ---------- */
+.sp-cats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 6px 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sp-cats-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-right: 4px;
+}
+
+.sp-cat {
+  padding: 5px 11px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--amber-600);
+  background: var(--amber-50);
+  border-radius: var(--r-pill);
+}
+
+.sp-cat:hover { background: var(--amber); color: #1a1200; }
+
+/* ---------- filter coverage list ---------- */
+.coverage {
+  margin: -6px 0 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-xs);
+}
+
+.coverage summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coverage summary::-webkit-details-marker { display: none; }
+.coverage summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform .18s ease;
+}
+.coverage[open] summary::before { transform: rotate(90deg); }
+
+.coverage-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.coverage-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #fff;
+  transition: background-color .15s ease;
+}
+
+.coverage-item:hover { background: var(--amber-50); }
+.cov-t { font-size: 14px; font-weight: 600; color: var(--ink); }
+.cov-r { font-size: 12.5px; font-weight: 600; color: var(--amber-600); white-space: nowrap; }
+
+/* ---------- footer QR caption ---------- */
+.footer-qr-cap {
+  display: block;
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, .55);
+}
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
@@ -1933,6 +2028,7 @@ a[data-lb] { cursor: zoom-in; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
   .photo-strip { grid-template-columns: 1fr; }
+  .coverage-list { grid-template-columns: 1fr; }
   .check-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .workshop-top { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }

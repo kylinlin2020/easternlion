@@ -17,4 +17,16 @@
       "m" $models
   ) -}}
 {{- end -}}
-{{- dict "count" (len $out) "items" $out | jsonify (dict "indent" "  ") -}}
+
+{{- /* category shortcuts for the search dropdown */ -}}
+{{- $cats := slice -}}
+{{- range site.Data.categories -}}
+  {{- $cats = $cats | append (dict "t" (i18n .key) "u" .url "k" .key "d" (.description | default "")) -}}
+{{- end -}}
+{{- range site.Data.sidebar -}}
+  {{- if not (in (slice "cat_brush_alternator" "cat_brushless_alternator" "cat_diesel_generator_set") .key) -}}
+    {{- $cats = $cats | append (dict "t" (i18n .key) "u" .url "k" .key "d" "") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- dict "count" (len $out) "cats" $cats "items" $out | jsonify (dict "indent" "  ") -}}

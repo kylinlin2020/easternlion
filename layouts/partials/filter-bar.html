@@ -33,3 +33,22 @@
     <b id="filterCount">0</b> <span>{{ i18n "filter_models" }}</span>
   </div>
 </div>
+
+{{- /* coverage list: which series covers which power band */ -}}
+{{- $list := .Pages.ByWeight -}}
+{{- if .Params.list_from -}}
+  {{- with site.GetPage .Params.list_from }}{{ $list = .Pages.ByWeight }}{{ end -}}
+{{- end -}}
+{{- if $list }}
+<details class="coverage">
+  <summary>{{ i18n "coverage_title" }}</summary>
+  <div class="coverage-list">
+    {{- range $list }}
+    <a class="coverage-item" href="{{ .RelPermalink }}">
+      <span class="cov-t">{{ .Title }}</span>
+      <span class="cov-r">{{ .Params.hz | default 50 }}Hz · {{ .Params.power_min | default 0 }}–{{ .Params.power_max | default 0 }} kW</span>
+    </a>
+    {{- end }}
+  </div>
+</details>
+{{- end }}

@@ -4,13 +4,13 @@
   if (!input || !panel) return;
 
   var index = null;
+  var cats = [];
   var loading = false;
 
   var STRINGS = {
     empty: panel.dataset.msgEmpty || '',
-    results: panel.dataset.msgResults || '',
     all: panel.dataset.msgAll || '',
-    model: panel.dataset.msgModel || ''
+    cats: panel.dataset.msgCats || ''
   };
 
   function esc(s) {
@@ -25,8 +25,11 @@
     var base = document.documentElement.getAttribute('data-base') || '';
     return fetch(base + '/search-index.json')
       .then(function (r) { return r.json(); })
-      .then(function (data) { index = data.items || []; })
-      .catch(function () { index = []; })
+      .then(function (data) {
+        index = data.items || [];
+        cats = data.cats || [];
+      })
+      .catch(function () { index = []; cats = []; })
       .then(function () { loading = false; });
   }
 
@@ -61,22 +64,44 @@
     return 0;
   }
 
+  function catHits(q, nq) {
+    var out = [];
+    for (var i = 0; i < cats.length; i++) {
+      var c = cats[i];
+      var hay = ((c.t || '') + ' ' + (c.k || '') + ' ' + (c.d || '')).toLowerCase();
+      if (hay.indexOf(q) > -1 || norm(c.t).indexOf(nq) > -1) out.push(c);
+    }
+    return out.slice(0, 5);
+  }
+
   function render(q) {
     if (!q) { panel.hidden = true; panel.innerHTML = ''; return; }
     var nq = norm(q);
+
     var hits = index
       .map(function (i) { return { i: i, s: score(i, q, nq) }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) { return b.s - a.s; })
       .slice(0, 8);
 
+    var catList = catHits(q, nq);
+    var html = '';
+
+    /* category shortcuts */
+    if (catList.length) {
+      html += '<div class="sp-cats"><span class="sp-cats-label">' + esc(STRINGS.cats) + '</span>' +
+        catList.map(function (c) {
+          return '<a class="sp-cat" href="' + esc(c.u) + '">' + esc(c.t) + '</a>';
+        }).join('') + '</div>';
+    }
+
     if (!hits.length) {
-      panel.innerHTML = '<p class="sp-empty">' + esc(STRINGS.empty) + '</p>';
+      panel.innerHTML = html + '<p class="sp-empty">' + esc(STRINGS.empty) + '</p>';
       panel.hidden = false;
       return;
     }
 
-    var html = hits.map(function (h) {
+    html += hits.map(function (h) {
       var it = h.i;
       var meta = [];
       if (it.k) meta.push(esc(it.k));
