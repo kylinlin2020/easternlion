@@ -36,6 +36,10 @@
 
 <section class="inner-main">
   <div class="container">
+    <div class="print-head">
+      <img src="{{ "images/logo.png" | relURL }}" alt="{{ site.Params.company }}">
+      <p class="print-url">{{ .Permalink }}</p>
+    </div>
     <div class="inner-layout">
       <div class="side-col">
         {{ partial "sidebar.html" . }}
@@ -115,14 +119,20 @@
         {{- if $rows }}
         {{- $models := slice -}}
         {{- range $rows -}}{{- $models = $models | append (index . 0) -}}{{- end -}}
-        <div class="model-jump">
-          <label for="modelJump">{{ i18n "jump_to_model" }}</label>
-          <select id="modelJump" class="input">
-            <option value="">{{ i18n "jump_to_model" }}</option>
-            {{- range $models }}
-            <option value="model-{{ . | urlquery }}">{{ . }}</option>
-            {{- end }}
-          </select>
+        <div class="table-tools">
+          <div class="model-jump">
+            <label for="modelJump">{{ i18n "jump_to_model" }}</label>
+            <select id="modelJump" class="input">
+              <option value="">{{ i18n "jump_to_model" }}</option>
+              {{- range $models }}
+              <option value="model-{{ . | urlquery }}">{{ . }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <div class="table-actions">
+            <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}spec.csv" download>{{ i18n "download_csv" }}</a>
+            <button type="button" class="btn btn-outline btn-sm js-print">{{ i18n "download_print" }}</button>
+          </div>
         </div>
         <div class="model-nav" id="modelNav" hidden
              data-msg-label="{{ i18n "model_nav_label" }}"
@@ -205,6 +215,13 @@
   {{- $jsModelNav := resources.Get "js/model-nav.js" | minify | fingerprint }}
   <script src="{{ $jsCompare.RelPermalink }}" defer></script>
   <script src="{{ $jsModelNav.RelPermalink }}" defer></script>
+  <script>
+    (function () {
+      document.querySelectorAll('.js-print').forEach(function (b) {
+        b.addEventListener('click', function () { window.print(); });
+      });
+    })();
+  </script>
   </div>
 </section>
 

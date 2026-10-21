@@ -562,3 +562,20 @@ other = "把需要报价的机型都加进来，工程师会逐一回复价格�
 other = "候选机型"
 [compare_quote]
 other = "为这 {n} 个系列索取报价"
+
+[spec_series]
+other = "系列"
+[download_all_title]
+other = "全部产品的参数表，一个文件"
+[download_all_text]
+other = "所有系列的所有机型，含功率、发动机、发电机与控制器参数——整本目录的 CSV。"
+[download_all_button]
+other = "下载全部参数表（CSV）"
+[download_file]
+other = "文件"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "打印 / PDF"
+[download_title_link]
+other = "资料下载"

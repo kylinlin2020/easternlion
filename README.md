@@ -249,6 +249,19 @@ The stylesheet and every script are served through Hugo Pipes (`resources.Get | 
 so the file name carries a content hash: the browser can cache them forever and a changed file
 always gets a new url. The scripts live in `assets/js/` (not `static/`) for that reason.
 
+### Output formats
+
+`hugo.toml` registers three extra output formats:
+
+| Format | Media type | Produces |
+| --- | --- | --- |
+| `SEARCHINDEX` | application/json | `/search-index.json` — the data behind the site search |
+| `CSV` | text/csv | `/products/<series>/spec.csv` — the specification table of a product |
+| `ALLSPECS` | text/csv | `/download/all-specs.csv` — every model of every series |
+
+The product pages carry `outputs: ["html", "csv"]` in their front matter, the download page
+`outputs: ["html", "allspecs"]`.
+
 ## Internationalisation
 
 The site ships **two languages**:

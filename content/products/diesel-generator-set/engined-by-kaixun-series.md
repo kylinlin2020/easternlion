@@ -293,7 +293,11 @@
   "engine_top": "G128ZLD11",
   "alternator_top": "EL 274F",
   "controller_top": "Mebay 6120",
-  "sae_top": ""
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv"
+  ]
 }
 Eastern Lion Kaixun series diesel generator sets combine Kaixun diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
 

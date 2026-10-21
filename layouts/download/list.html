@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <div class="rich">{{ .Content }}</div>
+
+    {{- $products := where site.RegularPages "Params.columns" "!=" nil -}}
+    {{- $all := .Permalink | default "" -}}
+
+    <div class="download-cta">
+      <div>
+        <h2 class="block-title">{{ i18n "download_all_title" }}</h2>
+        <p class="download-cta-text">{{ i18n "download_all_text" }}</p>
+      </div>
+      <a class="btn btn-primary" href="{{ "download/all-specs.csv" | relLangURL }}" download>
+        {{ i18n "download_all_button" }}
+      </a>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table class="spec-table download-table">
+          <thead>
+            <tr>
+              <th>{{ i18n "spec_series" }}</th>
+              <th>{{ i18n "spec_frequency" }}</th>
+              <th>{{ i18n "spec_power" }}</th>
+              <th>{{ i18n "spec_models" }}</th>
+              <th>{{ i18n "download_file" }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{- range $products.ByWeight -}}
+            <tr>
+              <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+              <td>{{ .Params.hz | default 50 }}Hz</td>
+              <td>{{ .Params.power_min | default 0 }} – {{ .Params.power_max | default 0 }} kW</td>
+              <td>{{ len (.Params.rows | default slice) }}</td>
+              <td>
+                <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}spec.csv" download>{{ i18n "download_csv" }}</a>
+                <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}">{{ i18n "view_details" }}</a>
+              </td>
+            </tr>
+            {{- end -}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

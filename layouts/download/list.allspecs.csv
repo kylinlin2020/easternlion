@@ -1,0 +1,42 @@
+{{- /* every model of every series in one csv */ -}}
+{{- "\ufeff" -}}
+{{- $products := where site.RegularPages "Params.columns" "!=" nil -}}
+{{- $line := "" -}}
+{{- $sep := "" -}}
+{{- range slice (i18n "spec_series") (i18n "spec_category") "Model" (i18n "col_prime_kw") (i18n "col_standby_kw") (i18n "col_engine_model") (i18n "col_engine_power") (i18n "col_alt_model") (i18n "col_alt_power") (i18n "col_controller") -}}
+{{- $line = printf "%s%s\"%s\"" $line $sep (replaceRE "\"" "\"\"" (printf "%v" .)) -}}
+{{- $sep = "," -}}
+{{- end -}}
+{{- printf "%s\n" $line -}}
+{{- range $products.ByWeight -}}
+  {{- $name := .Title -}}
+  {{- $kind := .Params.category | default "" -}}
+  {{- $hz := .Params.hz | default 50 -}}
+  {{- $cols := .Params.columns -}}
+  {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $iEngine := -1 }}{{ $iAlt := -1 }}{{ $iCtrl := -1 }}
+  {{- range $i, $c := $cols -}}
+    {{- if eq $c "Prime power (kW)" }}{{ $iPrime = $i }}{{ end -}}
+    {{- if eq $c "Standby power (kW)" }}{{ $iStandby = $i }}{{ end -}}
+    {{- if eq $c "Engine model" }}{{ $iEngine = $i }}{{ end -}}
+    {{- if eq $c "Alternator model" }}{{ $iAlt = $i }}{{ end -}}
+    {{- if eq $c "Controller" }}{{ $iCtrl = $i }}{{ end -}}
+  {{- end -}}
+  {{- range .Params.rows -}}
+    {{- $row := . -}}
+    {{- $line = "" -}}
+    {{- $sep = "" -}}
+    {{- range slice $name $kind (index . 0) -}}
+      {{- $line = printf "%s%s\"%s\"" $line $sep (replaceRE "\"" "\"\"" (printf "%v" .)) -}}
+      {{- $sep = "," -}}
+    {{- end -}}
+    {{- range slice $iPrime $iStandby $iEngine $iAlt $iCtrl -}}
+      {{- if ge . 0 -}}
+        {{- $line = printf "%s%s\"%s\"" $line $sep (replaceRE "\"" "\"\"" (printf "%v" (index $row .))) -}}
+      {{- else -}}
+        {{- $line = printf "%s%s\"\"" $line $sep -}}
+      {{- end -}}
+      {{- $sep = "," -}}
+    {{- end -}}
+    {{- printf "%s\n" $line -}}
+  {{- end -}}
+{{- end -}}

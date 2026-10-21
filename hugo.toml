@@ -69,6 +69,18 @@ capitalizeListTitles = false
   home    = ["HTML", "RSS", "SEARCHINDEX"]
   section = ["HTML", "RSS"]
 
+[outputFormats.ALLSPECS]
+  mediaType = "text/csv"
+  baseName = "all-specs"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.CSV]
+  mediaType = "text/csv"
+  baseName = "spec"
+  isPlainText = true
+  notAlternative = true
+
 [outputFormats.SEARCHINDEX]
   mediaType = "application/json"
   baseName = "search-index"

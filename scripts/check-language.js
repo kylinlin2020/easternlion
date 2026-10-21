@@ -25,7 +25,7 @@ if (!fs.existsSync(root)) {
 /* words that are expected to stay in english */
 const ALLOWED = new Set([
   "Eastern", "Lion", "Easternlion", "Logo",
-  "PDF", "ISO", "SAE", "ATS", "FAQ", "WhatsApp", "Alibaba", "Google",
+  "PDF", "ISO", "SAE", "ATS", "FAQ", "WhatsApp", "Alibaba", "Google", "Sheets", "LibreOffice", "Excel",
   "Cummins", "Perkins", "Yuchai", "YTO", "Lovol", "Wuxi", "Kofo", "Huachai",
   "Longxin", "Woling", "Yangdong", "Yunnei", "Yuxing", "Kaixun",
   "Stamford", "Marathon", "Engga", "Leroy", "Somer", "Smartgen", "Ruifen",

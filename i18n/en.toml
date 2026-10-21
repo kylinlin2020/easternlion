@@ -563,3 +563,20 @@ other = "Add every model you want us to quote — our engineers will reply with 
 other = "Models"
 [compare_quote]
 other = "Request a quote for these {n} models"
+
+[spec_series]
+other = "Series"
+[download_all_title]
+other = "All specification lists in one file"
+[download_all_text]
+other = "Every model of every series with its power ratings, engine, alternator and controller — one csv for the whole catalogue."
+[download_all_button]
+other = "Download all specs (CSV)"
+[download_file]
+other = "File"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Print / PDF"
+[download_title_link]
+other = "Download Centre"

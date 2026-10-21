@@ -657,7 +657,11 @@
   "engine_top": "4BTA3.9-G2",
   "alternator_top": "EL 274K",
   "controller_top": "Smartgen 6120",
-  "sae_top": ""
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv"
+  ]
 }
 Eastern Lion Cummins series diesel generator sets combine Cummins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
 

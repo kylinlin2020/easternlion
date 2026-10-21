@@ -657,7 +657,11 @@
   "engine_top": "4BTA3.9-G2",
   "alternator_top": "EL 274K",
   "controller_top": "Smartgen 6120",
-  "sae_top": ""
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv"
+  ]
 }
 方电机康明斯（DCEC）系列柴油发电机组采用康明斯（DCEC）柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

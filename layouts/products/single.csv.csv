@@ -1,0 +1,18 @@
+{{- /* the specification table of a product as a csv (utf-8 with a bom for excel) */ -}}
+{{- "\ufeff" -}}
+{{- $line := "" -}}
+{{- $sep := "" -}}
+{{- range .Params.columns -}}
+{{- $line = printf "%s%s\"%s\"" $line $sep (replaceRE "\"" "\"\"" (printf "%v" .)) -}}
+{{- $sep = "," -}}
+{{- end -}}
+{{- printf "%s\n" $line -}}
+{{- range .Params.rows -}}
+{{- $line = "" -}}
+{{- $sep = "" -}}
+{{- range . -}}
+{{- $line = printf "%s%s\"%s\"" $line $sep (replaceRE "\"" "\"\"" (printf "%v" .)) -}}
+{{- $sep = "," -}}
+{{- end -}}
+{{- printf "%s\n" $line -}}
+{{- end -}}

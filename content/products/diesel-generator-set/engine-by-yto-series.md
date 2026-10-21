@@ -384,7 +384,11 @@
   "engine_top": "YM6S9L-15",
   "alternator_top": "EL 274C",
   "controller_top": "Smartgen 6120",
-  "sae_top": ""
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv"
+  ]
 }
 
 Eastern Lion Yto series diesel generator sets combine Yto diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

@@ -28,6 +28,14 @@
       {{- end }}
     </div>
 
+    <div class="download-cta download-cta--slim">
+      <div>
+        <h3 class="block-title" style="margin-top:0">{{ i18n "download_all_title" }}</h3>
+        <p class="download-cta-text">{{ i18n "download_all_text" }}</p>
+      </div>
+      <a class="btn btn-primary" href="{{ "download/all-specs.csv" | relLangURL }}" download>{{ i18n "download_all_button" }}</a>
+    </div>
+
     <h3 class="block-title" style="margin-top:56px">{{ i18n "spec_at_a_glance" }}</h3>
     <div class="separator"></div>
 
