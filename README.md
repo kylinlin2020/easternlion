@@ -89,8 +89,18 @@ screenshots of a local mirror of `easternlion.cn`).
 | sidebar | `280px` | product tile size as well (square, 20px radius) |
 | body | `#000` | the whole site is dark; only the breadcrumb bar and the footer bottom bar are light |
 
-### Tiles
+### Hero and banners
 
+* **Home hero** — the original uses LayerSlider (`fullwidth` skin): a fixed **800px** stage
+  (measured 1425×800 at a 1425px viewport) in which the 1920×800 slide is scaled to *cover*
+  and centred, so the sides of the picture are cropped. Reproduced 1:1.
+* **Inner banners** — the original rule is
+  `background:url(...) no-repeat scroll center center; background-size:cover;`
+  with `padding-top:120px; padding-bottom:130px` (120/120 on Contact, Service, Video and FAQ).
+  The height is therefore driven by the content, and the title lands at `y = 246px` — exactly
+  like the original.
+
+### Tiles
 Two tile styles exist on the original site and both are reproduced:
 
 * **Home / Products overview** — `pic-desc-bottom`: photo with a translucent gold bar
