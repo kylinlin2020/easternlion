@@ -134,6 +134,25 @@
       </div>
     </div>
 
+    {{- $prev := .PrevInSection }}
+    {{- $next := .NextInSection }}
+    {{- if or $prev $next }}
+    <nav class="pager" aria-label="{{ i18n "pager" }}">
+      {{- with $prev }}
+      <a class="pager-link pager-prev" href="{{ .RelPermalink }}">
+        <span class="pager-dir">{{ i18n "pager_prev" }}</span>
+        <span class="pager-t">{{ .Title }}</span>
+      </a>
+      {{- end }}
+      {{- with $next }}
+      <a class="pager-link pager-next" href="{{ .RelPermalink }}">
+        <span class="pager-dir">{{ i18n "pager_next" }}</span>
+        <span class="pager-t">{{ .Title }}</span>
+      </a>
+      {{- end }}
+    </nav>
+    {{- end }}
+
     {{ partial "comparables.html" . }}
 
     {{ partial "related.html" . }}

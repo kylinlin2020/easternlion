@@ -3,12 +3,17 @@
   "description": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年的发展历史。",
   "hero": [
     {
-      "image": "/images/hero/2.jpg",
-      "alt": "东方电机柴油发电机组"
+      "image": "/images/hero/0-gensets.jpg",
+      "alt": "东方电机发电机组",
+      "pos": "72% 50%"
     },
     {
       "image": "/images/hero/3.jpg",
       "alt": "东方电机发电机生产线"
+    },
+    {
+      "image": "/images/hero/2.jpg",
+      "alt": "东方电机柴油发电机组"
     },
     {
       "image": "/images/hero/1.jpg",

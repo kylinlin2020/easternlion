@@ -293,3 +293,12 @@ other = "功率范围取自各产品页的标准 50 / 60 Hz 额定表，其他�
 
 [skip_to_content]
 other = "跳到主要内容"
+
+[search_button]
+other = "搜索"
+[pager]
+other = "其他机型"
+[pager_prev]
+other = "上一款"
+[pager_next]
+other = "下一款"

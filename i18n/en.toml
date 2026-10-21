@@ -294,3 +294,12 @@ other = "Power ranges are taken from the standard 50 / 60 Hz rating tables on ea
 
 [skip_to_content]
 other = "Skip to content"
+
+[search_button]
+other = "Search"
+[pager]
+other = "Other models"
+[pager_prev]
+other = "Previous"
+[pager_next]
+other = "Next"

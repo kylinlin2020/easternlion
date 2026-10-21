@@ -1,11 +1,24 @@
 {{ define "main" }}
+{{- $prev := .PrevInSection -}}
+{{- $next := .NextInSection -}}
 <section class="inner-main">
   <div class="container">
     <div class="error-page">
-      <div class="code">404</div>
+      <p class="error-code">404</p>
       <h1>{{ i18n "not_found" }}</h1>
-      <p>{{ i18n "not_found_text" }}</p>
-      <a class="btn btn-primary" href="{{ "/" | relLangURL }}">{{ i18n "back_home" }}</a>
+      <p class="error-text">{{ i18n "not_found_text" }}</p>
+
+      <form class="error-search" action="{{ "products/" | relLangURL }}" method="get" role="search">
+        <input class="input" type="search" name="q" placeholder="{{ i18n "search_placeholder" }}" aria-label="{{ i18n "search_placeholder" }}">
+        <button class="btn btn-primary" type="submit">{{ i18n "search_button" }}</button>
+      </form>
+
+      <div class="error-links">
+        <a class="btn btn-outline btn-sm" href="{{ "products/" | relLangURL }}">{{ i18n "nav_products" }}</a>
+        <a class="btn btn-outline btn-sm" href="{{ "about/" | relLangURL }}">{{ i18n "nav_company" }}</a>
+        <a class="btn btn-outline btn-sm" href="{{ "contact/" | relLangURL }}">{{ i18n "nav_contact" }}</a>
+        <a class="btn btn-outline btn-sm" href="{{ "/" | relLangURL }}">{{ i18n "back_home" }}</a>
+      </div>
     </div>
   </div>
 </section>

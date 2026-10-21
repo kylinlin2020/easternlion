@@ -4,7 +4,7 @@
   <div class="hero-slides">
     {{- range $i, $s := $hero }}
     <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
-      <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+      <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" style="object-position: {{ $s.pos | default "50% 50%" }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
     </div>
     {{- end }}
   </div>

@@ -3,12 +3,17 @@
   "description": "Fuan Eastern Lion Electric Machines Co., Ltd is a professional manufacturer of diesel generator sets, brush alternators and brushless alternators, with more than 30 years of experience.",
   "hero": [
     {
-      "image": "/images/hero/2.jpg",
-      "alt": "Eastern Lion diesel generator set"
+      "image": "/images/hero/0-gensets.jpg",
+      "alt": "Eastern Lion generator sets",
+      "pos": "72% 50%"
     },
     {
       "image": "/images/hero/3.jpg",
       "alt": "Eastern Lion alternator production"
+    },
+    {
+      "image": "/images/hero/2.jpg",
+      "alt": "Eastern Lion diesel generator set"
     },
     {
       "image": "/images/hero/1.jpg",
