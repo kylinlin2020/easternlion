@@ -11,7 +11,7 @@
 HUGO ?= hugo
 PORT ?= 1313
 
-.PHONY: all dev build preview check links products clean
+.PHONY: all dev build preview check links products align clean
 
 all: build
 
@@ -26,13 +26,16 @@ build:
 preview:
 	$(HUGO) server --port $(PORT) --bind 127.0.0.1 --renderToDisk
 
-check: build links products
+check: build links products align
 
 links:
 	node scripts/check-links.js public
 
 products:
 	node scripts/check-products.js
+
+align:
+	node scripts/check-alignment.js public
 
 clean:
 	rm -rf public resources .hugo_build.lock

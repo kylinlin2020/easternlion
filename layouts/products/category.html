@@ -25,6 +25,8 @@
         </div>
         <p class="filter-empty" id="filterEmpty" hidden>{{ i18n "filter_empty" }}</p>
         {{ partial "filter-bar.js.html" . }}
+        {{ partial "compare-data.html" . }}
+        <script src="{{ "js/compare.js" | relURL }}" defer></script>
         {{- else }}
         <p>{{ i18n "products_coming_soon" }}</p>
         {{- end }}

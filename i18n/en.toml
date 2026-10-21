@@ -271,8 +271,6 @@ other = "International department:"
 [form_again]
 other = "Write another inquiry"
 
-[compare_title]
-other = "Other series in the same power range"
 
 [latest_news]
 other = "Latest news"
@@ -396,3 +394,28 @@ other = "Generator sets and packing"
 other = "Production line"
 [video_3]
 other = "Production base"
+
+[compare_add]
+other = "Add to comparison"
+[compare_clear]
+other = "Clear"
+[compare_open]
+other = "Compare"
+[compare_models]
+other = "models"
+[compare_open_model]
+other = "Open"
+[compare_title]
+other = "Model comparison"
+[compare_power]
+other = "Power range"
+[compare_freq]
+other = "Frequency"
+[compare_count]
+other = "Models"
+[compare_engine]
+other = "Engine"
+[compare_alternator]
+other = "Alternator"
+[compare_controller]
+other = "Controller"

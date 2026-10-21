@@ -1,0 +1,35 @@
+{{- /* compare data + localised strings for the multi model comparison tool */ -}}
+{{- $scope := . -}}
+{{- if .IsPage -}}{{- $scope = .Parent -}}{{- end -}}
+{{- $pages := slice -}}
+{{- range $scope.Pages -}}
+  {{- if .Params.columns -}}
+    {{- $pages = $pages | append (dict
+        "t" .Title
+        "u" .RelPermalink
+        "i" (.Params.image | relURL)
+        "g" (.Params.power_min | default 0)
+        "p" (.Params.power_max | default 0)
+        "n" (.Params.model_count | default 0)
+        "e" (.Params.engine_top | default "—")
+        "a" (.Params.alternator_top | default "—")
+        "c" (.Params.controller_top | default "—")
+        "h" (.Params.hz | default 50)
+    ) -}}
+  {{- end -}}
+{{- end -}}
+<script type="application/json" id="compareData">{{ $pages | jsonify | safeJS }}</script>
+{{- $s := dict
+      "clear"     (i18n "compare_clear")
+      "compare"   (i18n "compare_open")
+      "models"    (i18n "compare_models")
+      "open"      (i18n "compare_open_model")
+      "title"     (i18n "compare_title")
+      "power"     (i18n "compare_power")
+      "freq"      (i18n "compare_freq")
+      "count"     (i18n "compare_count")
+      "engine"    (i18n "compare_engine")
+      "alternator" (i18n "compare_alternator")
+      "controller" (i18n "compare_controller")
+-}}
+<script type="application/json" id="compareStrings">{{ $s | jsonify | safeJS }}</script>

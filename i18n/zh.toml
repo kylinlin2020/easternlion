@@ -270,8 +270,6 @@ other = "国际业务部："
 [form_again]
 other = "再写一条询价"
 
-[compare_title]
-other = "同功率段的其他系列"
 
 [latest_news]
 other = "最新动态"
@@ -395,3 +393,28 @@ other = "发电机组与包装"
 other = "生产线"
 [video_3]
 other = "生产基地"
+
+[compare_add]
+other = "加入对比"
+[compare_clear]
+other = "清空"
+[compare_open]
+other = "对比"
+[compare_models]
+other = "款机型"
+[compare_open_model]
+other = "查看"
+[compare_title]
+other = "机型对比"
+[compare_power]
+other = "功率范围"
+[compare_freq]
+other = "频率"
+[compare_count]
+other = "机型数"
+[compare_engine]
+other = "发动机"
+[compare_alternator]
+other = "交流发电机"
+[compare_controller]
+other = "控制器"

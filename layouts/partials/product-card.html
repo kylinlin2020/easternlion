@@ -1,31 +1,38 @@
 {{- $img := .Params.image -}}
 {{- $min := .Params.power_min | default 0 -}}
 {{- $max := .Params.power_max | default 0 -}}
-<a class="product-card" href="{{ .RelPermalink }}" title="{{ .Title }}"
-   data-kind="{{ .Params.kind | default "genset" }}"
-   data-hz="{{ .Params.hz | default 50 }}"
-   data-min="{{ $min }}" data-max="{{ $max }}">
-  <span class="thumb">
-    {{- with $img }}
-    <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
-    {{- else }}
-    <img src="{{ "images/logo.png" | relURL }}" alt="{{ $.Title }}" loading="lazy">
-    {{- end }}
-  </span>
-  <span class="body">
-    <h3>{{ .Title }}</h3>
-    <span class="tags">
-      <span class="tag">{{ .Params.hz | default 50 }}Hz</span>
-      {{- if gt (float $min) 0 }}
-      <span class="tag">{{ $min }}–{{ $max }} kW</span>
+<div class="product-card" title="{{ .Title }}"
+     data-url="{{ .RelPermalink }}"
+     data-kind="{{ .Params.product_kind | default "genset" }}"
+     data-hz="{{ .Params.hz | default 50 }}"
+     data-min="{{ $min }}" data-max="{{ $max }}">
+  <a class="pc-link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+    <span class="thumb">
+      {{- with $img }}
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      {{- else }}
+      <img src="{{ "images/logo.png" | relURL }}" alt="{{ $.Title }}" loading="lazy">
       {{- end }}
     </span>
-    <span class="meta">
-      <span>{{ .Params.category | default "" }}</span>
-      <span class="more">
-        {{ i18n "view_details" }}
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+    <span class="body">
+      <h3>{{ .Title }}</h3>
+      <span class="tags">
+        <span class="tag">{{ .Params.hz | default 50 }}Hz</span>
+        {{- if gt (float $min) 0 }}
+        <span class="tag">{{ $min }}–{{ $max }} kW</span>
+        {{- end }}
+      </span>
+      <span class="meta">
+        <span>{{ .Params.category | default "" }}</span>
+        <span class="more">
+          {{ i18n "view_details" }}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+        </span>
       </span>
     </span>
-  </span>
-</a>
+  </a>
+  <button type="button" class="js-compare" data-url="{{ .RelPermalink }}"
+          aria-label="{{ i18n "compare_add" }}" title="{{ i18n "compare_add" }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+  </button>
+</div>
