@@ -18,6 +18,33 @@ Live preview: <https://easternlion.pages.dev/>
 | Source | GitHub — `kylinlin2020/easternlion`, production branch `main` |
 | Language | English only (structure is i18n-ready, see below) |
 
+## 本地预览（当前工作方式）
+
+> 目前阶段 **只做本地预览**，不同步 GitHub / Cloudflare。远端仓库与 Pages 项目保持现状，
+> 不再推送；下面的命令只在本机使用。
+
+```bash
+# 1) 开发预览（推荐）：改 content/ 或 layouts/ 后自动重建，浏览器自动刷新
+hugo server --port 1313 --bind 127.0.0.1 --navigateToChanged
+#    → http://127.0.0.1:1313/
+
+# 2) 生产构建（与线上等价，用于本地核对）
+hugo --gc --minify --destination public
+#    → public/ ，用任意静态服务器打开，例如：
+node -e "require('http').createServer((q,s)=>{const p=require('path'),f=require('fs');const u=require('url').parse(q.url).pathname;let x=p.join('public',u);if(u.endsWith('/'))x+='index.html';f.readFile(x,(e,d)=>{s.writeHead(e?404:200,{'content-type':e?'text/html':'text/html; charset=utf-8'});s.end(e?'404':d)})}).listen(8900)"
+#    → http://127.0.0.1:8900/
+
+# 3) 与原站镜像对照（采集时的本地副本）
+#    → http://127.0.0.1:8899/site/index.html
+```
+
+需要同步时再执行：
+
+```bash
+git push origin main          # GitHub
+wrangler pages deploy public --project-name easternlion --branch main
+```
+
 ## Local development
 
 ```bash
