@@ -375,3 +375,8 @@ other = "Ask our engineers"
 
 [more_news]
 other = "More news"
+
+[contact_drawing]
+other = "Drawing / specification reference (optional)"
+[contact_drawing_hint]
+other = "Give a drawing number or attach the file when replying to our e-mail — our engineers then quote exactly to your drawing."

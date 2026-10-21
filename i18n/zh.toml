@@ -374,3 +374,8 @@ other = "咨询工程师"
 
 [more_news]
 other = "更多动态"
+
+[contact_drawing]
+other = "图纸 / 技术要求编号（选填）"
+[contact_drawing_hint]
+other = "回复邮件时可附上图纸文件，工程师将按图纸精确报价。"

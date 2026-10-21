@@ -96,7 +96,12 @@
     }
 
     if (!hits.length) {
-      panel.innerHTML = html + '<p class="sp-empty">' + esc(STRINGS.empty) + '</p>';
+      var base = document.documentElement.getAttribute('data-base') || '';
+      var links = (cats || []).slice(0, 4).map(function (c) {
+        return '<a class="sp-cat" href="' + esc(c.u) + '">' + esc(c.t) + '</a>';
+      }).join('');
+      panel.innerHTML = html + '<p class="sp-empty">' + esc(STRINGS.empty) + '</p>' +
+        (links ? '<div class="sp-empty-links"><span>' + esc(STRINGS.cats) + '</span>' + links + '</div>' : '');
       panel.hidden = false;
       return;
     }

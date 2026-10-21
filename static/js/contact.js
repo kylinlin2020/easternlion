@@ -64,6 +64,7 @@
       'Phone: ' + (f.get('phone') || ''),
       'Company: ' + (f.get('company') || ''),
       'Product: ' + (f.get('product') || ''),
+      'Drawing / spec reference: ' + (f.get('drawing') || ''),
       '',
       f.get('message') || ''
     ].join('\n');

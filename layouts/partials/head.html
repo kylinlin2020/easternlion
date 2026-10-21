@@ -46,6 +46,13 @@
 <link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
 <link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}">
 
+{{- /* preload the first hero image (LCP) */}}
+{{- with .Params.hero }}
+  {{- with index . 0 }}
+<link rel="preload" as="image" href="{{ .image | relURL }}" fetchpriority="high">
+  {{- end }}
+{{- end }}
+
 {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
