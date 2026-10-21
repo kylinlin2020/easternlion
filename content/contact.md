@@ -2,6 +2,7 @@
 type: "contact"
 title: "Contact Us"
 description: "Contact Fuan Eastern Lion Electric Machines Co., Ltd — international department in Fuzhou, manufacturer in Fuan, Fujian, China."
+banner_compact: true
 banner_image: "/images/banner/contact.jpg"
 banner_title: "Contact Us"
 breadcrumb:
