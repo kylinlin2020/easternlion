@@ -1261,6 +1261,13 @@ button { font-family: inherit; cursor: pointer; }
   .page-banner .banner-logo { height: 64px; }
   .page-banner .banner-sub { font-size: 18px; }
   .inner-main { padding: 34px 0 50px; }
+  .timeline { padding: 20px 0 0; }
+  .timeline::before { left: 20px; }
+  .tl-item { display: block; padding-left: 62px; margin-bottom: 28px; }
+  .tl-year { text-align: left !important; padding: 0 !important; }
+  .tl-desc { padding: 6px 0 0 !important; text-align: left !important; }
+  .tl-node { position: absolute; left: 0; top: 0; }
+  .tl-connector { display: none; }
   .product-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .about-nav a { min-width: 130px; padding: 10px 16px; font-size: 13px; }
