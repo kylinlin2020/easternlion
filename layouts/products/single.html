@@ -88,6 +88,17 @@
         </div>
 
         {{- if $rows }}
+        {{- $models := slice -}}
+        {{- range $rows -}}{{- $models = $models | append (index . 0) -}}{{- end -}}
+        <div class="model-jump">
+          <label for="modelJump">{{ i18n "jump_to_model" }}</label>
+          <select id="modelJump" class="input">
+            <option value="">{{ i18n "jump_to_model" }}</option>
+            {{- range $models }}
+            <option value="model-{{ . | urlquery }}">{{ . }}</option>
+            {{- end }}
+          </select>
+        </div>
         <div class="table-card">
         <div class="table-scroll">
           <table class="spec-table">
@@ -109,7 +120,7 @@
             </thead>
             <tbody>
               {{- range $rows }}
-              <tr>
+              <tr id="model-{{ (index . 0) | urlquery }}">
                 {{- range $i, $c := . }}
                 {{- if and $diesel (eq $i 10) }}
                 <td><a href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">Detail</a></td>
@@ -167,4 +178,19 @@
   </a>
   <a class="btn btn-primary" href="{{ "contact/" | relLangURL }}?product={{ .Title | urlquery }}">{{ i18n "product_inquire" }}</a>
 </div>
+
+<script>
+  (function () {
+    var sel = document.getElementById('modelJump');
+    if (!sel) return;
+    sel.addEventListener('change', function () {
+      if (!sel.value) return;
+      var row = document.getElementById(sel.value);
+      if (!row) return;
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('is-hit');
+      setTimeout(function () { row.classList.remove('is-hit'); }, 2200);
+    });
+  })();
+</script>
 {{ end }}

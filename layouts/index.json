@@ -1,6 +1,10 @@
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
   {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- $models := slice -}}
+  {{- range .Params.rows -}}
+    {{- $models = $models | append (index . 0) -}}
+  {{- end -}}
   {{- $out = $out | append (dict
       "t" .Title
       "u" .RelPermalink
@@ -10,6 +14,7 @@
       "g" (.Params.power_min | default 0)
       "p" (.Params.power_max | default 0)
       "h" (.Params.hz | default 0)
+      "m" $models
   ) -}}
 {{- end -}}
-{{- dict "count" (len $out) "items" $out | jsonify -}}
+{{- dict "count" (len $out) "items" $out | jsonify (dict "indent" "  ") -}}

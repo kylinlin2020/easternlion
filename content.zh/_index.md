@@ -6,18 +6,6 @@
       "image": "/images/hero/0-gensets.jpg",
       "alt": "东方电机发电机组",
       "pos": "72% 50%"
-    },
-    {
-      "image": "/images/hero/3.jpg",
-      "alt": "东方电机发电机生产线"
-    },
-    {
-      "image": "/images/hero/2.jpg",
-      "alt": "东方电机柴油发电机组"
-    },
-    {
-      "image": "/images/hero/1.jpg",
-      "alt": "东方电机生产车间"
     }
   ],
   "hero_eyebrow": "中国优质供应商",
@@ -28,19 +16,23 @@
   "hero_stats": [
     {
       "value": "30+",
-      "label": "年制造经验"
+      "label": "年制造经验",
+      "link": "/about/history/"
     },
     {
       "value": "35",
-      "label": "个销售与办事处"
+      "label": "个销售与办事处",
+      "link": "/service/"
     },
     {
       "value": "15,000",
-      "label": "台年产能（发电机）"
+      "label": "台年产能（发电机）",
+      "link": "/products/brushless-alternator/"
     },
     {
       "value": "2,000",
-      "label": "台年产能（机组）"
+      "label": "台年产能（机组）",
+      "link": "/products/diesel-generator-set/"
     }
   ],
   "product_title": "产品中心"

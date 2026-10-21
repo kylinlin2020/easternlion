@@ -303,3 +303,16 @@ other = "Other models"
 other = "Previous"
 [pager_next]
 other = "Next"
+
+[search_model]
+other = "Model"
+
+[jump_to_model]
+other = "Jump to model"
+
+[alt_workshop]
+other = "Eastern Lion alternator production"
+[alt_products]
+other = "Eastern Lion brushless alternators"
+[alt_packing]
+other = "Eastern Lion packing and testing"

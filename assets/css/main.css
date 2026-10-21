@@ -1786,6 +1786,60 @@ a[data-lb] { cursor: zoom-in; }
 .pager-t { display: block; margin-top: 4px; font-size: 15px; font-weight: 600; color: var(--ink); }
 .pager-next { text-align: right; }
 
+
+/* ---------- model jump ---------- */
+.model-jump {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.model-jump label {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.model-jump select { max-width: 320px; }
+
+.spec-table tr.is-hit td {
+  background: var(--amber-50) !important;
+  box-shadow: inset 3px 0 0 var(--amber);
+}
+
+
+/* hero: slow push-in on the single product shot */
+.hero-slide.is-active img { animation: kenburns 18s ease-out forwards; }
+
+@keyframes kenburns {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.is-active img { animation: none; }
+}
+
+/* photo strip on the home page */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.photo-strip img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  background: var(--surface-3);
+}
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
@@ -1878,6 +1932,7 @@ a[data-lb] { cursor: zoom-in; }
   .gallery { grid-template-columns: repeat(3, 1fr); }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-strip { grid-template-columns: 1fr; }
   .check-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .workshop-top { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1905,6 +1960,8 @@ a[data-lb] { cursor: zoom-in; }
   .mobile-langs a.is-current { color: var(--amber-600); }
   .product-grid { grid-template-columns: 1fr; }
   .error-search { flex-direction: column; }
+  .model-jump { flex-direction: column; align-items: flex-start; }
+  .model-jump select { max-width: 100%; }
   .compare-grid { grid-template-columns: 1fr; }
   .sticky-bar { display: flex; }
   .inner-main { padding-bottom: 96px; }

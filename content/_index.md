@@ -6,18 +6,6 @@
       "image": "/images/hero/0-gensets.jpg",
       "alt": "Eastern Lion generator sets",
       "pos": "72% 50%"
-    },
-    {
-      "image": "/images/hero/3.jpg",
-      "alt": "Eastern Lion alternator production"
-    },
-    {
-      "image": "/images/hero/2.jpg",
-      "alt": "Eastern Lion diesel generator set"
-    },
-    {
-      "image": "/images/hero/1.jpg",
-      "alt": "Eastern Lion generator factory"
     }
   ],
   "hero_eyebrow": "Golden Supplier in China",
@@ -28,19 +16,23 @@
   "hero_stats": [
     {
       "value": "30+",
-      "label": "Years of manufacturing"
+      "label": "Years of manufacturing",
+      "link": "/about/history/"
     },
     {
       "value": "35",
-      "label": "Sales & service bases"
+      "label": "Sales & service bases",
+      "link": "/service/"
     },
     {
       "value": "15,000",
-      "label": "Alternators per year"
+      "label": "Alternators per year",
+      "link": "/products/brushless-alternator/"
     },
     {
       "value": "2,000",
-      "label": "Generator sets per year"
+      "label": "Generator sets per year",
+      "link": "/products/diesel-generator-set/"
     }
   ],
   "product_title": "Product Center"

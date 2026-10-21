@@ -26,10 +26,17 @@
       {{- with .Params.hero_stats }}
       <div class="hero-stats">
         {{- range . }}
+        {{- if .link }}
+        <a class="hero-stat hero-stat--link" href="{{ .link | relLangURL }}">
+          <b>{{ .value }}</b>
+          <span>{{ .label }}</span>
+        </a>
+        {{- else }}
         <div class="hero-stat">
           <b>{{ .value }}</b>
           <span>{{ .label }}</span>
         </div>
+        {{- end }}
         {{- end }}
       </div>
       {{- end }}
@@ -81,6 +88,12 @@
       <h2>{{ i18n "why_us_title" }}</h2>
       <p>{{ i18n "why_us_text" }}</p>
     </div>
+    <div class="photo-strip">
+      <img src="/images/about/factory.jpg" alt="{{ i18n "alt_workshop" }}" loading="lazy">
+      <img src="/images/workshop/1.jpg" alt="{{ i18n "alt_products" }}" loading="lazy">
+      <img src="/images/workshop/8.jpg" alt="{{ i18n "alt_packing" }}" loading="lazy">
+    </div>
+
     <div class="feature-grid">
       {{- $features := index site.Data.features site.Language.Lang -}}
       {{- range $i, $f := $features }}

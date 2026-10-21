@@ -302,3 +302,16 @@ other = "其他机型"
 other = "上一款"
 [pager_next]
 other = "下一款"
+
+[search_model]
+other = "型号"
+
+[jump_to_model]
+other = "快速跳转到型号"
+
+[alt_workshop]
+other = "东方电机发电机生产"
+[alt_products]
+other = "东方电机无刷发电机"
+[alt_packing]
+other = "东方电机包装与检测"

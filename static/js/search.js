@@ -8,9 +8,9 @@
 
   var STRINGS = {
     empty: panel.dataset.msgEmpty || '',
-    loading: panel.dataset.msgLoading || '',
     results: panel.dataset.msgResults || '',
-    all: panel.dataset.msgAll || ''
+    all: panel.dataset.msgAll || '',
+    model: panel.dataset.msgModel || ''
   };
 
   function esc(s) {
@@ -30,23 +30,42 @@
       .then(function () { loading = false; });
   }
 
-  function score(item, q) {
+  /* normalise: lower case, drop spaces and dashes so that "gfs w33",
+     "gfs-w33" and "GFSW33" all match */
+  function norm(s) {
+    return String(s).toLowerCase().replace(/[\s\-_/]/g, '');
+  }
+
+  function score(item, q, nq) {
     var t = (item.t || '').toLowerCase();
     var d = (item.d || '').toLowerCase();
     var k = (item.k || '').toLowerCase();
     var c = (item.c || '').toLowerCase();
-    if (t.indexOf(q) === 0) return 100;
-    if (t.indexOf(q) > -1) return 70;
-    if (k.indexOf(q) > -1) return 55;
-    if (c.indexOf(q) > -1) return 40;
-    if (d.indexOf(q) > -1) return 25;
+
+    if (t.indexOf(q) === 0) return 120;
+    if (t.indexOf(q) > -1) return 90;
+    if (k.indexOf(q) > -1) return 70;
+    if (c.indexOf(q) > -1) return 55;
+    if (d.indexOf(q) > -1) return 35;
+
+    /* model numbers, e.g. GFS-W33 */
+    var models = item.m || [];
+    for (var i = 0; i < models.length; i++) {
+      var m = models[i];
+      if (!m) continue;
+      var ml = m.toLowerCase();
+      if (ml.indexOf(q) === 0) return 80;
+      if (ml.indexOf(q) > -1) return 60;
+      if (norm(m).indexOf(nq) > -1) return 50;
+    }
     return 0;
   }
 
   function render(q) {
     if (!q) { panel.hidden = true; panel.innerHTML = ''; return; }
+    var nq = norm(q);
     var hits = index
-      .map(function (i) { return { i: i, s: score(i, q) }; })
+      .map(function (i) { return { i: i, s: score(i, q, nq) }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) { return b.s - a.s; })
       .slice(0, 8);
@@ -63,6 +82,18 @@
       if (it.k) meta.push(esc(it.k));
       if (it.h) meta.push(esc(it.h) + 'Hz');
       if (it.g) meta.push(esc(it.g) + '–' + esc(it.p) + ' kW');
+
+      /* show the matching model when the hit came from a model number */
+      var model = '';
+      if (it.m && it.m.length) {
+        for (var i = 0; i < it.m.length; i++) {
+          var m = it.m[i];
+          if (!m) continue;
+          if (m.toLowerCase().indexOf(q) > -1 || norm(m).indexOf(nq) > -1) { model = m; break; }
+        }
+      }
+      if (model) meta.push(esc(model));
+
       return '<a class="sp-item" href="' + esc(it.u) + '">' +
         '<span class="sp-t">' + esc(it.t) + '</span>' +
         (meta.length ? '<span class="sp-m">' + meta.join(' · ') + '</span>' : '') +
