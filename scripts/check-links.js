@@ -46,8 +46,15 @@ function check(file) {
 walk(root);
 
 if (problems.length) {
-  console.log("BROKEN LINKS (" + problems.length + "):");
-  [...new Set(problems)].forEach((p) => console.log("  " + p));
+  const unique = [...new Set(problems)];
+  console.log("BROKEN LINKS (" + unique.length + "):");
+  unique.forEach((p) => console.log("  " + p));
+  if (unique.some((p) => p.includes("livereload"))) {
+    console.log(
+      "\n  hint: a livereload snippet leaked into the build. Stop `hugo server`\n" +
+        "        and delete the resources/ directory before building (see the Makefile)."
+    );
+  }
   process.exit(1);
 }
 console.log(`OK: ${checked} internal links checked, none broken.`);
