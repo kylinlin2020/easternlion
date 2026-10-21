@@ -136,6 +136,20 @@ Layout rules:
 Responsive: 980px collapses the nav into a drawer, 640px hides the search and the quote button,
 moves the language switcher into the drawer and stacks the grids.
 
+## Interactive features (all client-side, no backend)
+
+| Feature | Where | How |
+| --- | --- | --- |
+| **Site search** | header | `layouts/index.json` emits `search-index.json` (title, url, description, category, kW range) per language; `static/js/search.js` fetches it and shows a ranked dropdown (title > category > section > description) with a "see all" link. The query is reflected in the URL. |
+| **Product filters** | category pages | type / power band / frequency chips; each card carries `data-kind`, `data-hz`, `data-min`, `data-max`. The power band matches when a series *covers* it. State is written to the query string. |
+| **Inquiry form** | contact page | `static/js/contact.js` validates name / e-mail / message, shows inline errors, then swaps the form for a green confirmation panel and hands the inquiry to the visitor's mail client. |
+| **Lightbox** | certificates, family photos | `static/js/lightbox.js` opens any `a[data-lb]` in a full-screen overlay (Esc / backdrop / ✕ to close). |
+| **Sticky action bar** | product pages (mobile) | product name + call button + *Inquire* pinned to the bottom of the viewport. |
+| **Power-band comparison** | product pages | `comparables` in the front matter lists the series whose power range overlaps the current one. |
+
+Product meta used by these features is derived from the specification tables at build time
+(`power_min`, `power_max`, `hz`, `product_kind`, `comparables`).
+
 ### Hero and banners
 
 * **Home hero** — the original uses LayerSlider (`fullwidth` skin): a fixed **800px** stage

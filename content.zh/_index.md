@@ -38,7 +38,6 @@
       "label": "台年产能（机组）"
     }
   ],
-  "product_title": "产品中心",
-  "hero_feature": "/products/diesel-generator-set/engine-by-cummins/"
+  "product_title": "产品中心"
 }
 柴油发电机组采用康明斯、珀金斯、玉柴等知名品牌发动机，面向国内及国际市场。发电机由东方电机自主研发生产，或选用 Stamford、Marathon、Engga、Leroy-Somer 等国内外知名品牌。

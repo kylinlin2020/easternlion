@@ -1,0 +1,16 @@
+{{- with .Params.comparables }}
+<section class="compare">
+  <h2 class="related-title">{{ i18n "compare_title" }}</h2>
+  <div class="compare-grid">
+    {{- range . }}
+    <a class="compare-card" href="{{ .u }}">
+      <span class="cc-t">{{ .t }}</span>
+      <span class="cc-m">{{ .h }}Hz · {{ .g }}–{{ .p }} kW</span>
+      <span class="cc-more">{{ i18n "view_details" }}
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+      </span>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

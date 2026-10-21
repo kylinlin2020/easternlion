@@ -21,10 +21,10 @@
 <div class="separator"></div>
 
 <div class="cert-grid">
-  <a href="/images/qualification/cert-1.jpg"><img src="/images/qualification/cert-1.jpg" alt="东方电机证书 1" loading="lazy"></a>
-  <a href="/images/qualification/cert-2.jpg"><img src="/images/qualification/cert-2.jpg" alt="东方电机证书 2" loading="lazy"></a>
-  <a href="/images/qualification/cert-3.jpg"><img src="/images/qualification/cert-3.jpg" alt="东方电机证书 3" loading="lazy"></a>
-  <a href="/images/qualification/cert-4.jpg"><img src="/images/qualification/cert-4.jpg" alt="东方电机证书 4" loading="lazy"></a>
+  <a href="/images/qualification/cert-1.jpg" data-lb="/images/qualification/cert-1.jpg" data-lb-alt="东方电机证书 1"><img src="/images/qualification/cert-1.jpg" alt="东方电机证书 1" loading="lazy"></a>
+  <a href="/images/qualification/cert-2.jpg" data-lb="/images/qualification/cert-2.jpg" data-lb-alt="东方电机证书 2"><img src="/images/qualification/cert-2.jpg" alt="东方电机证书 2" loading="lazy"></a>
+  <a href="/images/qualification/cert-3.jpg" data-lb="/images/qualification/cert-3.jpg" data-lb-alt="东方电机证书 3"><img src="/images/qualification/cert-3.jpg" alt="东方电机证书 3" loading="lazy"></a>
+  <a href="/images/qualification/cert-4.jpg" data-lb="/images/qualification/cert-4.jpg" data-lb-alt="东方电机证书 4"><img src="/images/qualification/cert-4.jpg" alt="东方电机证书 4" loading="lazy"></a>
 </div>
 
 <h3 class="block-title">展会</h3>

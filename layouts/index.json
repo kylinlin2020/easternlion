@@ -1,0 +1,15 @@
+{{- $out := slice -}}
+{{- range site.RegularPages -}}
+  {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- $out = $out | append (dict
+      "t" .Title
+      "u" .RelPermalink
+      "d" $d
+      "k" (.Params.category | default "")
+      "c" (.Parent.Title | default "")
+      "g" (.Params.power_min | default 0)
+      "p" (.Params.power_max | default 0)
+      "h" (.Params.hz | default 0)
+  ) -}}
+{{- end -}}
+{{- dict "count" (len $out) "items" $out | jsonify -}}

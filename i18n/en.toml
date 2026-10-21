@@ -246,3 +246,30 @@ other = "Send us the power, voltage and application — our engineers reply with
 other = "Request a quotation"
 [inquiry_whatsapp]
 other = "Chat on WhatsApp"
+
+[search_empty]
+other = "No matching page. Try a model name, an engine brand or a power range."
+[search_loading]
+other = "Searching…"
+[search_all]
+other = "See all products"
+
+[form_required]
+other = "Please complete the highlighted fields."
+[form_name_required]
+other = "Please enter your name."
+[form_email]
+other = "Please enter a valid e-mail address."
+[form_message_required]
+other = "Please tell us what you need."
+[form_success_title]
+other = "Thank you — your inquiry is ready to send"
+[form_success_text]
+other = "We have prepared your message and opened your e-mail client. If it did not open, write to us directly."
+[form_success_mail]
+other = "International department:"
+[form_again]
+other = "Write another inquiry"
+
+[compare_title]
+other = "Other series in the same power range"

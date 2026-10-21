@@ -38,7 +38,6 @@
       "label": "Generator sets per year"
     }
   ],
-  "product_title": "Product Center",
-  "hero_feature": "/products/diesel-generator-set/engine-by-cummins/"
+  "product_title": "Product Center"
 }
 Diesel generator sets are made of famous brand, Cummins, Perkins, Yuchai engine for domestic market and abroad, the generator independent R & D and production of Eastern Lion or Stamdford, Marathon, Engga, Leroysomer and other domestic and international famous brands.

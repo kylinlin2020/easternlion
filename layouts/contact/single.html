@@ -46,16 +46,51 @@
       <div class="contact-block">
         <h2>{{ i18n "contact_get_in_touch" }}</h2>
         <p class="contact-note">{{ i18n "contact_more_info" }}</p>
-        <form class="contact-form" id="inquiryForm">
-          <input type="text" name="name" placeholder="{{ i18n "contact_name" }}" required>
-          <input type="email" name="email" placeholder="{{ i18n "contact_email" }}" required>
-          <input type="text" name="phone" placeholder="{{ i18n "contact_phone" }}">
-          <input type="text" name="company" placeholder="{{ i18n "contact_company" }}">
-          <input type="text" name="product" id="productField" placeholder="{{ i18n "contact_product" }}">
-          <textarea name="message" placeholder="{{ i18n "contact_message" }}" required></textarea>
+        <form class="contact-form" id="inquiryForm" novalidate
+              data-msg-required="{{ i18n "form_required" }}"
+              data-msg-email="{{ i18n "form_email" }}"
+              data-msg-name="{{ i18n "form_name_required" }}"
+              data-msg-msg="{{ i18n "form_message_required" }}"
+              data-mail-to="{{ site.Params.email }}">
+          <p class="form-error" id="formError" hidden></p>
+
+          <div class="field">
+            <input class="input" type="text" name="name" placeholder="{{ i18n "contact_name" }}" data-required>
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <input class="input" type="email" name="email" placeholder="{{ i18n "contact_email" }}" data-required>
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <input class="input" type="text" name="phone" placeholder="{{ i18n "contact_phone" }}">
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <input class="input" type="text" name="company" placeholder="{{ i18n "contact_company" }}">
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <input class="input" type="text" name="product" id="productField" placeholder="{{ i18n "contact_product" }}">
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <textarea class="textarea" name="message" placeholder="{{ i18n "contact_message" }}" data-required></textarea>
+            <p class="field-error" hidden></p>
+          </div>
+
           <button type="submit">{{ i18n "contact_submit" }}</button>
-          <p class="spec-note" id="formNote" style="display:none">Your email client will open with the inquiry. You can also write to {{ site.Params.email }}.</p>
         </form>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <div class="fs-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+          </div>
+          <h3>{{ i18n "form_success_title" }}</h3>
+          <p>{{ i18n "form_success_text" }}</p>
+          <p class="fs-mail">{{ i18n "form_success_mail" }} <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+          <button type="button" class="btn btn-outline btn-sm" id="formAgain">{{ i18n "form_again" }}</button>
+        </div>
       </div>
     </div>
 
@@ -65,34 +100,14 @@
   </div>
 </section>
 
+<script src="{{ "js/contact.js" | relURL }}" defer></script>
 <script>
   (function () {
-    var params = new URLSearchParams(window.location.search);
-    var product = params.get('product');
-    if (product) {
-      var field = document.getElementById('productField');
-      if (field) field.value = product;
-    }
-    var form = document.getElementById('inquiryForm');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var f = new FormData(form);
-        var subject = 'Inquiry' + (f.get('product') ? ': ' + f.get('product') : '');
-        var body = [
-          'Name: ' + (f.get('name') || ''),
-          'Email: ' + (f.get('email') || ''),
-          'Phone: ' + (f.get('phone') || ''),
-          'Company: ' + (f.get('company') || ''),
-          'Product: ' + (f.get('product') || ''),
-          '',
-          f.get('message') || ''
-        ].join('\n');
-        window.location.href = 'mailto:{{ site.Params.email }}?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        var note = document.getElementById('formNote');
-        if (note) note.style.display = 'block';
-      });
-    }
+    var p = new URLSearchParams(window.location.search).get('product');
+    var f = document.getElementById('productField');
+    if (p && f && !f.value) f.value = p;
   })();
 </script>
+
 {{ end }}
+

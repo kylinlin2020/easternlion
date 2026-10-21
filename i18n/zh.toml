@@ -245,3 +245,30 @@ other = "告诉我们功率、电压与使用场景，我们的工程师将在�
 other = "索取报价"
 [inquiry_whatsapp]
 other = "WhatsApp 咨询"
+
+[search_empty]
+other = "没有找到匹配页面，可以试试机型名、发动机品牌或功率段。"
+[search_loading]
+other = "搜索中…"
+[search_all]
+other = "查看全部产品"
+
+[form_required]
+other = "请填写标红的必填项。"
+[form_name_required]
+other = "请填写您的姓名。"
+[form_email]
+other = "请填写有效的邮箱地址。"
+[form_message_required]
+other = "请简单描述您的需求。"
+[form_success_title]
+other = "谢谢！您的询价已整理好"
+[form_success_text]
+other = "我们已为您准备好邮件内容并打开了邮件客户端。若未自动打开，请直接发邮件给我们。"
+[form_success_mail]
+other = "国际业务部："
+[form_again]
+other = "再写一条询价"
+
+[compare_title]
+other = "同功率段的其他系列"

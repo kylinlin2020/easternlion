@@ -36,13 +36,19 @@
     <div class="header-spacer"></div>
 
     <div class="header-tools">
-      <form class="search" action="{{ "products/" | relLangURL }}" method="get" role="search">
-        <label class="sr-only" for="site-search">{{ i18n "search_placeholder" }}</label>
-        <input id="site-search" type="search" name="q" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
-        <button type="submit" aria-label="{{ i18n "search_placeholder" }}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
-        </button>
-      </form>
+      <div class="search-wrap">
+        <form class="search" action="{{ "products/" | relLangURL }}" method="get" role="search">
+          <label class="sr-only" for="site-search">{{ i18n "search_placeholder" }}</label>
+          <input id="site-search" type="search" name="q" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off" aria-expanded="false" aria-controls="searchResults">
+          <button type="submit" aria-label="{{ i18n "search_placeholder" }}">
+            {{ partial "icon.html" (dict "name" "search") }}
+          </button>
+        </form>
+        <div class="search-panel" id="searchResults" hidden
+             data-msg-empty="{{ i18n "search_empty" }}"
+             data-msg-loading="{{ i18n "search_loading" }}"
+             data-msg-all="{{ i18n "search_all" }}"></div>
+      </div>
 
       <div class="lang" aria-label="Language">
         <img src="{{ "images/flag-en.jpg" | relURL }}" alt="English" width="20" height="13">

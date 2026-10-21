@@ -572,7 +572,51 @@
   "power_min": 22,
   "power_max": 444,
   "hz": 50,
-  "product_kind": "genset"
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "Engine By Cummins 2",
+      "g": 200,
+      "p": 1311,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-cummins-2/"
+    },
+    {
+      "t": "Engine By Huachai Series",
+      "g": 13,
+      "p": 289,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-huachai-series/"
+    },
+    {
+      "t": "Engine By Kofo Series",
+      "g": 10,
+      "p": 338,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-kofo-series/"
+    },
+    {
+      "t": "Engine By Longxin Series",
+      "g": 24,
+      "p": 289,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-longxin-series/"
+    },
+    {
+      "t": "Engine By Lovol Series",
+      "g": 25,
+      "p": 158,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-lovol-series/"
+    },
+    {
+      "t": "Engine By Perkins Series",
+      "g": 7.2,
+      "p": 2000,
+      "h": 50,
+      "u": "/products/diesel-generator-set/engine-by-perkins-series/"
+    }
+  ]
 }
 
 Eastern Lion Cummins series diesel generator sets combine Cummins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

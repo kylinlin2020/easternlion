@@ -16,10 +16,10 @@ breadcrumb:
 <div class="separator"></div>
 
 <div class="cert-grid">
-  <a href="/images/qualification/cert-1.jpg"><img src="/images/qualification/cert-1.jpg" alt="Eastern Lion certificate 1" loading="lazy"></a>
-  <a href="/images/qualification/cert-2.jpg"><img src="/images/qualification/cert-2.jpg" alt="Eastern Lion certificate 2" loading="lazy"></a>
-  <a href="/images/qualification/cert-3.jpg"><img src="/images/qualification/cert-3.jpg" alt="Eastern Lion certificate 3" loading="lazy"></a>
-  <a href="/images/qualification/cert-4.jpg"><img src="/images/qualification/cert-4.jpg" alt="Eastern Lion certificate 4" loading="lazy"></a>
+  <a href="/images/qualification/cert-1.jpg" data-lb="/images/qualification/cert-1.jpg" data-lb-alt="Eastern Lion certificate 1"><img src="/images/qualification/cert-1.jpg" alt="Eastern Lion certificate 1" loading="lazy"></a>
+  <a href="/images/qualification/cert-2.jpg" data-lb="/images/qualification/cert-2.jpg" data-lb-alt="Eastern Lion certificate 2"><img src="/images/qualification/cert-2.jpg" alt="Eastern Lion certificate 2" loading="lazy"></a>
+  <a href="/images/qualification/cert-3.jpg" data-lb="/images/qualification/cert-3.jpg" data-lb-alt="Eastern Lion certificate 3"><img src="/images/qualification/cert-3.jpg" alt="Eastern Lion certificate 3" loading="lazy"></a>
+  <a href="/images/qualification/cert-4.jpg" data-lb="/images/qualification/cert-4.jpg" data-lb-alt="Eastern Lion certificate 4"><img src="/images/qualification/cert-4.jpg" alt="Eastern Lion certificate 4" loading="lazy"></a>
 </div>
 
 <h3 class="block-title">Exhibition</h3>

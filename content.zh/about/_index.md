@@ -51,16 +51,16 @@
 <div class="separator"></div>
 
 <div class="gallery">
-  <a href="/images/about/thumb-1.jpg"><img src="/images/about/thumb-1.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-2.jpg"><img src="/images/about/thumb-2.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-3.jpg"><img src="/images/about/thumb-3.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-4.jpg"><img src="/images/about/thumb-4.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-5.jpg"><img src="/images/about/thumb-5.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-6.jpg"><img src="/images/about/thumb-6.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-7.jpg"><img src="/images/about/thumb-7.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-8.jpg"><img src="/images/about/thumb-8.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-9.jpg"><img src="/images/about/thumb-9.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-10.jpg"><img src="/images/about/thumb-10.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-11.jpg"><img src="/images/about/thumb-11.jpg" alt="东方电机员工合影" loading="lazy"></a>
-  <a href="/images/about/thumb-12.jpg"><img src="/images/about/thumb-12.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-1.jpg" data-lb="/images/about/thumb-1.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-1.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-2.jpg" data-lb="/images/about/thumb-2.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-2.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-3.jpg" data-lb="/images/about/thumb-3.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-3.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-4.jpg" data-lb="/images/about/thumb-4.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-4.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-5.jpg" data-lb="/images/about/thumb-5.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-5.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-6.jpg" data-lb="/images/about/thumb-6.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-6.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-7.jpg" data-lb="/images/about/thumb-7.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-7.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-8.jpg" data-lb="/images/about/thumb-8.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-8.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-9.jpg" data-lb="/images/about/thumb-9.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-9.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-10.jpg" data-lb="/images/about/thumb-10.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-10.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-11.jpg" data-lb="/images/about/thumb-11.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-11.jpg" alt="东方电机员工合影" loading="lazy"></a>
+  <a href="/images/about/thumb-12.jpg" data-lb="/images/about/thumb-12.jpg" data-lb-alt="东方电机员工合影"><img src="/images/about/thumb-12.jpg" alt="东方电机员工合影" loading="lazy"></a>
 </div>

@@ -48,16 +48,16 @@ Diesel generator sets are made with famous-brand Cummins, Perkins and Yuchai eng
 <div class="separator"></div>
 
 <div class="gallery">
-  <a href="/images/about/thumb-1.jpg"><img src="/images/about/thumb-1.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-2.jpg"><img src="/images/about/thumb-2.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-3.jpg"><img src="/images/about/thumb-3.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-4.jpg"><img src="/images/about/thumb-4.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-5.jpg"><img src="/images/about/thumb-5.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-6.jpg"><img src="/images/about/thumb-6.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-7.jpg"><img src="/images/about/thumb-7.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-8.jpg"><img src="/images/about/thumb-8.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-9.jpg"><img src="/images/about/thumb-9.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-10.jpg"><img src="/images/about/thumb-10.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-11.jpg"><img src="/images/about/thumb-11.jpg" alt="Eastern Lion staff" loading="lazy"></a>
-  <a href="/images/about/thumb-12.jpg"><img src="/images/about/thumb-12.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-1.jpg" data-lb="/images/about/thumb-1.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-1.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-2.jpg" data-lb="/images/about/thumb-2.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-2.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-3.jpg" data-lb="/images/about/thumb-3.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-3.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-4.jpg" data-lb="/images/about/thumb-4.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-4.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-5.jpg" data-lb="/images/about/thumb-5.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-5.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-6.jpg" data-lb="/images/about/thumb-6.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-6.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-7.jpg" data-lb="/images/about/thumb-7.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-7.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-8.jpg" data-lb="/images/about/thumb-8.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-8.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-9.jpg" data-lb="/images/about/thumb-9.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-9.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-10.jpg" data-lb="/images/about/thumb-10.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-10.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-11.jpg" data-lb="/images/about/thumb-11.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-11.jpg" alt="Eastern Lion staff" loading="lazy"></a>
+  <a href="/images/about/thumb-12.jpg" data-lb="/images/about/thumb-12.jpg" data-lb-alt="Eastern Lion staff"><img src="/images/about/thumb-12.jpg" alt="Eastern Lion staff" loading="lazy"></a>
 </div>

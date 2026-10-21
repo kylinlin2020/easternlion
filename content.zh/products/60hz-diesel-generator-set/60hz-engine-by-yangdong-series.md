@@ -247,7 +247,30 @@
   "power_min": 10,
   "power_max": 59,
   "hz": 60,
-  "product_kind": "genset"
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "60HZ 康明斯发动机系列",
+      "g": 20,
+      "p": 444,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
+    },
+    {
+      "t": "60HZ 潍柴发动机系列",
+      "g": 27,
+      "p": 178,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
+    },
+    {
+      "t": "60HZ 玉兴发动机系列",
+      "g": 24,
+      "p": 371,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
+    }
+  ]
 }
 东方电机扬动系列柴油发电机组采用扬动柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、60Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 

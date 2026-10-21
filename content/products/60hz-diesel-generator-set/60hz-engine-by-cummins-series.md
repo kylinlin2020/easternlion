@@ -390,7 +390,37 @@
   "power_min": 20,
   "power_max": 444,
   "hz": 60,
-  "product_kind": "genset"
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "60 HZ Engine By Cummins Series 2",
+      "g": 200,
+      "p": 1222,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series-2/"
+    },
+    {
+      "t": "60HZ Engine By Lovol Series",
+      "g": 27,
+      "p": 178,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
+    },
+    {
+      "t": "60HZ Engine By Yangdong Series",
+      "g": 10,
+      "p": 59,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
+    },
+    {
+      "t": "60HZ Engine By Yuxing Series",
+      "g": 24,
+      "p": 371,
+      "h": 60,
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yuxing-series/"
+    }
+  ]
 }
 
 Eastern Lion Engine By Cummins series diesel generator sets for 60 Hz operation combine Engine By Cummins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 60 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
