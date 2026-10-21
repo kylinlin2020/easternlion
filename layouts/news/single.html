@@ -27,7 +27,25 @@
           &nbsp;|&nbsp; {{ i18n "news_origin" }}: {{ i18n "news_site" }}
         </div>
         {{ .Content }}
-        <p style="margin-top:40px"><a href="{{ "news/" | relLangURL }}">&laquo; {{ i18n "news_back" }}</a></p>
+        {{- $prev := .PrevInSection }}
+      {{- $next := .NextInSection }}
+      {{- if or $prev $next }}
+      <nav class="pager" aria-label="{{ i18n "pager" }}">
+        {{- with $prev }}
+        <a class="pager-link pager-prev" href="{{ .RelPermalink }}">
+          <span class="pager-dir">{{ i18n "pager_prev" }}</span>
+          <span class="pager-t">{{ .Title }}</span>
+        </a>
+        {{- end }}
+        {{- with $next }}
+        <a class="pager-link pager-next" href="{{ .RelPermalink }}">
+          <span class="pager-dir">{{ i18n "pager_next" }}</span>
+          <span class="pager-t">{{ .Title }}</span>
+        </a>
+        {{- end }}
+      </nav>
+      {{- end }}
+      <p style="margin-top:40px"><a href="{{ "news/" | relLangURL }}">&laquo; {{ i18n "news_back" }}</a></p>
       </article>
     </div>
   </div>

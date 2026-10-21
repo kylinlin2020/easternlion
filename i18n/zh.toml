@@ -362,3 +362,15 @@ other = "中国铁路十三局承建的湖北长江公路大桥项目。"
 other = "应用案例 3"
 [app3_text]
 other = "中国铁路十二局承建的恩施隧道项目。"
+
+[faq_jump]
+other = "快速跳到问题"
+[faq_cta_title]
+other = "没找到答案？"
+[faq_cta_text]
+other = "告诉我们功率、电压与使用场景，工程师将在一个工作日内回复。"
+[faq_cta_button]
+other = "咨询工程师"
+
+[more_news]
+other = "更多动态"

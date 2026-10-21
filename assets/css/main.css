@@ -981,6 +981,12 @@ label.label {
 .page-banner .banner-sub { color: #fff; font-size: clamp(22px, 2.6vw, 32px); font-weight: 700; margin: 0 0 10px; }
 .page-banner .banner-text { color: rgba(255, 255, 255, .82); font-size: 15.5px; margin: 0 auto; max-width: 1000px; }
 
+@media (max-width: 640px) {
+  .page-banner .banner-logo { height: 54px; margin-bottom: 14px; }
+  .page-banner .banner-sub { font-size: 19px; }
+  .page-banner .banner-text { font-size: 14px; line-height: 1.7; }
+}
+
 /* breadcrumb */
 .breadcrumb { background: #fff; border-bottom: 1px solid var(--line); }
 
@@ -1986,6 +1992,97 @@ a[data-lb] { cursor: zoom-in; }
 .app-card--media h3 { padding: 0 26px; }
 .app-card--media p { padding: 0 26px; }
 
+
+/* ---------- faq: jump nav + cta ---------- */
+.faq-jump {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1180px;
+  margin: 0 auto 22px;
+}
+
+.faq-jump span {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.faq-jump a {
+  padding: 6px 13px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+}
+
+.faq-jump a:hover { border-color: var(--amber); color: var(--amber-600); background: var(--amber-50); }
+
+.faq-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  flex-wrap: wrap;
+  max-width: 1180px;
+  margin: 40px auto 0;
+  padding: 30px 34px;
+  background: var(--navy-800);
+  border-radius: var(--r-lg);
+}
+
+.faq-cta h3 { color: #fff; font-size: 21px; margin-bottom: 8px; }
+.faq-cta p { color: rgba(255, 255, 255, .7); margin: 0; font-size: 15px; }
+.faq-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+
+/* ---------- news: feature + list ---------- */
+.news-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.news-feature {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--sh-xs);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.news-feature:hover { transform: translateY(-3px); box-shadow: var(--sh-md); }
+
+.nf-media { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--surface-3); }
+.nf-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.news-feature:hover .nf-media img { transform: scale(1.05); }
+
+.nf-body { display: block; padding: 24px 26px 28px; }
+.nf-date { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--amber-600); margin-bottom: 10px; }
+.nf-body strong { display: block; font-size: 22px; line-height: 1.35; color: var(--ink); margin-bottom: 10px; }
+.nf-text { display: block; color: var(--muted); font-size: 15px; line-height: 1.75; }
+.nf-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--amber-600); }
+
+.news-side-title {
+  font-size: 17px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-side .news-list { gap: 14px; }
+.news-side .news-item { padding: 20px 22px; }
+.news-side .news-item .more { display: inline-block; margin-top: 12px; font-size: 13.5px; font-weight: 600; }
+.news-side .news-item .more a { color: var(--amber-600); }
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
@@ -2080,6 +2177,8 @@ a[data-lb] { cursor: zoom-in; }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
   .photo-strip { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
+  .faq-cta { flex-direction: column; align-items: flex-start; }
+  .news-layout { grid-template-columns: 1fr; }
   .coverage-list { grid-template-columns: 1fr; }
   .check-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .workshop-top { grid-template-columns: 1fr; }

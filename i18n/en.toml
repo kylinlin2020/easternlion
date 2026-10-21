@@ -363,3 +363,15 @@ other = "Hubei Yangtze River Highway Bridge project of the thirteen Railway Bure
 other = "Applications 3"
 [app3_text]
 other = "Enshi tunnel project of the twelve Railway Bureau of China Railway Administration."
+
+[faq_jump]
+other = "Jump to question"
+[faq_cta_title]
+other = "Can't find the answer?"
+[faq_cta_text]
+other = "Send us the power, voltage and application and our engineers will reply within one working day."
+[faq_cta_button]
+other = "Ask our engineers"
+
+[more_news]
+other = "More news"

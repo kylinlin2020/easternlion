@@ -1,0 +1,15 @@
+- id: warranty
+  q: "warrantee?"
+  a: "1 year or 1000 hours working"
+- id: spares
+  q: "Delivery date of the spare parts?"
+  a: "Within 7 working days"
+- id: stock
+  q: "What kinds of spare parts are in stock?"
+  a: "AVR, Storage battery, oil filter, diesel filter, air filter core, control panel, Oil pump"
+- id: installation
+  q: "Is the installation schedule available on request?"
+  a: "Yes"
+- id: sample
+  q: "Can you offer sample?"
+  a: "Yes, but the sample is charged, freight as well"

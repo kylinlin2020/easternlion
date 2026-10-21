@@ -8,21 +8,41 @@
     <div class="separator"></div>
     {{ partial "about-nav.html" . }}
 
-    {{- with .Content }}
-    <div class="rich" style="max-width:900px;margin:0 auto 30px">{{ . }}</div>
-    {{- end }}
+    {{- $posts := .Pages.ByDate.Reverse -}}
+    {{- with $posts }}
+    {{- $first := index . 0 -}}
+    {{- $rest := after 1 . -}}
 
-    <div class="news-list" style="max-width:900px;margin:0 auto">
-      {{- range .Pages.ByDate.Reverse }}
-      <article class="news-item">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <a class="read-more" href="{{ .RelPermalink }}">{{ i18n "news_read_more" }}</a></h2>
-        <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
-        <p>{{ .Summary | plainify | truncate 190 }}</p>
-      </article>
-      {{- else }}
-      <p>No news yet.</p>
+    <div class="news-layout">
+      <a class="news-feature" href="{{ $first.RelPermalink }}">
+        <span class="nf-media">
+          <img src="{{ "images/workshop/8.jpg" | relURL }}" alt="{{ $first.Title }}" loading="lazy">
+        </span>
+        <span class="nf-body">
+          <span class="nf-date">{{ $first.Date.Format "2006-01-02" }}</span>
+          <strong>{{ $first.Title }}</strong>
+          <span class="nf-text">{{ $first.Summary | plainify | truncate 180 }}</span>
+          <span class="nf-more">{{ i18n "news_read_more" }} →</span>
+        </span>
+      </a>
+
+      {{- with $rest }}
+      <div class="news-side">
+        <h3 class="news-side-title">{{ i18n "more_news" }}</h3>
+        <div class="news-list">
+          {{- range . }}
+          <article class="news-item">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+            <p>{{ .Summary | plainify | truncate 150 }}</p>
+            <span class="more"><a href="{{ .RelPermalink }}">{{ i18n "news_read_more" }} →</a></span>
+          </article>
+          {{- end }}
+        </div>
+      </div>
       {{- end }}
     </div>
+    {{- end }}
   </div>
 </section>
 {{ end }}
