@@ -5,6 +5,27 @@
 {{ partial "breadcrumb.html" . }}
 
 {{- $cols := .Params.columns -}}
+{{- $tableHz := 50 -}}
+{{- if eq (printf "%v" (.Params.hz | default 50)) "60" }}{{ $tableHz = 60 }}{{ end -}}
+{{- $colMap := dict
+      "Model" "col_model"
+      "Prime power (kW)" "col_prime_kw"
+      "Prime power (kVA)" "col_prime_kva"
+      "Standby power (kW)" "col_standby_kw"
+      "Standby power (kVA)" "col_standby_kva"
+      "Engine model" "col_engine_model"
+      "Engine power (kW)" "col_engine_power"
+      "Alternator model" "col_alt_model"
+      "Alternator power (kW)" "col_alt_power"
+      "Controller" "col_controller"
+      "Datasheet" "col_datasheet"
+      "50Hz Output (kW)" "col_50hz_kw"
+      "50Hz Output (kVA)" "col_50hz_kva"
+      "60Hz Output (kW)" "col_60hz_kw"
+      "60Hz Output (kVA)" "col_60hz_kva"
+      "SAE Size" "col_sae_size"
+      "Core Length (mm)" "col_core_length"
+-}}
 {{- $rows := .Params.rows -}}
 {{- $product := .Title -}}
 {{- $diesel := eq (len $cols) 11 -}}
@@ -109,16 +130,16 @@
             <thead>
               {{- if $diesel }}
               <tr>
-                <th colspan="5">Genset Specification 400/230V 50HZ</th>
-                <th class="blue" colspan="2">Engine</th>
-                <th colspan="2">Brushless Alternator</th>
-                <th class="blue">Controller</th>
-                <th>Datasheet</th>
+                <th colspan="5">{{ i18n "spec_genset" }} 400/230V {{ $tableHz }}HZ</th>
+                <th class="blue" colspan="2">{{ i18n "spec_engine" }}</th>
+                <th colspan="2">{{ i18n "spec_alternator" }}</th>
+                <th class="blue">{{ i18n "spec_controller" }}</th>
+                <th>{{ i18n "spec_datasheet" }}</th>
               </tr>
               {{- end }}
               <tr>
                 {{- range $cols }}
-                <th>{{ . }}</th>
+                <th>{{ $colKey := index $colMap . }}{{ if $colKey }}{{ i18n $colKey }}{{ else }}{{ . }}{{ end }}</th>
                 {{- end }}
               </tr>
             </thead>
@@ -127,7 +148,7 @@
               <tr id="model-{{ (index . 0) | urlquery }}">
                 {{- range $i, $c := . }}
                 {{- if and $diesel (eq $i 10) }}
-                <td><a href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">Detail</a></td>
+                <td><a href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">{{ i18n "spec_detail" }}</a></td>
                 {{- else }}
                 <td>{{ $c }}</td>
                 {{- end }}

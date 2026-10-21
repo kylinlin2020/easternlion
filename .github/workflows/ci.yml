@@ -40,6 +40,9 @@ jobs:
       - name: Check SEO and accessibility
         run: node scripts/check-seo.js public
 
+      - name: Check the Chinese pages for untranslated english
+        run: node scripts/check-language.js public
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:

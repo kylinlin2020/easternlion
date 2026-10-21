@@ -3,15 +3,18 @@
   url: /products/brush-alternator/
   image: /images/home/cat-brush.jpg
   description: STC series brush alternators from 8 kW to 500 kW.
+  description_zh: "STC 系列有刷交流发电机，功率范围 8-500kW。"
 
 - name: Diesel Generator Set
   key: cat_diesel_generator_set
   url: /products/diesel-generator-set/
   image: /images/home/cat-diesel.jpg
   description: 50 Hz and 60 Hz generator sets powered by Cummins, Perkins, Yuchai, YTO and other engines.
+  description_zh: "50Hz 与 60Hz 柴油发电机组，可选康明斯、珀金斯、玉柴、玉动等发动机。"
 
 - name: Brushless Alternator
   key: cat_brushless_alternator
   url: /products/brushless-alternator/
   image: /images/home/cat-brushless.jpg
   description: EL series brushless alternators with SAE couplings.
+  description_zh: "EL 系列无刷交流发电机，配备 SAE 标准法兰接口。"

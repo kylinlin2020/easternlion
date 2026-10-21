@@ -428,3 +428,56 @@ other = "Browse the Eastern Lion product categories: diesel generator sets, brus
 other = "News and product updates from Fuan Eastern Lion Electric Machines Co., Ltd, tagged by topic."
 [alt_factory]
 other = "Eastern Lion generator factory in Fuan, Fujian"
+
+[breadcrumb_here]
+other = "You are here:"
+[footer_about]
+other = "About Us"
+[spec_genset]
+other = "Genset Specification"
+[spec_engine]
+other = "Engine"
+[spec_alternator]
+other = "Brushless Alternator"
+[spec_controller]
+other = "Controller"
+[spec_datasheet]
+other = "Datasheet"
+[spec_detail]
+other = "Detail"
+[col_model]
+other = "Model"
+[col_prime_kw]
+other = "Prime power (kW)"
+[col_prime_kva]
+other = "Prime power (kVA)"
+[col_standby_kw]
+other = "Standby power (kW)"
+[col_standby_kva]
+other = "Standby power (kVA)"
+[col_engine_model]
+other = "Engine model"
+[col_engine_power]
+other = "Engine power (kW)"
+[col_alt_model]
+other = "Alternator model"
+[col_alt_power]
+other = "Alternator power (kW)"
+[col_controller]
+other = "Controller"
+[col_datasheet]
+other = "Datasheet"
+[col_50hz_kw]
+other = "50Hz Output (kW)"
+[col_50hz_kva]
+other = "50Hz Output (kVA)"
+[col_60hz_kw]
+other = "60Hz Output (kW)"
+[col_60hz_kva]
+other = "60Hz Output (kVA)"
+[col_sae_size]
+other = "SAE Size"
+[col_core_length]
+other = "Core Length (mm)"
+[news_center_title]
+other = "News Center"

@@ -427,3 +427,56 @@ other = "浏览东方电机产品分类：柴油发电机组、有刷交流发�
 other = "福建东方电机股份有限公司的新闻与产品资讯标签索引，按主题浏览。"
 [alt_factory]
 other = "福建福安东方电机发电机组生产基地"
+
+[breadcrumb_here]
+other = "当前位置："
+[footer_about]
+other = "关于我们"
+[spec_genset]
+other = "发电机组技术参数"
+[spec_engine]
+other = "发动机"
+[spec_alternator]
+other = "无刷发电机"
+[spec_controller]
+other = "控制器"
+[spec_datasheet]
+other = "参数表"
+[spec_detail]
+other = "详情"
+[col_model]
+other = "型号"
+[col_prime_kw]
+other = "额定功率 (kW)"
+[col_prime_kva]
+other = "额定功率 (kVA)"
+[col_standby_kw]
+other = "备用功率 (kW)"
+[col_standby_kva]
+other = "备用功率 (kVA)"
+[col_engine_model]
+other = "发动机型号"
+[col_engine_power]
+other = "发动机功率 (kW)"
+[col_alt_model]
+other = "发电机型号"
+[col_alt_power]
+other = "发电机功率 (kW)"
+[col_controller]
+other = "控制器"
+[col_datasheet]
+other = "参数表"
+[col_50hz_kw]
+other = "50Hz 输出功率 (kW)"
+[col_50hz_kva]
+other = "50Hz 输出功率 (kVA)"
+[col_60hz_kw]
+other = "60Hz 输出功率 (kW)"
+[col_60hz_kva]
+other = "60Hz 输出功率 (kVA)"
+[col_sae_size]
+other = "SAE 法兰尺寸"
+[col_core_length]
+other = "铁芯长度 (mm)"
+[news_center_title]
+other = "新闻中心"

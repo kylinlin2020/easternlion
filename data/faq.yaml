@@ -1,15 +1,25 @@
 - id: warranty
   q: "warrantee?"
   a: "1 year or 1000 hours working"
+  q_zh: "质保期是多久？"
+  a_zh: "1 年或 1000 小时运行时间"
 - id: spares
   q: "Delivery date of the spare parts?"
   a: "Within 7 working days"
+  q_zh: "备件的交货期是多久？"
+  a_zh: "7 个工作日内发货"
 - id: stock
   q: "What kinds of spare parts are in stock?"
   a: "AVR, Storage battery, oil filter, diesel filter, air filter core, control panel, Oil pump"
+  q_zh: "常备哪些备件？"
+  a_zh: "AVR 调压器、蓄电池、机油滤清器、柴油滤清器、空气滤芯、控制面板、机油泵"
 - id: installation
   q: "Is the installation schedule available on request?"
   a: "Yes"
+  q_zh: "可以提供安装方案和排期吗？"
+  a_zh: "可以，按需安排"
 - id: sample
   q: "Can you offer sample?"
   a: "Yes, but the sample is charged, freight as well"
+  q_zh: "可以提供样品吗？"
+  a_zh: "可以，样品费用及运费由客户承担"

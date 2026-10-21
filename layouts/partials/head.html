@@ -9,6 +9,9 @@
     {{- $title = printf "%s | %s" .Title (i18n "site_short_name") -}}
   {{- end -}}
 {{- end -}}
+{{- if eq .Kind "404" -}}
+  {{- $title = printf "404 %s | %s" (i18n "not_found") site.Params.company -}}
+{{- end -}}
 {{- $desc := .Description | default (.Summary | plainify | truncate 160) | default site.Params.description -}}
 {{- if and (lt (len $desc) 50) .Params.seo_description -}}
   {{- $desc = .Params.seo_description -}}
