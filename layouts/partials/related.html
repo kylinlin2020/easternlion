@@ -1,0 +1,20 @@
+
+{{- $current := . -}}
+{{- $siblings := slice -}}
+{{- with .Parent -}}
+  {{- range .Pages -}}
+    {{- if ne .RelPermalink $current.RelPermalink -}}
+      {{- $siblings = $siblings | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with first 4 $siblings }}
+<section class="related">
+  <h2 class="related-title">{{ i18n "related_title" }}</h2>
+  <div class="product-grid">
+    {{- range . }}
+    {{ partial "product-card.html" . }}
+    {{- end }}
+  </div>
+</section>
+{{- end }}

@@ -243,7 +243,11 @@
       "RUIFEN6120",
       "Detail"
     ]
-  ]
+  ],
+  "power_min": 8,
+  "power_max": 56,
+  "hz": 50,
+  "product_kind": "genset"
 }
 
 Eastern Lion Yangdong series diesel generator sets combine Yangdong diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

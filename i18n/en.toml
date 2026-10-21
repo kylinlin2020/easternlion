@@ -224,3 +224,41 @@ text = "35 sales and service bases in China plus online technical support and sp
 other = "What we manufacture"
 [hero_cta_note]
 other = "Reply within one working day"
+
+[filter_type]
+other = "Type"
+[filter_power]
+other = "Power"
+[filter_hz]
+other = "Frequency"
+[filter_all]
+other = "All"
+[filter_alternator]
+other = "Alternators"
+[filter_genset]
+other = "Generator sets"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "models"
+[filter_empty]
+other = "No model matches these filters — please contact us for other ratings."
+[products_coming_soon]
+other = "Product range is being updated. Please contact us for the full catalogue."
+
+[related_title]
+other = "Related models"
+[inquiry_title]
+other = "Need a quotation?"
+[inquiry_text]
+other = "Send us the power, voltage and application — our engineers reply within one working day."
+[inquiry_button]
+other = "Request a quotation"
+[inquiry_whatsapp]
+other = "Chat on WhatsApp"

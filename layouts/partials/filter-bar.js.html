@@ -1,0 +1,68 @@
+<script>
+(function () {
+  var bar = document.getElementById('productFilter');
+  if (!bar) return;
+
+  var grid = document.querySelector('.product-grid');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.product-card'));
+  var countEl = document.getElementById('filterCount');
+  var emptyEl = document.getElementById('filterEmpty');
+
+  var state = { kind: 'all', power: 'all', hz: 'all' };
+
+  function match(card) {
+    if (state.kind !== 'all' && card.dataset.kind !== state.kind) return false;
+    if (state.hz !== 'all' && card.dataset.hz !== state.hz) return false;
+    if (state.power !== 'all') {
+      var lo = parseFloat(state.power.split('-')[0]);
+      var hi = parseFloat(state.power.split('-')[1]);
+      var min = parseFloat(card.dataset.min);
+      var max = parseFloat(card.dataset.max);
+      /* a model matches when its power range overlaps the selected band */
+      if (max < lo || min > hi) return false;
+    }
+    return true;
+  }
+
+  function apply(push) {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var ok = match(card);
+      card.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (countEl) countEl.textContent = shown;
+    if (emptyEl) emptyEl.hidden = shown !== 0;
+
+    bar.querySelectorAll('.chip').forEach(function (chip) {
+      var on = state[chip.dataset.filter] === chip.dataset.value;
+      chip.classList.toggle('is-active', on);
+    });
+
+    if (push) {
+      var params = new URLSearchParams(window.location.search);
+      ['kind', 'power', 'hz'].forEach(function (k) {
+        if (state[k] === 'all') params.delete(k);
+        else params.set(k, state[k]);
+      });
+      var qs = params.toString();
+      history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+    }
+  }
+
+  bar.addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (!chip) return;
+    state[chip.dataset.filter] = chip.dataset.value;
+    apply(true);
+  });
+
+  /* restore from the URL */
+  var params = new URLSearchParams(window.location.search);
+  ['kind', 'power', 'hz'].forEach(function (k) {
+    if (params.get(k)) state[k] = params.get(k);
+  });
+  apply(false);
+})();
+</script>

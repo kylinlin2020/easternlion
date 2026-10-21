@@ -1,0 +1,35 @@
+{{- $pages := . -}}
+<div class="filter-bar" id="productFilter">
+  <div class="filter-group">
+    <span class="filter-label">{{ i18n "filter_type" }}</span>
+    <div class="chips" role="group">
+      <button type="button" class="chip is-active" data-filter="kind" data-value="all">{{ i18n "filter_all" }}</button>
+      <button type="button" class="chip" data-filter="kind" data-value="alternator">{{ i18n "filter_alternator" }}</button>
+      <button type="button" class="chip" data-filter="kind" data-value="genset">{{ i18n "filter_genset" }}</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <span class="filter-label">{{ i18n "filter_power" }}</span>
+    <div class="chips" role="group">
+      <button type="button" class="chip is-active" data-filter="power" data-value="all">{{ i18n "filter_all" }}</button>
+      <button type="button" class="chip" data-filter="power" data-value="0-50">{{ i18n "filter_power_50" }}</button>
+      <button type="button" class="chip" data-filter="power" data-value="50-200">{{ i18n "filter_power_200" }}</button>
+      <button type="button" class="chip" data-filter="power" data-value="200-500">{{ i18n "filter_power_500" }}</button>
+      <button type="button" class="chip" data-filter="power" data-value="500-99999">{{ i18n "filter_power_1000" }}</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <span class="filter-label">{{ i18n "filter_hz" }}</span>
+    <div class="chips" role="group">
+      <button type="button" class="chip is-active" data-filter="hz" data-value="all">{{ i18n "filter_all" }}</button>
+      <button type="button" class="chip" data-filter="hz" data-value="50">50Hz</button>
+      <button type="button" class="chip" data-filter="hz" data-value="60">60Hz</button>
+    </div>
+  </div>
+
+  <div class="filter-count">
+    <b id="filterCount">0</b> <span>{{ i18n "filter_models" }}</span>
+  </div>
+</div>

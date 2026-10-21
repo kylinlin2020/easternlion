@@ -751,7 +751,11 @@
       "Smartgen 6120",
       "Detail"
     ]
-  ]
+  ],
+  "power_min": 7.2,
+  "power_max": 2000,
+  "hz": 50,
+  "product_kind": "genset"
 }
 
 Eastern Lion Perkins series diesel generator sets combine Perkins diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.

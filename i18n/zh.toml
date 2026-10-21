@@ -223,3 +223,41 @@ text = "国内 35 个销售与办事处，叠加在线技术支持与备件供�
 other = "我们制造什么"
 [hero_cta_note]
 other = "一个工作日内回复"
+
+[filter_type]
+other = "类型"
+[filter_power]
+other = "功率"
+[filter_hz]
+other = "频率"
+[filter_all]
+other = "全部"
+[filter_alternator]
+other = "发电机"
+[filter_genset]
+other = "柴油发电机组"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "个机型"
+[filter_empty]
+other = "没有符合筛选条件的机型，其他功率段请与我们联系。"
+[products_coming_soon]
+other = "产品系列正在更新，完整样本请与我们的国际业务部联系。"
+
+[related_title]
+other = "相关机型"
+[inquiry_title]
+other = "需要报价？"
+[inquiry_text]
+other = "告诉我们功率、电压与使用场景，我们的工程师将在一个工作日内回复。"
+[inquiry_button]
+other = "索取报价"
+[inquiry_whatsapp]
+other = "WhatsApp 咨询"

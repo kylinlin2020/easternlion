@@ -15,14 +15,18 @@
           {{- end }}
         {{- end }}
 
+        {{ partial "filter-bar.html" . }}
+
         {{- if $pages }}
         <div class="product-grid">
           {{- range $pages }}
           {{ partial "product-card.html" . }}
           {{- end }}
         </div>
+        <p class="filter-empty" id="filterEmpty" hidden>{{ i18n "filter_empty" }}</p>
+        {{ partial "filter-bar.js.html" . }}
         {{- else }}
-        <p>Products coming soon. Please contact us for the full catalogue.</p>
+        <p>{{ i18n "products_coming_soon" }}</p>
         {{- end }}
 
         {{- with .Content }}

@@ -1,5 +1,10 @@
 {{- $img := .Params.image -}}
-<a class="product-card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+{{- $min := .Params.power_min | default 0 -}}
+{{- $max := .Params.power_max | default 0 -}}
+<a class="product-card" href="{{ .RelPermalink }}" title="{{ .Title }}"
+   data-kind="{{ .Params.kind | default "genset" }}"
+   data-hz="{{ .Params.hz | default 50 }}"
+   data-min="{{ $min }}" data-max="{{ $max }}">
   <span class="thumb">
     {{- with $img }}
     <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
@@ -9,6 +14,12 @@
   </span>
   <span class="body">
     <h3>{{ .Title }}</h3>
+    <span class="tags">
+      <span class="tag">{{ .Params.hz | default 50 }}Hz</span>
+      {{- if gt (float $min) 0 }}
+      <span class="tag">{{ $min }}–{{ $max }} kW</span>
+      {{- end }}
+    </span>
     <span class="meta">
       <span>{{ .Params.category | default "" }}</span>
       <span class="more">

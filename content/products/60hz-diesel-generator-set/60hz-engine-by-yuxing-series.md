@@ -321,7 +321,11 @@
       "RUIFEN6120",
       "Detail"
     ]
-  ]
+  ],
+  "power_min": 24,
+  "power_max": 371,
+  "hz": 60,
+  "product_kind": "genset"
 }
 
 Eastern Lion Engine By Yuxing series diesel generator sets for 60 Hz operation combine Engine By Yuxing diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 60 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
