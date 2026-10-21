@@ -68,6 +68,7 @@ content/
   about/                  Company Profile, History, Team, Qualification, Workshop
   news/                   News Center
   service.md  video.md  faq.md  contact.md
+content.zh/               the same tree, translated (served under /zh/)
 data/
   categories.yaml         the three product families used on the home / products pages
   sidebar.yaml            the 19 entries shown in the sidebar (with i18n keys)
@@ -211,23 +212,30 @@ Also note that the original's Perkins specification table contains non-numeric v
 
 ## Internationalisation
 
-The site currently ships **English only**, but the structure is ready for a second language:
+The site ships **two languages**:
 
-* every UI string lives in `i18n/en.toml` (a translated `i18n/zh.toml` is already filled in);
-* internal links use `relLangURL`, so they resolve to the right language prefix automatically;
-* the language switcher in the header is driven by `site.Home.Sites` — it shows whatever
-  languages are configured in `hugo.toml`;
-* product/category names come from `data/sidebar.yaml` with an i18n `key` per entry;
+| | English | 简体中文 |
+| --- | --- | --- |
+| URL | `/…` | `/zh/…` |
+| content | `content/` | `content.zh/` |
+| UI strings | `i18n/en.toml` | `i18n/zh.toml` |
+
+* every UI string lives in `i18n/<lang>.toml` (navigation, footer, forms, product buttons, news meta);
+* internal page links use `relLangURL`, static assets and content-provided image paths stay
+  root-relative (`relURL`) because Hugo only publishes `static/` at the site root;
+* the language switcher in the header is driven by `site.Home.Sites` — it shows the languages
+  configured in `hugo.toml` and links to the other language's home page;
+* product/category names come from `data/sidebar.yaml` and `data/categories.yaml` with an
+  i18n `key` per entry, so the same list serves both languages;
 * front matter carries `description`/`summary` for meta tags.
 
-**To publish a Chinese version**
+Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese URLs verified.
 
-1. `cp -r content content.zh` and translate the markdown;
-2. uncomment the `[languages.zh]` block in `hugo.toml` (it is ready to go);
-3. `hugo server` — the `zh` site is served under `/zh/` and the switcher links to it.
+**To add a third language**
 
-Verified end-to-end: with the `zh` block enabled Hugo builds `| EN | ZH |`, the Chinese page
-renders the Chinese navigation, and the switcher links back to the English home page.
+1. `cp -r content content.<lang>` and translate;
+2. copy `i18n/en.toml` → `i18n/<lang>.toml` and translate the values;
+3. add a `[languages.<lang>]` block in `hugo.toml` with `contentDir = "content.<lang>"`.
 
 ## Deployment
 

@@ -1,14 +1,17 @@
 - name: Brush Alternator
+  key: cat_brush_alternator
   url: /products/brush-alternator/
   image: /images/home/cat-brush.jpg
   description: STC series brush alternators from 8 kW to 500 kW.
 
 - name: Diesel Generator Set
+  key: cat_diesel_generator_set
   url: /products/diesel-generator-set/
   image: /images/home/cat-diesel.png
   description: 50 Hz and 60 Hz generator sets powered by Cummins, Perkins, Yuchai, YTO and other engines.
 
 - name: Brushless Alternator
+  key: cat_brushless_alternator
   url: /products/brushless-alternator/
   image: /images/home/cat-brushless.png
   description: EL series brushless alternators with SAE couplings.

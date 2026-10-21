@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="{{ "/" | relLangURL }}" aria-label="{{ site.Params.company }}">
-      <img src="{{ "images/logo.png" | relLangURL }}" alt="{{ site.Params.company }}" width="254" height="50">
+      <img src="{{ "images/logo.png" | relURL }}" alt="{{ site.Params.company }}" width="254" height="50">
     </a>
 
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
@@ -33,7 +33,7 @@
       </form>
 
       <div class="lang" aria-label="Language">
-        <img src="{{ "images/flag-en.jpg" | relLangURL }}" alt="English" width="22" height="14">
+        <img src="{{ "images/flag-en.jpg" | relURL }}" alt="English" width="22" height="14">
         {{- range site.Home.Sites }}
         {{- if eq .Language.Lang site.Language.Lang }}
         <span>{{ .Language.LanguageName | default .Language.Lang }}</span>

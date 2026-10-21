@@ -3,7 +3,7 @@
 <section class="hero" aria-label="Featured">
   {{- range $i, $s := $hero }}
   <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
-    <img src="{{ $s.image | relLangURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+    <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
   </div>
   {{- end }}
   {{- if gt (len $hero) 1 }}
@@ -25,7 +25,7 @@
     <div class="category-grid">
       {{- range site.Data.categories }}
       <a class="category-card" href="{{ .url | relLangURL }}">
-        <img src="{{ .image | relLangURL }}" alt="{{ .name }}" loading="lazy">
+        <img src="{{ .image | relURL }}" alt="{{ i18n .key }}" loading="lazy">
         <span class="label">{{ .name }}</span>
       </a>
       {{- end }}

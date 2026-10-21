@@ -1,0 +1,393 @@
+{
+  "title": "60HZ 康明斯发动机系列",
+  "description": "康明斯系列柴油发电机组，60Hz，额定与备用功率参数详见下方规格表。",
+  "summary": "康明斯系列柴油发电机组，60Hz，额定与备用功率参数详见下方规格表。",
+  "banner_image": "/images/banner/product.jpg",
+  "banner_title": "Product Detail",
+  "image": "/images/products/60hz-engine-by-cummins-series.jpg",
+  "images": [
+    "/images/products/60hz-engine-by-cummins-series.jpg"
+  ],
+  "category": "60HZ 柴油发电机组",
+  "weight": 36,
+  "breadcrumb": [
+    {
+      "name": "产品",
+      "url": "/products/"
+    },
+    {
+      "name": "柴油发电机组",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "柴油发电机组",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "60HZ 柴油发电机组",
+      "url": "/products/60hz-diesel-generator-set/"
+    },
+    {
+      "name": "60HZ 康明斯发动机系列"
+    },
+    {
+      "name": "60HZ 康明斯发动机系列"
+    }
+  ],
+  "columns": [
+    "Model",
+    "Prime power (kW)",
+    "Prime power (kVA)",
+    "Standby power (kW)",
+    "Standby power (kVA)",
+    "Engine model",
+    "Engine power (kW)",
+    "Alternator model",
+    "Alternator power (kW)",
+    "Controller",
+    "Datasheet"
+  ],
+  "rows": [
+    [
+      "GFS-C20",
+      "20",
+      "25",
+      "22",
+      "28",
+      "4B3.9-G11",
+      "23",
+      "ELS 184E",
+      "19.8",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C27",
+      "27",
+      "34",
+      "30",
+      "38",
+      "4B3.9-G2",
+      "30",
+      "ELS 184G",
+      "27.5",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C28",
+      "28",
+      "35",
+      "31",
+      "39",
+      "4B3.9-G12",
+      "33",
+      "ELS 184G",
+      "27.5",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C35",
+      "35",
+      "44",
+      "39",
+      "49",
+      "4BT3.9-G2",
+      "40",
+      "ELS 184J",
+      "35.2",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C53",
+      "53",
+      "66",
+      "59",
+      "73",
+      "4BTA3.9-G2",
+      "60",
+      "ELS 224E",
+      "52.8",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C60",
+      "60",
+      "75",
+      "67",
+      "83",
+      "4BTA3.9-G2",
+      "67",
+      "ELS 224F",
+      "63.8",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C72",
+      "72",
+      "90",
+      "80",
+      "100",
+      "4BTA3.9-G11",
+      "80",
+      "ELS 224G",
+      "74.8",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C90",
+      "90",
+      "113",
+      "100",
+      "126",
+      "6BT5.9-G2",
+      "100",
+      "ELS 274C",
+      "88",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C100",
+      "100",
+      "125",
+      "111",
+      "139",
+      "6BT5.9-G2",
+      "115",
+      "ELS 274D",
+      "105.6",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C105",
+      "105",
+      "131",
+      "117",
+      "146",
+      "6BTA5.9-G2",
+      "120",
+      "ELS 274D",
+      "105.6",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C120",
+      "120",
+      "150",
+      "133",
+      "167",
+      "6BTAA5.9-G2",
+      "132",
+      "ELS 274E",
+      "123.2",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C135",
+      "135",
+      "169",
+      "150",
+      "188",
+      "6BTAA5.9-G12",
+      "150",
+      "ELS 274F",
+      "140.8",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C150",
+      "150",
+      "188",
+      "167",
+      "209",
+      "6CTA8.3-G2",
+      "170",
+      "ELS 274G",
+      "160.2",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C170",
+      "170",
+      "213",
+      "189",
+      "237",
+      "6CTAA8.3-G2",
+      "190",
+      "ELS 274H",
+      "176",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C210",
+      "210",
+      "263",
+      "233",
+      "292",
+      "6LTAA8.9-G2",
+      "235",
+      "ELS 274K",
+      "220",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C220",
+      "220",
+      "275",
+      "244",
+      "306",
+      "6LTAA8.9-G3",
+      "255",
+      "ELS 274K",
+      "220",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C240",
+      "240",
+      "300",
+      "267",
+      "333",
+      "6LTAA9.5-G3",
+      "265",
+      "ELS 314D",
+      "259.6",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C260",
+      "260",
+      "325",
+      "289",
+      "361",
+      "6LTAA9.5-G1",
+      "290",
+      "ELS 314D",
+      "259.6",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C306",
+      "306",
+      "383",
+      "340",
+      "426",
+      "6ZTAA13-G3",
+      "340",
+      "ELS 314FS",
+      "308",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C350",
+      "350",
+      "438",
+      "389",
+      "487",
+      "6ZTAA13-G2",
+      "390",
+      "ELS 314G",
+      "352",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C350",
+      "350",
+      "438",
+      "389",
+      "487",
+      "6ZTAA13-G4",
+      "400",
+      "ELS 314G",
+      "352",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C350",
+      "350",
+      "438",
+      "389",
+      "487",
+      "QSZ13-G2",
+      "400",
+      "ELS 314G",
+      "352",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C400",
+      "400",
+      "500",
+      "444",
+      "556",
+      "QSZ13-G3",
+      "450",
+      "ELS 354C",
+      "396",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C390",
+      "390",
+      "488",
+      "433",
+      "542",
+      "QSZ13-G5",
+      "437",
+      "ELS 354C",
+      "396",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C320",
+      "320",
+      "400",
+      "356",
+      "444",
+      "QSZ13-G6",
+      "360",
+      "ELS 314F",
+      "334.4",
+      "Smartgen 6120",
+      "Detail"
+    ],
+    [
+      "GFS-C350",
+      "350",
+      "438",
+      "389",
+      "487",
+      "QSZ13-G7",
+      "409",
+      "ELS 314G",
+      "352",
+      "Smartgen 6120",
+      "Detail"
+    ]
+  ]
+}
+东方电机康明斯系列柴油发电机组采用康明斯柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、60Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
+
+所有机组出厂前均进行满载测试，最新资料、报价与交期请联系我们的国际业务部。

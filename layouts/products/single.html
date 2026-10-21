@@ -20,13 +20,13 @@
         <div class="product-hero">
           <div class="product-gallery">
             <div class="gallery-main">
-              <img id="productImage" src="{{ .Params.image | relLangURL }}" alt="{{ .Title }}">
+              <img id="productImage" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
             </div>
             <div class="thumbs">
               {{- $imgs := .Params.images | default (slice .Params.image) -}}
               {{- range $i, $im := $imgs }}
-              <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" data-src="{{ $im | relLangURL }}" aria-label="Image {{ add $i 1 }}">
-                <img src="{{ $im | relLangURL }}" alt="{{ $product }} thumbnail {{ add $i 1 }}" loading="lazy">
+              <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" data-src="{{ $im | relURL }}" aria-label="Image {{ add $i 1 }}">
+                <img src="{{ $im | relURL }}" alt="{{ $product }} thumbnail {{ add $i 1 }}" loading="lazy">
               </button>
               {{- end }}
             </div>

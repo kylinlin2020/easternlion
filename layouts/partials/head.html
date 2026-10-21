@@ -20,8 +20,8 @@
 <meta property="og:image" content="{{ . | absURL }}">
 {{- end }}
 
-<link rel="icon" type="image/png" href="{{ "images/logo.png" | relLangURL }}">
-<link rel="apple-touch-icon" href="{{ "images/logo.png" | relLangURL }}">
+<link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}">
 
 {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
