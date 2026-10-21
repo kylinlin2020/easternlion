@@ -1,6 +1,6 @@
 {
   "title": "新闻中心",
-  "description": "福建东方电机股份有限公司新闻资讯——柴油发电机组、有刷发电机与无刷发电机产品动态。",
+  "description": "福建东方电机股份有限公司新闻中心：柴油发电机组、有刷发电机与无刷发电机的产品动态与企业资讯。",
   "banner_image": "/images/banner/about.jpg",
   "banner_logo": true,
   "banner_hide_title": true,

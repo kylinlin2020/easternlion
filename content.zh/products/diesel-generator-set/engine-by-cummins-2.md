@@ -3,7 +3,7 @@
   "description": "康明斯（CCEC）系列柴油发电机组，50Hz，额定与备用功率参数详见下方规格表。",
   "summary": "康明斯（CCEC）系列柴油发电机组，50Hz，额定与备用功率参数详见下方规格表。",
   "banner_image": "/images/banner/product.jpg",
-  "banner_title": "Product Detail",
+  "banner_title": "产品详情",
   "image": "/images/products/engine-by-cummins-2.jpg",
   "images": [
     "/images/products/engine-by-cummins-2.jpg"

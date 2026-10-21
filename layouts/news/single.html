@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{- /* the article title below is the page heading, so the banner title steps down */ -}}
+{{- .Scratch.Set "own_h1" true -}}
 {{ partial "banner.html" . }}
 {{ partial "breadcrumb.html" . }}
 

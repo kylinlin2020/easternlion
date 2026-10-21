@@ -35,6 +35,7 @@
       "link": "/products/diesel-generator-set/"
     }
   ],
-  "product_title": "Product Center"
+  "product_title": "Product Center",
+  "seo_title": "Diesel Generator Set & Alternator Manufacturer in China | Eastern Lion"
 }
 Diesel generator sets are made of famous brand, Cummins, Perkins, Yuchai engine for domestic market and abroad, the generator independent R & D and production of Eastern Lion or Stamdford, Marathon, Engga, Leroysomer and other domestic and international famous brands.

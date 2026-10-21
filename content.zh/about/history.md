@@ -1,6 +1,6 @@
 {
   "title": "发展历程",
-  "description": "三十多年发展历程：从 1987 年汉阳电机厂到全球化发电机组制造商。",
+  "description": "东方电机三十多年发展历程：从 1987 年汉阳电机厂到全球化发电机组制造商，见证企业成长与产能升级。",
   "banner_image": "/images/banner/about.jpg",
   "banner_logo": true,
   "banner_hide_title": true,

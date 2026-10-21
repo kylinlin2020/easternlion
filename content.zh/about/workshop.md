@@ -1,6 +1,6 @@
 {
   "title": "车间实景",
-  "description": "走进东方电机车间：发电机生产、发电机组装配与满载测试。",
+  "description": "走进东方电机车间：发电机生产、发电机组装配与满载测试，了解从下料到出厂的完整流程与质量管控。",
   "banner_image": "/images/banner/about.jpg",
   "banner_logo": true,
   "banner_hide_title": true,

@@ -79,7 +79,7 @@ other = "现货"
 [product_inquire]
 other = "询价"
 [product_add_basket]
-other = "加入询价单"
+other = "微信咨询"
 [product_description]
 other = "产品说明"
 [product_share]
@@ -418,3 +418,10 @@ other = "发动机"
 other = "交流发电机"
 [compare_controller]
 other = "控制器"
+
+[site_short_name]
+other = "东方电机"
+[seo_taxonomy_desc]
+other = "浏览东方电机产品分类：柴油发电机组、有刷交流发电机与无刷交流发电机，功率范围 2-2000kW，中国制造。"
+[seo_tag_desc]
+other = "福建东方电机股份有限公司的新闻与产品资讯标签索引，按主题浏览。"

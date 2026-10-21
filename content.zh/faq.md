@@ -1,7 +1,7 @@
 ---
 type: "faq"
 title: "常见问题"
-description: "东方电机发电机组常见问题：质保、备件交期、库存、安装与样品。"
+description: "东方电机发电机组常见问题解答：质保期限、备件交期、库存机型、安装调试、样品与选型建议。"
 banner_compact: true
 banner_image: "/images/banner/faq.jpg"
 banner_title: "常见问题"

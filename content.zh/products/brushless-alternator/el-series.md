@@ -1,14 +1,14 @@
 {
-  "title": "无刷发电机",
-  "description": "东方电机系列柴油发电机组，50Hz，交流发电机参数详见下方规格表。",
-  "summary": "东方电机系列柴油发电机组，50Hz，交流发电机参数详见下方规格表。",
+  "title": "EL 系列无刷交流发电机",
+  "description": "EL 系列无刷交流发电机，配备 SAE 标准法兰与专用轴承，效率高、免维护，参数详见下方规格表。",
+  "summary": "EL 系列无刷交流发电机，配备 SAE 标准法兰与专用轴承，效率高、免维护，参数详见下方规格表。",
   "banner_image": "/images/banner/product.jpg",
-  "banner_title": "Product Detail",
+  "banner_title": "产品详情",
   "image": "/images/products/brushless-alternator.jpg",
   "images": [
     "/images/products/brushless-alternator.jpg"
   ],
-  "category": "有刷发电机",
+  "category": "无刷交流发电机",
   "weight": 10,
   "breadcrumb": [
     {

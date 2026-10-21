@@ -7,10 +7,11 @@
     "dev": "hugo server --port 1313 --bind 127.0.0.1 --navigateToChanged",
     "build": "hugo --gc --minify",
     "preview": "hugo server --port 1313 --bind 127.0.0.1 --renderToDisk --renderToMemory",
-    "check": "npm run build && node scripts/check-links.js public && node scripts/check-products.js && node scripts/check-alignment.js public",
+    "check": "npm run build && node scripts/check-links.js public && node scripts/check-products.js && node scripts/check-alignment.js public && node scripts/check-seo.js public",
     "links": "node scripts/check-links.js public",
     "products": "node scripts/check-products.js",
-    "align": "node scripts/check-alignment.js public"
+    "align": "node scripts/check-alignment.js public",
+    "seo": "node scripts/check-seo.js public"
   },
   "engines": {
     "node": ">=18"

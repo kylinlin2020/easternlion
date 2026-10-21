@@ -1,14 +1,14 @@
 {
-  "title": "有刷发电机",
-  "description": "东方电机系列柴油发电机组，50Hz，交流发电机参数详见下方规格表。",
-  "summary": "东方电机系列柴油发电机组，50Hz，交流发电机参数详见下方规格表。",
+  "title": "STC 系列有刷交流发电机",
+  "description": "STC 系列有刷交流发电机，8-500kW，50Hz 与 60Hz，单相或三相，SAE 标准法兰接口，参数详见下方规格表。",
+  "summary": "STC 系列有刷交流发电机，8-500kW，50Hz 与 60Hz，单相或三相，SAE 标准法兰接口，参数详见下方规格表。",
   "banner_image": "/images/banner/product.jpg",
-  "banner_title": "Product Detail",
+  "banner_title": "产品详情",
   "image": "/images/products/brush-alternator.jpg",
   "images": [
     "/images/products/brush-alternator.jpg"
   ],
-  "category": "有刷发电机",
+  "category": "有刷交流发电机",
   "weight": 10,
   "breadcrumb": [
     {

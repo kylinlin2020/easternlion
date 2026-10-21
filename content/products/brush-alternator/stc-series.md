@@ -1,5 +1,5 @@
 {
-  "title": "Brush Alternator",
+  "title": "STC Series Brush Alternator",
   "description": "STC series brush alternator (8 kW – 500 kW), 50 Hz and 60 Hz, single-phase or three-phase. Manufactured by Fuan Eastern Lion Electric Machines Co., Ltd.",
   "summary": "STC series brush alternator (8 kW – 500 kW), 50 Hz and 60 Hz, single-phase or three-phase. Manufactured by Fuan Eastern Lion Electric Machines Co., Ltd.",
   "banner_image": "/images/banner/product.jpg",

@@ -1,5 +1,7 @@
 {{- $image := .Params.banner_image | default "images/banner/about.jpg" -}}
 {{- $title := .Params.banner_title | default .Title -}}
+{{- /* pages that render their own <h1> tell the banner to step down to a plain title */ -}}
+{{- $own := eq (.Scratch.Get "own_h1") true -}}
 <section class="page-banner{{ if .Params.banner_logo }} page-banner--logo{{ end }}{{ if .Params.banner_compact }} page-banner--compact{{ end }}" style="background-image:url('{{ $image | relURL }}')">
   <div class="banner-inner">
     {{- if .Params.banner_logo }}
@@ -8,7 +10,11 @@
     {{- with .Params.banner_sub }}
     <p class="banner-sub">{{ . }}</p>
     {{- end }}
+    {{- if $own }}
+    <p class="banner-title{{ if .Params.banner_hide_title }} sr-only{{ end }}">{{ $title }}</p>
+    {{- else }}
     <h1{{ if .Params.banner_hide_title }} class="sr-only"{{ end }}>{{ $title }}</h1>
+    {{- end }}
     {{- with .Params.banner_text }}
     <p class="banner-text">{{ . }}</p>
     {{- end }}

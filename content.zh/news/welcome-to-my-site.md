@@ -2,7 +2,7 @@
   "title": "欢迎访问我们的网站！",
   "date": "2016-04-20",
   "author": "网站编辑",
-  "description": "欢迎访问东方电机网站——来自福建福安的柴油发电机组、有刷发电机与无刷发电机。",
+  "description": "欢迎访问东方电机网站：来自福建福安的柴油发电机组、有刷发电机与无刷发电机厂家，30 余年制造经验。",
   "banner_image": "/images/banner/about.jpg",
   "banner_title": "新闻详情",
   "breadcrumb": [

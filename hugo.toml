@@ -35,6 +35,10 @@ capitalizeListTitles = false
     contentDir = "content.zh"
     [languages.zh.params]
       languageNameInNav = "简体中文"
+      company     = "福建东方电机股份有限公司"
+      address     = "中国福建省福安市坂中工业区下洋36号"
+      officeAddress = "中国福建省福州市台江区洋中街道东洋中路融信洋中城2号楼4层23室办公室"
+      description = "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，产品涵盖 2-2000kW 柴油发电机组、有刷发电机与无刷交流发电机，出口全球 40 多个国家和地区。"
 
 [params]
   company       = "Fuan Eastern Lion Electric Machines Co., Ltd"

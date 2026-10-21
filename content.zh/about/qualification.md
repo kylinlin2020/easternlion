@@ -1,6 +1,6 @@
 {
   "title": "资质荣誉",
-  "description": "东方电机资质证书、展会照片与合作伙伴——质量认证以及与世界知名发动机品牌的长期合作。",
+  "description": "东方电机资质证书、展会照片与合作伙伴：质量管理体系认证，以及与世界知名发动机品牌的长期合作。",
   "banner_image": "/images/banner/about.jpg",
   "banner_logo": true,
   "banner_hide_title": true,

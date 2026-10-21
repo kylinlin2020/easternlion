@@ -3,7 +3,7 @@
   "description": "潍柴系列柴油发电机组，60Hz，额定与备用功率参数详见下方规格表。",
   "summary": "潍柴系列柴油发电机组，60Hz，额定与备用功率参数详见下方规格表。",
   "banner_image": "/images/banner/product.jpg",
-  "banner_title": "Product Detail",
+  "banner_title": "产品详情",
   "image": "/images/products/60hz-engine-by-lovol-series.jpg",
   "images": [
     "/images/products/60hz-engine-by-lovol-series.jpg"

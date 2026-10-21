@@ -153,8 +153,8 @@ button { font-family: inherit; cursor: pointer; }
 .btn-outline:hover { border-color: var(--amber); color: var(--amber-600); }
 
 /* product page buttons */
-.btn-inquire { background: var(--red); color: #fff; }
-.btn-inquire:hover { background: #be123c; color: #fff; box-shadow: 0 8px 20px rgba(225, 29, 72, .25); transform: translateY(-1px); }
+.btn-inquire { background: var(--amber); color: #1a1200; }
+.btn-inquire:hover { background: var(--amber-500); color: #1a1200; box-shadow: 0 8px 20px rgba(245, 158, 11, .32); transform: translateY(-1px); }
 
 .btn-basket { background: var(--navy-800); color: #fff; }
 .btn-basket:hover { background: var(--navy-700); color: #fff; box-shadow: var(--sh-md); transform: translateY(-1px); }
@@ -993,7 +993,17 @@ label.label {
   color: #fff;
   font-size: clamp(26px, 3.4vw, 40px);
   letter-spacing: -.02em;
+  text-transform: uppercase;}
+
+/* when the page brings its own <h1>, the banner title is a plain label */
+.page-banner .banner-title {
+  color: #fff;
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -.02em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .page-banner .banner-logo { height: 76px; width: auto; margin: 0 auto 20px; }

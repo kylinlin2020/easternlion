@@ -1,5 +1,5 @@
 {
-  "title": "Brushless Alternator",
+  "title": "EL Series Brushless Alternator",
   "description": "EL series brushless alternator (6.5 kW – 500 kW) with SAE coupling, 50 Hz and 60 Hz. Manufactured by Fuan Eastern Lion Electric Machines Co., Ltd.",
   "summary": "EL series brushless alternator (6.5 kW – 500 kW) with SAE coupling, 50 Hz and 60 Hz. Manufactured by Fuan Eastern Lion Electric Machines Co., Ltd.",
   "banner_image": "/images/banner/product.jpg",

@@ -1,6 +1,6 @@
 {
   "title": "我们的团队",
-  "description": "东方电机拥有经验丰富的技术团队，推行现代化管理，建立完善质量体系并严格生产检测。",
+  "description": "东方电机技术团队：经验丰富的研发与生产管理队伍，推行现代化管理，建立完善质量体系与严格检测流程。",
   "banner_image": "/images/banner/about.jpg",
   "banner_logo": true,
   "banner_hide_title": true,

@@ -1,10 +1,23 @@
 {{- $title := .Title -}}
-{{- if .IsHome -}}
+{{- if .Params.seo_title -}}
+  {{- $title = .Params.seo_title -}}
+{{- else if .IsHome -}}
   {{- $title = printf "%s - %s" site.Params.company site.Params.slogan -}}
 {{- else -}}
   {{- $title = printf "%s | %s" .Title site.Params.company -}}
+  {{- if gt (len $title) 72 -}}
+    {{- $title = printf "%s | %s" .Title (i18n "site_short_name") -}}
+  {{- end -}}
 {{- end -}}
 {{- $desc := .Description | default (.Summary | plainify | truncate 160) | default site.Params.description -}}
+{{- if and (lt (len $desc) 50) .Params.seo_description -}}
+  {{- $desc = .Params.seo_description -}}
+{{- end -}}
+{{- if eq .Kind "taxonomy" -}}
+  {{- $desc = i18n "seo_taxonomy_desc" -}}
+{{- else if eq .Kind "term" -}}
+  {{- $desc = i18n "seo_tag_desc" -}}
+{{- end -}}
 {{- $img := .Params.image | default .Params.banner_image | default "images/logo.png" -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

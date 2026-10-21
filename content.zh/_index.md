@@ -1,6 +1,6 @@
 {
   "title": "首页",
-  "description": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年的发展历史。",
+  "description": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年的发展历史，产品涵盖 2-2000kW 柴油发电机组、有刷发电机与无刷交流发电机，出口全球 40 多个国家和地区。",
   "hero": [
     {
       "image": "/images/hero/0-gensets.jpg",
@@ -35,6 +35,7 @@
       "link": "/products/diesel-generator-set/"
     }
   ],
-  "product_title": "产品中心"
+  "product_title": "产品中心",
+  "seo_title": "柴油发电机组与交流发电机专业制造商 | 福建东方电机"
 }
 柴油发电机组采用康明斯、珀金斯、玉柴等知名品牌发动机，面向国内及国际市场。发电机由东方电机自主研发生产，或选用 Stamford、Marathon、Engga、Leroy-Somer 等国内外知名品牌。

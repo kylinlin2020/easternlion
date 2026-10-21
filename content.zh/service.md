@@ -1,7 +1,7 @@
 ---
 type: "service"
 title: "服务"
-description: "东方电机市场与售后服务：全国 35 个销售与办事处、在线技术支持与全球备件供应。"
+description: "东方电机市场与售后服务：全国 35 个销售与办事处、在线技术支持、全球备件供应与驻场服务响应。"
 banner_compact: true
 banner_image: "/images/banner/service.jpg"
 banner_title: "服务"
