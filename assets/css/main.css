@@ -271,22 +271,27 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center;
 }
 
-/* home / overview tiles — gold caption bar at the bottom */
+/* home / overview tiles — the original renders three 400x247 pictures with a translucent
+   gold caption bar (rgba(243,192,67,.44), 68px) across the bottom of each picture.
+   The row is 1200px wide, so it overflows the 1180px container by 10px per side — as on
+   the original site. */
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .category-card {
   position: relative;
   overflow: hidden;
   display: block;
+  width: 400px;
+  flex: 0 0 400px;
   background: #111;
 }
 
 .category-card img {
-  width: 100%;
+  width: 400px;
   height: 247px;
   object-fit: cover;
   transition: transform .5s ease;
@@ -297,11 +302,14 @@ button { font-family: inherit; cursor: pointer; }
 .category-card .label {
   position: absolute;
   left: 0; right: 0; bottom: 0;
+  height: 68px;
   background: var(--gold-44);
   color: #fff;
   font-size: 20px;
   text-align: center;
-  padding: 22px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---------- inner page banner ----------
@@ -1313,8 +1321,9 @@ html.theme-original .footer-info-top { border-bottom-color: #e5e5e5; }
   .nav-list > li:hover .submenu { display: block; }
   .submenu a { padding: 10px 32px; }
 
-  .category-grid { grid-template-columns: 1fr; }
-  .category-card img { height: 220px; }
+  .category-grid { flex-direction: column; align-items: center; }
+  .category-card { width: 100%; max-width: 400px; flex: 0 0 auto; }
+  .category-card img { width: 100%; height: auto; }
 
   .inner-layout { grid-template-columns: 1fr; gap: 0; }
   .sidebar { padding-right: 0; }
@@ -1343,7 +1352,7 @@ html.theme-original .footer-info-top { border-bottom-color: #e5e5e5; }
   .header-right .search { display: none; }
   .lang { min-width: 0; padding: 0 8px; }
   .logo img { height: 32px; }
-  .hero { aspect-ratio: 16 / 10; }
+  .hero { height: 62.5vw; min-height: 200px; }
   .page-banner { padding: 60px 15px 70px; }
   .section { padding: 44px 0 50px; }
   .page-banner { min-height: 180px; padding: 30px 15px; }
