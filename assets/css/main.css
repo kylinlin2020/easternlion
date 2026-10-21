@@ -1120,7 +1120,7 @@ label.label {
 .tl-even .tl-connector { left: 50%; transform: translateX(32px); }
 
 /* FAQ */
-.faq-list { max-width: 880px; margin: 0 auto; display: grid; gap: 14px; }
+.faq-list { max-width: none; margin: 0; display: grid; gap: 14px; }
 
 .faq-item {
   background: #fff;
@@ -1140,7 +1140,7 @@ label.label {
 .faq-a svg { width: 18px; height: 18px; fill: var(--amber-600); flex-shrink: 0; margin-top: 3px; }
 
 /* service */
-.narrow { max-width: 780px; margin: 0 auto 44px; }
+.narrow { max-width: 780px; margin: 0 0 44px; }
 .narrow h3 { font-size: 19px; margin: 26px 0 10px; }
 .narrow p, .narrow li { color: var(--ink-2); font-size: 15px; line-height: 1.9; }
 
@@ -1998,8 +1998,8 @@ a[data-lb] { cursor: zoom-in; }
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 1180px;
-  margin: 0 auto 22px;
+  max-width: none;
+  margin: 0 0 22px;
 }
 
 .faq-jump span {
@@ -2028,8 +2028,8 @@ a[data-lb] { cursor: zoom-in; }
   justify-content: space-between;
   gap: 26px;
   flex-wrap: wrap;
-  max-width: 1180px;
-  margin: 40px auto 0;
+  max-width: none;
+  margin: 40px 0 0;
   padding: 30px 34px;
   background: var(--navy-800);
   border-radius: var(--r-lg);
