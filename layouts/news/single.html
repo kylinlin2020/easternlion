@@ -4,8 +4,12 @@
 
 <section class="inner-main">
   <div class="container">
+    <h2 class="inner-title">About Us</h2>
+    <div class="separator"></div>
+    {{ partial "about-nav.html" . }}
+
     <article class="rich" style="max-width:900px;margin:0 auto">
-      <h1 style="color:#fff;margin-bottom:16px">{{ .Title }}</h1>
+      <h1 style="color:#fff;font-size:22px;margin-bottom:12px">{{ .Title }}</h1>
       <div class="article-meta">
         {{ .Date.Format "2006-01-02" }}
         {{- with .Params.author }} &nbsp;|&nbsp; Author: {{ . }}{{ end }}

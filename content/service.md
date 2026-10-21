@@ -8,39 +8,35 @@ breadcrumb:
   - name: Service
 ---
 
-## Market / After-sales service
+<h2 class="inner-title">Market / After-sales service</h2>
+<div class="separator"></div>
 
-### Domestic Market
+<div class="narrow">
+  <h3>Domestic Market</h3>
+  <p>35 sales and service base. In the early twentieth Century, the Eastern lion occupy top 5 of the domestic market and steady stay. In 2016, the annual capacity of alternator was up to 15 thousand units, with an annual capacity of 2000 units, with an annual capacity value of 150 million yuan. Products are widely used in educational institutions, medical institutions, government departments and other fields.</p>
 
-Eastern Lion has 35 sales and service bases. In the early 21st century the company occupied a top-five position in the domestic market and has maintained it steadily. In 2016 annual alternator capacity reached 15,000 units, with generator set capacity of 2,000 units and an annual output value of 150 million yuan.
+  <h3>International Market</h3>
+  <p>We sincerely build intimate, high-quality after-sales service system on Facebook</p>
+  <ul>
+    <li>Provide daily maintenance knowledge on Facebook</li>
+    <li>Online technical support (Facebook &amp; alibaba)</li>
+    <li>Replacement parts and maintenance parts support</li>
+  </ul>
 
-Products are widely used in educational institutions, medical institutions, government departments and other fields.
-
-### International Market
-
-We sincerely build an intimate, high-quality after-sales service system:
-
-1. Daily maintenance knowledge published on Facebook
-2. Online technical support via Facebook and Alibaba
-3. Replacement parts and maintenance parts support
-
-Eastern Lion has consolidated the domestic market while actively expanding internationally. Products are sold in the Middle East, Southeast Asia, Africa, South America and parts of Europe. Relying on excellent product quality and performance, they are widely used in construction, commercial centers and real estate projects.
-
-## Applications
-
-- China Railway No. 12 Bureau — Enshi tunnel project
-- China Railway No. 13 Bureau — Yangtze River bridge project
-- Hubei National Tax Bureau
-- Wuhan Tongji Hospital
-- Zhejiang Wenzhou No. 3 Middle School
-- Zhejiang Lingkun apartment
-
-<div class="img-grid">
-  <img src="/images/workshop/1.jpg" alt="Eastern Lion generator set application" loading="lazy">
-  <img src="/images/workshop/5.jpg" alt="Eastern Lion diesel generator set project" loading="lazy">
-  <img src="/images/workshop/8.jpg" alt="Eastern Lion power solution" loading="lazy">
+  <p>Eastern lion compacted domestic market, and actively expand the international market, stride forward to the global market. Products sold in the Middle East, Southeast Asia, Africa, South America and parts of Europe, relying on excellent product quality and performance, widely used in many foreign countries, such as construction, commercial centers and real estate.</p>
 </div>
 
-## Spare parts
-
-We keep an inventory of AVRs, storage batteries, oil filters, diesel filters, air filter elements, control panels and oil pumps to support quick delivery of spare parts worldwide.
+<div class="app-grid">
+  <div class="app-card">
+    <h3>Applications 1</h3>
+    <p>Domestic application example: China Railway twelve Bureau Enshi tunnel project, China Railway thirteen Bureau Yangtze River bridge project, Hubei National Tax Bureau, Wuhan Tongji Hospital, Zhejiang Wenzhou third middle school, Zhejiang lingkun apartment</p>
+  </div>
+  <div class="app-card">
+    <h3>Applications 2</h3>
+    <p>Hubei Yangtze River Highway Bridge project of the thirteen Railway Bureau of China Railway Bureau.</p>
+  </div>
+  <div class="app-card">
+    <h3>Applications 3</h3>
+    <p>Enshi tunnel project of the twelve Railway Bureau of China Railway Administration.</p>
+  </div>
+</div>

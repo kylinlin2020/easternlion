@@ -4,17 +4,20 @@
 
 <section class="inner-main">
   <div class="container">
+    <h2 class="inner-title">About Us</h2>
+    <div class="separator"></div>
+    {{ partial "about-nav.html" . }}
+
     {{- with .Content }}
-    <div class="rich" style="max-width:900px;margin:0 auto 34px">{{ . }}</div>
+    <div class="rich" style="max-width:900px;margin:0 auto 30px">{{ . }}</div>
     {{- end }}
 
-    <div class="news-list">
+    <div class="news-list" style="max-width:900px;margin:0 auto">
       {{- range .Pages.ByDate.Reverse }}
       <article class="news-item">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <a class="read-more" href="{{ .RelPermalink }}">Read More</a></h2>
         <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
         <p>{{ .Summary | plainify | truncate 190 }}</p>
-        <p style="margin-top:12px"><a href="{{ .RelPermalink }}">Read More &raquo;</a></p>
       </article>
       {{- else }}
       <p>No news yet.</p>
