@@ -13,6 +13,29 @@ summaryLength        = 30
 timeZone             = "Asia/Shanghai"
 capitalizeListTitles = false
 
+# ---------------------------------------------------------------
+#  Languages
+#  The site currently ships English only. To publish a Chinese
+#  version later: create content.zh/ (copy of content/ with translated
+#  markdown), uncomment the [languages.zh] block below and add
+#  "defaultContentLanguage = 'en'" (already set).
+#  The UI strings live in i18n/en.toml and i18n/zh.toml.
+# ---------------------------------------------------------------
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content"
+    [languages.en.params]
+      languageNameInNav = "English"
+
+  # [languages.zh]
+  #   languageName = "简体中文"
+  #   weight = 2
+  #   contentDir = "content.zh"
+  #   [languages.zh.params]
+  #     languageNameInNav = "简体中文"
+
 [params]
   company       = "Fuan Eastern Lion Electric Machines Co., Ltd"
   tagline       = "Golden Supplier in China"

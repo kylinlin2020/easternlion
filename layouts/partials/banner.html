@@ -1,9 +1,9 @@
 {{- $image := .Params.banner_image | default "images/banner/about.jpg" -}}
 {{- $title := .Params.banner_title | default .Title -}}
-<section class="page-banner{{ if .Params.banner_logo }} page-banner--logo{{ end }}{{ if .Params.banner_compact }} page-banner--compact{{ end }}" style="background-image:url('{{ $image | relURL }}')">
+<section class="page-banner{{ if .Params.banner_logo }} page-banner--logo{{ end }}{{ if .Params.banner_compact }} page-banner--compact{{ end }}" style="background-image:url('{{ $image | relLangURL }}')">
   <div class="banner-inner">
     {{- if .Params.banner_logo }}
-    <img class="banner-logo" src="{{ "images/logo-white.png" | relURL }}" alt="{{ site.Params.company }}">
+    <img class="banner-logo" src="{{ "images/logo-white.png" | relLangURL }}" alt="{{ site.Params.company }}">
     {{- end }}
     {{- with .Params.banner_sub }}
     <p class="banner-sub">{{ . }}</p>

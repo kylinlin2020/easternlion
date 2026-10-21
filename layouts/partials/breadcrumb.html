@@ -3,12 +3,12 @@
   <div class="container">
     <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
     <span>You are here:</span>
-    <a href="{{ "/" | relURL }}">Home</a>
+    <a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a>
     {{- if $crumbs }}
       {{- range $crumbs }}
       <span class="sep">&raquo;</span>
       {{- if .url }}
-      <a href="{{ .url | relURL }}">{{ .name }}</a>
+      <a href="{{ .url | relLangURL }}">{{ .name }}</a>
       {{- else }}
       <span>{{ .name }}</span>
       {{- end }}

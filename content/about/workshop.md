@@ -12,16 +12,16 @@ breadcrumb:
   - name: Our Workshop
 ---
 
-<div class="split">
-  <div class="small-grid">
-    <img src="/images/workshop/1.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/2.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/3.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/5.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/6.jpg" alt="Eastern Lion workshop" loading="lazy">
+<div class="workshop-top">
+  <div class="workshop-thumbs">
+    <img src="/images/workshop/cangku1-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
+    <img src="/images/workshop/cangku2-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
+    <img src="/images/workshop/cangku3-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
+    <img src="/images/workshop/cangku5-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
+    <img src="/images/workshop/cangku6-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
   </div>
-  <div>
-    <img src="/images/workshop/8.jpg" alt="Eastern Lion workshop" loading="lazy">
+  <div class="workshop-stack">
+    <img src="/images/workshop/8.jpg" alt="Eastern Lion packing" loading="lazy">
   </div>
 </div>
 
@@ -36,14 +36,3 @@ breadcrumb:
   <img src="/images/workshop/7.jpg" alt="Eastern Lion workshop" loading="lazy">
   <img src="/images/workshop/9.jpg" alt="Eastern Lion workshop" loading="lazy">
 </div>
-
-<h3 class="block-title">Production process</h3>
-<div class="separator"></div>
-
-<ul>
-  <li>Stator winding, varnishing and drying</li>
-  <li>Rotor machining and dynamic balancing</li>
-  <li>Alternator assembly and high-voltage testing</li>
-  <li>Generator set assembly and wiring</li>
-  <li>Full-load test, control panel calibration and packing</li>
-</ul>

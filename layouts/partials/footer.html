@@ -4,18 +4,18 @@
       <div class="footer-col">
         <div class="footer-info-top">
           <span class="company">{{ site.Params.company }}</span>
-          {{ site.Params.tagline }}
+          {{ i18n "footer_golden_supplier" }}
         </div>
 
         <a class="footer-phone" href="tel:{{ replace site.Params.phone "+86-" "" }}">{{ site.Params.phone }}</a>
 
         <div class="footer-meta">
-          FAX：{{ site.Params.fax }}<br>
-          Email: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+          {{ i18n "footer_fax" }}：{{ site.Params.fax }}<br>
+          {{ i18n "footer_email" }}: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
         </div>
 
         <div class="footer-qr">
-          <img src="{{ "images/qr.png" | relURL }}" alt="Scan the QR code" width="120" height="120" loading="lazy">
+          <img src="{{ "images/qr.png" | relLangURL }}" alt="Scan the QR code" width="120" height="120" loading="lazy">
         </div>
 
         <div class="footer-site">
@@ -24,32 +24,32 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-title">Quick Links</div>
+        <div class="footer-title">{{ i18n "footer_quick_links" }}</div>
         <ul class="footer-links">
-          <li><a href="{{ "/" | relURL }}">Home</a></li>
-          <li><a href="{{ "products/" | relURL }}">Products</a></li>
-          <li><a href="{{ "about/" | relURL }}">About Us</a></li>
-          <li><a href="{{ "service/" | relURL }}">Service</a></li>
-          <li><a href="{{ "video/" | relURL }}">Video</a></li>
-          <li><a href="{{ "contact/" | relURL }}">Contact Us</a></li>
+          <li><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>
+          <li><a href="{{ "products/" | relLangURL }}">{{ i18n "nav_products" }}</a></li>
+          <li><a href="{{ "about/" | relLangURL }}">About Us</a></li>
+          <li><a href="{{ "service/" | relLangURL }}">{{ i18n "nav_service" }}</a></li>
+          <li><a href="{{ "video/" | relLangURL }}">{{ i18n "nav_video" }}</a></li>
+          <li><a href="{{ "contact/" | relLangURL }}">{{ i18n "nav_contact" }}</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <div class="footer-title">Company Profile</div>
+        <div class="footer-title">{{ i18n "footer_company_profile" }}</div>
         <ul class="footer-links">
-          <li><a href="{{ "about/qualification/" | relURL }}">Qualification</a></li>
-          <li><a href="{{ "news/" | relURL }}">News Center</a></li>
-          <li><a href="{{ "about/workshop/" | relURL }}">Our Workshop</a></li>
+          <li><a href="{{ "about/qualification/" | relLangURL }}">{{ i18n "menu_qualification" }}</a></li>
+          <li><a href="{{ "news/" | relLangURL }}">{{ i18n "menu_news" }}</a></li>
+          <li><a href="{{ "about/workshop/" | relLangURL }}">{{ i18n "menu_workshop" }}</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <div class="footer-title">Product Category</div>
+        <div class="footer-title">{{ i18n "footer_product_category" }}</div>
         <ul class="footer-links">
-          <li><a href="{{ "products/brush-alternator/" | relURL }}">Brush Alternator</a></li>
-          <li><a href="{{ "products/brushless-alternator/" | relURL }}">Brushless Alternator</a></li>
-          <li><a href="{{ "products/diesel-generator-set/" | relURL }}">Diesel Generator Set</a></li>
+          <li><a href="{{ "products/brush-alternator/" | relLangURL }}">Brush Alternator</a></li>
+          <li><a href="{{ "products/brushless-alternator/" | relLangURL }}">Brushless Alternator</a></li>
+          <li><a href="{{ "products/diesel-generator-set/" | relLangURL }}">Diesel Generator Set</a></li>
         </ul>
       </div>
     </div>
@@ -58,7 +58,7 @@
   <div class="footer-bottom">
     <div class="container">
       <div>Add:{{ site.Params.address }}</div>
-      <div>Copyright &copy; 2019 {{ site.Params.company }}. All rights reserved.</div>
+      <div>{{ i18n "footer_copyright" }}</div>
     </div>
   </div>
 </footer>

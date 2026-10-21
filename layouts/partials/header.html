@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="{{ "/" | relURL }}" aria-label="{{ site.Params.company }}">
-      <img src="{{ "images/logo.png" | relURL }}" alt="{{ site.Params.company }}" width="254" height="50">
+    <a class="logo" href="{{ "/" | relLangURL }}" aria-label="{{ site.Params.company }}">
+      <img src="{{ "images/logo.png" | relLangURL }}" alt="{{ site.Params.company }}" width="254" height="50">
     </a>
 
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
@@ -24,17 +24,23 @@
         </a>
       </div>
 
-      <form class="search" action="{{ "products/" | relURL }}" method="get" role="search">
-        <label class="sr-only" for="site-search">Search</label>
-        <input id="site-search" type="search" name="q" placeholder="Input keyword" autocomplete="off">
-        <button type="submit" aria-label="Search">
+      <form class="search" action="{{ "products/" | relLangURL }}" method="get" role="search">
+        <label class="sr-only" for="site-search">{{ i18n "search_placeholder" }}</label>
+        <input id="site-search" type="search" name="q" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
+        <button type="submit" aria-label="{{ i18n "search_placeholder" }}">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
         </button>
       </form>
 
       <div class="lang" aria-label="Language">
-        <img src="{{ "images/flag-en.jpg" | relURL }}" alt="English" width="22" height="14">
-        <span>English</span>
+        <img src="{{ "images/flag-en.jpg" | relLangURL }}" alt="English" width="22" height="14">
+        {{- range site.Home.Sites }}
+        {{- if eq .Language.Lang site.Language.Lang }}
+        <span>{{ .Language.LanguageName | default .Language.Lang }}</span>
+        {{- else }}
+        <a class="lang-opt" href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName | default .Language.Lang }}</a>
+        {{- end }}
+        {{- end }}
         <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z"/></svg>
       </div>
     </div>
@@ -45,23 +51,23 @@
 <nav class="main-nav" id="mainNav" aria-label="Main navigation">
   <div class="container">
     <ul class="nav-list">
-      <li class="{{ if .IsHome }}is-active{{ end }}"><a href="{{ "/" | relURL }}">Home</a></li>
-      <li class="{{ if hasPrefix $p "/products" }}is-active{{ end }}"><a href="{{ "products/" | relURL }}">Products</a></li>
+      <li class="{{ if .IsHome }}is-active{{ end }}"><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>
+      <li class="{{ if hasPrefix $p "/products" }}is-active{{ end }}"><a href="{{ "products/" | relLangURL }}">{{ i18n "nav_products" }}</a></li>
       <li class="{{ if or (hasPrefix $p "/about") (hasPrefix $p "/news") }}is-active{{ end }}">
-        <a href="{{ "about/" | relURL }}">Company Profile</a>
+        <a href="{{ "about/" | relLangURL }}">{{ i18n "nav_company" }}</a>
         <ul class="submenu">
-          <li><a href="{{ "about/" | relURL }}">Company Profile</a></li>
-          <li><a href="{{ "about/history/" | relURL }}">Development History</a></li>
-          <li><a href="{{ "about/team/" | relURL }}">Our Team</a></li>
-          <li><a href="{{ "about/qualification/" | relURL }}">Qualification</a></li>
-          <li><a href="{{ "news/" | relURL }}">News Center</a></li>
-          <li><a href="{{ "about/workshop/" | relURL }}">Our Workshop</a></li>
+          <li><a href="{{ "about/" | relLangURL }}">{{ i18n "menu_company_profile" }}</a></li>
+          <li><a href="{{ "about/history/" | relLangURL }}">{{ i18n "menu_history" }}</a></li>
+          <li><a href="{{ "about/team/" | relLangURL }}">{{ i18n "menu_team" }}</a></li>
+          <li><a href="{{ "about/qualification/" | relLangURL }}">{{ i18n "menu_qualification" }}</a></li>
+          <li><a href="{{ "news/" | relLangURL }}">{{ i18n "menu_news" }}</a></li>
+          <li><a href="{{ "about/workshop/" | relLangURL }}">{{ i18n "menu_workshop" }}</a></li>
         </ul>
       </li>
-      <li class="{{ if hasPrefix $p "/service" }}is-active{{ end }}"><a href="{{ "service/" | relURL }}">Service</a></li>
-      <li class="{{ if hasPrefix $p "/video" }}is-active{{ end }}"><a href="{{ "video/" | relURL }}">Video</a></li>
-      <li class="{{ if hasPrefix $p "/faq" }}is-active{{ end }}"><a href="{{ "faq/" | relURL }}">FAQ</a></li>
-      <li class="{{ if hasPrefix $p "/contact" }}is-active{{ end }}"><a href="{{ "contact/" | relURL }}">Contact Us</a></li>
+      <li class="{{ if hasPrefix $p "/service" }}is-active{{ end }}"><a href="{{ "service/" | relLangURL }}">{{ i18n "nav_service" }}</a></li>
+      <li class="{{ if hasPrefix $p "/video" }}is-active{{ end }}"><a href="{{ "video/" | relLangURL }}">{{ i18n "nav_video" }}</a></li>
+      <li class="{{ if hasPrefix $p "/faq" }}is-active{{ end }}"><a href="{{ "faq/" | relLangURL }}">{{ i18n "nav_faq" }}</a></li>
+      <li class="{{ if hasPrefix $p "/contact" }}is-active{{ end }}"><a href="{{ "contact/" | relLangURL }}">{{ i18n "nav_contact" }}</a></li>
     </ul>
   </div>
 </nav>

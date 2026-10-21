@@ -1,9 +1,9 @@
 {{ define "main" }}
-{{- $hero := .Params.hero -}}
+{{- $hero := .Params.hero | default (slice) -}}
 <section class="hero" aria-label="Featured">
   {{- range $i, $s := $hero }}
   <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}">
-    <img src="{{ $s.image | relURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
+    <img src="{{ $s.image | relLangURL }}" alt="{{ $s.alt | default site.Params.company }}" {{ if eq $i 0 }}fetchpriority="high"{{ end }}>
   </div>
   {{- end }}
   {{- if gt (len $hero) 1 }}
@@ -18,14 +18,14 @@
 <section class="section section-dark">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">{{ .Params.product_title | default "Product Center" }}</h2>
+      <h2 class="section-title">{{ .Params.product_title | default (i18n "product_center") }}</h2>
       <div class="section-lead rich">{{ .Content }}</div>
     </div>
 
     <div class="category-grid">
       {{- range site.Data.categories }}
-      <a class="category-card" href="{{ .url | relURL }}">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+      <a class="category-card" href="{{ .url | relLangURL }}">
+        <img src="{{ .image | relLangURL }}" alt="{{ .name }}" loading="lazy">
         <span class="label">{{ .name }}</span>
       </a>
       {{- end }}

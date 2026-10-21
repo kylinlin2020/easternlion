@@ -20,13 +20,13 @@
         <div class="product-hero">
           <div class="product-gallery">
             <div class="gallery-main">
-              <img id="productImage" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+              <img id="productImage" src="{{ .Params.image | relLangURL }}" alt="{{ .Title }}">
             </div>
             <div class="thumbs">
               {{- $imgs := .Params.images | default (slice .Params.image) -}}
               {{- range $i, $im := $imgs }}
-              <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" data-src="{{ $im | relURL }}" aria-label="Image {{ add $i 1 }}">
-                <img src="{{ $im | relURL }}" alt="{{ $product }} thumbnail {{ add $i 1 }}" loading="lazy">
+              <button type="button" class="{{ if eq $i 0 }}is-active{{ end }}" data-src="{{ $im | relLangURL }}" aria-label="Image {{ add $i 1 }}">
+                <img src="{{ $im | relLangURL }}" alt="{{ $product }} thumbnail {{ add $i 1 }}" loading="lazy">
               </button>
               {{- end }}
             </div>
@@ -34,7 +34,7 @@
 
           <div class="product-info">
             <div class="product-share">
-              <span>Share to:</span>
+              <span>{{ i18n "product_share" }}</span>
               <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" aria-label="Share on Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5H16.7V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V14h2.7v8h3.5z"/></svg>
               </a>
@@ -50,12 +50,12 @@
               <h1>{{ .Title }}</h1>
               <svg class="qr" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm8-2h3v3h-3v-3zm5 0h3v3h-3v-3zm-5 5h3v3h-3v-3zm5 0h3v3h-3v-3z"/></svg>
             </div>
-            <p class="product-meta">Category: <a href="{{ $catURL | relURL }}">{{ .Params.category }}</a></p>
+            <p class="product-meta">{{ i18n "product_category_label" }}: <a href="{{ $catURL | relLangURL }}">{{ .Params.category }}</a></p>
 
             <div class="availability">
-              <span>Availability:</span>
+              <span>{{ i18n "product_availability" }}:</span>
               <select aria-label="Availability">
-                <option>In Stock</option>
+                <option>{{ i18n "product_in_stock" }}</option>
                 <option>7 Days</option>
                 <option>15 Days</option>
                 <option>30 Days</option>
@@ -63,24 +63,24 @@
             </div>
 
             <div class="qty">
-              <span class="qty-label">Quantity:</span>
+              <span class="qty-label">{{ i18n "product_quantity" }}:</span>
               <button type="button" data-delta="-1" aria-label="Decrease quantity">&minus;</button>
               <input type="text" value="1" aria-label="Quantity">
               <button type="button" data-delta="1" aria-label="Increase quantity">+</button>
             </div>
 
             <div class="product-actions">
-              <a class="btn btn-inquire" href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Inquire</a>
+              <a class="btn btn-inquire" href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">{{ i18n "product_inquire" }}</a>
               <a class="btn btn-basket" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 14.8l.03-.12.9-1.64h7.45c.75-1.11 1.85-1.8 3.12-1.8 1.31 0 2.42.63 3.1 1.6l1.6-.55 1.46 1.1-1.33 1.2.03.2c.53 3.9-2.44 7.2-6.4 7.2-1.72 0-3.29-.7-4.44-1.83l-.4.28c-.78.53-1.68.83-2.65.83-1.88 0-3.4-1.52-3.4-3.4 0-.62.17-1.2.45-1.7zM7 4V2H2v12h2v-2h2v2h12v-2h2v-2H7zm-3 6H4V4h2v2h3v2H4zm11 0h-3v-2h3V4h2v2h-2v2z"/></svg>
-                Add to Basket
+                {{ i18n "product_add_basket" }}
               </a>
             </div>
           </div>
         </div>
 
         <div class="desc-head">
-          <a class="red" href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Product Description</a>
+          <a class="red" href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">{{ i18n "product_description" }}</a>
           <span class="bar"></span>
         </div>
 
@@ -108,7 +108,7 @@
               <tr>
                 {{- range $i, $c := . }}
                 {{- if and $diesel (eq $i 10) }}
-                <td><a href="{{ "contact/" | relURL }}?product={{ $product | urlquery }}">Detail</a></td>
+                <td><a href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">Detail</a></td>
                 {{- else }}
                 <td>{{ $c }}</td>
                 {{- end }}
@@ -124,7 +124,7 @@
           {{ .Content }}
         </div>
 
-        <p class="spec-note">Ratings are indicative. Please contact us for the latest datasheet and confirmation of availability.</p>
+        <p class="spec-note">{{ i18n "product_rating_note" }}</p>
       </div>
     </div>
   </div>

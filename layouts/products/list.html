@@ -6,8 +6,8 @@
   <div class="container">
     <div class="category-grid">
       {{- range site.Data.categories }}
-      <a class="category-card" href="{{ .url | relURL }}">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+      <a class="category-card" href="{{ .url | relLangURL }}">
+        <img src="{{ .image | relLangURL }}" alt="{{ .name }}" loading="lazy">
         <span class="label">{{ .name }}</span>
       </a>
       {{- end }}

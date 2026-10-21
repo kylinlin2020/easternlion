@@ -987,6 +987,28 @@ button { font-family: inherit; cursor: pointer; }
 
 .inner-title--left { text-align: left; }
 
+/* ---------- workshop page ---------- */
+.workshop-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 26px 0;
+}
+
+.workshop-thumbs img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+.workshop-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ---------- service page ---------- */
 .narrow {
   max-width: 33.4%;
@@ -1345,6 +1367,7 @@ html.theme-original .footer-info-top { border-bottom-color: #e5e5e5; }
   .img-grid { grid-template-columns: repeat(2, 1fr); }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
   .check-grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .workshop-top { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {

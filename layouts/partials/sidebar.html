@@ -1,10 +1,10 @@
 {{- $current := .RelPermalink -}}
 <aside class="sidebar">
-  <h2 class="sidebar-title">Product Category</h2>
+  <h2 class="sidebar-title">{{ i18n "product_category" }}</h2>
   <ul class="sidebar-list">
     {{- range site.Data.sidebar }}
     <li>
-      <a href="{{ .url | relURL }}" class="{{ if hasPrefix $current .url }}is-active{{ end }}">{{ .name }}</a>
+      <a href="{{ .url | relLangURL }}" class="{{ if hasPrefix $current .url }}is-active{{ end }}">{{ i18n .key }}</a>
     </li>
     {{- end }}
   </ul>

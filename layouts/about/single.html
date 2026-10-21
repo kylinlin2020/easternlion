@@ -4,7 +4,7 @@
 
 <section class="inner-main">
   <div class="container">
-    <h2 class="inner-title">{{ .Params.about_heading | default "About Us" }}</h2>
+    <h2 class="inner-title">{{ .Params.about_heading | default (i18n "about_us") }}</h2>
     <div class="separator"></div>
     {{ partial "about-nav.html" . }}
     <div class="rich">

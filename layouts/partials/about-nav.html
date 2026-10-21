@@ -1,14 +1,13 @@
-{{- $p := .RelPermalink -}}
 {{- $items := slice
-  (dict "name" "Company Profile" "url" "/about/")
-  (dict "name" "Development History" "url" "/about/history/")
-  (dict "name" "Our Team" "url" "/about/team/")
-  (dict "name" "Qualification" "url" "/about/qualification/")
-  (dict "name" "News Center" "url" "/news/")
-  (dict "name" "Our Workshop" "url" "/about/workshop/")
+  (dict "name" (i18n "menu_company_profile") "url" "/about/")
+  (dict "name" (i18n "menu_history") "url" "/about/history/")
+  (dict "name" (i18n "menu_team") "url" "/about/team/")
+  (dict "name" (i18n "menu_qualification") "url" "/about/qualification/")
+  (dict "name" (i18n "menu_news") "url" "/news/")
+  (dict "name" (i18n "menu_workshop") "url" "/about/workshop/")
 -}}
 <nav class="about-nav" aria-label="About navigation">
   {{- range $items }}
-  <a href="{{ .url | relURL }}" class="{{ if eq $p .url }}is-active{{ end }}">{{ .name }}</a>
+  <a href="{{ .url | relLangURL }}" class="{{ if eq $.RelPermalink (.url | relLangURL) }}is-active{{ end }}">{{ .name }}</a>
   {{- end }}
 </nav>

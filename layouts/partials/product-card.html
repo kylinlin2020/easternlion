@@ -2,9 +2,9 @@
 <a class="product-card" href="{{ .RelPermalink }}" title="{{ .Title }}">
   <span class="thumb">
     {{- with $img }}
-    <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    <img src="{{ . | relLangURL }}" alt="{{ $.Title }}" loading="lazy">
     {{- else }}
-    <img src="{{ "images/logo.png" | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    <img src="{{ "images/logo.png" | relLangURL }}" alt="{{ $.Title }}" loading="lazy">
     {{- end }}
   </span>
   <span class="overlay">{{ .Title }}</span>

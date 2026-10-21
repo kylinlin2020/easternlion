@@ -15,7 +15,7 @@
     <div class="news-list" style="max-width:900px;margin:0 auto">
       {{- range .Pages.ByDate.Reverse }}
       <article class="news-item">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <a class="read-more" href="{{ .RelPermalink }}">Read More</a></h2>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <a class="read-more" href="{{ .RelPermalink }}">{{ i18n "news_read_more" }}</a></h2>
         <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
         <p>{{ .Summary | plainify | truncate 190 }}</p>
       </article>

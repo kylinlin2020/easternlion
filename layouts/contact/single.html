@@ -6,7 +6,7 @@
   <div class="container">
     <div class="split">
       <div class="contact-block">
-        <h2>International Department</h2>
+        <h2>{{ i18n "contact_intl" }}</h2>
         <div class="contact-line">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
           <div>{{ site.Params.officeAddress }}</div>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="contact-block">
-        <h2>Manufacturer</h2>
+        <h2>{{ i18n "contact_manufacturer" }}</h2>
         <div class="contact-line">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
           <div>{{ site.Params.address }}</div>
@@ -41,19 +41,19 @@
 
     <div class="split split--57">
       <div>
-        <img src="{{ "images/about/office.jpg" | relURL }}" alt="Eastern Lion international department" loading="lazy" style="width:100%">
+        <img src="{{ "images/about/office.jpg" | relLangURL }}" alt="Eastern Lion international department" loading="lazy" style="width:100%">
       </div>
       <div class="contact-block">
-        <h2>Get In Touch</h2>
-        <p class="contact-note">Contact us for more information.</p>
+        <h2>{{ i18n "contact_get_in_touch" }}</h2>
+        <p class="contact-note">{{ i18n "contact_more_info" }}</p>
         <form class="contact-form" id="inquiryForm">
-          <input type="text" name="name" placeholder="Your name *" required>
-          <input type="email" name="email" placeholder="Your email *" required>
-          <input type="text" name="phone" placeholder="Phone / WhatsApp">
-          <input type="text" name="company" placeholder="Company">
-          <input type="text" name="product" id="productField" placeholder="Product you are interested in">
-          <textarea name="message" placeholder="Your message *" required></textarea>
-          <button type="submit">Contact Us</button>
+          <input type="text" name="name" placeholder="{{ i18n "contact_name" }}" required>
+          <input type="email" name="email" placeholder="{{ i18n "contact_email" }}" required>
+          <input type="text" name="phone" placeholder="{{ i18n "contact_phone" }}">
+          <input type="text" name="company" placeholder="{{ i18n "contact_company" }}">
+          <input type="text" name="product" id="productField" placeholder="{{ i18n "contact_product" }}">
+          <textarea name="message" placeholder="{{ i18n "contact_message" }}" required></textarea>
+          <button type="submit">{{ i18n "contact_submit" }}</button>
           <p class="spec-note" id="formNote" style="display:none">Your email client will open with the inquiry. You can also write to {{ site.Params.email }}.</p>
         </form>
       </div>

@@ -1,0 +1,180 @@
+# =============================================================
+#  UI strings — 简体中文
+#  准备好但尚未启用：等 content.zh/ 目录建好之后，在 hugo.toml 里
+#  打开 [languages.zh] 配置即可切换。
+# =============================================================
+
+[nav_home]
+other = "首页"
+[nav_products]
+other = "产品"
+[nav_company]
+other = "公司简介"
+[nav_service]
+other = "服务"
+[nav_video]
+other = "视频"
+[nav_faq]
+other = "常见问题"
+[nav_contact]
+other = "联系我们"
+
+[menu_company_profile]
+other = "公司简介"
+[menu_history]
+other = "发展历程"
+[menu_team]
+other = "我们的团队"
+[menu_qualification]
+other = "资质荣誉"
+[menu_news]
+other = "新闻中心"
+[menu_workshop]
+other = "车间实景"
+
+[about_us]
+other = "关于我们"
+[product_center]
+other = "产品中心"
+[product_category]
+other = "产品分类"
+
+[footer_quick_links]
+other = "快速链接"
+[footer_company_profile]
+other = "公司简介"
+[footer_product_category]
+other = "产品分类"
+[footer_golden_supplier]
+other = "中国优质供应商"
+[footer_tel]
+other = "电话"
+[footer_fax]
+other = "传真"
+[footer_email]
+other = "邮箱"
+[footer_web]
+other = "网址"
+[footer_copyright]
+other = "版权所有 © 2019 福建东方电机股份有限公司，保留所有权利。"
+
+[float_telephone]
+other = "电话"
+[float_email]
+other = "邮箱"
+[float_message]
+other = "在线留言"
+
+[search_placeholder]
+other = "输入关键词"
+[language_label]
+other = "简体中文"
+
+[product_availability]
+other = "供货状态"
+[product_quantity]
+other = "数量"
+[product_in_stock]
+other = "现货"
+[product_inquire]
+other = "询价"
+[product_add_basket]
+other = "加入询价单"
+[product_description]
+other = "产品说明"
+[product_share]
+other = "分享到："
+[product_category_label]
+other = "产品分类"
+[product_rating_note]
+other = "表中参数仅供参考，最新资料与供货情况请与我们联系。"
+
+[contact_get_in_touch]
+other = "在线留言"
+[contact_intl]
+other = "国际业务部"
+[contact_manufacturer]
+other = "生产厂家"
+[contact_more_info]
+other = "请与我们联系，获取更多资料。"
+[contact_name]
+other = "您的姓名 *"
+[contact_email]
+other = "您的邮箱 *"
+[contact_phone]
+other = "电话 / WhatsApp"
+[contact_company]
+other = "公司名称"
+[contact_product]
+other = "您感兴趣的产品"
+[contact_message]
+other = "您的需求 *"
+[contact_submit]
+other = "提交"
+
+[news_views]
+other = "浏览次数"
+[news_author]
+other = "作者"
+[news_publish_time]
+other = "发布时间"
+[news_origin]
+other = "来源"
+[news_site]
+other = "本站"
+[news_sidebar_title]
+other = "新闻"
+[news_back]
+other = "返回新闻列表"
+[news_read_more]
+other = "查看详情"
+
+[search_results]
+other = "搜索结果"
+[not_found]
+other = "页面不存在"
+[not_found_text]
+other = "您访问的页面可能已被移动或删除。"
+[back_home]
+other = "返回首页"
+
+# --- 产品分类名称（侧边栏 / 页脚） ---
+
+[cat_brush_alternator]
+other = "有刷发电机"
+[cat_brushless_alternator]
+other = "无刷发电机"
+[cat_diesel_generator_set]
+other = "柴油发电机组"
+[cat_50hz_diesel_generator_set]
+other = "50HZ 柴油发电机组"
+[cat_60hz_diesel_generator_set]
+other = "60HZ 柴油发电机组"
+[cat_engine_cummins]
+other = "康明斯发动机系列"
+[cat_engine_cummins_2]
+other = "康明斯发动机"
+[cat_engine_huachai]
+other = "华柴发动机系列"
+[cat_engine_kofo]
+other = "科发发动机系列"
+[cat_engine_longxin]
+other = "龙信发动机系列"
+[cat_engine_lovol]
+other = "潍柴发动机系列"
+[cat_engine_perkins]
+other = "珀金斯发动机系列"
+[cat_engine_woling]
+other = "卧龙发动机系列"
+[cat_engine_wuxi]
+other = "无锡发动机系列"
+[cat_engine_yangdong]
+other = "扬动发动机系列"
+[cat_engine_yto]
+other = "玉柴发动机系列"
+[cat_engine_yuchai]
+other = "玉柴发动机系列"
+[cat_engine_yunnei]
+other = "云内发动机系列"
+[cat_engine_yuxing]
+other = "玉兴发动机系列"

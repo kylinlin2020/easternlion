@@ -1,0 +1,182 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Home"
+[nav_products]
+other = "Products"
+[nav_company]
+other = "Company Profile"
+[nav_service]
+other = "Service"
+[nav_video]
+other = "Video"
+[nav_faq]
+other = "FAQ"
+[nav_contact]
+other = "Contact Us"
+
+[menu_company_profile]
+other = "Company Profile"
+[menu_history]
+other = "Development History"
+[menu_team]
+other = "Our Team"
+[menu_qualification]
+other = "Qualification"
+[menu_news]
+other = "News Center"
+[menu_workshop]
+other = "Our Workshop"
+
+[about_us]
+other = "About Us"
+[product_center]
+other = "Product Center"
+[product_category]
+other = "Product Category"
+
+[footer_quick_links]
+other = "Quick Links"
+[footer_company_profile]
+other = "Company Profile"
+[footer_product_category]
+other = "Product Category"
+[footer_golden_supplier]
+other = "Golden Supplier in China"
+[footer_tel]
+other = "Tel"
+[footer_fax]
+other = "Fax"
+[footer_email]
+other = "Email"
+[footer_web]
+other = "Web"
+[footer_copyright]
+other = "Copyright © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. All rights reserved."
+
+[float_telephone]
+other = "Telephone"
+[float_email]
+other = "Email"
+[float_message]
+other = "Leave a Message"
+
+[search_placeholder]
+other = "Input keyword"
+[language_label]
+other = "English"
+
+[product_availability]
+other = "Availability"
+[product_quantity]
+other = "Quantity"
+[product_in_stock]
+other = "In Stock"
+[product_inquire]
+other = "Inquire"
+[product_add_basket]
+other = "Add to Basket"
+[product_description]
+other = "Product Description"
+[product_share]
+other = "Share to:"
+[product_category_label]
+other = "Category"
+[product_rating_note]
+other = "Ratings are indicative. Please contact us for the latest datasheet and confirmation of availability."
+
+[contact_get_in_touch]
+other = "Get In Touch"
+[contact_intl]
+other = "International Department"
+[contact_manufacturer]
+other = "Manufacturer"
+[contact_more_info]
+other = "Contact us for more information."
+[contact_name]
+other = "Your name *"
+[contact_email]
+other = "Your email *"
+[contact_phone]
+other = "Phone / WhatsApp"
+[contact_company]
+other = "Company"
+[contact_product]
+other = "Product you are interested in"
+[contact_message]
+other = "Your message *"
+[contact_submit]
+other = "Contact Us"
+
+[news_views]
+other = "Views"
+[news_author]
+other = "Author"
+[news_publish_time]
+other = "Publish Time"
+[news_origin]
+other = "Origin"
+[news_site]
+other = "Site"
+[news_sidebar_title]
+other = "News"
+[news_back]
+other = "Back to News"
+[news_read_more]
+other = "Read More"
+
+[search_results]
+other = "Search results for"
+[not_found]
+other = "Page Not Found"
+[not_found_text]
+other = "The page you are looking for may have been moved or no longer exists."
+[back_home]
+other = "Back to Home"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Brush Alternator"
+[cat_brushless_alternator]
+other = "Brushless Alternator"
+[cat_diesel_generator_set]
+other = "Diesel Generator Set"
+[cat_50hz_diesel_generator_set]
+other = "50HZ Diesel Generator Set"
+[cat_60hz_diesel_generator_set]
+other = "60HZ Diesel Generator Set"
+[cat_engine_cummins]
+other = "Engine By Cummins Series"
+[cat_engine_cummins_2]
+other = "Engine By Cummins"
+[cat_engine_huachai]
+other = "Engine By Huachai Series"
+[cat_engine_kofo]
+other = "Engine By Kofo Series"
+[cat_engine_longxin]
+other = "Engine By Longxin Series"
+[cat_engine_lovol]
+other = "Engine By Lovol Series"
+[cat_engine_perkins]
+other = "Engine By Perkins Series"
+[cat_engine_woling]
+other = "Engine By Woling Series"
+[cat_engine_wuxi]
+other = "Engine By Wuxi Series"
+[cat_engine_yangdong]
+other = "Engine By Yangdong Series"
+[cat_engine_yto]
+other = "Engine By Yto Series"
+[cat_engine_yuchai]
+other = "Engine By Yuchai Series"
+[cat_engine_yunnei]
+other = "Engine By Yunnei Series"
+[cat_engine_yuxing]
+other = "Engine By Yuxing Series"
+

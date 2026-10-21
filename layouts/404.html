@@ -2,9 +2,9 @@
 <section class="inner-main" style="min-height:62vh;display:flex;align-items:center">
   <div class="container" style="text-align:center">
     <p style="font-size:80px;line-height:1;color:var(--yellow);margin:0 0 10px">404</p>
-    <h1 style="color:#fff;font-size:24px;margin-bottom:14px">Page Not Found</h1>
-    <p style="color:#aaa">The page you are looking for may have been moved or no longer exists.</p>
-    <p style="margin-top:26px"><a class="btn btn-inquire" href="{{ "/" | relURL }}">Back to Home</a></p>
+    <h1 style="color:#fff;font-size:24px;margin-bottom:14px">{{ i18n "not_found" }}</h1>
+    <p style="color:#aaa">{{ i18n "not_found_text" }}</p>
+    <p style="margin-top:26px"><a class="btn btn-inquire" href="{{ "/" | relLangURL }}">{{ i18n "back_home" }}</a></p>
   </div>
 </section>
 {{ end }}
