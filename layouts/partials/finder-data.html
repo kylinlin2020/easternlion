@@ -1,0 +1,77 @@
+{{- /* data + localised strings for the power finder */ -}}
+{{- $page := .page -}}
+{{- $scope := .scope | default "category" -}}
+{{- $pages := slice -}}
+{{- if eq $scope "all" -}}
+  {{- with site.GetPage "/products" -}}
+    {{- range .Pages -}}
+      {{- range .Pages -}}
+        {{- $pages = $pages | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $pages = $page.Pages -}}
+  {{- with $page.Params.list_from -}}
+    {{- with site.GetPage . }}{{ $pages = .Pages }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $series := slice -}}
+{{- range $pages -}}
+  {{- if .Params.columns -}}
+    {{- $cols := .Params.columns -}}
+    {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $i50 := -1 }}{{ $i60 := -1 }}
+    {{- range $i, $c := $cols -}}
+      {{- if eq $c "Prime power (kW)" }}{{ $iPrime = $i }}{{ end -}}
+      {{- if eq $c "Standby power (kW)" }}{{ $iStandby = $i }}{{ end -}}
+      {{- if eq $c "50Hz Output (kW)" }}{{ $i50 = $i }}{{ end -}}
+      {{- if eq $c "60Hz Output (kW)" }}{{ $i60 = $i }}{{ end -}}
+    {{- end -}}
+    {{- $models := slice -}}
+    {{- range .Params.rows -}}
+      {{- $name := index . 0 -}}
+      {{- $prime := 0 }}{{ $standby := 0 }}{{ $o50 := 0 }}{{ $o60 := 0 }}
+      {{- if ge $iPrime 0 -}}{{- with index . $iPrime -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $prime = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $iStandby 0 -}}{{- with index . $iStandby -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $standby = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $i50 0 -}}{{- with index . $i50 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $o50 = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- if ge $i60 0 -}}{{- with index . $i60 -}}{{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $o60 = int (float .) -}}{{- end -}}{{- end -}}{{- end -}}
+      {{- $cap := 0 -}}
+      {{- if gt $standby 0 }}{{ $cap = $standby }}{{ else if gt $prime 0 }}{{ $cap = $prime }}{{ else if gt $o50 0 }}{{ $cap = $o50 }}{{ else if gt $o60 0 }}{{ $cap = $o60 }}{{ end -}}
+      {{- if gt $cap 0 -}}
+        {{- $models = $models | append (dict
+            "m" $name
+            "p" $prime
+            "s" $standby
+            "a" $o50
+            "b" $o60
+            "c" $cap
+        ) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $series = $series | append (dict
+        "t" .Title
+        "u" .RelPermalink
+        "i" (.Params.image | relURL)
+        "hz" (.Params.hz | default 50)
+        "k" (.Params.product_kind | default "genset")
+        "n" (len $models)
+        "mn" $models
+    ) -}}
+  {{- end -}}
+{{- end -}}
+<script type="application/json" id="finderData">{{ $series | jsonify | safeJS }}</script>
+{{- $s := dict
+      "finder_head" (i18n "finder_head")
+      "finder_head_one" (i18n "finder_head_one")
+      "finder_more" (i18n "finder_more")
+      "finder_open" (i18n "finder_open")
+      "finder_inquire" (i18n "finder_inquire")
+      "finder_none" (i18n "finder_none")
+      "finder_none_closest" (i18n "finder_none_closest")
+      "finder_none_max" (i18n "finder_none_max")
+      "finder_model_standby" (i18n "finder_model_standby")
+      "finder_model_prime" (i18n "finder_model_prime")
+      "finder_model_output" (i18n "finder_model_output")
+      "finder_inquire_url" ("contact/" | relLangURL)
+-}}
+<script type="application/json" id="finderStrings">{{ $s | jsonify | safeJS }}</script>

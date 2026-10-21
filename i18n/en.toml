@@ -481,3 +481,44 @@ other = "SAE Size"
 other = "Core Length (mm)"
 [news_center_title]
 other = "News Center"
+
+[finder_eyebrow]
+other = "Power finder"
+[finder_title]
+other = "Which model covers your load?"
+[finder_text]
+other = "Type the power you need and we will list every model in this range that can carry it — with the engine, alternator and controller behind each one."
+[finder_quick]
+other = "Common loads"
+[finder_kw]
+other = "Required power"
+[finder_kw_ph]
+other = "e.g. 200"
+[finder_hz]
+other = "Frequency"
+[finder_go]
+other = "Find models"
+[finder_head]
+other = "{n} series cover {kw} kW at {hz} Hz"
+[finder_head_one]
+other = "1 series covers {kw} kW at {hz} Hz"
+[finder_more]
+other = "+{n} more models in this series cover this load"
+[finder_open]
+other = "Open spec sheet"
+[finder_inquire]
+other = "Get a quote"
+[finder_none]
+other = "No model in this range covers {kw} kW."
+[finder_none_closest]
+other = "The closest is {model} ({kw} kW) — tell us the load and our engineers will size it for you."
+[finder_none_max]
+other = "Send us the load and we will quote a custom or parallel solution."
+[finder_model_standby]
+other = "standby"
+[finder_model_prime]
+other = "prime"
+[finder_model_output]
+other = "output"
+[finder_more_series]
+other = "Show {n} more series"

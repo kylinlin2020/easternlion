@@ -15,6 +15,10 @@
           {{- end }}
         {{- end }}
 
+        {{ partial "finder.html" (dict "id" "finder") }}
+        {{ partial "finder-data.html" (dict "page" . "scope" "category") }}
+        <script src="{{ "js/finder.js" | relURL }}" defer></script>
+
         {{ partial "filter-bar.html" . }}
 
         {{- if $pages }}

@@ -480,3 +480,44 @@ other = "SAE 法兰尺寸"
 other = "铁芯长度 (mm)"
 [news_center_title]
 other = "新闻中心"
+
+[finder_eyebrow]
+other = "功率选型"
+[finder_title]
+other = "哪款机型能满足您的负载？"
+[finder_text]
+other = "输入您需要的功率，我们列出该系列中所有可以承载的机型，并标注对应的发动机、发电机与控制器。"
+[finder_quick]
+other = "常用功率"
+[finder_kw]
+other = "需求功率"
+[finder_kw_ph]
+other = "例如 200"
+[finder_hz]
+other = "频率"
+[finder_go]
+other = "查找机型"
+[finder_head]
+other = "{hz} Hz 下有 {n} 个系列可覆盖 {kw} kW"
+[finder_head_one]
+other = "{hz} Hz 下有 1 个系列可覆盖 {kw} kW"
+[finder_more]
+other = "该系列另有 {n} 款机型同样满足"
+[finder_open]
+other = "查看参数表"
+[finder_inquire]
+other = "索取报价"
+[finder_none]
+other = "该系列中没有可覆盖 {kw} kW 的机型。"
+[finder_none_closest]
+other = "最接近的是 {model}（{kw} kW）——把负载要求发给我们，工程师会为您选配。"
+[finder_none_max]
+other = "把负载要求发给我们，我们将为您报价定制或并机方案。"
+[finder_model_standby]
+other = "备用功率"
+[finder_model_prime]
+other = "额定功率"
+[finder_model_output]
+other = "输出功率"
+[finder_more_series]
+other = "展开其余 {n} 个系列"
