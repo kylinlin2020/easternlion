@@ -21,6 +21,11 @@
     } catch (e) { T = {}; }
   }
   function t(key, fallback) { return T[key] || fallback; }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
 
   var byUrl = {};
   models.forEach(function (m) { byUrl[m.u] = m; });
@@ -152,6 +157,15 @@
       html += '<td><a class="btn btn-outline btn-sm" href="' + m.u + '">' + t('open', 'Open') + '</a></td>';
     });
     html += '</tr></tbody></table>';
+
+    /* ask for a quote for every series that is on the table */
+    var names = selected.map(function (m) { return m.t; }).join(',');
+    var label = t('quote', 'Request a quote for these {n} models').replace('{n}', selected.length);
+    html += '<div class="cm-foot">' +
+      '<a class="btn btn-primary" href="' + esc(t('quote_url', '/contact/') + '?models=' + encodeURIComponent(names)) + '">' +
+      esc(label) +
+      '</a></div>';
+
     body.innerHTML = html;
     modal.querySelector('.cm-panel').setAttribute('aria-label', t('title', 'Model comparison'));
     modal.classList.add('is-open');

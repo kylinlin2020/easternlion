@@ -539,3 +539,27 @@ other = "output"
 other = "Model"
 [inquiry_power]
 other = "Required power"
+[model_nav_label]
+other = "Neighbouring models"
+[model_nav_hint]
+other = "Pick a model in the table to see the sizes next to it."
+[model_nav_current]
+other = "current"
+[model_nav_up]
+other = "larger"
+[model_nav_down]
+other = "smaller"
+[model_nav_same]
+other = "same power"
+[contact_models]
+other = "Candidate models"
+[contact_model_add]
+other = "Add another model (e.g. GF/GFS-C200)"
+[contact_model_add_btn]
+other = "Add"
+[contact_models_hint]
+other = "Add every model you want us to quote — our engineers will reply with prices and lead times for each of them."
+[inquiry_models]
+other = "Models"
+[compare_quote]
+other = "Request a quote for these {n} models"

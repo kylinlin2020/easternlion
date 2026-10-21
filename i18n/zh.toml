@@ -538,3 +538,27 @@ other = "输出功率"
 other = "机型"
 [inquiry_power]
 other = "需求功率"
+[model_nav_label]
+other = "相邻功率档位"
+[model_nav_hint]
+other = "在表格中选择一个机型，即可查看上下相邻的功率档位。"
+[model_nav_current]
+other = "当前"
+[model_nav_up]
+other = "更大"
+[model_nav_down]
+other = "更小"
+[model_nav_same]
+other = "同功率"
+[contact_models]
+other = "候选机型"
+[contact_model_add]
+other = "再添加一个机型（如 GF/GFS-C200）"
+[contact_model_add_btn]
+other = "添加"
+[contact_models_hint]
+other = "把需要报价的机型都加进来，工程师会逐一回复价格与交期。"
+[inquiry_models]
+other = "候选机型"
+[compare_quote]
+other = "为这 {n} 个系列索取报价"

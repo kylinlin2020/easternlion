@@ -124,6 +124,13 @@
             {{- end }}
           </select>
         </div>
+        <div class="model-nav" id="modelNav" hidden
+             data-msg-label="{{ i18n "model_nav_label" }}"
+             data-msg-hint="{{ i18n "model_nav_hint" }}"
+             data-msg-current="{{ i18n "model_nav_current" }}"
+             data-msg-up="{{ i18n "model_nav_up" }}"
+             data-msg-down="{{ i18n "model_nav_down" }}"
+             data-msg-same="{{ i18n "model_nav_same" }}"></div>
         <div class="table-card">
         <div class="table-scroll">
           <table class="spec-table">
@@ -195,7 +202,9 @@
 
     {{ partial "compare-data.html" . }}
     {{- $jsCompare := resources.Get "js/compare.js" | minify | fingerprint }}
+  {{- $jsModelNav := resources.Get "js/model-nav.js" | minify | fingerprint }}
   <script src="{{ $jsCompare.RelPermalink }}" defer></script>
+  <script src="{{ $jsModelNav.RelPermalink }}" defer></script>
   </div>
 </section>
 
