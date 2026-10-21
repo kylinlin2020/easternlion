@@ -148,6 +148,9 @@ moves the language switcher into the drawer and stacks the grids.
 | **Lightbox** | certificates, family photos | `static/js/lightbox.js` opens any `a[data-lb]` in a full-screen overlay (Esc / backdrop / ✕ to close). |
 | **Sticky action bar** | product pages (mobile) | product name + call button + *Inquire* pinned to the bottom of the viewport. |
 | **Power-band comparison** | product pages | `comparables` in the front matter lists the series whose power range overlaps the current one. |
+| **Model comparison** | category & product pages | the **+** button on every card adds a model to a comparison tray (max 4); a docked bar opens a side-by-side table of power range, frequency, model count, engine, alternator and controller. `layouts/partials/compare-data.html` emits the data as JSON, `static/js/compare.js` renders the tray and the dialog, every string is localised. |
+| **Sortable spec tables** | product pages | the header of a specification table sorts the rows by that column (numbers and model numbers numerically, text alphabetically). |
+| **Container alignment audit** | whole site | `scripts/check-alignment.js` fails the build when a page-level block is narrower than the 1280px container. |
 | **Clickable hero stats** | home page | each figure links to the matching page (history, service, alternators, generator sets). |
 
 Product meta used by these features is derived from the specification tables at build time
@@ -155,33 +158,34 @@ Product meta used by these features is derived from the specification tables at 
 
 ### Hero and banners
 
-* **Home hero** — the original uses LayerSlider (`fullwidth` skin): a fixed **800px** stage
-  (measured 1425×800 at a 1425px viewport) in which the 1920×800 slide is scaled to *cover*
-  and centred, so the sides of the picture are cropped. Reproduced 1:1.
-* **Inner banners** — the original rule is
-  `background:url(...) no-repeat scroll center center; background-size:cover;`
-  with `padding-top:120px; padding-bottom:130px` (120/120 on Contact, Service, Video and FAQ).
-  The height is therefore driven by the content, and the title lands at `y = 246px` — exactly
-  like the original.
+* **Home hero** — one clean product photograph (`images/hero/0-gensets.jpg`, cropped so that no
+  slogan is baked into the picture) on a dark navy stage with a gradient and an amber radial
+  glow, a slow Ken Burns zoom, the eyebrow *Golden Supplier in China*, a two-line headline,
+  sub-copy, two CTAs and a four-cell stat strip. No slider: the original shipped a LayerSlider
+  whose slides carried the slogan as part of the bitmap, which reads badly on a phone.
+* **Inner banners** — full-width photo, dark overlay, centred uppercase title, 280px minimum
+  height. Pages that carry their own `<h1>` (product detail, news article) step the banner
+  title down to a plain label, so every page keeps exactly one `<h1>`.
 
 ### Tiles
-Two tile styles exist on the original site and both are reproduced:
 
-* **Home / Products overview** — `pic-desc-bottom`: photo with a translucent gold bar
-  (44% gold, 68px) across the bottom and a centred white caption.
-* **Category pages** — `pic-desc-zoom-half-full-border`: square 280×280 tile, 20px radius,
-  50% black overlay, centred white 24px caption; the overlay lightens on hover.
+* **Home / Products overview** — a white card with the product photo, an amber label pill
+  overlapping the lower left of the image, the category title, a one-line description and a
+  *View details* link.
+* **Category pages** — a three-column grid of white product cards (image plate, title,
+  frequency and kW tags, category and *View details*) with a compare toggle in the corner.
 
 ### Footer
 
-Four columns — company block (name, tagline, 23px phone, fax, green mailto, 120px QR code,
-website), *Quick Links*, *Company Profile*, *Product Category* — followed by a **white**
-bottom bar with the factory address on the left and `Copyright © 2019 …` on the right.
+A navy CTA band (*Need a generator set for your project?* + *Send an inquiry* + *Products*)
+above a four-column navy footer — company block (logo, tagline, 23px phone, fax, green mailto,
+QR code, website), *Quick Links*, *Company Profile*, *Product Category* — and a slim bottom bar
+with the factory address on the left and `Copyright © 2019 …` on the right.
 
 ### Float rail
 
-Fixed panel on the right edge: *Telephone* (two numbers), *Email* (two addresses) and a red
-*Leave a Message* button, exactly as in the original `onlineService` widget.
+A fixed panel on the right edge with three icon tabs: *Telephone*, *Email* and
+*Leave a Message*.
 
 ### Company pages (Company Profile)
 
@@ -226,22 +230,14 @@ Engine By Longxin Series » Engine By Longxin Series`.
 
 ## Inherited quirks (reproduced on purpose)
 
-The original site has three contrast bugs that a faithful clone keeps:
+The original site has three contrast bugs — the home page *Product Center* heading was `#333`
+on black, the home page intro paragraph was `#545454` on black, and the footer column titles
+plus the *Development History* descriptions were `#000` on black. The redesign renders all of
+them readable; the original can still be compared side by side against the local mirror of the
+crawled site (`http://127.0.0.1:8899/site/index.html`).
 
-1. the home page "Product Center" heading is `#333` on black,
-2. the home page intro paragraph is `#545454` on black,
-3. the footer column titles, the footer company name and the *Development History*
-   descriptions are `#000` on black in the source CSS — invisible on the original site.
-
-This build renders #3 readable by default. To get the pixel-identical original look, add
-`?theme=original` to any URL (it is remembered in `localStorage`):
-
-```
-http://127.0.0.1:1313/about/history/?theme=original
-```
-
-Also note that the original's Perkins specification table contains non-numeric values in the
-*Engine power* column (e.g. `19408`); those cells are reproduced verbatim.
+The original's Perkins specification table contains non-numeric values in the *Engine power*
+column (e.g. `19408`); those cells are reproduced verbatim.
 
 ## Internationalisation
 
@@ -279,7 +275,7 @@ Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese 
 ```bash
 make dev       # hugo server on http://127.0.0.1:1313 (auto rebuild + livereload)
 make build     # production build into ./public
-make check     # build + internal link check + product front matter check
+make check     # build + link, product, alignment and SEO checks
 make clean
 ```
 
@@ -289,8 +285,10 @@ Validation scripts (also used by CI):
 
 | Script | What it does |
 | --- | --- |
-| `scripts/check-links.js [dir]` | walks the built site, resolves every internal `href`/`src`, fails on a broken one (8310 links, 0 broken) |
+| `scripts/check-links.js [dir]` | walks the built site, resolves every internal `href`/`src`, fails on a broken one (1234 links, 0 broken) |
 | `scripts/check-products.js` | parses the JSON front matter of all 44 product pages and checks the required keys (`columns`, `rows`, `power_min/max`, `hz`, `product_kind`, `comparables`) |
+| `scripts/check-alignment.js [dir]` | fails when a built page contains a block narrower than the 1280px container (89 pages checked) |
+| `scripts/check-seo.js [dir]` | checks every indexable page for one `<h1>`, a title and meta description of a sane length, canonical link, hreflang alternates, og tags, `alt` on every image and duplicate titles per language (86 pages checked, language-aware limits) |
 
 ## Deployment
 
@@ -304,7 +302,7 @@ Cloudflare Pages is connected to the GitHub repository, so every push to `main` 
 | Environment variable | `HUGO_VERSION = 0.134.0` |
 | Production branch | `main` |
 
-`/.github/workflows/ci.yml` builds the site and runs both validation scripts on every push and
+`/.github/workflows/ci.yml` builds the site and runs all four validation scripts on every push and
 pull request, so a broken link or a truncated product page fails the build before it reaches
 Pages.
 

@@ -19,15 +19,6 @@
   <script src="{{ "js/lightbox.js" | relURL }}" defer></script>
   <script src="{{ "js/spec-table.js" | relURL }}" defer></script>
   <script>
-    /* theme=original -> pixel-identical contrast of the original site (see README) */
-    (function () {
-      var q = new URLSearchParams(window.location.search).get('theme');
-      if (!q) { try { q = localStorage.getItem('el-theme'); } catch (e) {} }
-      if (q === 'original') { document.documentElement.classList.add('theme-original'); }
-      else { document.documentElement.classList.remove('theme-original'); }
-    })();
-  </script>
-  <script>
     (function () {
       var toggle = document.querySelector('.nav-toggle');
       var nav = document.getElementById('mainNav');

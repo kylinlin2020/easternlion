@@ -66,6 +66,7 @@
     }).join('');
 
     bar.classList.toggle('is-open', selected.length > 0);
+    document.body.classList.toggle('has-compare', selected.length > 0);
     openBtn.disabled = selected.length < 2;
     openBtn.textContent = selected.length < 2
       ? t('compare', 'Compare') + ' (' + selected.length + ')'

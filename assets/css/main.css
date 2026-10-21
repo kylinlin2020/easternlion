@@ -2277,6 +2277,9 @@ a[data-lb] { cursor: zoom-in; }
 
 .compare-bar.is-open { transform: translateY(0); }
 
+/* the mobile action bar and the compare bar would fight over the same corner */
+body.has-compare .sticky-bar { display: none !important; }
+
 .cb-items { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; overflow-x: auto; }
 
 .cb-chip {
@@ -2469,7 +2472,8 @@ a[data-lb] { cursor: zoom-in; }
   .mobile-langs a.is-current { color: var(--amber-600); }
   .product-grid { grid-template-columns: 1fr; }
   .compare-bar { flex-direction: column; align-items: stretch; }
-  .cb-items { flex-wrap: wrap; }
+  .cb-items { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
+  .cb-actions .btn { flex: 1; }
   .steps { grid-template-columns: 1fr; }
   .error-search { flex-direction: column; }
   .model-jump { flex-direction: column; align-items: flex-start; }
