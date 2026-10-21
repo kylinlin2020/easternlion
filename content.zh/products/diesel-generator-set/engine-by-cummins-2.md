@@ -20,18 +20,8 @@
       "url": "/products/diesel-generator-set/"
     },
     {
-      "name": "柴油发电机组",
-      "url": "/products/diesel-generator-set/"
-    },
-    {
       "name": "50HZ 柴油发电机组",
       "url": "/products/50hz-diesel-generator-set/"
-    },
-    {
-      "name": "康明斯发动机系列（CCEC）"
-    },
-    {
-      "name": "康明斯发动机系列（CCEC）"
     }
   ],
   "columns": [
@@ -590,7 +580,6 @@
   "alternator_top": "EL 314E",
   "controller_top": "Smartgen 6120",
   "sae_top": ""
-}
-东方电机康明斯（CCEC）系列柴油发电机组采用康明斯（CCEC）柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
+}方电机康明斯（CCEC）系列柴油发电机组采用康明斯（CCEC）柴油发动机，配套自有无刷发电机与可靠的控制面板。下表列出标准 400/230V、50Hz 机型的额定与备用功率、发动机、发电机及控制器参数。可按需提供开架式、静音型、拖车式、ATS 自动切换与并机系统。
 
 所有机组出厂前均进行满载测试，最新资料、报价与交期请联系我们的国际业务部。

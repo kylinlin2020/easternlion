@@ -84,14 +84,16 @@
 
 {{- if .Params.breadcrumb }}
 <script type="application/ld+json">
+{{- $crumbs := .Params.breadcrumb -}}
+
 {{- $items := slice -}}
 {{- $i := 1 -}}
-{{- range .Params.breadcrumb -}}
+{{- range $crumbs -}}
   {{- $items = $items | append (dict
       "@type" "ListItem"
       "position" $i
       "name" .name
-      "item" (cond (isset . "url") (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" .url)) .Permalink)) -}}
+      "item" (cond (isset . "url") (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" .url)) $.Permalink)) -}}
   {{- $i = add $i 1 -}}
 {{- end -}}
 {{- $items = $items | append (dict

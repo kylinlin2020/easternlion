@@ -20,18 +20,8 @@
       "url": "/products/diesel-generator-set/"
     },
     {
-      "name": "Diesel Generator Set",
-      "url": "/products/diesel-generator-set/"
-    },
-    {
       "name": "50HZ Diesel Generator Set",
       "url": "/products/50hz-diesel-generator-set/"
-    },
-    {
-      "name": "Engine By Yangdong Series"
-    },
-    {
-      "name": "Engine By Yangdong Series"
     }
   ],
   "columns": [
@@ -343,8 +333,6 @@
   "alternator_top": "EL 164C",
   "controller_top": "RUIFEN6120",
   "sae_top": ""
-}
-
-Eastern Lion Yangdong series diesel generator sets combine Yangdong diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
+}Eastern Lion Yangdong series diesel generator sets combine Yangdong diesel engines with our own brushless alternators and a reliable control panel. The table below lists the standard 400/230 V, 50 Hz models with prime and standby ratings to ISO 8528. Open frame, silent canopy, trailer, ATS and parallel configurations are available on request.
 
 All generator sets are tested at full load before shipment. Please contact us for a detailed datasheet, pricing and delivery time.

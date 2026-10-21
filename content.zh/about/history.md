@@ -10,14 +10,9 @@
     {
       "name": "公司简介",
       "url": "/about/"
-    },
-    {
-      "name": "发展历程"
     }
   ]
-}
-
-<div class="timeline">
+}<div class="timeline">
   <div class="tl-item tl-odd">
     <div class="tl-year">1987</div>
     <div class="tl-node"></div>

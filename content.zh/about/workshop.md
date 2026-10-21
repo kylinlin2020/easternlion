@@ -10,14 +10,9 @@
     {
       "name": "公司简介",
       "url": "/about/"
-    },
-    {
-      "name": "车间实景"
     }
   ]
-}
-
-<div class="workshop-top">
+}<div class="workshop-top">
   <div class="workshop-thumbs">
     <img src="/images/workshop/cangku1-200-200.jpg" alt="东方电机车间" loading="lazy">
     <img src="/images/workshop/cangku2-200-200.jpg" alt="东方电机车间" loading="lazy">
