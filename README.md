@@ -158,11 +158,13 @@ Product meta used by these features is derived from the specification tables at 
 
 ### Hero and banners
 
-* **Home hero** — one clean product photograph (`images/hero/0-gensets.jpg`, cropped so that no
-  slogan is baked into the picture) on a dark navy stage with a gradient and an amber radial
+* **Home hero** — one clean photograph of the Eastern Lion workshop (`images/banner/service.jpg`,
+  1920×700, sharp at every viewport) on a dark navy stage with a gradient and an amber radial
   glow, a slow Ken Burns zoom, the eyebrow *Golden Supplier in China*, a two-line headline,
   sub-copy, two CTAs and a four-cell stat strip. No slider: the original shipped a LayerSlider
-  whose slides carried the slogan as part of the bitmap, which reads badly on a phone.
+  whose slides carried the slogan as part of the bitmap, which reads badly on a phone. The
+  slogan-free strip `images/hero/0-gensets.jpg` (1600×374) is used where a wide, short band is
+  needed — the service banner for example.
 * **Inner banners** — full-width photo, dark overlay, centred uppercase title, 280px minimum
   height. Pages that carry their own `<h1>` (product detail, news article) step the banner
   title down to a plain label, so every page keeps exactly one `<h1>`.

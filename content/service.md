@@ -3,7 +3,7 @@ type: "service"
 title: "Service"
 description: "Eastern Lion market and after-sales service: 35 sales and service bases in China, online technical support and worldwide spare parts supply."
 banner_compact: true
-banner_image: "/images/banner/service.jpg"
+banner_image: "/images/hero/0-gensets.jpg"
 banner_title: "Service"
 breadcrumb:
   - name: Service
