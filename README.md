@@ -257,6 +257,11 @@ The site ships **two languages**:
 * product/category names come from `data/sidebar.yaml` and `data/categories.yaml` with an
   i18n `key` per entry, so the same list serves both languages;
 * front matter carries `description`/`summary` for meta tags.
+* data that is content rather than chrome (`data/faq.yaml`, `data/categories.yaml`) carries both
+  languages in one file (`q`/`a` and `description`/`description_zh`); the templates pick the
+  right one with `site.Language.Lang`;
+* the specification table headers are mapped to i18n keys (`col_model`, `col_prime_kw`, …),
+  so the Chinese pages show 中文表头 while the data rows stay the original model codes.
 
 Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese URLs verified.
 
@@ -275,7 +280,7 @@ Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese 
 ```bash
 make dev       # hugo server on http://127.0.0.1:1313 (auto rebuild + livereload)
 make build     # production build into ./public
-make check     # build + link, product, alignment and SEO checks
+make check     # build + link, product, alignment, SEO and language checks
 make clean
 ```
 
@@ -289,6 +294,7 @@ Validation scripts (also used by CI):
 | `scripts/check-products.js` | parses the JSON front matter of all 44 product pages and checks the required keys (`columns`, `rows`, `power_min/max`, `hz`, `product_kind`, `comparables`) |
 | `scripts/check-alignment.js [dir]` | fails when a built page contains a block narrower than the 1280px container (89 pages checked) |
 | `scripts/check-seo.js [dir]` | checks every indexable page for one `<h1>`, a title and meta description of a sane length, canonical link, hreflang alternates, og tags, `alt` on every image and duplicate titles per language (86 pages checked, language-aware limits) |
+| `scripts/check-language.js [dir] [lang]` | finds English text left inside the Chinese pages (brand names, model codes and e-mails are allowed). `node scripts/check-language.js public en` runs the same rules over the English pages as a self test |
 
 ## Deployment
 
