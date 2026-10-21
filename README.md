@@ -270,13 +270,44 @@ Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese 
 2. copy `i18n/en.toml` → `i18n/<lang>.toml` and translate the values;
 3. add a `[languages.<lang>]` block in `hugo.toml` with `contentDir = "content.<lang>"`.
 
+## Tooling
+
+```bash
+make dev       # hugo server on http://127.0.0.1:1313 (auto rebuild + livereload)
+make build     # production build into ./public
+make check     # build + internal link check + product front matter check
+make clean
+```
+
+`npm run dev | build | check` does the same thing.
+
+Validation scripts (also used by CI):
+
+| Script | What it does |
+| --- | --- |
+| `scripts/check-links.js [dir]` | walks the built site, resolves every internal `href`/`src`, fails on a broken one (8310 links, 0 broken) |
+| `scripts/check-products.js` | parses the JSON front matter of all 44 product pages and checks the required keys (`columns`, `rows`, `power_min/max`, `hz`, `product_kind`, `comparables`) |
+
 ## Deployment
 
 Cloudflare Pages is connected to the GitHub repository, so every push to `main` triggers a build:
 
-1. build command: `hugo --gc --minify`
-2. output directory: `public`
-3. production branch: `main`
+| Setting | Value |
+| --- | --- |
+| Framework preset | Hugo |
+| Build command | `hugo --gc --minify` |
+| Build output directory | `public` |
+| Environment variable | `HUGO_VERSION = 0.134.0` |
+| Production branch | `main` |
 
-The custom domain `www.easternlion.cn` is **not** bound yet — point DNS at Cloudflare whenever
-the switch-over is ready.
+`/.github/workflows/ci.yml` builds the site and runs both validation scripts on every push and
+pull request, so a broken link or a truncated product page fails the build before it reaches
+Pages.
+
+Custom domain: `www.easternlion.cn` is **not** bound yet — add the domain in the Cloudflare
+Pages project and point the DNS record at Cloudflare whenever the switch-over is ready. The
+canonical URL is set in `hugo.toml` (`baseURL`), and `hreflang` alternates are emitted for the
+`en` / `zh` locales.
+
+Error pages: `layouts/404.html` renders the branded 404 page, `static/_500.html` is published
+as `_500.html` for Cloudflare Pages.

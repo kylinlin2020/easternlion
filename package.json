@@ -1,0 +1,17 @@
+{
+  "name": "easternlion-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fuan Eastern Lion Electric Machines — static site (Hugo) for easternlion.cn",
+  "scripts": {
+    "dev": "hugo server --port 1313 --bind 127.0.0.1 --navigateToChanged",
+    "build": "hugo --gc --minify",
+    "preview": "hugo server --port 1313 --bind 127.0.0.1 --renderToDisk --renderToMemory",
+    "check": "npm run build && node scripts/check-links.js public && node scripts/check-products.js",
+    "links": "node scripts/check-links.js public",
+    "products": "node scripts/check-products.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

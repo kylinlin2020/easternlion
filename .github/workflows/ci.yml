@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build & validate
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.134.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Hugo
+        run: |
+          curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz" | tar -xz
+          sudo mv hugo /usr/local/bin/hugo
+          hugo version
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build
+        run: hugo --gc --minify
+
+      - name: Check internal links
+        run: node scripts/check-links.js public
+
+      - name: Check product front matter
+        run: node scripts/check-products.js
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: public
+          retention-days: 7
