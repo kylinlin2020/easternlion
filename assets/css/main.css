@@ -3050,6 +3050,49 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
   color: var(--ink-2);
 }
 
+.preview-notice {
+  margin: 0 0 14px;
+  padding: 11px 14px;
+  font-size: 13.5px;
+  color: #9f1239;
+  background: var(--red-50);
+  border: 1px solid #fecdd3;
+  border-radius: var(--r-sm);
+}
+
+.preview-notice[hidden] { display: none; }
+
+.hp {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fs-receipt { margin-top: 18px; text-align: left; }
+
+.fs-receipt summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.fs-receipt pre {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  font-size: 12.5px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  max-height: 260px;
+  overflow: auto;
+}
+
 .preview-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 
 .preview-actions--minor { margin-top: 10px; }

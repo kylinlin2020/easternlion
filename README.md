@@ -320,6 +320,59 @@ Validation scripts (also used by CI):
 | `scripts/check-language.js [dir] [lang]` | finds English text left inside the Chinese pages (brand names, model codes and e-mails are allowed). `node scripts/check-language.js public en` runs the same rules over the English pages as a self test |
 | `scripts/check-js.js [dir]` | parses every script with the javascript engine — a syntax error silently disables a feature, so it belongs in CI (6 files) |
 
+## Sending the inquiry (Cloudflare Email Service)
+
+The inquiry form is **not** a mailto any more: the visitor presses *Send inquiry* and the
+mail arrives in `sales@easternlion.cn` with a reply-to address of the visitor.
+
+The site is static, so the mail is sent from the edge by a **Pages Function**,
+`functions/api/inquiry.js`:
+
+```
+browser --POST /api/inquiry--> Pages Function --send_email binding--> Cloudflare Email Service --> sales@easternlion.cn
+```
+
+| Piece | Where |
+| --- | --- |
+| `functions/api/inquiry.js` | validates the payload, builds the mail (text + html), sends it, returns `{ ok: true }` |
+| `wrangler.toml` | the `send_email` binding, restricted to one destination |
+| `assets/js/contact.js` | posts the inquiry, shows the receipt - and falls back to WhatsApp / copy / download when the function is not reachable |
+
+**One time setup in the Cloudflare dashboard**
+
+1. **Email Service > Email Sending** > onboard the domain `easternlion.cn` (the sender address
+   must belong to an onboarded domain, otherwise the send fails with `550 5.7.1`).
+2. The binding from `wrangler.toml` is picked up by Pages automatically; otherwise add it under
+   **Settings > Functions > Bindings > Send email** with the name `EMAIL` and the destination
+   `sales@easternlion.cn`. The restriction is deliberate: this endpoint may never send
+   anywhere else.
+3. Nothing else - no API token in the repository, no third party form service.
+
+**Local testing**
+
+`hugo server` does not run Pages Functions, so the form falls back to the preview panel
+(the visitor sees *The inquiry could not be sent automatically* plus the WhatsApp, copy and
+download options). To test the real thing:
+
+```bash
+npx wrangler pages dev public        # serves public/ plus functions/
+```
+
+**The SMTP endpoint instead**
+
+Cloudflare Email Service also speaks SMTP for applications that are not on Workers:
+
+| Setting | Value |
+| --- | --- |
+| Host | `smtp.mx.cloudflare.net` |
+| Port | `465` (implicit TLS) |
+| Username | the literal `api_token` |
+| Password | a Cloudflare API token with the **Email Sending: Edit** permission |
+
+`smtp.mx.cloudflare.net:465` is not reachable from the browser and implicit TLS on 465 is not
+available inside a Worker, which is why the Pages Function uses the `send_email` binding - it is
+the same delivery pipeline, the same DKIM/ARC signing and the same delivery logs.
+
 ## Deployment
 
 Cloudflare Pages is connected to the GitHub repository, so every push to `main` triggers a build:

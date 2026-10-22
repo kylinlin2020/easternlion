@@ -631,3 +631,13 @@ other = "关闭"
 other = "用 WhatsApp 发送"
 [preview_download]
 other = "下载询盘单"
+[contact_send]
+other = "发送询盘"
+[preview_send]
+other = "发送询盘"
+[preview_failed]
+other = "自动发送没有成功，请用下面的任一方式联系我们，或直接发邮件到 sales@easternlion.cn。"
+[form_success_receipt]
+other = "查看我们收到的内容"
+[contact_sending]
+other = "发送中…"

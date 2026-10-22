@@ -632,3 +632,13 @@ other = "Close"
 other = "Send via WhatsApp"
 [preview_download]
 other = "Download the inquiry"
+[contact_send]
+other = "Send inquiry"
+[preview_send]
+other = "Send inquiry"
+[preview_failed]
+other = "The inquiry could not be sent automatically. Please use one of the options below, or write to sales@easternlion.cn."
+[form_success_receipt]
+other = "Show what we received"
+[contact_sending]
+other = "Sending…"

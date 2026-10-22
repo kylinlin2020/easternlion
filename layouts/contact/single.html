@@ -96,15 +96,17 @@
             <p class="field-error" hidden></p>
           </div>
 
-          <button type="submit">{{ i18n "contact_submit" }}</button>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" id="submitInquiry" data-label="{{ i18n "contact_send" }}" data-sending="{{ i18n "contact_sending" }}">{{ i18n "contact_send" }}</button>
         </form>
 
-        <div class="form-preview" id="formPreview" hidden>
+        <div class="form-preview" id="formPreview" hidden data-msg-failed="{{ i18n "preview_failed" }}">
           <h3>{{ i18n "preview_title" }}</h3>
           <p class="preview-hint">{{ i18n "preview_hint" }}</p>
           <textarea class="textarea preview-text" id="previewText" rows="14" spellcheck="false"></textarea>
+          <p class="preview-notice" id="previewNotice" hidden></p>
           <div class="preview-actions">
-            <button type="button" class="btn btn-primary" id="previewMail">{{ i18n "preview_mail" }}</button>
+            <button type="button" class="btn btn-primary" id="previewSend">{{ i18n "preview_send" }}</button>
             <a class="btn btn-outline" id="previewWhatsApp" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.4-.2-2.4.6.6-2.3-.2-.4A8 8 0 0 1 12 4zm-3.2 4c-.2 0-.4 0-.6.3-.2.2-.7.7-.7 1.7s.7 2 .8 2.1c.1.2 1.4 2.2 3.4 3 .5.2.9.3 1.2.3.5 0 .9-.2 1.2-.5.3-.3.5-.6.6-1 0-.3 0-.6 0-.9l-.9-2c-.2-.4-.3-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.7 4.3 3.8 1.6.7 2.4.7 3.2.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4z"/></svg>
               {{ i18n "preview_whatsapp" }}
@@ -125,6 +127,10 @@
           <h3>{{ i18n "form_success_title" }}</h3>
           <p>{{ i18n "form_success_text" }}</p>
           <p class="fs-mail">{{ i18n "form_success_mail" }} <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+          <details class="fs-receipt">
+            <summary>{{ i18n "form_success_receipt" }}</summary>
+            <pre id="sentBody"></pre>
+          </details>
           <button type="button" class="btn btn-outline btn-sm" id="formAgain">{{ i18n "form_again" }}</button>
         </div>
       </div>

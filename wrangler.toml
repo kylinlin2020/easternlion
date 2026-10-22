@@ -1,0 +1,25 @@
+# Cloudflare Pages / Workers configuration
+#
+# The inquiry form is sent from the edge: functions/api/inquiry.js posts the
+# mail to Cloudflare Email Service through the `send_email` binding below.
+#
+# Setup (one time):
+#   1. In the Cloudflare dashboard open **Email Service > Email Sending** and
+#      onboard the domain easternlion.cn.
+#   2. Create an API token with the **Email Sending: Edit** permission and
+#      store it as a secret (Settings > Variables and Secrets) if you want to
+#      use the SMTP endpoint instead — see the README.
+#   3. Add the binding below to the project (Settings > Functions > Bindings >
+#      Send email) or keep this file, Pages reads it automatically.
+#
+# The destination is restricted on purpose: this endpoint may only send to
+# sales@easternlion.cn, never anywhere else.
+
+name = "easternlion"
+pages_build_output_dir = "public"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[send_email]]
+name = "EMAIL"
+destination_address = "sales@easternlion.cn"

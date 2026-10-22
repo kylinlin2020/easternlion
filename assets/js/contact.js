@@ -161,6 +161,9 @@
   var previewCopied = document.getElementById('previewCopied');
   var previewWhatsApp = document.getElementById('previewWhatsApp');
   var previewDownload = document.getElementById('previewDownload');
+  var previewSend = document.getElementById('previewSend');
+  var previewNotice = document.getElementById('previewNotice');
+  var sentBody = document.getElementById('sentBody');
   var subject = '';
 
   function assembleSubject() {
@@ -222,19 +225,74 @@
     return out.join('\n');
   }
 
-  function send(body) {
+  /* the inquiry is sent to sales@easternlion.cn from the edge */
+  function payload(body) {
+    var f = new FormData(form);
+    var models = [];
+    var chips = document.querySelectorAll('#modelChips .m-chip:not(.m-chip--info)');
+    chips.forEach(function (c) {
+      var b = c.querySelector('.m-chip-x');
+      if (b) models.push(b.getAttribute('data-model'));
+    });
+    return {
+      body: body,
+      subject: subject,
+      name: (f.get('name') || '').trim(),
+      email: (f.get('email') || '').trim(),
+      phone: (f.get('phone') || '').trim(),
+      company: (f.get('company') || '').trim(),
+      product: (f.get('product') || '').trim(),
+      drawing: (f.get('drawing') || '').trim(),
+      website: (f.get('website') || '').trim(),
+      models: models,
+      load: load,
+      hz: hz,
+      lang: (document.documentElement.getAttribute('lang') || 'en').slice(0, 5),
+      page: window.location.href
+    };
+  }
+
+  function postInquiry(body) {
+    return fetch('/api/inquiry', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload(body))
+    }).then(function (r) {
+      return r.json().then(function (d) { return !!(d && d.ok); }).catch(function () { return false; });
+    }).catch(function () { return false; });
+  }
+
+  function sent(body) {
     if (preview) preview.hidden = true;
     form.hidden = true;
+    if (sentBody) sentBody.textContent = body;
     if (success) {
       success.hidden = false;
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  }
 
-    /* hand the inquiry over to the visitor's mail client */
-    setTimeout(function () {
-      window.location.href = 'mailto:' + form.dataset.mailTo +
-        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }, 350);
+  function failed(body) {
+    if (previewText) previewText.value = body;
+    if (preview) {
+      preview.hidden = false;
+      preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (previewNotice) {
+      previewNotice.textContent = (preview.dataset.msgFailed || 'The inquiry could not be sent automatically.');
+      previewNotice.hidden = false;
+    }
+  }
+
+  function fillPreview(body) {
+    if (previewText) previewText.value = body;
+    if (previewWhatsApp) {
+      var number = (form.dataset.whatsapp || '').replace(/\D/g, '');
+      previewWhatsApp.href = number
+        ? 'https://wa.me/' + number + '?text=' + encodeURIComponent(body)
+        : '#';
+      previewWhatsApp.hidden = !number;
+    }
   }
 
   form.addEventListener('submit', function (e) {
@@ -243,28 +301,37 @@
 
     subject = assembleSubject();
     var body = assemble();
+    fillPreview(body);
 
-    if (preview && previewText) {
-      previewText.value = body;
-      if (previewWhatsApp) {
-        var number = (form.dataset.whatsapp || '').replace(/\D/g, '');
-        previewWhatsApp.href = number
-          ? 'https://wa.me/' + number + '?text=' + encodeURIComponent(body)
-          : '#';
-        previewWhatsApp.hidden = !number;
-      }
-      preview.hidden = false;
-      form.hidden = true;
-      preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      previewText.focus();
-      /* show the beginning of the mail, not the end */
-      previewText.setSelectionRange(0, 0);
-      previewText.scrollTop = 0;
-      return;
+    var button = document.getElementById('submitInquiry');
+    if (button) {
+      button.disabled = true;
+      button.textContent = (button.dataset.sending || button.textContent);
     }
 
-    send(body);
+    postInquiry(body).then(function (ok) {
+      if (button) {
+        button.disabled = false;
+        button.textContent = button.dataset.label || button.textContent;
+      }
+      if (ok) { sent(body); return; }
+      failed(body);
+    });
   });
+
+  /* the send button of the preview panel */
+  if (previewSend) {
+    previewSend.addEventListener('click', function () {
+      var body = previewText ? previewText.value : assemble();
+      subject = assembleSubject();
+      previewSend.disabled = true;
+      postInquiry(body).then(function (ok) {
+        previewSend.disabled = false;
+        if (ok) { sent(body); return; }
+        failed(body);
+      });
+    });
+  }
 
   if (previewMail) {
     previewMail.addEventListener('click', function () {
@@ -323,6 +390,7 @@
   if (previewBack) {
     previewBack.addEventListener('click', function () {
       if (preview) preview.hidden = true;
+      if (previewNotice) previewNotice.hidden = true;
       form.hidden = false;
       if (success) success.hidden = true;
       form.scrollIntoView({ behavior: 'smooth', block: 'center' });
