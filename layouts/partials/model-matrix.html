@@ -1,0 +1,20 @@
+{{- /* the candidate models with their own load and frequency */ -}}
+{{- $id := .id | default "mm" -}}
+<div class="field" id="modelField" hidden>
+  <label class="label" for="{{ $id }}Add">{{ i18n "contact_models" }}</label>
+
+  <div class="model-matrix" id="{{ $id }}Matrix">
+    <div class="mm-head">
+      <span>{{ i18n "mm_model" }}</span>
+      <span>{{ i18n "mm_load" }}</span>
+      <span>{{ i18n "mm_hz" }}</span>
+      <span aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="model-add">
+    <input class="input" id="{{ $id }}Add" placeholder="{{ i18n "contact_model_add" }}" autocomplete="off">
+    <button type="button" class="btn btn-outline btn-sm" id="{{ $id }}AddBtn">{{ i18n "contact_model_add_btn" }}</button>
+  </div>
+  <p class="field-hint">{{ i18n "contact_models_hint" }}</p>
+</div>

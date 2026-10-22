@@ -110,13 +110,29 @@ for (const [label, payload] of [
   check(res.status === 400, `${label} is rejected with 400 (got ${res.status})`);
 }
 
-/* 5. a robot that filled the hidden field */
+/* 5. the model matrix: rows with their own load and frequency */
+sent = null;
+await post(
+  {
+    ...inquiry,
+    models: [
+      { model: "GF/GFS-C200", load: "500", hz: "60" },
+      { model: "GF/GFS-YC450", load: "1000", hz: "50" },
+    ],
+  },
+  env
+);
+check(sent && sent.html.includes("500 kW"), "the html carries the load of every model");
+check(sent && sent.html.includes("1000 kW"), "the html carries the second load");
+check(sent && sent.html.includes("@ 50 Hz"), "the html carries the frequency of every model");
+
+/* 6. a robot that filled the hidden field */
 sent = null;
 res = await post({ ...inquiry, website: "http://spam.example" }, env);
 check(res.status === 200, "the honeypot is answered with 200");
 check(sent === null, "the honeypot sends nothing");
 
-/* 6. another method */
+/* 7. another method */
 res = await mod.onRequest();
 check(res.status === 405, "another method answers 405");
 

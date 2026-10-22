@@ -19,7 +19,7 @@
    * ------------------------------------------------------------------ */
   var load = '';
   var hz = '';
-  var chipsBox = document.getElementById('modelChips');
+  var matrix = document.getElementById('modelMatrix');
   var modelField = document.getElementById('modelField');
   var modelAdd = document.getElementById('modelAdd');
   var modelAddBtn = document.getElementById('modelAddBtn');
@@ -31,71 +31,93 @@
     });
   }
 
-  function renderChips() {
-    if (!chipsBox) return;
-    var info = chipsBox.querySelector('.m-chip--info');
-    chipsBox.innerHTML = models.map(function (m) {
-      return '<span class="m-chip">' + esc(m) +
-        '<button type="button" class="m-chip-x" data-model="' + esc(m) + '" aria-label="Remove">&times;</button>' +
-        '</span>';
-    }).join('');
-    if (info) chipsBox.appendChild(info);
-    if (modelField) modelField.hidden = models.length === 0 && !info;
+  /* ---------------------------------------------------- the model matrix */
+  function rowHtml(model, loadValue, hzValue) {
+    return '<div class="mm-row">' +
+      '<input class="input mm-model" type="text" value="' + esc(model || '') + '" placeholder="' + esc(modelAdd ? modelAdd.placeholder : '') + '">' +
+      '<input class="input mm-load" type="number" min="0" step="0.1" value="' + esc(loadValue || '') + '" placeholder="kW">' +
+      '<select class="input mm-hz">' +
+      '<option value="">–</option>' +
+      '<option value="50"' + (String(hzValue) === '50' ? ' selected' : '') + '>50 Hz</option>' +
+      '<option value="60"' + (String(hzValue) === '60' ? ' selected' : '') + '>60 Hz</option>' +
+      '</select>' +
+      '<button type="button" class="mm-x" aria-label="Remove">&times;</button>' +
+      '</div>';
   }
 
-  function addModel(m) {
-    m = (m || '').trim();
-    if (!m) return;
-    if (models.indexOf(m) > -1) return;
-    models.push(m);
-    renderChips();
+  function addRow(model, loadValue, hzValue) {
+    if (!matrix) return;
+    var row = document.createElement('div');
+    row.innerHTML = rowHtml(model, loadValue, hzValue);
+    matrix.appendChild(row.firstChild);
+    if (modelField) modelField.hidden = false;
+  }
+
+  /* the rows are the source of truth — the visitor can edit them */
+  function readRows() {
+    var out = [];
+    if (!matrix) return out;
+    matrix.querySelectorAll('.mm-row').forEach(function (row) {
+      var model = (row.querySelector('.mm-model') || {}).value || '';
+      var loadValue = (row.querySelector('.mm-load') || {}).value || '';
+      var hzValue = (row.querySelector('.mm-hz') || {}).value || '';
+      model = model.trim();
+      loadValue = loadValue.trim();
+      if (!model && !loadValue) return;
+      out.push({ model: model, load: loadValue, hz: hzValue });
+    });
+    return out;
   }
 
   /* the restore script adds the saved models */
-  window.elAddModel = addModel;
+  window.elAddModel = function (m, loadValue, hzValue) { addRow(m, loadValue, hzValue); };
 
-  if (chipsBox) {
+  if (matrix) {
     var q = new URLSearchParams(window.location.search);
     load = q.get('load') || '';
     hz = q.get('hz') || '';
+
+    /* ?models=A:500:60,B:1000:50  (or the older ?models=A,B) */
     var list = q.get('models');
-    if (list) list.split(',').forEach(addModel);
+    if (list) {
+      list.split(',').forEach(function (part) {
+        var bits = part.split(':');
+        addRow((bits[0] || '').trim(), bits[1] || '', bits[2] || '');
+      });
+    }
     var one = q.get('product');
     if (one) {
       var series = q.get('series');
-      addModel(series ? one + ' (' + series + ')' : one);
+      addRow(series ? one + ' (' + series + ')' : one, load, hz);
     }
 
-    chipsBox.addEventListener('click', function (e) {
-      var x = e.target.closest('.m-chip-x');
+    matrix.addEventListener('click', function (e) {
+      var x = e.target.closest('.mm-x');
       if (!x) return;
-      var m = x.getAttribute('data-model');
-      models = models.filter(function (v) { return v !== m; });
-      renderChips();
+      var row = x.closest('.mm-row');
+      if (row) row.remove();
+      if (!matrix.querySelector('.mm-row') && modelField) modelField.hidden = true;
     });
 
     if (modelAddBtn && modelAdd) {
       modelAddBtn.addEventListener('click', function () {
-        addModel(modelAdd.value);
+        var v = modelAdd.value.trim();
+        if (!v) return;
+        addRow(v, '', '');
         modelAdd.value = '';
+        var rows = matrix.querySelectorAll('.mm-row');
+        var last = rows[rows.length - 1];
+        if (last) {
+          var input = last.querySelector('.mm-model');
+          if (input) input.focus();
+        }
       });
       modelAdd.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
           e.preventDefault();
-          addModel(modelAdd.value);
-          modelAdd.value = '';
+          modelAddBtn.click();
         }
       });
-    }
-    renderChips();
-
-    /* the load and the frequency travel with the inquiry */
-    if (load) {
-      var LABEL_POWER = form.dataset.msgPower || 'Required power';
-      var info = document.createElement('span');
-      info.className = 'm-chip m-chip--info';
-      info.textContent = LABEL_POWER + ': ' + load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '');
-      chipsBox.appendChild(info);
     }
   }
 
@@ -189,15 +211,21 @@
     out.push(l('interested', 'I am interested in the following generator set(s):'));
     out.push('');
 
+    var modelRows = readRows();
     var rows = [];
-    if (models.length) {
-      models.forEach(function (m) { rows.push('  ' + l('model', 'Model') + '    : ' + m); });
+    if (modelRows.length) {
+      rows.push('  ' + l('model', 'Model') + ':');
+      modelRows.forEach(function (r) {
+        var line = '    - ' + r.model;
+        if (r.load) line += '    ' + r.load + ' kW' + (r.hz ? ' @ ' + r.hz + ' Hz' : '');
+        rows.push(line);
+      });
     } else if (product) {
       rows.push('  ' + l('model', 'Model') + '    : ' + product);
-    }
-    if (load) {
-      rows.push('  ' + l('required_power', 'Required power') + ' : ' + load +
-        ' kW' + (hz ? ' @ ' + hz + ' Hz' : ''));
+      if (load) {
+        rows.push('  ' + l('required_power', 'Required power') + ' : ' + load +
+          ' kW' + (hz ? ' @ ' + hz + ' Hz' : ''));
+      }
     }
     if (drawing) {
       rows.push('  ' + l('drawing', 'Drawing / spec reference') + ' : ' + drawing);
@@ -228,12 +256,7 @@
   /* the inquiry is sent to sales@easternlion.cn from the edge */
   function payload(body) {
     var f = new FormData(form);
-    var models = [];
-    var chips = document.querySelectorAll('#modelChips .m-chip:not(.m-chip--info)');
-    chips.forEach(function (c) {
-      var b = c.querySelector('.m-chip-x');
-      if (b) models.push(b.getAttribute('data-model'));
-    });
+    var models = readRows();
     return {
       body: body,
       subject: subject,

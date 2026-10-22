@@ -71,15 +71,39 @@ export async function onRequestPost(context) {
   }
   if (body.length < 10) return json({ ok: false, error: 'message' }, 400);
 
-  const models = Array.isArray(data.models) ? data.models.slice(0, 12).map((m) => str(m, 120)).filter(Boolean) : [];
+  /* the models arrive as { model, load, hz } rows (or as plain strings) */
+  const models = [];
+  if (Array.isArray(data.models)) {
+    data.models.slice(0, 12).forEach((m) => {
+      if (m && typeof m === 'object') {
+        const name = str(m.model, 120);
+        if (!name) return;
+        models.push({
+          model: name,
+          load: str(m.load, 20),
+          hz: str(m.hz, 10),
+        });
+      } else {
+        const name = str(m, 120);
+        if (name) models.push({ model: name, load: '', hz: '' });
+      }
+    });
+  }
   const load = str(data.load, 20);
   const hz = str(data.hz, 10);
   const lang = str(data.lang, 5) || 'en';
   const page = str(data.page, 300);
 
   const rows = [];
-  if (models.length) rows.push(['Models', models.join(', ')]);
-  if (load) rows.push(['Required power', load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '')]);
+  if (models.length) {
+    rows.push([
+      'Models',
+      models
+        .map((m) => (m.load ? m.model + '  (' + m.load + ' kW' + (m.hz ? ' @ ' + m.hz + ' Hz' : '') + ')' : m.model))
+        .join('\n'),
+    ]);
+  }
+  if (load && !models.length) rows.push(['Required power', load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '')]);
   if (company) rows.push(['Company', company]);
   if (phone) rows.push(['Phone', phone]);
   if (page) rows.push(['Page', page]);

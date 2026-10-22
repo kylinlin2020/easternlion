@@ -50,11 +50,14 @@
     set('drawing', data.drawing);
 
     /* the candidate models — but only when the url did not bring its own */
-    var chips = document.getElementById('modelChips');
-    if (chips && data.models && data.models.length) {
-      var existing = chips.querySelectorAll('.m-chip');
-      if (!existing.length) {
-        if (window.elAddModel) data.models.forEach(function (m) { window.elAddModel(m); });
+    var matrix = document.getElementById('modelMatrix');
+    if (matrix && data.models && data.models.length) {
+      var existing = matrix.querySelectorAll('.mm-row');
+      if (!existing.length && window.elAddModel) {
+        data.models.forEach(function (m) {
+          if (m && typeof m === 'object') window.elAddModel(m.model, m.load, m.hz);
+          else window.elAddModel(m, '', '');
+        });
       }
     }
   }
@@ -64,12 +67,19 @@
     form.addEventListener('submit', function () {
       var f = new FormData(form);
       var models = [];
-      var chips = document.querySelectorAll('#modelChips .m-chip');
-      chips.forEach(function (c) {
-        var b = c.querySelector('.m-chip-x');
-        if (b) models.push(b.getAttribute('data-model'));
-      });
-      if (!models.length && f.get('product')) models.push(f.get('product'));
+      var matrix = document.getElementById('modelMatrix');
+      if (matrix) {
+        matrix.querySelectorAll('.mm-row').forEach(function (row) {
+          var model = ((row.querySelector('.mm-model') || {}).value || '').trim();
+          var loadValue = ((row.querySelector('.mm-load') || {}).value || '').trim();
+          var hzValue = ((row.querySelector('.mm-hz') || {}).value || '').trim();
+          if (!model && !loadValue) return;
+          models.push({ model: model, load: loadValue, hz: hzValue });
+        });
+      }
+      if (!models.length && f.get('product')) {
+        models.push({ model: (f.get('product') || '').trim(), load: '', hz: '' });
+      }
       var data = {
         name: (f.get('name') || '').trim(),
         company: (f.get('company') || '').trim(),

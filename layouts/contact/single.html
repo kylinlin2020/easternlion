@@ -78,15 +78,7 @@
             <p class="field-error" hidden></p>
           </div>
 
-          <div class="field" id="modelField" hidden>
-            <label class="label" for="modelAdd">{{ i18n "contact_models" }}</label>
-            <div class="model-chips" id="modelChips"></div>
-            <div class="model-add">
-              <input class="input" type="text" id="modelAdd" placeholder="{{ i18n "contact_model_add" }}" autocomplete="off">
-              <button type="button" class="btn btn-outline btn-sm" id="modelAddBtn">{{ i18n "contact_model_add_btn" }}</button>
-            </div>
-            <p class="field-hint">{{ i18n "contact_models_hint" }}</p>
-          </div>
+          {{ partial "model-matrix.html" (dict "id" "model") }}
           <div class="field">
             <input class="input" type="text" name="drawing" placeholder="{{ i18n "contact_drawing" }}">
             <p class="field-hint">{{ i18n "contact_drawing_hint" }}</p>

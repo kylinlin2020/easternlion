@@ -551,12 +551,8 @@ other = "smaller"
 other = "same power"
 [contact_models]
 other = "Candidate models"
-[contact_model_add]
-other = "Add another model (e.g. GF/GFS-C200)"
 [contact_model_add_btn]
 other = "Add"
-[contact_models_hint]
-other = "Add every model you want us to quote — our engineers will reply with prices and lead times for each of them."
 [inquiry_models]
 other = "Models"
 [compare_quote]
@@ -642,3 +638,13 @@ other = "The inquiry could not be sent automatically. Please use one of the opti
 other = "Show what we received"
 [contact_sending]
 other = "Sending…"
+[mm_model]
+other = "Model"
+[mm_load]
+other = "Load (kW)"
+[mm_hz]
+other = "Frequency"
+[contact_models_hint]
+other = "Add every model you want us to quote — each with its own power and frequency if they differ. Our engineers will reply with prices and lead times for each of them."
+[contact_model_add]
+other = "Add another model (e.g. GF/GFS-C200)"

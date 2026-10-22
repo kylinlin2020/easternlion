@@ -550,12 +550,8 @@ other = "更小"
 other = "同功率"
 [contact_models]
 other = "候选机型"
-[contact_model_add]
-other = "再添加一个机型（如 GF/GFS-C200）"
 [contact_model_add_btn]
 other = "添加"
-[contact_models_hint]
-other = "把需要报价的机型都加进来，工程师会逐一回复价格与交期。"
 [inquiry_models]
 other = "候选机型"
 [compare_quote]
@@ -641,3 +637,13 @@ other = "自动发送没有成功，请用下面的任一方式联系我们，�
 other = "查看我们收到的内容"
 [contact_sending]
 other = "发送中…"
+[mm_model]
+other = "机型"
+[mm_load]
+other = "负载 (kW)"
+[mm_hz]
+other = "频率"
+[contact_models_hint]
+other = "把需要报价的机型都加进来——功率或频率不同就分别填写，工程师会逐一回复价格与交期。"
+[contact_model_add]
+other = "再添加一个机型（如 GF/GFS-C200）"
