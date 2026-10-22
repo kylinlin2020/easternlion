@@ -40,6 +40,7 @@
               <td>{{ len (.Params.rows | default slice) }}</td>
               <td>
                 <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}spec.csv" download>{{ i18n "download_csv" }}</a>
+                <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}datasheet.html" target="_blank" rel="noopener">{{ i18n "download_datasheet" }}</a>
                 <a class="btn btn-outline btn-sm" href="{{ .RelPermalink }}">{{ i18n "view_details" }}</a>
               </td>
             </tr>

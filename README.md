@@ -16,7 +16,7 @@ Live preview: <https://easternlion.pages.dev/>
 | Assets | All images downloaded into `static/images/` — no dependency on the old `ldycdn.com` CDN |
 | Hosting | Cloudflare Pages (build: `hugo --gc --minify` → `public`) |
 | Source | GitHub — `kylinlin2020/easternlion`, production branch `main` |
-| Language | English only (structure is i18n-ready, see below) |
+| Language | English + 简体中文 (`content/` + `content.zh/`, `i18n/en.toml` + `i18n/zh.toml`) |
 
 ## 本地预览（当前工作方式）
 
@@ -67,6 +67,8 @@ content/
     60hz-diesel-generator-set/
   about/                  Company Profile, History, Team, Qualification, Workshop
   news/                   News Center
+  applications/           six application pages (data centre, hospital, telecom, mining,
+                          hotel, construction) with the sizing table and their own questions
   service.md  video.md  faq.md  contact.md
 content.zh/               the same tree, translated (served under /zh/)
 data/
@@ -76,11 +78,13 @@ i18n/
   en.toml                 UI strings (English)
   zh.toml                 UI strings (简体中文, ready for the zh site)
 layouts/
-  _default/               baseof, single, list
+  _default/               baseof, single, list (+ baseof.datasheet for the spec sheets)
   products/               list (overview), category (grid), single (detail + spec table)
+  applications/           list (overview), single (answer, sizing table, series, questions)
   about/ news/ service/ video/ faq/ contact/
   partials/               header, footer, banner, breadcrumb, sidebar, float rail …
 assets/css/main.css       all styling
+assets/css/datasheet.css  the print sheet of a series
 static/images/            logo, hero slides, banners, product photos, workshop, certificates
 ```
 
@@ -156,6 +160,8 @@ moves the language switcher into the drawer and stacks the grids.
 | **Sortable spec tables** | product pages | the header of a specification table sorts the rows by that column (numbers and model numbers numerically, text alphabetically). |
 | **Container alignment audit** | whole site | `scripts/check-alignment.js` fails the build when a page-level block is narrower than the 1280px container. |
 | **Clickable hero stats** | home page | each figure links to the matching page (history, service, alternators, generator sets). |
+| **Application pages** | `/applications/` | six landing pages for the jobs the sets are built for — data centre, hospital, telecom site, mining site, hotel and construction site. Each one opens with the **answer sentence** (built from the specification tables: the power range, the engines and the frequencies that fit the job), then a **sizing table** that lists the real standby models for every typical load of that application, then the technical points that decide the order (N+1, the ten second start, the fuel autonomy, the noise, the dust and the altitude), then the series used for the job and the questions buyers ask. The models in the table are the real ones from the catalogue — the page can never contradict the data. The *Request a quotation* button hands the middle load and the three matching models to the inquiry form. |
+| **Per series datasheet** | product pages, download centre | every series has a print sheet (`<series>/datasheet.html`): logo, series name, the one sentence answer, the key figures and the whole specification table on one page, with an A4 landscape print stylesheet — print it or save it as pdf. |
 
 Product meta used by these features is derived from the specification tables at build time
 (`power_min`, `power_max`, `hz`, `product_kind`, `comparables`).
@@ -253,16 +259,23 @@ always gets a new url. The scripts live in `assets/js/` (not `static/`) for that
 
 ### Output formats
 
-`hugo.toml` registers three extra output formats:
+`hugo.toml` registers five extra output formats:
 
 | Format | Media type | Produces |
 | --- | --- | --- |
 | `SEARCHINDEX` | application/json | `/search-index.json` — the data behind the site search |
 | `CSV` | text/csv | `/products/<series>/spec.csv` — the specification table of a product |
 | `ALLSPECS` | text/csv | `/download/all-specs.csv` — every model of every series |
+| `DATASHEET` | text/html | `/products/<series>/datasheet.html` — the print sheet of a series |
+| `LLMSTXT` / `LLMSFULL` | text/plain | `/llms.txt` and `/llms-full.txt` — the site for the answer engines |
 
-The product pages carry `outputs: ["html", "csv"]` in their front matter, the download page
-`outputs: ["html", "allspecs"]`.
+The product pages carry `outputs: ["html", "csv", "datasheet"]` in their front matter, the
+download page `outputs: ["html", "allspecs"]`.
+
+The **datasheet** is a standalone document with its own base template: the logo, the series name,
+the one sentence answer, the key figures and the whole specification table on one page, with an
+A4 landscape print stylesheet. A buyer prints it or saves it as a pdf and forwards it — that is
+the deliverable the engineers quote from.
 
 ## Internationalisation
 
@@ -288,7 +301,8 @@ The site ships **two languages**:
 * the specification table headers are mapped to i18n keys (`col_model`, `col_prime_kw`, …),
   so the Chinese pages show 中文表头 while the data rows stay the original model codes.
 
-Both locales are complete: 55 English pages and 55 Chinese pages, 40/40 Chinese URLs verified.
+Both locales are complete: 51 English pages and 50 Chinese pages (plus 44 datasheets per language),
+40/40 Chinese URLs verified.
 
 **To add a third language**
 
@@ -315,12 +329,13 @@ Validation scripts (also used by CI):
 
 | Script | What it does |
 | --- | --- |
-| `scripts/check-links.js [dir]` | walks the built site, resolves every internal `href`/`src`, fails on a broken one (1234 links, 0 broken) |
+| `scripts/check-links.js [dir]` | walks the built site, resolves every internal `href`/`src`, fails on a broken one (1246 links, 0 broken) |
 | `scripts/check-products.js` | parses the JSON front matter of all 44 product pages and checks the required keys (`columns`, `rows`, `power_min/max`, `hz`, `product_kind`, `comparables`) |
-| `scripts/check-alignment.js [dir]` | fails when a built page contains a block narrower than the 1280px container (89 pages checked) |
-| `scripts/check-seo.js [dir]` | checks every indexable page for one `<h1>`, a title and meta description of a sane length, canonical link, hreflang alternates, og tags, `alt` on every image and duplicate titles per language (86 pages checked, language-aware limits) |
+| `scripts/check-alignment.js [dir]` | fails when a built page contains a block narrower than the 1280px container (149 pages checked) |
+| `scripts/check-seo.js [dir]` | checks every indexable page for one `<h1>`, a title and meta description of a sane length, canonical link, hreflang alternates, og tags, `alt` on every image and duplicate titles per language — and that every page type carries the structured data it needs, including the application pages (Service + FAQPage + the answer + the sizing table) (98 pages checked, language-aware limits) |
 | `scripts/check-language.js [dir] [lang]` | finds English text left inside the Chinese pages (brand names, model codes and e-mails are allowed). `node scripts/check-language.js public en` runs the same rules over the English pages as a self test |
-| `scripts/check-js.js [dir]` | parses every script with the javascript engine — a syntax error silently disables a feature, so it belongs in CI (6 files) |
+| `scripts/check-js.js [dir]` | parses every script with the javascript engine — a syntax error silently disables a feature, so it belongs in CI (9 files) |
+| `scripts/check-inquiry-function.mjs` | runs the pages function against a mock binding: two mails go out (the table mail to `sales@easternlion.cn` and the receipt with the reference to the visitor), the payload is validated and the honeypot is answered |
 
 ## SEO and GEO
 
@@ -372,6 +387,11 @@ The point of a generator catalogue is that an engine can *quote* it. So:
   centres, hospitals, …*), built from the data itself so it can never drift from the
   specification table. The same sentence goes into the schema, the search index and
   `llms-full.txt`.
+- **Every application answers in one sentence too** — the six application pages open with the same
+  kind of generated answer (the power range this job needs, the engines and the frequencies that
+  fit it), followed by a sizing table with the real standby models for the typical loads and the
+  questions buyers ask. An engine looking for "500 kW generator for a data centre" finds the
+  number, the model and the reasoning on one page.
 - **The facts are atomic and quotable** — 2 kW to 2000 kW, 50 Hz and 60 Hz, 15,000 alternators and 2,000 generator sets a year, 35 service bases, founded 1987 — in the `Organization` schema, on the home page and in `llms.txt`.
 - **The specification tables are the payload** — 44 series, every model with its power, engine, alternator and controller, and the same numbers as `csv` at `/download/all-specs.csv`.
 - **Every page is server rendered** — nothing important hides behind a click, so a crawler sees the whole page.
@@ -396,9 +416,20 @@ browser --POST /api/inquiry--> Pages Function --send_email binding--> Cloudflare
 | Piece | Where |
 | --- | --- |
 | `docs/DEPLOY.md` | the deployment checklist: Cloudflare Pages, the email binding, the domain, the smoke test |
-| `functions/api/inquiry.js` | validates the payload, builds the mail (text + html), sends it, returns `{ ok: true }` |
+| `functions/api/inquiry.js` | validates the payload, builds the mails (text + html), sends them, returns `{ ok: true, ref: "EL-20261022-4F7K" }` |
 | `wrangler.toml` | the `send_email` binding, restricted to one destination |
-| `assets/js/contact.js` | posts the inquiry, shows the receipt - and falls back to WhatsApp / copy / download when the function is not reachable |
+| `assets/js/contact.js` | posts the inquiry, shows the reference - and falls back to WhatsApp / copy / download when the function is not reachable |
+
+**Two mails go out**
+
+| | to | content |
+| --- | --- | --- |
+| the inquiry | `sales@easternlion.cn` | the specification table (series, every model with its own load and frequency, the drawing reference), the message and the contact block; `reply-to` is the visitor |
+| the receipt | the visitor | the inquiry reference, what was asked for, the reply time and our WhatsApp; `reply-to` is the sales inbox |
+
+Both carry the same reference (`EL-YYYYMMDD-XXXX`), so the visitor and the salesperson quote the
+same number — and the visitor sees it on the page as well. A receipt that cannot be sent never
+fails the inquiry.
 
 **One time setup in the Cloudflare dashboard**
 

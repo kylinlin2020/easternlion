@@ -1,0 +1,107 @@
+{{ define "main" }}
+{{- $cols := .Params.columns | default (slice) -}}
+{{- $rows := .Params.rows | default (slice) -}}
+{{- $colMap := dict
+      "Model" "col_model"
+      "Prime power (kW)" "col_prime_kw"
+      "Prime power (kVA)" "col_prime_kva"
+      "Standby power (kW)" "col_standby_kw"
+      "Standby power (kVA)" "col_standby_kva"
+      "Engine model" "col_engine_model"
+      "Engine power (kW)" "col_engine_power"
+      "Alternator model" "col_alt_model"
+      "Alternator power (kW)" "col_alt_power"
+      "Controller" "col_controller"
+      "Datasheet" "col_datasheet"
+      "50Hz Output (kW)" "col_50hz_kw"
+      "50Hz Output (kVA)" "col_50hz_kva"
+      "60Hz Output (kW)" "col_60hz_kw"
+      "60Hz Output (kVA)" "col_60hz_kva"
+      "SAE Size" "col_sae_size"
+      "Core Length (mm)" "col_core_length"
+-}}
+{{- /* the last column of a genset table is the link back to this page */ -}}
+{{- $limit := len $cols -}}
+{{- if eq $limit 11 -}}{{- $limit = sub $limit 1 -}}{{- end -}}
+{{- $tableHz := 50 -}}
+{{- if eq (printf "%v" (.Params.hz | default 50)) "60" }}{{ $tableHz = 60 }}{{ end -}}
+
+<article class="sheet">
+  <header class="sheet-head">
+    <img src="{{ "images/logo.png" | relURL }}" alt="{{ site.Params.company }}">
+    <div class="sheet-title">
+      <h1>{{ .Title }}</h1>
+      <p class="sheet-sub">{{ i18n "datasheet_sub" }}</p>
+    </div>
+    <div class="sheet-meta">
+      <p><b>{{ site.Params.company }}</b></p>
+      <p>{{ site.Params.address }}</p>
+      <p>{{ site.Params.email }} · {{ site.Params.phone }}</p>
+      <p class="sheet-url">{{ .Permalink }}</p>
+    </div>
+  </header>
+
+  <p class="sheet-summary">{{ partial "series-summary.html" (dict "page" . "plain" true) }}</p>
+
+  <div class="sheet-facts">
+    <div><b>{{ i18n "ks_power" }}</b> {{ .Params.power_min | default 0 }} – {{ .Params.power_max | default 0 }} kW</div>
+    <div><b>{{ i18n "ks_frequency" }}</b> {{ .Params.hz | default 50 }} Hz</div>
+    <div><b>{{ i18n "ks_models" }}</b> {{ len $rows }}</div>
+    {{- with .Params.engine_top }}
+    <div><b>{{ i18n "ks_engine" }}</b> {{ . }}</div>
+    {{- end }}
+    {{- with .Params.alternator_top }}
+    <div><b>{{ i18n "ks_alternator" }}</b> {{ . }}</div>
+    {{- end }}
+    {{- with .Params.controller_top }}
+    <div><b>{{ i18n "ks_controller" }}</b> {{ . }}</div>
+    {{- end }}
+    <div><b>{{ i18n "ks_warranty" }}</b> {{ i18n "ks_warranty_value" }}</div>
+  </div>
+
+  {{- if $rows }}
+  <table class="sheet-table">
+    <thead>
+      <tr>
+        {{- range $i, $c := $cols }}
+        {{- if lt $i $limit }}
+        <th>{{ $k := index $colMap $c }}{{ if $k }}{{ i18n $k }}{{ else }}{{ $c }}{{ end }}</th>
+        {{- end }}
+        {{- end }}
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $rows }}
+      <tr>
+        {{- range $i, $c := . }}
+        {{- if lt $i $limit }}
+        <td>{{ $c }}</td>
+        {{- end }}
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+  <p class="sheet-note">{{ i18n "product_rating_note" }}</p>
+  {{- end }}
+
+  <footer class="sheet-foot">
+    <div>
+      <b>{{ i18n "ks_options" }}</b> {{ i18n "ks_options_value" }}<br>
+      <b>{{ i18n "ks_moq" }}</b> {{ i18n "ks_moq_value" }}<br>
+      <b>{{ i18n "datasheet_note" }}</b> {{ i18n "datasheet_note_text" }}
+    </div>
+    <div>
+      <b>{{ i18n "datasheet_contact" }}</b><br>
+      WhatsApp: {{ site.Params.phone }}<br>
+      {{ i18n "footer_email" }}: {{ site.Params.email }}<br>
+      {{ site.Params.address }}
+    </div>
+  </footer>
+
+  <div class="sheet-actions no-print">
+    <button type="button" onclick="window.print()">{{ i18n "datasheet_print" }}</button>
+    <a href="{{ .RelPermalink }}">{{ i18n "datasheet_back" }}</a>
+  </div>
+</article>
+{{ end }}

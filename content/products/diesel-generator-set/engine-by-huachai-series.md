@@ -491,7 +491,8 @@
   "sae_top": "",
   "outputs": [
     "html",
-    "csv"
+    "csv",
+    "datasheet"
   ]
 }
 

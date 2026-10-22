@@ -809,3 +809,17 @@ other = "申请报价"
 other = "咨询：%s 发电机组"
 [app_other_title]
 other = "其他应用场景"
+[datasheet_sub]
+other = "发电机组技术参数表"
+[datasheet_print]
+other = "打印或保存为 PDF"
+[datasheet_back]
+other = "返回机型页面"
+[datasheet_contact]
+other = "询价请联系"
+[datasheet_note]
+other = "说明"
+[datasheet_note_text]
+other = "以上功率按 ISO 8528 标准标定。最终配置还要看电压、燃油续航时间、外壳形式与环境温度。"
+[download_datasheet]
+other = "参数表"

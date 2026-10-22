@@ -810,3 +810,17 @@ other = "Request a quotation"
 other = "Inquiry: %s generator set"
 [app_other_title]
 other = "Other applications"
+[datasheet_sub]
+other = "Generator set specification sheet"
+[datasheet_print]
+other = "Print or save as PDF"
+[datasheet_back]
+other = "Back to the series"
+[datasheet_contact]
+other = "Your inquiry"
+[datasheet_note]
+other = "Note"
+[datasheet_note_text]
+other = "The ratings follow ISO 8528. The final configuration depends on the voltage, the fuel autonomy, the enclosure and the ambient temperature."
+[download_datasheet]
+other = "Datasheet"

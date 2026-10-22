@@ -93,6 +93,12 @@ capitalizeListTitles = false
   isPlainText = true
   notAlternative = true
 
+[outputFormats.DATASHEET]
+  mediaType = "text/html"
+  baseName = "datasheet"
+  isPlainText = false
+  notAlternative = true
+
 [outputFormats.SEARCHINDEX]
   mediaType = "application/json"
   baseName = "search-index"

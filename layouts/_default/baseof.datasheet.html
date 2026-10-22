@@ -1,0 +1,23 @@
+{{- /* The per series datasheet: a clean one page document that prints to
+       pdf or is saved from the browser. Its own base template, so the site
+       navigation stays out of the way of the print. */ -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — {{ i18n "datasheet_sub" }} | {{ site.Params.company }}</title>
+  <meta name="description" content="{{ .Description | default (.Summary | plainify | truncate 160) }}">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ .Params.image | absURL }}">
+  {{- $css := resources.Get "css/datasheet.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
