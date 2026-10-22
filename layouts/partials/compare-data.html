@@ -1,6 +1,12 @@
 {{- /* compare data + localised strings for the multi model comparison tool */ -}}
 {{- $scope := . -}}
 {{- if .IsPage -}}{{- $scope = .Parent -}}{{- end -}}
+{{- /* a category that lists another section (list_from) shows those pages, so
+       the comparison must be built from the same list — otherwise the tool is
+       empty exactly where the compare buttons are shown */ -}}
+{{- with .Params.list_from -}}
+  {{- with site.GetPage . -}}{{- $scope = . -}}{{- end -}}
+{{- end -}}
 {{- $pages := slice -}}
 {{- range $scope.Pages -}}
   {{- if .Params.columns -}}
