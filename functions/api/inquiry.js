@@ -6,6 +6,11 @@
  * the `send_email` binding (the same delivery pipeline and DKIM signing as the
  * SMTP endpoint, but without holding an API token in the worker).
  *
+ * The mail is a real html table — the salesperson opens it in Outlook and sees
+ * the model, the load, the frequency, the drawing reference and the message in
+ * a table instead of a wall of plain text. A plain text part travels with it
+ * for the phone clients.
+ *
  * The binding is restricted to one destination:
  *
  *   [[send_email]]
@@ -26,6 +31,44 @@ const MAX = {
   email: 200,
   phone: 60,
   company: 160,
+  series: 160,
+  drawing: 200,
+  page: 300,
+  load: 20,
+  hz: 10,
+};
+
+const LABELS = {
+  en: {
+    title: 'Generator set inquiry',
+    series: 'Series',
+    model: 'Model',
+    power: 'Required power',
+    drawing: 'Drawing / spec reference',
+    message: 'Message',
+    contact: 'Contact',
+    name: 'Name',
+    company: 'Company',
+    phone: 'Phone / WhatsApp',
+    email: 'E-mail',
+    page: 'Page',
+    replyNote: 'Reply to this mail reaches the visitor directly.',
+  },
+  zh: {
+    title: '发电机组询价',
+    series: '系列',
+    model: '机型',
+    power: '需求功率',
+    drawing: '图纸 / 技术要求编号',
+    message: '留言',
+    contact: '联系方式',
+    name: '姓名',
+    company: '公司',
+    phone: '电话 / WhatsApp',
+    email: '邮箱',
+    page: '来源页面',
+    replyNote: '直接回复本邮件即可回复访客。',
+  },
 };
 
 const json = (data, status = 200) =>
@@ -40,7 +83,7 @@ const json = (data, status = 200) =>
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 
 const escapeHtml = (s) =>
-  String(s).replace(/[&<>"']/g, (c) =>
+  String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
   );
 
@@ -63,6 +106,12 @@ export async function onRequestPost(context) {
   const email = str(data.email, MAX.email);
   const phone = str(data.phone, MAX.phone);
   const company = str(data.company, MAX.company);
+  const series = str(data.series, MAX.series);
+  const drawing = str(data.drawing, MAX.drawing);
+  const page = str(data.page, MAX.page);
+  const load = str(data.load, MAX.load);
+  const hz = str(data.hz, MAX.hz);
+  const lang = str(data.lang, 5) === 'zh' ? 'zh' : 'en';
   const subject = str(data.subject, MAX.subject) || 'Generator set inquiry';
 
   if (!name) return json({ ok: false, error: 'name' }, 400);
@@ -76,58 +125,104 @@ export async function onRequestPost(context) {
   if (Array.isArray(data.models)) {
     data.models.slice(0, 12).forEach((m) => {
       if (m && typeof m === 'object') {
-        const name = str(m.model, 120);
-        if (!name) return;
-        models.push({
-          model: name,
-          load: str(m.load, 20),
-          hz: str(m.hz, 10),
-        });
+        const model = str(m.model, 120);
+        if (!model) return;
+        models.push({ model, load: str(m.load, MAX.load), hz: str(m.hz, MAX.hz) });
       } else {
-        const name = str(m, 120);
-        if (name) models.push({ model: name, load: '', hz: '' });
+        const model = str(m, 120);
+        if (model) models.push({ model, load: '', hz: '' });
       }
     });
   }
-  const load = str(data.load, 20);
-  const hz = str(data.hz, 10);
-  const lang = str(data.lang, 5) || 'en';
-  const page = str(data.page, 300);
 
-  const rows = [];
-  if (models.length) {
-    rows.push([
-      'Models',
-      models
-        .map((m) => (m.load ? m.model + '  (' + m.load + ' kW' + (m.hz ? ' @ ' + m.hz + ' Hz' : '') + ')' : m.model))
-        .join('\n'),
-    ]);
+  const L = LABELS[lang];
+  const esc = escapeHtml;
+
+  const row = (label, value) =>
+    value
+      ? '<tr>' +
+        '<td style="padding:7px 16px 7px 0;color:#64748b;white-space:nowrap;vertical-align:top">' +
+        esc(label) +
+        '</td>' +
+        '<td style="padding:7px 0;font-weight:600;color:#0f172a">' +
+        esc(value) +
+        '</td></tr>'
+      : '';
+
+  /* the machine table */
+  const machine = [];
+  if (series) machine.push(row(L.series, series));
+  models.forEach((m) => {
+    const bits = [m.model];
+    if (m.load) bits.push(m.load + ' kW' + (m.hz ? ' @ ' + m.hz + ' Hz' : ''));
+    machine.push(row(L.model, bits.join(' — ')));
+  });
+  if (load && !models.some((m) => m.load)) {
+    machine.push(row(L.power, load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '')));
   }
-  if (load && !models.length) rows.push(['Required power', load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '')]);
-  if (company) rows.push(['Company', company]);
-  if (phone) rows.push(['Phone', phone]);
-  if (page) rows.push(['Page', page]);
+  if (drawing) machine.push(row(L.drawing, drawing));
+
+  /* the contact table */
+  const contact = [];
+  if (name) contact.push(row(L.name, name));
+  if (company) contact.push(row(L.company, company));
+  if (phone) contact.push(row(L.phone, phone));
+  if (email) contact.push(row(L.email, email));
+  if (page) contact.push(row(L.page, page));
 
   const html =
-    '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a">' +
-    '<h2 style="margin:0 0 12px">Generator set inquiry</h2>' +
-    '<table cellpadding="6" cellspacing="0" style="border-collapse:collapse;margin-bottom:16px">' +
-    rows
-      .map(
-        ([k, v]) =>
-          '<tr><td style="border-bottom:1px solid #e2e8f0;color:#64748b">' +
-          escapeHtml(k) +
-          '</td><td style="border-bottom:1px solid #e2e8f0"><b>' +
-          escapeHtml(v) +
-          '</b></td></tr>'
-      )
-      .join('') +
-    '</table>' +
-    '<pre style="white-space:pre-wrap;font-family:inherit;margin:0;line-height:1.7">' +
-    escapeHtml(body) +
-    '</pre>' +
-    '<p style="color:#94a3b8;margin:20px 0 0">Reply to this mail reaches the visitor directly.</p>' +
+    '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#0f172a">' +
+    '<h2 style="margin:0 0 18px;font-size:20px;color:#0a1622">' +
+    esc(L.title) +
+    '</h2>' +
+    (machine.length
+      ? '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 22px">' +
+        machine.join('') +
+        '</table>'
+      : '') +
+    (body
+      ? '<h3 style="margin:0 0 8px;font-size:15px;color:#0a1622">' +
+        esc(L.message) +
+        '</h3>' +
+        '<div style="white-space:pre-wrap;margin:0 0 22px;padding:14px 16px;background:#f8fafc;border-left:3px solid #f59e0b;border-radius:0 4px 4px 0">' +
+        esc(body) +
+        '</div>'
+      : '') +
+    (contact.length
+      ? '<h3 style="margin:0 0 8px;font-size:15px;color:#0a1622">' +
+        esc(L.contact) +
+        '</h3>' +
+        '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 22px">' +
+        contact.join('') +
+        '</table>'
+      : '') +
+    '<p style="margin:0;color:#94a3b8;font-size:13px">' +
+    esc(L.replyNote) +
+    '</p>' +
     '</div>';
+
+  /* the plain text part for the phone clients */
+  const text = [
+    L.title,
+    '',
+    series ? L.series + ': ' + series : '',
+    models
+      .map((m) => L.model + ': ' + m.model + (m.load ? ' (' + m.load + ' kW' + (m.hz ? ' @ ' + m.hz + ' Hz' : '') + ')' : ''))
+      .join('\n'),
+    load ? L.power + ': ' + load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '') : '',
+    drawing ? L.drawing + ': ' + drawing : '',
+    '',
+    body,
+    '',
+    L.contact + ':',
+    L.name + ': ' + name,
+    company ? L.company + ': ' + company : '',
+    phone ? L.phone + ': ' + phone : '',
+    L.email + ': ' + email,
+    page ? L.page + ': ' + page : '',
+  ]
+    .filter((line) => line !== '')
+    .join('\n');
 
   if (!env.EMAIL || typeof env.EMAIL.send !== 'function') {
     return json({ ok: false, error: 'not-configured' }, 501);
@@ -138,8 +233,8 @@ export async function onRequestPost(context) {
       to: TO,
       from: FROM,
       replyTo: email,
-      subject: subject,
-      text: body + '\n\n---\n' + rows.map(([k, v]) => k + ': ' + v).join('\n'),
+      subject,
+      text,
       html,
     });
     return json({ ok: true, id: result && result.messageId ? result.messageId : '' });

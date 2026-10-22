@@ -94,7 +94,11 @@
         <div class="form-preview" id="formPreview" hidden data-msg-failed="{{ i18n "preview_failed" }}">
           <h3>{{ i18n "preview_title" }}</h3>
           <p class="preview-hint">{{ i18n "preview_hint" }}</p>
-          <textarea class="textarea preview-text" id="previewText" rows="14" spellcheck="false"></textarea>
+          <div class="mail-preview" id="mailPreview"></div>
+          <details class="preview-edit">
+            <summary>{{ i18n "preview_edit" }}</summary>
+            <textarea class="textarea preview-text" id="previewText" rows="10" spellcheck="false"></textarea>
+          </details>
           <p class="preview-notice" id="previewNotice" hidden></p>
           <div class="preview-actions">
             <button type="button" class="btn btn-primary" id="previewSend">{{ i18n "preview_send" }}</button>

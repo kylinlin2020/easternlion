@@ -188,6 +188,71 @@
   var sentBody = document.getElementById('sentBody');
   var subject = '';
 
+  /* the mail the sales team receives, mirrored in the page */
+  var MAIL_LABELS = {
+    en: {
+      title: 'Generator set inquiry', series: 'Series', model: 'Model',
+      power: 'Required power', drawing: 'Drawing / spec reference', message: 'Message',
+      contact: 'Contact', name: 'Name', company: 'Company', phone: 'Phone / WhatsApp',
+      email: 'E-mail', page: 'Page', reply: 'Reply to this mail reaches the visitor directly.'
+    },
+    zh: {
+      title: '发电机组询价', series: '系列', model: '机型',
+      power: '需求功率', drawing: '图纸 / 技术要求编号', message: '留言',
+      contact: '联系方式', name: '姓名', company: '公司', phone: '电话 / WhatsApp',
+      email: '邮箱', page: '来源页面', reply: '直接回复本邮件即可回复访客。'
+    }
+  };
+
+  function renderMailPreview(data) {
+    var box = document.getElementById('mailPreview');
+    if (!box) return;
+    var lang = data.lang === 'zh' ? 'zh' : 'en';
+    var L = MAIL_LABELS[lang];
+    var esc = function (s) {
+      return String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    };
+    var rows = function (label, value) {
+      if (!value) return '';
+      return '<tr><th>' + esc(label) + '</th><td>' + esc(value) + '</td></tr>';
+    };
+
+    var machine = '';
+    if (data.series) machine += rows(L.series, data.series);
+    (data.models || []).forEach(function (m) {
+      var bits = [m.model];
+      if (m.load) bits.push(m.load + ' kW' + (m.hz ? ' @ ' + m.hz + ' Hz' : ''));
+      machine += rows(L.model, bits.join(' — '));
+    });
+    var modelsHaveLoad = (data.models || []).some(function (m) { return m.load; });
+    if (data.load && !modelsHaveLoad) {
+      machine += rows(L.power, data.load + ' kW' + (data.hz ? ' @ ' + data.hz + ' Hz' : ''));
+    }
+    if (data.drawing) machine += rows(L.drawing, data.drawing);
+
+    var contact = '';
+    contact += rows(L.name, data.name);
+    if (data.company) contact += rows(L.company, data.company);
+    if (data.phone) contact += rows(L.phone, data.phone);
+    contact += rows(L.email, data.email);
+    if (data.page) contact += rows(L.page, data.page);
+
+    var html = '<div class="mail-card">';
+    html += '<div class="mail-head"><span class="mail-title">' + esc(L.title) + '</span>' +
+      '<span class="mail-to">to sales@easternlion.cn</span></div>';
+    if (machine) html += '<table class="mail-table">' + machine + '</table>';
+    if (data.body) {
+      html += '<h4 class="mail-h">' + esc(L.message) + '</h4>' +
+        '<div class="mail-text">' + esc(data.body) + '</div>';
+    }
+    if (contact) html += '<h4 class="mail-h">' + esc(L.contact) + '</h4><table class="mail-table">' + contact + '</table>';
+    html += '<p class="mail-reply">' + esc(L.reply) + '</p>';
+    html += '</div>';
+    box.innerHTML = html;
+  }
+
   function assembleSubject() {
     var f = new FormData(form);
     var product = (f.get('product') || '').trim();
@@ -254,11 +319,16 @@
   }
 
   /* the inquiry is sent to sales@easternlion.cn from the edge */
-  function payload(body) {
+  function messageField() {
+    var field = form.querySelector('[name="message"]');
+    return field ? field.value.trim() : '';
+  }
+
+  function payload(body, message) {
     var f = new FormData(form);
     var models = readRows();
     return {
-      body: body,
+      body: message === undefined ? body : message,
       subject: subject,
       name: (f.get('name') || '').trim(),
       email: (f.get('email') || '').trim(),
@@ -307,8 +377,8 @@
     }
   }
 
-  function fillPreview(body) {
-    if (previewText) previewText.value = body;
+  function fillPreview(body, message) {
+    if (previewText) previewText.value = message;
     if (previewWhatsApp) {
       var number = (form.dataset.whatsapp || '').replace(/\D/g, '');
       previewWhatsApp.href = number
@@ -324,7 +394,9 @@
 
     subject = assembleSubject();
     var body = assemble();
-    fillPreview(body);
+    var message = messageField();
+    fillPreview(body, message);
+    renderMailPreview(payload(body, message));
 
     var button = document.getElementById('submitInquiry');
     if (button) {
@@ -345,8 +417,10 @@
   /* the send button of the preview panel */
   if (previewSend) {
     previewSend.addEventListener('click', function () {
-      var body = previewText ? previewText.value : assemble();
+      var body = assemble();
+      var message = previewText ? previewText.value : messageField();
       subject = assembleSubject();
+      renderMailPreview(payload(body, message));
       previewSend.disabled = true;
       postInquiry(body).then(function (ok) {
         previewSend.disabled = false;
