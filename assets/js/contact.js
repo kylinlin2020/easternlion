@@ -345,19 +345,27 @@
     };
   }
 
-  function postInquiry(body) {
+  function postInquiry(body, message) {
     return fetch('/api/inquiry', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(payload(body))
+      body: JSON.stringify(payload(body, message))
     }).then(function (r) {
-      return r.json().then(function (d) { return !!(d && d.ok); }).catch(function () { return false; });
-    }).catch(function () { return false; });
+      return r.json().then(function (d) { return d || { ok: false }; }).catch(function () { return { ok: false }; });
+    }).catch(function () { return { ok: false }; });
   }
 
-  function sent(body) {
+  function sent(body, data) {
     if (preview) preview.hidden = true;
     form.hidden = true;
+    /* the inquiry went through — the saved draft is not needed any more */
+    try { localStorage.removeItem('el-inquiry'); } catch (e) {}
+    var ref = document.getElementById('inquiryRef');
+    if (ref) {
+      var value = (data && data.ref) || '';
+      ref.textContent = value ? (form.dataset.msgRef || '') + ' ' + value : '';
+      ref.hidden = !value;
+    }
     if (sentBody) sentBody.textContent = body;
     if (success) {
       success.hidden = false;
@@ -404,12 +412,12 @@
       button.textContent = (button.dataset.sending || button.textContent);
     }
 
-    postInquiry(body).then(function (ok) {
+    postInquiry(body, message).then(function (data) {
       if (button) {
         button.disabled = false;
         button.textContent = button.dataset.label || button.textContent;
       }
-      if (ok) { sent(body); return; }
+      if (data && data.ok) { sent(body, data); return; }
       failed(body);
     });
   });
@@ -422,9 +430,9 @@
       subject = assembleSubject();
       renderMailPreview(payload(body, message));
       previewSend.disabled = true;
-      postInquiry(body).then(function (ok) {
+      postInquiry(body, message).then(function (data) {
         previewSend.disabled = false;
-        if (ok) { sent(body); return; }
+        if (data && data.ok) { sent(body, data); return; }
         failed(body);
       });
     });

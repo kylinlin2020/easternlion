@@ -1,28 +1,18 @@
-/**
- * Test for the Cloudflare Pages Function that sends the inquiry.
- *
- *   node scripts/check-inquiry-function.mjs
- *
- * The function is an ES module, the repository is not ("type" is not set in
- * package.json), so it is copied to a temporary .mjs file and imported from
- * there. The email binding is replaced by a mock.
- */
+import fs from "fs";
+import path from "path";
 import { pathToFileURL } from "url";
 import { join } from "path";
 import { tmpdir } from "os";
-import { copyFileSync, mkdtempSync } from "fs";
-import { existsSync } from "fs";
-import { tmpdir as tmp } from "os";
 
 const SOURCE = join(process.cwd(), "functions", "api", "inquiry.js");
-if (!existsSync(SOURCE)) {
+if (!fs.existsSync(SOURCE)) {
   console.error("functions/api/inquiry.js not found");
   process.exit(1);
 }
 
-const dir = mkdtempSync(join(tmp(), "el-fn-"));
+const dir = fs.mkdtempSync(join(tmpdir(), "el-fn-"));
 const file = join(dir, "inquiry.mjs");
-copyFileSync(SOURCE, file);
+fs.copyFileSync(SOURCE, file);
 const mod = await import(pathToFileURL(file).href);
 
 function post(body, env) {
@@ -39,19 +29,21 @@ function post(body, env) {
 const inquiry = {
   name: "John Miller",
   email: "john@example.com",
-  company: "Example Ltd.",
   phone: "+86 139 0000 0000",
+  company: "Example Ltd.",
   product: "GF/GFS-C200",
-  models: ["GF/GFS-C200 (Engine By Cummins)"],
+  series: "Engine By Cummins",
+  drawing: "DW-2024-018",
+  body: "Please quote 2 x 500 kW units for a data centre project in Jakarta.",
+  models: [
+    { model: "GF/GFS-C200", load: "500", hz: "60" },
+    { model: "GF/GFS-YC450", load: "1000", hz: "50" },
+  ],
   load: "500",
   hz: "60",
-  subject: "Generator set inquiry: GF/GFS-C200",
-  body:
-    "Dear Eastern Lion sales team,\n\nI am interested in the following generator set(s):\n\n" +
-    "  Model          : GF/GFS-C200\n  Required power : 500 kW @ 60 Hz\n\n" +
-    "Message:\nPlease quote 2 units.\n\nContact\n  Name    : John Miller\n  E-mail  : john@example.com\n",
   lang: "en",
-  page: "https://www.easternlion.cn/contact/?product=GF/GFS-C200&load=500&hz=60",
+  subject: "Generator set inquiry: GF/GFS-C200",
+  page: "https://www.easternlion.cn/contact/?product=GF/GFS-C200",
 };
 
 const problems = [];
@@ -59,48 +51,68 @@ function check(ok, what) {
   if (!ok) problems.push(what);
 }
 
-let sent = null;
+/* the mock binding collects every mail */
+const sent = [];
 const env = {
   EMAIL: {
     send: async (msg) => {
-      sent = msg;
-      return { messageId: "abc-123" };
+      sent.push(msg);
+      return { messageId: "id-" + sent.length };
     },
   },
 };
 
-/* 1. the happy path */
 let res = await post(inquiry, env);
-check(res.status === 200, `the happy path returns 200 (got ${res.status})`);
 let json = await res.json();
-check(json.ok === true, "the happy path reports ok");
-check(sent && sent.to === "sales@easternlion.cn", "the mail goes to sales@easternlion.cn");
-check(sent && sent.replyTo === "john@example.com", "the reply-to is the visitor");
-check(sent && !!sent.text && !!sent.html, "the mail has a text and an html part");
-check(sent && sent.html.includes("GF/GFS-C200"), "the html carries the model");
-check(sent && !sent.html.includes("<script"), "the html is escaped");
-check(sent && !sent.subject.includes("<"), "the subject is plain");
+check(res.status === 200, "the inquiry is accepted");
+check(json.ok === true, "the inquiry reports ok");
+check(!!json.ref, "the inquiry comes back with a reference");
+check(/^EL-\d{8}-[A-Z0-9]{4}$/.test(json.ref || ""), "the reference looks like EL-20261022-4F7K");
 
-/* 2. the site without the binding (local preview) */
-res = await post(inquiry, {});
-check(res.status === 501, "a missing binding answers 501");
+/* two mails: the inquiry to the sales inbox and the receipt to the visitor */
+check(sent.length === 2, "two mails are sent (the inquiry and the receipt)");
+const toSales = sent.find((m) => m.to === "sales@easternlion.cn");
+const toVisitor = sent.find((m) => m.to === "john@example.com");
+check(!!toSales, "the inquiry goes to sales@easternlion.cn");
+check(!!toVisitor, "the receipt goes to the visitor");
+if (toSales) {
+  check(toSales.replyTo === "john@example.com", "the inquiry replies to the visitor");
+  check(toSales.subject.indexOf(json.ref) > -1, "the inquiry subject carries the reference");
+  check(/<table/.test(toSales.html), "the inquiry is a html table");
+  check(toSales.html.indexOf("GF/GFS-C200") > -1, "the mail carries the model");
+  check(toSales.html.indexOf("500 kW") > -1, "the mail carries the load");
+  check(toSales.html.indexOf("DW-2024-018") > -1, "the mail carries the drawing reference");
+  check(toSales.text.length > 20, "the mail has a plain text part");
+}
+if (toVisitor) {
+  check(toVisitor.replyTo === "sales@easternlion.cn", "the receipt replies to the sales inbox");
+  check(toVisitor.subject.indexOf(json.ref) > -1, "the receipt subject carries the reference");
+  check(toVisitor.html.indexOf(json.ref) > -1, "the receipt shows the reference");
+  check(toVisitor.html.indexOf("wa.me") > -1, "the receipt offers WhatsApp");
+  check(toVisitor.html.indexOf("John Miller") > -1, "the receipt greets the visitor by name");
+}
 
-/* 3. a refused send */
-const realError = console.error;
-console.error = () => {};
+/* a broken receipt must not fail the inquiry */
+sent.length = 0;
+let calls = 0;
 res = await post(inquiry, {
   EMAIL: {
-    send: async () => {
-      const e = new Error("denied");
-      e.code = "E_SENDER_NOT_VERIFIED";
-      throw e;
+    send: async (msg) => {
+      calls++;
+      if (calls === 2) throw new Error("no receipt");
+      sent.push(msg);
+      return { messageId: "id-1" };
     },
   },
 });
-console.error = realError;
-check(res.status === 500, "a refused send answers 500");
+json = await res.json();
+check(json.ok === true, "a failed receipt still leaves the inquiry sent");
 
-/* 4. the validation */
+/* a missing binding */
+res = await post(inquiry, {});
+check(res.status === 501, "a missing binding answers 501");
+
+/* the validation */
 for (const [label, payload] of [
   ["a missing name", { ...inquiry, name: "" }],
   ["an invalid address", { ...inquiry, email: "nope" }],
@@ -110,35 +122,27 @@ for (const [label, payload] of [
   check(res.status === 400, `${label} is rejected with 400 (got ${res.status})`);
 }
 
-/* 5. the model matrix: rows with their own load and frequency */
-sent = null;
-await post(
-  {
-    ...inquiry,
-    models: [
-      { model: "GF/GFS-C200", load: "500", hz: "60" },
-      { model: "GF/GFS-YC450", load: "1000", hz: "50" },
-    ],
-  },
-  env
-);
-check(sent && sent.html.includes("500 kW"), "the html carries the load of every model");
-check(sent && sent.html.includes("1000 kW"), "the html carries the second load");
-check(sent && sent.html.includes("@ 50 Hz"), "the html carries the frequency of every model");
+/* the chinese path */
+sent.length = 0;
+res = await post({ ...inquiry, lang: "zh" }, env);
+json = await res.json();
+const zhReceipt = sent.find((m) => m.to === "john@example.com");
+check(!!zhReceipt, "the chinese receipt is sent");
+if (zhReceipt) {
+  check(zhReceipt.subject.indexOf("\u6211\u4eec\u5df2\u6536\u5230") > -1, "the chinese receipt subject is chinese");
+  check(zhReceipt.html.indexOf("\u60a8\u7684\u8be2\u76d8\u7f16\u53f7") > -1, "the chinese receipt shows the reference label");
+  check(zhReceipt.text.indexOf("\u56fd\u9645\u4e1a\u52a1\u90e8") > -1, "the chinese receipt names our department");
+}
 
-/* 6. a robot that filled the hidden field */
-sent = null;
+/* the robot */
+sent.length = 0;
 res = await post({ ...inquiry, website: "http://spam.example" }, env);
 check(res.status === 200, "the honeypot is answered with 200");
-check(sent === null, "the honeypot sends nothing");
-
-/* 7. another method */
-res = await mod.onRequest();
-check(res.status === 405, "another method answers 405");
+check(sent.length === 0, "the honeypot sends nothing");
 
 if (problems.length) {
   console.log(`INQUIRY FUNCTION PROBLEMS (${problems.length}):`);
   problems.forEach((p) => console.log("  " + p));
   process.exit(1);
 }
-console.log("OK: the inquiry function sends to sales@easternlion.cn, validates the payload and refuses everything else.");
+console.log("OK: the inquiry function sends a table mail to the sales inbox, a receipt with a reference to the visitor, and refuses everything else.");

@@ -16,6 +16,7 @@ Everything below is written as a checklist: work top to bottom, tick as you go.
 | ☐ | `https://www.easternlion.cn/zh/` serves the Chinese version |
 | ☐ | `https://www.easternlion.cn/download/` lists the csv spec sheets |
 | ☐ | the inquiry form sends a real mail that arrives in `sales@easternlion.cn` |
+| ☐ | the visitor receives the confirmation with the inquiry reference |
 | ☐ | replying to that mail reaches the visitor |
 | ☐ | `https://www.easternlion.cn/sitemap.xml` lists both languages |
 | ☐ | `https://www.easternlion.cn/robots.txt` points at the sitemap |
@@ -80,6 +81,15 @@ declares the email binding.
 
 The form posts to `/api/inquiry`, which is `functions/api/inquiry.js`. It sends the mail through
 the `EMAIL` binding.
+
+Every inquiry produces **two mails**:
+
+| | to | content |
+| --- | --- | --- |
+| the inquiry | `sales@easternlion.cn` | the specification table (series, every model with its own load and frequency, the drawing reference), the message and the contact block; `reply-to` is the visitor |
+| the receipt | the visitor | the inquiry reference (`EL-YYYYMMDD-XXXX`), what was asked for, the reply time and our WhatsApp; `reply-to` is the sales inbox |
+
+Both mails carry the same reference, so the visitor and the salesperson quote the same number.
 
 1. **Onboard the sending domain** — in the Cloudflare dashboard open
    **Email Service → Email Sending** and onboard `easternlion.cn`. The sender address must
@@ -193,9 +203,10 @@ Then, in a browser:
 
 1. open `/contact/`, fill the form, press **Send inquiry**
 2. check that the mail arrived in `sales@easternlion.cn`
-3. reply to that mail — it must go to the visitor's address
-4. open `/products/diesel-generator-set/`, add two models to the comparison, open the badge
-5. open `/download/` and download one csv
+3. check that the visitor's mailbox received the receipt with the same reference
+4. reply to the inquiry mail — it must go to the visitor's address
+5. open `/products/diesel-generator-set/`, add two models to the comparison, open the badge
+6. open `/download/` and download one csv
 
 ### 5.2 Search engines
 

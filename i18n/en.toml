@@ -261,11 +261,9 @@ other = "Please enter a valid e-mail address."
 [form_message_required]
 other = "Please tell us what you need."
 [form_success_title]
-other = "Thank you — your inquiry is ready to send"
+other = "Thank you, your inquiry has been sent"
 [form_success_text]
-other = "We have prepared your message and opened your e-mail client. If it did not open, write to us directly."
-[form_success_mail]
-other = "International department:"
+other = "Our sales engineer has received your inquiry and will reply within one working day. A confirmation email with your inquiry reference is on its way to your inbox."
 [form_again]
 other = "Write another inquiry"
 
@@ -760,3 +758,7 @@ other = "Read the full guide"
 other = "Compare"
 [search_models]
 other = "models"
+[inquiry_ref_label]
+other = "Your inquiry reference:"
+[form_success_whatsapp]
+other = "Need it sooner? Message us on"

@@ -51,6 +51,7 @@
               data-msg-name="{{ i18n "form_name_required" }}"
               data-msg-msg="{{ i18n "form_message_required" }}"
               data-msg-models="{{ i18n "inquiry_models" }}"
+              data-msg-ref="{{ i18n "inquiry_ref_label" }}"
               data-msg-power="{{ i18n "inquiry_power" }}"
               data-mail-to="{{ site.Params.email }}"
               data-whatsapp="{{ site.Params.whatsapp }}">
@@ -121,7 +122,8 @@
           </div>
           <h3>{{ i18n "form_success_title" }}</h3>
           <p>{{ i18n "form_success_text" }}</p>
-          <p class="fs-mail">{{ i18n "form_success_mail" }} <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+          <p class="fs-ref" id="inquiryRef" hidden></p>
+          <p class="fs-mail">{{ i18n "form_success_whatsapp" }} <a href="https://wa.me/{{ site.Params.whatsapp }}" target="_blank" rel="noopener">WhatsApp {{ site.Params.phone }}</a></p>
           <details class="fs-receipt">
             <summary>{{ i18n "form_success_receipt" }}</summary>
             <pre id="sentBody"></pre>

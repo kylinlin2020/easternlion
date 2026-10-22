@@ -260,11 +260,9 @@ other = "请填写有效的邮箱地址。"
 [form_message_required]
 other = "请简单描述您的需求。"
 [form_success_title]
-other = "谢谢！您的询价已整理好"
+other = "谢谢，询盘已发送"
 [form_success_text]
-other = "我们已为您准备好邮件内容并打开了邮件客户端。若未自动打开，请直接发邮件给我们。"
-[form_success_mail]
-other = "国际业务部："
+other = "工程师已经收到您的询盘，会在一个工作日内回复您。带询盘编号的确认邮件已发往您的邮箱。"
 [form_again]
 other = "再写一条询价"
 
@@ -759,3 +757,7 @@ other = "查看完整选型指引"
 other = "对比"
 [search_models]
 other = "个机型"
+[inquiry_ref_label]
+other = "您的询盘编号："
+[form_success_whatsapp]
+other = "需要更快处理？直接联系我们："
