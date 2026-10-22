@@ -1,0 +1,22 @@
+{{- /* What the javascript widgets need from the design system: the glyphs the
+       lightbox, the comparison tool and the inquiry matrix draw at runtime, and
+       the two labels they put on buttons — emitted once, from icon.html and the
+       i18n files, so no script carries its own copy of an icon. */ -}}
+<div id="elUi" hidden>
+  <span data-icon="close">{{ partial "icon.html" (dict "name" "close") }}</span>
+  <span data-icon="menu">{{ partial "icon.html" (dict "name" "menu") }}</span>
+  <span data-str="close">{{ i18n "ui_close" }}</span>
+  <span data-str="remove">{{ i18n "ui_remove" }}</span>
+</div>
+<script>
+  window.elUI = {
+    icon: function (name) {
+      var e = document.querySelector('#elUi [data-icon="' + name + '"]');
+      return e ? e.innerHTML : '';
+    },
+    str: function (name, fallback) {
+      var e = document.querySelector('#elUi [data-str="' + name + '"]');
+      return e && e.textContent ? e.textContent : (fallback || '');
+    }
+  };
+</script>

@@ -832,3 +832,7 @@ other = "The models that cover it:"
 other = "No model in the catalogue covers that load."
 [mm_picked]
 other = "already picked"
+[ui_close]
+other = "Close"
+[ui_remove]
+other = "Remove"

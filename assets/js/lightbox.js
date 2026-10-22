@@ -2,6 +2,11 @@
   var links = document.querySelectorAll('a[data-lb]');
   if (!links.length) return;
 
+  /* the glyph and the label come from the icon catalogue, not from this file */
+  var ui = window.elUI || {};
+  var closeSvg = ui.icon ? ui.icon('close') : '';
+  var closeLabel = (ui.str ? ui.str('close', 'Close') : 'Close').replace(/"/g, '&quot;');
+
   var box = document.createElement('div');
   box.className = 'lightbox';
   box.setAttribute('aria-hidden', 'true');
@@ -10,8 +15,8 @@
     '<figure class="lb-figure">' +
     '<img class="lb-img" src="" alt="">' +
     '<figcaption class="lb-cap"></figcaption>' +
-    '<button class="lb-close" type="button" aria-label="Close">' +
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4z"/></svg>' +
+    '<button class="lb-close" type="button" aria-label="' + closeLabel + '">' +
+    closeSvg +
     '</button></div>';
   document.body.appendChild(box);
 

@@ -30,6 +30,11 @@
     });
   }
 
+  /* glyphs and button labels shared by every widget (see partial ui-data) */
+  var ui = window.elUI || {};
+  function uiIcon(name) { return ui.icon ? ui.icon(name) : ''; }
+  function uiStr(name, fallback) { return ui.str ? ui.str(name, fallback) : fallback; }
+
   var byUrl = {};
   series.forEach(function (m) { byUrl[m.u] = m; });
 
@@ -41,7 +46,7 @@
   badge.className = 'compare-badge';
   badge.innerHTML =
     '<button type="button" class="cb-toggle" aria-expanded="false">' +
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M11 18h2"/></svg>' +
+    uiIcon('menu') +
     '<span class="cb-count">0</span>' +
     '<span class="cb-label"></span>' +
     '</button>' +
@@ -72,9 +77,9 @@
   modal.className = 'compare-modal';
   modal.innerHTML =
     '<div class="cm-backdrop"></div>' +
-    '<div class="cm-panel" role="dialog" aria-modal="true" aria-label="Model comparison">' +
-    '<button type="button" class="cm-close" aria-label="Close">' +
-    '<svg viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4z"/></svg>' +
+    '<div class="cm-panel" role="dialog" aria-modal="true" aria-label="' + esc(uiStr('title', 'Model comparison')) + '">' +
+    '<button type="button" class="cm-close" aria-label="' + esc(uiStr('close', 'Close')) + '">' +
+    uiIcon('close') +
     '</button>' +
     '<div class="cm-body"></div>' +
     '</div>';
@@ -90,7 +95,7 @@
       return '<span class="cp-item">' +
         '<img src="' + m.i + '" alt="">' +
         '<span class="cp-name">' + esc(m.t) + '</span>' +
-        '<button type="button" class="cp-x" data-url="' + esc(m.u) + '" aria-label="Remove">&times;</button>' +
+        '<button type="button" class="cp-x" data-url="' + esc(m.u) + '" aria-label="' + esc(uiStr('remove', 'Remove')) + '">&times;</button>' +
         '</span>';
     }).join('');
 

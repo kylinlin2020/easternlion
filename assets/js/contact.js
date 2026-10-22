@@ -13,7 +13,8 @@
     message: form.dataset.msgMsg || 'Please describe your requirement.',
     covers: form.dataset.msgCovers || 'The models that cover it:',
     noCover: form.dataset.msgNoCover || 'No model in the catalogue covers that load.',
-    picked: form.dataset.msgPicked || 'already picked'
+    picked: form.dataset.msgPicked || 'already picked',
+    remove: form.dataset.msgRemove || 'Remove'
   };
 
   /* ------------------------------------------------------------------ *
@@ -44,7 +45,7 @@
       '<option value="50"' + (String(hzValue) === '50' ? ' selected' : '') + '>50 Hz</option>' +
       '<option value="60"' + (String(hzValue) === '60' ? ' selected' : '') + '>60 Hz</option>' +
       '</select>' +
-      '<button type="button" class="mm-x" aria-label="Remove">&times;</button>' +
+      '<button type="button" class="mm-x" aria-label="' + esc(MSG.remove) + '">&times;</button>' +
       '<p class="mm-suggest" hidden></p>' +
       '</div>';
   }

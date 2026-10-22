@@ -831,3 +831,7 @@ other = "能够覆盖该负载的机型："
 other = "目录中没有能覆盖该负载的机型。"
 [mm_picked]
 other = "已选"
+[ui_close]
+other = "关闭"
+[ui_remove]
+other = "移除"

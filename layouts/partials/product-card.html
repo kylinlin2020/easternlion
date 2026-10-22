@@ -26,13 +26,13 @@
         <span>{{ .Params.category | default "" }}</span>
         <span class="more">
           {{ i18n "view_details" }}
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          {{ partial "icon.html" (dict "name" "arrow") }}
         </span>
       </span>
     </span>
   </a>
   <button type="button" class="js-compare" data-url="{{ .RelPermalink }}"
           aria-label="{{ i18n "compare_add" }}" title="{{ i18n "compare_add" }}">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+    {{ partial "icon.html" (dict "name" "plus") }}
   </button>
 </div>

@@ -2,21 +2,21 @@
   <div class="container">
     <ul class="topbar-list">
       <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        {{ partial "icon.html" (dict "name" "pin") }}
         <span>{{ site.Params.address }}</span>
       </li>
       <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.6V7z"/></svg>
+        {{ partial "icon.html" (dict "name" "clock") }}
         <span>{{ i18n "topbar_hours" }}</span>
       </li>
     </ul>
     <ul class="topbar-list">
       <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        {{ partial "icon.html" (dict "name" "mail") }}
         <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
       </li>
       <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.5 1-1 1C10.6 21 3 13.4 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        {{ partial "icon.html" (dict "name" "phone") }}
         <a href="tel:{{ replace site.Params.phone "+86-" "" }}">{{ replace site.Params.phone "+86-" "" }}</a>
       </li>
     </ul>
@@ -30,7 +30,7 @@
     </a>
 
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+      {{ partial "icon.html" (dict "name" "menu") }}
     </button>
 
     <div class="header-spacer"></div>
@@ -70,7 +70,7 @@
         <a class="lang-opt" href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName | default .Language.Lang }}</a>
         {{- end }}
         {{- end }}
-        <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z"/></svg>
+        {{ partial "icon.html" (dict "name" "caret" "viewBox" "0 0 10 6") }}
       </div>
 
       <a class="btn btn-primary btn-sm" href="{{ "contact/" | relLangURL }}">{{ i18n "quote_cta" }}</a>
@@ -87,7 +87,7 @@
       <li class="{{ if or (hasPrefix $p "/about") (hasPrefix $p "/news") }}is-active{{ end }}">
         <a href="{{ "about/" | relLangURL }}">
           {{ i18n "nav_company" }}
-          <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z"/></svg>
+          {{ partial "icon.html" (dict "name" "caret" "class" "caret" "viewBox" "0 0 10 6") }}
         </a>
         <ul class="submenu">
           <li><a href="{{ "about/" | relLangURL }}">{{ i18n "menu_company_profile" }}</a></li>

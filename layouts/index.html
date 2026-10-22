@@ -81,7 +81,7 @@
           <p>{{ if eq site.Language.Lang "zh" }}{{ .description_zh | default .description | default (i18n .key) }}{{ else }}{{ .description | default (i18n .key) }}{{ end }}</p>
           <span class="more">
             {{ i18n "view_details" }}
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+            {{ partial "icon.html" (dict "name" "arrow") }}
           </span>
         </span>
       </a>
@@ -109,7 +109,7 @@
           <p>{{ $r.min }} – {{ $r.max }} kW · {{ $r.hz }} Hz · {{ i18n "app_fact_duty_value" }}</p>
           <span class="more">
             {{ i18n "view_details" }}
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+            {{ partial "icon.html" (dict "name" "arrow") }}
           </span>
         </span>
       </a>

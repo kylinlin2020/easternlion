@@ -14,7 +14,7 @@
             data-video="https://www.youtube.com/embed/{{ .id }}?showinfo=0&loop=1&rel=0&iv_load_policy=3&autoplay=1"
             data-title="{{ .label }}"
             style="background-image:url('{{ .poster | relURL }}')">
-      <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="vf-play" aria-hidden="true">{{ partial "icon.html" (dict "name" "play") }}</span>
       <span class="vf-label">{{ .label }}</span>
     </button>
   </div>

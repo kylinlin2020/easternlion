@@ -20,6 +20,8 @@
 
   {{ partial "float-rail.html" . }}
 
+  {{ partial "ui-data.html" . }}
+
   {{- $jsSearch := resources.Get "js/search.js" | minify | fingerprint }}
   {{- $jsLightbox := resources.Get "js/lightbox.js" | minify | fingerprint }}
   {{- $jsSpecTable := resources.Get "js/spec-table.js" | minify | fingerprint }}
