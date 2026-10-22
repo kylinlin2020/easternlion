@@ -681,3 +681,61 @@ other = "1 台"
 other = "复制链接"
 [product_link_copied]
 other = "链接已复制"
+[guide_title]
+other = "怎么选这一系列"
+[guide_intro]
+other = "买发电机组其实就六个决策。下面每一个怎么判断，以及这一系列分别给你什么。"
+[guide_col_decision]
+other = "你要决定"
+[guide_col_how]
+other = "怎么判断"
+[guide_col_this]
+other = "这一系列"
+[guide_engine]
+other = "发动机品牌"
+[guide_engine_how]
+other = "发动机决定了备件的供应和你本地服务商的响应速度——先比服务网络，再比价格。"
+[guide_engine_none]
+other = "仅交流发电机"
+[guide_engine_count]
+other = "本系列 %v 个机型均搭载该发动机"
+[guide_duty]
+other = "额定还是备用"
+[guide_duty_how]
+other = "额定功率用于每天运行 8–12 小时的机组，备用功率用于应急备用。选型时让负载落在备用功率的 70%–80%，这样发动机长期工作在 50%–75% 负载区间，油耗最经济。"
+[guide_duty_value]
+other = "备用 %v–%v kW，额定 %v–%v kW"
+[guide_voltage]
+other = "电压与频率"
+[guide_voltage_how]
+other = "50 Hz 用 400/230 V（亚洲、欧洲、非洲、中东），60 Hz 用 230/400 V（美洲）。发电机和控制屏必须和你的电网一致。"
+[guide_voltage_50]
+other = "50 Hz，400/230 V"
+[guide_voltage_60]
+other = "60 Hz，230/400 V"
+[guide_enclosure]
+other = "机房形式"
+[guide_enclosure_how]
+other = "开架式放机房，静音型放户外城市现场（约 65 dB(A)@7m），集装箱用于 1000kW 级机组，拖车式用于移动电站。"
+[guide_enclosure_value]
+other = "可选开架式、静音型、拖车式与集装箱"
+[guide_starting]
+other = "启动与切换"
+[guide_starting_how]
+other = "应急机组必须电动启动并配自动切换开关（ATS），否则停电时机组根本来不及响应。特殊工况可选手动或气动启动。"
+[guide_starting_value]
+other = "电动启动，可配 ATS（自动/手动）"
+[guide_parallel]
+other = "并机"
+[guide_parallel_how]
+other = "多台机组意味着要并机管理系统、更大规格的切换柜，以及能互相接管负载的控制屏。"
+[guide_parallel_value]
+other = "支持并机方案与功率管理系统"
+[guide_environment]
+other = "现场条件"
+[guide_environment_how]
+other = "海拔每升高 1000 米、环境温度每升高 10℃，功率大约下降 3%；沿海盐雾或粉尘现场还需要更合适的外罩和更短的保养周期。"
+[guide_environment_value]
+other = "标准工况 0–50℃，可按现场降额"
+[guide_foot]
+other = "把负载、电压和现场条件发给我们，我们会回给你具体型号、价格和交期。"

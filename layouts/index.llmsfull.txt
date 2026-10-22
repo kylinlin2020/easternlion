@@ -67,6 +67,21 @@ Specification list (csv): {{ .Permalink }}spec.csv
 {{ $sep -}}
 {{- end }}
 
+## How to choose a series
+
+Every generator set order comes down to six decisions: the engine brand (it decides the spare
+parts and the response time of your service partner), prime or standby duty (prime runs 8 to 12
+hours a day, standby is for emergency backup; size the set so the load sits at 70 to 80 % of the
+standby rating), voltage and frequency (400/230 V at 50 Hz, 230/400 V at 60 Hz), the enclosure
+(open frame, silent canopy, container, trailer), starting and transfer (electric start with an
+automatic transfer switch for standby sets) and paralleling (more than one set needs a power
+management system). Site conditions matter too: every 1000 m of altitude and every 10 °C above
+the standard ambient costs about 3 % of the rating.
+
+Warranty: 1 year or 1000 hours. Minimum order: 1 set. Enclosure options: open frame, silent
+canopy, trailer and container. Starting: electric, with an ATS on request. Parallel systems with
+power management are available.
+
 ## Frequently asked questions
 
 {{ $sep -}}

@@ -157,6 +157,8 @@ function check(file) {
   /* a product page answers the question in one quotable sentence */
   if (/\/products\/[^/]+\/[^/]+\/?$/.test(url)) {
     if (!/class=["']?series-summary/.test(html)) add("the product page has no one sentence summary");
+    if (!/class=["']?series-guide/.test(html)) add("the product page has no decision guide");
+    if (!/id=["']?how-to-choose/.test(html)) add("the product page has no decision guide anchor");
     if (!/is an? [A-Za-z0-9 ]*\d+ Hz|\u662f\u4e1c\u65b9|\u7cfb\u5217/.test(html)) add("the product page has no answer sentence");
   }
   if (/\/faq\/?$/.test(url) && !has("FAQPage")) add("the faq page has no FAQPage schema");

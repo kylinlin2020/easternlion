@@ -1,0 +1,99 @@
+{{- /* the decision guide of a series: what a buyer has to decide, how to decide it,
+       and what this series offers — the numbers come from the specification table */ -}}
+{{- $page := .page -}}
+{{- $zh := eq site.Language.Lang "zh" -}}
+{{- $title := $page.Title -}}
+{{- $rows := $page.Params.rows | default (slice) -}}
+{{- $hz := $page.Params.hz | default 50 -}}
+{{- $min := $page.Params.power_min | default 0 -}}
+{{- $max := $page.Params.power_max | default 0 -}}
+
+{{- /* the engine brand from the series name */ -}}
+{{- $words := split $title " " -}}
+{{- $engine := "" -}}
+{{- $at := -1 -}}
+{{- range $i, $w := $words -}}
+  {{- if eq (lower $w) "by" -}}{{- $at = $i -}}{{- end -}}
+{{- end -}}
+{{- if gt $at 0 -}}{{- $engine = index $words (add $at 1) | title -}}{{- end -}}
+
+{{- /* the prime and standby range out of the model rows */ -}}
+{{- $iP := -1 }}{{ $iS := -1 }}
+{{- range $i, $c := ($page.Params.columns | default (slice)) -}}
+  {{- if eq $c "Prime power (kW)" -}}{{- $iP = $i -}}{{- end -}}
+  {{- if eq $c "Standby power (kW)" -}}{{- $iS = $i -}}{{- end -}}
+{{- end -}}
+{{- $pMin := 999999.0 }}{{ $pMax := 0.0 }}{{ $sMin := 999999.0 }}{{ $sMax := 0.0 }}
+{{- if and (ge $iP 0) (ge $iS 0) -}}
+  {{- range $rows -}}
+    {{- $p := float (replaceRE "[^0-9.]" "" (printf "%v" (index . $iP))) -}}
+    {{- $s := float (replaceRE "[^0-9.]" "" (printf "%v" (index . $iS))) -}}
+    {{- if and (gt $p 0) (lt $p $pMin) -}}{{- $pMin = $p -}}{{- end -}}
+    {{- if gt $p $pMax -}}{{- $pMax = $p -}}{{- end -}}
+    {{- if and (gt $s 0) (lt $s $sMin) -}}{{- $sMin = $s -}}{{- end -}}
+    {{- if gt $s $sMax -}}{{- $sMax = $s -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt $pMin 999998.0 -}}{{- $pMin = 0.0 -}}{{- end -}}
+{{- if gt $sMin 999998.0 -}}{{- $sMin = 0.0 -}}{{- end -}}
+
+{{- $duty := "" -}}
+{{- if gt $sMax 0 -}}
+  {{- $duty = printf (i18n "guide_duty_value") $sMin $sMax $pMin $pMax -}}
+{{- end -}}
+{{- $models := len $rows -}}
+
+<section class="series-guide" id="how-to-choose">
+  <h2 class="sg-title">{{ i18n "guide_title" }}</h2>
+  <p class="sg-intro">{{ i18n "guide_intro" }}</p>
+  <div class="sg-table">
+    <div class="sg-row sg-row--head">
+      <span>{{ i18n "guide_col_decision" }}</span>
+      <span>{{ i18n "guide_col_how" }}</span>
+      <span>{{ i18n "guide_col_this" }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_engine" }}</span>
+      <span class="sg-h">{{ i18n "guide_engine_how" }}</span>
+      <span class="sg-t">{{ if $engine }}{{ $engine }}{{ else }}{{ i18n "guide_engine_none" }}{{ end }}{{ if $models }} — {{ printf (i18n "guide_engine_count") $models }}{{ end }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_duty" }}</span>
+      <span class="sg-h">{{ i18n "guide_duty_how" }}</span>
+      <span class="sg-t">{{ $duty }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_voltage" }}</span>
+      <span class="sg-h">{{ i18n "guide_voltage_how" }}</span>
+      <span class="sg-t">{{ if eq $hz 60 }}{{ i18n "guide_voltage_60" }}{{ else }}{{ i18n "guide_voltage_50" }}{{ end }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_enclosure" }}</span>
+      <span class="sg-h">{{ i18n "guide_enclosure_how" }}</span>
+      <span class="sg-t">{{ i18n "guide_enclosure_value" }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_starting" }}</span>
+      <span class="sg-h">{{ i18n "guide_starting_how" }}</span>
+      <span class="sg-t">{{ i18n "guide_starting_value" }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_parallel" }}</span>
+      <span class="sg-h">{{ i18n "guide_parallel_how" }}</span>
+      <span class="sg-t">{{ i18n "guide_parallel_value" }}</span>
+    </div>
+
+    <div class="sg-row">
+      <span class="sg-k">{{ i18n "guide_environment" }}</span>
+      <span class="sg-h">{{ i18n "guide_environment_how" }}</span>
+      <span class="sg-t">{{ i18n "guide_environment_value" }}</span>
+    </div>
+  </div>
+  <p class="sg-foot">{{ i18n "guide_foot" }}</p>
+</section>

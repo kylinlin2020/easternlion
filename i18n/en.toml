@@ -682,3 +682,61 @@ other = "1 set"
 other = "Copy the link"
 [product_link_copied]
 other = "Link copied"
+[guide_title]
+other = "How to choose this series"
+[guide_intro]
+other = "Six decisions cover almost every generator set order. Here is how to make each of them — and what this series gives you."
+[guide_col_decision]
+other = "Your decision"
+[guide_col_how]
+other = "How to decide it"
+[guide_col_this]
+other = "This series"
+[guide_engine]
+other = "Engine brand"
+[guide_engine_how]
+other = "The engine decides the spare parts availability and the response time of your local service partner. Compare the service network first, the price second."
+[guide_engine_none]
+other = "Alternator only"
+[guide_engine_count]
+other = "%v models in this series"
+[guide_duty]
+other = "Prime or standby"
+[guide_duty_how]
+other = "Prime is for sets that run 8 to 12 hours a day, standby for emergency backup. Size the set so your load sits at 70 to 80 % of the standby rating — that keeps the engine between 50 % and 75 % load, where the fuel consumption is at its best."
+[guide_duty_value]
+other = "Standby %v–%v kW, prime %v–%v kW"
+[guide_voltage]
+other = "Voltage and frequency"
+[guide_voltage_how]
+other = "400/230 V at 50 Hz for Asia, Europe, Africa and the Middle East, 230/400 V at 60 Hz for the Americas. The alternator and the control panel both have to match the grid you connect to."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Enclosure"
+[guide_enclosure_how]
+other = "Open frame for a machine room, a silent canopy for an outdoor city site (about 65 dB(A) at 7 m), a container for a 1000 kW block and a trailer for a mobile set."
+[guide_enclosure_value]
+other = "Open frame, silent canopy, trailer and container options"
+[guide_starting]
+other = "Starting and transfer"
+[guide_starting_how]
+other = "An emergency set needs electric start and an automatic transfer switch, otherwise the set sits idle until the grid fails. Manual and air start stay available for special duties."
+[guide_starting_value]
+other = "Electric start, ATS (automatic and manual) on request"
+[guide_parallel]
+other = "Paralleling"
+[guide_parallel_how]
+other = "More than one set means a power management system, a larger transfer switch and a control panel that lets the sets share the load and take over from each other."
+[guide_parallel_value]
+other = "Parallel systems with power management"
+[guide_environment]
+other = "Site conditions"
+[guide_environment_how]
+other = "Every 1000 m of altitude and every 10 °C above the standard ambient costs about 3 % of the rating, and a salt spray or a dusty site asks for a canopy and a shorter service interval."
+[guide_environment_value]
+other = "Standard rating at 0–50 °C, derating on request"
+[guide_foot]
+other = "Send us the load, the voltage and the site, and we will send back the exact model, the price and the delivery time."

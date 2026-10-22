@@ -360,6 +360,11 @@ The point of a generator catalogue is that an engine can *quote* it. So:
 - **`/llms.txt`** (llmstxt.org) — a written summary of the company, the key facts and every section, in the language of the site.
 - **`/llms-full.txt`** — the whole catalogue as markdown: all 44 series with their power ranges, every model with its prime and standby power, the faq and the company pages.
 - **`robots.txt`** welcomes `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `anthropic-ai`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `CCBot` and `Bytespider`.
+- **Every series explains how to choose it** — below the specification table a decision guide
+  lists the six decisions a buyer really makes (engine brand, prime or standby duty, voltage and
+  frequency, enclosure, starting and transfer, paralleling, site conditions) with the guidance for
+  each and what this series offers. The numbers in the last column are read out of the
+  specification table, so the guide can never contradict it.
 - **Every series answers in one sentence** — the top of each product page carries a single
   generated paragraph (*Engine By Cummins is a 50 Hz diesel generator set series from Eastern Lion,
   built around the Cummins engine, covering 22 to 444 kW in 40 models. It is used for data
