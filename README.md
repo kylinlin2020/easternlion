@@ -321,6 +321,54 @@ Validation scripts (also used by CI):
 | `scripts/check-language.js [dir] [lang]` | finds English text left inside the Chinese pages (brand names, model codes and e-mails are allowed). `node scripts/check-language.js public en` runs the same rules over the English pages as a self test |
 | `scripts/check-js.js [dir]` | parses every script with the javascript engine — a syntax error silently disables a feature, so it belongs in CI (6 files) |
 
+## SEO and GEO
+
+### Classic SEO
+
+| | |
+| --- | --- |
+| **Titles** | built per page type: the home page carries the brand and the slogan, a product page is *Series \| Category \| Brand*, a news article is *Title \| News \| Brand*, every other page is *Title \| Brand* — and every title is shortened to the brand alias when it would pass 72 characters |
+| **Descriptions** | one per page from the front matter, 50–185 characters (20–120 in Chinese) |
+| **Headings** | exactly one `<h1>` per page, the banner steps down to a plain label when the page brings its own heading |
+| **Canonical** | every page points at itself; the `/categories/` and `/tags/` taxonomies point at `/products/` and are `noindex` |
+| **Languages** | `hreflang` alternates for `en` and `zh` on every page, `og:locale` included |
+| **Social** | `og:title`, `og:description`, `og:image` (absolute), `og:url`, `og:type`, twitter cards |
+| **Images** | every `<img>` has an `alt`, the file name says what is on it, the file size matches the display size |
+| **Sitemap** | `/sitemap.xml` (an index) → `/en/sitemap.xml` and `/zh/sitemap.xml`, every page of both languages |
+| **Robots** | `/robots.txt` with the absolute sitemap link and an explicit welcome for the answer engines |
+| **Link graph** | no orphan page: every page is linked from at least one other page (checked in CI) |
+
+### Structured data (the same block serves SEO and the answer engines)
+
+| Page | Schema |
+| --- | --- |
+| every page | `Organization` + `LocalBusiness` (address, contact point, area served, knows about) and `WebSite` with a `SearchAction` |
+| home | `WebPage` |
+| a category | `CollectionPage` with an `ItemList` of the series |
+| a product | `Product` (sku, mpn, image, brand, manufacturer, frequency, power range, model count) |
+| faq | `FAQPage` with every question and answer in the visitor's language |
+| video | `VideoObject` for each of the three films |
+| a news article | `NewsArticle` |
+| service | `Service` with the provider and the contact point |
+| contact | `ContactPage` |
+| inner pages | `BreadcrumbList` |
+
+### GEO — for the answer engines
+
+The point of a generator catalogue is that an engine can *quote* it. So:
+
+- **`/llms.txt`** (llmstxt.org) — a written summary of the company, the key facts and every section, in the language of the site.
+- **`/llms-full.txt`** — the whole catalogue as markdown: all 44 series with their power ranges, every model with its prime and standby power, the faq and the company pages.
+- **`robots.txt`** welcomes `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `anthropic-ai`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `CCBot` and `Bytespider`.
+- **The facts are atomic and quotable** — 2 kW to 2000 kW, 50 Hz and 60 Hz, 15,000 alternators and 2,000 generator sets a year, 35 service bases, founded 1987 — in the `Organization` schema, on the home page and in `llms.txt`.
+- **The specification tables are the payload** — 44 series, every model with its power, engine, alternator and controller, and the same numbers as `csv` at `/download/all-specs.csv`.
+- **Every page is server rendered** — nothing important hides behind a click, so a crawler sees the whole page.
+- **The model codes are consistent** everywhere (front matter, tables, csv, schema, `llms.txt`), because that is what an engine matches on.
+
+### The checks
+
+`scripts/check-seo.js` now verifies the above on the built site: one `<h1>`, the title and description lengths (language aware), the canonical, the hreflang alternates, the og tags, the alt attributes, the duplicate titles, **the structured data every page type needs**, the presence of `llms.txt` and `llms-full.txt`, the robots rules for the answer engines, and that no page is an orphan.
+
 ## Sending the inquiry (Cloudflare Email Service)
 
 The inquiry form is **not** a mailto any more: the visitor presses *Send inquiry* and the
