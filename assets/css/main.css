@@ -2945,6 +2945,41 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
   .download-cta .btn { width: 100%; }
 }
 
+
+/* the inquiry preview: what the visitor checks before it is sent */
+.form-preview {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--r-lg);
+  padding: 26px 28px 24px;
+  box-shadow: var(--sh-sm);
+}
+
+.form-preview h3 { font-size: 20px; margin-bottom: 6px; }
+
+.preview-hint { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+
+.preview-text {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 260px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+}
+
+.preview-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+.preview-copied {
+  margin: 12px 0 0;
+  color: var(--green);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.preview-copied[hidden] { display: none; }
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);

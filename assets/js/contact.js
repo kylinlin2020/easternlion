@@ -17,6 +17,8 @@
    *  the power finder and the comparison tool hand over the selection:
    *  ?product=MODEL&series=SERIES&load=KW&hz=HZ   or   ?models=A,B,C
    * ------------------------------------------------------------------ */
+  var load = '';
+  var hz = '';
   var chipsBox = document.getElementById('modelChips');
   var modelField = document.getElementById('modelField');
   var modelAdd = document.getElementById('modelAdd');
@@ -49,6 +51,8 @@
 
   if (chipsBox) {
     var q = new URLSearchParams(window.location.search);
+    load = q.get('load') || '';
+    hz = q.get('hz') || '';
     var list = q.get('models');
     if (list) list.split(',').forEach(addModel);
     var one = q.get('product');
@@ -135,36 +139,169 @@
     return ok;
   }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!validate()) return;
+  /* ------------------------------------------------------------- *
+   *  the inquiry is assembled into a structured mail and shown to the
+   *  visitor before it leaves — nothing is sent silently
+   * ------------------------------------------------------------- */
+  var L = {};
+  var strEl = document.getElementById('inquiryStrings');
+  if (strEl) {
+    try {
+      var parsed = JSON.parse((strEl.textContent || '').trim());
+      if (typeof parsed === 'string') parsed = JSON.parse(parsed);
+      L = parsed || {};
+    } catch (e) { L = {}; }
+  }
+  function l(key, fallback) { return L[key] || fallback; }
 
+  var preview = document.getElementById('formPreview');
+  var previewText = document.getElementById('previewText');
+  var previewMail = document.getElementById('previewMail');
+  var previewCopy = document.getElementById('previewCopy');
+  var previewBack = document.getElementById('previewBack');
+  var previewCopied = document.getElementById('previewCopied');
+  var subject = '';
+
+  function assembleSubject() {
     var f = new FormData(form);
-    var subject = 'Inquiry' + (f.get('product') ? ': ' + f.get('product') : '');
-    var body = [
-      'Name: ' + (f.get('name') || ''),
-      'Email: ' + (f.get('email') || ''),
-      'Phone: ' + (f.get('phone') || ''),
-      'Company: ' + (f.get('company') || ''),
-      'Product: ' + (f.get('product') || ''),
-      'Drawing / spec reference: ' + (f.get('drawing') || ''),
-      '',
-      f.get('message') || ''
-    ].join('\n');
+    var product = (f.get('product') || '').trim();
+    var first = product || (models.length ? models[0] : '');
+    return l('subject', 'Generator set inquiry') + (first ? ': ' + first : '');
+  }
 
-    /* show the confirmation panel first … */
+  function assemble() {
+    var f = new FormData(form);
+    var name = (f.get('name') || '').trim();
+    var company = (f.get('company') || '').trim();
+    var phone = (f.get('phone') || '').trim();
+    var email = (f.get('email') || '').trim();
+    var drawing = (f.get('drawing') || '').trim();
+    var message = (f.get('message') || '').trim();
+    var product = (f.get('product') || '').trim();
+
+    var out = [];
+    out.push(l('salutation', 'Dear Eastern Lion sales team,'));
+    out.push('');
+    out.push(l('interested', 'I am interested in the following generator set(s):'));
+    out.push('');
+
+    var rows = [];
+    if (models.length) {
+      models.forEach(function (m) { rows.push('  ' + l('model', 'Model') + '    : ' + m); });
+    } else if (product) {
+      rows.push('  ' + l('model', 'Model') + '    : ' + product);
+    }
+    if (load) {
+      rows.push('  ' + l('required_power', 'Required power') + ' : ' + load +
+        ' kW' + (hz ? ' @ ' + hz + ' Hz' : ''));
+    }
+    if (drawing) {
+      rows.push('  ' + l('drawing', 'Drawing / spec reference') + ' : ' + drawing);
+    }
+    if (rows.length) {
+      out.push(rows.join('\n'));
+      out.push('');
+    }
+
+    if (message) {
+      out.push(l('message', 'Message') + ':');
+      out.push(message);
+      out.push('');
+    }
+
+    out.push(l('contact', 'Contact'));
+    out.push('  ' + l('name', 'Name') + '    : ' + name);
+    if (company) out.push('  ' + l('company', 'Company') + ' : ' + company);
+    if (phone) out.push('  ' + l('phone', 'Phone') + '       : ' + phone);
+    out.push('  ' + l('email', 'E-mail') + '   : ' + email);
+    out.push('');
+    out.push('--');
+    out.push(l('footer', 'Sent from easternlion.cn'));
+
+    return out.join('\n');
+  }
+
+  function send(body) {
+    if (preview) preview.hidden = true;
     form.hidden = true;
     if (success) {
       success.hidden = false;
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    /* … then hand the inquiry over to the visitor's mail client */
+    /* hand the inquiry over to the visitor's mail client */
     setTimeout(function () {
       window.location.href = 'mailto:' + form.dataset.mailTo +
         '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }, 350);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    subject = assembleSubject();
+    var body = assemble();
+
+    if (preview && previewText) {
+      previewText.value = body;
+      preview.hidden = false;
+      form.hidden = true;
+      preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      previewText.focus();
+      /* show the beginning of the mail, not the end */
+      previewText.setSelectionRange(0, 0);
+      previewText.scrollTop = 0;
+      return;
+    }
+
+    send(body);
   });
+
+  if (previewMail) {
+    previewMail.addEventListener('click', function () {
+      send(previewText ? previewText.value : assemble());
+    });
+  }
+
+  function fallbackCopy(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  if (previewCopy) {
+    previewCopy.addEventListener('click', function () {
+      var text = previewText ? previewText.value : '';
+      if (!text) return;
+      var done = function () {
+        if (previewCopied) {
+          previewCopied.hidden = false;
+          setTimeout(function () { previewCopied.hidden = true; }, 2600);
+        }
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+      } else {
+        fallbackCopy(text, done);
+      }
+    });
+  }
+
+  if (previewBack) {
+    previewBack.addEventListener('click', function () {
+      if (preview) preview.hidden = true;
+      form.hidden = false;
+      if (success) success.hidden = true;
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
 
   form.querySelectorAll('input, textarea').forEach(function (field) {
     field.addEventListener('input', function () {

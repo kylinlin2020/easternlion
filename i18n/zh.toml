@@ -534,8 +534,6 @@ other = "备用功率"
 other = "额定功率"
 [search_output]
 other = "输出功率"
-[inquiry_model]
-other = "机型"
 [inquiry_power]
 other = "需求功率"
 [model_nav_label]
@@ -579,3 +577,41 @@ other = "CSV"
 other = "打印 / PDF"
 [download_title_link]
 other = "资料下载"
+[preview_title]
+other = "发送前请确认询盘内容"
+[preview_hint]
+other = "这就是工程师会收到的内容，您还可以直接修改。"
+[preview_mail]
+other = "用邮件客户端发送"
+[preview_copy]
+other = "复制内容"
+[preview_back]
+other = "返回修改"
+[preview_copied]
+other = "已复制到剪贴板。"
+[inquiry_salutation]
+other = "东方电机销售团队您好："
+[inquiry_interested]
+other = "我想咨询以下发电机组："
+[inquiry_model]
+other = "机型"
+[inquiry_required_power]
+other = "需求功率"
+[inquiry_drawing]
+other = "图纸 / 技术要求编号"
+[inquiry_message]
+other = "留言"
+[inquiry_contact]
+other = "联系方式"
+[inquiry_name]
+other = "姓名"
+[inquiry_company]
+other = "公司"
+[inquiry_phone]
+other = "电话 / WhatsApp"
+[inquiry_email]
+other = "邮箱"
+[inquiry_footer]
+other = "来自 easternlion.cn"
+[inquiry_subject]
+other = "发电机组询价"

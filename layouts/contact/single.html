@@ -98,6 +98,18 @@
           <button type="submit">{{ i18n "contact_submit" }}</button>
         </form>
 
+        <div class="form-preview" id="formPreview" hidden>
+          <h3>{{ i18n "preview_title" }}</h3>
+          <p class="preview-hint">{{ i18n "preview_hint" }}</p>
+          <textarea class="textarea preview-text" id="previewText" rows="14" spellcheck="false"></textarea>
+          <div class="preview-actions">
+            <button type="button" class="btn btn-primary" id="previewMail">{{ i18n "preview_mail" }}</button>
+            <button type="button" class="btn btn-outline" id="previewCopy">{{ i18n "preview_copy" }}</button>
+            <button type="button" class="btn btn-outline" id="previewBack">{{ i18n "preview_back" }}</button>
+          </div>
+          <p class="preview-copied" id="previewCopied" hidden>{{ i18n "preview_copied" }}</p>
+        </div>
+
         <div class="form-success" id="formSuccess" hidden>
           <div class="fs-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
@@ -117,7 +129,23 @@
 </section>
 
 {{- $jsContact := resources.Get "js/contact.js" | minify | fingerprint }}
-  <script src="{{ $jsContact.RelPermalink }}" defer></script>
+  {{- $inquiryStrings := dict
+      "salutation" (i18n "inquiry_salutation")
+      "interested" (i18n "inquiry_interested")
+      "model" (i18n "inquiry_model")
+      "required_power" (i18n "inquiry_required_power")
+      "drawing" (i18n "inquiry_drawing")
+      "message" (i18n "inquiry_message")
+      "contact" (i18n "inquiry_contact")
+      "name" (i18n "inquiry_name")
+      "company" (i18n "inquiry_company")
+      "phone" (i18n "inquiry_phone")
+      "email" (i18n "inquiry_email")
+      "footer" (i18n "inquiry_footer")
+      "subject" (i18n "inquiry_subject")
+-}}
+<script type="application/json" id="inquiryStrings">{{ $inquiryStrings | jsonify | safeJS }}</script>
+<script src="{{ $jsContact.RelPermalink }}" defer></script>
 
 
 {{ end }}

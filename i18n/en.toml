@@ -535,8 +535,6 @@ other = "standby"
 other = "prime"
 [search_output]
 other = "output"
-[inquiry_model]
-other = "Model"
 [inquiry_power]
 other = "Required power"
 [model_nav_label]
@@ -580,3 +578,41 @@ other = "CSV"
 other = "Print / PDF"
 [download_title_link]
 other = "Download Centre"
+[preview_title]
+other = "Check your inquiry before it is sent"
+[preview_hint]
+other = "This is how your request reaches our engineers — you can still change the text."
+[preview_mail]
+other = "Open in my mail app"
+[preview_copy]
+other = "Copy the text"
+[preview_back]
+other = "Back to the form"
+[preview_copied]
+other = "Copied to the clipboard."
+[inquiry_salutation]
+other = "Dear Eastern Lion sales team,"
+[inquiry_interested]
+other = "I am interested in the following generator set(s):"
+[inquiry_model]
+other = "Model"
+[inquiry_required_power]
+other = "Required power"
+[inquiry_drawing]
+other = "Drawing / spec reference"
+[inquiry_message]
+other = "Message"
+[inquiry_contact]
+other = "Contact"
+[inquiry_name]
+other = "Name"
+[inquiry_company]
+other = "Company"
+[inquiry_phone]
+other = "Phone / WhatsApp"
+[inquiry_email]
+other = "E-mail"
+[inquiry_footer]
+other = "Sent from easternlion.cn"
+[inquiry_subject]
+other = "Generator set inquiry"
