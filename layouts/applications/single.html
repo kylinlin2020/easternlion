@@ -101,7 +101,7 @@
         <p>{{ i18n "app_cta_text" }}</p>
       </div>
       <div class="app-cta-actions">
-        <a class="btn btn-primary" href="{{ "contact/" | relLangURL }}?{{ $query }}">{{ i18n "app_cta_button" }}</a>
+        <a class="btn btn-primary" href="{{ "contact/" | relLangURL }}?load={{ $load }}&hz=50{{ if $modelParam }}&models={{ $modelParam | urlquery }}{{ end }}">{{ i18n "app_cta_button" }}</a>
         <a class="btn btn-outline" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf (i18n "app_wa_text") .Title | urlquery }}" target="_blank" rel="noopener">{{ i18n "inquiry_whatsapp" }}</a>
       </div>
     </div>

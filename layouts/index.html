@@ -90,6 +90,35 @@
   </div>
 </section>
 
+{{- $apps := where site.RegularPages "Section" "applications" -}}
+{{- with $apps }}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ i18n "app_eyebrow" }}</span>
+      <h2>{{ i18n "app_index_title" }}</h2>
+      <p>{{ i18n "app_index_text" }}</p>
+    </div>
+    <div class="app-index-grid app-index-grid--slim">
+      {{- range .ByWeight }}
+      {{- partial "app-answer.html" (dict "page" .) -}}
+      {{- $r := .Scratch.Get "appRange" -}}
+      <a class="card app-index-card" href="{{ .RelPermalink }}">
+        <span class="body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ $r.min }} – {{ $r.max }} kW · {{ $r.hz }} Hz · {{ i18n "app_fact_duty_value" }}</p>
+          <span class="more">
+            {{ i18n "view_details" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          </span>
+        </span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
 <section class="section section-tint">
   <div class="container">
     <div class="section-head">
