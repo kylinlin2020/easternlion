@@ -1445,6 +1445,7 @@ label.label {
 }
 
 /* float rail — right edge tabs that expand on hover */
+/* the quick contact rail: three round buttons that slide out on hover */
 .float-rail {
   position: fixed;
   right: 0;
@@ -1453,7 +1454,7 @@ label.label {
   z-index: 80;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
 .rail-item {
@@ -1461,32 +1462,54 @@ label.label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   background: var(--navy-800);
   color: #fff;
-  border-radius: var(--r-sm) 0 0 var(--r-sm);
+  border-radius: 24px 0 0 24px;
   box-shadow: var(--sh-md);
   overflow: hidden;
   transition: width .22s ease, background-color .18s ease, color .18s ease;
 }
 
-.rail-item + .rail-item { border-top: 1px solid rgba(255, 255, 255, .12); }
-.rail-item svg { width: 20px; height: 20px; fill: var(--amber); flex-shrink: 0; }
-.rail-item span {
-  position: absolute;
-  right: 52px;
-  font-size: 13.5px;
-  font-weight: 600;
+.rail-item svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--amber);
+  flex-shrink: 0;
+  transition: fill .18s ease;
+}
+
+.rail-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 0 16px 0 10px;
   white-space: nowrap;
   opacity: 0;
   transition: opacity .18s ease;
 }
-.rail-item:hover { width: 168px; background: var(--navy-700); }
-.rail-item:hover span { opacity: 1; }
-.rail-item:nth-child(3):hover { background: var(--amber); }
-.rail-item:nth-child(3):hover svg { fill: #1a1200; }
-.rail-item:nth-child(3):hover span { color: #1a1200; }
+
+.rail-label b { font-size: 13px; font-weight: 700; line-height: 1.2; }
+.rail-label i { font-style: normal; font-size: 12px; line-height: 1.2; opacity: .72; }
+
+.rail-item:hover,
+.rail-item:focus-visible { width: 236px; background: var(--navy-700); }
+.rail-item:hover .rail-label,
+.rail-item:focus-visible .rail-label { opacity: 1; }
+
+.rail-item:nth-child(3):hover,
+.rail-item:nth-child(3):focus-visible { background: var(--amber); }
+.rail-item:nth-child(3):hover svg,
+.rail-item:nth-child(3):focus-visible svg { fill: #1a1200; }
+.rail-item:nth-child(3):hover .rail-label,
+.rail-item:nth-child(3):focus-visible .rail-label { color: #1a1200; }
+
+/* the rail only appears where it cannot cover the content */
+@media (max-width: 1359px) {
+  .float-rail { display: none; }
+}
 
 /* pagination */
 .pagination { display: flex; gap: 8px; margin-top: 30px; }

@@ -5,14 +5,16 @@
 <script type="application/ld+json">
 {{- $org := dict
   "@context" "https://schema.org"
-  "@type" "Organization"
+  "@type" (slice "Organization" "LocalBusiness")
   "@id" (printf "%s#organization" site.Home.Permalink)
   "name" $company
   "alternateName" "Easternlion"
+  "legalName" $company
   "url" site.Home.Permalink
   "logo" (printf "%simages/logo.png" site.Home.Permalink)
   "image" (printf "%simages/logo.png" site.Home.Permalink)
   "description" site.Params.description
+  "slogan" site.Params.slogan
   "foundingDate" "1987"
   "email" site.Params.email
   "telephone" site.Params.phone
@@ -24,6 +26,13 @@
     "addressRegion" "Fujian"
     "postalCode" "355000"
     "addressCountry" "CN")
+  "areaServed" (slice "CN" "Asia" "Europe" "Africa" "America")
+  "knowsAbout" (slice
+    "Diesel generator set"
+    "Brush alternator"
+    "Brushless alternator"
+    "Generator set assembly"
+    "Full load testing")
   "contactPoint" (slice (dict
     "@type" "ContactPoint"
     "telephone" site.Params.phone
@@ -38,8 +47,14 @@
   "@id" (printf "%s#website" site.Home.Permalink)
   "url" site.Home.Permalink
   "name" $company
-  "publisher" (dict "@id" (printf "%s#organization" site.Home.Permalink))
   "inLanguage" site.Language.Lang
+  "publisher" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "potentialAction" (dict
+    "@type" "SearchAction"
+    "target" (dict
+      "@type" "EntryPoint"
+      "urlTemplate" (printf "%sproducts/?q={search_term_string}" site.Home.Permalink))
+    "query-input" "required name=search_term_string")
 -}}
 {{- dict "@context" "https://schema.org" "@graph" (slice $org $website) | jsonify (dict "indent" "  ") | safeJS -}}
 </script>
@@ -59,6 +74,42 @@
 </script>
 {{- end }}
 
+{{- /* ---------- the products of a category: an item list the engines can read ---------- */}}
+{{- $scope := .Pages -}}
+{{- with .Params.list_from -}}
+  {{- with site.GetPage . -}}{{- $scope = .Pages -}}{{- end -}}
+{{- end -}}
+{{- $items := slice -}}
+{{- $i := 1 -}}
+{{- range $scope -}}
+  {{- if .Params.columns -}}
+    {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" $i
+        "name" .Title
+        "url" .Permalink) -}}
+    {{- $i = add $i 1 -}}
+  {{- end -}}
+{{- end -}}
+{{- if $items }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default "")
+  "isPartOf" (dict "@id" (printf "%s#website" site.Home.Permalink))
+  "mainEntity" (dict
+    "@type" "ItemList"
+    "numberOfItems" (len $items)
+    "itemListElement" $items)
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- /* ---------- a product ---------- */}}
 {{- if and .IsPage .Params.columns }}
 <script type="application/ld+json">
 {{- $model := "" -}}
@@ -72,19 +123,131 @@
   "mpn" $model
   "image" (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" (.Params.image | default "")))
   "category" .Params.category
+  "url" .Permalink
   "brand" (dict "@type" "Brand" "name" "Eastern Lion")
   "manufacturer" (dict "@id" (printf "%s#organization" site.Home.Permalink))
   "additionalProperty" (slice
     (dict "@type" "PropertyValue" "name" "Frequency" "value" (printf "%v Hz" .Params.hz))
-    (dict "@type" "PropertyValue" "name" "Power range" "value" (printf "%v – %v kW" .Params.power_min .Params.power_max))
-    (dict "@type" "PropertyValue" "name" "Type" "value" .Params.product_kind))
+    (dict "@type" "PropertyValue" "name" "Power range" "value" (printf "%v - %v kW" .Params.power_min .Params.power_max))
+    (dict "@type" "PropertyValue" "name" "Type" "value" .Params.product_kind)
+    (dict "@type" "PropertyValue" "name" "Models" "value" (printf "%v" (len (.Params.rows | default slice)))))
 | jsonify (dict "indent" "  ") | safeJS -}}
 </script>
 {{- end }}
 
-{{- if .Params.breadcrumb }}
+{{- /* ---------- the faq: the single most useful block for an answer engine ---------- */}}
+{{- if eq .Type "faq" }}
+<script type="application/ld+json">
+{{- $items := slice -}}
+{{- $i := 1 -}}
+{{- range site.Data.faq -}}
+  {{- $q := .q }}{{- if eq site.Language.Lang "zh" }}{{- $q = .q_zh }}{{- end -}}
+  {{- $a := .a }}{{- if eq site.Language.Lang "zh" }}{{- $a = .a_zh }}{{- end -}}
+  {{- $items = $items | append (dict
+      "@type" "Question"
+      "name" $q
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" $a)) -}}
+  {{- $i = add $i 1 -}}
+{{- end -}}
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "FAQPage"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "mainEntity" $items
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- /* ---------- the video page ---------- */}}
+{{- if eq .Type "video" }}
+<script type="application/ld+json">
+{{- $items := slice -}}
+{{- range $i, $v := (slice (dict "id" "gGUXjCl4JKg" "name" (i18n "video_1")) (dict "id" "kyiJ1GhQFns" "name" (i18n "video_2")) (dict "id" "gGUXjCl4JKg" "name" (i18n "video_3"))) -}}
+  {{- $items = $items | append (dict
+      "@type" "VideoObject"
+      "name" $v.name
+      "description" $v.name
+      "thumbnailUrl" (printf "%simages/workshop/1.jpg" site.Home.Permalink)
+      "uploadDate" "2019-01-01"
+      "embedUrl" (printf "https://www.youtube.com/embed/%s" $v.id)
+      "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $v.id)) -}}
+{{- end -}}
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "hasPart" $items
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- /* ---------- a news article ---------- */}}
+{{- if and .IsPage (eq .Type "news") }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "NewsArticle"
+  "headline" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default (.Summary | plainify))
+  "datePublished" (.Date.Format "2006-01-02")
+  "author" (dict "@type" "Organization" "name" $company)
+  "publisher" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- /* ---------- the service page ---------- */}}
+{{- if eq .Type "service" }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default "")
+  "serviceType" (i18n "service_schema_type")
+  "provider" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "areaServed" (slice "CN" "Asia" "Europe" "Africa" "America")
+  "availableChannel" (dict
+    "@type" "ServiceChannel"
+    "serviceUrl" .Permalink
+    "servicePhone" (dict "@type" "ContactPoint" "telephone" site.Params.phone))
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- /* ---------- the contact page ---------- */}}
+{{- if eq .Type "contact" }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "ContactPage"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default "")
+  "mainEntity" (dict
+    "@id" (printf "%s#organization" site.Home.Permalink))
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
+{{- if not .IsHome }}
 <script type="application/ld+json">
 {{- $crumbs := .Params.breadcrumb -}}
+{{- if not $crumbs -}}
+  {{- $crumbs = slice (dict "name" (i18n "nav_home") "url" "/") -}}
+{{- end -}}
 
 {{- $items := slice -}}
 {{- $i := 1 -}}

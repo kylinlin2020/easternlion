@@ -648,3 +648,5 @@ other = "Frequency"
 other = "Add every model you want us to quote — each with its own power and frequency if they differ. Our engineers will reply with prices and lead times for each of them."
 [contact_model_add]
 other = "Add another model (e.g. GF/GFS-C200)"
+[service_schema_type]
+other = "Generator set supply, spare parts and after-sales service"

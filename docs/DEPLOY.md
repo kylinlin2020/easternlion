@@ -31,6 +31,11 @@ make check        # build + 7 validation scripts
 git log --oneline origin/main..main   # what is about to go live
 ```
 
+> **Before building locally:** stop the dev server and delete `.hugo_build.lock` — the lock file
+> carries the dev server's `baseURL` (localhost:1313) and a build that picks it up writes
+> `http://localhost:1313` into the canonical links, the sitemap and robots.txt. `make build`
+> removes it for you.
+
 `make check` runs:
 
 | Script | What it protects |

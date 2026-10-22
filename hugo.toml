@@ -75,6 +75,18 @@ capitalizeListTitles = false
   isPlainText = true
   notAlternative = true
 
+[outputFormats.LLMSTXT]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.LLMSFULL]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
+
 [outputFormats.CSV]
   mediaType = "text/csv"
   baseName = "spec"

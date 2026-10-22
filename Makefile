@@ -2,7 +2,7 @@
 #
 #   make dev      development server on http://127.0.0.1:1313
 #   make build    production build into ./public
-#   make check    build + link check + product front matter check
+#   make check    build + all seven validation scripts
 #   make clean    remove generated files
 #
 # Set HUGO to the Hugo binary if it is not on the PATH:
@@ -19,8 +19,9 @@ dev:
 	$(HUGO) server --port $(PORT) --bind 127.0.0.1 --navigateToChanged
 
 build:
-	@# the dev server injects a livereload snippet into the render cache, so clear it first
-	rm -rf resources
+	@# the dev server injects a livereload snippet into the render cache and leaves a
+	@# .hugo_build.lock behind that carries its baseURL (localhost:1313) — both have to go
+	rm -rf resources public .hugo_build.lock
 	$(HUGO) --gc --minify --noBuildLock
 
 preview:

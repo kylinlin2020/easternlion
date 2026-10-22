@@ -3,6 +3,24 @@
   {{- $title = .Params.seo_title -}}
 {{- else if .IsHome -}}
   {{- $title = printf "%s - %s" site.Params.company site.Params.slogan -}}
+{{- else if and .IsPage .Params.columns -}}
+  {{/* a product: the series, what it is and the brand */}}
+  {{- $cat := .Params.category | default (i18n "nav_products") -}}
+  {{- $title = printf "%s | %s" .Title $cat -}}
+  {{- $full := printf "%s | %s" $title site.Params.company -}}
+  {{- if gt (len $full) 72 -}}
+    {{- $title = printf "%s | %s" .Title (i18n "site_short_name") -}}
+  {{- else -}}
+    {{- $title = $full -}}
+  {{- end -}}
+{{- else if and .IsPage (eq .Type "news") -}}
+  {{- $title = printf "%s | %s" .Title (i18n "menu_news") -}}
+  {{- $full := printf "%s | %s" $title site.Params.company -}}
+  {{- if gt (len $full) 72 -}}
+    {{- $title = printf "%s | %s" .Title (i18n "site_short_name") -}}
+  {{- else -}}
+    {{- $title = $full -}}
+  {{- end -}}
 {{- else -}}
   {{- $title = printf "%s | %s" .Title site.Params.company -}}
   {{- if gt (len $title) 72 -}}
@@ -31,9 +49,15 @@
 {{- else }}
 <meta name="keywords" content="diesel generator set, brush alternator, brushless alternator, generator manufacturer, Eastern Lion, 福建东方电机">
 {{- end }}
+{{- if or (eq .Kind "taxonomy") (eq .Kind "term") -}}
+<meta name="robots" content="noindex, follow">
+{{- else -}}
 <meta name="robots" content="index, follow, max-image-preview:large">
+{{- end -}}
 <meta name="theme-color" content="#0a1622">
-<link rel="canonical" href="{{ .Permalink }}">
+{{- $canonical := .Permalink -}}
+{{- if eq .Kind "taxonomy" -}}{{- $canonical = (printf "%sproducts/" site.Home.Permalink) -}}{{- end -}}
+<link rel="canonical" href="{{ $canonical }}">
 
 {{- /* language alternates */}}
 {{- range .Translations }}
