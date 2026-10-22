@@ -117,8 +117,8 @@
             </div>
 
             <div class="product-actions">
-              <a class="btn btn-inquire" href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">{{ i18n "product_inquire" }}</a>
-              <a class="btn btn-basket" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener" aria-label="{{ i18n "product_add_basket" }}">
+              <a class="btn btn-inquire js-inquire" data-base="{{ "contact/" | relLangURL }}" href="{{ "contact/" | relLangURL }}?product={{ $product | urlquery }}">{{ i18n "product_inquire" }}</a>
+              <a class="btn btn-basket js-whatsapp" data-series="{{ $product }}" data-url="{{ .Permalink }}" data-hz="{{ .Params.hz | default 50 }}" data-wa="{{ site.Params.whatsapp }}" href="https://wa.me/{{ site.Params.whatsapp }}?text={{ printf "Inquiry: %s" $product | urlquery }}" target="_blank" rel="noopener" aria-label="{{ i18n "product_add_basket" }}">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 14.8l.03-.12.9-1.64h7.45c.75-1.11 1.85-1.8 3.12-1.8 1.31 0 2.42.63 3.1 1.6l1.6-.55 1.46 1.1-1.33 1.2.03.2c.53 3.9-2.44 7.2-6.4 7.2-1.72 0-3.29-.7-4.44-1.83l-.4.28c-.78.53-1.68.83-2.65.83-1.88 0-3.4-1.52-3.4-3.4 0-.62.17-1.2.45-1.7zM7 4V2H2v12h2v-2h2v2h12v-2h2v-2H7zm-3 6H4V4h2v2h3v2H4zm11 0h-3v-2h3V4h2v2h-2v2z"/></svg>
                 {{ i18n "product_add_basket" }}
               </a>
@@ -230,8 +230,19 @@
     {{ partial "compare-data.html" . }}
     {{- $jsCompare := resources.Get "js/compare.js" | minify | fingerprint }}
   {{- $jsModelNav := resources.Get "js/model-nav.js" | minify | fingerprint }}
+  {{- $jsInquiryLinks := resources.Get "js/inquiry-links.js" | minify | fingerprint }}
   <script src="{{ $jsCompare.RelPermalink }}" defer></script>
   <script src="{{ $jsModelNav.RelPermalink }}" defer></script>
+  <script src="{{ $jsInquiryLinks.RelPermalink }}" defer></script>
+  {{- $waStrings := dict
+        "from" (i18n "wa_from")
+        "series" (i18n "wa_series")
+        "model" (i18n "wa_model")
+        "power" (i18n "wa_power")
+        "standby" (i18n "wa_standby")
+        "link" (i18n "wa_link")
+  -}}
+  <script type="application/json" id="waStrings">{{ $waStrings | jsonify | safeJS }}</script>
   <script>
     (function () {
       document.querySelectorAll('.js-print').forEach(function (b) {

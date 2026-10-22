@@ -739,3 +739,15 @@ other = "海拔每升高 1000 米、环境温度每升高 10℃，功率大约�
 other = "标准工况 0–50℃，可按现场降额"
 [guide_foot]
 other = "把负载、电压和现场条件发给我们，我们会回给你具体型号、价格和交期。"
+[wa_from]
+other = "来自 easternlion.cn 的询价"
+[wa_series]
+other = "系列"
+[wa_model]
+other = "机型"
+[wa_power]
+other = "需求功率"
+[wa_standby]
+other = "备用功率"
+[wa_link]
+other = "链接"

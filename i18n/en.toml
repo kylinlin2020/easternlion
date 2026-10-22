@@ -740,3 +740,15 @@ other = "Every 1000 m of altitude and every 10 °C above the standard ambient co
 other = "Standard rating at 0–50 °C, derating on request"
 [guide_foot]
 other = "Send us the load, the voltage and the site, and we will send back the exact model, the price and the delivery time."
+[wa_from]
+other = "Inquiry from easternlion.cn"
+[wa_series]
+other = "Series"
+[wa_model]
+other = "Model"
+[wa_power]
+other = "Required power"
+[wa_standby]
+other = "Standby rating"
+[wa_link]
+other = "Link"
