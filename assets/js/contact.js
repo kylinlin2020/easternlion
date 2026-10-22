@@ -33,12 +33,14 @@
 
   function renderChips() {
     if (!chipsBox) return;
+    var info = chipsBox.querySelector('.m-chip--info');
     chipsBox.innerHTML = models.map(function (m) {
       return '<span class="m-chip">' + esc(m) +
         '<button type="button" class="m-chip-x" data-model="' + esc(m) + '" aria-label="Remove">&times;</button>' +
         '</span>';
     }).join('');
-    if (modelField) modelField.hidden = models.length === 0;
+    if (info) chipsBox.appendChild(info);
+    if (modelField) modelField.hidden = models.length === 0 && !info;
   }
 
   function addModel(m) {
@@ -87,19 +89,13 @@
     }
     renderChips();
 
-    /* the summary at the top of the message */
-    var msg = document.getElementById('messageField');
-    if (msg && !msg.value.trim()) {
-      var load = q.get('load');
-      var hz = q.get('hz');
-      var lines = [];
-      var LABEL_MODELS = form.dataset.msgModels || 'Models';
+    /* the load and the frequency travel with the inquiry */
+    if (load) {
       var LABEL_POWER = form.dataset.msgPower || 'Required power';
-      if (models.length) lines.push(LABEL_MODELS + ': ' + models.join(', '));
-      if (load) lines.push(LABEL_POWER + ': ' + load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : ''));
-      if (lines.length) {
-        msg.value = lines.join('\n') + '\n\n';
-      }
+      var info = document.createElement('span');
+      info.className = 'm-chip m-chip--info';
+      info.textContent = LABEL_POWER + ': ' + load + ' kW' + (hz ? ' @ ' + hz + ' Hz' : '');
+      chipsBox.appendChild(info);
     }
   }
 
@@ -163,6 +159,8 @@
   var previewCopy = document.getElementById('previewCopy');
   var previewBack = document.getElementById('previewBack');
   var previewCopied = document.getElementById('previewCopied');
+  var previewWhatsApp = document.getElementById('previewWhatsApp');
+  var previewDownload = document.getElementById('previewDownload');
   var subject = '';
 
   function assembleSubject() {
@@ -248,6 +246,13 @@
 
     if (preview && previewText) {
       previewText.value = body;
+      if (previewWhatsApp) {
+        var number = (form.dataset.whatsapp || '').replace(/\D/g, '');
+        previewWhatsApp.href = number
+          ? 'https://wa.me/' + number + '?text=' + encodeURIComponent(body)
+          : '#';
+        previewWhatsApp.hidden = !number;
+      }
       preview.hidden = false;
       form.hidden = true;
       preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -294,6 +299,24 @@
       } else {
         fallbackCopy(text, done);
       }
+    });
+  }
+
+  if (previewDownload) {
+    previewDownload.addEventListener('click', function () {
+      var text = previewText ? previewText.value : assemble();
+      if (!text) return;
+      var name = ((form.querySelector('[name="name"]') || {}).value || 'inquiry')
+        .trim().replace(/[^\w\u4e00-\u9fa5.-]+/g, '-');
+      var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'easternlion-inquiry-' + name + '.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     });
   }
 

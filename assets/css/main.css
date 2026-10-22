@@ -3052,6 +3052,19 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
 
 .preview-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 
+.preview-actions--minor { margin-top: 10px; }
+
+.preview-actions--minor .btn { font-size: 13px; padding: 9px 14px; }
+
+.preview-actions svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+#previewWhatsApp { text-decoration: none; }
+
 .preview-copied {
   margin: 12px 0 0;
   color: var(--green);

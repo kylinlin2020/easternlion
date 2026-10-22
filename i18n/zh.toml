@@ -627,3 +627,7 @@ other = "您之前咨询过"
 other = "继续填写询盘"
 [resume_close]
 other = "关闭"
+[preview_whatsapp]
+other = "用 WhatsApp 发送"
+[preview_download]
+other = "下载询盘单"

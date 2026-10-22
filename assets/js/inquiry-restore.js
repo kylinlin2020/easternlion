@@ -49,17 +49,12 @@
     set('phone', data.phone);
     set('drawing', data.drawing);
 
-    /* the candidate models */
+    /* the candidate models — but only when the url did not bring its own */
     var chips = document.getElementById('modelChips');
     if (chips && data.models && data.models.length) {
-      var add = document.getElementById('modelAdd');
-      /* the chip list is rendered by contact.js — add through its own api */
-      if (window.elAddModel) data.models.forEach(function (m) { window.elAddModel(m); });
-      else if (add) {
-        data.models.forEach(function (m) {
-          add.value = m;
-          add.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-        });
+      var existing = chips.querySelectorAll('.m-chip');
+      if (!existing.length) {
+        if (window.elAddModel) data.models.forEach(function (m) { window.elAddModel(m); });
       }
     }
   }

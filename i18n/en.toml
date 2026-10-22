@@ -628,3 +628,7 @@ other = "You were looking at"
 other = "Continue the inquiry"
 [resume_close]
 other = "Close"
+[preview_whatsapp]
+other = "Send via WhatsApp"
+[preview_download]
+other = "Download the inquiry"
