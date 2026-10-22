@@ -162,6 +162,14 @@ function check(file) {
     if (!/is an? [A-Za-z0-9 ]*\d+ Hz|\u662f\u4e1c\u65b9|\u7cfb\u5217/.test(html)) add("the product page has no answer sentence");
   }
   if (/\/faq\/?$/.test(url) && !has("FAQPage")) add("the faq page has no FAQPage schema");
+  /* an application page answers the sizing question and carries its own questions */
+  if (/\/applications\/[^/]+\/?$/.test(url)) {
+    if (!has("Service")) add("the application page has no Service schema");
+    if (!has("FAQPage")) add("the application page has no FAQPage schema");
+    if (!/class=["']?app-answer["']?/.test(html)) add("the application page has no answer sentence");
+    if (!/app-sizing/.test(html)) add("the application page has no sizing table");
+    if (!/app-series-grid/.test(html)) add("the application page has no series links");
+  }
   if (/\/news\/[^/]+\/[^/]+\/?$/.test(url) && !has("NewsArticle")) add("a news article without a NewsArticle schema");
   if (/\/video\/?$/.test(url) && !has("VideoObject")) add("the video page has no VideoObject schema");
   if (/\/service\/?$/.test(url) && !has("Service")) add("the service page has no Service schema");

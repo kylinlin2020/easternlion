@@ -33,6 +33,16 @@
 - 有刷交流发电机 — /products/brush-alternator/（STC 系列，8kW – 500kW）
 - 无刷交流发电机 — /products/brushless-alternator/（EL 系列，SAE 法兰）
 
+## 应用场景
+
+- 按应用场景选择发电机组 — /applications/（每个场景给出所需功率、可选机型与技术要点）
+- 数据中心 — /applications/data-centre/
+- 医院 — /applications/hospital/
+- 通信站点 — /applications/telecom/
+- 矿山与采石场 — /applications/mining/
+- 酒店与度假村 — /applications/hotel/
+- 建筑工地 — /applications/construction/
+
 ## 公司
 
 - 公司简介 — /about/
@@ -94,6 +104,16 @@
 - 60 Hz generator sets — /products/60hz-diesel-generator-set/ (6 series for the Americas and parts of Asia)
 - Brush alternators — /products/brush-alternator/ (STC series, 8 kW to 500 kW)
 - Brushless alternators — /products/brushless-alternator/ (EL series, SAE coupling)
+
+## Applications
+
+- Generator sets by application — /applications/ (the power you need, the models that cover it and the technical points that decide the order)
+- Data centres — /applications/data-centre/
+- Hospitals — /applications/hospital/
+- Telecom sites — /applications/telecom/
+- Mining and quarry sites — /applications/mining/
+- Hotels and resorts — /applications/hotel/
+- Construction sites — /applications/construction/
 
 ## Company
 

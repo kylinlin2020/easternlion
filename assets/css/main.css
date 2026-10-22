@@ -3120,6 +3120,156 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
 }
 
 
+/* ---------- the application pages ---------- */
+.app-lead {
+  margin: 0 0 44px;
+  padding: 26px 30px;
+  background: linear-gradient(180deg, var(--amber-50), var(--surface));
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--r-lg);
+}
+
+.app-answer {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.app-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line-2);
+}
+
+.app-fact span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.app-fact b { font-size: 15.5px; color: var(--ink); }
+
+.app-text {
+  max-width: 78ch;
+  color: var(--ink-2);
+  margin: 0 0 22px;
+}
+
+.app-sizing td { vertical-align: top; }
+.app-sizing .app-load { white-space: nowrap; }
+.app-model-note { color: var(--muted); font-size: 13px; margin-left: 6px; }
+.app-model-sep { color: var(--line-2); margin-left: 2px; }
+
+.app-series-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.app-series-card .body { display: block; padding: 20px 22px 22px; }
+.app-series-card .body h3 { font-size: 17px; margin-bottom: 6px; }
+.app-series-card .body p { color: var(--muted); font-size: 13.5px; margin: 0 0 12px; }
+
+.app-series-card .more,
+.app-index-card .more {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--amber-600);
+}
+
+.app-series-card .more svg,
+.app-index-card .more svg { width: 15px; height: 15px; fill: currentColor; transition: transform .2s ease; }
+.app-series-card:hover .more svg,
+.app-index-card:hover .more svg { transform: translateX(4px); }
+
+.app-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 28px 30px;
+  margin: 46px 0;
+  background: var(--navy-900);
+  border-radius: var(--r-lg);
+}
+
+.app-cta .block-title { color: #fff; margin: 0 0 6px; }
+.app-cta p { color: rgba(255, 255, 255, .72); margin: 0; max-width: 62ch; font-size: 14.5px; }
+.app-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.app-cta .btn-outline { border-color: rgba(255, 255, 255, .4); color: #fff; }
+.app-cta .btn-outline:hover { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .7); }
+
+.app-other-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.app-other {
+  display: block;
+  padding: 16px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.app-other b { display: block; color: var(--ink); font-size: 15.5px; margin-bottom: 4px; }
+.app-other span { color: var(--muted); font-size: 13.5px; }
+.app-other:hover { border-color: var(--amber); transform: translateY(-2px); }
+
+.app-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.app-index-card .media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-3);
+}
+
+.app-index-card .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.app-index-card:hover .media img { transform: scale(1.06); }
+.app-index-card .body { display: block; padding: 22px 24px 26px; }
+.app-index-card .body h3 { font-size: 19px; margin-bottom: 8px; }
+.app-index-card .body p { color: var(--muted); font-size: 14.5px; margin: 0 0 14px; }
+
+@media (max-width: 980px) {
+  .app-facts,
+  .app-series-grid,
+  .app-index-grid,
+  .app-other-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .app-facts,
+  .app-series-grid,
+  .app-index-grid,
+  .app-other-grid { grid-template-columns: 1fr; }
+
+  .app-lead { padding: 22px; }
+  .app-cta { flex-direction: column; align-items: stretch; padding: 24px; }
+  .app-cta-actions .btn { width: 100%; }
+}
+
 /* the inquiry preview: what the visitor checks before it is sent */
 .form-preview {
   background: #fff;

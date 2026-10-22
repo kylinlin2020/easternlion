@@ -1,0 +1,53 @@
+{{- /* The sizing table of an application page: for every typical load of the
+       application, the standby power to look at and the real models that
+       cover it — taken from the specification tables, never hand written. */ -}}
+{{- $page := .page -}}
+{{- partial "app-models.html" (dict "page" $page) -}}
+{{- $models := $page.Scratch.Get "appModels" -}}
+{{- $loads := $page.Params.loads | default (slice) -}}
+{{- $factor := $page.Params.factor | default 1.1 -}}
+<div class="table-card">
+  <div class="table-scroll">
+    <table class="spec-table app-sizing">
+      <thead>
+        <tr>
+          <th>{{ i18n "app_sizing_load" }}</th>
+          <th>{{ i18n "app_sizing_standby" }}</th>
+          <th>{{ i18n "app_sizing_models" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $loads -}}
+          {{- $target := int (math.Ceil (math.Sub (math.Mul . $factor) 0.0000001)) -}}
+          {{- $picks := slice -}}
+          {{- range $models -}}
+            {{- if and (ge .s $target) (lt (len $picks) 3) -}}
+              {{- $picks = $picks | append . -}}
+            {{- end -}}
+          {{- end -}}
+          <tr>
+            <td class="app-load"><b>{{ . }}</b> kW</td>
+            <td>
+              {{- if $picks -}}
+                {{ (index $picks 0).s }} – {{ (index $picks (sub (len $picks) 1)).s }} kW
+              {{- else -}}
+                &gt; 2000 kW
+              {{- end -}}
+            </td>
+            <td>
+              {{- range $i, $p := $picks -}}
+                {{- if $i }}<br>{{ end -}}
+                <a href="{{ $p.u }}">{{ $p.m }}</a>
+                <span class="app-model-note">{{ $p.t }} · {{ $p.s }} kW</span>
+              {{- end -}}
+              {{- if not $picks -}}
+                <span class="app-model-note">{{ i18n "app_sizing_oversize" }}</span>
+              {{- end -}}
+            </td>
+          </tr>
+        {{- end -}}
+      </tbody>
+    </table>
+  </div>
+  <p class="table-note">{{ i18n "app_sizing_note" }}</p>
+</div>

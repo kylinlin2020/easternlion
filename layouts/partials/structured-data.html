@@ -243,6 +243,37 @@
 </script>
 {{- end }}
 
+{{- /* ---------- an application page: the service and its questions ---------- */}}
+{{- if and (eq .Type "applications") .IsPage }}
+{{- partial "app-answer.html" (dict "page" .) -}}
+{{- $items := slice -}}
+{{- range .Params.faq -}}
+  {{- $items = $items | append (dict
+      "@type" "Question"
+      "name" .q
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" .a)) -}}
+{{- end -}}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" site.Language.Lang
+  "description" (.Description | default "")
+  "abstract" (.Scratch.Get "appSummary" | default "")
+  "serviceType" .Title
+  "provider" (dict "@id" (printf "%s#organization" site.Home.Permalink))
+  "areaServed" (slice "CN" "Asia" "Europe" "Africa" "America")
+  "hasPart" (slice (dict
+    "@type" "FAQPage"
+    "mainEntity" $items))
+| jsonify (dict "indent" "  ") | safeJS -}}
+</script>
+{{- end }}
+
 {{- if not .IsHome }}
 <script type="application/ld+json">
 {{- $crumbs := .Params.breadcrumb -}}

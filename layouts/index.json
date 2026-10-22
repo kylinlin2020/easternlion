@@ -1,9 +1,23 @@
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
   {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- $gv := "" -}}
   {{- if .Params.columns -}}
     {{- partial "guide-values.html" (dict "page" .) -}}
+    {{- $gv = .Scratch.Get "guideValues" -}}
     {{- $d = .Scratch.Get "guideSummary" -}}
+  {{- end -}}
+  {{- $app := false -}}
+  {{- $k := .Params.category | default "" -}}
+  {{- $g := .Params.power_min | default 0 -}}
+  {{- $p := .Params.power_max | default 0 -}}
+  {{- if eq .Section "applications" -}}
+    {{- $app = true -}}
+    {{- partial "app-answer.html" (dict "page" .) -}}
+    {{- $k = .Parent.Title | default "" -}}
+    {{- $r := .Scratch.Get "appRange" -}}
+    {{- $g = $r.min -}}
+    {{- $p = $r.max -}}
   {{- end -}}
   {{- $cols := .Params.columns -}}
   {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $i50 := -1 }}{{ $i60 := -1 }}
@@ -28,19 +42,18 @@
       {{- $mm = $mm | append (dict "n" $name "p" $prime "s" $standby "a" $o50 "b" $o60) -}}
     {{- end -}}
   {{- end -}}
-  {{- partial "guide-values.html" (dict "page" .) -}}
-  {{- $gv := .Scratch.Get "guideValues" -}}
   {{- $out = $out | append (dict
       "t" .Title
       "u" .RelPermalink
       "d" $d
-      "k" (.Params.category | default "")
+      "k" $k
       "c" (.Parent.Title | default "")
-      "g" (.Params.power_min | default 0)
-      "p" (.Params.power_max | default 0)
+      "g" $g
+      "p" $p
       "h" (.Params.hz | default 0)
       "mm" $mm
       "gv" $gv
+      "a" $app
   ) -}}
 {{- end -}}
 

@@ -761,3 +761,51 @@ other = "个机型"
 other = "您的询盘编号："
 [form_success_whatsapp]
 other = "需要更快处理？直接联系我们："
+[app_eyebrow]
+other = "应用场景"
+[app_index_title]
+other = "按应用场景选择发电机组"
+[app_index_text]
+other = "从你的工作开始。每个应用页面都列出所需功率、能接住的备用机型、现场必要的技术要点以及我们为这个场景生产的机型。"
+[app_sizing_title]
+other = "如何选型并选择功率"
+[app_sizing_text]
+other = "备用工况：机组需要承载全部连接负载及启动时的瞬时负载，因此实际选型应当高于运行负载。下表为本应用各个常见负载对应的真实机型备用功率。"
+[app_sizing_load]
+other = "常见负载"
+[app_sizing_standby]
+other = "选用备用功率"
+[app_sizing_models]
+other = "可选机型"
+[app_sizing_note]
+other = "以上功率按 ISO 8528 标准标定。最终机型还要看电压、燃油续航时间、外壳形式与环境温度，把负载发给我们，我们会书面确认。"
+[app_sizing_oversize]
+other = "2000 kW 以上的需求请直接咨询"
+[app_requirements_title]
+other = "这个场景的技术要点"
+[app_series_title]
+other = "这个工作常用的机型系列"
+[app_model_word]
+other = "个机型"
+[app_faq_title]
+other = "买家常问的问题"
+[app_fact_load]
+other = "功率范围"
+[app_fact_duty]
+other = "工况"
+[app_fact_duty_value]
+other = "备用"
+[app_fact_hz]
+other = "频率"
+[app_fact_engine]
+other = "发动机"
+[app_cta_title]
+other = "把负载与现场条件告诉我们"
+[app_cta_text]
+other = "告诉我们运行负载、电压以及机组的安装环境，工程师会在一个工作日内回复机型、布置与价格。"
+[app_cta_button]
+other = "申请报价"
+[app_wa_text]
+other = "咨询：%s 发电机组"
+[app_other_title]
+other = "其他应用场景"

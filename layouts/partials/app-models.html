@@ -1,0 +1,58 @@
+{{- /* The genset models of the whole site, sorted by standby power.
+       Stored on the page so the sizing table, the answer sentence, the
+       recommended series and the structured data all read the same numbers
+       out of the specification tables — one source of truth. */ -}}
+{{- $page := .page -}}
+{{- $models := slice -}}
+{{- $series := slice -}}
+{{- range (slice "/products/diesel-generator-set/" "/products/60hz-diesel-generator-set/") -}}
+  {{- with site.GetPage . -}}
+    {{- range .Pages -}}
+      {{- $sp := . -}}
+      {{- if $sp.Params.columns -}}
+        {{- $iS := -1 }}{{ $iP := -1 -}}
+        {{- range $i, $c := ($sp.Params.columns | default (slice)) -}}
+          {{- if eq $c "Standby power (kW)" }}{{ $iS = $i }}{{ end -}}
+          {{- if eq $c "Prime power (kW)" }}{{ $iP = $i }}{{ end -}}
+        {{- end -}}
+        {{- $count := 0 -}}
+        {{- $seen := "" -}}
+        {{- range $sp.Params.rows -}}
+          {{- $s := 0 -}}
+          {{- if ge $iS 0 -}}
+            {{- with index . $iS -}}
+              {{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $s = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if eq $s 0 -}}
+            {{- if ge $iP 0 -}}
+              {{- with index . $iP -}}
+                {{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $s = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- $name := index . 0 -}}
+          {{- if and (gt $s 0) (not (strings.Contains $seen (printf "|%s|" $name))) -}}
+            {{- $seen = printf "%s|%s|" $seen $name -}}
+            {{- $models = $models | append (dict
+                "m" $name
+                "s" $s
+                "t" $sp.Title
+                "u" $sp.RelPermalink
+                "hz" ($sp.Params.hz | default 50)) -}}
+            {{- $count = add $count 1 -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $series = $series | append (dict
+            "t" $sp.Title
+            "u" $sp.RelPermalink
+            "hz" ($sp.Params.hz | default 50)
+            "min" ($sp.Params.power_min | default 0)
+            "max" ($sp.Params.power_max | default 0)
+            "n" $count) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $page.Scratch.Set "appModels" (sort $models "s") -}}
+{{- $page.Scratch.Set "appSeries" $series -}}

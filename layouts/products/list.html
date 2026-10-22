@@ -28,6 +28,26 @@
       {{- end }}
     </div>
 
+    {{- $apps := where site.RegularPages "Section" "applications" -}}
+    {{- with $apps }}
+    <h3 class="block-title" style="margin-top:56px">{{ i18n "app_index_title" }}</h3>
+    <div class="separator"></div>
+    <div class="app-index-grid app-index-grid--slim">
+      {{- range .ByWeight }}
+      <a class="card app-index-card" href="{{ .RelPermalink }}">
+        <span class="body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+          <span class="more">
+            {{ i18n "view_details" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          </span>
+        </span>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+
     <div class="download-cta download-cta--slim">
       <div>
         <h3 class="block-title" style="margin-top:0">{{ i18n "download_all_title" }}</h3>

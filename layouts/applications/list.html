@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ partial "banner.html" . }}
+{{ partial "breadcrumb.html" . }}
+
+<section class="inner-main">
+  <div class="container">
+    <div class="rich">{{ .Content }}</div>
+
+    <div class="app-index-grid">
+      {{- range .Pages.ByWeight }}
+      <a class="card app-index-card" href="{{ .RelPermalink }}">
+        <span class="media">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
+        </span>
+        <span class="body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+          <span class="more">
+            {{ i18n "view_details" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7-1.4-1.4L15.2 13H4v-2h11.2l-4.6-4.6L13 5z"/></svg>
+          </span>
+        </span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{ end }}

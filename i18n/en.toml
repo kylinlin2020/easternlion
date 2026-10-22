@@ -762,3 +762,51 @@ other = "models"
 other = "Your inquiry reference:"
 [form_success_whatsapp]
 other = "Need it sooner? Message us on"
+[app_eyebrow]
+other = "Applications"
+[app_index_title]
+other = "Generator sets by application"
+[app_index_text]
+other = "Start from the job your set has to do. Each application page shows the power you need, the standby models that cover it, the technical points that matter on site and the models we build for it."
+[app_sizing_title]
+other = "How to size the set"
+[app_sizing_text]
+other = "Standby duty: the set has to carry the whole connected load plus the starting current, so we size it above the running load. The table below lists the standby ratings of the real models for every typical load of this application."
+[app_sizing_load]
+other = "Typical load"
+[app_sizing_standby]
+other = "Standby power to look at"
+[app_sizing_models]
+other = "Models that cover it"
+[app_sizing_note]
+other = "The ratings follow ISO 8528. The final model depends on the voltage, the fuel autonomy, the enclosure and the ambient temperature - send us the load and we will confirm it in writing."
+[app_sizing_oversize]
+other = "Ask us for a solution above 2000 kW"
+[app_requirements_title]
+other = "What this application needs"
+[app_series_title]
+other = "The series used for this job"
+[app_model_word]
+other = "models"
+[app_faq_title]
+other = "Questions buyers ask about this application"
+[app_fact_load]
+other = "Power range"
+[app_fact_duty]
+other = "Duty"
+[app_fact_duty_value]
+other = "Standby"
+[app_fact_hz]
+other = "Frequency"
+[app_fact_engine]
+other = "Engines"
+[app_cta_title]
+other = "Tell us the load and the site"
+[app_cta_text]
+other = "Send the running load, the voltage and where the set has to run. Our engineers answer with the model, the layout and the price within one working day."
+[app_cta_button]
+other = "Request a quotation"
+[app_wa_text]
+other = "Inquiry: %s generator set"
+[app_other_title]
+other = "Other applications"

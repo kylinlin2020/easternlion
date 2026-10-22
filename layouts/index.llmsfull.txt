@@ -67,6 +67,40 @@ Specification list (csv): {{ .Permalink }}spec.csv
 {{ $sep -}}
 {{- end }}
 
+## Applications
+
+{{ $sep -}}
+{{- range where site.RegularPages "Section" "applications" -}}
+{{- partial "app-answer.html" (dict "page" .) -}}
+### {{ .Title }}
+
+{{ .Scratch.Get "appSummary" }}
+
+URL: {{ .Permalink }}
+
+{{ $sep -}}
+| Load (kW) | Standby power (kW) | Models |
+{{ $sep -}}
+| --- | --- | --- |
+{{- $models := .Scratch.Get "appModels" -}}
+{{- $loads := .Params.loads | default (slice) -}}
+{{- $factor := .Params.factor | default 1.1 -}}
+{{- range $loads -}}
+  {{- $target := int (math.Ceil (math.Sub (math.Mul . $factor) 0.0000001)) -}}
+  {{- $picks := slice -}}
+  {{- range $models -}}
+    {{- if and (ge .s $target) (lt (len $picks) 3) -}}{{- $picks = $picks | append . -}}{{- end -}}
+  {{- end -}}
+  | {{ . }} | {{ if $picks }}{{ (index $picks 0).s }} - {{ (index $picks (sub (len $picks) 1)).s }}{{ else }}over 2000{{ end }} | {{ range $i, $p := $picks }}{{ if $i }}, {{ end }}{{ $p.m }} ({{ $p.t }}){{ end }} |
+{{- end -}}
+{{ $sep -}}
+{{- range .Params.faq }}
+**Q: {{ .q }}**
+
+A: {{ .a }}
+
+{{ end -}}
+{{- end -}}
 ## How to choose a series
 
 Every generator set order comes down to six decisions: the engine brand (it decides the spare
