@@ -835,3 +835,7 @@ other = "已选"
 other = "关闭"
 [ui_remove]
 other = "移除"
+[lang_label]
+other = "切换语言"
+[nav_menu]
+other = "菜单"

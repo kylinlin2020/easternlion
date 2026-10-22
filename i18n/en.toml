@@ -836,3 +836,7 @@ other = "already picked"
 other = "Close"
 [ui_remove]
 other = "Remove"
+[lang_label]
+other = "Change language"
+[nav_menu]
+other = "Menu"

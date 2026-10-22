@@ -1,0 +1,24 @@
+{{- /* The flags of the language switcher, drawn as svg so the header pill, the
+       dropdown and the mobile switch all show the same artwork — no image files.
+       Call: {{ partial "flag.html" .Language.Lang }}                        */ -}}
+{{- $lang := . | default "en" -}}
+{{- if eq $lang "zh" -}}
+<svg class="flag" viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <rect width="30" height="20" fill="#de2910"/>
+  <g fill="#ffde00">
+    <path transform="translate(5 5) scale(3)" d="M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z"/>
+    <path transform="translate(10.5 2.2) rotate(-117)" d="M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z"/>
+    <path transform="translate(12.3 4.4) rotate(-94.7)" d="M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z"/>
+    <path transform="translate(12.3 7.6) rotate(-70.4)" d="M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z"/>
+    <path transform="translate(10.5 9.8) rotate(-48.8)" d="M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z"/>
+  </g>
+</svg>
+{{- else -}}
+<svg class="flag" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <rect width="60" height="30" fill="#012169"/>
+  <path d="M0 0 60 30M60 0 0 30" fill="none" stroke="#fff" stroke-width="6"/>
+  <path d="M0 0 60 30M60 0 0 30" fill="none" stroke="#c8102e" stroke-width="2"/>
+  <path d="M30 0V30M0 15H60" fill="none" stroke="#fff" stroke-width="10"/>
+  <path d="M30 0V30M0 15H60" fill="none" stroke="#c8102e" stroke-width="6"/>
+</svg>
+{{- end -}}

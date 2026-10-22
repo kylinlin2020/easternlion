@@ -54,6 +54,32 @@
         });
       }
 
+      /* the language dropdown (flag + name in the header) */
+      var langBox = document.querySelector('.lang');
+      if (langBox) {
+        var langBtn = langBox.querySelector('.lang-toggle');
+        var langMenu = langBox.querySelector('.lang-menu');
+        var langClose = function (refocus) {
+          langBox.classList.remove('is-open');
+          langBtn.setAttribute('aria-expanded', 'false');
+          langMenu.hidden = true;
+          if (refocus) langBtn.focus();
+        };
+        langBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = langMenu.hidden;
+          langBox.classList.toggle('is-open', open);
+          langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          langMenu.hidden = !open;
+        });
+        document.addEventListener('click', function (e) {
+          if (!langBox.contains(e.target)) langClose(false);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !langMenu.hidden) langClose(true);
+        });
+      }
+
       /* copy the page link (the share buttons) */
       document.querySelectorAll('[data-copy-link]').forEach(function (b) {
         b.addEventListener('click', function (e) {

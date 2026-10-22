@@ -29,7 +29,7 @@
       <img src="{{ "images/logo.png" | relURL }}" alt="{{ site.Params.company }}" width="254" height="42">
     </a>
 
-    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+    <button class="nav-toggle" type="button" aria-label="{{ i18n "nav_menu" }}" aria-expanded="false" aria-controls="mainNav">
       {{ partial "icon.html" (dict "name" "menu") }}
     </button>
 
@@ -61,16 +61,32 @@
              data-msg-models="{{ i18n "search_models" }}"></div>
       </div>
 
-      <div class="lang" aria-label="Language">
-        <img src="{{ "images/flag-en.jpg" | relURL }}" alt="English" width="20" height="13">
-        {{- range site.Home.Sites }}
-        {{- if eq .Language.Lang site.Language.Lang }}
-        <span>{{ .Language.LanguageName | default .Language.Lang }}</span>
-        {{- else }}
-        <a class="lang-opt" href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName | default .Language.Lang }}</a>
-        {{- end }}
-        {{- end }}
-        {{ partial "icon.html" (dict "name" "caret" "viewBox" "0 0 10 6") }}
+      <div class="lang">
+        {{- $cur := site.Language.Lang }}
+        <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="langMenu" aria-label="{{ i18n "lang_label" }}">
+          <span class="lang-flag">{{ partial "flag.html" $cur }}</span>
+          <span class="lang-name">{{ site.Language.LanguageName | default $cur }}</span>
+          {{ partial "icon.html" (dict "name" "caret" "class" "lang-caret" "viewBox" "0 0 10 6") }}
+        </button>
+        <ul class="lang-menu" id="langMenu" hidden>
+          {{- range site.Home.Sites }}
+          {{- $lang := .Language.Lang }}
+          <li>
+            {{- if eq $lang $cur }}
+            <span class="lang-opt is-current" aria-current="true">
+              <span class="lang-flag">{{ partial "flag.html" $lang }}</span>
+              <span>{{ .Language.LanguageName | default $lang }}</span>
+              {{ partial "icon.html" (dict "name" "tick" "class" "lang-tick") }}
+            </span>
+            {{- else }}
+            <a class="lang-opt" href="{{ .Home.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}">
+              <span class="lang-flag">{{ partial "flag.html" $lang }}</span>
+              <span>{{ .Language.LanguageName | default $lang }}</span>
+            </a>
+            {{- end }}
+          </li>
+          {{- end }}
+        </ul>
       </div>
 
       <a class="btn btn-primary btn-sm" href="{{ "contact/" | relLangURL }}">{{ i18n "quote_cta" }}</a>
@@ -105,7 +121,9 @@
     </ul>
     <div class="mobile-langs">
       {{- range site.Home.Sites }}
-      <a href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Lang }}" class="{{ if eq .Language.Lang site.Language.Lang }}is-current{{ end }}">{{ .Language.LanguageName | default .Language.Lang }}</a>
+      <a href="{{ .Home.RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}" class="{{ if eq .Language.Lang site.Language.Lang }}is-current{{ end }}">
+        <span class="ml-flag">{{ partial "flag.html" .Language.Lang }}</span>{{ .Language.LanguageName | default .Language.Lang }}
+      </a>
       {{- end }}
     </div>
   </div>
