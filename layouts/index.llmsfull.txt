@@ -10,7 +10,7 @@
 约 15,000 台、发电机组约 2,000 台。全国 35 个销售与办事处，出口俄罗斯、印度尼西亚、菲律宾、
 南非、巴基斯坦、英国等市场。
 
-联系方式：sales@easternlion.cn，+86-591-87559333，service@easternlion.cn。
+联系方式：sales@easternlion.cn，+86-13950513258，service@easternlion.cn。
 工厂：福建省福安市坂中工业区下洋 36 号。
 国际业务部：福建省福州市台江区洋中街道东洋中路融信洋中城 2 号楼 4 层 23 室。
 {{- else -}}
@@ -21,7 +21,7 @@ production, generator set assembly, full load testing. About 15,000 alternators 
 generator sets per year. 35 sales and service bases in China. Exports to Russia, Indonesia, the
 Philippines, South Africa, Pakistan, the United Kingdom and other markets.
 
-Contact: sales@easternlion.cn, +86-591-87559333, service@easternlion.cn.
+Contact: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
 Factory: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
 International office: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
 Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.

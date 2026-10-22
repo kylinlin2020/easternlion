@@ -49,8 +49,6 @@ other = "产品分类"
 other = "中国优质供应商"
 [footer_tel]
 other = "电话"
-[footer_fax]
-other = "传真"
 [footer_email]
 other = "邮箱"
 [footer_web]
@@ -649,3 +647,7 @@ other = "把需要报价的机型都加进来——功率或频率不同就分�
 other = "再添加一个机型（如 GF/GFS-C200）"
 [service_schema_type]
 other = "发电机组供应、备件与售后服务"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"

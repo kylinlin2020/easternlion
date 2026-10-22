@@ -50,8 +50,6 @@ other = "Product Category"
 other = "Golden Supplier in China"
 [footer_tel]
 other = "Tel"
-[footer_fax]
-other = "Fax"
 [footer_email]
 other = "Email"
 [footer_web]
@@ -650,3 +648,7 @@ other = "Add every model you want us to quote — each with its own power and fr
 other = "Add another model (e.g. GF/GFS-C200)"
 [service_schema_type]
 other = "Generator set supply, spare parts and after-sales service"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"

@@ -1426,6 +1426,19 @@ label.label {
 .footer-brand a { color: var(--amber); }
 .footer-brand a:hover { color: #fff; }
 
+.footer-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 4px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-wa svg { width: 18px; height: 18px; fill: currentColor; }
+.footer-wa:hover { color: #fff; }
+
 .footer-qr { margin: 18px 0; display: inline-block; }
 .footer-qr img { width: 116px; height: 116px; background: #fff; padding: 6px; border-radius: var(--r-sm); }
 
