@@ -334,6 +334,7 @@ browser --POST /api/inquiry--> Pages Function --send_email binding--> Cloudflare
 
 | Piece | Where |
 | --- | --- |
+| `docs/DEPLOY.md` | the deployment checklist: Cloudflare Pages, the email binding, the domain, the smoke test |
 | `functions/api/inquiry.js` | validates the payload, builds the mail (text + html), sends it, returns `{ ok: true }` |
 | `wrangler.toml` | the `send_email` binding, restricted to one destination |
 | `assets/js/contact.js` | posts the inquiry, shows the receipt - and falls back to WhatsApp / copy / download when the function is not reachable |
@@ -375,6 +376,10 @@ the same delivery pipeline, the same DKIM/ARC signing and the same delivery logs
 
 ## Deployment
 
+The step by step checklist (Cloudflare Pages, the email binding, the custom
+domain, the smoke test and the rollback) lives in **[docs/DEPLOY.md](docs/DEPLOY.md)**.
+
+
 Cloudflare Pages is connected to the GitHub repository, so every push to `main` triggers a build:
 
 | Setting | Value |
@@ -385,7 +390,7 @@ Cloudflare Pages is connected to the GitHub repository, so every push to `main` 
 | Environment variable | `HUGO_VERSION = 0.134.0` |
 | Production branch | `main` |
 
-`/.github/workflows/ci.yml` builds the site and runs all four validation scripts on every push and
+`/.github/workflows/ci.yml` builds the site and runs all seven validation scripts on every push and
 pull request, so a broken link or a truncated product page fails the build before it reaches
 Pages.
 
