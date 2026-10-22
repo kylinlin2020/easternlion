@@ -1350,7 +1350,7 @@ label.label {
 }
 
 .product-share a:hover { border-color: var(--amber); color: var(--amber-600); background: var(--amber-50); }
-.product-share svg { width: 12px; height: 12px; fill: currentColor; }
+.product-share svg { width: 15px; height: 15px; fill: currentColor; }
 
 .product-title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .product-info h1 { font-size: 26px; line-height: 1.3; }
@@ -1461,13 +1461,13 @@ label.label {
 /* the quick contact rail: three round buttons that slide out on hover */
 .float-rail {
   position: fixed;
-  right: 0;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 80;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .rail-item {
@@ -1475,45 +1475,60 @@ label.label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   background: var(--navy-800);
   color: #fff;
-  border-radius: 24px 0 0 24px;
-  box-shadow: var(--sh-md);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(10, 22, 34, .28);
   overflow: hidden;
-  transition: width .22s ease, background-color .18s ease, color .18s ease;
+  transition: width .22s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
 }
 
 .rail-item svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--amber);
+  width: 24px;
+  height: 24px;
+  fill: #fff;
   flex-shrink: 0;
   transition: fill .18s ease;
 }
 
+/* the label floats next to the button so it never pushes the icon out of the circle */
 .rail-label {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
-  padding: 0 16px 0 10px;
+  gap: 2px;
+  padding: 9px 16px;
+  background: var(--navy-800);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: var(--r-sm);
+  box-shadow: var(--sh-md);
   white-space: nowrap;
   opacity: 0;
+  pointer-events: none;
   transition: opacity .18s ease;
 }
 
 .rail-label b { font-size: 13px; font-weight: 700; line-height: 1.2; }
-.rail-label i { font-style: normal; font-size: 12px; line-height: 1.2; opacity: .72; }
+.rail-label i { font-style: normal; font-size: 12px; line-height: 1.2; opacity: .75; }
 
 .rail-item:hover,
-.rail-item:focus-visible { width: 236px; background: var(--navy-700); }
+.rail-item:focus-visible {
+  background: var(--navy-700);
+  border-color: var(--amber);
+}
+
 .rail-item:hover .rail-label,
 .rail-item:focus-visible .rail-label { opacity: 1; }
 
 .rail-item:nth-child(3):hover,
-.rail-item:nth-child(3):focus-visible { background: var(--amber); }
+.rail-item:nth-child(3):focus-visible { background: var(--amber); border-color: var(--amber); }
 .rail-item:nth-child(3):hover svg,
 .rail-item:nth-child(3):focus-visible svg { fill: #1a1200; }
 .rail-item:nth-child(3):hover .rail-label,
@@ -3395,6 +3410,64 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
   border-left: 3px solid var(--amber);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
+
+/* the key specifications of a series */
+.key-specs {
+  margin: 4px 0 22px;
+  padding: 18px 20px 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+}
+
+.ks-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.ks-list { margin: 0; }
+
+.ks-row {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 12px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+
+.ks-row:first-child { border-top: 0; }
+
+.ks-row dt { color: var(--muted); font-size: 13.5px; margin: 0; }
+.ks-row dd { color: var(--ink); font-size: 13.5px; font-weight: 600; margin: 0; }
+
+/* the share buttons */
+.product-share { flex-wrap: wrap; }
+
+.product-share a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.ps-wa { color: #25d366; }
+.ps-mail { color: var(--blue); }
+.ps-copy { color: var(--ink-2); }
+.ps-copy:hover { color: var(--ink); }
+.ps-fb { color: #1877f2; }
+.ps-x { color: #0f172a; }
+.ps-in { color: #0a66c2; }
+
+.ps-copied {
+  color: var(--green);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.ps-copied[hidden] { display: none; }
 
 /* ---------- accessibility ---------- */
 :focus-visible {

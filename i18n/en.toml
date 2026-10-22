@@ -652,3 +652,33 @@ other = "Generator set supply, spare parts and after-sales service"
 other = "WhatsApp"
 [contact_whatsapp]
 other = "WhatsApp"
+[product_key_specs]
+other = "Key specifications"
+[ks_power]
+other = "Power range"
+[ks_frequency]
+other = "Frequency"
+[ks_models]
+other = "Models"
+[ks_engine]
+other = "Engine"
+[ks_alternator]
+other = "Alternator"
+[ks_controller]
+other = "Controller"
+[ks_warranty]
+other = "Warranty"
+[ks_warranty_value]
+other = "1 year or 1000 hours"
+[ks_options]
+other = "Options"
+[ks_options_value]
+other = "Open frame, silent canopy, trailer, ATS and parallel systems"
+[ks_moq]
+other = "MOQ"
+[ks_moq_value]
+other = "1 set"
+[product_copy_link]
+other = "Copy the link"
+[product_link_copied]
+other = "Link copied"

@@ -651,3 +651,33 @@ other = "发电机组供应、备件与售后服务"
 other = "WhatsApp"
 [contact_whatsapp]
 other = "WhatsApp"
+[product_key_specs]
+other = "关键参数"
+[ks_power]
+other = "功率范围"
+[ks_frequency]
+other = "频率"
+[ks_models]
+other = "机型数"
+[ks_engine]
+other = "发动机"
+[ks_alternator]
+other = "发电机"
+[ks_controller]
+other = "控制器"
+[ks_warranty]
+other = "质保"
+[ks_warranty_value]
+other = "1 年或 1000 小时"
+[ks_options]
+other = "可选配置"
+[ks_options_value]
+other = "开架式、静音型、拖车式、ATS 自动切换、并机方案"
+[ks_moq]
+other = "起订量"
+[ks_moq_value]
+other = "1 台"
+[product_copy_link]
+other = "复制链接"
+[product_link_copied]
+other = "链接已复制"

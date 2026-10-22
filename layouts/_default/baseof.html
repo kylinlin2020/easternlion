@@ -52,6 +52,34 @@
         });
       }
 
+      /* copy the page link (the share buttons) */
+      document.querySelectorAll('[data-copy-link]').forEach(function (b) {
+        b.addEventListener('click', function (e) {
+          e.preventDefault();
+          var link = b.getAttribute('data-copy-link');
+          var note = document.getElementById('linkCopied');
+          var done = function () {
+            if (note) {
+              note.hidden = false;
+              setTimeout(function () { note.hidden = true; }, 2400);
+            }
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(link).then(done, function () {});
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = link;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); done(); } catch (err) {}
+            document.body.removeChild(ta);
+          }
+        });
+      });
+
       var top = document.getElementById('backToTop');
       if (top) {
         top.addEventListener('click', function (e) {
@@ -90,16 +118,7 @@
         });
       }
 
-      var qtyInput = document.querySelector('.qty input');
-      if (qtyInput) {
-        document.querySelectorAll('.qty button').forEach(function (b) {
-          b.addEventListener('click', function () {
-            var v = parseInt(qtyInput.value, 10) || 1;
-            v += parseInt(b.getAttribute('data-delta'), 10) || 0;
-            qtyInput.value = Math.max(1, v);
-          });
-        });
-      }
+
     })();
   </script>
 </body>
