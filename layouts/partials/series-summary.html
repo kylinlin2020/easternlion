@@ -1,0 +1,44 @@
+﻿{{- /* the one sentence answer of a product series */ -}}
+{{- $page := .page -}}
+{{- $plain := .plain | default false -}}
+{{- $zh := eq site.Language.Lang "zh" -}}
+{{- $title := $page.Title -}}
+{{- $hz := $page.Params.hz | default 50 -}}
+{{- $min := $page.Params.power_min | default 0 -}}
+{{- $max := $page.Params.power_max | default 0 -}}
+{{- $rows := $page.Params.rows | default (slice) -}}
+{{- $models := len $rows -}}
+{{- $kind := $page.Params.product_kind | default "genset" -}}
+{{- $words := split $title " " -}}
+{{- $engine := "" -}}
+{{- $at := -1 -}}
+{{- range $i, $w := $words -}}
+  {{- if eq (lower $w) "by" -}}{{- $at = $i -}}{{- end -}}
+{{- end -}}
+{{- if gt $at 0 -}}
+  {{- $engine = index $words (add $at 1) | title -}}
+{{- end -}}
+{{- $apps := "" -}}
+{{- $facts := index site.Data.series_facts (cond (eq $kind "alternator") "alternator" "genset") -}}
+{{- if $facts -}}
+  {{- $apps = cond $zh $facts.zh $facts.en -}}
+{{- end -}}
+{{- $out := "" -}}
+{{- if $zh -}}
+  {{- if $engine -}}
+    {{- $out = printf "%s是东方电机基于%s发动机组装的%v Hz 柴油发电机组系列，功率范围 %v 到 %v kW，共 %d 个机型，主要用于%s。" $title $engine $hz $min $max $models $apps -}}
+  {{- else -}}
+    {{- $out = printf "%s是东方电机的%v Hz %s系列，功率范围 %v 到 %v kW，共 %d 个机型，主要用于%s。" $title $hz (cond (eq $kind "alternator") "交流发电机" "柴油发电机组") $min $max $models $apps -}}
+  {{- end -}}
+{{- else -}}
+  {{- if $engine -}}
+    {{- $out = printf "%s is a %v Hz diesel generator set series from Eastern Lion, built around the %s engine, covering %v to %v kW in %d models. It is used for %s." $title $hz $engine $min $max $models $apps -}}
+  {{- else -}}
+    {{- $out = printf "%s is an Eastern Lion %v Hz alternator series covering %v to %v kW in %d models, supplied to %s." $title $hz $min $max $models $apps -}}
+  {{- end -}}
+{{- end -}}
+{{- if $plain -}}
+{{- $out -}}
+{{- else -}}
+<p class="series-summary">{{ $out }}</p>
+{{- end -}}

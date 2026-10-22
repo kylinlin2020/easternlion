@@ -119,6 +119,7 @@
   "@type" "Product"
   "name" .Title
   "description" (.Description | default (.Summary | plainify))
+  "abstract" (partial "series-summary.html" (dict "page" . "plain" true))
   "sku" $model
   "mpn" $model
   "image" (printf "%s%s" site.Home.Permalink (strings.TrimPrefix "/" (.Params.image | default "")))

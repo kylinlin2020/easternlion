@@ -154,6 +154,11 @@ function check(file) {
       if (html.indexOf("spec-table") > -1) add("a product page without a Product schema");
     }
   }
+  /* a product page answers the question in one quotable sentence */
+  if (/\/products\/[^/]+\/[^/]+\/?$/.test(url)) {
+    if (!/class=["']?series-summary/.test(html)) add("the product page has no one sentence summary");
+    if (!/is an? [A-Za-z0-9 ]*\d+ Hz|\u662f\u4e1c\u65b9|\u7cfb\u5217/.test(html)) add("the product page has no answer sentence");
+  }
   if (/\/faq\/?$/.test(url) && !has("FAQPage")) add("the faq page has no FAQPage schema");
   if (/\/news\/[^/]+\/[^/]+\/?$/.test(url) && !has("NewsArticle")) add("a news article without a NewsArticle schema");
   if (/\/video\/?$/.test(url) && !has("VideoObject")) add("the video page has no VideoObject schema");

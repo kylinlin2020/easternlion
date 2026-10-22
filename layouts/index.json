@@ -1,6 +1,9 @@
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
-  {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- $d := partial "series-summary.html" (dict "page" . "plain" true) -}}
+  {{- if and (eq .Params.product_kind "alternator") -}}
+    {{- $d = .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- end -}}
   {{- $cols := .Params.columns -}}
   {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $i50 := -1 }}{{ $i60 := -1 }}
   {{- range $i, $c := $cols -}}

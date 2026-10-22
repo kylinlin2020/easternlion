@@ -42,7 +42,7 @@ Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.
 {{- range $scope -}}
 ### {{ .Title }}
 
-{{ .Description | default (.Summary | plainify) }}
+{{ partial "series-summary.html" (dict "page" . "plain" true) }}
 
 Power range: {{ .Params.power_min }} to {{ .Params.power_max }} kW. Frequency:
 {{ .Params.hz | default 50 }} Hz. Type: {{ .Params.product_kind | default "genset" }}.
@@ -83,7 +83,7 @@ A: {{ if eq site.Language.Lang "zh" }}{{ .a_zh }}{{ else }}{{ .a }}{{ end }}
   {{- with site.GetPage (printf "/%s/" .) -}}
 ### {{ .Title }}
 
-{{ .Description | default (.Summary | plainify) }}
+{{ partial "series-summary.html" (dict "page" . "plain" true) }}
 
 {{ .Permalink }}
 

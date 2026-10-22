@@ -360,6 +360,12 @@ The point of a generator catalogue is that an engine can *quote* it. So:
 - **`/llms.txt`** (llmstxt.org) — a written summary of the company, the key facts and every section, in the language of the site.
 - **`/llms-full.txt`** — the whole catalogue as markdown: all 44 series with their power ranges, every model with its prime and standby power, the faq and the company pages.
 - **`robots.txt`** welcomes `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `anthropic-ai`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `CCBot` and `Bytespider`.
+- **Every series answers in one sentence** — the top of each product page carries a single
+  generated paragraph (*Engine By Cummins is a 50 Hz diesel generator set series from Eastern Lion,
+  built around the Cummins engine, covering 22 to 444 kW in 40 models. It is used for data
+  centres, hospitals, …*), built from the data itself so it can never drift from the
+  specification table. The same sentence goes into the schema, the search index and
+  `llms-full.txt`.
 - **The facts are atomic and quotable** — 2 kW to 2000 kW, 50 Hz and 60 Hz, 15,000 alternators and 2,000 generator sets a year, 35 service bases, founded 1987 — in the `Organization` schema, on the home page and in `llms.txt`.
 - **The specification tables are the payload** — 44 series, every model with its power, engine, alternator and controller, and the same numbers as `csv` at `/download/all-specs.csv`.
 - **Every page is server rendered** — nothing important hides behind a click, so a crawler sees the whole page.

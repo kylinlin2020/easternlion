@@ -3371,6 +3371,18 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
   .rb-text { font-size: 12.5px; }
 }
 
+/* the one sentence answer of a series — the part an engine quotes */
+.series-summary {
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  padding: 14px 18px;
+  background: var(--surface-2);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);
