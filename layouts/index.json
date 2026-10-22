@@ -1,8 +1,9 @@
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
-  {{- $d := partial "series-summary.html" (dict "page" . "plain" true) -}}
-  {{- if and (eq .Params.product_kind "alternator") -}}
-    {{- $d = .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- $d := .Description | default (.Summary | plainify | truncate 140) -}}
+  {{- if .Params.columns -}}
+    {{- partial "guide-values.html" (dict "page" .) -}}
+    {{- $d = .Scratch.Get "guideSummary" -}}
   {{- end -}}
   {{- $cols := .Params.columns -}}
   {{- $iPrime := -1 }}{{ $iStandby := -1 }}{{ $i50 := -1 }}{{ $i60 := -1 }}
@@ -27,6 +28,8 @@
       {{- $mm = $mm | append (dict "n" $name "p" $prime "s" $standby "a" $o50 "b" $o60) -}}
     {{- end -}}
   {{- end -}}
+  {{- partial "guide-values.html" (dict "page" .) -}}
+  {{- $gv := .Scratch.Get "guideValues" -}}
   {{- $out = $out | append (dict
       "t" .Title
       "u" .RelPermalink
@@ -37,6 +40,7 @@
       "p" (.Params.power_max | default 0)
       "h" (.Params.hz | default 0)
       "mm" $mm
+      "gv" $gv
   ) -}}
 {{- end -}}
 
@@ -51,4 +55,17 @@
   {{- end -}}
 {{- end -}}
 
-{{- dict "count" (len $out) "cats" $cats "items" $out | jsonify (dict "indent" "  ") -}}
+{{- $guide := dict
+      "title" (i18n "guide_title")
+      "intro" (i18n "guide_intro")
+      "foot" (i18n "guide_foot")
+      "rows" (slice
+        (dict "k" (i18n "guide_engine") "h" (i18n "guide_engine_how") "g" "engine" "v" "")
+        (dict "k" (i18n "guide_duty") "h" (i18n "guide_duty_how") "g" "duty" "v" "")
+        (dict "k" (i18n "guide_voltage") "h" (i18n "guide_voltage_how") "g" "voltage" "v" "")
+        (dict "k" (i18n "guide_enclosure") "h" (i18n "guide_enclosure_how") "g" "" "v" (i18n "guide_enclosure_value"))
+        (dict "k" (i18n "guide_starting") "h" (i18n "guide_starting_how") "g" "" "v" (i18n "guide_starting_value"))
+        (dict "k" (i18n "guide_parallel") "h" (i18n "guide_parallel_how") "g" "" "v" (i18n "guide_parallel_value"))
+        (dict "k" (i18n "guide_environment") "h" (i18n "guide_environment_how") "g" "" "v" (i18n "guide_environment_value")))
+-}}
+{{- dict "count" (len $out) "cats" $cats "guide" $guide "items" $out | jsonify (dict "indent" "  ") -}}

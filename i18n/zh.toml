@@ -751,3 +751,11 @@ other = "需求功率"
 other = "备用功率"
 [wa_link]
 other = "链接"
+[search_guide]
+other = "怎么选"
+[search_guide_more]
+other = "查看完整选型指引"
+[search_compare]
+other = "对比"
+[search_models]
+other = "个机型"

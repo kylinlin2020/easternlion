@@ -752,3 +752,11 @@ other = "Required power"
 other = "Standby rating"
 [wa_link]
 other = "Link"
+[search_guide]
+other = "How to choose"
+[search_guide_more]
+other = "Read the full guide"
+[search_compare]
+other = "Compare"
+[search_models]
+other = "models"

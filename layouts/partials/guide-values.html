@@ -1,0 +1,87 @@
+{{- /* the per series values of the decision guide and the one sentence answer,
+       both derived from the specification table. Stored on the page so the
+       guide, the summary and the search index share one source of truth. */ -}}
+{{- $page := .page -}}
+{{- $rows := $page.Params.rows | default (slice) -}}
+{{- $hz := $page.Params.hz | default 50 -}}
+{{- $kind := $page.Params.product_kind | default "genset" -}}
+{{- $min := $page.Params.power_min | default 0 -}}
+{{- $max := $page.Params.power_max | default 0 -}}
+{{- $zh := eq site.Language.Lang "zh" -}}
+
+{{- /* the engine brand from the series name */ -}}
+{{- $words := split $page.Title " " -}}
+{{- $engine := "" -}}
+{{- $at := -1 -}}
+{{- range $i, $w := $words -}}
+  {{- if eq (lower $w) "by" -}}{{- $at = $i -}}{{- end -}}
+{{- end -}}
+{{- if gt $at 0 -}}{{- $engine = index $words (add $at 1) | title -}}{{- end -}}
+
+{{- /* the prime and the standby range out of the model rows */ -}}
+{{- $iP := -1 }}{{ $iS := -1 }}
+{{- range $i, $c := ($page.Params.columns | default (slice)) -}}
+  {{- if eq $c "Prime power (kW)" -}}{{- $iP = $i -}}{{- end -}}
+  {{- if eq $c "Standby power (kW)" -}}{{- $iS = $i -}}{{- end -}}
+{{- end -}}
+{{- $pMin := 999999.0 }}{{ $pMax := 0.0 }}{{ $sMin := 999999.0 }}{{ $sMax := 0.0 }}
+{{- if and (ge $iP 0) (ge $iS 0) -}}
+  {{- range $rows -}}
+    {{- $p := float (replaceRE "[^0-9.]" "" (printf "%v" (index . $iP))) -}}
+    {{- $s := float (replaceRE "[^0-9.]" "" (printf "%v" (index . $iS))) -}}
+    {{- if and (gt $p 0) (lt $p $pMin) -}}{{- $pMin = $p -}}{{- end -}}
+    {{- if gt $p $pMax -}}{{- $pMax = $p -}}{{- end -}}
+    {{- if and (gt $s 0) (lt $s $sMin) -}}{{- $sMin = $s -}}{{- end -}}
+    {{- if gt $s $sMax -}}{{- $sMax = $s -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt $pMin 999998.0 -}}{{- $pMin = 0.0 -}}{{- end -}}
+{{- if gt $sMin 999998.0 -}}{{- $sMin = 0.0 -}}{{- end -}}
+
+{{- $duty := "" -}}
+{{- if gt $sMax 0 -}}
+  {{- $duty = printf (i18n "guide_duty_value") $sMin $sMax $pMin $pMax -}}
+{{- end -}}
+{{- $voltage := cond (eq $hz 60) (i18n "guide_voltage_60") (i18n "guide_voltage_50") -}}
+{{- $models := len $rows -}}
+
+{{- $engineValue := "" -}}
+{{- if $engine -}}{{- $engineValue = $engine -}}{{- else -}}{{- $engineValue = i18n "guide_engine_none" -}}{{- end -}}
+{{- if gt $models 0 -}}
+  {{- $engineValue = printf "%s — %s" $engineValue (printf (i18n "guide_engine_count") $models) -}}
+{{- end -}}
+
+{{- /* the applications, for the one sentence answer */ -}}
+{{- $apps := "" -}}
+{{- $facts := index site.Data.series_facts (cond (eq $kind "alternator") "alternator" "genset") -}}
+{{- if $facts -}}{{- $apps = cond $zh $facts.zh $facts.en -}}{{- end -}}
+
+{{- /* the one sentence answer */ -}}
+{{- $summary := "" -}}
+{{- if $zh -}}
+  {{- if $engine -}}
+    {{- $summary = printf "%s是东方电机基于%s发动机组装的%v Hz 柴油发电机组系列，功率范围 %v到%v kW，共 %d 个机型，主要用于%s。" $page.Title $engine $hz $min $max $models $apps -}}
+  {{- else -}}
+    {{- $summary = printf "%s是东方电机的%v Hz %s系列，功率范围 %v到%v kW，共 %d 个机型，主要用于%s。" $page.Title $hz (cond (eq $kind "alternator") "交流发电机" "柴油发电机组") $min $max $models $apps -}}
+  {{- end -}}
+{{- else -}}
+  {{- if $engine -}}
+    {{- $summary = printf "%s is a %v Hz diesel generator set series from Eastern Lion, built around the %s engine, covering %v to %v kW in %d models. It is used for %s." $page.Title $hz $engine $min $max $models $apps -}}
+  {{- else -}}
+    {{- $summary = printf "%s is an Eastern Lion %v Hz alternator series covering %v to %v kW in %d models, supplied to %s." $page.Title $hz $min $max $models $apps -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $page.Scratch.Set "guideSummary" $summary -}}
+{{- $page.Scratch.Set "guideValues" (dict
+    "engine" $engineValue
+    "duty" $duty
+    "voltage" $voltage
+    "models" $models
+    "min" $min
+    "max" $max
+    "hz" $hz
+    "kind" $kind
+    "url" $page.RelPermalink
+    "apps" $apps
+) -}}

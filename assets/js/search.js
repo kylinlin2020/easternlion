@@ -4,6 +4,7 @@
   if (!input || !panel) return;
 
   var index = null;
+  var guide = null;
   var cats = [];
   var loading = false;
   var active = -1;
@@ -16,6 +17,10 @@
     spec: panel.dataset.msgSpec || '',
     specNone: panel.dataset.msgSpecNone || '',
     standby: panel.dataset.msgStandby || '',
+    guide: panel.dataset.msgGuide || 'How to choose',
+    guideMore: panel.dataset.msgGuideMore || 'Read the full guide',
+    compare: panel.dataset.msgCompare || 'Compare',
+    models: panel.dataset.msgModels || 'models',
     prime: panel.dataset.msgPrime || '',
     output: panel.dataset.msgOutput || ''
   };
@@ -34,9 +39,10 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         index = data.items || [];
+        guide = data.guide || null;
         cats = data.cats || [];
       })
-      .catch(function () { index = []; cats = []; })
+      .catch(function () { index = []; guide = null; cats = []; })
       .then(function () { loading = false; });
   }
 
@@ -133,6 +139,47 @@
   }
 
   /* ---------------------------------------------------------------- render */
+  /* ------------------------------------------------- the decision guide */
+  var GUIDE_RE = /how\s+to|how\s+do\s+i|choose|choosing|which\s+one|select|selection|size|sizing|guide|\u9009\u578b|\u600e\u4e48\u9009|\u5982\u4f55\u9009|\u9009\u62e9|\u6307\u5357/;
+  var CMP_RE = /\bvs\b|versus|\bdifference\b|\bcompare\b|\u5bf9\u6bd4|\u533a\u522b|\u6bd4\u8f83/;
+
+  function guideBlock(item) {
+    var g = guide;
+    if (!g) return '';
+    var html = '<div class="sp-guide">';
+    html += '<div class="sp-guide-head"><span class="sp-guide-title">' + esc(g.title) + '</span>' +
+      '<span class="sp-guide-intro">' + esc(g.intro) + '</span></div>';
+    html += '<ul class="sp-guide-list">';
+    (g.rows || []).forEach(function (row) {
+      var value = row.v || '';
+      if (row.g && item && item.gv && item.gv[row.g]) value = item.gv[row.g];
+      html += '<li><b>' + esc(row.k) + '</b><span>' + esc(value) + '</span></li>';
+    });
+    html += '</ul>';
+    if (item) {
+      html += '<a class="sp-guide-link" href="' + esc(item.u) + '#how-to-choose">' + esc(STRINGS.guideMore) + ' →</a>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function compareBlock(items) {
+    if (items.length < 2) return '';
+    var html = '<div class="sp-compare"><div class="sp-compare-head">' + esc(STRINGS.compare) + '</div>';
+    html += '<div class="sp-compare-cols">';
+    items.slice(0, 2).forEach(function (it) {
+      var range = (it.g || 0) + '–' + (it.p || 0) + ' kW';
+      var models = (it.gv && it.gv.models) || 0;
+      html += '<a class="sp-compare-col" href="' + esc(it.u) + '">' +
+        '<b>' + esc(it.t) + '</b>' +
+        '<span>' + esc(range) + ' · ' + (it.h || 50) + ' Hz</span>' +
+        '<span>' + models + ' ' + esc(STRINGS.models) + '</span>' +
+        '</a>';
+    });
+    html += '</div></div>';
+    return html;
+  }
+
   function render(q) {
     if (!q) { panel.hidden = true; panel.innerHTML = ''; return; }
     var spec = parseSpec(q);
@@ -177,6 +224,47 @@
         .slice(0, 6);
     }
 
+    /* the guide answers "how do I choose" right in the dropdown */
+    var guideHtml = '';
+    if (text && GUIDE_RE.test(text) && guide) {
+      var subject = null;
+      var wantsGenset = /generator|genset|diesel|\u53d1\u7535\u673a|\u67f4\u6cb9/.test(text);
+      var pool = hits.map(function (h) { return h.it; });
+      if (wantsGenset) {
+        for (var wi = 0; wi < pool.length; wi++) {
+          if (pool[wi].gv && pool[wi].gv.kind === 'genset') { subject = pool[wi]; break; }
+        }
+      }
+      if (!subject && pool.length) subject = pool[0];
+      if (!subject && tHits.length) subject = tHits[0].i;      /* the best text match */
+      if (!subject) {
+        for (var gi = 0; gi < (index || []).length; gi++) {
+          if (index[gi].gv && index[gi].gv.models) { subject = index[gi]; break; }
+        }
+      }
+      guideHtml = guideBlock(subject);
+    }
+
+    /* "cummins vs perkins" becomes a side by side of the two series */
+    var compare = '';
+    if (text && CMP_RE.test(text)) {
+      var words = text.split(/[^a-z0-9]+/).filter(function (w) {
+        return w.length > 2 && !/vs|versus|and|the|difference|compare|best|between|for/.test(w);
+      });
+      var found = [];
+      words.forEach(function (w) {
+        if (found.length >= 2) return;
+        for (var wi = 0; wi < index.length; wi++) {
+          var it = index[wi];
+          if (it.t.toLowerCase().indexOf(w) > -1 && found.indexOf(it) === -1) { found.push(it); break; }
+        }
+      });
+      if (found.length < 2) {
+        found = hits.map(function (h) { return h.i; }).slice(0, 2);
+      }
+      compare = compareBlock(found);
+    }
+
     var catList = text ? catHits(text, nq) : [];
     if (catList.length) {
       html += '<div class="sp-cats"><span class="sp-cats-label">' + esc(STRINGS.cats) + '</span>' +
@@ -185,7 +273,11 @@
         }).join('') + '</div>';
     }
 
-    if (!hits.length && !tHits.length && !catList.length) {
+    if (guideHtml || compare) {
+      html = guideHtml + compare + html;
+    }
+
+    if (!hits.length && !tHits.length && !catList.length && !guideHtml && !compare) {
       var links = (cats || []).slice(0, 4).map(function (c) {
         return '<a class="sp-cat" href="' + esc(c.u) + '">' + esc(c.t) + '</a>';
       }).join('');
