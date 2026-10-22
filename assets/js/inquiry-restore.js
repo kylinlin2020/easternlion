@@ -110,13 +110,23 @@
   var contactUrl = (document.documentElement.getAttribute('data-base') || '') + '/contact/';
   var T = bar.dataset;
   var label = T.msgModels || 'You were looking at';
-  var first = data.models[0];
-  var more = data.models.length > 1 ? ' +' + (data.models.length - 1) : '';
-  var load = data.load ? ' · ' + data.load + ' kW' + (data.hz ? ' @ ' + data.hz + ' Hz' : '') : '';
+
+  /* the saved models are rows: { model, load, hz } (or plain strings) */
+  var rows = (data.models || []).map(function (m) {
+    if (m && typeof m === 'object') return m;
+    return { model: String(m), load: '', hz: '' };
+  });
+  if (!rows.length) { clear(); return; }
+
+  var first = rows[0].model;
+  var more = rows.length > 1 ? ' +' + (rows.length - 1) : '';
+  var detail = rows[0].load
+    ? ' · ' + rows[0].load + ' kW' + (rows[0].hz ? ' @ ' + rows[0].hz + ' Hz' : '')
+    : (data.load ? ' · ' + data.load + ' kW' + (data.hz ? ' @ ' + data.hz + ' Hz' : '') : '');
 
   bar.innerHTML =
     '<div class="rb-inner">' +
-    '<span class="rb-text">' + label + ' <b>' + first + more + '</b>' + load + '</span>' +
+    '<span class="rb-text">' + label + ' <b>' + first + more + '</b>' + detail + '</span>' +
     '<a class="rb-link" href="' + contactUrl + '">' + (T.msgContinue || 'Continue the inquiry') + '</a>' +
     '<button type="button" class="rb-x" aria-label="' + (T.msgClose || 'Close') + '">&times;</button>' +
     '</div>';
