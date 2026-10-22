@@ -615,3 +615,7 @@ other = "邮箱"
 other = "来自 easternlion.cn"
 [inquiry_subject]
 other = "发电机组询价"
+[finder_title_slim]
+other = "不确定选哪款机型？"
+[finder_fold_title]
+other = "按负载找机型"

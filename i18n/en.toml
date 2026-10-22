@@ -616,3 +616,7 @@ other = "E-mail"
 other = "Sent from easternlion.cn"
 [inquiry_subject]
 other = "Generator set inquiry"
+[finder_title_slim]
+other = "Not sure which model fits?"
+[finder_fold_title]
+other = "Find the model that covers my load"

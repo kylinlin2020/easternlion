@@ -15,10 +15,13 @@
           {{- end }}
         {{- end }}
 
-        {{ partial "finder.html" (dict "id" "finder") }}
-        {{ partial "finder-data.html" (dict "page" . "scope" "category") }}
-        {{- $jsFinder := resources.Get "js/finder.js" | minify | fingerprint }}
-  <script src="{{ $jsFinder.RelPermalink }}" defer></script>
+        <details class="finder-fold">
+          <summary class="finder-fold-title">{{ i18n "finder_fold_title" }}</summary>
+          {{ partial "finder.html" (dict "id" "finder" "variant" "slim") }}
+          {{ partial "finder-data.html" (dict "page" . "scope" "category") }}
+          {{- $jsFinder := resources.Get "js/finder.js" | minify | fingerprint }}
+          <script src="{{ $jsFinder.RelPermalink }}" defer></script>
+        </details>
 
         {{ partial "filter-bar.html" . }}
 

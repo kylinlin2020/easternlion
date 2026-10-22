@@ -54,7 +54,7 @@
 
 <section class="section section--finder">
   <div class="container">
-    {{ partial "finder.html" (dict "id" "finder") }}
+    {{ partial "finder.html" (dict "id" "finder" "variant" "slim") }}
     {{ partial "finder-data.html" (dict "page" . "scope" "all") }}
     {{- $jsFinder := resources.Get "js/finder.js" | minify | fingerprint }}
   <script src="{{ $jsFinder.RelPermalink }}" defer></script>

@@ -2980,6 +2980,140 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
 
 .preview-copied[hidden] { display: none; }
 
+/* the slim finder: one row, no big block */
+.finder--slim {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--amber);
+  box-shadow: none;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+
+.finder--slim::after { display: none; }
+
+.finder--slim .finder-grid {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 24px;
+  align-items: center;
+}
+
+.finder--slim .finder-title--slim {
+  color: var(--ink);
+  font-size: 18px;
+  margin: 0;
+}
+
+.finder--slim .finder-eyebrow { color: var(--amber-600); margin-bottom: 4px; }
+
+.finder--slim .finder-chips { margin-top: 10px; }
+
+.finder--slim .finder-chips .chip {
+  background: var(--surface-3);
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+
+.finder--slim .finder-chips .chip:hover,
+.finder--slim .finder-chips .chip.is-active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #1a1200;
+}
+
+.finder--slim .finder-form {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.finder--slim .finder-field { min-width: 120px; }
+
+.finder--slim .finder-field label { color: var(--muted); }
+
+.finder--slim .finder-input input {
+  color: var(--ink);
+  background: #fff;
+  border-color: var(--line-2);
+  width: 130px;
+}
+
+.finder--slim .finder-input input:focus { background: #fff; }
+
+.finder--slim .finder-unit { color: var(--muted); }
+
+.finder--slim .seg { background: var(--surface-3); border-color: var(--line-2); }
+
+.finder--slim .seg-btn { color: var(--ink-2); }
+
+.finder--slim .seg-btn:hover { color: var(--ink); }
+
+.finder--slim .finder-go { grid-column: auto; width: auto; }
+
+.finder--slim .finder-results { margin-top: 18px; }
+
+.finder--slim .finder-item { background: #fff; border-color: var(--line); }
+
+.finder--slim .finder-item:first-child { background: var(--amber-50); border-color: var(--amber); }
+
+.finder--slim .fi-title { color: var(--ink); }
+.finder--slim .fi-title a { color: var(--ink); }
+.finder--slim .fi-model { color: var(--ink-2); }
+.finder--slim .fi-more { color: var(--muted); }
+.finder--slim .fi-models li a { background: var(--surface-2); border-color: var(--line); color: var(--ink-2); }
+.finder--slim .fi-models li a:hover { border-color: var(--amber); color: var(--ink); }
+.finder--slim .fi-models li a span { color: var(--muted); }
+.finder--slim .mn-hint { color: var(--muted); }
+
+/* the folded finder on the category pages */
+.finder-fold {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-xs);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.finder-fold-title {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 20px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.finder-fold-title::-webkit-details-marker { display: none; }
+
+.finder-fold-title::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid var(--amber-600);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform .18s ease;
+}
+
+.finder-fold[open] .finder-fold-title::before { transform: rotate(90deg); }
+
+.finder-fold-title:hover { color: var(--amber-600); }
+
+.finder-fold .finder { margin: 0; border-radius: 0; border-left: 0; border-top: 1px solid var(--line); }
+
+@media (max-width: 980px) {
+  .finder--slim .finder-grid { grid-template-columns: 1fr; }
+  .finder--slim .finder-form { flex-wrap: wrap; }
+  .finder--slim .finder-go { width: 100%; }
+}
+
 /* ---------- accessibility ---------- */
 :focus-visible {
   outline: 3px solid var(--amber);

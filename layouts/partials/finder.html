@@ -1,10 +1,15 @@
 {{- $id := .id | default "finder" -}}
-<section class="finder" id="{{ $id }}">
+{{- $slim := eq (.variant | default "") "slim" -}}
+<section class="finder{{ if $slim }} finder--slim{{ end }}" id="{{ $id }}">
   <div class="finder-grid">
     <div class="finder-intro">
       <span class="finder-eyebrow">{{ i18n "finder_eyebrow" }}</span>
+      {{- if $slim }}
+      <h2 class="finder-title finder-title--slim">{{ i18n "finder_title_slim" }}</h2>
+      {{- else }}
       <h2 class="finder-title">{{ i18n "finder_title" }}</h2>
       <p class="finder-text">{{ i18n "finder_text" }}</p>
+      {{- end }}
       <div class="finder-chips" role="group" aria-label="{{ i18n "finder_quick" }}">
         <button type="button" class="chip" data-kw="50">50 kW</button>
         <button type="button" class="chip" data-kw="100">100 kW</button>
