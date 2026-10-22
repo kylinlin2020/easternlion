@@ -620,3 +620,5 @@ other = "Generator set inquiry"
 other = "Not sure which model fits?"
 [finder_fold_title]
 other = "Find the model that covers my load"
+[compare_selected]
+other = "selected"

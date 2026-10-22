@@ -2,14 +2,13 @@
   var dataEl = document.getElementById('compareData');
   if (!dataEl) return;
 
-  var models = [];
+  var series = [];
   try {
     var raw = (dataEl.textContent || '').trim();
-    models = JSON.parse(raw);
-    /* some templating engines double-encode the payload */
-    if (typeof models === 'string') models = JSON.parse(models);
+    series = JSON.parse(raw);
+    if (typeof series === 'string') series = JSON.parse(series);
   } catch (e) { return; }
-  if (!Array.isArray(models) || !models.length) return;
+  if (!Array.isArray(series) || !series.length) return;
 
   var T = {};
   var strEl = document.getElementById('compareStrings');
@@ -20,7 +19,11 @@
       T = s || {};
     } catch (e) { T = {}; }
   }
-  function t(key, fallback) { return T[key] || fallback; }
+  function t(key, fallback) {
+    var v = T[key];
+    if (v === undefined || v === null || v === '') return fallback;
+    return v;
+  }
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
@@ -28,23 +31,43 @@
   }
 
   var byUrl = {};
-  models.forEach(function (m) { byUrl[m.u] = m; });
+  series.forEach(function (m) { byUrl[m.u] = m; });
 
   var selected = [];
   var MAX = 4;
 
-  /* ---------- bar ---------- */
-  var bar = document.createElement('div');
-  bar.className = 'compare-bar';
-  bar.innerHTML =
-    '<div class="cb-items"></div>' +
-    '<div class="cb-actions">' +
+  /* ---------------------------------------------------- the small badge */
+  var badge = document.createElement('div');
+  badge.className = 'compare-badge';
+  badge.innerHTML =
+    '<button type="button" class="cb-toggle" aria-expanded="false">' +
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M11 18h2"/></svg>' +
+    '<span class="cb-count">0</span>' +
+    '<span class="cb-label"></span>' +
+    '</button>' +
+    '<div class="compare-pop" hidden>' +
+    '<div class="cp-head"></div>' +
+    '<div class="cp-items"></div>' +
+    '<div class="cp-actions">' +
     '<button type="button" class="btn btn-outline btn-sm cb-clear"></button>' +
     '<button type="button" class="btn btn-primary btn-sm cb-open"></button>' +
+    '</div>' +
     '</div>';
-  document.body.appendChild(bar);
+  document.body.appendChild(badge);
 
-  /* ---------- modal ---------- */
+  var pop = badge.querySelector('.compare-pop');
+  var toggle = badge.querySelector('.cb-toggle');
+  var countEl = badge.querySelector('.cb-count');
+  var labelEl = badge.querySelector('.cb-label');
+  var itemsEl = badge.querySelector('.cp-items');
+  var headEl = badge.querySelector('.cp-head');
+  var openBtn = badge.querySelector('.cb-open');
+  var clearBtn = badge.querySelector('.cb-clear');
+
+  headEl.textContent = t('title', 'Model comparison');
+  clearBtn.textContent = t('clear', 'Clear');
+
+  /* -------------------------------------------------------- the dialog */
   var modal = document.createElement('div');
   modal.className = 'compare-modal';
   modal.innerHTML =
@@ -57,28 +80,33 @@
     '</div>';
   document.body.appendChild(modal);
 
-  var itemsEl = bar.querySelector('.cb-items');
-  var openBtn = bar.querySelector('.cb-open');
-  var clearBtn = bar.querySelector('.cb-clear');
-
   function render() {
+    countEl.textContent = selected.length;
+    labelEl.textContent = selected.length ? t('selected', 'selected') : '';
+    badge.classList.toggle('is-open', selected.length > 0);
+    document.body.classList.toggle('has-compare', selected.length > 0);
+
     itemsEl.innerHTML = selected.map(function (m) {
-      return '<span class="cb-chip" data-url="' + m.u + '">' +
+      return '<span class="cp-item">' +
         '<img src="' + m.i + '" alt="">' +
-        '<span>' + m.t + '</span>' +
-        '<button type="button" class="cb-x" data-url="' + m.u + '" aria-label="Remove">&times;</button>' +
+        '<span class="cp-name">' + esc(m.t) + '</span>' +
+        '<button type="button" class="cp-x" data-url="' + esc(m.u) + '" aria-label="Remove">&times;</button>' +
         '</span>';
     }).join('');
 
-    bar.classList.toggle('is-open', selected.length > 0);
-    document.body.classList.toggle('has-compare', selected.length > 0);
     openBtn.disabled = selected.length < 2;
     openBtn.textContent = selected.length < 2
       ? t('compare', 'Compare') + ' (' + selected.length + ')'
       : t('compare', 'Compare') + ' ' + selected.length + ' ' + t('models', 'models');
   }
 
-  function toggle(url) {
+  function togglePop(force) {
+    var open = force !== undefined ? force : pop.hidden;
+    pop.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function toggleModel(url) {
     var m = byUrl[url];
     if (!m) return;
     var i = selected.findIndex(function (s) { return s.u === url; });
@@ -94,6 +122,18 @@
       if (b) b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     render();
+    if (!selected.length) togglePop(false);
+  }
+
+  function clearAll() {
+    selected = [];
+    document.querySelectorAll('.product-card').forEach(function (c) {
+      c.classList.remove('is-compared');
+      var b = c.querySelector('.js-compare');
+      if (b) b.setAttribute('aria-pressed', 'false');
+    });
+    render();
+    togglePop(false);
   }
 
   document.addEventListener('click', function (e) {
@@ -101,29 +141,24 @@
     if (btn) {
       e.preventDefault();
       e.stopPropagation();
-      toggle(btn.getAttribute('data-url'));
+      toggleModel(btn.getAttribute('data-url'));
       return;
     }
-    var x = e.target.closest('.cb-x');
-    if (x) { e.preventDefault(); toggle(x.getAttribute('data-url')); return; }
-    if (e.target.closest('.cb-clear')) { selected = []; toggleAll(); return; }
-    if (e.target.closest('.cb-open')) { openModal(); return; }
+    var x = e.target.closest('.cp-x');
+    if (x) { e.preventDefault(); toggleModel(x.getAttribute('data-url')); return; }
+    if (e.target.closest('.cb-clear')) { clearAll(); return; }
+    if (e.target.closest('.cb-open')) { openModal(); togglePop(false); return; }
+    if (e.target.closest('.cb-toggle')) { togglePop(); return; }
     if (e.target.closest('.cm-close') || e.target.closest('.cm-backdrop')) { closeModal(); return; }
+    if (!badge.contains(e.target)) togglePop(false);
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      if (modal.classList.contains('is-open')) { closeModal(); return; }
+      if (!pop.hidden) { togglePop(false); return; }
+    }
   });
-
-  function toggleAll() {
-    document.querySelectorAll('.product-card').forEach(function (c) {
-      c.classList.remove('is-compared');
-      var b = c.querySelector('.js-compare');
-      if (b) b.setAttribute('aria-pressed', 'false');
-    });
-    selected = [];
-    render();
-  }
 
   var ROWS = [
     { k: 'g', t: 'power', f: function (m) { return m.g + ' – ' + m.p + ' kW'; } },
@@ -144,7 +179,7 @@
     var body = modal.querySelector('.cm-body');
     var html = '<table class="cm-table"><thead><tr><th></th>';
     selected.forEach(function (m) {
-      html += '<th><img src="' + m.i + '" alt=""><a href="' + m.u + '">' + m.t + '</a></th>';
+      html += '<th><img src="' + m.i + '" alt=""><a href="' + m.u + '">' + esc(m.t) + '</a></th>';
     });
     html += '</tr></thead><tbody>';
     ROWS.forEach(function (r) {
@@ -154,7 +189,7 @@
     });
     html += '<tr><th></th>';
     selected.forEach(function (m) {
-      html += '<td><a class="btn btn-outline btn-sm" href="' + m.u + '">' + t('open', 'Open') + '</a></td>';
+      html += '<td><a class="btn btn-outline btn-sm" href="' + m.u + '">' + esc(t('open', 'Open')) + '</a></td>';
     });
     html += '</tr></tbody></table>';
 
@@ -177,6 +212,5 @@
     document.body.style.overflow = '';
   }
 
-  clearBtn.textContent = t('clear', 'Clear');
   render();
 })();

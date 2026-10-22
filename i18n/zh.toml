@@ -619,3 +619,5 @@ other = "发电机组询价"
 other = "不确定选哪款机型？"
 [finder_fold_title]
 other = "按负载找机型"
+[compare_selected]
+other = "已选"
