@@ -52,6 +52,9 @@
               data-msg-msg="{{ i18n "form_message_required" }}"
               data-msg-models="{{ i18n "inquiry_models" }}"
               data-msg-ref="{{ i18n "inquiry_ref_label" }}"
+              data-msg-covers="{{ i18n "mm_covers" }}"
+              data-msg-no-cover="{{ i18n "mm_no_cover" }}"
+              data-msg-picked="{{ i18n "mm_picked" }}"
               data-msg-power="{{ i18n "inquiry_power" }}"
               data-mail-to="{{ site.Params.email }}"
               data-whatsapp="{{ site.Params.whatsapp }}">
@@ -156,6 +159,7 @@
       "subject" (i18n "inquiry_subject")
 -}}
 <script type="application/json" id="inquiryStrings">{{ $inquiryStrings | jsonify | safeJS }}</script>
+{{ partial "model-data.html" . }}
 <script src="{{ $jsContact.RelPermalink }}" defer></script>
 
 

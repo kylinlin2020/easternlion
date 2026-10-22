@@ -824,3 +824,11 @@ other = "Note"
 other = "The ratings follow ISO 8528. The final configuration depends on the voltage, the fuel autonomy, the enclosure and the ambient temperature."
 [download_datasheet]
 other = "Datasheet"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "The models that cover it:"
+[mm_no_cover]
+other = "No model in the catalogue covers that load."
+[mm_picked]
+other = "already picked"

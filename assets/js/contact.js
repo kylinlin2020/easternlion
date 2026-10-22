@@ -10,7 +10,10 @@
     required: form.dataset.msgRequired || 'This field is required.',
     email: form.dataset.msgEmail || 'Please enter a valid e-mail address.',
     name: form.dataset.msgName || 'Please enter your name.',
-    message: form.dataset.msgMsg || 'Please describe your requirement.'
+    message: form.dataset.msgMsg || 'Please describe your requirement.',
+    covers: form.dataset.msgCovers || 'The models that cover it:',
+    noCover: form.dataset.msgNoCover || 'No model in the catalogue covers that load.',
+    picked: form.dataset.msgPicked || 'already picked'
   };
 
   /* ------------------------------------------------------------------ *
@@ -42,6 +45,7 @@
       '<option value="60"' + (String(hzValue) === '60' ? ' selected' : '') + '>60 Hz</option>' +
       '</select>' +
       '<button type="button" class="mm-x" aria-label="Remove">&times;</button>' +
+      '<p class="mm-suggest" hidden></p>' +
       '</div>';
   }
 
@@ -119,6 +123,95 @@
         }
       });
     }
+  }
+
+  /* ------------------------------------------------------------ the suggestion *
+   *  Type a load in the matrix and the models that cover it appear right
+   *  below the row — one click puts the model into the row.               */
+  var MODEL_DATA = null;
+
+  function modelData() {
+    if (MODEL_DATA !== null) return MODEL_DATA;
+    MODEL_DATA = [];
+    var el = document.getElementById('modelData');
+    if (el) {
+      try { MODEL_DATA = JSON.parse(el.textContent) || []; } catch (e) { MODEL_DATA = []; }
+    }
+    return MODEL_DATA;
+  }
+
+  function coverModels(loadKw, hzValue) {
+    var out = [];
+    if (!loadKw) return out;
+    modelData().forEach(function (series) {
+      if (hzValue && series.hz && String(series.hz) !== String(hzValue)) return;
+      (series.m || []).forEach(function (m) {
+        if (m && m.s >= loadKw) out.push({ n: m.n, s: m.s, t: series.t });
+      });
+    });
+    out.sort(function (a, b) { return a.s - b.s; });
+    return out.slice(0, 4);
+  }
+
+  function suggestFor(row) {
+    if (!row) return;
+    var box = row.querySelector('.mm-suggest');
+    if (!box) return;
+    var loadInput = row.querySelector('.mm-load');
+    var hzInput = row.querySelector('.mm-hz');
+    var modelInput = row.querySelector('.mm-model');
+    var kw = parseFloat((loadInput && loadInput.value) || '');
+    var hzValue = (hzInput && hzInput.value) || '';
+    var haveModel = ((modelInput && modelInput.value) || '').trim();
+
+    if (!kw || kw <= 0) {
+      box.hidden = true;
+      box.innerHTML = '';
+      return;
+    }
+
+    var hits = coverModels(kw, hzValue);
+    if (!hits.length) {
+      box.hidden = false;
+      box.innerHTML = '<span class="mm-suggest-note">' + esc(MSG.noCover) + '</span>';
+      return;
+    }
+
+    var html = '<span class="mm-suggest-note">' + esc(MSG.covers) + '</span>';
+    hits.forEach(function (h) {
+      html += '<button type="button" class="mm-chip" data-model="' + esc(h.n) + '">' +
+        esc(h.n) + ' <i>' + h.s + ' kW</i></button>';
+    });
+    if (haveModel) html += '<span class="mm-suggest-note">' + esc(MSG.picked) + '</span>';
+    box.innerHTML = html;
+    box.hidden = false;
+  }
+
+  if (matrix) {
+    matrix.addEventListener('input', function (e) {
+      var row = e.target.closest ? e.target.closest('.mm-row') : null;
+      if (!row) return;
+      if (e.target.classList.contains('mm-load') || e.target.classList.contains('mm-hz')) {
+        suggestFor(row);
+      }
+    });
+
+    matrix.addEventListener('change', function (e) {
+      if (e.target.classList && e.target.classList.contains('mm-hz')) {
+        suggestFor(e.target.closest('.mm-row'));
+      }
+    });
+
+    matrix.addEventListener('click', function (e) {
+      var chip = e.target.closest ? e.target.closest('.mm-chip') : null;
+      if (!chip) return;
+      var row = chip.closest('.mm-row');
+      var input = row && row.querySelector('.mm-model');
+      if (input) {
+        input.value = chip.getAttribute('data-model') || '';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    });
   }
 
   function setError(field, msg) {

@@ -823,3 +823,11 @@ other = "说明"
 other = "以上功率按 ISO 8528 标准标定。最终配置还要看电压、燃油续航时间、外壳形式与环境温度。"
 [download_datasheet]
 other = "参数表"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "能够覆盖该负载的机型："
+[mm_no_cover]
+other = "目录中没有能覆盖该负载的机型。"
+[mm_picked]
+other = "已选"

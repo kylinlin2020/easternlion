@@ -1,0 +1,45 @@
+{{- /* The generator set models with their standby power — the data behind the
+       suggestion inside the inquiry matrix: type a load, get the models that
+       cover it. Built from the specification tables, never hand written. */ -}}
+{{- $out := slice -}}
+{{- range (slice "/products/diesel-generator-set/" "/products/60hz-diesel-generator-set/") -}}
+  {{- with site.GetPage . -}}
+    {{- range .Pages -}}
+      {{- $sp := . -}}
+      {{- if $sp.Params.columns -}}
+        {{- $iS := -1 }}{{ $iP := -1 -}}
+        {{- range $i, $c := ($sp.Params.columns | default (slice)) -}}
+          {{- if eq $c "Standby power (kW)" }}{{ $iS = $i }}{{ end -}}
+          {{- if eq $c "Prime power (kW)" }}{{ $iP = $i }}{{ end -}}
+        {{- end -}}
+        {{- $ms := slice -}}
+        {{- $seen := "" -}}
+        {{- range $sp.Params.rows -}}
+          {{- $s := 0 -}}
+          {{- if ge $iS 0 -}}
+            {{- with index . $iS -}}
+              {{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $s = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if eq $s 0 -}}
+            {{- if ge $iP 0 -}}
+              {{- with index . $iP -}}
+                {{- if findRE "^[0-9]+(\\.[0-9]+)?$" . -}}{{- $s = int (float (replaceRE "[^0-9.].*$" "" .)) -}}{{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- $name := index . 0 -}}
+          {{- if and (gt $s 0) (not (strings.Contains $seen (printf "|%s|" $name))) -}}
+            {{- $seen = printf "%s|%s|" $seen $name -}}
+            {{- /* a dict, never a slice: append flattens slices */ -}}
+            {{- $ms = $ms | append (dict "n" $name "s" $s) -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $ms -}}
+          {{- $out = $out | append (dict "t" $sp.Title "hz" ($sp.Params.hz | default 50) "m" $ms) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<script type="application/json" id="modelData">{{ $out | jsonify | safeJS }}</script>
