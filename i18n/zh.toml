@@ -621,3 +621,9 @@ other = "不确定选哪款机型？"
 other = "按负载找机型"
 [compare_selected]
 other = "已选"
+[resume_models]
+other = "您之前咨询过"
+[resume_continue]
+other = "继续填写询盘"
+[resume_close]
+other = "关闭"

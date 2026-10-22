@@ -622,3 +622,9 @@ other = "Not sure which model fits?"
 other = "Find the model that covers my load"
 [compare_selected]
 other = "selected"
+[resume_models]
+other = "You were looking at"
+[resume_continue]
+other = "Continue the inquiry"
+[resume_close]
+other = "Close"

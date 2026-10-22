@@ -7,6 +7,11 @@
   <a class="skip-link" href="#content">{{ i18n "skip_to_content" }}</a>
   {{ partial "header.html" . }}
 
+  <div class="resume-bar" id="resumeBar" hidden
+       data-msg-models="{{ i18n "resume_models" }}"
+       data-msg-continue="{{ i18n "resume_continue" }}"
+       data-msg-close="{{ i18n "resume_close" }}"></div>
+
   <main id="content">
     {{ block "main" . }}{{ end }}
   </main>
@@ -18,9 +23,11 @@
   {{- $jsSearch := resources.Get "js/search.js" | minify | fingerprint }}
   {{- $jsLightbox := resources.Get "js/lightbox.js" | minify | fingerprint }}
   {{- $jsSpecTable := resources.Get "js/spec-table.js" | minify | fingerprint }}
+  {{- $jsResume := resources.Get "js/inquiry-restore.js" | minify | fingerprint }}
   <script src="{{ $jsSearch.RelPermalink }}" defer></script>
   <script src="{{ $jsLightbox.RelPermalink }}" defer></script>
   <script src="{{ $jsSpecTable.RelPermalink }}" defer></script>
+  <script src="{{ $jsResume.RelPermalink }}" defer></script>
   <script>
     (function () {
       var toggle = document.querySelector('.nav-toggle');

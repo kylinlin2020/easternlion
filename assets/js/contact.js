@@ -49,6 +49,9 @@
     renderChips();
   }
 
+  /* the restore script adds the saved models */
+  window.elAddModel = addModel;
+
   if (chipsBox) {
     var q = new URLSearchParams(window.location.search);
     load = q.get('load') || '';
