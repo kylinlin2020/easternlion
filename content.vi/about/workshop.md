@@ -10,29 +10,47 @@ breadcrumb:
   - name: Hồ sơ công ty
     url: /about/
   - name: Xưởng sản xuất của chúng tôi
+workshop_galleries:
+  - title: "Tổng quan xưởng"
+    images:
+      - src: "/images/workshop/cangku1-200-200.jpg"
+        alt: "Xưởng 1"
+        caption: "Xưởng 1"
+      - src: "/images/workshop/cangku2-200-200.jpg"
+        alt: "Xưởng 2"
+        caption: "Xưởng 2"
+      - src: "/images/workshop/cangku3-200-200.jpg"
+        alt: "Xưởng 3"
+        caption: "Xưởng 3"
+      - src: "/images/workshop/cangku5-200-200.jpg"
+        alt: "Xưởng 4"
+        caption: "Xưởng 4"
+      - src: "/images/workshop/cangku6-200-200.jpg"
+        alt: "Xưởng 5"
+        caption: "Xưởng 5"
+      - src: "/images/workshop/8.jpg"
+        alt: "Khu đóng gói"
+        caption: "Khu đóng gói"
+  - title: "Dây chuyền sản xuất"
+    images:
+      - src: "/images/workshop/1.jpg"
+        alt: "Dây chuyền sản xuất"
+        caption: "Dây chuyền sản xuất"
+      - src: "/images/workshop/10.jpg"
+        alt: "Dây chuyền sản xuất"
+        caption: "Dây chuyền sản xuất"
+      - src: "/images/workshop/3.jpg"
+        alt: "Dây chuyền sản xuất"
+        caption: "Dây chuyền sản xuất"
+  - title: "Lắp ráp và thử nghiệm"
+    images:
+      - src: "/images/workshop/6.jpg"
+        alt: "Khu lắp ráp"
+        caption: "Khu lắp ráp"
+      - src: "/images/workshop/7.jpg"
+        alt: "Khu lắp ráp"
+        caption: "Khu lắp ráp"
+      - src: "/images/workshop/9.jpg"
+        alt: "Khu lắp ráp"
+        caption: "Khu lắp ráp"
 ---
-
-<div class="workshop-top">
-  <div class="workshop-thumbs">
-    <img src="/images/workshop/cangku1-200-200.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku2-200-200.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku3-200-200.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku5-200-200.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku6-200-200.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-  </div>
-  <div class="workshop-stack">
-    <img src="/images/workshop/8.jpg" alt="Đóng gói Eastern Lion" loading="lazy">
-  </div>
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/1.jpg" alt="Dây chuyền sản xuất Eastern Lion" loading="lazy">
-  <img src="/images/workshop/10.jpg" alt="Dây chuyền sản xuất Eastern Lion" loading="lazy">
-  <img src="/images/workshop/3.jpg" alt="Dây chuyền sản xuất Eastern Lion" loading="lazy">
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/6.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-  <img src="/images/workshop/7.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-  <img src="/images/workshop/9.jpg" alt="Xưởng sản xuất Eastern Lion" loading="lazy">
-</div>

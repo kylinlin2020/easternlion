@@ -7,9 +7,13 @@
     <h2 class="inner-title">{{ .Params.about_heading | default (i18n "about_us") }}</h2>
     <div class="separator"></div>
     {{ partial "about-nav.html" . }}
-    <div class="rich">
-      {{ .Content }}
-    </div>
+    {{ if .Params.workshop_galleries }}
+      {{ partial "workshop-gallery.html" . }}
+    {{ else }}
+      <div class="rich">
+        {{ .Content }}
+      </div>
+    {{ end }}
   </div>
 </section>
 {{ end }}

@@ -10,28 +10,47 @@ breadcrumb:
   - name: "公司简介"
     url: /about/
   - name: "车间实景"
+workshop_galleries:
+  - title: "车间概览"
+    images:
+      - src: "/images/workshop/cangku1-200-200.jpg"
+        alt: "车间 1"
+        caption: "车间 1"
+      - src: "/images/workshop/cangku2-200-200.jpg"
+        alt: "车间 2"
+        caption: "车间 2"
+      - src: "/images/workshop/cangku3-200-200.jpg"
+        alt: "车间 3"
+        caption: "车间 3"
+      - src: "/images/workshop/cangku5-200-200.jpg"
+        alt: "车间 4"
+        caption: "车间 4"
+      - src: "/images/workshop/cangku6-200-200.jpg"
+        alt: "车间 5"
+        caption: "车间 5"
+      - src: "/images/workshop/8.jpg"
+        alt: "包装区"
+        caption: "包装区"
+  - title: "生产线"
+    images:
+      - src: "/images/workshop/1.jpg"
+        alt: "生产线"
+        caption: "生产线"
+      - src: "/images/workshop/10.jpg"
+        alt: "生产线"
+        caption: "生产线"
+      - src: "/images/workshop/3.jpg"
+        alt: "生产线"
+        caption: "生产线"
+  - title: "组装与测试"
+    images:
+      - src: "/images/workshop/6.jpg"
+        alt: "装配区"
+        caption: "装配区"
+      - src: "/images/workshop/7.jpg"
+        alt: "装配区"
+        caption: "装配区"
+      - src: "/images/workshop/9.jpg"
+        alt: "装配区"
+        caption: "装配区"
 ---
-<div class="workshop-top">
-  <div class="workshop-thumbs">
-    <img src="/images/workshop/cangku1-200-200.jpg" alt="东方电机车间" loading="lazy">
-    <img src="/images/workshop/cangku2-200-200.jpg" alt="东方电机车间" loading="lazy">
-    <img src="/images/workshop/cangku3-200-200.jpg" alt="东方电机车间" loading="lazy">
-    <img src="/images/workshop/cangku5-200-200.jpg" alt="东方电机车间" loading="lazy">
-    <img src="/images/workshop/cangku6-200-200.jpg" alt="东方电机车间" loading="lazy">
-  </div>
-  <div class="workshop-stack">
-    <img src="/images/workshop/8.jpg" alt="东方电机包装" loading="lazy">
-  </div>
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/1.jpg" alt="东方电机生产线" loading="lazy">
-  <img src="/images/workshop/10.jpg" alt="东方电机生产线" loading="lazy">
-  <img src="/images/workshop/3.jpg" alt="东方电机生产线" loading="lazy">
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/6.jpg" alt="东方电机车间" loading="lazy">
-  <img src="/images/workshop/7.jpg" alt="东方电机车间" loading="lazy">
-  <img src="/images/workshop/9.jpg" alt="东方电机车间" loading="lazy">
-</div>

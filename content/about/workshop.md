@@ -10,29 +10,47 @@ breadcrumb:
   - name: Company Profile
     url: /about/
   - name: Our Workshop
+workshop_galleries:
+  - title: "Workshop Overview"
+    images:
+      - src: "/images/workshop/cangku1-200-200.jpg"
+        alt: "Workshop 1"
+        caption: "Workshop 1"
+      - src: "/images/workshop/cangku2-200-200.jpg"
+        alt: "Workshop 2"
+        caption: "Workshop 2"
+      - src: "/images/workshop/cangku3-200-200.jpg"
+        alt: "Workshop 3"
+        caption: "Workshop 3"
+      - src: "/images/workshop/cangku5-200-200.jpg"
+        alt: "Workshop 4"
+        caption: "Workshop 4"
+      - src: "/images/workshop/cangku6-200-200.jpg"
+        alt: "Workshop 5"
+        caption: "Workshop 5"
+      - src: "/images/workshop/8.jpg"
+        alt: "Packing area"
+        caption: "Packing area"
+  - title: "Production Line"
+    images:
+      - src: "/images/workshop/1.jpg"
+        alt: "Production line"
+        caption: "Production line"
+      - src: "/images/workshop/10.jpg"
+        alt: "Production line"
+        caption: "Production line"
+      - src: "/images/workshop/3.jpg"
+        alt: "Production line"
+        caption: "Production line"
+  - title: "Assembly & Testing"
+    images:
+      - src: "/images/workshop/6.jpg"
+        alt: "Assembly area"
+        caption: "Assembly area"
+      - src: "/images/workshop/7.jpg"
+        alt: "Assembly area"
+        caption: "Assembly area"
+      - src: "/images/workshop/9.jpg"
+        alt: "Assembly area"
+        caption: "Assembly area"
 ---
-
-<div class="workshop-top">
-  <div class="workshop-thumbs">
-    <img src="/images/workshop/cangku1-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/cangku2-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/cangku3-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/cangku5-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
-    <img src="/images/workshop/cangku6-200-200.jpg" alt="Eastern Lion workshop" loading="lazy">
-  </div>
-  <div class="workshop-stack">
-    <img src="/images/workshop/8.jpg" alt="Eastern Lion packing" loading="lazy">
-  </div>
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/1.jpg" alt="Eastern Lion production line" loading="lazy">
-  <img src="/images/workshop/10.jpg" alt="Eastern Lion production line" loading="lazy">
-  <img src="/images/workshop/3.jpg" alt="Eastern Lion production line" loading="lazy">
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/6.jpg" alt="Eastern Lion workshop" loading="lazy">
-  <img src="/images/workshop/7.jpg" alt="Eastern Lion workshop" loading="lazy">
-  <img src="/images/workshop/9.jpg" alt="Eastern Lion workshop" loading="lazy">
-</div>

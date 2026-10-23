@@ -1,0 +1,25 @@
+{{- /* Workshop gallery partial
+     Uses .Params.workshop_galleries = [{ title, images: [{src, alt, caption}] }] */ -}}
+{{- $galleries := .Params.workshop_galleries -}}
+{{- with $galleries -}}
+  {{- range $gidx, $gallery := . -}}
+    {{- $gid := printf "ws-gal-%d" $gidx -}}
+    <section class="workshop-gallery" aria-labelledby="{{ $gid }}-title">
+      <h3 id="{{ $gid }}-title" class="workshop-gal-title">{{ $gallery.title }}</h3>
+      <div class="workshop-grid" role="list">
+        {{- range $iidx, $img := $gallery.images -}}
+          <figure class="workshop-item" role="listitem">
+            <a href="{{ $img.src }}" class="workshop-link" data-lightbox="{{ $gid }}"
+               data-caption="{{ $img.caption | default $img.alt }}"
+               aria-label="{{ $img.alt | default $gallery.title }}">
+              <img src="{{ $img.src }}" alt="{{ $img.alt | default $gallery.title }}" loading="lazy" width="800" height="600">
+            </a>
+            {{- with $img.caption -}}
+              <figcaption class="workshop-caption">{{ . }}</figcaption>
+            {{- end -}}
+          </figure>
+        {{- end -}}
+      </div>
+    </section>
+  {{- end -}}
+{{- end -}}

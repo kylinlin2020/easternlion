@@ -10,29 +10,47 @@ breadcrumb:
   - name: Profil de l'entreprise
     url: /about/
   - name: Notre atelier
+workshop_galleries:
+  - title: "Vue d'ensemble de l'atelier"
+    images:
+      - src: "/images/workshop/cangku1-200-200.jpg"
+        alt: "Atelier 1"
+        caption: "Atelier 1"
+      - src: "/images/workshop/cangku2-200-200.jpg"
+        alt: "Atelier 2"
+        caption: "Atelier 2"
+      - src: "/images/workshop/cangku3-200-200.jpg"
+        alt: "Atelier 3"
+        caption: "Atelier 3"
+      - src: "/images/workshop/cangku5-200-200.jpg"
+        alt: "Atelier 4"
+        caption: "Atelier 4"
+      - src: "/images/workshop/cangku6-200-200.jpg"
+        alt: "Atelier 5"
+        caption: "Atelier 5"
+      - src: "/images/workshop/8.jpg"
+        alt: "Zone d'emballage"
+        caption: "Zone d'emballage"
+  - title: "Ligne de production"
+    images:
+      - src: "/images/workshop/1.jpg"
+        alt: "Ligne de production"
+        caption: "Ligne de production"
+      - src: "/images/workshop/10.jpg"
+        alt: "Ligne de production"
+        caption: "Ligne de production"
+      - src: "/images/workshop/3.jpg"
+        alt: "Ligne de production"
+        caption: "Ligne de production"
+  - title: "Assemblage et essais"
+    images:
+      - src: "/images/workshop/6.jpg"
+        alt: "Zone d'assemblage"
+        caption: "Zone d'assemblage"
+      - src: "/images/workshop/7.jpg"
+        alt: "Zone d'assemblage"
+        caption: "Zone d'assemblage"
+      - src: "/images/workshop/9.jpg"
+        alt: "Zone d'assemblage"
+        caption: "Zone d'assemblage"
 ---
-
-<div class="workshop-top">
-  <div class="workshop-thumbs">
-    <img src="/images/workshop/cangku1-200-200.jpg" alt="Atelier Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku2-200-200.jpg" alt="Atelier Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku3-200-200.jpg" alt="Atelier Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku5-200-200.jpg" alt="Atelier Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku6-200-200.jpg" alt="Atelier Eastern Lion" loading="lazy">
-  </div>
-  <div class="workshop-stack">
-    <img src="/images/workshop/8.jpg" alt="Emballage Eastern Lion" loading="lazy">
-  </div>
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/1.jpg" alt="Ligne de production Eastern Lion" loading="lazy">
-  <img src="/images/workshop/10.jpg" alt="Ligne de production Eastern Lion" loading="lazy">
-  <img src="/images/workshop/3.jpg" alt="Ligne de production Eastern Lion" loading="lazy">
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/6.jpg" alt="Atelier Eastern Lion" loading="lazy">
-  <img src="/images/workshop/7.jpg" alt="Atelier Eastern Lion" loading="lazy">
-  <img src="/images/workshop/9.jpg" alt="Atelier Eastern Lion" loading="lazy">
-</div>

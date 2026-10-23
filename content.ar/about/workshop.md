@@ -10,29 +10,47 @@ breadcrumb:
   - name: نبذة عن الشركة
     url: /about/
   - name: ورشتنا
+workshop_galleries:
+  - title: "نظرة عامة على الورشة"
+    images:
+      - src: "/images/workshop/cangku1-200-200.jpg"
+        alt: "الورشة 1"
+        caption: "الورشة 1"
+      - src: "/images/workshop/cangku2-200-200.jpg"
+        alt: "الورشة 2"
+        caption: "الورشة 2"
+      - src: "/images/workshop/cangku3-200-200.jpg"
+        alt: "الورشة 3"
+        caption: "الورشة 3"
+      - src: "/images/workshop/cangku5-200-200.jpg"
+        alt: "الورشة 4"
+        caption: "الورشة 4"
+      - src: "/images/workshop/cangku6-200-200.jpg"
+        alt: "الورشة 5"
+        caption: "الورشة 5"
+      - src: "/images/workshop/8.jpg"
+        alt: "منطقة التعبئة"
+        caption: "منطقة التعبئة"
+  - title: "خط الإنتاج"
+    images:
+      - src: "/images/workshop/1.jpg"
+        alt: "خط الإنتاج"
+        caption: "خط الإنتاج"
+      - src: "/images/workshop/10.jpg"
+        alt: "خط الإنتاج"
+        caption: "خط الإنتاج"
+      - src: "/images/workshop/3.jpg"
+        alt: "خط الإنتاج"
+        caption: "خط الإنتاج"
+  - title: "التجميع والاختبار"
+    images:
+      - src: "/images/workshop/6.jpg"
+        alt: "منطقة التجميع"
+        caption: "منطقة التجميع"
+      - src: "/images/workshop/7.jpg"
+        alt: "منطقة التجميع"
+        caption: "منطقة التجميع"
+      - src: "/images/workshop/9.jpg"
+        alt: "منطقة التجميع"
+        caption: "منطقة التجميع"
 ---
-
-<div class="workshop-top">
-  <div class="workshop-thumbs">
-    <img src="/images/workshop/cangku1-200-200.jpg" alt="ورشة Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku2-200-200.jpg" alt="ورشة Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku3-200-200.jpg" alt="ورشة Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku5-200-200.jpg" alt="ورشة Eastern Lion" loading="lazy">
-    <img src="/images/workshop/cangku6-200-200.jpg" alt="ورشة Eastern Lion" loading="lazy">
-  </div>
-  <div class="workshop-stack">
-    <img src="/images/workshop/8.jpg" alt="تغليف Eastern Lion" loading="lazy">
-  </div>
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/1.jpg" alt="خط إنتاج Eastern Lion" loading="lazy">
-  <img src="/images/workshop/10.jpg" alt="خط إنتاج Eastern Lion" loading="lazy">
-  <img src="/images/workshop/3.jpg" alt="خط إنتاج Eastern Lion" loading="lazy">
-</div>
-
-<div class="three-grid">
-  <img src="/images/workshop/6.jpg" alt="ورشة Eastern Lion" loading="lazy">
-  <img src="/images/workshop/7.jpg" alt="ورشة Eastern Lion" loading="lazy">
-  <img src="/images/workshop/9.jpg" alt="ورشة Eastern Lion" loading="lazy">
-</div>
