@@ -1,0 +1,990 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Trang chủ"
+[nav_products]
+other = "Sản phẩm"
+[nav_company]
+other = "Hồ sơ công ty"
+[nav_service]
+other = "Dịch vụ"
+[nav_video]
+other = "Video"
+[nav_faq]
+other = "Câu hỏi thường gặp"
+[nav_contact]
+other = "Liên hệ"
+
+[menu_company_profile]
+other = "Hồ sơ công ty"
+[menu_history]
+other = "Lịch sử phát triển"
+[menu_team]
+other = "Đội ngũ của chúng tôi"
+[menu_qualification]
+other = "Chứng nhận"
+[menu_news]
+other = "Trung tâm tin tức"
+[menu_workshop]
+other = "Xưởng sản xuất của chúng tôi"
+
+[about_us]
+other = "Giới thiệu"
+[product_center]
+other = "Trung tâm sản phẩm"
+[product_category]
+other = "Danh mục sản phẩm"
+
+[footer_quick_links]
+other = "Liên kết nhanh"
+[footer_company_profile]
+other = "Hồ sơ công ty"
+[footer_product_category]
+other = "Danh mục sản phẩm"
+[footer_golden_supplier]
+other = "Nhà cung cấp vàng tại Trung Quốc"
+[footer_tel]
+other = "Điện thoại"
+[footer_email]
+other = "Email"
+[footer_web]
+other = "Website"
+[footer_copyright]
+other = "Bản quyền © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Mọi quyền được bảo lưu."
+
+[float_telephone]
+other = "Điện thoại"
+[float_email]
+other = "Email"
+[float_message]
+other = "Để lại tin nhắn"
+
+[search_placeholder]
+other = "Nhập từ khóa"
+[language_label]
+other = "Tiếng Việt"
+
+[product_availability]
+other = "Tình trạng"
+[product_quantity]
+other = "Số lượng"
+[product_in_stock]
+other = "Còn hàng"
+[product_inquire]
+other = "Yêu cầu báo giá"
+[product_add_basket]
+other = "Nhắn tin qua WhatsApp"
+[product_description]
+other = "Mô tả sản phẩm"
+[product_share]
+other = "Chia sẻ:"
+[product_category_label]
+other = "Danh mục"
+[product_rating_note]
+other = "Công suất mang tính tham khảo. Vui lòng liên hệ để nhận bảng thông số kỹ thuật mới nhất và xác nhận tình trạng hàng."
+
+[contact_get_in_touch]
+other = "Liên hệ với chúng tôi"
+[contact_intl]
+other = "Bộ phận quốc tế"
+[contact_manufacturer]
+other = "Nhà sản xuất"
+[contact_more_info]
+other = "Liên hệ với chúng tôi để biết thêm thông tin."
+[contact_name]
+other = "Họ và tên của bạn *"
+[contact_email]
+other = "Email của bạn *"
+[contact_phone]
+other = "Điện thoại / WhatsApp"
+[contact_company]
+other = "Công ty"
+[contact_product]
+other = "Sản phẩm bạn quan tâm"
+[contact_message]
+other = "Nội dung tin nhắn của bạn *"
+[contact_submit]
+other = "Gửi liên hệ"
+
+[news_views]
+other = "Lượt xem"
+[news_author]
+other = "Tác giả"
+[news_publish_time]
+other = "Thời gian đăng"
+[news_origin]
+other = "Nguồn gốc"
+[news_site]
+other = "Trang web"
+[news_sidebar_title]
+other = "Tin tức"
+[news_back]
+other = "Quay lại tin tức"
+[news_read_more]
+other = "Xem thêm"
+
+[search_results]
+other = "Kết quả tìm kiếm cho"
+[not_found]
+other = "Không tìm thấy trang"
+[not_found_text]
+other = "Trang bạn tìm kiếm có thể đã bị di chuyển hoặc không còn tồn tại."
+[back_home]
+other = "Quay lại trang chủ"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Máy phát điện có chổi than"
+[cat_brushless_alternator]
+other = "Máy phát điện không chổi than"
+[cat_diesel_generator_set]
+other = "Bộ phát điện diesel"
+[cat_50hz_diesel_generator_set]
+other = "Bộ phát điện diesel 50HZ"
+[cat_60hz_diesel_generator_set]
+other = "Bộ phát điện diesel 60HZ"
+[cat_engine_cummins]
+other = "Dòng bộ phát điện diesel Cummins"
+[cat_engine_cummins_2]
+other = "Bộ phát điện diesel Cummins"
+[cat_engine_huachai]
+other = "Dòng bộ phát điện diesel Huachai"
+[cat_engine_kofo]
+other = "Dòng bộ phát điện diesel Kofo"
+[cat_engine_longxin]
+other = "Dòng bộ phát điện diesel Longxin"
+[cat_engine_lovol]
+other = "Dòng bộ phát điện diesel Lovol"
+[cat_engine_perkins]
+other = "Dòng bộ phát điện diesel Perkins"
+[cat_engine_woling]
+other = "Dòng bộ phát điện diesel Woling"
+[cat_engine_wuxi]
+other = "Dòng bộ phát điện diesel Wuxi"
+[cat_engine_yangdong]
+other = "Dòng bộ phát điện diesel Yangdong"
+[cat_engine_yto]
+other = "Dòng bộ phát điện diesel YTO"
+[cat_engine_yuchai]
+other = "Dòng bộ phát điện diesel Yuchai"
+[cat_engine_yunnei]
+other = "Dòng bộ phát điện diesel Yunnei"
+[cat_engine_yuxing]
+other = "Dòng bộ phát điện diesel Yuxing"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Nhận báo giá"
+[topbar_hours]
+other = "Thứ 2 – Thứ 7 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Cần bộ phát điện cho dự án của bạn?"
+[cta_text]
+other = "Hãy cho chúng tôi biết công suất, điện áp và mục đích sử dụng — kỹ sư của chúng tôi sẽ phản hồi trong vòng một ngày làm việc."
+[cta_button]
+other = "Gửi yêu cầu báo giá"
+[hero_cta_products]
+other = "Xem sản phẩm"
+[hero_cta_quote]
+other = "Yêu cầu báo giá"
+[view_details]
+other = "Xem chi tiết"
+[why_us]
+other = "Tại sao chọn Eastern Lion"
+[why_us_title]
+other = "Hơn 30 năm chế tạo máy phát điện bền bỉ, vận hành liên tục"
+[why_us_text]
+other = "Từ quấn stato đến kiểm tra đầy tải, mỗi sản phẩm được lắp ráp và kiểm tra tại xưởng của chính chúng tôi ở Phúc Kiến và Giang Tô."
+
+[product_center_eyebrow]
+other = "Sản phẩm chúng tôi chế tạo"
+[hero_cta_note]
+other = "Phản hồi trong vòng một ngày làm việc"
+
+[filter_type]
+other = "Loại"
+[filter_power]
+other = "Công suất"
+[filter_hz]
+other = "Tần số"
+[filter_all]
+other = "Tất cả"
+[filter_alternator]
+other = "Máy phát điện xoay chiều"
+[filter_genset]
+other = "Bộ phát điện"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "mẫu"
+[filter_empty]
+other = "Không có mẫu nào khớp với các bộ lọc này — vui lòng liên hệ với chúng tôi để biết các công suất khác."
+[products_coming_soon]
+other = "Danh mục sản phẩm đang được cập nhật. Vui lòng liên hệ để nhận danh mục đầy đủ."
+
+[related_title]
+other = "Mẫu liên quan"
+[inquiry_title]
+other = "Cần báo giá?"
+[inquiry_text]
+other = "Hãy gửi cho chúng tôi công suất, điện áp và mục đích sử dụng — kỹ sư của chúng tôi sẽ phản hồi trong vòng một ngày làm việc."
+[inquiry_button]
+other = "Yêu cầu báo giá"
+[inquiry_whatsapp]
+other = "Nhắn tin qua WhatsApp"
+
+[search_empty]
+other = "Không tìm thấy trang phù hợp. Hãy thử tên mẫu, hãng động cơ hoặc dải công suất."
+[search_loading]
+other = "Đang tìm kiếm…"
+[search_all]
+other = "Xem tất cả sản phẩm"
+
+[form_required]
+other = "Vui lòng điền đầy đủ các trường được đánh dấu."
+[form_name_required]
+other = "Vui lòng nhập tên của bạn."
+[form_email]
+other = "Vui lòng nhập địa chỉ email hợp lệ."
+[form_message_required]
+other = "Vui lòng cho chúng tôi biết nhu cầu của bạn."
+[form_success_title]
+other = "Cảm ơn bạn, yêu cầu báo giá đã được gửi"
+[form_success_text]
+other = "Kỹ sư kinh doanh của chúng tôi đã nhận được yêu cầu của bạn và sẽ phản hồi trong vòng một ngày làm việc. Một email xác nhận kèm mã tham chiếu yêu cầu đang được gửi đến hộp thư của bạn."
+[form_again]
+other = "Gửi yêu cầu khác"
+
+
+[latest_news]
+other = "Tin tức mới nhất"
+
+[spec_at_a_glance]
+other = "Thông số kỹ thuật tổng quan"
+[spec_category]
+other = "Danh mục"
+[spec_type]
+other = "Loại"
+[spec_frequency]
+other = "Tần số"
+[spec_power]
+other = "Dải công suất"
+[spec_models]
+other = "Mẫu máy"
+[spec_note]
+other = "Dải công suất được lấy từ bảng công suất tiêu chuẩn 50 / 60 Hz trên từng trang sản phẩm. Các điện áp và công suất khác có sẵn theo yêu cầu."
+
+[skip_to_content]
+other = "Bỏ qua đến nội dung"
+
+[search_button]
+other = "Tìm kiếm"
+[pager]
+other = "Mẫu khác"
+[pager_prev]
+other = "Trước"
+[pager_next]
+other = "Sau"
+
+[search_model]
+other = "Mẫu máy"
+
+[jump_to_model]
+other = "Chuyển đến mẫu máy"
+
+[alt_workshop]
+other = "Dây chuyền sản xuất máy phát điện xoay chiều Eastern Lion"
+[alt_products]
+other = "Máy phát điện không chổi than Eastern Lion"
+[alt_packing]
+other = "Đóng gói và kiểm tra Eastern Lion"
+
+[search_cats]
+other = "Danh mục"
+[coverage_title]
+other = "Dòng nào phủ dải công suất nào?"
+[footer_qr]
+other = "Quét mã để liên hệ với đội ngũ kinh doanh"
+
+[service_process]
+other = "Cách chúng tôi làm việc cùng bạn"
+[step1_title]
+other = "Nhu cầu"
+[step1_text]
+other = "Hãy cho chúng tôi biết công suất, điện áp, tần số và mục đích sử dụng — hoặc gửi cho chúng tôi một mẫu máy trong danh mục của chúng tôi."
+[step2_title]
+other = "Giải pháp & báo giá"
+[step2_text]
+other = "Kỹ sư của chúng tôi lựa chọn động cơ, máy phát điện xoay chiều và bộ điều khiển, sau đó gửi báo giá đầy đủ kèm thời gian giao hàng."
+[step3_title]
+other = "Sản xuất & kiểm tra"
+[step3_text]
+other = "Máy được lắp ráp tại xưởng của chúng tôi và được kiểm tra tải trước khi rời khỏi nhà máy."
+[step4_title]
+other = "Giao hàng & hỗ trợ"
+[step4_text]
+other = "Vận chuyển biển hoặc hàng không, hướng dẫn vận hành, phụ tùng và hỗ trợ kỹ thuật trọn đời."
+[applications]
+other = "Ứng dụng"
+[app1_alt]
+other = "Bộ phát điện Eastern Lion"
+[app2_alt]
+other = "Đóng gói và xuất khẩu của Eastern Lion"
+[app3_alt]
+other = "Cơ sở sản xuất Eastern Lion"
+
+[app1_title]
+other = "Ứng dụng 1"
+[app1_text]
+other = "Ví dụ ứng dụng trong nước: dự án hầm Enshi của Cục Đường sắt số 12 Trung Quốc, dự án cầu vượt sông Trường Giang của Cục Đường sắt số 13 Trung Quốc, Cục Thuế Quốc gia Hồ Bắc, Bệnh viện Tongji Vũ Hán, Trường Trung học số 3 Ôn Châu Chiết Giang, Khu căn hộ Lingkun Chiết Giang"
+[app2_title]
+other = "Ứng dụng 2"
+[app2_text]
+other = "Dự án cầu đường bộ vượt sông Trường Giang Hồ Bắc của Cục Đường sắt số 13 Trung Quốc."
+[app3_title]
+other = "Ứng dụng 3"
+[app3_text]
+other = "Dự án hầm Enshi của Cục Đường sắt số 12 Trung Quốc."
+
+[faq_jump]
+other = "Chuyển đến câu hỏi"
+[faq_cta_title]
+other = "Không tìm thấy câu trả lời?"
+[faq_cta_text]
+other = "Hãy gửi cho chúng tôi công suất, điện áp và mục đích sử dụng, kỹ sư của chúng tôi sẽ phản hồi trong vòng một ngày làm việc."
+[faq_cta_button]
+other = "Hỏi kỹ sư của chúng tôi"
+
+[more_news]
+other = "Tin tức khác"
+
+[contact_drawing]
+other = "Bản vẽ / tham số kỹ thuật (không bắt buộc)"
+[contact_drawing_hint]
+other = "Hãy cung cấp số bản vẽ hoặc đính kèm tệp khi phản hồi email của chúng tôi — kỹ sư của chúng tôi sẽ báo giá chính xác theo bản vẽ của bạn."
+
+[zoom_image]
+other = "Nhấp để phóng to"
+[video_facade]
+other = "Phát video"
+
+[video_title]
+other = "Xem sản phẩm của chúng tôi"
+[video_intro]
+other = "Video tham quan nhà máy, dây chuyền sản xuất và kiểm tra bộ phát điện. Trình phát chỉ được tải khi bạn nhấn phát."
+[video_1]
+other = "Bộ phát điện và đóng gói"
+[video_2]
+other = "Dây chuyền sản xuất"
+[video_3]
+other = "Cơ sở sản xuất"
+
+[compare_add]
+other = "Thêm vào so sánh"
+[compare_clear]
+other = "Xóa"
+[compare_open]
+other = "So sánh"
+[compare_models]
+other = "mẫu"
+[compare_open_model]
+other = "Mở"
+[compare_title]
+other = "So sánh mẫu máy"
+[compare_power]
+other = "Dải công suất"
+[compare_freq]
+other = "Tần số"
+[compare_count]
+other = "Mẫu máy"
+[compare_engine]
+other = "Động cơ"
+[compare_alternator]
+other = "Máy phát điện xoay chiều"
+[compare_controller]
+other = "Bộ điều khiển"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Khám phá các danh mục sản phẩm Eastern Lion: bộ phát điện diesel, máy phát điện xoay chiều có chổi than và không chổi than từ 2 kW đến 2000 kW, sản xuất tại Trung Quốc."
+[seo_tag_desc]
+other = "Tin tức và cập nhật sản phẩm từ Fuan Eastern Lion Electric Machines Co., Ltd, phân loại theo chủ đề."
+[alt_factory]
+other = "Nhà máy bộ phát điện Eastern Lion tại Phúc An, Phúc Kiến"
+
+[breadcrumb_here]
+other = "Bạn đang ở đây:"
+[footer_about]
+other = "Giới thiệu"
+[spec_genset]
+other = "Thông số kỹ thuật bộ phát điện"
+[spec_engine]
+other = "Động cơ"
+[spec_alternator]
+other = "Máy phát điện không chổi than"
+[spec_controller]
+other = "Bộ điều khiển"
+[spec_datasheet]
+other = "Bảng thông số kỹ thuật"
+[spec_detail]
+other = "Chi tiết"
+[col_model]
+other = "Mẫu máy"
+[col_prime_kw]
+other = "Công suất chính (kW)"
+[col_prime_kva]
+other = "Công suất chính (kVA)"
+[col_standby_kw]
+other = "Công suất dự phòng (kW)"
+[col_standby_kva]
+other = "Công suất dự phòng (kVA)"
+[col_engine_model]
+other = "Model động cơ"
+[col_engine_power]
+other = "Công suất động cơ (kW)"
+[col_alt_model]
+other = "Model máy phát điện xoay chiều"
+[col_alt_power]
+other = "Công suất máy phát điện xoay chiều (kW)"
+[col_controller]
+other = "Bộ điều khiển"
+[col_datasheet]
+other = "Bảng thông số"
+[col_50hz_kw]
+other = "Công suất đầu ra 50Hz (kW)"
+[col_50hz_kva]
+other = "Công suất đầu ra 50Hz (kVA)"
+[col_60hz_kw]
+other = "Công suất đầu ra 60Hz (kW)"
+[col_60hz_kva]
+other = "Công suất đầu ra 60Hz (kVA)"
+[col_sae_size]
+other = "Kích thước SAE"
+[col_core_length]
+other = "Chiều dài lõi (mm)"
+[news_center_title]
+other = "Trung tâm tin tức"
+
+[finder_eyebrow]
+other = "Trình tìm công suất"
+[finder_title]
+other = "Mẫu nào phù hợp với tải của bạn?"
+[finder_text]
+other = "Nhập công suất bạn cần và chúng tôi sẽ liệt kê mọi mẫu trong dải này có thể đáp ứng — kèm động cơ, máy phát điện xoay chiều và bộ điều khiển của từng mẫu."
+[finder_quick]
+other = "Mức tải thường gặp"
+[finder_kw]
+other = "Công suất yêu cầu"
+[finder_kw_ph]
+other = "ví dụ 200"
+[finder_hz]
+other = "Tần số"
+[finder_go]
+other = "Tìm mẫu máy"
+[finder_head]
+other = "{n} dòng đáp ứng {kw} kW ở {hz} Hz"
+[finder_head_one]
+other = "1 dòng đáp ứng {kw} kW ở {hz} Hz"
+[finder_more]
+other = "+{n} mẫu khác trong dòng này đáp ứng mức tải này"
+[finder_open]
+other = "Mở bảng thông số"
+[finder_inquire]
+other = "Nhận báo giá"
+[finder_none]
+other = "Không có mẫu nào trong dải này đáp ứng {kw} kW."
+[finder_none_closest]
+other = "Mẫu gần nhất là {model} ({kw} kW) — hãy cho chúng tôi biết mức tải, kỹ sư của chúng tôi sẽ tính công suất phù hợp cho bạn."
+[finder_none_max]
+other = "Hãy gửi cho chúng tôi mức tải, chúng tôi sẽ báo giá giải pháp chế tạo riêng hoặc nối song song."
+[finder_model_standby]
+other = "dự phòng"
+[finder_model_prime]
+other = "chính"
+[finder_model_output]
+other = "đầu ra"
+[finder_more_series]
+other = "Hiển thị {n} dòng nữa"
+
+[search_spec]
+other = "Các mẫu đáp ứng {kw} kW ở {hz} Hz"
+[search_spec_none]
+other = "Không có mẫu nào đáp ứng {kw} kW — hãy cho chúng tôi biết mức tải, chúng tôi sẽ tính công suất phù hợp."
+[search_cover]
+other = "dự phòng"
+[search_standby]
+other = "dự phòng"
+[search_prime]
+other = "chính"
+[search_output]
+other = "đầu ra"
+[inquiry_power]
+other = "Công suất yêu cầu"
+[model_nav_label]
+other = "Các mẫu lân cận"
+[model_nav_hint]
+other = "Chọn một mẫu trong bảng để xem các mẫu có công suất kế bên."
+[model_nav_current]
+other = "hiện tại"
+[model_nav_up]
+other = "lớn hơn"
+[model_nav_down]
+other = "nhỏ hơn"
+[model_nav_same]
+other = "cùng công suất"
+[contact_models]
+other = "Các mẫu đề xuất"
+[contact_model_add_btn]
+other = "Thêm"
+[inquiry_models]
+other = "Mẫu máy"
+[compare_quote]
+other = "Yêu cầu báo giá cho {n} mẫu này"
+
+[spec_series]
+other = "Dòng"
+[download_all_title]
+other = "Toàn bộ bảng thông số trong một tệp"
+[download_all_text]
+other = "Mọi mẫu của mọi dòng kèm công suất, động cơ, máy phát điện xoay chiều và bộ điều khiển — một tệp csv cho toàn bộ danh mục."
+[download_all_button]
+other = "Tải toàn bộ thông số (CSV)"
+[download_file]
+other = "Tệp"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "In / PDF"
+[download_title_link]
+other = "Trung tâm tải xuống"
+[preview_title]
+other = "Kiểm tra yêu cầu của bạn trước khi gửi"
+[preview_hint]
+other = "Đây là cách yêu cầu của bạn được gửi đến kỹ sư của chúng tôi — bạn vẫn có thể chỉnh sửa nội dung."
+[preview_mail]
+other = "Mở trong ứng dụng email"
+[preview_copy]
+other = "Sao chép nội dung"
+[preview_back]
+other = "Quay lại biểu mẫu"
+[preview_copied]
+other = "Đã sao chép vào bộ nhớ tạm."
+[inquiry_salutation]
+other = "Kính gửi đội ngũ kinh doanh Eastern Lion,"
+[inquiry_interested]
+other = "Tôi quan tâm đến (các) bộ phát điện sau:"
+[inquiry_model]
+other = "Mẫu máy"
+[inquiry_required_power]
+other = "Công suất yêu cầu"
+[inquiry_drawing]
+other = "Bản vẽ / tham số kỹ thuật"
+[inquiry_message]
+other = "Nội dung"
+[inquiry_contact]
+other = "Thông tin liên hệ"
+[inquiry_name]
+other = "Họ tên"
+[inquiry_company]
+other = "Công ty"
+[inquiry_phone]
+other = "Điện thoại / WhatsApp"
+[inquiry_email]
+other = "Email"
+[inquiry_footer]
+other = "Gửi từ easternlion.cn"
+[inquiry_subject]
+other = "Yêu cầu báo giá bộ phát điện"
+[finder_title_slim]
+other = "Chưa chắc mẫu nào phù hợp?"
+[finder_fold_title]
+other = "Tìm mẫu đáp ứng mức tải của tôi"
+[compare_selected]
+other = "đã chọn"
+[resume_models]
+other = "Bạn đang xem"
+[resume_continue]
+other = "Tiếp tục yêu cầu báo giá"
+[resume_close]
+other = "Đóng"
+[preview_whatsapp]
+other = "Gửi qua WhatsApp"
+[preview_download]
+other = "Tải yêu cầu báo giá"
+[contact_send]
+other = "Gửi yêu cầu"
+[preview_send]
+other = "Gửi yêu cầu"
+[preview_failed]
+other = "Không thể gửi yêu cầu tự động. Vui lòng sử dụng một trong các lựa chọn bên dưới, hoặc gửi email đến sales@easternlion.cn."
+[form_success_receipt]
+other = "Xem nội dung chúng tôi đã nhận"
+[contact_sending]
+other = "Đang gửi…"
+[mm_model]
+other = "Mẫu máy"
+[mm_load]
+other = "Tải (kW)"
+[mm_hz]
+other = "Tần số"
+[contact_models_hint]
+other = "Thêm mọi mẫu bạn muốn chúng tôi báo giá — từng mẫu kèm công suất và tần số riêng nếu khác nhau. Kỹ sư của chúng tôi sẽ phản hồi với giá và thời gian giao hàng cho từng mẫu."
+[contact_model_add]
+other = "Thêm mẫu khác (ví dụ GF/GFS-C200)"
+[service_schema_type]
+other = "Cung cấp bộ phát điện, phụ tùng và dịch vụ hậu mãi"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Thông số kỹ thuật chính"
+[ks_power]
+other = "Dải công suất"
+[ks_frequency]
+other = "Tần số"
+[ks_models]
+other = "Mẫu máy"
+[ks_engine]
+other = "Động cơ"
+[ks_alternator]
+other = "Máy phát điện xoay chiều"
+[ks_controller]
+other = "Bộ điều khiển"
+[ks_warranty]
+other = "Bảo hành"
+[ks_warranty_value]
+other = "1 năm hoặc 1000 giờ"
+[ks_options]
+other = "Lựa chọn"
+[ks_options_value]
+other = "Khung hở, vỏ cách âm, rơ moóc, ATS và hệ thống nối song song"
+[ks_moq]
+other = "MOQ"
+[ks_moq_value]
+other = "1 bộ"
+[product_copy_link]
+other = "Sao chép liên kết"
+[product_link_copied]
+other = "Đã sao chép liên kết"
+[guide_title]
+other = "Cách chọn dòng này"
+[guide_intro]
+other = "Sáu quyết định bao phủ hầu hết mọi đơn hàng bộ phát điện. Dưới đây là cách đưa ra từng quyết định — và những gì dòng này mang lại cho bạn."
+[guide_col_decision]
+other = "Quyết định của bạn"
+[guide_col_how]
+other = "Cách quyết định"
+[guide_col_this]
+other = "Dòng này"
+[guide_engine]
+other = "Hãng động cơ"
+[guide_engine_how]
+other = "Động cơ quyết định tính sẵn có của phụ tùng và thời gian phản hồi của đối tác dịch vụ tại địa phương. Hãy so sánh mạng lưới dịch vụ trước, giá cả sau."
+[guide_engine_none]
+other = "Chỉ máy phát điện xoay chiều"
+[guide_engine_count]
+other = "%v mẫu trong dòng này"
+[guide_duty]
+other = "Công suất chính hay dự phòng"
+[guide_duty_how]
+other = "Công suất chính dành cho bộ phát chạy 8 đến 12 giờ mỗi ngày, công suất dự phòng dùng cho sự cố khẩn cấp. Chọn công suất bộ phát để mức tải của bạn nằm ở 70 đến 80 % công suất dự phòng — như vậy động cơ hoạt động trong khoảng 50 % đến 75 % tải, nơi mức tiêu hao nhiên liệu tốt nhất."
+[guide_duty_value]
+other = "Dự phòng %v–%v kW, chính %v–%v kW"
+[guide_voltage]
+other = "Điện áp và tần số"
+[guide_voltage_how]
+other = "400/230 V ở 50 Hz cho châu Á, châu Âu, châu Phi và Trung Đông, 230/400 V ở 60 Hz cho châu Mỹ. Máy phát điện xoay chiều và bảng điều khiển phải phù hợp với lưới điện bạn kết nối."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Vỏ máy"
+[guide_enclosure_how]
+other = "Khung hở cho phòng máy, vỏ cách âm cho vị trí ngoài trời trong đô thị (khoảng 65 dB(A) ở 7 m), thùng container cho cụm 1000 kW và rơ moóc cho bộ phát di động."
+[guide_enclosure_value]
+other = "Lựa chọn khung hở, vỏ cách âm, rơ moóc và container"
+[guide_starting]
+other = "Khởi động và chuyển nguồn"
+[guide_starting_how]
+other = "Bộ phát khẩn cấp cần khởi động điện và bộ chuyển nguồn tự động, nếu không máy sẽ đứng im cho đến khi lưới điện mất điện. Khởi động thủ công và khởi động bằng khí nén vẫn có sẵn cho các ứng dụng đặc biệt."
+[guide_starting_value]
+other = "Khởi động điện, ATS (tự động và thủ công) theo yêu cầu"
+[guide_parallel]
+other = "Nối song song"
+[guide_parallel_how]
+other = "Nhiều hơn một bộ phát đồng nghĩa với hệ thống quản lý điện, bộ chuyển nguồn lớn hơn và bảng điều khiển cho phép các bộ chia sẻ tải và thay thế nhau."
+[guide_parallel_value]
+other = "Hệ thống nối song song kèm quản lý điện"
+[guide_environment]
+other = "Điều kiện vị trí lắp đặt"
+[guide_environment_how]
+other = "Mỗi 1000 m độ cao và mỗi 10 °C vượt nhiệt độ môi trường tiêu chuẩn làm giảm khoảng 3 % công suất; vị trí có hơi muối hoặc nhiều bụi cần vỏ cách âm và bảo dưỡng thường xuyên hơn."
+[guide_environment_value]
+other = "Công suất tiêu chuẩn ở 0–50 °C, giảm công suất theo yêu cầu"
+[guide_foot]
+other = "Hãy gửi cho chúng tôi mức tải, điện áp và vị trí lắp đặt, chúng tôi sẽ gửi lại mẫu máy phù hợp, giá và thời gian giao hàng."
+[wa_from]
+other = "Yêu cầu báo giá từ easternlion.cn"
+[wa_series]
+other = "Dòng"
+[wa_model]
+other = "Mẫu máy"
+[wa_power]
+other = "Công suất yêu cầu"
+[wa_standby]
+other = "Công suất dự phòng"
+[wa_link]
+other = "Liên kết"
+[search_guide]
+other = "Cách chọn"
+[search_guide_more]
+other = "Đọc hướng dẫn đầy đủ"
+[search_compare]
+other = "So sánh"
+[search_models]
+other = "mẫu"
+[inquiry_ref_label]
+other = "Mã tham chiếu yêu cầu của bạn:"
+[form_success_whatsapp]
+other = "Cần gấp hơn? Nhắn tin cho chúng tôi qua"
+[app_eyebrow]
+other = "Ứng dụng"
+[app_index_title]
+other = "Bộ phát điện theo ứng dụng"
+[app_index_text]
+other = "Hãy bắt đầu từ công việc bộ phát của bạn phải đảm nhận. Mỗi trang ứng dụng hiển thị công suất bạn cần, các mẫu dự phòng đáp ứng được, những điểm kỹ thuật quan trọng tại hiện trường và các mẫu chúng tôi chế tạo cho ứng dụng đó."
+[app_sizing_title]
+other = "Cách chọn công suất bộ phát"
+[app_sizing_text]
+other = "Chế độ dự phòng: bộ phát phải chịu toàn bộ tải kết nối cộng dòng khởi động, vì vậy chúng tôi chọn công suất lớn hơn tải vận hành. Bảng dưới đây liệt kê công suất dự phòng của các mẫu thực tế cho từng mức tải điển hình của ứng dụng này."
+[app_sizing_load]
+other = "Tải điển hình"
+[app_sizing_standby]
+other = "Công suất dự phòng cần xem"
+[app_sizing_models]
+other = "Các mẫu đáp ứng"
+[app_sizing_note]
+other = "Công suất theo ISO 8528. Mẫu cuối cùng phụ thuộc vào điện áp, thời gian hoạt động liên tục của nhiên liệu, vỏ máy và nhiệt độ môi trường - hãy gửi cho chúng tôi mức tải, chúng tôi sẽ xác nhận bằng văn bản."
+[app_sizing_oversize]
+other = "Liên hệ với chúng tôi cho giải pháp trên 2000 kW"
+[app_requirements_title]
+other = "Điều ứng dụng này cần"
+[app_series_title]
+other = "Các dòng dùng cho ứng dụng này"
+[app_model_word]
+other = "mẫu"
+[app_faq_title]
+other = "Câu hỏi của người mua về ứng dụng này"
+[app_fact_load]
+other = "Dải công suất"
+[app_fact_duty]
+other = "Chế độ vận hành"
+[app_fact_duty_value]
+other = "Dự phòng"
+[app_fact_hz]
+other = "Tần số"
+[app_fact_engine]
+other = "Động cơ"
+[app_cta_title]
+other = "Cho chúng tôi biết mức tải và vị trí"
+[app_cta_text]
+other = "Hãy gửi tải vận hành, điện áp và vị trí bộ phát cần hoạt động. Kỹ sư của chúng tôi sẽ phản hồi bằng mẫu máy, sơ đồ bố trí và giá trong vòng một ngày làm việc."
+[app_cta_button]
+other = "Yêu cầu báo giá"
+[app_wa_text]
+other = "Yêu cầu báo giá: bộ phát điện %s"
+[app_other_title]
+other = "Ứng dụng khác"
+[datasheet_sub]
+other = "Bảng thông số kỹ thuật bộ phát điện"
+[datasheet_print]
+other = "In hoặc lưu thành PDF"
+[datasheet_back]
+other = "Quay lại dòng sản phẩm"
+[datasheet_contact]
+other = "Yêu cầu của bạn"
+[datasheet_note]
+other = "Ghi chú"
+[datasheet_note_text]
+other = "Công suất theo ISO 8528. Cấu hình cuối cùng phụ thuộc vào điện áp, thời gian hoạt động liên tục của nhiên liệu, vỏ máy và nhiệt độ môi trường."
+[download_datasheet]
+other = "Bảng thông số kỹ thuật"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Các mẫu đáp ứng:"
+[mm_no_cover]
+other = "Không có mẫu nào trong danh mục đáp ứng mức tải đó."
+[mm_picked]
+other = "đã chọn"
+[ui_close]
+other = "Đóng"
+[ui_remove]
+other = "Xóa"
+[lang_label]
+other = "Đổi ngôn ngữ"
+[nav_menu]
+other = "Menu"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "H"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v và %[2]v"
+[kind_genset]
+other = "bộ phát điện diesel"
+[kind_alternator]
+other = "máy phát điện xoay chiều"
+[app_summary_tpl]
+other = "Về %[1]s, bộ phát điện diesel dự phòng bạn cần có công suất từ %[2]v đến %[3]v kW; Eastern Lion chế tạo các bộ phát này với động cơ %[4]s ở %[5]s Hz, dạng khung hở, vỏ cách âm, rơ moóc, ATS và nối song song, và mỗi bộ đều được kiểm tra đầy tải trước khi xuất xưởng."
+[guide_sum_engine]
+other = "%[1]s là dòng bộ phát điện diesel %[2]v Hz của Eastern Lion, chế tạo với động cơ %[3]s, công suất từ %[4]v đến %[5]v kW với %[6]d mẫu. Dòng này được dùng cho %[7]s."
+[guide_sum_plain]
+other = "%[1]s là dòng %[2]v Hz của Eastern Lion, loại %[3]s, công suất từ %[4]v đến %[5]v kW với %[6]d mẫu, được cung cấp cho %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "toàn bộ nội dung trang web"
+[llms_intro]
+other = '''Thương hiệu: Eastern Lion (福建东方电机). Trang web: %[1]s
+Thành lập năm 1987 tại Phúc An, Phúc Kiến. Nhà sản xuất bộ phát điện diesel, máy phát điện
+xoay chiều có chổi than và không chổi than, từ 2 kW đến 2000 kW, 50 Hz và 60 Hz. Xưởng sở hữu:
+sản xuất máy phát điện xoay chiều, lắp ráp bộ phát điện, kiểm tra đầy tải. Khoảng 15.000 máy
+phát điện xoay chiều và 2.000 bộ phát điện mỗi năm. 35 cơ sở kinh doanh và dịch vụ tại Trung
+Quốc. Xuất khẩu sang Nga, Indonesia, Philippines, Nam Phi, Pakistan, Vương quốc Anh và các thị
+trường khác.
+
+Liên hệ: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Nhà máy: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Văn phòng quốc tế: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (thương hiệu: Eastern Lion, 福建东方电机) là nhà
+> sản xuất Trung Quốc về bộ phát điện diesel, máy phát điện xoay chiều có chổi than và không chổi
+> than, thành lập năm 1987 tại Phúc An, Phúc Kiến. Công ty chế tạo máy phát điện xoay chiều và
+> bộ phát điện hoàn chỉnh tại xưởng của chính mình, kiểm tra tải từng máy trước khi xuất xưởng
+> và bán ra toàn thế giới — 2 kW đến 2000 kW, 50 Hz và 60 Hz, với các lựa chọn động cơ Cummins,
+> Perkins, Yuchai, YTO, Weichai, Kofo, Huachai, Longxin, Lovol, Woling, Yangdong, Yunnei,
+> Yuxing và Kaixun.
+
+## Trang web này là gì
+
+- 44 dòng sản phẩm, mỗi dòng có bảng thông số đầy đủ (mẫu, công suất chính và dự phòng, động
+  cơ, máy phát điện xoay chiều, bộ điều khiển) và tệp csv có thể tải xuống
+- Trình tìm công suất ghép mức tải theo kW với mọi mẫu đáp ứng
+- Công cụ so sánh đặt tối đa bốn dòng cạnh nhau
+- Mọi bảng thông số đều có dạng csv tại /vi/download/
+
+## Thông tin chính
+
+| | |
+| --- | --- |
+| Năm thành lập | 1987 (nhà máy điện Hanyang, Phúc An) |
+| Dải sản phẩm | 2 kW đến 2000 kW, 50 Hz và 60 Hz |
+| Công suất máy phát | khoảng 15.000 máy phát điện xoay chiều mỗi năm |
+| Công suất bộ phát | khoảng 2.000 bộ phát điện mỗi năm |
+| Mạng lưới dịch vụ | 35 cơ sở kinh doanh và dịch vụ tại Trung Quốc |
+| Thị trường | Trung Quốc và xuất khẩu sang Nga, Indonesia, Philippines, Nam Phi, Pakistan, Anh và các nước khác |
+| Nhà máy | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Văn phòng quốc tế | Phúc Châu, Phúc Kiến, Trung Quốc |
+| Điện thoại | +86-13950513258 |
+| Email | sales@easternlion.cn (dịch vụ: service@easternlion.cn) |
+
+## Các nhóm sản phẩm
+
+- Bộ phát điện diesel — /vi/products/diesel-generator-set/ (15 dòng động cơ, 50 Hz)
+- Bộ phát điện 60 Hz — /vi/products/60hz-diesel-generator-set/ (6 dòng cho châu Mỹ và một số nước châu Á)
+- Máy phát điện có chổi than — /vi/products/brush-alternator/ (dòng STC, 8 kW đến 500 kW)
+- Máy phát điện không chổi than — /vi/products/brushless-alternator/ (dòng EL, ghép nối SAE)
+
+## Ứng dụng
+
+- Bộ phát điện theo ứng dụng — /vi/applications/ (công suất bạn cần, các mẫu đáp ứng và những điểm kỹ thuật quyết định đơn hàng)
+- Trung tâm dữ liệu — /vi/applications/data-centre/
+- Bệnh viện — /vi/applications/hospital/
+- Trạm viễn thông — /vi/applications/telecom/
+- Mỏ và khai khoáng — /vi/applications/mining/
+- Khách sạn và khu nghỉ dưỡng — /vi/applications/hotel/
+- Công trường xây dựng — /vi/applications/construction/
+
+## Công ty
+
+- Hồ sơ công ty — /vi/about/
+- Lịch sử phát triển — /vi/about/history/
+- Đội ngũ của chúng tôi — /vi/about/team/
+- Chứng nhận và giấy chứng nhận — /vi/about/qualification/
+- Xưởng sản xuất của chúng tôi — /vi/about/workshop/
+- Dịch vụ hậu mãi — /vi/service/
+- Video nhà máy — /vi/video/
+- Câu hỏi thường gặp — /vi/faq/
+- Tin tức — /vi/news/
+- Liên hệ — /vi/contact/
+
+## Tải xuống
+
+- Trung tâm tải xuống với mọi bảng thông số dạng csv — /vi/download/
+- Toàn bộ mẫu của mọi dòng trong một tệp — /vi/download/all-specs.csv
+- Toàn bộ nội dung trang web cho mô hình ngôn ngữ — /vi/llms-full.txt
+
+## Liên hệ với chúng tôi
+
+Yêu cầu báo giá: sales@easternlion.cn — yêu cầu có cấu trúc (mẫu, tải, tần số, tham chiếu bản
+vẽ) được phản hồi trong vòng một ngày làm việc. Biểu mẫu liên hệ tại /vi/contact/ gửi yêu cầu
+trực tiếp đến hộp thư kinh doanh và có WhatsApp làm kênh dự phòng.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Sản phẩm"
+[llms_power_line]
+other = "Dải công suất: %[1]v đến %[2]v kW. Tần số: %[3]v Hz. Loại: %[4]v. URL dòng: %[5]s"
+[llms_csv_line]
+other = "Bảng thông số (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Ứng dụng"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Cách chọn dòng sản phẩm"
+[llms_choose_text]
+other = '''Mọi đơn hàng bộ phát điện đều quy về sáu quyết định: hãng động cơ (quyết định phụ tùng và
+thời gian phản hồi của đối tác dịch vụ), chế độ vận hành chính hay dự phòng (chính chạy 8 đến 12
+giờ mỗi ngày, dự phòng dùng cho sự cố khẩn cấp; chọn công suất để mức tải nằm ở 70 đến 80 %
+công suất dự phòng), điện áp và tần số (400/230 V ở 50 Hz, 230/400 V ở 60 Hz), vỏ máy (khung hở,
+vỏ cách âm, container, rơ moóc), khởi động và chuyển nguồn (khởi động điện kèm bộ chuyển nguồn
+tự động cho bộ phát dự phòng) và nối song song (nhiều hơn một bộ cần hệ thống quản lý điện).
+Điều kiện vị trí lắp đặt cũng quan trọng: mỗi 1000 m độ cao và mỗi 10 °C vượt nhiệt độ môi
+trường tiêu chuẩn làm giảm khoảng 3 % công suất.
+
+Bảo hành: 1 năm hoặc 1000 giờ. Số lượng đặt hàng tối thiểu: 1 bộ. Lựa chọn vỏ máy: khung hở, vỏ
+cách âm, rơ moóc và container. Khởi động: điện, có ATS theo yêu cầu. Hệ thống nối song song kèm
+quản lý điện có sẵn.'''
+[llms_faq_h]
+other = "Câu hỏi thường gặp"
+[llms_service_h]
+other = "Dịch vụ và công ty"
+[llms_contact_line]
+other = "Liên hệ: sales@easternlion.cn — yêu cầu báo giá được phản hồi trong vòng một ngày làm việc."

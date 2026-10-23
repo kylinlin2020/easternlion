@@ -1,18 +1,18 @@
-{{- $zh := eq .Site.Language.Lang "zh" -}}
+{{- $lang := site.Language.Lang -}}
 <div class="faq-jump">
   <span>{{ i18n "faq_jump" }}</span>
   {{- range .Site.Data.faq }}
-  <a href="#faq-{{ .id }}">{{ if $zh }}{{ .q_zh }}{{ else }}{{ .q }}{{ end }}</a>
+  <a href="#faq-{{ .id }}">{{ index . (printf "q_%s" $lang) | default .q }}</a>
   {{- end }}
 </div>
 
 <div class="faq-list">
   {{- range .Site.Data.faq }}
   <div class="faq-item" id="faq-{{ .id }}">
-    <div class="faq-q"><b>{{ if $zh }}问{{ else }}Q{{ end }}</b> {{ if $zh }}{{ .q_zh }}{{ else }}{{ .q }}{{ end }}</div>
+    <div class="faq-q"><b>{{ i18n "faq_q" }}</b> {{ index . (printf "q_%s" $lang) | default .q }}</div>
     <div class="faq-a">
       {{ partial "icon.html" (dict "name" "chat") }}
-      <span>{{ if $zh }}{{ .a_zh }}{{ else }}{{ .a }}{{ end }}</span>
+      <span>{{ index . (printf "a_%s" $lang) | default .a }}</span>
     </div>
   </div>
   {{- end }}

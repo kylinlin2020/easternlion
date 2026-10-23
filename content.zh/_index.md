@@ -1,5 +1,10 @@
-﻿{
-  "outputs": ["html", "searchindex", "llmstxt", "llmsfull"],
+{
+  "outputs": [
+    "html",
+    "searchindex",
+    "llmstxt",
+    "llmsfull"
+  ],
   "title": "首页",
   "description": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年的发展历史，产品涵盖 2-2000kW 柴油发电机组、有刷发电机与无刷交流发电机，出口全球 40 多个国家和地区。",
   "hero": [

@@ -18,13 +18,13 @@
         <tbody>
           {{- range . }}
           <tr>
-            <td><a href="{{ .u }}">{{ .t }}</a></td>
+            <td><a href="{{ .u | relLangURL }}">{{ .t }}</a></td>
             <td>{{ .g }} – {{ .p }} kW</td>
             <td>{{ .n }}</td>
             <td>{{ .e }}</td>
             <td>{{ .a }}</td>
             <td>{{ .c }}</td>
-            <td><a href="{{ .u }}">{{ i18n "view_details" }} →</a></td>
+            <td><a href="{{ .u | relLangURL }}">{{ i18n "view_details" }} →</a></td>
           </tr>
           {{- end }}
         </tbody>

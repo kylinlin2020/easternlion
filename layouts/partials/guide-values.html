@@ -7,16 +7,17 @@
 {{- $kind := $page.Params.product_kind | default "genset" -}}
 {{- $min := $page.Params.power_min | default 0 -}}
 {{- $max := $page.Params.power_max | default 0 -}}
-{{- $zh := eq site.Language.Lang "zh" -}}
 
-{{- /* the engine brand from the series name */ -}}
-{{- $words := split $page.Title " " -}}
-{{- $engine := "" -}}
-{{- $at := -1 -}}
-{{- range $i, $w := $words -}}
-  {{- if eq (lower $w) "by" -}}{{- $at = $i -}}{{- end -}}
+{{- /* the engine brand from the series name, in any language */ -}}
+{{- $engine := partial "engine-brand.html" $page.Title -}}
+{{- if not $engine -}}
+  {{- $words := split $page.Title " " -}}
+  {{- $at := -1 -}}
+  {{- range $i, $w := $words -}}
+    {{- if eq (lower $w) "by" -}}{{- $at = $i -}}{{- end -}}
+  {{- end -}}
+  {{- if gt $at 0 -}}{{- $engine = index $words (add $at 1) | title -}}{{- end -}}
 {{- end -}}
-{{- if gt $at 0 -}}{{- $engine = index $words (add $at 1) | title -}}{{- end -}}
 
 {{- /* the prime and the standby range out of the model rows */ -}}
 {{- $iP := -1 }}{{ $iS := -1 }}
@@ -54,22 +55,15 @@
 {{- /* the applications, for the one sentence answer */ -}}
 {{- $apps := "" -}}
 {{- $facts := index site.Data.series_facts (cond (eq $kind "alternator") "alternator" "genset") -}}
-{{- if $facts -}}{{- $apps = cond $zh $facts.zh $facts.en -}}{{- end -}}
+{{- if $facts -}}{{- $apps = index $facts site.Language.Lang | default $facts.en -}}{{- end -}}
 
-{{- /* the one sentence answer */ -}}
+{{- /* the one sentence answer — one template per shape, translated in i18n */ -}}
+{{- $kindLabel := cond (eq $kind "alternator") (i18n "kind_alternator") (i18n "kind_genset") -}}
 {{- $summary := "" -}}
-{{- if $zh -}}
-  {{- if $engine -}}
-    {{- $summary = printf "%s是东方电机基于%s发动机组装的%v Hz 柴油发电机组系列，功率范围 %v到%v kW，共 %d 个机型，主要用于%s。" $page.Title $engine $hz $min $max $models $apps -}}
-  {{- else -}}
-    {{- $summary = printf "%s是东方电机的%v Hz %s系列，功率范围 %v到%v kW，共 %d 个机型，主要用于%s。" $page.Title $hz (cond (eq $kind "alternator") "交流发电机" "柴油发电机组") $min $max $models $apps -}}
-  {{- end -}}
+{{- if $engine -}}
+  {{- $summary = printf (i18n "guide_sum_engine") $page.Title $hz $engine $min $max $models $apps -}}
 {{- else -}}
-  {{- if $engine -}}
-    {{- $summary = printf "%s is a %v Hz diesel generator set series from Eastern Lion, built around the %s engine, covering %v to %v kW in %d models. It is used for %s." $page.Title $hz $engine $min $max $models $apps -}}
-  {{- else -}}
-    {{- $summary = printf "%s is an Eastern Lion %v Hz alternator series covering %v to %v kW in %d models, supplied to %s." $page.Title $hz $min $max $models $apps -}}
-  {{- end -}}
+  {{- $summary = printf (i18n "guide_sum_plain") $page.Title $hz $kindLabel $min $max $models $apps -}}
 {{- end -}}
 
 {{- $page.Scratch.Set "guideSummary" $summary -}}

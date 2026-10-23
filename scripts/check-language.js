@@ -61,12 +61,20 @@ function check(file) {
     .replace(/<svg[\s\S]*?<\/svg>/gi, " ")
     .replace(/<[^>]+>/g, " ");
 
-  const text = html
+  let text = html
     .replace(/&[a-z]+;|&#\d+;/gi, " ")
     .replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, " ") /* e-mails */
     .replace(/\b(?:https?:\/\/|www\.)[^\s"']+/gi, " ") /* urls */
     .replace(/\s+/g, " ")
     .trim();
+
+  /* the header switcher prints every language name on every page —
+     chrome of the page, not content of the page. */
+  for (const n of ["English", "简体中文", "Русский", "Español", "Português",
+                   "العربية", "Français", "Türkçe", "Bahasa Indonesia",
+                   "Tiếng Việt", "Deutsch", "فارسی"]) {
+    text = text.split(n).join(" ");
+  }
 
   /* english runs: 2+ words in a row, or a single long word */
   const re = /\b([A-Za-z][A-Za-z'&-]*(?:\s+[A-Za-z][A-Za-z'&-]*){1,})\b/g;

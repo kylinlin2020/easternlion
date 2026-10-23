@@ -1,0 +1,378 @@
+{
+  "title": "Grupo Electrógeno Diésel 60 HZ con Motor Yuxing",
+  "description": "Grupo electrógeno diésel de la serie con motor Yuxing, 60 Hz, con potencia principal y de respaldo, y datos del motor, del alternador y del controlador.",
+  "summary": "Grupo electrógeno diésel de la serie con motor Yuxing, 60 Hz, con potencia principal y de respaldo, y datos del motor, del alternador y del controlador.",
+  "banner_image": "/images/banner/product.jpg",
+  "banner_title": "Detalle del producto",
+  "image": "/images/products/60hz-engine-by-yuxing-series.jpg",
+  "images": [
+    "/images/products/60hz-engine-by-yuxing-series.jpg"
+  ],
+  "category": "Grupo Electrógeno Diésel 60 HZ",
+  "weight": 31,
+  "breadcrumb": [
+    {
+      "name": "Productos",
+      "url": "/products/"
+    },
+    {
+      "name": "Grupo Electrógeno Diésel",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "Grupo Electrógeno Diésel 60 HZ",
+      "url": "/products/60hz-diesel-generator-set/"
+    }
+  ],
+  "columns": [
+    "Model",
+    "Prime power (kW)",
+    "Prime power (kVA)",
+    "Standby power (kW)",
+    "Standby power (kVA)",
+    "Engine model",
+    "Engine power (kW)",
+    "Alternator model",
+    "Alternator power (kW)",
+    "Controller",
+    "Datasheet"
+  ],
+  "rows": [
+    [
+      "GF/GFS-YX33",
+      "24",
+      "30",
+      "27",
+      "33",
+      "K4100D",
+      "36.1",
+      "ELS 184F",
+      "24.2",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX39",
+      "28",
+      "35",
+      "31",
+      "39",
+      "K4100D",
+      "36.1",
+      "ELS 184G",
+      "27.5",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX49",
+      "35",
+      "44",
+      "39",
+      "49",
+      "K4100ZD",
+      "48.0",
+      "ELS 184J",
+      "35.2",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX46",
+      "33",
+      "41",
+      "37",
+      "46",
+      "K4102D",
+      "43.2",
+      "ELS 184H",
+      "33",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX51",
+      "37",
+      "46",
+      "41",
+      "51",
+      "K4102ZD",
+      "50.4",
+      "ELS 224C",
+      "37.4",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX61",
+      "44",
+      "55",
+      "49",
+      "61",
+      "ZH4105ZD",
+      "60.0",
+      "ELS 224D",
+      "44",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX73",
+      "53",
+      "66",
+      "59",
+      "73",
+      "ZH4105ZLD",
+      "67.2",
+      "ELS 224E",
+      "52.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX73",
+      "53",
+      "66",
+      "59",
+      "73",
+      "R4105ZD",
+      "67.2",
+      "ELS 224E",
+      "52.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX89",
+      "64",
+      "80",
+      "71",
+      "89",
+      "R4105ZLD",
+      "79.2",
+      "ELS 224F",
+      "63.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX89",
+      "64",
+      "80",
+      "71",
+      "89",
+      "R4105AZLD",
+      "79.2",
+      "ELS 224F",
+      "63.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX104",
+      "75",
+      "94",
+      "83",
+      "104",
+      "R4108IZLD",
+      "100.8",
+      "ELS 224G",
+      "74.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX104",
+      "75",
+      "94",
+      "83",
+      "104",
+      "R6105AZD",
+      "92.4",
+      "ELS 224G",
+      "74.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX148",
+      "106",
+      "133",
+      "118",
+      "148",
+      "R6105AZLD",
+      "133.1",
+      "ELS 274D",
+      "105.6",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX161",
+      "116",
+      "145",
+      "129",
+      "161",
+      "R6105IZLD",
+      "145.2",
+      "ELS 274E",
+      "123.2",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX161",
+      "116",
+      "145",
+      "129",
+      "161",
+      "R6105IZLD",
+      "145.2",
+      "ELS 274E",
+      "123.2",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX194",
+      "140",
+      "175",
+      "156",
+      "194",
+      "R6108IZLD",
+      "176.0",
+      "ELS 274F",
+      "140.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX194",
+      "140",
+      "175",
+      "156",
+      "194",
+      "R6108ZLD",
+      "187.0",
+      "ELS 274F",
+      "140.8",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX244",
+      "176",
+      "220",
+      "196",
+      "244",
+      "R9768D",
+      "236.5",
+      "ELS 274H",
+      "176",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX278",
+      "200",
+      "250",
+      "222",
+      "278",
+      "R9768D-1",
+      "269.5",
+      "ELS 274J",
+      "202.4",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX361",
+      "260",
+      "325",
+      "289",
+      "361",
+      "R11D",
+      "338.8",
+      "ELS 314D",
+      "259.6",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GF/GFS-YX464",
+      "334",
+      "418",
+      "371",
+      "464",
+      "R11D-1",
+      "445.5",
+      "ELS 314F",
+      "334.4",
+      "RUIFEN6120",
+      "Detail"
+    ]
+  ],
+  "power_min": 24,
+  "power_max": 371,
+  "hz": 60,
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "Grupo Electrógeno Diésel 60 HZ con Motor Cummins 2",
+      "g": 200,
+      "p": 1222,
+      "h": 60,
+      "n": 22,
+      "e": "NT855-GA",
+      "a": "ELS 314E",
+      "c": "Smartgen 6120",
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series-2/"
+    },
+    {
+      "t": "Grupo Electrógeno Diésel 60 HZ con Motor Cummins",
+      "g": 20,
+      "p": 444,
+      "h": 60,
+      "n": 26,
+      "e": "4BTA3.9-G2",
+      "a": "ELS 314G",
+      "c": "Smartgen 6120",
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-cummins-series/"
+    },
+    {
+      "t": "Grupo Electrógeno Diésel 60 HZ con Motor Lovol",
+      "g": 27,
+      "p": 178,
+      "h": 60,
+      "n": 13,
+      "e": "1003G",
+      "a": "ELS 274C",
+      "c": "Smartgen 6120",
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-lovol-series/"
+    },
+    {
+      "t": "Grupo Electrógeno Diésel 60 HZ con Motor Yangdong",
+      "g": 10,
+      "p": 59,
+      "h": 60,
+      "n": 15,
+      "e": "YD380D",
+      "a": "ELS 164C",
+      "c": "RUIFEN6120",
+      "u": "/products/60hz-diesel-generator-set/60hz-engine-by-yangdong-series/"
+    }
+  ],
+  "model_count": 21,
+  "engine_top": "K4100D",
+  "alternator_top": "ELS 224E",
+  "controller_top": "RUIFEN6120",
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv",
+    "datasheet"
+  ]
+}
+Los grupos electrógenos diésel Eastern Lion de la serie con motor Yuxing para operación a 60 Hz combinan motores diésel Yuxing con nuestros propios alternadores sin escobillas y un cuadro de control de confianza. La tabla siguiente detalla los modelos estándar de 400/230 V y 60 Hz con potencia principal y de respaldo conforme a la norma ISO 8528. Versiones abiertas, caracolas silenciosas, remolques y configuraciones ATS y en paralelo están disponibles bajo consulta.
+
+Todos los grupos electrógenos se someten a una prueba a plena carga antes del envío. Contáctenos para recibir una hoja de datos detallada, precios y plazo de entrega.

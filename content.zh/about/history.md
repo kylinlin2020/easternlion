@@ -1,18 +1,16 @@
-{
-  "title": "发展历程",
-  "description": "东方电机三十多年发展历程：从 1987 年汉阳电机厂到全球化发电机组制造商，见证企业成长与产能升级。",
-  "banner_image": "/images/banner/about.jpg",
-  "banner_logo": true,
-  "banner_hide_title": true,
-  "banner_sub": "中国优质供应商",
-  "banner_text": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，生产基地位于福建、江苏、上海等地，产品行销全国。",
-  "breadcrumb": [
-    {
-      "name": "公司简介",
-      "url": "/about/"
-    }
-  ]
-}
+---
+title: "发展历程"
+description: "东方电机三十多年发展历程：从 1987 年汉阳电机厂到全球化发电机组制造商，见证企业成长与产能升级。"
+banner_image: "/images/banner/about.jpg"
+banner_logo: true
+banner_hide_title: true
+banner_sub: "中国优质供应商"
+banner_text: "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，生产基地位于福建、江苏、上海等地，产品行销全国。"
+breadcrumb:
+  - name: "公司简介"
+    url: /about/
+  - name: "发展历程"
+---
 <div class="timeline">
   <div class="tl-item tl-odd">
     <div class="tl-year">1987</div>

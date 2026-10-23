@@ -839,3 +839,129 @@ other = "移除"
 other = "切换语言"
 [nav_menu]
 other = "菜单"
+
+# ---------------------------------------------------------------
+#  生成句与语言模型文件（十二语言版本新增）。含 printf 占位符的键
+#  （*_tpl、llms_intro、llms_power_line、llms_csv_line、llms_url_line）
+#  必须原样保留 %[n] 位置标记。
+# ---------------------------------------------------------------
+[faq_q]
+other = "问"
+[list_sep]
+other = "、"
+[and_pair]
+other = "%[1]v 与 %[2]v"
+[kind_genset]
+other = "柴油发电机组"
+[kind_alternator]
+other = "交流发电机"
+[app_summary_tpl]
+other = "对于%[1]s，建议选用%[2]v到%[3]v kW的备用柴油发电机组；东方电机采用%[4]s发动机生产%[5]s Hz机型，可提供开式、静音罩壳、拖车、ATS与并联方案，出厂前每台机组均进行满载测试。"
+[guide_sum_engine]
+other = "%[1]s是东方电机基于%[3]s发动机组装的%[2]v Hz柴油发电机组系列，功率范围%[4]v到%[5]v kW，共%[6]d个机型，主要用于%[7]s。"
+[guide_sum_plain]
+other = "%[1]s是东方电机的%[2]v Hz%[3]s系列，功率范围%[4]v到%[5]v kW，共%[6]d个机型，主要用于%[7]s。"
+
+# ---- llms.txt（每语言一个 markdown 正文，以字面字符串保存） ----
+[llms_ftitle]
+other = "全文"
+[llms_intro]
+other = '''品牌：东方电机（Eastern Lion / 福建东方电机）。站点：%[1]s
+1987 年创立于福建福安。中国柴油发电机组、有刷交流发电机与无刷交流发电机专业生产厂家，功率范围
+2kW – 2000kW，50Hz 与 60Hz。自有车间完成发电机绕制、发电机组装配与满载测试，年产交流发电机
+约 15,000 台、发电机组约 2,000 台。全国 35 个销售与办事处，出口俄罗斯、印度尼西亚、菲律宾、
+南非、巴基斯坦、英国等市场。
+
+联系方式：sales@easternlion.cn，+86-13950513258，service@easternlion.cn。
+工厂：福建省福安市坂中工业区下洋 36 号。
+国际业务部：福建省福州市台江区洋中街道东洋中路融信洋中城 2 号楼 4 层 23 室。'''
+[llms_body]
+other = '''# 东方电机 — 福建东方电机股份有限公司
+
+> 福建东方电机股份有限公司（品牌：东方电机 / Eastern Lion）是中国的柴油发电机组、有刷交流发电机与无刷交流发电机专业生产厂家，1987 年创立于福建福安。公司自有车间完成发电机绕制、发电机组装配与满载测试，产品销往全球 40 多个国家和地区。功率范围 2kW – 2000kW，提供 50Hz 与 60Hz 两种频率，可选康明斯、珀金斯、玉柴、玉动、潍柴、科发、华柴、龙信、卧龙、扬动、云内、玉兴、凯迅等发动机。
+
+## 本站内容
+
+- 44 个产品系列，每一系列都有完整规格表（型号、额定/备用功率、发动机、发电机、控制器）并可下载 CSV
+- 功率选型向导：输入负载 kW，列出所有能覆盖该负载的机型
+- 对比工具：最多 4 个系列并排比较参数
+- 全部规格表可在 /zh/download/ 下载
+
+## 关键事实
+
+| | |
+| --- | --- |
+| 创立 | 1987 年（福安汉阳电机厂） |
+| 产品范围 | 2kW – 2000kW，50Hz 与 60Hz |
+| 发电机年产能 | 约 15,000 台 |
+| 发电机组年产能 | 约 2,000 台 |
+| 服务网络 | 全国 35 个销售与办事处 |
+| 主要市场 | 中国，出口俄罗斯、印度尼西亚、菲律宾、南非、巴基斯坦、英国等 |
+| 工厂 | 福建省福安市坂中工业区下洋 36 号 |
+| 国际业务部 | 福建省福州市台江区洋中街道东洋中路融信洋中城 2 号楼 4 层 23 室 |
+| 电话 | +86-13950513258 |
+| 邮箱 | sales@easternlion.cn（售后：service@easternlion.cn） |
+
+## 产品系列
+
+- 柴油发电机组 — /zh/products/diesel-generator-set/（15 个发动机系列，50Hz）
+- 60Hz 发电机组 — /zh/products/60hz-diesel-generator-set/（6 个系列，面向美洲及部分亚洲市场）
+- 有刷交流发电机 — /zh/products/brush-alternator/（STC 系列，8kW – 500kW）
+- 无刷交流发电机 — /zh/products/brushless-alternator/（EL 系列，SAE 法兰）
+
+## 应用场景
+
+- 按应用场景选择发电机组 — /zh/applications/（每个场景给出所需功率、可选机型与技术要点）
+- 数据中心 — /zh/applications/data-centre/
+- 医院 — /zh/applications/hospital/
+- 通信站点 — /zh/applications/telecom/
+- 矿山与采石场 — /zh/applications/mining/
+- 酒店与度假村 — /zh/applications/hotel/
+- 建筑工地 — /zh/applications/construction/
+
+## 公司
+
+- 公司简介 — /zh/about/
+- 发展历程 — /zh/about/history/
+- 我们的团队 — /zh/about/team/
+- 资质证书 — /zh/about/qualification/
+- 车间实景 — /zh/about/workshop/
+- 售后服务 — /zh/service/
+- 工厂视频 — /zh/video/
+- 常见问题 — /zh/faq/
+- 新闻资讯 — /zh/news/
+- 联系我们 — /zh/contact/
+
+## 下载
+
+- 全部规格表（CSV）下载中心 — /zh/download/
+- 整本目录一个文件 — /zh/download/all-specs.csv
+- 供语言模型使用的全文 — /zh/llms-full.txt
+
+## 联系方式
+
+销售询价：sales@easternlion.cn —— 提交结构化询盘（机型、负载、频率、图纸编号）后一个工作日内回复。/zh/contact/ 的表单会直接发到销售邮箱，也提供 WhatsApp 作为第二通道。'''
+
+# ---- llms-full.txt（长文件由模板生成，这里只保存各语言的行文） ----
+[llms_products_h]
+other = "产品"
+[llms_power_line]
+other = "功率范围：%[1]v到%[2]v kW。频率：%[3]v Hz。类型：%[4]v。系列页面：%[5]s"
+[llms_csv_line]
+other = "规格表（csv）：%[1]sspec.csv"
+[llms_applications_h]
+other = "应用场景"
+[llms_url_line]
+other = "页面：%[1]s"
+[llms_choose_h]
+other = "如何选择系列"
+[llms_choose_text]
+other = '''柴油发电机组的每一笔订单都归结为六个决定：发动机品牌（决定备件供应与服务商响应速度）、主用或备用（主用每天运行 8 到 12 小时，备用用于应急；选型时让负载落在备用功率的 70% 到 80%）、电压与频率（50Hz 为 400/230V，60Hz 为 230/400V）、防护形式（开式、静音罩壳、集装箱、拖车）、启动与切换（备用机组通常电启动并配自动切换开关 ATS）以及并机（多台机组需要功率管理系统）。环境条件同样重要：海拔每升高 1000 米、环境温度每高出标准 10°C，功率约下降 3%。
+
+质保：1 年或 1000 小时。最小起订量：1 台。防护形式：开式、静音罩壳、拖车、集装箱。启动方式：电启动，可按需加装 ATS。可提供带功率管理的并机系统。'''
+[llms_faq_h]
+other = "常见问题"
+[llms_service_h]
+other = "服务与公司"
+[llms_contact_line]
+other = "联系方式：sales@easternlion.cn —— 询价在一个工作日内回复。"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode | default "en" }}">
+<html lang="{{ site.LanguageCode | default "en" }}"{{ if in (slice "ar" "fa") site.Language.Lang }} dir="rtl"{{ end }}>
 <head>
   {{ partial "head.html" . }}
 </head>

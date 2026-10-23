@@ -1,0 +1,989 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "خانه"
+[nav_products]
+other = "محصولات"
+[nav_company]
+other = "معرفی شرکت"
+[nav_service]
+other = "خدمات"
+[nav_video]
+other = "ویدیو"
+[nav_faq]
+other = "سؤالات متداول"
+[nav_contact]
+other = "تماس با ما"
+
+[menu_company_profile]
+other = "معرفی شرکت"
+[menu_history]
+other = "تاریخچه فعالیت"
+[menu_team]
+other = "تیم ما"
+[menu_qualification]
+other = "گواهینامه‌ها"
+[menu_news]
+other = "مرکز اخبار"
+[menu_workshop]
+other = "کارگاه تولیدی ما"
+
+[about_us]
+other = "درباره ما"
+[product_center]
+other = "مرکز محصولات"
+[product_category]
+other = "دسته‌بندی محصولات"
+
+[footer_quick_links]
+other = "پیوندهای سریع"
+[footer_company_profile]
+other = "معرفی شرکت"
+[footer_product_category]
+other = "دسته‌بندی محصولات"
+[footer_golden_supplier]
+other = "تأمین‌کننده طلایی در چین"
+[footer_tel]
+other = "تلفن"
+[footer_email]
+other = "ایمیل"
+[footer_web]
+other = "وب‌سایت"
+[footer_copyright]
+other = "Copyright © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. تمامی حقوق محفوظ است."
+
+[float_telephone]
+other = "تلفن"
+[float_email]
+other = "ایمیل"
+[float_message]
+other = "پیام بگذارید"
+
+[search_placeholder]
+other = "وارد کردن کلیدواژه"
+[language_label]
+other = "فارسی"
+
+[product_availability]
+other = "موجودی"
+[product_quantity]
+other = "تعداد"
+[product_in_stock]
+other = "موجود در انبار"
+[product_inquire]
+other = "استعلام قیمت"
+[product_add_basket]
+other = "گفتگو در واتساپ"
+[product_description]
+other = "توضیحات محصول"
+[product_share]
+other = "اشتراک‌گذاری در:"
+[product_category_label]
+other = "دسته‌بندی"
+[product_rating_note]
+other = "امتیازها جنبه راهنمایی دارند. برای دریافت آخرین دیتاشیت و تأیید موجودی با ما تماس بگیرید."
+
+[contact_get_in_touch]
+other = "با ما در تماس باشید"
+[contact_intl]
+other = "واحد بین‌الملل"
+[contact_manufacturer]
+other = "تولیدکننده"
+[contact_more_info]
+other = "برای اطلاعات بیشتر با ما تماس بگیرید."
+[contact_name]
+other = "نام شما *"
+[contact_email]
+other = "ایمیل شما *"
+[contact_phone]
+other = "تلفن / واتساپ"
+[contact_company]
+other = "شرکت"
+[contact_product]
+other = "محصولی که به آن علاقه‌مندید"
+[contact_message]
+other = "پیام شما *"
+[contact_submit]
+other = "تماس با ما"
+
+[news_views]
+other = "بازدید"
+[news_author]
+other = "نویسنده"
+[news_publish_time]
+other = "زمان انتشار"
+[news_origin]
+other = "منبع"
+[news_site]
+other = "سایت"
+[news_sidebar_title]
+other = "اخبار"
+[news_back]
+other = "بازگشت به اخبار"
+[news_read_more]
+other = "بیشتر بخوانید"
+
+[search_results]
+other = "نتایج جستجو برای"
+[not_found]
+other = "صفحه پیدا نشد"
+[not_found_text]
+other = "صفحه‌ای که به دنبال آن هستید احتمالاً منتقل شده یا دیگر وجود ندارد."
+[back_home]
+other = "بازگشت به صفحه اصلی"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "آلترناتور با کولت"
+[cat_brushless_alternator]
+other = "آلترناتور بدون کولت"
+[cat_diesel_generator_set]
+other = "ژنراتور دیزلی"
+[cat_50hz_diesel_generator_set]
+other = "ژنراتور دیزلی 50HZ"
+[cat_60hz_diesel_generator_set]
+other = "ژنراتور دیزلی 60HZ"
+[cat_engine_cummins]
+other = "موتور سری Cummins"
+[cat_engine_cummins_2]
+other = "موتور Cummins"
+[cat_engine_huachai]
+other = "موتور سری Huachai"
+[cat_engine_kofo]
+other = "موتور سری Kofo"
+[cat_engine_longxin]
+other = "موتور سری Longxin"
+[cat_engine_lovol]
+other = "موتور سری Lovol"
+[cat_engine_perkins]
+other = "موتور سری Perkins"
+[cat_engine_woling]
+other = "موتور سری Woling"
+[cat_engine_wuxi]
+other = "موتور سری Wuxi"
+[cat_engine_yangdong]
+other = "موتور سری Yangdong"
+[cat_engine_yto]
+other = "موتور سری YTO"
+[cat_engine_yuchai]
+other = "موتور سری Yuchai"
+[cat_engine_yunnei]
+other = "موتور سری Yunnei"
+[cat_engine_yuxing]
+other = "موتور سری Yuxing"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "دریافت قیمت"
+[topbar_hours]
+other = "دوشنبه تا شنبه 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "برای پروژه خود به ژنراتور نیاز دارید؟"
+[cta_text]
+other = "توان، ولتاژ و کاربری خود را برای ما بنویسید — مهندسان ما ظرف یک روز کاری پاسخ می‌دهند."
+[cta_button]
+other = "ارسال استعلام"
+[hero_cta_products]
+other = "مشاهده محصولات"
+[hero_cta_quote]
+other = "درخواست پیش‌فاکتور"
+[view_details]
+other = "مشاهده جزئیات"
+[why_us]
+other = "چرا Eastern Lion"
+[why_us_title]
+other = "بیش از 30 سال ساخت ژنراتورهایی که همواره در حال کارند"
+[why_us_text]
+other = "از پیچیدن استاتور تا تست بار کامل، هر دستگاه در کارگاه‌های خودمان در فوجیان و جیانگسو مونتاژ و آزمایش می‌شود."
+
+[product_center_eyebrow]
+other = "آنچه تولید می‌کنیم"
+[hero_cta_note]
+other = "پاسخ ظرف یک روز کاری"
+
+[filter_type]
+other = "نوع"
+[filter_power]
+other = "توان"
+[filter_hz]
+other = "فرکانس"
+[filter_all]
+other = "همه"
+[filter_alternator]
+other = "آلترناتورها"
+[filter_genset]
+other = "ژنراتورها"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "مدل"
+[filter_empty]
+other = "هیچ مدلی با این فیلترها مطابقت ندارد — برای سایر توان‌ها با ما تماس بگیرید."
+[products_coming_soon]
+other = "مجموعه محصولات در حال به‌روزرسانی است. برای دریافت کاتالوگ کامل با ما تماس بگیرید."
+
+[related_title]
+other = "مدل‌های مرتبط"
+[inquiry_title]
+other = "به پیش‌فاکتور نیاز دارید؟"
+[inquiry_text]
+other = "توان، ولتاژ و کاربری خود را برای ما بفرستید — مهندسان ما ظرف یک روز کاری پاسخ می‌دهند."
+[inquiry_button]
+other = "درخواست پیش‌فاکتور"
+[inquiry_whatsapp]
+other = "گفتگو در واتساپ"
+
+[search_empty]
+other = "صفحه‌ای مطابق جستجو یافت نشد. نام مدل، برند موتور یا بازه توان را امتحان کنید."
+[search_loading]
+other = "در حال جستجو…"
+[search_all]
+other = "مشاهده همه محصولات"
+
+[form_required]
+other = "لطفاً فیلدهای مشخص‌شده را تکمیل کنید."
+[form_name_required]
+other = "لطفاً نام خود را وارد کنید."
+[form_email]
+other = "لطفاً یک نشانی ایمیل معتبر وارد کنید."
+[form_message_required]
+other = "لطفاً نیاز خود را برای ما بنویسید."
+[form_success_title]
+other = "سپاسگزاریم، استعلام شما ارسال شد"
+[form_success_text]
+other = "مهندس فروش ما استعلام شما را دریافت کرد و ظرف یک روز کاری پاسخ خواهد داد. ایمیل تأییدیه همراه با شماره پیگیری استعلام شما در راه صندوق ایمیل‌تان است."
+[form_again]
+other = "نوشتن استعلام جدید"
+
+
+[latest_news]
+other = "آخرین اخبار"
+
+[spec_at_a_glance]
+other = "مشخصات فنی در یک نگاه"
+[spec_category]
+other = "دسته‌بندی"
+[spec_type]
+other = "نوع"
+[spec_frequency]
+other = "فرکانس"
+[spec_power]
+other = "بازه توان"
+[spec_models]
+other = "مدل‌ها"
+[spec_note]
+other = "بازه‌های توان از جدول استانداردهای 50 / 60 هرتز در صفحه هر محصول گرفته شده‌اند. سایر ولتاژها و توان‌ها به درخواست شما قابل ارائه هستند."
+
+[skip_to_content]
+other = "پرش به محتوا"
+
+[search_button]
+other = "جستجو"
+[pager]
+other = "سایر مدل‌ها"
+[pager_prev]
+other = "قبلی"
+[pager_next]
+other = "بعدی"
+
+[search_model]
+other = "مدل"
+
+[jump_to_model]
+other = "پرش به مدل"
+
+[alt_workshop]
+other = "تولید آلترناتور Eastern Lion"
+[alt_products]
+other = "آلترناتورهای بدون کولت Eastern Lion"
+[alt_packing]
+other = "بسته‌بندی و تست Eastern Lion"
+
+[search_cats]
+other = "دسته‌بندی‌ها"
+[coverage_title]
+other = "کدام سری چه بازه توانی را پوشش می‌دهد؟"
+[footer_qr]
+other = "برای تماس با تیم فروش اسکن کنید"
+
+[service_process]
+other = "نحوه همکاری با شما"
+[step1_title]
+other = "نیازمندی"
+[step1_text]
+other = "توان، ولتاژ، فرکانس و کاربری خود را برای ما بنویسید — یا مدلی از محصولاتمان برای ما بفرستید."
+[step2_title]
+other = "راه‌حل و پیش‌فاکتور"
+[step2_text]
+other = "مهندسسان ما موتور، آلترناتور و کنترلر را انتخاب می‌کنند و سپس پیش‌فاکتور کامل را همراه با زمان تحویل ارسال می‌کنند."
+[step3_title]
+other = "تولید و آزمایش"
+[step3_text]
+other = "دستگاه در کارگاه خودمان مونتاژ و پیش از خروج از کارخانه تست بار می‌شود."
+[step4_title]
+other = "تحویل و پشتیبانی"
+[step4_text]
+other = "حمل دریایی یا هوایی، راهنمای راه‌اندازی، قطعات یدکی و پشتیبانی فنی مادام‌العمر."
+[applications]
+other = "کاربردها"
+[app1_alt]
+other = "ژنراتورهای دیزلی Eastern Lion"
+[app2_alt]
+other = "بسته‌بندی و صادرات Eastern Lion"
+[app3_alt]
+other = "تولیدگاه Eastern Lion"
+
+[app1_title]
+other = "کاربردها 1"
+[app1_text]
+other = "نمونه کاربردهای داخلی: پروژه تونل انشی اداره دوازدهم راه‌آهن چین، پروژه پل رودخانه یانگ‌تسه اداره سیزدهم راه‌آهن چین، اداره مالیات هوبی، بیمارستان تونگ‌جی ووهان، دبیرستان سوم ون‌ژو ژجیانگ، آپارتمان لینگ‌کون ژجیانگ"
+[app2_title]
+other = "کاربردها 2"
+[app2_text]
+other = "پروژه پل بزرگراهی یانگ‌تسه هوبی وابسته به اداره سیزدهم راه‌آهن چین."
+[app3_title]
+other = "کاربردها 3"
+[app3_text]
+other = "پروژه تونل انشی وابسته به اداره دوازدهم راه‌آهن چین."
+
+[faq_jump]
+other = "پرش به پرسش"
+[faq_cta_title]
+other = "پاسخ خود را نیافتید؟"
+[faq_cta_text]
+other = "توان، ولتاژ و کاربری خود را برای ما بفرستید تا مهندسان ما ظرف یک روز کاری پاسخ دهند."
+[faq_cta_button]
+other = "از مهندسان ما بپرسید"
+
+[more_news]
+other = "اخبار بیشتر"
+
+[contact_drawing]
+other = "شماره نقشه / مرجع مشخصات فنی (اختیاری)"
+[contact_drawing_hint]
+other = "شماره نقشه را ذکر کنید یا هنگام پاسخ به ایمیل ما فایل را پیوست کنید — مهندسان ما دقیقاً مطابق نقشه شما قیمت می‌دهند."
+
+[zoom_image]
+other = "برای بزرگ‌نمایی کلیک کنید"
+[video_facade]
+other = "پخش ویدیو"
+
+[video_title]
+other = "ماشین‌آلات ما را ببینید"
+[video_intro]
+other = "ویدیوهای بازدید از کارخانه، خط تولید و تست ژنراتور. پخش‌کننده تنها هنگام فشردن دکمه پخش بارگذاری می‌شود."
+[video_1]
+other = "ژنراتورها و بسته‌بندی"
+[video_2]
+other = "خط تولید"
+[video_3]
+other = "تولیدگاه"
+
+[compare_add]
+other = "افزودن به مقایسه"
+[compare_clear]
+other = "پاک کردن"
+[compare_open]
+other = "مقایسه"
+[compare_models]
+other = "مدل"
+[compare_open_model]
+other = "باز کردن"
+[compare_title]
+other = "مقایسه مدل‌ها"
+[compare_power]
+other = "بازه توان"
+[compare_freq]
+other = "فرکانس"
+[compare_count]
+other = "مدل‌ها"
+[compare_engine]
+other = "موتور"
+[compare_alternator]
+other = "آلترناتور"
+[compare_controller]
+other = "کنترلر"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "دسته‌بندی‌های محصولات Eastern Lion را ببینید: ژنراتورهای دیزلی، آلترناتورهای با کولت و بدون کولت از 2 تا 2000 کیلووات، ساخت چین."
+[seo_tag_desc]
+other = "اخبار و به‌روزرسانی‌های محصول شرکت Fuan Eastern Lion Electric Machines Co., Ltd، بر اساس موضوع دسته‌بندی شده است."
+[alt_factory]
+other = "کارخانه ژنراتور Eastern Lion در فوجیان، چین"
+
+[breadcrumb_here]
+other = "شما اینجایید:"
+[footer_about]
+other = "درباره ما"
+[spec_genset]
+other = "مشخصات فنی ژنراتور"
+[spec_engine]
+other = "موتور"
+[spec_alternator]
+other = "آلترناتور بدون کولت"
+[spec_controller]
+other = "کنترلر"
+[spec_datasheet]
+other = "دیتاشیت"
+[spec_detail]
+other = "جزئیات"
+[col_model]
+other = "مدل"
+[col_prime_kw]
+other = "توان اصلی (kW)"
+[col_prime_kva]
+other = "توان اصلی (kVA)"
+[col_standby_kw]
+other = "توان اضطراری (kW)"
+[col_standby_kva]
+other = "توان اضطراری (kVA)"
+[col_engine_model]
+other = "مدل موتور"
+[col_engine_power]
+other = "توان موتور (kW)"
+[col_alt_model]
+other = "مدل آلترناتور"
+[col_alt_power]
+other = "توان آلترناتور (kW)"
+[col_controller]
+other = "کنترلر"
+[col_datasheet]
+other = "دیتاشیت"
+[col_50hz_kw]
+other = "خروجی 50Hz (kW)"
+[col_50hz_kva]
+other = "خروجی 50Hz (kVA)"
+[col_60hz_kw]
+other = "خروجی 60Hz (kW)"
+[col_60hz_kva]
+other = "خروجی 60Hz (kVA)"
+[col_sae_size]
+other = "سایز SAE"
+[col_core_length]
+other = "طول هسته (mm)"
+[news_center_title]
+other = "مرکز اخبار"
+
+[finder_eyebrow]
+other = "یابنده توان"
+[finder_title]
+other = "کدام مدل بار شما را پوشش می‌دهد؟"
+[finder_text]
+other = "توان مورد نیاز خود را وارد کنید تا هر مدلی از این بازه که توانایی تأمین آن را دارد فهرست شود — همراه با موتور، آلترناتور و کنترلر پشت هر مدل."
+[finder_quick]
+other = "بارهای رایج"
+[finder_kw]
+other = "توان مورد نیاز"
+[finder_kw_ph]
+other = "مثلاً 200"
+[finder_hz]
+other = "فرکانس"
+[finder_go]
+other = "یافتن مدل‌ها"
+[finder_head]
+other = "{n} سری در {hz} هرتز توان {kw} kW را پوشش می‌دهند"
+[finder_head_one]
+other = "1 سری در {hz} هرتز توان {kw} kW را پوشش می‌دهد"
+[finder_more]
+other = "+{n} مدل دیگر در این سری این بار را پوشش می‌دهند"
+[finder_open]
+other = "باز کردن برگه مشخصات"
+[finder_inquire]
+other = "دریافت قیمت"
+[finder_none]
+other = "هیچ مدلی در این بازه توان {kw} kW را پوشش نمی‌دهد."
+[finder_none_closest]
+other = "نزدیک‌ترین مدل {model} ({kw} kW) است — بار خود را برای ما بنویسید تا مهندسان ما توان دستگاه را برای شما انتخاب کنند."
+[finder_none_max]
+other = "بار خود را برای ما بفرستید تا راه‌حل سفارشی یا موازی برای شما قیمت دهیم."
+[finder_model_standby]
+other = "توان اضطراری"
+[finder_model_prime]
+other = "توان اصلی"
+[finder_model_output]
+other = "خروجی"
+[finder_more_series]
+other = "نمایش {n} سری دیگر"
+
+[search_spec]
+other = "مدل‌هایی که {kw} kW را در {hz} هرتز پوشش می‌دهند"
+[search_spec_none]
+other = "هیچ مدلی {kw} kW را پوشش نمی‌دهد — بار خود را برای ما بنویسید تا توان دستگاه را انتخاب کنیم."
+[search_cover]
+other = "توان اضطراری"
+[search_standby]
+other = "توان اضطراری"
+[search_prime]
+other = "توان اصلی"
+[search_output]
+other = "خروجی"
+[inquiry_power]
+other = "توان مورد نیاز"
+[model_nav_label]
+other = "مدل‌های مجاور"
+[model_nav_hint]
+other = "در جدول یک مدل را انتخاب کنید تا اندازه‌های کنار آن نمایش داده شود."
+[model_nav_current]
+other = "فعلی"
+[model_nav_up]
+other = "بزرگ‌تر"
+[model_nav_down]
+other = "کوچک‌تر"
+[model_nav_same]
+other = "همان توان"
+[contact_models]
+other = "مدل‌های پیشنهادی"
+[contact_model_add_btn]
+other = "افزودن"
+[inquiry_models]
+other = "مدل‌ها"
+[compare_quote]
+other = "درخواست قیمت برای این {n} مدل"
+
+[spec_series]
+other = "سری"
+[download_all_title]
+other = "همه فهرست‌های مشخصات فنی در یک فایل"
+[download_all_text]
+other = "هر مدل از هر سری همراه با توان‌های اسمی، موتور، آلترناتور و کنترلر — یک فایل csv برای کل کاتالوگ."
+[download_all_button]
+other = "دانلود همه مشخصات (CSV)"
+[download_file]
+other = "فایل"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "چاپ / PDF"
+[download_title_link]
+other = "مرکز دانلود"
+[preview_title]
+other = "استعلام خود را پیش از ارسال بررسی کنید"
+[preview_hint]
+other = "درخواست شما به این شکل به مهندسان ما می‌رسد — هنوز می‌توانید متن را تغییر دهید."
+[preview_mail]
+other = "باز کردن در برنامه ایمیل"
+[preview_copy]
+other = "کپی متن"
+[preview_back]
+other = "بازگشت به فرم"
+[preview_copied]
+other = "در کلیپ‌بورد کپی شد."
+[inquiry_salutation]
+other = "به تیم فروش Eastern Lion،"
+[inquiry_interested]
+other = "به ژنراتور(های) زیر علاقه‌مندم:"
+[inquiry_model]
+other = "مدل"
+[inquiry_required_power]
+other = "توان مورد نیاز"
+[inquiry_drawing]
+other = "مرجع نقشه / مشخصات فنی"
+[inquiry_message]
+other = "پیام"
+[inquiry_contact]
+other = "تماس"
+[inquiry_name]
+other = "نام"
+[inquiry_company]
+other = "شرکت"
+[inquiry_phone]
+other = "تلفن / واتساپ"
+[inquiry_email]
+other = "ایمیل"
+[inquiry_footer]
+other = "ارسال‌شده از easternlion.cn"
+[inquiry_subject]
+other = "استعلام ژنراتور دیزلی"
+[finder_title_slim]
+other = "مطمئن نیستید کدام مدل مناسب است؟"
+[finder_fold_title]
+other = "مدلی که بار مرا پوشش می‌دهد بیابید"
+[compare_selected]
+other = "انتخاب‌شده"
+[resume_models]
+other = "شما در حال مشاهده بودید"
+[resume_continue]
+other = "ادامه استعلام"
+[resume_close]
+other = "بستن"
+[preview_whatsapp]
+other = "ارسال از طریق واتساپ"
+[preview_download]
+other = "دانلود استعلام"
+[contact_send]
+other = "ارسال استعلام"
+[preview_send]
+other = "ارسال استعلام"
+[preview_failed]
+other = "استعلام به‌صورت خودکار ارسال نشد. لطفاً از یکی از گزینه‌های زیر استفاده کنید یا به sales@easternlion.cn بنویسید."
+[form_success_receipt]
+other = "نمایش آنچه دریافت کردیم"
+[contact_sending]
+other = "در حال ارسال…"
+[mm_model]
+other = "مدل"
+[mm_load]
+other = "بار (kW)"
+[mm_hz]
+other = "فرکانس"
+[contact_models_hint]
+other = "هر مدلی را که می‌خواهید برای آن قیمت بگیرید اضافه کنید — هر کدام با توان و فرکانس خود در صورت تفاوت. مهندسان ما برای هرکدام قیمت و زمان تحویل ارسال می‌کنند."
+[contact_model_add]
+other = "افزودن مدل دیگر (مثلاً GF/GFS-C200)"
+[service_schema_type]
+other = "تأمین ژنراتور دیزلی، قطعات یدکی و خدمات پس از فروش"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "مشخصات کلیدی"
+[ks_power]
+other = "بازه توان"
+[ks_frequency]
+other = "فرکانس"
+[ks_models]
+other = "مدل‌ها"
+
+[ks_engine]
+other = "موتور"
+[ks_alternator]
+other = "آلترناتور"
+[ks_controller]
+other = "کنترلر"
+[ks_warranty]
+other = "گارانتی"
+[ks_warranty_value]
+other = "1 سال یا 1000 ساعت"
+[ks_options]
+other = "گزینه‌ها"
+[ks_options_value]
+other = "فریم باز، کابین عایق صدا، تریلر، ATS و سیستم‌های موازی"
+[ks_moq]
+other = "حداقل سفارش (MOQ)"
+[ks_moq_value]
+other = "1 دستگاه"
+[product_copy_link]
+other = "کپی پیوند"
+[product_link_copied]
+other = "پیوند کپی شد"
+[guide_title]
+other = "چگونه این سری را انتخاب کنیم"
+[guide_intro]
+other = "شش تصمیم تقریباً همه سفارش‌های ژنراتور را پوشش می‌دهد. در ادامه نحوه گرفتن هر تصمیم و آنچه این سری در اختیار شما می‌گذارد آمده است."
+[guide_col_decision]
+other = "تصمیم شما"
+[guide_col_how]
+other = "نحوه تصمیم‌گیری"
+[guide_col_this]
+other = "این سری"
+[guide_engine]
+other = "برند موتور"
+[guide_engine_how]
+other = "موتور، در دسترس بودن قطعات یدکی و زمان پاسخ‌گویی شریک خدماتی شما را تعیین می‌کند. اول شبکه خدمات را مقایسه کنید، بعد قیمت را."
+[guide_engine_none]
+other = "فقط آلترناتور"
+[guide_engine_count]
+other = "%v مدل در این سری"
+[guide_duty]
+other = "توان اصلی یا اضطراری"
+[guide_duty_how]
+other = "توان اصلی برای دستگاه‌هایی است که روزانه 8 تا 12 ساعت کار می‌کنند و توان اضطراری برای پشتیبانی اضطراری. دستگاه را طوری انتخاب کنید که بار شما بین 70 تا 80 درصد توان اضطراری باشد — این موتور را بین 50 و 75 درصد بار نگه می‌دارد، جایی که مصرف سوخت در بهترین حالت است."
+[guide_duty_value]
+other = "توان اضطراری %v–%v kW، توان اصلی %v–%v kW"
+[guide_voltage]
+other = "ولتاژ و فرکانس"
+[guide_voltage_how]
+other = "400/230 ولت در 50 هرتز برای آسیا، اروپا، آفریقا و خاورمیانه و 230/400 ولت در 60 هرتز برای قاره‌های آمریکا. آلترناتور و تابلوی کنترل هر دو باید با شبکه‌ای که به آن وصل می‌شوید مطابقت داشته باشند."
+[guide_voltage_50]
+other = "50 هرتز، 400/230 ولت"
+[guide_voltage_60]
+other = "60 هرتز، 230/400 ولت"
+[guide_enclosure]
+other = "کابین"
+[guide_enclosure_how]
+other = "فریم باز برای موتورخانه، کابین عایق صدا برای محیط شهری در فضای باز (حدود 65 dB(A) در فاصله 7 متری)، کانتینر برای بلوک 1000 کیلوواتی و تریلر برای دستگاه سیار."
+[guide_enclosure_value]
+other = "گزینه‌های فریم باز، کابین عایق صدا، تریلر و کانتینر"
+[guide_starting]
+other = "راه‌اندازی و انتقال"
+[guide_starting_how]
+other = "دستگاه اضطراری به استارت الکتریکی و کلید انتقال خودکار نیاز دارد، در غیر این صورت دستگاه بیکار می‌ماند تا شبکه قطع شود. استارت دستی و پنوماتیک برای کاربردهای خاص همچنان موجود است."
+[guide_starting_value]
+other = "استارت الکتریکی، ATS (خودکار و دستی) به درخواست"
+[guide_parallel]
+other = "موازی‌سازی"
+[guide_parallel_how]
+other = "بیش از یک دستگاه به سیستم مدیریت توان، کلید انتقال بزرگ‌تر و تابلوی کنترلی نیاز دارد که به دستگاه‌ها اجازه تقسیم بار و جایگزینی یکدیگر را بدهد."
+[guide_parallel_value]
+other = "سیستم‌های موازی با مدیریت توان"
+[guide_environment]
+other = "شرایط محل نصب"
+[guide_environment_how]
+other = "هر 1000 متر ارتفاع و هر 10 درجه سانتی‌گراد بالاتر از دمای استاندارد محیط حدود 3 درصد از توان را کم می‌کند و محیط دارای نمک‌پاشی یا گرد‌وخاک به کابین و بازه سرویس کوتاه‌تری نیاز دارد."
+[guide_environment_value]
+other = "توان اسمی استاندارد در 0–50 °C، کاهش توان به درخواست"
+[guide_foot]
+other = "بار، ولتاژ و محل نصب را برای ما بفرستید تا مدل دقیق، قیمت و زمان تحویل را برای شما ارسال کنیم."
+[wa_from]
+other = "استعلام از easternlion.cn"
+[wa_series]
+other = "سری"
+[wa_model]
+other = "مدل"
+[wa_power]
+other = "توان مورد نیاز"
+[wa_standby]
+other = "توان اضطراری اسمی"
+[wa_link]
+other = "پیوند"
+[search_guide]
+other = "راهنمای انتخاب"
+[search_guide_more]
+other = "خواندن راهنمای کامل"
+[search_compare]
+other = "مقایسه"
+[search_models]
+other = "مدل"
+[inquiry_ref_label]
+other = "شماره پیگیری استعلام شما:"
+[form_success_whatsapp]
+other = "به آن زودتر نیاز دارید؟ در واتساپ پیام دهید"
+[app_eyebrow]
+other = "کاربردها"
+[app_index_title]
+other = "ژنراتورها بر اساس کاربرد"
+[app_index_text]
+other = "از کاری که دستگاه شما باید انجام دهد شروع کنید. صفحه هر کاربرد، توان مورد نیاز، مدل‌های توان اضطراری که آن را پوشش می‌دهند، نکات فنی مهم در محل نصب و مدل‌هایی را که برای آن می‌سازیم نشان می‌دهد."
+[app_sizing_title]
+other = "چگونه توان دستگاه را انتخاب کنیم"
+[app_sizing_text]
+other = "در کاربرد توان اضطراری: دستگاه باید کل بار متصل به‌علاوه جریان راه‌اندازی را تأمین کند، بنابراین آن را بالاتر از بار دائم انتخاب می‌کنیم. جدول زیر توان اضطراری مدل‌های واقعی را برای هر بار معمول این کاربرد فهرست می‌کند."
+[app_sizing_load]
+other = "بار معمول"
+[app_sizing_standby]
+other = "توان اضطراری پیشنهادی"
+[app_sizing_models]
+other = "مدل‌های پوشش‌دهنده"
+[app_sizing_note]
+other = "توان‌ها مطابق ISO 8528 هستند. مدل نهایی به ولتاژ، مدت استقلال سوخت، نوع کابین و دمای محیط بستگی دارد — بار خود را برای ما بفرستید تا کتباً تأیید کنیم."
+[app_sizing_oversize]
+other = "برای راه‌حل بالای 2000 kW از ما بپرسید"
+[app_requirements_title]
+other = "آنچه این کاربرد نیاز دارد"
+[app_series_title]
+other = "سری‌های مورد استفاده برای این کار"
+[app_model_word]
+other = "مدل"
+[app_faq_title]
+other = "پرسش‌های خریداران درباره این کاربرد"
+[app_fact_load]
+other = "بازه توان"
+[app_fact_duty]
+other = "نوع کارکرد"
+[app_fact_duty_value]
+other = "توان اضطراری"
+[app_fact_hz]
+other = "فرکانس"
+[app_fact_engine]
+other = "موتورها"
+[app_cta_title]
+other = "بار و محل نصب را به ما بگویید"
+[app_cta_text]
+other = "بار دائم، ولتاژ و محل کار دستگاه را برای ما بفرستید. مهندسان ما ظرف یک روز کاری با مدل، چیدمان و قیمت پاسخ می‌دهند."
+[app_cta_button]
+other = "درخواست پیش‌فاکتور"
+[app_wa_text]
+other = "استعلام: ژنراتور دیزلی %s"
+[app_other_title]
+other = "سایر کاربردها"
+[datasheet_sub]
+other = "برگه مشخصات فنی ژنراتور"
+[datasheet_print]
+other = "چاپ یا ذخیره به‌صورت PDF"
+[datasheet_back]
+other = "بازگشت به سری"
+[datasheet_contact]
+other = "استعلام شما"
+[datasheet_note]
+other = "توجه"
+[datasheet_note_text]
+other = "توان‌ها مطابق ISO 8528 هستند. پیکربندی نهایی به ولتاژ، مدت استقلال سوخت، نوع کابین و دمای محیط بستگی دارد."
+[download_datasheet]
+other = "دیتاشیت"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "مدل‌های پوشش‌دهنده:"
+[mm_no_cover]
+other = "هیچ مدلی در کاتالوگ آن بار را پوشش نمی‌دهد."
+[mm_picked]
+other = "انتخاب‌شده"
+[ui_close]
+other = "بستن"
+[ui_remove]
+other = "حذف"
+[lang_label]
+other = "تغییر زبان"
+[nav_menu]
+other = "منو"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "پ"
+[list_sep]
+other = "، "
+[and_pair]
+other = "%[1]v و %[2]v"
+[kind_genset]
+other = "ژنراتور دیزلی"
+[kind_alternator]
+other = "آلترناتور"
+[app_summary_tpl]
+other = "برای %[1]s، ژنراتور دیزلی توان اضطراری مورد نیاز شما از %[2]v تا %[3]v kW است؛ Eastern Lion این دستگاه‌ها را با موتور %[4]s در %[5]s هرتز، در پیکربندی‌های فریم باز، کابین عایق صدا، تریلر، ATS و موازی می‌سازد و هر دستگاه پیش از ارسال تست بار کامل می‌شود."
+[guide_sum_engine]
+other = "%[1]s یک سری ژنراتور دیزلی %[2]v هرتز از Eastern Lion است که با موتور %[3]s ساخته شده و از %[4]v تا %[5]v kW را در %[6]d مدل پوشش می‌دهد. برای %[7]s استفاده می‌شود."
+[guide_sum_plain]
+other = "%[1]s یک سری %[2]v هرتز %[3]s از Eastern Lion است که از %[4]v تا %[5]v kW را در %[6]d مدل پوشش می‌دهد و به %[7]s عرضه می‌شود."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "متن کامل سایت"
+[llms_intro]
+other = '''برند: Eastern Lion (福建东方电机). سایت: %[1]s
+تأسیس 1987 در فوجیان، چین. تولیدکننده ژنراتورهای دیزلی، آلترناتورهای با کولت و بدون کولت،
+از 2 تا 2000 کیلووات، در 50 و 60 هرتز. کارگاه‌های اختصاصی: تولید آلترناتور، مونتاژ
+ژنراتور، تست بار کامل. حدود 15000 آلترناتور و 2000 ژنراتور در سال. 35 پایگاه فروش و
+خدمات در چین. صادرات به روسیه، اندونزی، فیلیپین، آفریقای جنوبی، پاکستان، بریتانیا و سایر
+بازارها.
+
+تماس: sales@easternlion.cn، +86-13950513258، service@easternlion.cn.
+کارخانه: شماره 36 شیایانگ، شهرک صنعتی بانژونگ، فوجیان، چین.
+دفتر بین‌المللی: ساختمان شماره 2، طبقه 4، دفتر 23، قسمت 12، شهر رونگشین‌یانگژونگ، خیابان
+یانگ‌ژونگ شرقی، خیابان یانگ‌ژونگ، منطقه تایجیانگ، فوجو، فوجیان، چین.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> شرکت Fuan Eastern Lion Electric Machines Co., Ltd (برند: Eastern Lion، 福建东方电机) یک
+> تولیدکننده چینی ژنراتورهای دیزلی، آلترناتورهای با کولت و بدون کولت است که در سال 1987 در
+> فوجیان، چین تأسیس شده است. این شرکت آلترناتورها و ژنراتورهای کامل را در کارگاه‌های خود
+> می‌سازد، پیش از ارسال هر دستگاه را تست بار می‌کند و محصولاتش را در سراسر جهان می‌فروشد —
+> از 2 تا 2000 کیلووات، در 50 و 60 هرتز، با گزینه‌های موتور Cummins، Perkins، Yuchai، YTO،
+> Weichai، Kofo، Huachai، Longxin، Lovol، Woling، Yangdong، Yunnei، Yuxing و Kaixun.
+
+## این سایت چیست
+
+- 44 سری محصول، هر کدام با جدول مشخصات فنی کامل (مدل، توان اصلی و اضطراری، موتور،
+  آلترناتور، کنترلر) و فایل csv قابل دانلود
+- یابنده توان، بار مورد نیاز شما را با هر مدلی که آن را پوشش می‌دهد تطبیق می‌دهد
+- ابزار مقایسه تا چهار سری را کنار هم نشان می‌دهد
+- همه فهرست‌های مشخصات فنی به‌صورت csv در /fa/download/ در دسترس هستند
+
+## حقایق کلیدی
+
+| | |
+| --- | --- |
+| سال تأسیس | 1987 (کارخانه برق هان‌یانگ، فوجیان) |
+| بازه محصولات | 2 تا 2000 کیلووات، 50 و 60 هرتز |
+| ظرفیت آلترناتور | حدود 15000 آلترناتور در سال |
+| ظرفیت ژنراتور | حدود 2000 ژنراتور در سال |
+| شبکه خدمات | 35 پایگاه فروش و خدمات در چین |
+| بازارها | چین به‌علاوه صادرات به روسیه، اندونزی، فیلیپین، آفریقای جنوبی، پاکستان، بریتانیا و سایر کشورها |
+| کارخانه | شماره 36 شیایانگ، شهرک صنعتی بانژونگ، فوجیان، چین |
+| دفتر بین‌المللی | فوجو، فوجیان، چین |
+| تلفن | +86-13950513258 |
+| ایمیل | sales@easternlion.cn (خدمات: service@easternlion.cn) |
+
+## خانواده محصولات
+
+- ژنراتورهای دیزلی — /fa/products/diesel-generator-set/ (15 سری موتور، 50 هرتز)
+- ژنراتورهای 60 هرتز — /fa/products/60hz-diesel-generator-set/ (6 سری برای قاره‌های آمریکا و بخشی از آسیا)
+- آلترناتورهای با کولت — /fa/products/brush-alternator/ (سری STC، از 8 تا 500 کیلووات)
+- آلترناتورهای بدون کولت — /fa/products/brushless-alternator/ (سری EL، اتصال SAE)
+
+## کاربردها
+
+- ژنراتورها بر اساس کاربرد — /fa/applications/ (توان مورد نیاز، مدل‌های پوشش‌دهنده و نکات فنی که سفارش را تعیین می‌کنند)
+- مراکز داده — /fa/applications/data-centre/
+- بیمارستان‌ها — /fa/applications/hospital/
+- سایت‌های مخابراتی — /fa/applications/telecom/
+- معادن و سنگ‌شکن‌ها — /fa/applications/mining/
+- هتل‌ها و اقامتگاه‌ها — /fa/applications/hotel/
+- کارگاه‌های ساختمانی — /fa/applications/construction/
+
+## شرکت
+
+- معرفی شرکت — /fa/about/
+- تاریخچه فعالیت — /fa/about/history/
+- تیم ما — /fa/about/team/
+- گواهینامه‌ها و گواهی‌ها — /fa/about/qualification/
+- کارگاه تولیدی ما — /fa/about/workshop/
+- خدمات پس از فروش — /fa/service/
+- ویدیوهای کارخانه — /fa/video/
+- سؤالات متداول — /fa/faq/
+- اخبار — /fa/news/
+- تماس — /fa/contact/
+
+## دانلودها
+
+- مرکز دانلود با همه فهرست‌های مشخصات فنی به‌صورت csv — /fa/download/
+- همه مدل‌های همه سری‌ها در یک فایل — /fa/download/all-specs.csv
+- متن کامل سایت برای مدل‌های زبانی — /fa/llms-full.txt
+
+## چگونه با ما تماس بگیرید
+
+استعلام‌های فروش: sales@easternlion.cn — یک استعلام ساخت‌یافته (مدل، بار، فرکانس، شماره
+نقشه) ظرف یک روز کاری پاسخ داده می‌شود. فرم تماس در /fa/contact/ استعلام را مستقیماً به
+صندوق فروش می‌فرستد و واتساپ را به‌عنوان کانال دوم ارائه می‌دهد.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "محصولات"
+[llms_power_line]
+other = "بازه توان: از %[1]v تا %[2]v kW. فرکانس: %[3]v Hz. نوع: %[4]v. نشانی سری: %[5]s"
+[llms_csv_line]
+other = "فهرست مشخصات فنی (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "کاربردها"
+[llms_url_line]
+other = "نشانی: %[1]s"
+[llms_choose_h]
+other = "چگونه یک سری را انتخاب کنیم"
+[llms_choose_text]
+other = '''هر سفارش ژنراتور دیزلی به شش تصمیم خلاصه می‌شود: برند موتور (که قطعات یدکی و زمان
+پاسخ‌گویی شریک خدماتی شما را تعیین می‌کند)، توان اصلی یا اضطراری (توان اصلی روزانه 8 تا
+12 ساعت کار می‌کند و توان اضطراری برای پشتیبانی اضطراری است؛ دستگاه را طوری انتخاب کنید که
+بار بین 70 تا 80 درصد توان اضطراری باشد)، ولتاژ و فرکانس (400/230 ولت در 50 هرتز، 230/400
+ولت در 60 هرتز)، نوع کابین (فریم باز، کابین عایق صدا، کانتینر، تریلر)، راه‌اندازی و انتقال
+(استارت الکتریکی با کلید انتقال خودکار برای دستگاه‌های اضطراری) و موازی‌سازی (بیش از یک
+دستگاه به سیستم مدیریت توان نیاز دارد). شرایط محل نصب نیز مهم است: هر 1000 متر ارتفاع و
+هر 10 درجه سانتی‌گراد بالاتر از دمای استاندارد حدود 3 درصد از توان را کم می‌کند.
+
+گارانتی: 1 سال یا 1000 ساعت. حداقل سفارش: 1 دستگاه. گزینه‌های کابین: فریم باز، کابین
+عایق صدا، تریلر و کانتینر. راه‌اندازی: الکتریکی، با ATS به درخواست. سیستم‌های موازی با
+مدیریت توان موجود هستند.'''
+[llms_faq_h]
+other = "سؤالات متداول"
+[llms_service_h]
+other = "خدمات و شرکت"
+[llms_contact_line]
+other = "تماس: sales@easternlion.cn — استعلام‌ها ظرف یک روز کاری پاسخ داده می‌شوند."

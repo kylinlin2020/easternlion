@@ -394,10 +394,10 @@
       "g": 24,
       "p": 289,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 19,
+      "e": "R6105IZLD",
       "a": "—",
-      "c": "—",
+      "c": "RUIFEN6120",
       "u": "/products/diesel-generator-set/engine-by-longxin-series/"
     },
     {
@@ -405,10 +405,10 @@
       "g": 25,
       "p": 158,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 13,
+      "e": "1003G",
       "a": "—",
-      "c": "—",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-lovol-series/"
     },
     {
@@ -416,10 +416,10 @@
       "g": 7.2,
       "p": 2000,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 54,
+      "e": "403A-15G1",
       "a": "—",
-      "c": "—",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-perkins-series/"
     },
     {
@@ -427,10 +427,10 @@
       "g": 128,
       "p": 889,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 22,
+      "e": "D114系列WLD171",
       "a": "—",
-      "c": "—",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-woling-series/"
     },
     {
@@ -438,10 +438,10 @@
       "g": 48,
       "p": 1111,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 52,
+      "e": "WD129TAD23/1500",
       "a": "—",
-      "c": "—",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
     }
   ],

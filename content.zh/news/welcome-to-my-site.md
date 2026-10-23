@@ -1,17 +1,15 @@
-{
-  "title": "欢迎访问我们的网站！",
-  "date": "2016-04-20",
-  "author": "网站编辑",
-  "description": "欢迎访问东方电机网站：来自福建福安的柴油发电机组、有刷发电机与无刷发电机厂家，30 余年制造经验。",
-  "banner_image": "/images/banner/about.jpg",
-  "banner_title": "新闻详情",
-  "breadcrumb": [
-    {
-      "name": "新闻",
-      "url": "/news/"
-    }
-  ]
-}
+---
+title: "欢迎访问我们的网站！"
+date: 2016-04-20
+author: "网站编辑"
+description: "欢迎访问东方电机网站：来自福建福安的柴油发电机组、有刷发电机与无刷发电机厂家，30 余年制造经验。"
+banner_image: "/images/banner/about.jpg"
+banner_title: "新闻详情"
+breadcrumb:
+  - name: "新闻"
+    url: /news/
+  - name: "欢迎访问我们的网站！"
+---
 福建东方电机股份有限公司专业生产柴油发电机组、有刷发电机与无刷发电机。经过 30 多年的发展，我们的产品服务于建筑、通信、医疗、教育、石油等行业。
 
 欢迎浏览我们的产品页面，或联系国际业务部了解更多信息。

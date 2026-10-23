@@ -78,7 +78,7 @@
         </span>
         <span class="body">
           <h3>{{ i18n .key }}</h3>
-          <p>{{ if eq site.Language.Lang "zh" }}{{ .description_zh | default .description | default (i18n .key) }}{{ else }}{{ .description | default (i18n .key) }}{{ end }}</p>
+          <p>{{ index . (printf "description_%s" site.Language.Lang) | default .description | default (i18n .key) }}</p>
           <span class="more">
             {{ i18n "view_details" }}
             {{ partial "icon.html" (dict "name" "arrow") }}
@@ -133,7 +133,7 @@
     </div>
 
     <div class="feature-grid">
-      {{- $features := index site.Data.features site.Language.Lang -}}
+      {{- $features := index site.Data.features site.Language.Lang | default site.Data.features.en -}}
       {{- range $i, $f := $features }}
       <div class="feature">
         <div class="ico">

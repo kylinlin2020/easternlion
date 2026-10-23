@@ -30,6 +30,7 @@
 {{- $product := .Title -}}
 {{- $diesel := eq (len $cols) 11 -}}
 {{- $catURL := "/products/" -}}
+{{- if gt (len .Params.breadcrumb) 1 -}}{{- with (index .Params.breadcrumb 1).url -}}{{- $catURL = . -}}{{- end -}}{{- end -}}
 {{- if eq .Params.category "Diesel Generator Set" }}{{ $catURL = "/products/diesel-generator-set/" }}{{ end -}}
 {{- if eq .Params.category "60HZ Diesel Generator Set" }}{{ $catURL = "/products/60hz-diesel-generator-set/" }}{{ end -}}
 {{- if eq .Params.category "50HZ Diesel Generator Set" }}{{ $catURL = "/products/50hz-diesel-generator-set/" }}{{ end -}}

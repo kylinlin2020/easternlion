@@ -1,0 +1,988 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Главная"
+[nav_products]
+other = "Продукция"
+[nav_company]
+other = "О компании"
+[nav_service]
+other = "Сервис"
+[nav_video]
+other = "Видео"
+[nav_faq]
+other = "Вопросы и ответы"
+[nav_contact]
+other = "Свяжитесь с нами"
+
+[menu_company_profile]
+other = "О компании"
+[menu_history]
+other = "История развития"
+[menu_team]
+other = "Наша команда"
+[menu_qualification]
+other = "Сертификаты"
+[menu_news]
+other = "Новости"
+[menu_workshop]
+other = "Наше производство"
+
+[about_us]
+other = "О нас"
+[product_center]
+other = "Каталог продукции"
+[product_category]
+other = "Категории продукции"
+
+[footer_quick_links]
+other = "Быстрые ссылки"
+[footer_company_profile]
+other = "О компании"
+[footer_product_category]
+other = "Категории продукции"
+[footer_golden_supplier]
+other = "Золотой поставщик в Китае"
+[footer_tel]
+other = "Тел."
+[footer_email]
+other = "Эл. почта"
+[footer_web]
+other = "Сайт"
+[footer_copyright]
+other = "Copyright © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Все права защищены."
+
+[float_telephone]
+other = "Телефон"
+[float_email]
+other = "Эл. почта"
+[float_message]
+other = "Оставить сообщение"
+
+[search_placeholder]
+other = "Введите ключевое слово"
+[language_label]
+other = "Русский"
+
+[product_availability]
+other = "Наличие"
+[product_quantity]
+other = "Количество"
+[product_in_stock]
+other = "В наличии"
+[product_inquire]
+other = "Запросить цену"
+[product_add_basket]
+other = "Написать в WhatsApp"
+[product_description]
+other = "Описание товара"
+[product_share]
+other = "Поделиться:"
+[product_category_label]
+other = "Категория"
+[product_rating_note]
+other = "Мощности указаны ориентировочно. Пожалуйста, свяжитесь с нами для получения актуального листа характеристик и подтверждения наличия."
+
+[contact_get_in_touch]
+other = "Свяжитесь с нами"
+[contact_intl]
+other = "Отдел международных продаж"
+[contact_manufacturer]
+other = "Производитель"
+[contact_more_info]
+other = "Свяжитесь с нами для получения дополнительной информации."
+[contact_name]
+other = "Ваше имя *"
+[contact_email]
+other = "Ваша эл. почта *"
+[contact_phone]
+other = "Телефон / WhatsApp"
+[contact_company]
+other = "Компания"
+[contact_product]
+other = "Интересующая вас продукция"
+[contact_message]
+other = "Ваше сообщение *"
+[contact_submit]
+other = "Отправить"
+
+[news_views]
+other = "Просмотры"
+[news_author]
+other = "Автор"
+[news_publish_time]
+other = "Дата публикации"
+[news_origin]
+other = "Источник"
+[news_site]
+other = "Сайт"
+[news_sidebar_title]
+other = "Новости"
+[news_back]
+other = "Назад к новостям"
+[news_read_more]
+other = "Подробнее"
+
+[search_results]
+other = "Результаты поиска по запросу"
+[not_found]
+other = "Страница не найдена"
+[not_found_text]
+other = "Запрашиваемая страница, возможно, была перемещена или больше не существует."
+[back_home]
+other = "На главную"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Щеточный альтернатор"
+[cat_brushless_alternator]
+other = "Бесщеточный альтернатор"
+[cat_diesel_generator_set]
+other = "Дизель-генераторная установка"
+[cat_50hz_diesel_generator_set]
+other = "Дизель-генераторная установка 50 Гц"
+[cat_60hz_diesel_generator_set]
+other = "Дизель-генераторная установка 60 Гц"
+[cat_engine_cummins]
+other = "Двигатели Cummins (серии)"
+[cat_engine_cummins_2]
+other = "Двигатели Cummins"
+[cat_engine_huachai]
+other = "Двигатели Huachai (серии)"
+[cat_engine_kofo]
+other = "Двигатели Kofo (серии)"
+[cat_engine_longxin]
+other = "Двигатели Longxin (серии)"
+[cat_engine_lovol]
+other = "Двигатели Lovol (серии)"
+[cat_engine_perkins]
+other = "Двигатели Perkins (серии)"
+[cat_engine_woling]
+other = "Двигатели Woling (серии)"
+[cat_engine_wuxi]
+other = "Двигатели Wuxi (серии)"
+[cat_engine_yangdong]
+other = "Двигатели Yangdong (серии)"
+[cat_engine_yto]
+other = "Двигатели YTO (серии)"
+[cat_engine_yuchai]
+other = "Двигатели Yuchai (серии)"
+[cat_engine_yunnei]
+other = "Двигатели Yunnei (серии)"
+[cat_engine_yuxing]
+other = "Двигатели Yuxing (серии)"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Запросить цену"
+[topbar_hours]
+other = "Пн – Сб 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Нужна генераторная установка для вашего проекта?"
+[cta_text]
+other = "Сообщите мощность, напряжение и назначение — наши инженеры ответят в течение одного рабочего дня."
+[cta_button]
+other = "Отправить запрос"
+[hero_cta_products]
+other = "Смотреть продукцию"
+[hero_cta_quote]
+other = "Запросить коммерческое предложение"
+[view_details]
+other = "Подробнее"
+[why_us]
+other = "Почему Eastern Lion"
+[why_us_title]
+other = "Более 30 лет производим генераторы, которые не подводят"
+[why_us_text]
+other = "От намотки статора до испытания под нагрузкой — каждый агрегат собирается и проверяется на собственных производствах в провинциях Фуцзянь и Цзянсу."
+
+[product_center_eyebrow]
+other = "Что мы производим"
+[hero_cta_note]
+other = "Ответ в течение одного рабочего дня"
+
+[filter_type]
+other = "Тип"
+[filter_power]
+other = "Мощность"
+[filter_hz]
+other = "Частота"
+[filter_all]
+other = "Все"
+[filter_alternator]
+other = "Альтернаторы"
+[filter_genset]
+other = "Генераторные установки"
+[filter_power_50]
+other = "≤ 50 кВт"
+[filter_power_200]
+other = "50 – 200 кВт"
+[filter_power_500]
+other = "200 – 500 кВт"
+[filter_power_1000]
+other = "> 500 кВт"
+[filter_models]
+other = "моделей"
+[filter_empty]
+other = "Ни одна модель не подходит под выбранные фильтры — свяжитесь с нами по поводу других мощностей."
+[products_coming_soon]
+other = "Ассортимент обновляется. Свяжитесь с нами для получения полного каталога."
+
+[related_title]
+other = "Похожие модели"
+[inquiry_title]
+other = "Нужно коммерческое предложение?"
+[inquiry_text]
+other = "Отправьте нам мощность, напряжение и назначение — наши инженеры ответят в течение одного рабочего дня."
+[inquiry_button]
+other = "Запросить коммерческое предложение"
+[inquiry_whatsapp]
+other = "Написать в WhatsApp"
+
+[search_empty]
+other = "Ничего не найдено. Попробуйте название модели, марку двигателя или диапазон мощности."
+[search_loading]
+other = "Поиск…"
+[search_all]
+other = "Смотреть всю продукцию"
+
+[form_required]
+other = "Пожалуйста, заполните выделенные поля."
+[form_name_required]
+other = "Пожалуйста, введите ваше имя."
+[form_email]
+other = "Пожалуйста, введите корректный адрес эл. почты."
+[form_message_required]
+other = "Пожалуйста, расскажите, что вам нужно."
+[form_success_title]
+other = "Спасибо, ваш запрос отправлен"
+[form_success_text]
+other = "Наш инженер по продажам получил ваш запрос и ответит в течение одного рабочего дня. Письмо с подтверждением и номером вашего запроса уже отправляется в ваш почтовый ящик."
+[form_again]
+other = "Отправить ещё один запрос"
+
+
+[latest_news]
+other = "Последние новости"
+
+[spec_at_a_glance]
+other = "Характеристики кратко"
+[spec_category]
+other = "Категория"
+[spec_type]
+other = "Тип"
+[spec_frequency]
+other = "Частота"
+[spec_power]
+other = "Диапазон мощности"
+[spec_models]
+other = "Модели"
+[spec_note]
+other = "Диапазоны мощности приведены из стандартных таблиц мощности при 50 / 60 Гц на странице каждого товара. Другие напряжения и мощности доступны по запросу."
+
+[skip_to_content]
+other = "Перейти к содержанию"
+
+[search_button]
+other = "Поиск"
+[pager]
+other = "Другие модели"
+[pager_prev]
+other = "Назад"
+[pager_next]
+other = "Далее"
+
+[search_model]
+other = "Модель"
+
+[jump_to_model]
+other = "Перейти к модели"
+
+[alt_workshop]
+other = "Производство альтернаторов Eastern Lion"
+[alt_products]
+other = "Бесщеточные альтернаторы Eastern Lion"
+[alt_packing]
+other = "Упаковка и тестирование Eastern Lion"
+
+[search_cats]
+other = "Категории"
+[coverage_title]
+other = "Какая серия какой диапазон мощности покрывает?"
+[footer_qr]
+other = "Отсканируйте, чтобы связаться с нашей командой продаж"
+
+[service_process]
+other = "Как мы работаем с вами"
+[step1_title]
+other = "Требования"
+[step1_text]
+other = "Сообщите мощность, напряжение, частоту и назначение — или пришлите нам модель из нашего ассортимента."
+[step2_title]
+other = "Решение и коммерческое предложение"
+[step2_text]
+other = "Наши инженеры подбирают двигатель, альтернатор и контроллер, затем отправляют полное коммерческое предложение со сроком изготовления."
+[step3_title]
+other = "Производство и испытания"
+[step3_text]
+other = "Агрегат собирается на собственном производстве и испытывается под нагрузкой перед отгрузкой с завода."
+[step4_title]
+other = "Доставка и поддержка"
+[step4_text]
+other = "Морская или авиадоставка, помощь в пусконаладке, запасные части и техническая поддержка в течение всего срока службы."
+[applications]
+other = "Применение"
+[app1_alt]
+other = "Генераторные установки Eastern Lion"
+[app2_alt]
+other = "Упаковка и экспорт Eastern Lion"
+[app3_alt]
+other = "Производственная база Eastern Lion"
+
+[app1_title]
+other = "Применение 1"
+[app1_text]
+other = "Примеры применения в Китае: проект тоннеля Эньши 12-го управления Китайских железных дорог, проект моста через Янцзы 13-го управления Китайских железных дорог, налоговое управление провинции Хубэй, Уханьская клиническая больница Тунцзи, средняя школа № 3 Вэньчжоу, жилой комплекс Линькунь в Чжэцзяне"
+[app2_title]
+other = "Применение 2"
+[app2_text]
+other = "Проект шоссейного моста через Янцзы в провинции Хубэй 13-го управления Китайских железных дорог."
+[app3_title]
+other = "Применение 3"
+[app3_text]
+other = "Проект тоннеля Эньши 12-го управления Китайских железных дорог."
+
+[faq_jump]
+other = "Перейти к вопросу"
+[faq_cta_title]
+other = "Не нашли ответ?"
+[faq_cta_text]
+other = "Отправьте нам мощность, напряжение и назначение, и наши инженеры ответят в течение одного рабочего дня."
+[faq_cta_button]
+other = "Задать вопрос нашим инженерам"
+
+[more_news]
+other = "Ещё новости"
+
+[contact_drawing]
+other = "Ссылка на чертёж / ТУ (необязательно)"
+[contact_drawing_hint]
+other = "Укажите номер чертежа или приложите файл, отвечая на наше письмо — тогда наши инженеры рассчитают цену точно по вашему чертежу."
+
+[zoom_image]
+other = "Нажмите, чтобы увеличить"
+[video_facade]
+other = "Смотреть видео"
+
+[video_title]
+other = "Посмотрите на нашу технику"
+[video_intro]
+other = "Видео о заводе, производственной линии и испытаниях генераторных установок. Плеер загружается только при нажатии «Воспроизвести»."
+[video_1]
+other = "Генераторные установки и упаковка"
+[video_2]
+other = "Производственная линия"
+[video_3]
+other = "Производственная база"
+
+[compare_add]
+other = "Добавить к сравнению"
+[compare_clear]
+other = "Очистить"
+[compare_open]
+other = "Сравнить"
+[compare_models]
+other = "моделей"
+[compare_open_model]
+other = "Открыть"
+[compare_title]
+other = "Сравнение моделей"
+[compare_power]
+other = "Диапазон мощности"
+[compare_freq]
+other = "Частота"
+[compare_count]
+other = "Моделей"
+[compare_engine]
+other = "Двигатель"
+[compare_alternator]
+other = "Альтернатор"
+[compare_controller]
+other = "Контроллер"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Категории продукции Eastern Lion: дизель-генераторные установки, щеточные и бесщеточные альтернаторы мощностью от 2 кВт до 2000 кВт, произведённые в Китае."
+[seo_tag_desc]
+other = "Новости и обновления продукции Fuan Eastern Lion Electric Machines Co., Ltd по темам."
+[alt_factory]
+other = "Завод генераторов Eastern Lion в Фуане, провинция Фуцзянь"
+
+[breadcrumb_here]
+other = "Вы здесь:"
+[footer_about]
+other = "О нас"
+[spec_genset]
+other = "Характеристики генераторной установки"
+[spec_engine]
+other = "Двигатель"
+[spec_alternator]
+other = "Бесщеточный альтернатор"
+[spec_controller]
+other = "Контроллер"
+[spec_datasheet]
+other = "Техническая документация"
+[spec_detail]
+other = "Подробно"
+[col_model]
+other = "Модель"
+[col_prime_kw]
+other = "Первичная мощность (кВт)"
+[col_prime_kva]
+other = "Первичная мощность (кВА)"
+[col_standby_kw]
+other = "Резервная мощность (кВт)"
+[col_standby_kva]
+other = "Резервная мощность (кВА)"
+[col_engine_model]
+other = "Модель двигателя"
+[col_engine_power]
+other = "Мощность двигателя (кВт)"
+[col_alt_model]
+other = "Модель альтернатора"
+[col_alt_power]
+other = "Мощность альтернатора (кВт)"
+[col_controller]
+other = "Контроллер"
+[col_datasheet]
+other = "Техническая документация"
+[col_50hz_kw]
+other = "Выходная мощность 50 Гц (кВт)"
+[col_50hz_kva]
+other = "Выходная мощность 50 Гц (кВА)"
+[col_60hz_kw]
+other = "Выходная мощность 60 Гц (кВт)"
+[col_60hz_kva]
+other = "Выходная мощность 60 Гц (кВА)"
+[col_sae_size]
+other = "Размер SAE"
+[col_core_length]
+other = "Длина сердечника (мм)"
+[news_center_title]
+other = "Новости"
+
+[finder_eyebrow]
+other = "Подбор мощности"
+[finder_title]
+other = "Какая модель покроет вашу нагрузку?"
+[finder_text]
+other = "Введите нужную мощность, и мы перечислим все модели в этом диапазоне, способные её обеспечить — с указанием двигателя, альтернатора и контроллера для каждой из них."
+[finder_quick]
+other = "Типовые нагрузки"
+[finder_kw]
+other = "Требуемая мощность"
+[finder_kw_ph]
+other = "например, 200"
+[finder_hz]
+other = "Частота"
+[finder_go]
+other = "Подобрать модели"
+[finder_head]
+other = "{n} серии покрывают {kw} кВт при {hz} Гц"
+[finder_head_one]
+other = "1 серия покрывает {kw} кВт при {hz} Гц"
+[finder_more]
+other = "+{n} моделей в этой серии также покрывают эту нагрузку"
+[finder_open]
+other = "Открыть лист характеристик"
+[finder_inquire]
+other = "Запросить цену"
+[finder_none]
+other = "Ни одна модель в этом диапазоне не покрывает {kw} кВт."
+[finder_none_closest]
+other = "Ближайшая — {model} ({kw} кВт) — сообщите нагрузку, и наши инженеры подберут для вас подходящую модель."
+[finder_none_max]
+other = "Пришлите нам нагрузку, и мы предложим индивидуальное или параллельное решение."
+[finder_model_standby]
+other = "резервная"
+[finder_model_prime]
+other = "первичная"
+[finder_model_output]
+other = "выходная"
+[finder_more_series]
+other = "Показать ещё {n} серий"
+
+[search_spec]
+other = "Модели, покрывающие {kw} кВт при {hz} Гц"
+[search_spec_none]
+other = "Ни одна модель не покрывает {kw} кВт — сообщите нагрузку, и мы подберём подходящую."
+[search_cover]
+other = "резервная"
+[search_standby]
+other = "резервная"
+[search_prime]
+other = "первичная"
+[search_output]
+other = "выходная"
+[inquiry_power]
+other = "Требуемая мощность"
+[model_nav_label]
+other = "Соседние модели"
+[model_nav_hint]
+other = "Выберите модель в таблице, чтобы увидеть соседние размеры."
+[model_nav_current]
+other = "текущая"
+[model_nav_up]
+other = "больше"
+[model_nav_down]
+other = "меньше"
+[model_nav_same]
+other = "та же мощность"
+[contact_models]
+other = "Рассматриваемые модели"
+[contact_model_add_btn]
+other = "Добавить"
+[inquiry_models]
+other = "Модели"
+[compare_quote]
+other = "Запросить цену на эти {n} моделей"
+
+[spec_series]
+other = "Серия"
+[download_all_title]
+other = "Все списки характеристик в одном файле"
+[download_all_text]
+other = "Каждая модель каждой серии с её мощностями, двигателем, альтернатором и контроллером — один csv на весь каталог."
+[download_all_button]
+other = "Скачать все характеристики (CSV)"
+[download_file]
+other = "Файл"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Печать / PDF"
+[download_title_link]
+other = "Центр загрузок"
+[preview_title]
+other = "Проверьте ваш запрос перед отправкой"
+[preview_hint]
+other = "Так ваш запрос дойдёт до наших инженеров — текст всё ещё можно изменить."
+[preview_mail]
+other = "Открыть в почтовом приложении"
+[preview_copy]
+other = "Скопировать текст"
+[preview_back]
+other = "Вернуться к форме"
+[preview_copied]
+other = "Скопировано в буфер обмена."
+[inquiry_salutation]
+other = "Уважаемая команда продаж Eastern Lion!"
+[inquiry_interested]
+other = "Меня интересуют следующие генераторные установки:"
+[inquiry_model]
+other = "Модель"
+[inquiry_required_power]
+other = "Требуемая мощность"
+[inquiry_drawing]
+other = "Ссылка на чертёж / ТУ"
+[inquiry_message]
+other = "Сообщение"
+[inquiry_contact]
+other = "Контакт"
+[inquiry_name]
+other = "Имя"
+[inquiry_company]
+other = "Компания"
+[inquiry_phone]
+other = "Телефон / WhatsApp"
+[inquiry_email]
+other = "Эл. почта"
+[inquiry_footer]
+other = "Отправлено с easternlion.cn"
+[inquiry_subject]
+other = "Запрос по генераторной установке"
+[finder_title_slim]
+other = "Не уверены, какая модель подойдёт?"
+[finder_fold_title]
+other = "Найти модель, покрывающую мою нагрузку"
+[compare_selected]
+other = "выбрано"
+[resume_models]
+other = "Вы смотрели"
+[resume_continue]
+other = "Продолжить запрос"
+[resume_close]
+other = "Закрыть"
+[preview_whatsapp]
+other = "Отправить через WhatsApp"
+[preview_download]
+other = "Скачать запрос"
+[contact_send]
+other = "Отправить запрос"
+[preview_send]
+other = "Отправить запрос"
+[preview_failed]
+other = "Не удалось отправить запрос автоматически. Воспользуйтесь одним из вариантов ниже или напишите на sales@easternlion.cn."
+[form_success_receipt]
+other = "Показать, что мы получили"
+[contact_sending]
+other = "Отправка…"
+[mm_model]
+other = "Модель"
+[mm_load]
+other = "Нагрузка (кВт)"
+[mm_hz]
+other = "Частота"
+[contact_models_hint]
+other = "Добавьте все модели, по которым вы хотите получить цену — для каждой укажите свою мощность и частоту, если они отличаются. Наши инженеры ответят ценами и сроками изготовления для каждой из них."
+[contact_model_add]
+other = "Добавить ещё модель (например, GF/GFS-C200)"
+[service_schema_type]
+other = "Поставка генераторных установок, запасные части и послепродажное обслуживание"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Основные характеристики"
+[ks_power]
+other = "Диапазон мощности"
+[ks_frequency]
+other = "Частота"
+[ks_models]
+other = "Модели"
+[ks_engine]
+other = "Двигатель"
+[ks_alternator]
+other = "Альтернатор"
+[ks_controller]
+other = "Контроллер"
+[ks_warranty]
+other = "Гарантия"
+[ks_warranty_value]
+other = "1 год или 1000 часов"
+[ks_options]
+other = "Варианты исполнения"
+[ks_options_value]
+other = "Открытое исполнение, шумозащитный кожух, прицеп, АВР и параллельные системы"
+[ks_moq]
+other = "Мин. партия"
+[ks_moq_value]
+other = "1 установка"
+[product_copy_link]
+other = "Скопировать ссылку"
+[product_link_copied]
+other = "Ссылка скопирована"
+[guide_title]
+other = "Как выбрать эту серию"
+[guide_intro]
+other = "Шесть решений определяют почти любой заказ генераторной установки. Вот как принять каждое из них — и что даёт вам эта серия."
+[guide_col_decision]
+other = "Ваше решение"
+[guide_col_how]
+other = "Как принять решение"
+[guide_col_this]
+other = "Эта серия"
+[guide_engine]
+other = "Марка двигателя"
+[guide_engine_how]
+other = "Двигатель определяет доступность запасных частей и время реакции вашего сервисного партнёра. Сначала сравнивайте сервисную сеть, и только потом — цену."
+[guide_engine_none]
+other = "Только альтернатор"
+[guide_engine_count]
+other = "%v моделей в этой серии"
+[guide_duty]
+other = "Первичная или резервная мощность"
+[guide_duty_how]
+other = "Первичная мощность — для установок, работающих 8–12 часов в сутки; резервная — для аварийного резервирования. Подбирайте установку так, чтобы нагрузка составляла 70–80 % от резервной мощности — это удерживает двигатель на 50–75 % нагрузки, где расход топлива наиболее оптимален."
+[guide_duty_value]
+other = "Резервная %v–%v кВт, первичная %v–%v кВт"
+[guide_voltage]
+other = "Напряжение и частота"
+[guide_voltage_how]
+other = "400/230 В при 50 Гц для Азии, Европы, Африки и Ближнего Востока, 230/400 В при 60 Гц для Америки. И альтернатор, и панель управления должны соответствовать сети, к которой вы подключаетесь."
+[guide_voltage_50]
+other = "50 Гц, 400/230 В"
+[guide_voltage_60]
+other = "60 Гц, 230/400 В"
+[guide_enclosure]
+other = "Исполнение"
+[guide_enclosure_how]
+other = "Открытое исполнение — для машинного зала, шумозащитный кожух — для уличной городской площадки (около 65 дБ(А) на расстоянии 7 м), контейнер — для блока 1000 кВт, прицеп — для мобильной установки."
+[guide_enclosure_value]
+other = "Открытое исполнение, шумозащитный кожух, прицеп и контейнер"
+[guide_starting]
+other = "Запуск и включение"
+[guide_starting_how]
+other = "Аварийной установке нужны электростарт и автоматический ввод резерва (АВР), иначе установка будет простаивать до отключения сети. Ручной и пневмозапуск доступны для специальных задач."
+[guide_starting_value]
+other = "Электростарт, АВР (автоматический и ручной) по запросу"
+[guide_parallel]
+other = "Параллельная работа"
+[guide_parallel_how]
+other = "Несколько установок означают систему управления мощностью, ввод резерва большей мощности и панель управления, позволяющую установкам распределять нагрузку и принимать работу друг друга."
+[guide_parallel_value]
+other = "Параллельные системы с управлением мощностью"
+[guide_environment]
+other = "Условия площадки"
+[guide_environment_how]
+other = "Каждые 1000 м высоты и каждые 10 °C выше стандартной температуры окружающей среды снижают мощность примерно на 3 %, а солёный туман или запылённая площадка требуют кожуха и более короткого интервала обслуживания."
+[guide_environment_value]
+other = "Стандартная мощность при 0–50 °C, понижение мощности по запросу"
+[guide_foot]
+other = "Пришлите нам нагрузку, напряжение и условия площадки — и мы вернём точную модель, цену и срок поставки."
+[wa_from]
+other = "Запрос с easternlion.cn"
+[wa_series]
+other = "Серия"
+[wa_model]
+other = "Модель"
+[wa_power]
+other = "Требуемая мощность"
+[wa_standby]
+other = "Резервная мощность"
+[wa_link]
+other = "Ссылка"
+[search_guide]
+other = "Как выбрать"
+[search_guide_more]
+other = "Прочитать полное руководство"
+[search_compare]
+other = "Сравнить"
+[search_models]
+other = "моделей"
+[inquiry_ref_label]
+other = "Номер вашего запроса:"
+[form_success_whatsapp]
+other = "Нужно срочнее? Напишите нам в"
+[app_eyebrow]
+other = "Применение"
+[app_index_title]
+other = "Генераторные установки по назначению"
+[app_index_text]
+other = "Начните с задачи, которую должна решать ваша установка. На странице каждого применения показаны необходимая мощность, модели резервного исполнения, которые её покрывают, важные технические нюансы для площадки и модели, которые мы для неё производим."
+[app_sizing_title]
+other = "Как подобрать мощность установки"
+[app_sizing_text]
+other = "Резервный режим: установка должна выдерживать всю подключённую нагрузку плюс пусковой ток, поэтому мы подбираем её с запасом выше рабочей нагрузки. В таблице ниже приведены резервные мощности реальных моделей для каждой типовой нагрузки этого применения."
+[app_sizing_load]
+other = "Типовая нагрузка"
+[app_sizing_standby]
+other = "Резервная мощность на выбор"
+[app_sizing_models]
+other = "Модели, которые это покрывают"
+[app_sizing_note]
+other = "Мощности соответствуют ISO 8528. Итоговая модель зависит от напряжения, автономности по топливу, исполнения и температуры окружающей среды — пришлите нам нагрузку, и мы подтвердим подбор письменно."
+[app_sizing_oversize]
+other = "Запросите у нас решение мощностью более 2000 кВт"
+[app_requirements_title]
+other = "Что требуется для этого применения"
+[app_series_title]
+other = "Серии, используемые для этой задачи"
+[app_model_word]
+other = "моделей"
+[app_faq_title]
+other = "Вопросы, которые задают покупатели об этом применении"
+[app_fact_load]
+other = "Диапазон мощности"
+[app_fact_duty]
+other = "Режим"
+[app_fact_duty_value]
+other = "Резервный"
+[app_fact_hz]
+other = "Частота"
+[app_fact_engine]
+other = "Двигатели"
+[app_cta_title]
+other = "Сообщите нагрузку и площадку"
+[app_cta_text]
+other = "Пришлите рабочую нагрузку, напряжение и место, где будет работать установка. Наши инженеры ответят моделью, компоновкой и ценой в течение одного рабочего дня."
+[app_cta_button]
+other = "Запросить коммерческое предложение"
+[app_wa_text]
+other = "Запрос: дизель-генераторная установка %s"
+[app_other_title]
+other = "Другие применения"
+[datasheet_sub]
+other = "Технический лист генераторной установки"
+[datasheet_print]
+other = "Печать или сохранение в PDF"
+[datasheet_back]
+other = "Назад к серии"
+[datasheet_contact]
+other = "Ваш запрос"
+[datasheet_note]
+other = "Примечание"
+[datasheet_note_text]
+other = "Мощности соответствуют ISO 8528. Итоговая конфигурация зависит от напряжения, автономности по топливу, исполнения и температуры окружающей среды."
+[download_datasheet]
+other = "Техническая документация"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Модели, которые это покрывают:"
+[mm_no_cover]
+other = "Ни одна модель из каталога не покрывает эту нагрузку."
+[mm_picked]
+other = "уже выбрано"
+[ui_close]
+other = "Закрыть"
+[ui_remove]
+other = "Удалить"
+[lang_label]
+other = "Сменить язык"
+[nav_menu]
+other = "Меню"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "В"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v и %[2]v"
+[kind_genset]
+other = "дизель-генераторная установка"
+[kind_alternator]
+other = "альтернатор"
+[app_summary_tpl]
+other = "Для %[1]s вам потребуется дизель-генераторная установка резервной мощностью от %[2]v до %[3]v кВт; Eastern Lion выпускает такие установки на двигателях %[4]s с частотой %[5]s Гц в открытом исполнении, со шумозащитным кожухом, в прицепном исполнении, с АВР и в параллельном исполнении, и каждая установка проходит испытание под полной нагрузкой перед отгрузкой."
+[guide_sum_engine]
+other = "%[1]s — серия дизель-генераторных установок Eastern Lion с частотой %[2]v Гц на базе двигателя %[3]s, охватывающая от %[4]v до %[5]v кВт в %[6]d моделях. Применяется для %[7]s."
+[guide_sum_plain]
+other = "%[1]s — серия Eastern Lion: частотой %[2]v Гц, тип %[3]s, охватывает от %[4]v до %[5]v кВт в %[6]d моделях, поставляется в %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "полный текст сайта"
+[llms_intro]
+other = '''Бренд: Eastern Lion (福建东方电机). Сайт: %[1]s
+Основан в 1987 году в Фуане, провинция Фуцзянь. Производитель дизель-генераторных установок,
+щеточных и бесщеточных альтернаторов мощностью от 2 кВт до 2000 кВт, 50 Гц и 60 Гц. Собственные
+цеха: производство альтернаторов, сборка генераторных установок, испытания под нагрузкой.
+Около 15 000 альтернаторов и 2 000 генераторных установок в год. 35 сервисных и дилерских баз в
+Китае. Экспорт в Россию, Индонезию, Филиппины, ЮАР, Пакистан, Великобританию и другие рынки.
+
+Контакты: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Завод: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Международный офис: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (бренд: Eastern Lion, 福建东方电机) — китайский
+> производитель дизель-генераторных установок, щеточных и бесщеточных альтернаторов, основанный
+> в 1987 году в Фуане, провинция Фуцзянь. Компания производит альтернаторы и готовые генераторные
+> установки на собственных производственных площадках, испытывает каждую машину под нагрузкой
+> перед отгрузкой и продаёт по всему миру — от 2 кВт до 2000 кВт, 50 Гц и 60 Гц — с двигателями
+> Cummins, Perkins, Yuchai, YTO, Weichai, Kofo, Huachai, Longxin, Lovol, Woling,
+> Yangdong, Yunnei, Yuxing и Kaixun.
+
+## Что представляет собой этот сайт
+
+- 44 серии продукции, каждая с полной таблицей характеристик (модель, первичная и резервная
+  мощность, двигатель, альтернатор, контроллер) и загружаемым csv
+- Подбор мощности сопоставляет нагрузку в кВт со всеми моделями, которые её покрывают
+- Инструмент сравнения выводит до четырёх серий рядом
+- Каждый список характеристик доступен в виде csv по адресу /ru/download/
+
+## Ключевые факты
+
+| | |
+| --- | --- |
+| Основание | 1987 (электрзавод Ханьян, Фуан) |
+| Ассортимент | от 2 кВт до 2000 кВт, 50 Гц и 60 Гц |
+| Мощность производства альтернаторов | около 15 000 альтернаторов в год |
+| Мощность производства установок | около 2 000 генераторных установок в год |
+| Сервисная сеть | 35 баз продаж и сервиса в Китае |
+| Рынки | Китай, а также экспорт в Россию, Индонезию, Филиппины, ЮАР, Пакистан, Великобританию и другие страны |
+| Завод | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Международный офис | Фучжоу, провинция Фуцзянь, Китай |
+| Телефон | +86-13950513258 |
+| Эл. почта | sales@easternlion.cn (сервис: service@easternlion.cn) |
+
+## Линейки продукции
+
+- Дизель-генераторные установки — /ru/products/diesel-generator-set/ (15 серий двигателей, 50 Гц)
+- Генераторные установки 60 Гц — /ru/products/60hz-diesel-generator-set/ (6 серий для Америки и части Азии)
+- Щеточные альтернаторы — /ru/products/brush-alternator/ (серия STC, от 8 кВт до 500 кВт)
+- Бесщеточные альтернаторы — /ru/products/brushless-alternator/ (серия EL, муфта SAE)
+
+## Применение
+
+- Генераторные установки по назначению — /ru/applications/ (необходимая мощность, модели, которые её покрывают, и технические нюансы, определяющие заказ)
+- Центры обработки данных — /ru/applications/data-centre/
+- Больницы — /ru/applications/hospital/
+- Телекоммуникационные объекты — /ru/applications/telecom/
+- Горнодобывающие и карьерные объекты — /ru/applications/mining/
+- Отели и курорты — /ru/applications/hotel/
+- Строительные площадки — /ru/applications/construction/
+
+## О компании
+
+- О компании — /ru/about/
+- История развития — /ru/about/history/
+- Наша команда — /ru/about/team/
+- Сертификаты и документы — /ru/about/qualification/
+- Наше производство — /ru/about/workshop/
+- Послепродажное обслуживание — /ru/service/
+- Видео с завода — /ru/video/
+- Часто задаваемые вопросы — /ru/faq/
+- Новости — /ru/news/
+- Контакты — /ru/contact/
+
+## Загрузки
+
+- Центр загрузок со всеми списками характеристик в csv — /ru/download/
+- Все модели всех серий в одном файле — /ru/download/all-specs.csv
+- Полный текст сайта для языковых моделей — /ru/llms-full.txt
+
+## Как связаться с нами
+
+Коммерческие запросы: sales@easternlion.cn — структурированный запрос (модель, нагрузка, частота,
+ссылка на чертёж) обрабатывается в течение одного рабочего дня. Контактная форма на /ru/contact/
+отправляет запрос напрямую в отдел продаж и дополнительно предлагает WhatsApp как второй канал.'''
+[llms_products_h]
+other = "Продукция"
+[llms_power_line]
+other = "Диапазон мощности: от %[1]v до %[2]v кВт. Частота: %[3]v Гц. Тип: %[4]v. URL серии: %[5]s"
+[llms_csv_line]
+other = "Список характеристик (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Применение"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Как выбрать серию"
+[llms_choose_text]
+other = '''Каждый заказ генераторной установки сводится к шести решениям: марка двигателя (она определяет
+запасные части и время реакции вашего сервисного партнёра), режим — первичная или резервная
+мощность (первичная работает 8–12 часов в сутки, резервная — для аварийного резервирования;
+подбирайте установку так, чтобы нагрузка составляла 70–80 % от резервной мощности), напряжение
+и частота (400/230 В при 50 Гц, 230/400 В при 60 Гц), исполнение (открытое исполнение, шумозащитный
+кожух, контейнер, прицеп), запуск и включение (электростарт с автоматическим вводом резерва для
+резервных установок) и параллельная работа (несколько установок требуют системы управления
+мощностью). Важны и условия площадки: каждые 1000 м высоты и каждые 10 °C выше стандартной
+температуры окружающей среды снижают мощность примерно на 3 %.
+
+Гарантия: 1 год или 1000 часов. Минимальная партия: 1 установка. Варианты исполнения: открытое
+исполнение, шумозащитный кожух, прицеп и контейнер. Запуск: электрический, АВР по запросу.
+Параллельные системы с управлением мощностью доступны.'''
+[llms_faq_h]
+other = "Часто задаваемые вопросы"
+[llms_service_h]
+other = "Сервис и компания"
+[llms_contact_line]
+other = "Контакты: sales@easternlion.cn — на запросы отвечаем в течение одного рабочего дня."

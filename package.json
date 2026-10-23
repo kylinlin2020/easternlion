@@ -7,13 +7,14 @@
     "dev": "hugo server --port 1313 --bind 127.0.0.1 --navigateToChanged",
     "build": "hugo --gc --minify",
     "preview": "hugo server --port 1313 --bind 127.0.0.1 --renderToDisk --renderToMemory",
-    "check": "npm run build && node scripts/check-links.js public && node scripts/check-products.js && node scripts/check-alignment.js public && node scripts/check-seo.js public && node scripts/check-language.js public && node scripts/check-js.js assets/js && node scripts/check-inquiry-function.mjs",
+    "check": "npm run build && node scripts/check-links.js public && node scripts/check-products.js && node scripts/check-alignment.js public && node scripts/check-seo.js public && node scripts/check-language.js public && node scripts/check-js.js assets/js && node scripts/check-languages.js && node scripts/check-inquiry-function.mjs",
     "links": "node scripts/check-links.js public",
     "products": "node scripts/check-products.js",
     "align": "node scripts/check-alignment.js public",
     "seo": "node scripts/check-seo.js public",
     "language": "node scripts/check-language.js public",
     "js": "node scripts/check-js.js assets/js",
+    "langsync": "node scripts/check-languages.js",
     "inquiry": "node scripts/check-inquiry-function.mjs"
   },
   "engines": {

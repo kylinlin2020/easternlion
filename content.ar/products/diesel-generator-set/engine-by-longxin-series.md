@@ -1,0 +1,396 @@
+{
+  "title": "مولد ديزل بمحرك Longxin",
+  "description": "مجموعة مولدات ديزل بمحرك Longxin، بتردد 50 Hz، مع القدرة الأساسية والاحتياطية إلى جانب تفاصيل المحرك والمولّد التبادلي ووحدة التحكم.",
+  "summary": "مجموعة مولدات ديزل بمحرك Longxin، بتردد 50 Hz، مع القدرة الأساسية والاحتياطية إلى جانب تفاصيل المحرك والمولّد التبادلي ووحدة التحكم.",
+  "banner_image": "/images/banner/product.jpg",
+  "banner_title": "تفاصيل المنتج",
+  "image": "/images/products/engine-by-longxin-series.jpg",
+  "images": [
+    "/images/products/engine-by-longxin-series.jpg"
+  ],
+  "category": "مجموعة مولدات ديزل",
+  "weight": 100,
+  "breadcrumb": [
+    {
+      "name": "المنتجات",
+      "url": "/products/"
+    },
+    {
+      "name": "مجموعة مولدات ديزل",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "مجموعة مولدات ديزل 50HZ",
+      "url": "/products/50hz-diesel-generator-set/"
+    }
+  ],
+  "columns": [
+    "Model",
+    "Prime power (kW)",
+    "Prime power (kVA)",
+    "Standby power (kW)",
+    "Standby power (kVA)",
+    "Engine model",
+    "Engine power (kW)",
+    "Alternator model",
+    "Alternator power (kW)",
+    "Controller",
+    "Datasheet"
+  ],
+  "rows": [
+    [
+      "GFS-W33",
+      "24",
+      "30",
+      "27",
+      "33",
+      "K4100D",
+      "30.1",
+      "EL 184G",
+      "25",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W33",
+      "24",
+      "30",
+      "27",
+      "33",
+      "ZH4100D",
+      "30.1",
+      "EL 184G",
+      "25",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W44",
+      "32",
+      "40",
+      "36",
+      "44",
+      "K4100ZD",
+      "41",
+      "EL 184J",
+      "32",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W56",
+      "40",
+      "50",
+      "44",
+      "56",
+      "ZH4105ZD",
+      "56",
+      "EL 224D",
+      "40",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "ZH4105ZD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "ZH4105ZLD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "R4105ZD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W94",
+      "68",
+      "85",
+      "76",
+      "94",
+      "R6105ZD",
+      "84",
+      "EL 224G",
+      "68",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W111",
+      "80",
+      "100",
+      "89",
+      "111",
+      "R6105AZLD",
+      "110",
+      "EL 274C",
+      "80",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W139",
+      "100",
+      "125",
+      "111",
+      "139",
+      "R6105IZLD",
+      "132",
+      "EL 274D",
+      "96",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W153",
+      "110",
+      "138",
+      "122",
+      "153",
+      "R6105IZLD",
+      "132",
+      "EL 274E",
+      "112",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W153",
+      "110",
+      "138",
+      "122",
+      "153",
+      "R6105IZLD",
+      "132",
+      "EL 274E",
+      "112",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W178",
+      "128",
+      "160",
+      "142",
+      "178",
+      "R6108ZLD",
+      "155",
+      "EL 274F",
+      "128",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W178",
+      "128",
+      "160",
+      "142",
+      "178",
+      "R6108ZLD",
+      "155",
+      "EL 274F",
+      "128",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W222",
+      "160",
+      "200",
+      "178",
+      "222",
+      "6126ZLD新",
+      "215",
+      "EL 274H",
+      "160",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W250",
+      "180",
+      "225",
+      "200",
+      "250",
+      "6126ZLD新",
+      "215",
+      "EL 274J",
+      "184",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W278",
+      "200",
+      "250",
+      "222",
+      "278",
+      "6126ZLD-1新",
+      "260",
+      "EL 274K",
+      "200",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W328",
+      "236",
+      "295",
+      "262",
+      "328",
+      "WD618",
+      "308",
+      "EL 314D",
+      "236",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W361",
+      "260",
+      "325",
+      "289",
+      "361",
+      "WD618",
+      "308",
+      "EL 314E",
+      "260",
+      "RUIFEN6120",
+      "Detail"
+    ]
+  ],
+  "power_min": 24,
+  "power_max": 289,
+  "hz": 50,
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "مولد ديزل بمحرك Cummins 2",
+      "g": 200,
+      "p": 1311,
+      "h": 50,
+      "n": 34,
+      "e": "MTA11-G2A",
+      "a": "EL 314E",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-cummins-2/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Cummins",
+      "g": 22,
+      "p": 444,
+      "h": 50,
+      "n": 40,
+      "e": "4BTA3.9-G2",
+      "a": "EL 274K",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-cummins/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Huachai",
+      "g": 13,
+      "p": 289,
+      "h": 50,
+      "n": 27,
+      "e": "2105D",
+      "a": "EL 224C",
+      "c": "RUIFEN6120",
+      "u": "/products/diesel-generator-set/engine-by-huachai-series/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Kofo",
+      "g": 10,
+      "p": 338,
+      "h": 50,
+      "n": 24,
+      "e": "K4100DS",
+      "a": "EL 184G",
+      "c": "RUIFEN6120",
+      "u": "/products/diesel-generator-set/engine-by-kofo-series/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Lovol",
+      "g": 25,
+      "p": 158,
+      "h": 50,
+      "n": 13,
+      "e": "1003G",
+      "a": "EL 274C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-lovol-series/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Perkins",
+      "g": 7.2,
+      "p": 2000,
+      "h": 50,
+      "n": 54,
+      "e": "403A-15G1",
+      "a": "EL 224G",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-perkins-series/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Woling",
+      "g": 128,
+      "p": 889,
+      "h": 50,
+      "n": 22,
+      "e": "D114系列WLD171",
+      "a": "EL 404D",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-woling-series/"
+    },
+    {
+      "t": "مولد ديزل بمحرك Wuxi",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 52,
+      "e": "WD129TAD23/1500",
+      "a": "EL 354C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
+    }
+  ],
+  "model_count": 19,
+  "engine_top": "R6105IZLD",
+  "alternator_top": "EL 224E",
+  "controller_top": "RUIFEN6120",
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv",
+    "datasheet"
+  ]
+}
+تجمع مجموعات مولدات الديزل من سلسلة Longxin لدى Eastern Lion محركات Longxin الديزل مع المولّدات التبادلية بدون مفرشات من إنتاجنا ولوحة تحكم موثوقة. يوضّح الجدول أدناه الطُرز القياسية بجهد 400/230 V وتردد 50 Hz مع القدرة الأساسية والاحتياطية وفق ISO 8528. وتتوفر عند الطلب تكوينات الهيكل المكشوف والكابينة العازلة للصوت والمقطورة ومفتاح النقل التلقائي (ATS) وأنظمة التشغيل المتوازي.
+
+تُختبر جميع مجموعات المولدات بحمل كامل قبل الشحن. يُرجى التواصل معنا للحصول على ورقة البيانات التفصيلية والأسعار ومدة التسليم.

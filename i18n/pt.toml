@@ -1,0 +1,989 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Início"
+[nav_products]
+other = "Produtos"
+[nav_company]
+other = "Perfil da Empresa"
+[nav_service]
+other = "Serviços"
+[nav_video]
+other = "Vídeo"
+[nav_faq]
+other = "Perguntas Frequentes"
+[nav_contact]
+other = "Fale Conosco"
+
+[menu_company_profile]
+other = "Perfil da Empresa"
+[menu_history]
+other = "História de Desenvolvimento"
+[menu_team]
+other = "Nossa Equipe"
+[menu_qualification]
+other = "Qualificação"
+[menu_news]
+other = "Central de Notícias"
+[menu_workshop]
+other = "Nossa Fábrica"
+
+[about_us]
+other = "Sobre Nós"
+[product_center]
+other = "Central de Produtos"
+[product_category]
+other = "Categoria de Produtos"
+
+[footer_quick_links]
+other = "Links Rápidos"
+[footer_company_profile]
+other = "Perfil da Empresa"
+[footer_product_category]
+other = "Categoria de Produtos"
+[footer_golden_supplier]
+other = "Fornecedor Ouro na China"
+[footer_tel]
+other = "Tel"
+[footer_email]
+other = "E-mail"
+[footer_web]
+other = "Site"
+[footer_copyright]
+other = "Copyright © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Todos os direitos reservados."
+
+[float_telephone]
+other = "Telefone"
+[float_email]
+other = "E-mail"
+[float_message]
+other = "Deixe uma Mensagem"
+
+[search_placeholder]
+other = "Digite a palavra-chave"
+[language_label]
+other = "Português"
+
+[product_availability]
+other = "Disponibilidade"
+[product_quantity]
+other = "Quantidade"
+[product_in_stock]
+other = "Em Estoque"
+[product_inquire]
+other = "Solicitar Orçamento"
+[product_add_basket]
+other = "Fale no WhatsApp"
+[product_description]
+other = "Descrição do Produto"
+[product_share]
+other = "Compartilhar em:"
+[product_category_label]
+other = "Categoria"
+[product_rating_note]
+other = "As especificações são indicativas. Entre em contato conosco para obter a ficha técnica mais recente e confirmar a disponibilidade."
+
+[contact_get_in_touch]
+other = "Entre em Contato"
+[contact_intl]
+other = "Departamento Internacional"
+[contact_manufacturer]
+other = "Fabricante"
+[contact_more_info]
+other = "Entre em contato conosco para mais informações."
+[contact_name]
+other = "Seu nome *"
+[contact_email]
+other = "Seu e-mail *"
+[contact_phone]
+other = "Telefone / WhatsApp"
+[contact_company]
+other = "Empresa"
+[contact_product]
+other = "Produto de seu interesse"
+[contact_message]
+other = "Sua mensagem *"
+[contact_submit]
+other = "Fale Conosco"
+
+[news_views]
+other = "Visualizações"
+[news_author]
+other = "Autor"
+[news_publish_time]
+other = "Data de Publicação"
+[news_origin]
+other = "Origem"
+[news_site]
+other = "Site"
+[news_sidebar_title]
+other = "Notícias"
+[news_back]
+other = "Voltar para Notícias"
+[news_read_more]
+other = "Leia Mais"
+
+[search_results]
+other = "Resultados da busca por"
+[not_found]
+other = "Página Não Encontrada"
+[not_found_text]
+other = "A página que você procura pode ter sido movida ou não existe mais."
+[back_home]
+other = "Voltar para o Início"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Alternador com Escovas"
+[cat_brushless_alternator]
+other = "Alternador sem Escovas"
+[cat_diesel_generator_set]
+other = "Grupo Gerador Diesel"
+[cat_50hz_diesel_generator_set]
+other = "Grupo Gerador Diesel 50HZ"
+[cat_60hz_diesel_generator_set]
+other = "Grupo Gerador Diesel 60HZ"
+[cat_engine_cummins]
+other = "Série com Motor Cummins"
+[cat_engine_cummins_2]
+other = "Motor Cummins"
+[cat_engine_huachai]
+other = "Série com Motor Huachai"
+[cat_engine_kofo]
+other = "Série com Motor Kofo"
+[cat_engine_longxin]
+other = "Série com Motor Longxin"
+[cat_engine_lovol]
+other = "Série com Motor Lovol"
+[cat_engine_perkins]
+other = "Série com Motor Perkins"
+[cat_engine_woling]
+other = "Série com Motor Woling"
+[cat_engine_wuxi]
+other = "Série com Motor Wuxi"
+[cat_engine_yangdong]
+other = "Série com Motor Yangdong"
+[cat_engine_yto]
+other = "Série com Motor Yto"
+[cat_engine_yuchai]
+other = "Série com Motor Yuchai"
+[cat_engine_yunnei]
+other = "Série com Motor Yunnei"
+[cat_engine_yuxing]
+other = "Série com Motor Yuxing"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Solicitar Orçamento"
+[topbar_hours]
+other = "Seg – Sáb 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Precisa de um grupo gerador para o seu projeto?"
+[cta_text]
+other = "Informe a potência, a tensão e a aplicação — nossos engenheiros responderão em até um dia útil."
+[cta_button]
+other = "Enviar consulta"
+[hero_cta_products]
+other = "Explorar produtos"
+[hero_cta_quote]
+other = "Solicitar orçamento"
+[view_details]
+other = "Ver detalhes"
+[why_us]
+other = "Por que a Eastern Lion"
+[why_us_title]
+other = "Mais de 30 anos fabricando geradores que continuam funcionando"
+[why_us_text]
+other = "Do enrolamento do estator ao teste em carga total, cada unidade é montada e verificada em nossas próprias fábricas em Fujian e Jiangsu."
+
+[product_center_eyebrow]
+other = "O que fabricamos"
+[hero_cta_note]
+other = "Resposta em até um dia útil"
+
+[filter_type]
+other = "Tipo"
+[filter_power]
+other = "Potência"
+[filter_hz]
+other = "Frequência"
+[filter_all]
+other = "Todos"
+[filter_alternator]
+other = "Alternadores"
+[filter_genset]
+other = "Grupos geradores"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "modelos"
+[filter_empty]
+other = "Nenhum modelo corresponde a esses filtros — entre em contato conosco para outras potências."
+[products_coming_soon]
+other = "A linha de produtos está sendo atualizada. Entre em contato conosco para o catálogo completo."
+
+[related_title]
+other = "Modelos relacionados"
+[inquiry_title]
+other = "Precisa de um orçamento?"
+[inquiry_text]
+other = "Envie a potência, a tensão e a aplicação — nossos engenheiros respondem em até um dia útil."
+[inquiry_button]
+other = "Solicitar orçamento"
+[inquiry_whatsapp]
+other = "Fale no WhatsApp"
+
+[search_empty]
+other = "Nenhuma página encontrada. Tente um nome de modelo, uma marca de motor ou uma faixa de potência."
+[search_loading]
+other = "Pesquisando…"
+[search_all]
+other = "Ver todos os produtos"
+
+[form_required]
+other = "Preencha os campos destacados."
+[form_name_required]
+other = "Por favor, informe seu nome."
+[form_email]
+other = "Por favor, informe um endereço de e-mail válido."
+[form_message_required]
+other = "Por favor, diga-nos do que você precisa."
+[form_success_title]
+other = "Obrigado, sua consulta foi enviada"
+[form_success_text]
+other = "Nosso engenheiro de vendas recebeu sua consulta e responderá em até um dia útil. Um e-mail de confirmação com o número de referência da sua consulta está a caminho da sua caixa de entrada."
+[form_again]
+other = "Escrever outra consulta"
+
+
+[latest_news]
+other = "Últimas notícias"
+
+[spec_at_a_glance]
+other = "Especificações em resumo"
+[spec_category]
+other = "Categoria"
+[spec_type]
+other = "Tipo"
+[spec_frequency]
+other = "Frequência"
+[spec_power]
+other = "Faixa de potência"
+[spec_models]
+other = "Modelos"
+[spec_note]
+other = "As faixas de potência são baseadas nas tabelas padrão de 50 / 60 Hz de cada página de produto. Outras tensões e potências estão disponíveis sob consulta."
+
+[skip_to_content]
+other = "Ir para o conteúdo"
+
+[search_button]
+other = "Buscar"
+[pager]
+other = "Outros modelos"
+[pager_prev]
+other = "Anterior"
+[pager_next]
+other = "Próximo"
+
+[search_model]
+other = "Modelo"
+
+[jump_to_model]
+other = "Ir para o modelo"
+
+[alt_workshop]
+other = "Produção de alternadores Eastern Lion"
+[alt_products]
+other = "Alternadores sem escovas Eastern Lion"
+[alt_packing]
+other = "Embalagem e testes Eastern Lion"
+
+[search_cats]
+other = "Categorias"
+[coverage_title]
+other = "Qual série cobre qual faixa de potência?"
+[footer_qr]
+other = "Escaneie para falar com nossa equipe de vendas"
+
+[service_process]
+other = "Como trabalhamos com você"
+[step1_title]
+other = "Requisito"
+[step1_text]
+other = "Informe a potência, a tensão, a frequência e a aplicação — ou envie um modelo da nossa linha."
+[step2_title]
+other = "Solução e orçamento"
+[step2_text]
+other = "Nossos engenheiros selecionam o motor, o alternador e o controlador e, em seguida, enviam um orçamento completo com prazo de entrega."
+[step3_title]
+other = "Produção e testes"
+[step3_text]
+other = "A unidade é montada em nossa própria fábrica e testada sob carga antes de sair da fábrica."
+[step4_title]
+other = "Entrega e suporte"
+[step4_text]
+other = "Frete marítimo ou aéreo, orientação de comissionamento, peças de reposição e suporte técnico vitalício."
+[applications]
+other = "Aplicações"
+[app1_alt]
+other = "Grupos geradores Eastern Lion"
+[app2_alt]
+other = "Embalagem e exportação Eastern Lion"
+[app3_alt]
+other = "Base de produção Eastern Lion"
+
+[app1_title]
+other = "Aplicações 1"
+[app1_text]
+other = "Exemplo de aplicação doméstica: projeto do túnel de Enshi do 12º Bureau da China Railway, projeto da ponte sobre o Rio Yangtzé do 13º Bureau da China Railway, Receita Federal de Hubei, Hospital Tongji de Wuhan, terceira escola de ensino médio de Wenzhou em Zhejiang, apartamento Lingkun em Zhejiang"
+[app2_title]
+other = "Aplicações 2"
+[app2_text]
+other = "Projeto da ponte rodoviária sobre o Rio Yangtzé em Hubei, do 13º Bureau Ferroviário da China Railway."
+[app3_title]
+other = "Aplicações 3"
+[app3_text]
+other = "Projeto do túnel de Enshi, do 12º Bureau Ferroviário da Administração Ferroviária da China."
+
+[faq_jump]
+other = "Ir para a pergunta"
+[faq_cta_title]
+other = "Não encontrou a resposta?"
+[faq_cta_text]
+other = "Envie a potência, a tensão e a aplicação e nossos engenheiros responderão em até um dia útil."
+[faq_cta_button]
+other = "Pergunte aos nossos engenheiros"
+
+[more_news]
+other = "Mais notícias"
+
+[contact_drawing]
+other = "Referência de desenho / especificação (opcional)"
+[contact_drawing_hint]
+other = "Informe um número de desenho ou anexe o arquivo ao responder nosso e-mail — assim nossos engenheiros orçam exatamente conforme o seu desenho."
+
+[zoom_image]
+other = "Clique para ampliar"
+[video_facade]
+other = "Reproduzir vídeo"
+
+[video_title]
+other = "Veja nossas máquinas"
+[video_intro]
+other = "Vídeos da fábrica, da linha de produção e dos testes de grupos geradores. O player só carrega quando você aperta o play."
+[video_1]
+other = "Grupos geradores e embalagem"
+[video_2]
+other = "Linha de produção"
+[video_3]
+other = "Base de produção"
+
+[compare_add]
+other = "Adicionar à comparação"
+[compare_clear]
+other = "Limpar"
+[compare_open]
+other = "Comparar"
+[compare_models]
+other = "modelos"
+[compare_open_model]
+other = "Abrir"
+[compare_title]
+other = "Comparação de modelos"
+[compare_power]
+other = "Faixa de potência"
+[compare_freq]
+other = "Frequência"
+[compare_count]
+other = "Modelos"
+[compare_engine]
+other = "Motor"
+[compare_alternator]
+other = "Alternador"
+[compare_controller]
+other = "Controlador"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Explore as categorias de produtos Eastern Lion: grupos geradores diesel, alternadores com escovas e alternadores sem escovas de 2 kW a 2000 kW, fabricados na China."
+[seo_tag_desc]
+other = "Notícias e novidades de produtos da Fuan Eastern Lion Electric Machines Co., Ltd, organizadas por tema."
+[alt_factory]
+other = "Fábrica de geradores Eastern Lion em Fuan, Fujian"
+
+[breadcrumb_here]
+other = "Você está aqui:"
+[footer_about]
+other = "Sobre Nós"
+[spec_genset]
+other = "Especificação do Grupo Gerador"
+[spec_engine]
+other = "Motor"
+[spec_alternator]
+other = "Alternador sem Escovas"
+[spec_controller]
+other = "Controlador"
+[spec_datasheet]
+other = "Ficha Técnica"
+[spec_detail]
+other = "Detalhes"
+[col_model]
+other = "Modelo"
+[col_prime_kw]
+other = "Potência principal (kW)"
+[col_prime_kva]
+other = "Potência principal (kVA)"
+[col_standby_kw]
+other = "Potência standby (kW)"
+[col_standby_kva]
+other = "Potência standby (kVA)"
+[col_engine_model]
+other = "Modelo do motor"
+[col_engine_power]
+other = "Potência do motor (kW)"
+[col_alt_model]
+other = "Modelo do alternador"
+[col_alt_power]
+other = "Potência do alternador (kW)"
+[col_controller]
+other = "Controlador"
+[col_datasheet]
+other = "Ficha Técnica"
+[col_50hz_kw]
+other = "Saída 50Hz (kW)"
+[col_50hz_kva]
+other = "Saída 50Hz (kVA)"
+[col_60hz_kw]
+other = "Saída 60Hz (kW)"
+[col_60hz_kva]
+other = "Saída 60Hz (kVA)"
+[col_sae_size]
+other = "Tamanho SAE"
+[col_core_length]
+other = "Comprimento do núcleo (mm)"
+[news_center_title]
+other = "Central de Notícias"
+
+[finder_eyebrow]
+other = "Seletor de potência"
+[finder_title]
+other = "Qual modelo atende à sua carga?"
+[finder_text]
+other = "Digite a potência de que você precisa e listaremos todos os modelos desta faixa que podem suportá-la — com o motor, o alternador e o controlador por trás de cada um."
+[finder_quick]
+other = "Cargas comuns"
+[finder_kw]
+other = "Potência necessária"
+[finder_kw_ph]
+other = "ex.: 200"
+[finder_hz]
+other = "Frequência"
+[finder_go]
+other = "Buscar modelos"
+[finder_head]
+other = "{n} séries cobrem {kw} kW em {hz} Hz"
+[finder_head_one]
+other = "1 série cobre {kw} kW em {hz} Hz"
+[finder_more]
+other = "+{n} modelos nesta série cobrem esta carga"
+[finder_open]
+other = "Abrir ficha técnica"
+[finder_inquire]
+other = "Solicitar orçamento"
+[finder_none]
+other = "Nenhum modelo desta faixa cobre {kw} kW."
+[finder_none_closest]
+other = "O mais próximo é {model} ({kw} kW) — informe a carga e nossos engenheiros dimensionarão para você."
+[finder_none_max]
+other = "Envie a carga e faremos um orçamento de uma solução personalizada ou em paralelo."
+[finder_model_standby]
+other = "standby"
+[finder_model_prime]
+other = "principal"
+[finder_model_output]
+other = "saída"
+[finder_more_series]
+other = "Mostrar mais {n} séries"
+
+[search_spec]
+other = "Modelos que cobrem {kw} kW em {hz} Hz"
+[search_spec_none]
+other = "Nenhum modelo cobre {kw} kW — informe sua carga e nós dimensionaremos."
+[search_cover]
+other = "standby"
+[search_standby]
+other = "standby"
+[search_prime]
+other = "principal"
+[search_output]
+other = "saída"
+[inquiry_power]
+other = "Potência necessária"
+[model_nav_label]
+other = "Modelos próximos"
+[model_nav_hint]
+other = "Escolha um modelo na tabela para ver os tamanhos ao lado dele."
+[model_nav_current]
+other = "atual"
+[model_nav_up]
+other = "maior"
+[model_nav_down]
+other = "menor"
+[model_nav_same]
+other = "mesma potência"
+[contact_models]
+other = "Modelos candidatos"
+[contact_model_add_btn]
+other = "Adicionar"
+[inquiry_models]
+other = "Modelos"
+[compare_quote]
+other = "Solicitar orçamento para estes {n} modelos"
+
+[spec_series]
+other = "Série"
+[download_all_title]
+other = "Todas as listas de especificações em um único arquivo"
+[download_all_text]
+other = "Todos os modelos de todas as séries com suas potências, motor, alternador e controlador — um único csv para todo o catálogo."
+[download_all_button]
+other = "Baixar todas as especificações (CSV)"
+[download_file]
+other = "Arquivo"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Imprimir / PDF"
+[download_title_link]
+other = "Central de Downloads"
+[preview_title]
+other = "Revise sua consulta antes de enviá-la"
+[preview_hint]
+other = "É assim que sua solicitação chega aos nossos engenheiros — você ainda pode alterar o texto."
+[preview_mail]
+other = "Abrir no meu aplicativo de e-mail"
+[preview_copy]
+other = "Copiar o texto"
+[preview_back]
+other = "Voltar ao formulário"
+[preview_copied]
+other = "Copiado para a área de transferência."
+[inquiry_salutation]
+other = "Prezada equipe de vendas da Eastern Lion,"
+[inquiry_interested]
+other = "Tenho interesse no(s) seguinte(s) grupo(s) gerador(es):"
+[inquiry_model]
+other = "Modelo"
+[inquiry_required_power]
+other = "Potência necessária"
+[inquiry_drawing]
+other = "Referência de desenho / especificação"
+[inquiry_message]
+other = "Mensagem"
+[inquiry_contact]
+other = "Contato"
+[inquiry_name]
+other = "Nome"
+[inquiry_company]
+other = "Empresa"
+[inquiry_phone]
+other = "Telefone / WhatsApp"
+[inquiry_email]
+other = "E-mail"
+[inquiry_footer]
+other = "Enviado de easternlion.cn"
+[inquiry_subject]
+other = "Consulta de grupo gerador"
+[finder_title_slim]
+other = "Não sabe qual modelo é ideal?"
+[finder_fold_title]
+other = "Encontre o modelo que atende à minha carga"
+[compare_selected]
+other = "selecionados"
+[resume_models]
+other = "Você estava vendo"
+[resume_continue]
+other = "Continuar a consulta"
+[resume_close]
+other = "Fechar"
+[preview_whatsapp]
+other = "Enviar via WhatsApp"
+[preview_download]
+other = "Baixar a consulta"
+[contact_send]
+other = "Enviar consulta"
+[preview_send]
+other = "Enviar consulta"
+[preview_failed]
+other = "Não foi possível enviar a consulta automaticamente. Use uma das opções abaixo ou escreva para sales@easternlion.cn."
+[form_success_receipt]
+other = "Mostrar o que recebemos"
+[contact_sending]
+other = "Enviando…"
+[mm_model]
+other = "Modelo"
+[mm_load]
+other = "Carga (kW)"
+[mm_hz]
+other = "Frequência"
+[contact_models_hint]
+other = "Adicione todos os modelos para os quais deseja orçamento — cada um com sua própria potência e frequência, se forem diferentes. Nossos engenheiros responderão com preços e prazos de entrega para cada um deles."
+[contact_model_add]
+other = "Adicionar outro modelo (ex.: GF/GFS-C200)"
+[service_schema_type]
+other = "Fornecimento de grupos geradores, peças de reposição e serviço pós-venda"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Especificações principais"
+[ks_power]
+other = "Faixa de potência"
+[ks_frequency]
+other = "Frequência"
+[ks_models]
+other = "Modelos"
+[ks_engine]
+other = "Motor"
+[ks_alternator]
+other = "Alternador"
+[ks_controller]
+other = "Controlador"
+[ks_warranty]
+other = "Garantia"
+[ks_warranty_value]
+other = "1 ano ou 1000 horas"
+[ks_options]
+other = "Opções"
+[ks_options_value]
+other = "Versão aberta, carcaça silenciosa, reboque, ATS e sistemas em paralelo"
+[ks_moq]
+other = "Pedido mínimo"
+[ks_moq_value]
+other = "1 unidade"
+[product_copy_link]
+other = "Copiar o link"
+[product_link_copied]
+other = "Link copiado"
+[guide_title]
+other = "Como escolher esta série"
+[guide_intro]
+other = "Seis decisões cobrem quase todos os pedidos de grupos geradores. Veja como tomar cada uma delas — e o que esta série oferece."
+[guide_col_decision]
+other = "Sua decisão"
+[guide_col_how]
+other = "Como decidir"
+[guide_col_this]
+other = "Esta série"
+[guide_engine]
+other = "Marca do motor"
+[guide_engine_how]
+other = "O motor determina a disponibilidade de peças de reposição e o tempo de resposta do seu parceiro de serviço local. Compare primeiro a rede de serviços e depois o preço."
+[guide_engine_none]
+other = "Somente alternador"
+[guide_engine_count]
+other = "%v modelos nesta série"
+[guide_duty]
+other = "Principal ou standby"
+[guide_duty_how]
+other = "A potência principal é para grupos que funcionam de 8 a 12 horas por dia; a standby, para backup de emergência. Dimensione o grupo para que sua carga fique entre 70 e 80 % da potência standby — assim o motor trabalha entre 50 % e 75 % de carga, onde o consumo de combustível é melhor."
+[guide_duty_value]
+other = "Standby %v–%v kW, principal %v–%v kW"
+[guide_voltage]
+other = "Tensão e frequência"
+[guide_voltage_how]
+other = "400/230 V a 50 Hz para Ásia, Europa, África e Oriente Médio; 230/400 V a 60 Hz para as Américas. O alternador e o painel de controle precisam corresponder à rede à qual você se conecta."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Carcaça"
+[guide_enclosure_how]
+other = "Versão aberta para uma sala de máquinas, carcaça silenciosa para um local urbano externo (cerca de 65 dB(A) a 7 m), contêiner para um bloco de 1000 kW e reboque para um grupo móvel."
+[guide_enclosure_value]
+other = "Opções de versão aberta, carcaça silenciosa, reboque e contêiner"
+[guide_starting]
+other = "Partida e transferência"
+[guide_starting_how]
+other = "Um grupo de emergência precisa de partida elétrica e transferência automática; caso contrário, o grupo fica parado até a rede falhar. Partida manual e a ar continuam disponíveis para aplicações especiais."
+[guide_starting_value]
+other = "Partida elétrica, ATS (automático e manual) sob consulta"
+[guide_parallel]
+other = "Paralelismo"
+[guide_parallel_how]
+other = "Mais de um grupo significa um sistema de gestão de potência, uma transferência maior e um painel de controle que permite aos grupos compartilhar a carga e assumir o serviço um do outro."
+[guide_parallel_value]
+other = "Sistemas em paralelo com gestão de potência"
+[guide_environment]
+other = "Condições do local"
+[guide_environment_how]
+other = "Cada 1000 m de altitude e cada 10 °C acima da temperatura ambiente padrão custam cerca de 3 % da potência, e um local com névoa salina ou poeira exige uma carcaça e um intervalo de manutenção mais curto."
+[guide_environment_value]
+other = "Potência padrão de 0 a 50 °C, desclassificação sob consulta"
+[guide_foot]
+other = "Envie a carga, a tensão e o local, e retornaremos com o modelo exato, o preço e o prazo de entrega."
+[wa_from]
+other = "Consulta de easternlion.cn"
+[wa_series]
+other = "Série"
+[wa_model]
+other = "Modelo"
+[wa_power]
+other = "Potência necessária"
+[wa_standby]
+other = "Potência standby"
+[wa_link]
+other = "Link"
+[search_guide]
+other = "Como escolher"
+[search_guide_more]
+other = "Ler o guia completo"
+[search_compare]
+other = "Comparar"
+[search_models]
+other = "modelos"
+[inquiry_ref_label]
+other = "Referência da sua consulta:"
+[form_success_whatsapp]
+other = "Precisa mais rápido? Fale conosco pelo"
+[app_eyebrow]
+other = "Aplicações"
+[app_index_title]
+other = "Grupos geradores por aplicação"
+[app_index_text]
+other = "Comece pelo trabalho que seu grupo precisa fazer. Cada página de aplicação mostra a potência necessária, os modelos standby que a atendem, os pontos técnicos relevantes no local e os modelos que fabricamos para ela."
+[app_sizing_title]
+other = "Como dimensionar o grupo"
+[app_sizing_text]
+other = "Regime standby: o grupo precisa suportar toda a carga conectada mais a corrente de partida, por isso o dimensionamos acima da carga em operação. A tabela abaixo lista as potências standby dos modelos reais para cada carga típica desta aplicação."
+[app_sizing_load]
+other = "Carga típica"
+[app_sizing_standby]
+other = "Potência standby a considerar"
+[app_sizing_models]
+other = "Modelos que a atendem"
+[app_sizing_note]
+other = "As potências seguem a ISO 8528. O modelo final depende da tensão, da autonomia de combustível, da carcaça e da temperatura ambiente - envie a carga e confirmaremos por escrito."
+[app_sizing_oversize]
+other = "Consulte-nos para uma solução acima de 2000 kW"
+[app_requirements_title]
+other = "O que esta aplicação exige"
+[app_series_title]
+other = "A série utilizada para este trabalho"
+[app_model_word]
+other = "modelos"
+[app_faq_title]
+other = "Perguntas que os compradores fazem sobre esta aplicação"
+[app_fact_load]
+other = "Faixa de potência"
+[app_fact_duty]
+other = "Regime"
+[app_fact_duty_value]
+other = "Standby"
+[app_fact_hz]
+other = "Frequência"
+[app_fact_engine]
+other = "Motores"
+[app_cta_title]
+other = "Informe a carga e o local"
+[app_cta_text]
+other = "Envie a carga em operação, a tensão e onde o grupo precisará funcionar. Nossos engenheiros respondem com o modelo, o layout e o preço em até um dia útil."
+[app_cta_button]
+other = "Solicitar orçamento"
+[app_wa_text]
+other = "Consulta: grupo gerador %s"
+[app_other_title]
+other = "Outras aplicações"
+[datasheet_sub]
+other = "Ficha de especificações do grupo gerador"
+[datasheet_print]
+other = "Imprimir ou salvar em PDF"
+[datasheet_back]
+other = "Voltar para a série"
+[datasheet_contact]
+other = "Sua consulta"
+[datasheet_note]
+other = "Observação"
+[datasheet_note_text]
+other = "As potências seguem a ISO 8528. A configuração final depende da tensão, da autonomia de combustível, da carcaça e da temperatura ambiente."
+[download_datasheet]
+other = "Ficha Técnica"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Os modelos que a atendem:"
+[mm_no_cover]
+other = "Nenhum modelo do catálogo cobre essa carga."
+[mm_picked]
+other = "já selecionado"
+[ui_close]
+other = "Fechar"
+[ui_remove]
+other = "Remover"
+[lang_label]
+other = "Alterar idioma"
+[nav_menu]
+other = "Menu"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "P"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v e %[2]v"
+[kind_genset]
+other = "grupo gerador diesel"
+[kind_alternator]
+other = "alternador"
+[app_summary_tpl]
+other = "Para %[1]s, o grupo gerador diesel standby de que você precisa vai de %[2]v a %[3]v kW; a Eastern Lion fabrica esses grupos com motores %[4]s em %[5]s Hz, nas configurações versão aberta, carcaça silenciosa, reboque, ATS e paralelo, e cada grupo é testado em carga total antes do embarque."
+[guide_sum_engine]
+other = "%[1]s é uma série de grupos geradores diesel de %[2]v Hz da Eastern Lion, construída com o motor %[3]s, cobrindo de %[4]v a %[5]v kW em %[6]d modelos. É utilizada para %[7]s."
+[guide_sum_plain]
+other = "%[1]s é uma série %[3]s de %[2]v Hz da Eastern Lion, cobrindo de %[4]v a %[5]v kW em %[6]d modelos, fornecida para %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "texto completo do site"
+[llms_intro]
+other = '''Marca: Eastern Lion (福建东方电机). Site: %[1]s
+Fundada em 1987 em Fuan, Fujian. Fabricante de grupos geradores diesel, alternadores com escovas e
+alternadores sem escovas, de 2 kW a 2000 kW, 50 Hz e 60 Hz. Fábricas próprias: produção de
+alternadores, montagem de grupos geradores, teste em carga total. Cerca de 15.000 alternadores e
+2.000 grupos geradores por ano. 35 bases de vendas e serviços na China. Exportações para a Rússia,
+Indonésia, Filipinas, África do Sul, Paquistão, o Reino Unido e outros mercados.
+
+Contato: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Fábrica: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Escritório internacional: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> A Fuan Eastern Lion Electric Machines Co., Ltd (marca: Eastern Lion, 福建东方电机) é um fabricante
+> chinês de grupos geradores diesel, alternadores com escovas e alternadores sem escovas, fundada em
+> 1987 em Fuan, Fujian. Ela produz alternadores e grupos geradores completos em suas próprias
+> fábricas, testa em carga cada máquina antes do embarque e os vende no mundo inteiro — de 2 kW a
+> 2000 kW, 50 Hz e 60 Hz, com opções de motores Cummins, Perkins, Yuchai, YTO, Weichai, Kofo,
+> Huachai, Longxin, Lovol, Woling, Yangdong, Yunnei, Yuxing e Kaixun.
+
+## O que é este site
+
+- 44 séries de produtos, cada uma com uma tabela completa de especificações (modelo, potência
+  principal e standby, motor, alternador, controlador) e um csv para download
+- O seletor de potência relaciona uma carga em kW a todos os modelos que a atendem
+- A ferramenta de comparação coloca até quatro séries lado a lado
+- Todas as listas de especificações estão disponíveis em csv em /pt/download/
+
+## Fatos principais
+
+| | |
+| --- | --- |
+| Fundação | 1987 (usina elétrica de Hanyang, Fuan) |
+| Linha de produtos | 2 kW a 2000 kW, 50 Hz e 60 Hz |
+| Capacidade de alternadores | cerca de 15.000 alternadores por ano |
+| Capacidade de grupos geradores | cerca de 2.000 grupos geradores por ano |
+| Rede de serviços | 35 bases de vendas e serviços na China |
+| Mercados | China e exportações para Rússia, Indonésia, Filipinas, África do Sul, Paquistão, o Reino Unido e outros |
+| Fábrica | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Escritório internacional | Fuzhou, Fujian, China |
+| Telefone | +86-13950513258 |
+| E-mail | sales@easternlion.cn (serviço: service@easternlion.cn) |
+
+## Famílias de produtos
+
+- Grupos geradores diesel — /pt/products/diesel-generator-set/ (15 séries de motores, 50 Hz)
+- Grupos geradores 60 Hz — /pt/products/60hz-diesel-generator-set/ (6 séries para as Américas e parte da Ásia)
+- Alternadores com escovas — /pt/products/brush-alternator/ (série STC, 8 kW a 500 kW)
+- Alternadores sem escovas — /pt/products/brushless-alternator/ (série EL, acoplamento SAE)
+
+## Aplicações
+
+- Grupos geradores por aplicação — /pt/applications/ (a potência necessária, os modelos que a atendem e os pontos técnicos que decidem o pedido)
+- Data centers — /pt/applications/data-centre/
+- Hospitais — /pt/applications/hospital/
+- Sites de telecomunicações — /pt/applications/telecom/
+- Minas e pedreiras — /pt/applications/mining/
+- Hotéis e resorts — /pt/applications/hotel/
+- Canteiros de obras — /pt/applications/construction/
+
+## Empresa
+
+- Perfil da empresa — /pt/about/
+- História de desenvolvimento — /pt/about/history/
+- Nossa equipe — /pt/about/team/
+- Qualificação e certificados — /pt/about/qualification/
+- Nossa fábrica — /pt/about/workshop/
+- Serviço pós-venda — /pt/service/
+- Vídeos da fábrica — /pt/video/
+- Perguntas frequentes — /pt/faq/
+- Notícias — /pt/news/
+- Contato — /pt/contact/
+
+## Downloads
+
+- Central de downloads com todas as listas de especificações em csv — /pt/download/
+- Todos os modelos de todas as séries em um único arquivo — /pt/download/all-specs.csv
+- O texto completo deste site para modelos de linguagem — /pt/llms-full.txt
+
+## Como falar conosco
+
+Consultas de vendas: sales@easternlion.cn — uma consulta estruturada (modelo, carga, frequência,
+referência de desenho) é respondida em até um dia útil. O formulário de contato em /pt/contact/ envia
+a consulta diretamente para a caixa de entrada de vendas e oferece o WhatsApp como segundo canal.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Produtos"
+[llms_power_line]
+other = "Faixa de potência: %[1]v a %[2]v kW. Frequência: %[3]v Hz. Tipo: %[4]v. URL da série: %[5]s"
+[llms_csv_line]
+other = "Lista de especificações (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Aplicações"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Como escolher uma série"
+[llms_choose_text]
+other = '''Cada pedido de grupo gerador se resume a seis decisões: a marca do motor (ela determina as peças
+de reposição e o tempo de resposta do seu parceiro de serviço), regime principal ou standby (a
+potência principal funciona de 8 a 12 horas por dia; a standby é para backup de emergência;
+dimensione o grupo para que a carga fique entre 70 e 80 % da potência standby), tensão e frequência
+(400/230 V a 50 Hz, 230/400 V a 60 Hz), a carcaça (versão aberta, carcaça silenciosa, contêiner,
+reboque), partida e transferência (partida elétrica com transferência automática para grupos
+standby) e paralelismo (mais de um grupo exige um sistema de gestão de potência). As condições do
+local também importam: cada 1000 m de altitude e cada 10 °C acima da temperatura ambiente padrão
+custam cerca de 3 % da potência.
+
+Garantia: 1 ano ou 1000 horas. Pedido mínimo: 1 unidade. Opções de carcaça: versão aberta, carcaça
+silenciosa, reboque e contêiner. Partida: elétrica, com ATS sob consulta. Sistemas em paralelo com
+gestão de potência estão disponíveis.'''
+[llms_faq_h]
+other = "Perguntas frequentes"
+[llms_service_h]
+other = "Serviços e empresa"
+[llms_contact_line]
+other = "Contato: sales@easternlion.cn — as consultas são respondidas em até um dia útil."

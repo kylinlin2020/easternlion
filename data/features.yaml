@@ -25,3 +25,143 @@ zh:
   - icon: support
     title: "服务网络"
     text: "国内 35 个销售与办事处，叠加在线技术支持与备件供应，覆盖已安装机组。"
+
+ru:
+  - icon: factory
+    title: "Собственное производство"
+    text: "Альтернаторы и дизель-генераторные установки проектируются, наматываются, собираются и испытываются в наших собственных цехах — без передачи критических операций на аутсорсинг."
+  - icon: check
+    title: "Испытания под полной нагрузкой"
+    text: "Каждая машина проходит испытание под нагрузкой перед отправкой с завода, с динамической балансировкой ротора, проверкой на электрическую прочность и контролем изделия в целом."
+  - icon: globe
+    title: "Глобальная поставка"
+    text: "Поставляем в Россию, Индонезию, на Филиппины, в Южную Африку, Пакистан, Великобританию и другие страны, с полной поддержкой запасных частей."
+  - icon: support
+    title: "Сервисная сеть"
+    text: "35 баз продаж и обслуживания в Китае, а также онлайн-техническая поддержка и поставка запасных частей для эксплуатируемого парка."
+
+es:
+  - icon: factory
+    title: "Fabricación propia"
+    text: "Los alternadores y grupos electrógenos se diseñan, bobinan, ensamblan y prueban en nuestros propios talleres — sin subcontratar la ruta crítica."
+  - icon: check
+    title: "Probado a plena carga"
+    text: "Cada máquina se prueba con carga antes de salir de fábrica, con equilibrio dinámico del rotor, resistencia a la presión y controles de la unidad completa."
+  - icon: globe
+    title: "Entrega global"
+    text: "Se exporta a Rusia, Indonesia, Filipinas, Sudáfrica, Pakistán, el Reino Unido y otros mercados, con pleno soporte de repuestos."
+  - icon: support
+    title: "Red de servicio"
+    text: "35 bases de venta y servicio en China, además de soporte técnico en línea y suministro de repuestos para las flotas instaladas."
+
+pt:
+  - icon: factory
+    title: "Fabricação própria"
+    text: "Alternadores e geradores diesel são projetados, bobinados, montados e testados em nossas próprias oficinas — sem terceirização no caminho crítico."
+  - icon: check
+    title: "Testado em plena carga"
+    text: "Cada máquina é testada sob carga antes de sair da fábrica, com balanceamento dinâmico do rotor, resistência à pressão e verificações da unidade completa."
+  - icon: globe
+    title: "Entrega global"
+    text: "Exportamos para a Rússia, Indonésia, Filipinas, África do Sul, Paquistão, Reino Unido e além, com suporte completo de peças de reposição."
+  - icon: support
+    title: "Rede de serviço"
+    text: "35 bases de vendas e serviços na China, além de suporte técnico online e fornecimento de peças de reposição para frotas instaladas."
+
+ar:
+  - icon: factory
+    title: "تصنيع داخلي"
+    text: "تُصمَّم المولدات التبادلية ومجموعات مولدات الديزل وتُلفّ وتُجمَّع وتُختبر في ورشنا الخاصة — دون الاستعانة بمصادر خارجية في المسار الحرج."
+  - icon: check
+    title: "اختبار بالحمل الكامل"
+    text: "تُختبر كل ماكينة بالحمل قبل خروجها من المصنع، مع موازنة ديناميكية للعضو الدوار ومقاومة الضغط وفحوصات للوحدة كاملة."
+  - icon: globe
+    title: "تسليم عالمي"
+    text: "نشحن إلى روسيا وإندونيسيا والفلبين وجنوب أفريقيا وباكستان والمملكة المتحدة وغيرها، مع دعم كامل لقطع الغيار."
+  - icon: support
+    title: "شبكة خدمة"
+    text: "35 قاعدة بيع وخدمة في الصين، إضافة إلى دعم فني عبر الإنترنت وتوريد قطع الغيار للأساطيل المركّبة."
+
+fr:
+  - icon: factory
+    title: "Fabrication intégrée"
+    text: "Les alternateurs et les groupes électrogènes sont conçus, bobinés, assemblés et testés dans nos propres ateliers — aucune sous-traitance sur le chemin critique."
+  - icon: check
+    title: "Testé à pleine charge"
+    text: "Chaque machine est testée en charge avant de quitter l'usine, avec équilibrage dynamique du rotor, résistance à la pression et contrôles de l'unité complète."
+  - icon: globe
+    title: "Livraison mondiale"
+    text: "Expédié vers la Russie, l'Indonésie, les Philippines, l'Afrique du Sud, le Pakistan, le Royaume-Uni et au-delà, avec un support complet de pièces de rechange."
+  - icon: support
+    title: "Réseau de service"
+    text: "35 bases de vente et de service en Chine, plus un support technique en ligne et la fourniture de pièces de rechange pour les parcs installés."
+
+tr:
+  - icon: factory
+    title: "Kendi üretimimiz"
+    text: "Alternatörler ve dizel jeneratör setleri kendi atölyelerimizde tasarlanır, sarılır, monte edilir ve test edilir — kritik süreçte dış kaynak kullanılmaz."
+  - icon: check
+    title: "Tam yükte test"
+    text: "Her makine fabrikadan çıkmadan önce yük altında test edilir; rotor dinamik balansı, basınç dayanımı ve tüm ünite kontrolleri yapılır."
+  - icon: globe
+    title: "Küresel teslimat"
+    text: "Rusya, Endonezya, Filipinler, Güney Afrika, Pakistan, Birleşik Krallık ve daha fazlasına sevk edilir; tam yedek parça desteğiyle."
+  - icon: support
+    title: "Servis ağı"
+    text: "Çin'de 35 satış ve servis noktası, ayrıca çevrimiçi teknik destek ve kurulu filolar için yedek parça tedariği."
+
+id:
+  - icon: factory
+    title: "Produksi sendiri"
+    text: "Alternator dan genset diesel dirancang, dililit, dirakit, dan diuji di bengkel kami sendiri — tanpa alih daya pada jalur kritis."
+  - icon: check
+    title: "Diuji beban penuh"
+    text: "Setiap mesin diuji beban sebelum meninggalkan pabrik, dengan keseimbangan dinamis rotor, ketahanan tekanan, dan pemeriksaan unit secara keseluruhan."
+  - icon: globe
+    title: "Pengiriman global"
+    text: "Dikirim ke Rusia, Indonesia, Filipina, Afrika Selatan, Pakistan, Inggris, dan lainnya, dengan dukungan suku cadang yang lengkap."
+  - icon: support
+    title: "Jaringan layanan"
+    text: "35 basis penjualan dan layanan di Tiongkok, ditambah dukungan teknis online dan pasokan suku cadang untuk armada terpasang."
+
+vi:
+  - icon: factory
+    title: "Sản xuất nội bộ"
+    text: "Máy phát điện xoay chiều và bộ phát điện diesel được thiết kế, quấn dây, lắp ráp và kiểm tra tại xưởng của chúng tôi — không gia công ngoài ở khâu then chốt."
+  - icon: check
+    title: "Kiểm tra tải đầy"
+    text: "Mỗi máy đều được kiểm tra dưới tải trước khi xuất xưởng, gồm cân bằng động rô-to, chịu áp lực và kiểm tra toàn bộ tổ máy."
+  - icon: globe
+    title: "Giao hàng toàn cầu"
+    text: "Xuất đi Nga, Indonesia, Philippines, Nam Phi, Pakistan, Vương quốc Anh và nhiều nơi khác, kèm hỗ trợ phụ tùng đầy đủ."
+  - icon: support
+    title: "Mạng lưới dịch vụ"
+    text: "35 cơ sở bán hàng và dịch vụ tại Trung Quốc, cùng hỗ trợ kỹ thuật trực tuyến và cung cấp phụ tùng cho các đội máy đã lắp đặt."
+
+de:
+  - icon: factory
+    title: "Eigene Fertigung"
+    text: "Alternatoren und Diesel-Generatorsets werden in unseren eigenen Werkstätten konstruiert, gewickelt, montiert und geprüft — keine Fremdvergabe im kritischen Pfad."
+  - icon: check
+    title: "Volllastgeprüft"
+    text: "Jede Maschine wird vor dem Verlassen des Werks unter Last geprüft, mit dynamischem Rotorausgleich, Druckfestigkeit und Prüfungen des gesamten Aggregats."
+  - icon: globe
+    title: "Weltweite Lieferung"
+    text: "Versand nach Russland, Indonesien, auf die Philippinen, nach Südafrika, Pakistan, Großbritannien und darüber hinaus, mit vollständiger Ersatzteilversorgung."
+  - icon: support
+    title: "Servicenetz"
+    text: "35 Verkaufs- und Servicestützpunkte in China sowie Online-Techniksupport und Ersatzteillieferung für installierte Flotten."
+
+fa:
+  - icon: factory
+    title: "تولید در کارخانه خودمان"
+    text: "آلترناتورها و ژنراتورهای دیزلی در کارگاههای خودمان طراحی، سیمپیچی، مونتاژ و آزمایش میشوند — بدون برونسپاری در مسیر حیاتی."
+  - icon: check
+    title: "آزمایش با بار کامل"
+    text: "هر دستگاه پیش از خروج از کارخانه تحت بار آزمایش میشود، همراه با بالانس دینامیکی روتور، تست مقاومت فشار و بازرسی کل واحد."
+  - icon: globe
+    title: "ارسال جهانی"
+    text: "به روسیه، اندونزی، فیلیپین، آفریقای جنوبی، پاکستان، بریتانیا و فراتر از آن ارسال میشود، با پشتیبانی کامل قطعات یدکی."
+  - icon: support
+    title: "شبکه خدمات"
+    text: "35 پایگاه فروش و خدمات در چین، بههمراه پشتیبانی فنی آنلاین و تأمین قطعات یدکی برای ناوگانهای نصبشده."

@@ -1,0 +1,989 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Startseite"
+[nav_products]
+other = "Produkte"
+[nav_company]
+other = "Unternehmensprofil"
+[nav_service]
+other = "Service"
+[nav_video]
+other = "Video"
+[nav_faq]
+other = "FAQ"
+[nav_contact]
+other = "Kontakt"
+
+[menu_company_profile]
+other = "Unternehmensprofil"
+[menu_history]
+other = "Unternehmensgeschichte"
+[menu_team]
+other = "Unser Team"
+[menu_qualification]
+other = "Zertifikate"
+[menu_news]
+other = "Aktuelles"
+[menu_workshop]
+other = "Unsere Werkstatt"
+
+[about_us]
+other = "Über uns"
+[product_center]
+other = "Produktübersicht"
+[product_category]
+other = "Produktkategorien"
+
+[footer_quick_links]
+other = "Schnelllinks"
+[footer_company_profile]
+other = "Unternehmensprofil"
+[footer_product_category]
+other = "Produktkategorien"
+[footer_golden_supplier]
+other = "Goldener Lieferant in China"
+[footer_tel]
+other = "Tel."
+[footer_email]
+other = "E-Mail"
+[footer_web]
+other = "Web"
+[footer_copyright]
+other = "Copyright © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Alle Rechte vorbehalten."
+
+[float_telephone]
+other = "Telefon"
+[float_email]
+other = "E-Mail"
+[float_message]
+other = "Nachricht hinterlassen"
+
+[search_placeholder]
+other = "Suchbegriff eingeben"
+[language_label]
+other = "Deutsch"
+
+[product_availability]
+other = "Verfügbarkeit"
+[product_quantity]
+other = "Menge"
+[product_in_stock]
+other = "Auf Lager"
+[product_inquire]
+other = "Anfragen"
+[product_add_basket]
+other = "Per WhatsApp chatten"
+[product_description]
+other = "Produktbeschreibung"
+[product_share]
+other = "Teilen auf:"
+[product_category_label]
+other = "Kategorie"
+[product_rating_note]
+other = "Die Angaben sind Richtwerte. Bitte kontaktieren Sie uns für das aktuelle Datenblatt und die Bestätigung der Verfügbarkeit."
+
+[contact_get_in_touch]
+other = "Kontakt aufnehmen"
+[contact_intl]
+other = "Exportabteilung"
+[contact_manufacturer]
+other = "Hersteller"
+[contact_more_info]
+other = "Kontaktieren Sie uns für weitere Informationen."
+[contact_name]
+other = "Ihr Name *"
+[contact_email]
+other = "Ihre E-Mail-Adresse *"
+[contact_phone]
+other = "Telefon / WhatsApp"
+[contact_company]
+other = "Unternehmen"
+[contact_product]
+other = "Produkt Ihres Interesses"
+[contact_message]
+other = "Ihre Nachricht *"
+[contact_submit]
+other = "Kontakt aufnehmen"
+
+[news_views]
+other = "Aufrufe"
+[news_author]
+other = "Autor"
+[news_publish_time]
+other = "Veröffentlichung"
+[news_origin]
+other = "Quelle"
+[news_site]
+other = "Website"
+[news_sidebar_title]
+other = "Aktuelles"
+[news_back]
+other = "Zurück zu den News"
+[news_read_more]
+other = "Weiterlesen"
+
+[search_results]
+other = "Suchergebnisse für"
+[not_found]
+other = "Seite nicht gefunden"
+[not_found_text]
+other = "Die gesuchte Seite wurde möglicherweise verschoben oder existiert nicht mehr."
+[back_home]
+other = "Zurück zur Startseite"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Schleifring-Alternator"
+[cat_brushless_alternator]
+other = "Bürstenloser Alternator"
+[cat_diesel_generator_set]
+other = "Diesel-Generatorset"
+[cat_50hz_diesel_generator_set]
+other = "50-Hz-Diesel-Generatorset"
+[cat_60hz_diesel_generator_set]
+other = "60-Hz-Diesel-Generatorset"
+[cat_engine_cummins]
+other = "Serie mit Cummins-Motor"
+[cat_engine_cummins_2]
+other = "Mit Cummins-Motor"
+[cat_engine_huachai]
+other = "Serie mit Huachai-Motor"
+[cat_engine_kofo]
+other = "Serie mit Kofo-Motor"
+[cat_engine_longxin]
+other = "Serie mit Longxin-Motor"
+[cat_engine_lovol]
+other = "Serie mit Lovol-Motor"
+[cat_engine_perkins]
+other = "Serie mit Perkins-Motor"
+[cat_engine_woling]
+other = "Serie mit Woling-Motor"
+[cat_engine_wuxi]
+other = "Serie mit Wuxi-Motor"
+[cat_engine_yangdong]
+other = "Serie mit Yangdong-Motor"
+[cat_engine_yto]
+other = "Serie mit YTO-Motor"
+[cat_engine_yuchai]
+other = "Serie mit Yuchai-Motor"
+[cat_engine_yunnei]
+other = "Serie mit Yunnei-Motor"
+[cat_engine_yuxing]
+other = "Serie mit Yuxing-Motor"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Angebot anfordern"
+[topbar_hours]
+other = "Mo – Sa 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Benötigen Sie ein Generatorset für Ihr Projekt?"
+[cta_text]
+other = "Nennen Sie uns Leistung, Spannung und Anwendung — unsere Ingenieure antworten innerhalb eines Werktags."
+[cta_button]
+other = "Anfrage senden"
+[hero_cta_products]
+other = "Produkte entdecken"
+[hero_cta_quote]
+other = "Angebot anfordern"
+[view_details]
+other = "Details ansehen"
+[why_us]
+other = "Warum Eastern Lion"
+[why_us_title]
+other = "Über 30 Jahre Erfahrung mit Generatoren, die zuverlässig laufen"
+[why_us_text]
+other = "Von der Statorwicklung bis zum Vollasttest: Jedes Gerät wird in unseren eigenen Werkstätten in Fujian und Jiangsu montiert und geprüft."
+
+[product_center_eyebrow]
+other = "Was wir fertigen"
+[hero_cta_note]
+other = "Antwort innerhalb eines Werktags"
+
+[filter_type]
+other = "Typ"
+[filter_power]
+other = "Leistung"
+[filter_hz]
+other = "Frequenz"
+[filter_all]
+other = "Alle"
+[filter_alternator]
+other = "Alternatoren"
+[filter_genset]
+other = "Generatorsets"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "Modelle"
+[filter_empty]
+other = "Kein Modell entspricht diesen Filtern — kontaktieren Sie uns für andere Leistungsstärken."
+[products_coming_soon]
+other = "Das Sortiment wird gerade aktualisiert. Kontaktieren Sie uns für den vollständigen Katalog."
+
+[related_title]
+other = "Ähnliche Modelle"
+[inquiry_title]
+other = "Sie benötigen ein Angebot?"
+[inquiry_text]
+other = "Senden Sie uns Leistung, Spannung und Anwendung — unsere Ingenieure antworten innerhalb eines Werktags."
+[inquiry_button]
+other = "Angebot anfordern"
+[inquiry_whatsapp]
+other = "Per WhatsApp chatten"
+
+[search_empty]
+other = "Keine passende Seite. Versuchen Sie einen Modellnamen, eine Motorenmarke oder einen Leistungsbereich."
+[search_loading]
+other = "Suche läuft …"
+[search_all]
+other = "Alle Produkte ansehen"
+
+[form_required]
+other = "Bitte füllen Sie die markierten Felder aus."
+[form_name_required]
+other = "Bitte geben Sie Ihren Namen ein."
+[form_email]
+other = "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+[form_message_required]
+other = "Bitte teilen Sie uns mit, was Sie benötigen."
+[form_success_title]
+other = "Vielen Dank, Ihre Anfrage wurde gesendet"
+[form_success_text]
+other = "Unser Vertriebsingenieur hat Ihre Anfrage erhalten und antwortet innerhalb eines Werktags. Eine Bestätigungs-E-Mail mit Ihrer Anfragenummer ist unterwegs in Ihr Postfach."
+[form_again]
+other = "Weitere Anfrage senden"
+
+
+[latest_news]
+other = "Aktuelle Nachrichten"
+
+[spec_at_a_glance]
+other = "Technische Daten auf einen Blick"
+[spec_category]
+other = "Kategorie"
+[spec_type]
+other = "Typ"
+[spec_frequency]
+other = "Frequenz"
+[spec_power]
+other = "Leistungsbereich"
+[spec_models]
+other = "Modelle"
+[spec_note]
+other = "Die Leistungsbereiche stammen aus den Standard-50-/60-Hz-Leistungstabellen der jeweiligen Produktseite. Andere Spannungen und Leistungen auf Anfrage."
+
+[skip_to_content]
+other = "Zum Inhalt springen"
+
+[search_button]
+other = "Suchen"
+[pager]
+other = "Weitere Modelle"
+[pager_prev]
+other = "Zurück"
+[pager_next]
+other = "Weiter"
+
+[search_model]
+other = "Modell"
+
+[jump_to_model]
+other = "Zum Modell springen"
+
+[alt_workshop]
+other = "Eastern-Lion-Alternatorproduktion"
+[alt_products]
+other = "Bürstenlose Eastern-Lion-Alternatoren"
+[alt_packing]
+other = "Eastern-Lion: Verpackung und Prüfung"
+
+[search_cats]
+other = "Kategorien"
+[coverage_title]
+other = "Welche Serie deckt welchen Leistungsbereich ab?"
+[footer_qr]
+other = "Scannen, um unser Vertriebsteam zu kontaktieren"
+
+[service_process]
+other = "So arbeiten wir mit Ihnen"
+[step1_title]
+other = "Anforderung"
+[step1_text]
+other = "Nennen Sie uns Leistung, Spannung, Frequenz und Anwendung — oder senden Sie uns ein Modell aus unserem Sortiment."
+[step2_title]
+other = "Lösung & Angebot"
+[step2_text]
+other = "Unsere Ingenieure wählen Motor, Alternator und Steuerung und senden Ihnen anschließend ein vollständiges Angebot mit Lieferzeit."
+[step3_title]
+other = "Produktion & Prüfung"
+[step3_text]
+other = "Das Gerät wird in unserer eigenen Werkstatt montiert und vor der Auslieferung lastgeprüft."
+[step4_title]
+other = "Lieferung & Support"
+[step4_text]
+other = "See- oder Luftfracht, Hilfe bei der Inbetriebnahme, Ersatzteile und lebenslanger technischer Support."
+[applications]
+other = "Anwendungen"
+[app1_alt]
+other = "Eastern-Lion-Generatorsets"
+[app2_alt]
+other = "Eastern-Lion: Verpackung und Export"
+[app3_alt]
+other = "Eastern-Lion-Produktionsstandort"
+
+[app1_title]
+other = "Anwendungen 1"
+[app1_text]
+other = "Beispiel für Anwendungen in China: Tunnelprojekt Enshi der China Railway Twelfth Bureau, Brückenprojekt über den Jangtsekiang der China Railway Thirteenth Bureau, Steuerbehörde Hubei, Tongji-Hospital Wuhan, Dritte Mittelschule Wenzhou (Zhejiang), Lingkun-Apartment (Zhejiang)"
+[app2_title]
+other = "Anwendungen 2"
+[app2_text]
+other = "Autobahnbrückenprojekt Hubei über den Jangtsekiang des 13. Eisenbahnbüros der China Railway Bureau."
+[app3_title]
+other = "Anwendungen 3"
+[app3_text]
+other = "Tunnelprojekt Enshi des 12. Eisenbahnbüros der China Railway Administration."
+
+[faq_jump]
+other = "Zur Frage springen"
+[faq_cta_title]
+other = "Keine Antwort gefunden?"
+[faq_cta_text]
+other = "Senden Sie uns Leistung, Spannung und Anwendung — unsere Ingenieure antworten innerhalb eines Werktags."
+[faq_cta_button]
+other = "Unsere Ingenieure fragen"
+
+[more_news]
+other = "Weitere Nachrichten"
+
+[contact_drawing]
+other = "Zeichnungs-/Spezifikationsnummer (optional)"
+[contact_drawing_hint]
+other = "Nennen Sie eine Zeichnungsnummer oder hängen Sie die Datei unserer E-Mail bei — unsere Ingenieure kalkulieren dann exakt nach Ihrer Zeichnung."
+
+[zoom_image]
+other = "Zum Vergrößern klicken"
+[video_facade]
+other = "Video abspielen"
+
+[video_title]
+other = "Unsere Maschinen ansehen"
+[video_intro]
+other = "Videos von Werksführung, Produktionslinie und Generatorset-Prüfung. Der Player wird erst beim Drücken auf Abspielen geladen."
+[video_1]
+other = "Generatorsets und Verpackung"
+[video_2]
+other = "Produktionslinie"
+[video_3]
+other = "Produktionsstandort"
+
+[compare_add]
+other = "Zum Vergleich hinzufügen"
+[compare_clear]
+other = "Leeren"
+[compare_open]
+other = "Vergleichen"
+[compare_models]
+other = "Modelle"
+[compare_open_model]
+other = "Öffnen"
+[compare_title]
+other = "Modellvergleich"
+[compare_power]
+other = "Leistungsbereich"
+[compare_freq]
+other = "Frequenz"
+[compare_count]
+other = "Modelle"
+[compare_engine]
+other = "Motor"
+[compare_alternator]
+other = "Alternator"
+[compare_controller]
+other = "Steuerung"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Stöbern Sie in den Eastern-Lion-Produktkategorien: Diesel-Generatorsets, Schleifring-Alternatoren und bürstenlose Alternatoren von 2 kW bis 2000 kW, hergestellt in China."
+[seo_tag_desc]
+other = "Nachrichten und Produktneuigkeiten der Fuan Eastern Lion Electric Machines Co., Ltd, nach Thema gegliedert."
+[alt_factory]
+other = "Eastern-Lion-Generatorwerk in Fuan, Fujian"
+
+[breadcrumb_here]
+other = "Sie sind hier:"
+[footer_about]
+other = "Über uns"
+[spec_genset]
+other = "Technische Daten Generatorset"
+[spec_engine]
+other = "Motor"
+[spec_alternator]
+other = "Bürstenloser Alternator"
+[spec_controller]
+other = "Steuerung"
+[spec_datasheet]
+other = "Datenblatt"
+[spec_detail]
+other = "Details"
+[col_model]
+other = "Modell"
+[col_prime_kw]
+other = "Primärleistung (kW)"
+[col_prime_kva]
+other = "Primärleistung (kVA)"
+[col_standby_kw]
+other = "Notstromleistung (kW)"
+[col_standby_kva]
+other = "Notstromleistung (kVA)"
+[col_engine_model]
+other = "Motortyp"
+[col_engine_power]
+other = "Motorleistung (kW)"
+[col_alt_model]
+other = "Alternatortyp"
+[col_alt_power]
+other = "Alternatorleistung (kW)"
+[col_controller]
+other = "Steuerung"
+[col_datasheet]
+other = "Datenblatt"
+[col_50hz_kw]
+other = "50-Hz-Ausgang (kW)"
+[col_50hz_kva]
+other = "50-Hz-Ausgang (kVA)"
+[col_60hz_kw]
+other = "60-Hz-Ausgang (kW)"
+[col_60hz_kva]
+other = "60-Hz-Ausgang (kVA)"
+[col_sae_size]
+other = "SAE-Rahmenmaß"
+[col_core_length]
+other = "Kernlänge (mm)"
+[news_center_title]
+other = "Aktuelles"
+
+[finder_eyebrow]
+other = "Leistungs-Finder"
+[finder_title]
+other = "Welches Modell deckt Ihren Bedarf ab?"
+[finder_text]
+other = "Geben Sie die benötigte Leistung ein — wir listen jedes Modell in diesem Bereich, das sie tragen kann, inklusive Motor, Alternator und Steuerung."
+[finder_quick]
+other = "Häufige Lasten"
+[finder_kw]
+other = "Benötigte Leistung"
+[finder_kw_ph]
+other = "z. B. 200"
+[finder_hz]
+other = "Frequenz"
+[finder_go]
+other = "Modelle finden"
+[finder_head]
+other = "{n} Serien decken {kw} kW bei {hz} Hz"
+[finder_head_one]
+other = "1 Serie deckt {kw} kW bei {hz} Hz"
+[finder_more]
+other = "+{n} weitere Modelle dieser Serie decken diese Last"
+[finder_open]
+other = "Datenblatt öffnen"
+[finder_inquire]
+other = "Angebot anfordern"
+[finder_none]
+other = "Kein Modell in diesem Bereich deckt {kw} kW ab."
+[finder_none_closest]
+other = "Am nächsten kommt {model} ({kw} kW) — nennen Sie uns die Last, und unsere Ingenieure bemessen sie für Sie."
+[finder_none_max]
+other = "Senden Sie uns die Last — wir offerieren eine kundenspezifische oder parallele Lösung."
+[finder_model_standby]
+other = "Notstrom"
+[finder_model_prime]
+other = "Primär"
+[finder_model_output]
+other = "Ausgang"
+[finder_more_series]
+other = "{n} weitere Serien anzeigen"
+
+[search_spec]
+other = "Modelle, die {kw} kW bei {hz} Hz abdecken"
+[search_spec_none]
+other = "Kein Modell deckt {kw} kW ab — nennen Sie uns Ihre Last, wir bemessen sie."
+[search_cover]
+other = "Notstrom"
+[search_standby]
+other = "Notstrom"
+[search_prime]
+other = "Primär"
+[search_output]
+other = "Ausgang"
+[inquiry_power]
+other = "Benötigte Leistung"
+[model_nav_label]
+other = "Nachbarmodelle"
+[model_nav_hint]
+other = "Wählen Sie ein Modell in der Tabelle, um die benachbarten Größen zu sehen."
+[model_nav_current]
+other = "aktuell"
+[model_nav_up]
+other = "größer"
+[model_nav_down]
+other = "kleiner"
+[model_nav_same]
+other = "gleiche Leistung"
+[contact_models]
+other = "In Frage kommende Modelle"
+[contact_model_add_btn]
+other = "Hinzufügen"
+[inquiry_models]
+other = "Modelle"
+[compare_quote]
+other = "Angebot für diese {n} Modelle anfordern"
+
+[spec_series]
+other = "Serie"
+[download_all_title]
+other = "Alle Spezifikationslisten in einer Datei"
+[download_all_text]
+other = "Jedes Modell jeder Serie mit Leistungsangaben, Motor, Alternator und Steuerung — eine CSV-Datei für den gesamten Katalog."
+[download_all_button]
+other = "Alle Daten herunterladen (CSV)"
+[download_file]
+other = "Datei"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Drucken / PDF"
+[download_title_link]
+other = "Download-Center"
+[preview_title]
+other = "Prüfen Sie Ihre Anfrage vor dem Versand"
+[preview_hint]
+other = "So erreicht Ihre Anfrage unsere Ingenieure — Sie können den Text noch ändern."
+[preview_mail]
+other = "In meiner E-Mail-App öffnen"
+[preview_copy]
+other = "Text kopieren"
+[preview_back]
+other = "Zurück zum Formular"
+[preview_copied]
+other = "In die Zwischenablage kopiert."
+[inquiry_salutation]
+other = "Sehr geehrtes Eastern-Lion-Vertriebsteam,"
+[inquiry_interested]
+other = "Ich interessiere mich für folgende(s) Generatorset(s):"
+[inquiry_model]
+other = "Modell"
+[inquiry_required_power]
+other = "Benötigte Leistung"
+[inquiry_drawing]
+other = "Zeichnungs-/Spezifikationsnummer"
+[inquiry_message]
+other = "Nachricht"
+[inquiry_contact]
+other = "Kontakt"
+[inquiry_name]
+other = "Name"
+[inquiry_company]
+other = "Unternehmen"
+[inquiry_phone]
+other = "Telefon / WhatsApp"
+[inquiry_email]
+other = "E-Mail"
+[inquiry_footer]
+other = "Gesendet von easternlion.cn"
+[inquiry_subject]
+other = "Anfrage Generatorset"
+[finder_title_slim]
+other = "Nicht sicher, welches Modell passt?"
+[finder_fold_title]
+other = "Modell finden, das meine Last deckt"
+[compare_selected]
+other = "ausgewählt"
+[resume_models]
+other = "Sie haben angesehen"
+[resume_continue]
+other = "Anfrage fortsetzen"
+[resume_close]
+other = "Schließen"
+[preview_whatsapp]
+other = "Per WhatsApp senden"
+[preview_download]
+other = "Anfrage herunterladen"
+[contact_send]
+other = "Anfrage senden"
+[preview_send]
+other = "Anfrage senden"
+[preview_failed]
+other = "Die Anfrage konnte nicht automatisch gesendet werden. Bitte nutzen Sie eine der folgenden Optionen oder schreiben Sie an sales@easternlion.cn."
+[form_success_receipt]
+other = "Anzeigen, was wir erhalten haben"
+[contact_sending]
+other = "Wird gesendet …"
+[mm_model]
+other = "Modell"
+[mm_load]
+other = "Last (kW)"
+[mm_hz]
+other = "Frequenz"
+[contact_models_hint]
+other = "Fügen Sie jedes Modell hinzu, das wir offerieren sollen — jeweils mit eigener Leistung und Frequenz, falls abweichend. Unsere Ingenieure antworten mit Preisen und Lieferzeiten für jedes Modell."
+[contact_model_add]
+other = "Weiteres Modell hinzufügen (z. B. GF/GFS-C200)"
+[service_schema_type]
+other = "Lieferung von Generatorsets, Ersatzteilen und Kundendienst"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Wichtige technische Daten"
+[ks_power]
+other = "Leistungsbereich"
+[ks_frequency]
+other = "Frequenz"
+[ks_models]
+other = "Modelle"
+[ks_engine]
+other = "Motor"
+[ks_alternator]
+other = "Alternator"
+[ks_controller]
+other = "Steuerung"
+[ks_warranty]
+other = "Garantie"
+[ks_warranty_value]
+other = "1 Jahr oder 1000 Stunden"
+[ks_options]
+other = "Optionen"
+[ks_options_value]
+other = "Offener Rahmen, Schallschutzhaube, Anhänger, ATS und Parallelsysteme"
+[ks_moq]
+other = "Mindestbestellmenge"
+[ks_moq_value]
+other = "1 Set"
+[product_copy_link]
+other = "Link kopieren"
+[product_link_copied]
+other = "Link kopiert"
+[guide_title]
+other = "So wählen Sie diese Serie"
+[guide_intro]
+other = "Sechs Entscheidungen bestimmen fast jede Generatorset-Bestellung. So treffen Sie jede davon — und was diese Serie Ihnen bietet."
+[guide_col_decision]
+other = "Ihre Entscheidung"
+[guide_col_how]
+other = "So treffen Sie die Entscheidung"
+[guide_col_this]
+other = "Diese Serie"
+[guide_engine]
+other = "Motorenmarke"
+[guide_engine_how]
+other = "Der Motor bestimmt die Verfügbarkeit von Ersatzteilen und die Reaktionszeit Ihres Servicedienstleisters vor Ort. Vergleichen Sie zuerst das Servicenetz, dann den Preis."
+[guide_engine_none]
+other = "Nur Alternator"
+[guide_engine_count]
+other = "%v Modelle in dieser Serie"
+[guide_duty]
+other = "Primär- oder Notstrombetrieb"
+[guide_duty_how]
+other = "Primärleistung für Aggregate, die 8 bis 12 Stunden täglich laufen, Notstromleistung für den Notfall-Einsatz. Bemessen Sie das Set so, dass Ihre Last bei 70 bis 80 % der Notstromleistung liegt — dann läuft der Motor zwischen 50 % und 75 % Last, wo der Verbrauch am günstigsten ist."
+[guide_duty_value]
+other = "Notstrom %v–%v kW, Primär %v–%v kW"
+[guide_voltage]
+other = "Spannung und Frequenz"
+[guide_voltage_how]
+other = "400/230 V bei 50 Hz für Asien, Europa, Afrika und den Nahen Osten, 230/400 V bei 60 Hz für die Amerikas. Alternator und Steuerpult müssen zum Netz passen, an das Sie anschließen."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Bauart"
+[guide_enclosure_how]
+other = "Offener Rahmen für den Maschinenraum, Schallschutzhaube für einen städtischen Außenstandort (ca. 65 dB(A) bei 7 m), Container für einen 1000-kW-Block und Anhänger für ein mobil einsetzbares Set."
+[guide_enclosure_value]
+other = "Offener Rahmen, Schallschutzhaube, Anhänger und Container als Optionen"
+[guide_starting]
+other = "Start und Umschaltung"
+[guide_starting_how]
+other = "Ein Notstromaggregat braucht Elektrostart und eine automatische Umschaltanlage, sonst steht das Set brach, bis das Netz ausfällt. Hand- und Luftstart bleiben für spezielle Einsätze verfügbar."
+[guide_starting_value]
+other = "Elektrostart, ATS (automatisch und manuell) auf Anfrage"
+[guide_parallel]
+other = "Parallelschaltung"
+[guide_parallel_how]
+other = "Mehr als ein Set bedeutet ein Leistungsmanagementsystem, eine größere Umschaltanlage und eine Steuerung, mit der die Sets die Last teilen und sich gegenseitig übernehmen."
+[guide_parallel_value]
+other = "Parallelsysteme mit Leistungsmanagement"
+[guide_environment]
+other = "Standortbedingungen"
+[guide_environment_how]
+other = "Jede 1000 m Höhe und jedes °C über der Standard-Umgebungstemperatur kostet etwa 3 % der Leistung; Standorte mit Salzspray oder Staub erfordern eine Schallschutzhaube und kürzere Wartungsintervalle."
+[guide_environment_value]
+other = "Nennleistung bei 0–50 °C, Leistungsabsenkung auf Anfrage"
+[guide_foot]
+other = "Senden Sie uns Last, Spannung und Standort — wir senden Ihnen das passende Modell, den Preis und die Lieferzeit zurück."
+[wa_from]
+other = "Anfrage von easternlion.cn"
+[wa_series]
+other = "Serie"
+[wa_model]
+other = "Modell"
+[wa_power]
+other = "Benötigte Leistung"
+[wa_standby]
+other = "Notstromleistung"
+[wa_link]
+other = "Link"
+[search_guide]
+other = "So wählen Sie"
+[search_guide_more]
+other = "Vollständigen Leitfaden lesen"
+[search_compare]
+other = "Vergleichen"
+[search_models]
+other = "Modelle"
+[inquiry_ref_label]
+other = "Ihre Anfragenummer:"
+[form_success_whatsapp]
+other = "Brauchen Sie es schneller? Schreiben Sie uns auf"
+[app_eyebrow]
+other = "Anwendungen"
+[app_index_title]
+other = "Generatorsets nach Anwendung"
+[app_index_text]
+other = "Beginnen Sie mit der Aufgabe, die Ihr Set erledigen muss. Jede Anwendungsseite zeigt die benötigte Leistung, die Notstrommodelle, die sie abdecken, die technischen Punkte, die vor Ort zählen, und die Modelle, die wir dafür bauen."
+[app_sizing_title]
+other = "So bemessen Sie das Set"
+[app_sizing_text]
+other = "Notstrombetrieb: Das Set muss die gesamte angeschlossene Last plus den Anlaufstrom tragen, daher bemessen wir es oberhalb der Betriebslast. Die folgende Tabelle nennt die Notstromleistungen der realen Modelle für jede typische Last dieser Anwendung."
+[app_sizing_load]
+other = "Typische Last"
+[app_sizing_standby]
+other = "Empfohlene Notstromleistung"
+[app_sizing_models]
+other = "Modelle, die sie abdecken"
+[app_sizing_note]
+other = "Die Leistungen entsprechen ISO 8528. Das finale Modell hängt von Spannung, Tankreichweite, Bauart und Umgebungstemperatur ab — senden Sie uns die Last, und wir bestätigen es schriftlich."
+[app_sizing_oversize]
+other = "Fragen Sie uns nach einer Lösung über 2000 kW"
+[app_requirements_title]
+other = "Was diese Anwendung benötigt"
+[app_series_title]
+other = "Die Serien für diesen Einsatz"
+[app_model_word]
+other = "Modelle"
+[app_faq_title]
+other = "Fragen, die Käufer zu dieser Anwendung stellen"
+[app_fact_load]
+other = "Leistungsbereich"
+[app_fact_duty]
+other = "Betriebsart"
+[app_fact_duty_value]
+other = "Notstrom"
+[app_fact_hz]
+other = "Frequenz"
+[app_fact_engine]
+other = "Motoren"
+[app_cta_title]
+other = "Nennen Sie uns Last und Standort"
+[app_cta_text]
+other = "Senden Sie uns die Betriebslast, die Spannung und den Standort Ihres Sets. Unsere Ingenieure antworten innerhalb eines Werktags mit Modell, Aufbau und Preis."
+[app_cta_button]
+other = "Angebot anfordern"
+[app_wa_text]
+other = "Anfrage: %s Generatorset"
+[app_other_title]
+other = "Weitere Anwendungen"
+[datasheet_sub]
+other = "Technisches Datenblatt Generatorset"
+[datasheet_print]
+other = "Drucken oder als PDF speichern"
+[datasheet_back]
+other = "Zurück zur Serie"
+[datasheet_contact]
+other = "Ihre Anfrage"
+[datasheet_note]
+other = "Hinweis"
+[datasheet_note_text]
+other = "Die Leistungen entsprechen ISO 8528. Die endgültige Ausführung hängt von Spannung, Tankreichweite, Bauart und Umgebungstemperatur ab."
+[download_datasheet]
+other = "Datenblatt"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Die Modelle, die sie abdecken:"
+[mm_no_cover]
+other = "Kein Modell im Katalog deckt diese Last."
+[mm_picked]
+other = "bereits gewählt"
+[ui_close]
+other = "Schließen"
+[ui_remove]
+other = "Entfernen"
+[lang_label]
+other = "Sprache ändern"
+[nav_menu]
+other = "Menü"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "F"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v und %[2]v"
+[kind_genset]
+other = "Diesel-Generatorset"
+[kind_alternator]
+other = "Alternator"
+[app_summary_tpl]
+other = "Für %[1]s ist das benötigte Notstrom-Diesel-Generatorset mit %[2]v bis %[3]v kW ausgelegt; Eastern Lion baut diese Sets um die %[4]s-Motoren, in %[5]s Hz, als offenen Rahmen, Schallschutzhaube, Anhänger, ATS- und Parallelausführung, und jedes Set wird vor dem Versand im Vollasttest geprüft."
+[guide_sum_engine]
+other = "%[1]s ist eine %[2]v-Hz-Diesel-Generatorset-Serie von Eastern Lion, gebaut um den %[3]s-Motor, die %[4]v bis %[5]v kW in %[6]d Modellen abdeckt. Sie wird eingesetzt für %[7]s."
+[guide_sum_plain]
+other = "%[1]s ist eine Eastern-Lion-Serie für %[2]v Hz (%[3]s), die %[4]v bis %[5]v kW in %[6]d Modellen abdeckt und nach %[7]s geliefert wird."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "vollständiger Websitetext"
+[llms_intro]
+other = '''Marke: Eastern Lion (福建东方电机). Website: %[1]s
+Gegründet 1987 in Fuan, Fujian. Hersteller von Diesel-Generatorsets, Schleifring-Alternatoren
+und bürstenlosen Alternatoren, 2 kW bis 2000 kW, 50 Hz und 60 Hz. Eigene Werkstätten:
+Alternatorproduktion, Generatorset-Montage, Vollasttest. Rund 15.000 Alternatoren und 2.000
+Generatorsets pro Jahr. 35 Vertriebs- und Servicestandorte in China. Exporte nach Russland,
+Indonesien, den Philippinen, Südafrika, Pakistan, das Vereinigte Königreich und weitere Märkte.
+
+Kontakt: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Werk: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Internationales Büro: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (Marke: Eastern Lion, 福建东方电机) ist ein
+> chinesischer Hersteller von Diesel-Generatorsets, Schleifring-Alternatoren und bürstenlosen
+> Alternatoren, gegründet 1987 in Fuan, Fujian. Das Unternehmen baut Alternatoren und komplette
+> Generatorsets in eigenen Werkstätten, prüft jede Maschine vor dem Versand lastgegen und verkauft
+> sie weltweit — 2 kW bis 2000 kW, 50 Hz und 60 Hz, mit Motoren von Cummins, Perkins, Yuchai, YTO,
+> Weichai, Kofo, Huachai, Longxin, Lovol, Woling, Yangdong, Yunnei, Yuxing und Kaixun.
+
+## Was diese Website bietet
+
+- 44 Produktserien, jede mit vollständiger Spezifikationstabelle (Modell, Primär- und
+  Notstromleistung, Motor, Alternator, Steuerung) und herunterladbarer csv
+- Der Leistungs-Finder ordnet eine Last in kW jedem Modell zu, das sie abdeckt
+- Das Vergleichswerkzeug stellt bis zu vier Serien nebeneinander
+- Jede Spezifikationsliste gibt es als csv unter /de/download/
+
+## Eckdaten
+
+| | |
+| --- | --- |
+| Gegründet | 1987 (Hanyang electric plant, Fuan) |
+| Produktprogramm | 2 kW bis 2000 kW, 50 Hz und 60 Hz |
+| Alternatorkapazität | rund 15.000 Alternatoren pro Jahr |
+| Generatorset-Kapazität | rund 2.000 Generatorsets pro Jahr |
+| Servicenetz | 35 Vertriebs- und Servicestandorte in China |
+| Märkte | China sowie Exporte nach Russland, Indonesien, den Philippinen, Südafrika, Pakistan, dem Vereinigten Königreich und weiteren Ländern |
+| Werk | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Internationales Büro | Fuzhou, Fujian, China |
+| Telefon | +86-13950513258 |
+| E-Mail | sales@easternlion.cn (Service: service@easternlion.cn) |
+
+## Produktfamilien
+
+- Diesel-Generatorsets — /de/products/diesel-generator-set/ (15 Motorenserien, 50 Hz)
+- 60-Hz-Generatorsets — /de/products/60hz-diesel-generator-set/ (6 Serien für die Amerikas und Teile Asiens)
+- Schleifring-Alternatoren — /de/products/brush-alternator/ (STC-Serie, 8 kW bis 500 kW)
+- Bürstenlose Alternatoren — /de/products/brushless-alternator/ (EL-Serie, SAE-Kupplung)
+
+## Anwendungen
+
+- Generatorsets nach Anwendung — /de/applications/ (die benötigte Leistung, die Modelle, die sie abdecken, und die technischen Punkte, die die Bestellung bestimmen)
+- Rechenzentren — /de/applications/data-centre/
+- Krankenhäuser — /de/applications/hospital/
+- Telekommunikationsstandorte — /de/applications/telecom/
+- Bergbau- und Steinbruchstandorte — /de/applications/mining/
+- Hotels und Resorts — /de/applications/hotel/
+- Baustellen — /de/applications/construction/
+
+## Unternehmen
+
+- Unternehmensprofil — /de/about/
+- Unternehmensgeschichte — /de/about/history/
+- Unser Team — /de/about/team/
+- Zertifikate und Qualifikationen — /de/about/qualification/
+- Unsere Werkstatt — /de/about/workshop/
+- Kundendienst — /de/service/
+- Werksvideos — /de/video/
+- Häufig gestellte Fragen — /de/faq/
+- Aktuelles — /de/news/
+- Kontakt — /de/contact/
+
+## Downloads
+
+- Download-Center mit jeder Spezifikationsliste als csv — /de/download/
+- Alle Modelle aller Serien in einer Datei — /de/download/all-specs.csv
+- Der vollständige Websitetext für Sprachmodelle — /de/llms-full.txt
+
+## So erreichen Sie uns
+
+Vertriebsanfragen: sales@easternlion.cn — eine strukturierte Anfrage (Modell, Last, Frequenz,
+Zeichnungsnummer) wird innerhalb eines Werktags beantwortet. Das Kontaktformular unter /de/contact/
+sendet die Anfrage direkt in das Vertriebspostfach und bietet WhatsApp als zweiten Kanal.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Produkte"
+[llms_power_line]
+other = "Leistungsbereich: %[1]v bis %[2]v kW. Frequenz: %[3]v Hz. Typ: %[4]v. Serien-URL: %[5]s"
+[llms_csv_line]
+other = "Spezifikationsliste (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Anwendungen"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Wie man eine Serie wählt"
+[llms_choose_text]
+other = '''Jede Generatorset-Bestellung läuft auf sechs Entscheidungen hinaus: die Motorenmarke (sie
+bestimmt die Ersatzteile und die Reaktionszeit Ihres Servicedienstleisters), Primär- oder
+Notstrombetrieb (Primärleistung für 8 bis 12 Stunden täglich, Notstromleistung für den
+Notfall-Einsatz; bemessen Sie das Set so, dass die Last bei 70 bis 80 % der Notstromleistung
+liegt), Spannung und Frequenz (400/230 V bei 50 Hz, 230/400 V bei 60 Hz), die Bauart (offener
+Rahmen, Schallschutzhaube, Container, Anhänger), Start und Umschaltung (Elektrostart mit
+automatischer Umschaltanlage für Notstromsets) und Parallelschaltung (mehr als ein Set braucht
+ein Leistungsmanagementsystem). Auch die Standortbedingungen zählen: Jede 1000 m Höhe und jedes
+10 °C über der Standard-Umgebungstemperatur kosten etwa 3 % der Leistung.
+
+Garantie: 1 Jahr oder 1000 Stunden. Mindestbestellmenge: 1 Set. Bauarten: offener Rahmen,
+Schallschutzhaube, Anhänger und Container. Start: elektrisch, ATS auf Anfrage. Parallelsysteme
+mit Leistungsmanagement sind verfügbar.'''
+[llms_faq_h]
+other = "Häufig gestellte Fragen"
+[llms_service_h]
+other = "Service und Unternehmen"
+[llms_contact_line]
+other = "Kontakt: sales@easternlion.cn — Anfragen werden innerhalb eines Werktags beantwortet."

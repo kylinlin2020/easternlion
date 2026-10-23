@@ -1,18 +1,16 @@
-{
-  "title": "资质荣誉",
-  "description": "东方电机资质证书、展会照片与合作伙伴：质量管理体系认证，以及与世界知名发动机品牌的长期合作。",
-  "banner_image": "/images/banner/about.jpg",
-  "banner_logo": true,
-  "banner_hide_title": true,
-  "banner_sub": "中国优质供应商",
-  "banner_text": "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，生产基地位于福建、江苏、上海等地，产品行销全国。",
-  "breadcrumb": [
-    {
-      "name": "公司简介",
-      "url": "/about/"
-    }
-  ]
-}
+---
+title: "资质荣誉"
+description: "东方电机资质证书、展会照片与合作伙伴：质量管理体系认证，以及与世界知名发动机品牌的长期合作。"
+banner_image: "/images/banner/about.jpg"
+banner_logo: true
+banner_hide_title: true
+banner_sub: "中国优质供应商"
+banner_text: "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，生产基地位于福建、江苏、上海等地，产品行销全国。"
+breadcrumb:
+  - name: "公司简介"
+    url: /about/
+  - name: "资质荣誉"
+---
 <h3 class="block-title">证书</h3>
 <div class="separator"></div>
 

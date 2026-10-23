@@ -16,11 +16,8 @@
       "url": "/products/"
     },
     {
-      "name": "有刷发电机",
+      "name": "无刷发电机",
       "url": "/products/brushless-alternator/"
-    },
-    {
-      "name": "无刷发电机"
     }
   ],
   "columns": [

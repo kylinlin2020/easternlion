@@ -1,34 +1,11 @@
-{{- /* the full text of the site, written for a language model */ -}}
+{{- /* the full text of the site, written for a language model. Every piece of
+       prose below comes from i18n/<lang>.toml, so each language ships its own. */ -}}
 {{- $sep := "\n\n" -}}
-{{- $zh := eq site.Language.Lang "zh" -}}
-# {{ site.Params.company }} — full site text
+# {{ site.Params.company }} — {{ i18n "llms_ftitle" }}
 
-{{ if $zh -}}
-品牌：东方电机（Eastern Lion / 福建东方电机）。站点：{{ site.Home.Permalink }}
-1987 年创立于福建福安。中国柴油发电机组、有刷交流发电机与无刷交流发电机专业生产厂家，功率范围
-2kW – 2000kW，50Hz 与 60Hz。自有车间完成发电机绕制、发电机组装配与满载测试，年产交流发电机
-约 15,000 台、发电机组约 2,000 台。全国 35 个销售与办事处，出口俄罗斯、印度尼西亚、菲律宾、
-南非、巴基斯坦、英国等市场。
-
-联系方式：sales@easternlion.cn，+86-13950513258，service@easternlion.cn。
-工厂：福建省福安市坂中工业区下洋 36 号。
-国际业务部：福建省福州市台江区洋中街道东洋中路融信洋中城 2 号楼 4 层 23 室。
-{{- else -}}
-Brand: Eastern Lion (福建东方电机). Site: {{ site.Home.Permalink }}
-Founded 1987 in Fuan, Fujian. Manufacturer of diesel generator sets, brush alternators and
-brushless alternators, 2 kW to 2000 kW, 50 Hz and 60 Hz. Own workshops: alternator
-production, generator set assembly, full load testing. About 15,000 alternators and 2,000
-generator sets per year. 35 sales and service bases in China. Exports to Russia, Indonesia, the
-Philippines, South Africa, Pakistan, the United Kingdom and other markets.
-
-Contact: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
-Factory: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
-International office: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
-Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.
-{{- end }}
-
+{{ printf (i18n "llms_intro") site.Home.Permalink }}
 {{ $sep -}}
-## Products
+## {{ i18n "llms_products_h" }}
 
 {{ $sep -}}
 {{- $scope := slice -}}
@@ -44,10 +21,8 @@ Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.
 
 {{ partial "series-summary.html" (dict "page" . "plain" true) }}
 
-Power range: {{ .Params.power_min }} to {{ .Params.power_max }} kW. Frequency:
-{{ .Params.hz | default 50 }} Hz. Type: {{ .Params.product_kind | default "genset" }}.
-Series URL: {{ .Permalink }}
-Specification list (csv): {{ .Permalink }}spec.csv
+{{ printf (i18n "llms_power_line") .Params.power_min .Params.power_max (.Params.hz | default 50) (.Params.product_kind | default "genset") .Permalink }}
+{{ printf (i18n "llms_csv_line") .Permalink }}
 
 {{- $cols := .Params.columns -}}
 {{- $iPrime := -1 }}{{ $iStandby := -1 }}
@@ -67,7 +42,7 @@ Specification list (csv): {{ .Permalink }}spec.csv
 {{ $sep -}}
 {{- end }}
 
-## Applications
+## {{ i18n "llms_applications_h" }}
 
 {{ $sep -}}
 {{- range where site.RegularPages "Section" "applications" -}}
@@ -76,7 +51,7 @@ Specification list (csv): {{ .Permalink }}spec.csv
 
 {{ .Scratch.Get "appSummary" }}
 
-URL: {{ .Permalink }}
+{{ printf (i18n "llms_url_line") .Permalink }}
 
 {{ $sep -}}
 | Load (kW) | Standby power (kW) | Models |
@@ -101,31 +76,21 @@ A: {{ .a }}
 
 {{ end -}}
 {{- end -}}
-## How to choose a series
+## {{ i18n "llms_choose_h" }}
 
-Every generator set order comes down to six decisions: the engine brand (it decides the spare
-parts and the response time of your service partner), prime or standby duty (prime runs 8 to 12
-hours a day, standby is for emergency backup; size the set so the load sits at 70 to 80 % of the
-standby rating), voltage and frequency (400/230 V at 50 Hz, 230/400 V at 60 Hz), the enclosure
-(open frame, silent canopy, container, trailer), starting and transfer (electric start with an
-automatic transfer switch for standby sets) and paralleling (more than one set needs a power
-management system). Site conditions matter too: every 1000 m of altitude and every 10 °C above
-the standard ambient costs about 3 % of the rating.
+{{ i18n "llms_choose_text" }}
 
-Warranty: 1 year or 1000 hours. Minimum order: 1 set. Enclosure options: open frame, silent
-canopy, trailer and container. Starting: electric, with an ATS on request. Parallel systems with
-power management are available.
-
-## Frequently asked questions
+## {{ i18n "llms_faq_h" }}
 
 {{ $sep -}}
+{{- $lang := site.Language.Lang -}}
 {{- range site.Data.faq }}
-**Q: {{ if eq site.Language.Lang "zh" }}{{ .q_zh }}{{ else }}{{ .q }}{{ end }}**
+**Q: {{ index . (printf "q_%s" $lang) | default .q }}**
 
-A: {{ if eq site.Language.Lang "zh" }}{{ .a_zh }}{{ else }}{{ .a }}{{ end }}
+A: {{ index . (printf "a_%s" $lang) | default .a }}
 
 {{ end -}}
-## Service and company
+## {{ i18n "llms_service_h" }}
 
 {{ $sep -}}
 {{- range (slice "about" "service" "contact") -}}
@@ -139,4 +104,4 @@ A: {{ if eq site.Language.Lang "zh" }}{{ .a_zh }}{{ else }}{{ .a }}{{ end }}
 {{ end -}}
 {{- end }}
 {{ $sep -}}
-Contact: sales@easternlion.cn — inquiries are answered within one working day.
+{{ i18n "llms_contact_line" }}

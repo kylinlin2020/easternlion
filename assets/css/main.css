@@ -383,6 +383,8 @@ label.label {
   right: 0;
   z-index: 70;
   min-width: 180px;
+  max-height: min(70vh, 430px);
+  overflow-y: auto;
   margin: 0;
   padding: 6px;
   list-style: none;
@@ -415,6 +417,15 @@ label.label {
   margin-left: auto;
   fill: var(--amber-600);
 }
+
+/* right-to-left pages (arabic, persian): flip what is pinned to an edge.
+   The rest of the layout mirrors itself through dir="rtl". */
+html[dir="rtl"] .lang-menu { right: auto; left: 0; }
+html[dir="rtl"] .search-panel { right: auto; left: 0; }
+html[dir="rtl"] .submenu { left: auto; right: 0; }
+html[dir="rtl"] .float-rail { right: auto; left: 14px; }
+html[dir="rtl"] .lang-tick { margin-left: 0; margin-right: auto; }
+html[dir="rtl"] .sp-item.is-active { box-shadow: inset -2px 0 0 var(--amber); }
 
 .nav-toggle {
   display: none;

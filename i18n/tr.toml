@@ -1,0 +1,988 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Ana Sayfa"
+[nav_products]
+other = "Ürünler"
+[nav_company]
+other = "Firma Profili"
+[nav_service]
+other = "Hizmet"
+[nav_video]
+other = "Video"
+[nav_faq]
+other = "SSS"
+[nav_contact]
+other = "İletişim"
+
+[menu_company_profile]
+other = "Firma Profili"
+[menu_history]
+other = "Gelişim Tarihi"
+[menu_team]
+other = "Ekibimiz"
+[menu_qualification]
+other = "Belgelerimiz"
+[menu_news]
+other = "Haber Merkezi"
+[menu_workshop]
+other = "Atölyemiz"
+
+[about_us]
+other = "Hakkımızda"
+[product_center]
+other = "Ürün Merkezi"
+[product_category]
+other = "Ürün Kategorileri"
+
+[footer_quick_links]
+other = "Hızlı Bağlantılar"
+[footer_company_profile]
+other = "Firma Profili"
+[footer_product_category]
+other = "Ürün Kategorileri"
+[footer_golden_supplier]
+other = "Çin'in Altın Tedarikçisi"
+[footer_tel]
+other = "Tel"
+[footer_email]
+other = "E-posta"
+[footer_web]
+other = "Web"
+[footer_copyright]
+other = "Telif hakkı © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Tüm hakları saklıdır."
+
+[float_telephone]
+other = "Telefon"
+[float_email]
+other = "E-posta"
+[float_message]
+other = "Mesaj Bırakın"
+
+[search_placeholder]
+other = "Anahtar kelime girin"
+[language_label]
+other = "Türkçe"
+
+[product_availability]
+other = "Stok Durumu"
+[product_quantity]
+other = "Adet"
+[product_in_stock]
+other = "Stokta Var"
+[product_inquire]
+other = "Teklif İsteyin"
+[product_add_basket]
+other = "WhatsApp'ta Sohbet Edin"
+[product_description]
+other = "Ürün Açıklaması"
+[product_share]
+other = "Paylaş:"
+[product_category_label]
+other = "Kategori"
+[product_rating_note]
+other = "Puanlar bilgilendirme amaçlıdır. Güncel veri sayfası ve stok teyidi için lütfen bizimle iletişime geçin."
+
+[contact_get_in_touch]
+other = "Bize Ulaşın"
+[contact_intl]
+other = "Uluslararası Departman"
+[contact_manufacturer]
+other = "Üretici"
+[contact_more_info]
+other = "Daha fazla bilgi için bizimle iletişime geçin."
+[contact_name]
+other = "Adınız *"
+[contact_email]
+other = "E-posta adresiniz *"
+[contact_phone]
+other = "Telefon / WhatsApp"
+[contact_company]
+other = "Firma"
+[contact_product]
+other = "İlgilendiğiniz ürün"
+[contact_message]
+other = "Mesajınız *"
+[contact_submit]
+other = "İletişime Geçin"
+
+[news_views]
+other = "Görüntülenme"
+[news_author]
+other = "Yazar"
+[news_publish_time]
+other = "Yayın Tarihi"
+[news_origin]
+other = "Kaynak"
+[news_site]
+other = "Site"
+[news_sidebar_title]
+other = "Haberler"
+[news_back]
+other = "Haberlere Dön"
+[news_read_more]
+other = "Devamını Oku"
+
+[search_results]
+other = "Arama sonuçları:"
+[not_found]
+other = "Sayfa Bulunamadı"
+[not_found_text]
+other = "Aradığınız sayfa taşınmış veya artık mevcut olmayabilir."
+[back_home]
+other = "Ana Sayfaya Dön"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Fırçalı Alternatör"
+[cat_brushless_alternator]
+other = "Fırçasız Alternatör"
+[cat_diesel_generator_set]
+other = "Dizel Jeneratör Seti"
+[cat_50hz_diesel_generator_set]
+other = "50 Hz Dizel Jeneratör Seti"
+[cat_60hz_diesel_generator_set]
+other = "60 Hz Dizel Jeneratör Seti"
+[cat_engine_cummins]
+other = "Cummins Motorlu Seri"
+[cat_engine_cummins_2]
+other = "Cummins Motorlu Ürünler"
+[cat_engine_huachai]
+other = "Huachai Motorlu Seri"
+[cat_engine_kofo]
+other = "Kofo Motorlu Seri"
+[cat_engine_longxin]
+other = "Longxin Motorlu Seri"
+[cat_engine_lovol]
+other = "Lovol Motorlu Seri"
+[cat_engine_perkins]
+other = "Perkins Motorlu Seri"
+[cat_engine_woling]
+other = "Woling Motorlu Seri"
+[cat_engine_wuxi]
+other = "Wuxi Motorlu Seri"
+[cat_engine_yangdong]
+other = "Yangdong Motorlu Seri"
+[cat_engine_yto]
+other = "YTO Motorlu Seri"
+[cat_engine_yuchai]
+other = "Yuchai Motorlu Seri"
+[cat_engine_yunnei]
+other = "Yunnei Motorlu Seri"
+[cat_engine_yuxing]
+other = "Yuxing Motorlu Seri"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Teklif Alın"
+[topbar_hours]
+other = "Pzt – Cmt 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Projeniz için jeneratör setine mi ihtiyacınız var?"
+[cta_text]
+other = "Bize gücü, gerilimi ve kullanım alanını anlatın — mühendislerimiz bir iş günü içinde yanıt verecek."
+[cta_button]
+other = "Talep gönderin"
+[hero_cta_products]
+other = "Ürünleri keşfedin"
+[hero_cta_quote]
+other = "Fiyat teklifi isteyin"
+[view_details]
+other = "Detayları görüntüle"
+[why_us]
+other = "Neden Eastern Lion"
+[why_us_title]
+other = "30+ yıldır durmadan çalışan jeneratörler üretiyoruz"
+[why_us_text]
+other = "Stator sarımından tam yük testine kadar her ünite, Fujian ve Jiangsu'daki kendi atölyelerimizde monte edilir ve doğrulanır."
+
+[product_center_eyebrow]
+other = "Ne üretiyoruz"
+[hero_cta_note]
+other = "Bir iş günü içinde yanıt"
+
+[filter_type]
+other = "Tip"
+[filter_power]
+other = "Güç"
+[filter_hz]
+other = "Frekans"
+[filter_all]
+other = "Tümü"
+[filter_alternator]
+other = "Alternatörler"
+[filter_genset]
+other = "Jeneratör setleri"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "model"
+[filter_empty]
+other = "Bu filtrelerle eşleşen model yok — diğer güç seçenekleri için lütfen bizimle iletişime geçin."
+[products_coming_soon]
+other = "Ürün gamı güncelleniyor. Tam kataloğumuz için lütfen bizimle iletişime geçin."
+
+[related_title]
+other = "İlgili modeller"
+[inquiry_title]
+other = "Fiyat teklifine mi ihtiyacınız var?"
+[inquiry_text]
+other = "Bize gücü, gerilimi ve kullanım alanını gönderin — mühendislerimiz bir iş günü içinde yanıt verecek."
+[inquiry_button]
+other = "Fiyat teklifi isteyin"
+[inquiry_whatsapp]
+other = "WhatsApp'ta sohbet edin"
+
+[search_empty]
+other = "Eşleşen sayfa yok. Bir model adı, motor markası veya güç aralığı deneyin."
+[search_loading]
+other = "Aranıyor…"
+[search_all]
+other = "Tüm ürünleri görün"
+
+[form_required]
+other = "Lütfen vurgulanan alanları doldurun."
+[form_name_required]
+other = "Lütfen adınızı girin."
+[form_email]
+other = "Lütfen geçerli bir e-posta adresi girin."
+[form_message_required]
+other = "Lütfen neye ihtiyacınız olduğunu bize anlatın."
+[form_success_title]
+other = "Teşekkürler, talebiniz gönderildi"
+[form_success_text]
+other = "Satış mühendisimiz talebinizi aldı ve bir iş günü içinde yanıt verecek. Talep referans numaranızı içeren onay e-postası gelen kutunuza yolda."
+[form_again]
+other = "Yeni bir talep yazın"
+
+
+[latest_news]
+other = "Son haberler"
+
+[spec_at_a_glance]
+other = "Özet teknik özellikler"
+[spec_category]
+other = "Kategori"
+[spec_type]
+other = "Tip"
+[spec_frequency]
+other = "Frekans"
+[spec_power]
+other = "Güç aralığı"
+[spec_models]
+other = "Modeller"
+[spec_note]
+other = "Güç aralıkları, her ürün sayfasındaki standart 50 / 60 Hz güç tablolarından alınmıştır. Diğer gerilimler ve güç değerleri talep üzerine mevcuttur."
+
+[skip_to_content]
+other = "İçeriğe geç"
+
+[search_button]
+other = "Ara"
+[pager]
+other = "Diğer modeller"
+[pager_prev]
+other = "Önceki"
+[pager_next]
+other = "Sonraki"
+
+[search_model]
+other = "Model"
+
+[jump_to_model]
+other = "Modele git"
+
+[alt_workshop]
+other = "Eastern Lion alternatör üretimi"
+[alt_products]
+other = "Eastern Lion fırçasız alternatörleri"
+[alt_packing]
+other = "Eastern Lion paketleme ve testi"
+
+[search_cats]
+other = "Kategoriler"
+[coverage_title]
+other = "Hangi seri hangi güç aralığını karşılıyor?"
+[footer_qr]
+other = "Satış ekibimizle iletişime geçmek için okutun"
+
+[service_process]
+other = "Sizinle nasıl çalışıyoruz"
+[step1_title]
+other = "İhtiyaç"
+[step1_text]
+other = "Gücü, gerilimi, frekansı ve kullanım alanını bize söyleyin — ya da ürün gamımızdan bir model gönderin."
+[step2_title]
+other = "Çözüm ve fiyat teklifi"
+[step2_text]
+other = "Mühendislerimiz motoru, alternatörü ve kontrol cihazını seçer, ardından teslim süresiyle birlikte eksiksiz bir fiyat teklifi gönderir."
+[step3_title]
+other = "Üretim ve test"
+[step3_text]
+other = "Ünite kendi atölyemizde monte edilir ve fabrikadan çıkmadan önce yük testinden geçirilir."
+[step4_title]
+other = "Teslimat ve destek"
+[step4_text]
+other = "Deniz veya hava taşımacılığı, devreye alma rehberliği, yedek parça ve ömür boyu teknik destek."
+[applications]
+other = "Uygulamalar"
+[app1_alt]
+other = "Eastern Lion jeneratör setleri"
+[app2_alt]
+other = "Eastern Lion paketleme ve ihracat"
+[app3_alt]
+other = "Eastern Lion üretim tesisi"
+
+[app1_title]
+other = "Uygulamalar 1"
+[app1_text]
+other = "Yurt içi uygulama örneği: China Railway 12. Bölge Enshi tünel projesi, China Railway 13. Bölge Yangtze Nehri köprüsü projesi, Hubei Ulusal Vergi Dairesi, Wuhan Tongji Hastanesi, Zhejiang Wenzhou Üçüncü Ortaokulu, Zhejiang Lingkun Apartmanı"
+[app2_title]
+other = "Uygulamalar 2"
+[app2_text]
+other = "China Railway 13. Bürosuna bağlı Hubei Yangtze Nehri Karayolu Köprüsü projesi."
+[app3_title]
+other = "Uygulamalar 3"
+[app3_text]
+other = "China Railway İdaresi 12. Bürosuna ait Enshi tünel projesi."
+
+[faq_jump]
+other = "Soruya git"
+[faq_cta_title]
+other = "Aradığınız cevabı bulamadınız mı?"
+[faq_cta_text]
+other = "Bize gücü, gerilimi ve kullanım alanını gönderin; mühendislerimiz bir iş günü içinde yanıt verecek."
+[faq_cta_button]
+other = "Mühendislerimize sorun"
+
+[more_news]
+other = "Daha fazla haber"
+
+[contact_drawing]
+other = "Teknik çizim / şartname referansı (isteğe bağlı)"
+[contact_drawing_hint]
+other = "E-postamıza yanıt verirken bir çizim numarası belirtin veya dosyayı ekleyin — mühendislerimiz teklifi tam olarak çiziminize göre hazırlasın."
+
+[zoom_image]
+other = "Büyütmek için tıklayın"
+[video_facade]
+other = "Videoyu oynat"
+
+[video_title]
+other = "Makinelerimizi izleyin"
+[video_intro]
+other = "Fabrika turu, üretim hattı ve jeneratör seti test videoları. Oynatıcı yalnızca oynat tuşuna bastığınızda yüklenir."
+[video_1]
+other = "Jeneratör setleri ve paketleme"
+[video_2]
+other = "Üretim hattı"
+[video_3]
+other = "Üretim tesisi"
+
+[compare_add]
+other = "Karşılaştırmaya ekle"
+[compare_clear]
+other = "Temizle"
+[compare_open]
+other = "Karşılaştır"
+[compare_models]
+other = "model"
+[compare_open_model]
+other = "Aç"
+[compare_title]
+other = "Model karşılaştırması"
+[compare_power]
+other = "Güç aralığı"
+[compare_freq]
+other = "Frekans"
+[compare_count]
+other = "Modeller"
+[compare_engine]
+other = "Motor"
+[compare_alternator]
+other = "Alternatör"
+[compare_controller]
+other = "Kontrol Cihazı"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Eastern Lion ürün kategorilerini inceleyin: 2 kW'tan 2000 kW'a kadar dizel jeneratör setleri, fırçalı ve fırçasız alternatörler; Çin'de üretilmiştir."
+[seo_tag_desc]
+other = "Fuan Eastern Lion Electric Machines Co., Ltd tarafından konuya göre etiketlenmiş haberler ve ürün güncellemeleri."
+[alt_factory]
+other = "Fujian'ın Fuan şehrindeki Eastern Lion jeneratör fabrikası"
+
+[breadcrumb_here]
+other = "Buradasınız:"
+[footer_about]
+other = "Hakkımızda"
+[spec_genset]
+other = "Jeneratör Seti Teknik Özellikleri"
+[spec_engine]
+other = "Motor"
+[spec_alternator]
+other = "Fırçasız Alternatör"
+[spec_controller]
+other = "Kontrol Cihazı"
+[spec_datasheet]
+other = "Veri Sayfası"
+[spec_detail]
+other = "Detay"
+[col_model]
+other = "Model"
+[col_prime_kw]
+other = "Asıl güç (kW)"
+[col_prime_kva]
+other = "Asıl güç (kVA)"
+[col_standby_kw]
+other = "Yedek güç (kW)"
+[col_standby_kva]
+other = "Yedek güç (kVA)"
+[col_engine_model]
+other = "Motor modeli"
+[col_engine_power]
+other = "Motor gücü (kW)"
+[col_alt_model]
+other = "Alternatör modeli"
+[col_alt_power]
+other = "Alternatör gücü (kW)"
+[col_controller]
+other = "Kontrol Cihazı"
+[col_datasheet]
+other = "Veri Sayfası"
+[col_50hz_kw]
+other = "50 Hz Çıkış (kW)"
+[col_50hz_kva]
+other = "50 Hz Çıkış (kVA)"
+[col_60hz_kw]
+other = "60 Hz Çıkış (kW)"
+[col_60hz_kva]
+other = "60 Hz Çıkış (kVA)"
+[col_sae_size]
+other = "SAE Ölçüsü"
+[col_core_length]
+other = "Çekirdek Uzunluğu (mm)"
+[news_center_title]
+other = "Haber Merkezi"
+
+[finder_eyebrow]
+other = "Güç bulucu"
+[finder_title]
+other = "Yükünüzü hangi model karşılıyor?"
+[finder_text]
+other = "İhtiyacınız olan gücü yazın; bu aralıkta onu taşıyabilecek her modeli motoru, alternatörü ve kontrol cihazıyla birlikte listeleyelim."
+[finder_quick]
+other = "Yaygın yükler"
+[finder_kw]
+other = "Gerekli güç"
+[finder_kw_ph]
+other = "örn. 200"
+[finder_hz]
+other = "Frekans"
+[finder_go]
+other = "Model bul"
+[finder_head]
+other = "{hz} Hz'te {kw} kW'ı karşılayan {n} seri"
+[finder_head_one]
+other = "{hz} Hz'te {kw} kW'ı karşılayan 1 seri"
+[finder_more]
+other = "Bu seride bu yükü karşılayan +{n} model daha var"
+[finder_open]
+other = "Teknik özellik sayfasını aç"
+[finder_inquire]
+other = "Teklif alın"
+[finder_none]
+other = "Bu aralıkta {kw} kW'ı karşılayan model yok."
+[finder_none_closest]
+other = "En yakın model {model} ({kw} kW) — yükü bize söyleyin, mühendislerimiz sizin için boyutlandırsın."
+[finder_none_max]
+other = "Yükü bize gönderin; özel veya paralel çözüm için fiyat teklifi verelim."
+[finder_model_standby]
+other = "yedek güç"
+[finder_model_prime]
+other = "asıl güç"
+[finder_model_output]
+other = "çıkış"
+[finder_more_series]
+other = "{n} seri daha göster"
+
+[search_spec]
+other = "{hz} Hz'te {kw} kW'ı karşılayan modeller"
+[search_spec_none]
+other = "Hiçbir model {kw} kW'ı karşılamıyor — yükünüzü söyleyin, biz boyutlandıralım."
+[search_cover]
+other = "yedek güç"
+[search_standby]
+other = "yedek güç"
+[search_prime]
+other = "asıl güç"
+[search_output]
+other = "çıkış"
+[inquiry_power]
+other = "Gerekli güç"
+[model_nav_label]
+other = "Yakındaki modeller"
+[model_nav_hint]
+other = "Tabloda bir model seçin, yanındaki boyutları görün."
+[model_nav_current]
+other = "geçerli"
+[model_nav_up]
+other = "daha büyük"
+[model_nav_down]
+other = "daha küçük"
+[model_nav_same]
+other = "aynı güç"
+[contact_models]
+other = "Aday modeller"
+[contact_model_add_btn]
+other = "Ekle"
+[inquiry_models]
+other = "Modeller"
+[compare_quote]
+other = "Bu {n} model için fiyat teklifi isteyin"
+
+[spec_series]
+other = "Seri"
+[download_all_title]
+other = "Tüm teknik özellik listeleri tek dosyada"
+[download_all_text]
+other = "Her serinin tüm modelleri; güç değerleri, motoru, alternatörü ve kontrol cihazıyla birlikte — tüm katalog için tek bir csv."
+[download_all_button]
+other = "Tüm teknik özellikleri indir (CSV)"
+[download_file]
+other = "Dosya"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Yazdır / PDF"
+[download_title_link]
+other = "İndirme Merkezi"
+[preview_title]
+other = "Göndermeden önce talebinizi kontrol edin"
+[preview_hint]
+other = "Talebiniz mühendislerimize bu şekilde ulaşacak — metni hâlâ değiştirebilirsiniz."
+[preview_mail]
+other = "E-posta uygulamamda aç"
+[preview_copy]
+other = "Metni kopyala"
+[preview_back]
+other = "Forma dön"
+[preview_copied]
+other = "Panoya kopyalandı."
+[inquiry_salutation]
+other = "Sayın Eastern Lion satış ekibi,"
+[inquiry_interested]
+other = "Aşağıdaki jeneratör setleriyle ilgileniyorum:"
+[inquiry_model]
+other = "Model"
+[inquiry_required_power]
+other = "Gerekli güç"
+[inquiry_drawing]
+other = "Çizim / şartname referansı"
+[inquiry_message]
+other = "Mesaj"
+[inquiry_contact]
+other = "İletişim"
+[inquiry_name]
+other = "Ad Soyad"
+[inquiry_company]
+other = "Firma"
+[inquiry_phone]
+other = "Telefon / WhatsApp"
+[inquiry_email]
+other = "E-posta"
+[inquiry_footer]
+other = "easternlion.cn üzerinden gönderildi"
+[inquiry_subject]
+other = "Jeneratör seti talebi"
+[finder_title_slim]
+other = "Hangi modelin uyduğundan emin değil misiniz?"
+[finder_fold_title]
+other = "Yükümü karşılayan modeli bul"
+[compare_selected]
+other = "seçili"
+[resume_models]
+other = "Az önce baktığınız modeller"
+[resume_continue]
+other = "Talebi sürdür"
+[resume_close]
+other = "Kapat"
+[preview_whatsapp]
+other = "WhatsApp ile gönder"
+[preview_download]
+other = "Talebi indir"
+[contact_send]
+other = "Talep gönder"
+[preview_send]
+other = "Talep gönder"
+[preview_failed]
+other = "Talep otomatik olarak gönderilemedi. Lütfen aşağıdaki seçeneklerden birini kullanın veya sales@easternlion.cn adresine yazın."
+[form_success_receipt]
+other = "Aldığımızı göster"
+[contact_sending]
+other = "Gönderiliyor…"
+[mm_model]
+other = "Model"
+[mm_load]
+other = "Yük (kW)"
+[mm_hz]
+other = "Frekans"
+[contact_models_hint]
+other = "Teklif almamızı istediğiniz her modeli ekleyin — farklıysa her birine kendi gücünü ve frekansını yazın. Mühendislerimiz her biri için fiyat ve teslim süresiyle yanıt verecek."
+[contact_model_add]
+other = "Başka bir model ekleyin (örn. GF/GFS-C200)"
+[service_schema_type]
+other = "Jeneratör seti tedariki, yedek parça ve satış sonrası hizmet"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Öne çıkan teknik özellikler"
+[ks_power]
+other = "Güç aralığı"
+[ks_frequency]
+other = "Frekans"
+[ks_models]
+other = "Modeller"
+[ks_engine]
+other = "Motor"
+[ks_alternator]
+other = "Alternatör"
+[ks_controller]
+other = "Kontrol Cihazı"
+[ks_warranty]
+other = "Garanti"
+[ks_warranty_value]
+other = "1 yıl veya 1000 saat"
+[ks_options]
+other = "Seçenekler"
+[ks_options_value]
+other = "Açık tip, sessiz kabin, treyler, ATS ve paralel sistemler"
+[ks_moq]
+other = "MOQ"
+[ks_moq_value]
+other = "1 set"
+[product_copy_link]
+other = "Bağlantıyı kopyala"
+[product_link_copied]
+other = "Bağlantı kopyalandı"
+[guide_title]
+other = "Bu seri nasıl seçilir"
+[guide_intro]
+other = "Altı karar, neredeyse tüm jeneratör seti siparişlerini kapsar. Her biri nasıl verilir ve bu seri size ne sunar, aşağıda."
+[guide_col_decision]
+other = "Kararınız"
+[guide_col_how]
+other = "Nasıl karar verilir"
+[guide_col_this]
+other = "Bu seri"
+[guide_engine]
+other = "Motor markası"
+[guide_engine_how]
+other = "Motor, yedek parça bulunabilirliğini ve yerli servis ortağınızın yanıt süresini belirler. Önce servis ağını, sonra fiyatı karşılaştırın."
+[guide_engine_none]
+other = "Yalnızca alternatör"
+[guide_engine_count]
+other = "Bu seride %v model"
+[guide_duty]
+other = "Asıl güç (prime) veya yedek güç (standby)"
+[guide_duty_how]
+other = "Asıl güç, günde 8 ila 12 saat çalışan setler içindir; yedek güç ise acil durum yedeği içindir. Seti, yükünüz yedek güç değerinin %70 ila %80'i aralığında kalacak şekilde boyutlandırın — bu, motoru %50 ile %75 yük arasında tutar ve yakıt tüketimi en iyi seviyede kalır."
+[guide_duty_value]
+other = "Yedek güç %v–%v kW, asıl güç %v–%v kW"
+[guide_voltage]
+other = "Gerilim ve frekans"
+[guide_voltage_how]
+other = "Asya, Avrupa, Afrika ve Orta Doğu için 50 Hz'te 400/230 V, Amerika kıtaları için 60 Hz'te 230/400 V. Alternatör ve kontrol paneli de bağlandığınız şebekeye uygun olmalıdır."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Gövde tipi"
+[guide_enclosure_how]
+other = "Makine odası için açık tip, açık alandaki kentsel şantiye için sessiz kabin (7 m'de yaklaşık 65 dB(A)), 1000 kW'lık bloklar için konteyner, hareketli setler için treyler."
+[guide_enclosure_value]
+other = "Açık tip, sessiz kabin, treyler ve konteyner seçenekleri"
+[guide_starting]
+other = "Çalıştırma ve transfer"
+[guide_starting_how]
+other = "Acil durum seti için elektrikli çalıştırma ve otomatik transfer şalteri gerekir; aksi halde set, şebeke arızalanana kadar boşa çalışır. Manuel ve hava ile çalıştırma özel uygulamalar için seçenek olarak sunulur."
+[guide_starting_value]
+other = "Elektrikli çalıştırma, talep üzerine ATS (otomatik ve manuel)"
+[guide_parallel]
+other = "Paralelleme"
+[guide_parallel_how]
+other = "Birden fazla set, bir güç yönetim sistemi, daha büyük bir transfer şalteri ve setlerin yükü paylaşarak birbirinden devralmasını sağlayan bir kontrol paneli gerektirir."
+[guide_parallel_value]
+other = "Güç yöneticili paralel sistemler"
+[guide_environment]
+other = "Saha koşulları"
+[guide_environment_how]
+other = "Her 1000 m rakım ve standart ortam sıcaklığının her 10 °C üstü, yaklaşık %3 güç kaybına yol açar; tuz pusu veya tozlu bir saha için kabin ve daha kısa servis aralığı gerekir."
+[guide_environment_value]
+other = "0–50 °C arasında standart güç, talep üzerine güç düşürme"
+[guide_foot]
+other = "Yükü, gerilimi ve sahayı bize gönderin; biz de size tam modeli, fiyatı ve teslim süresini iletelim."
+[wa_from]
+other = "easternlion.cn'den gelen talep"
+[wa_series]
+other = "Seri"
+[wa_model]
+other = "Model"
+[wa_power]
+other = "Gerekli güç"
+[wa_standby]
+other = "Yedek güç değeri"
+[wa_link]
+other = "Bağlantı"
+[search_guide]
+other = "Nasıl seçilir"
+[search_guide_more]
+other = "Tam kılavuzu okuyun"
+[search_compare]
+other = "Karşılaştır"
+[search_models]
+other = "model"
+[inquiry_ref_label]
+other = "Talep referans numaranız:"
+[form_success_whatsapp]
+other = "Daha hızlı mı istiyorsunuz? Bize şunun üzerinden yazın:"
+[app_eyebrow]
+other = "Uygulamalar"
+[app_index_title]
+other = "Uygulamaya göre jeneratör setleri"
+[app_index_text]
+other = "Setin yapacağı işten başlayın. Her uygulama sayfası ihtiyacınız olan gücü, bu gücü karşılayan yedek güç modellerini, sahada önemli teknik noktaları ve bu iş için ürettiğimiz modelleri gösterir."
+[app_sizing_title]
+other = "Set nasıl boyutlandırılır"
+[app_sizing_text]
+other = "Yedek güç görevinde set, bağlı tüm yükü çalıştırma akımıyla birlikte taşımalıdır; bu nedenle seti çalışır yükün üzerinde boyutlandırırız. Aşağıdaki tablo, bu uygulamanın her tipik yükü için gerçek modellerin yedek güç değerlerini listeler."
+[app_sizing_load]
+other = "Tipik yük"
+[app_sizing_standby]
+other = "Bakılması gereken yedek güç"
+[app_sizing_models]
+other = "Bunu karşılayan modeller"
+[app_sizing_note]
+other = "Güç değerleri ISO 8528'e uygundur. Nihai model; gerilime, yakıt özerkliğine, gövde tipine ve ortam sıcaklığına bağlıdır - yükü bize gönderin, yazılı olarak teyit edelim."
+[app_sizing_oversize]
+other = "2000 kW üzeri çözüm için bize danışın"
+[app_requirements_title]
+other = "Bu uygulamanın ihtiyacı"
+[app_series_title]
+other = "Bu iş için kullanılan seriler"
+[app_model_word]
+other = "model"
+[app_faq_title]
+other = "Alıcıların bu uygulama hakkında sorduğu sorular"
+[app_fact_load]
+other = "Güç aralığı"
+[app_fact_duty]
+other = "Görev tipi"
+[app_fact_duty_value]
+other = "Yedek güç"
+[app_fact_hz]
+other = "Frekans"
+[app_fact_engine]
+other = "Motorlar"
+[app_cta_title]
+other = "Yükü ve sahayı bize anlatın"
+[app_cta_text]
+other = "Çalışır yükü, gerilimi ve setin çalışacağı yeri gönderin. Mühendislerimiz modeli, yerleşimi ve fiyatı bir iş günü içinde yanıtlar."
+[app_cta_button]
+other = "Fiyat teklifi isteyin"
+[app_wa_text]
+other = "Talep: %s jeneratör seti"
+[app_other_title]
+other = "Diğer uygulamalar"
+[datasheet_sub]
+other = "Jeneratör seti teknik özellik formu"
+[datasheet_print]
+other = "Yazdır veya PDF olarak kaydet"
+[datasheet_back]
+other = "Seriye dön"
+[datasheet_contact]
+other = "Talebiniz"
+[datasheet_note]
+other = "Not"
+[datasheet_note_text]
+other = "Güç değerleri ISO 8528'e uygundur. Nihai konfigürasyon; gerilime, yakıt özerkliğine, gövde tipine ve ortam sıcaklığına bağlıdır."
+[download_datasheet]
+other = "Veri Sayfası"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Bunu karşılayan modeller:"
+[mm_no_cover]
+other = "Katalogda o yükü karşılayan model yok."
+[mm_picked]
+other = "zaten seçildi"
+[ui_close]
+other = "Kapat"
+[ui_remove]
+other = "Kaldır"
+[lang_label]
+other = "Dili değiştir"
+[nav_menu]
+other = "Menü"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "S"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v ve %[2]v"
+[kind_genset]
+other = "dizel jeneratör seti"
+[kind_alternator]
+other = "alternatör"
+[app_summary_tpl]
+other = "%[1]s için ihtiyacınız olan yedek güç dizel jeneratör seti %[2]v ila %[3]v kW arasında değişir; Eastern Lion bu setleri %[4]s motorlarıyla %[5]s Hz frekansta açık tip, sessiz kabin, treyler, ATS ve paralel konfigürasyonlarda üretir ve her set sevkiyat öncesi tam yük testinden geçirilir."
+[guide_sum_engine]
+other = "%[1]s, Eastern Lion'ın %[2]v Hz frekansta, %[3]s motoru üzerine kurulu dizel jeneratör seti serisidir; seri, %[4]v ila %[5]v kW aralığını %[6]d model ile kapsar. Kullanım alanı: %[7]s."
+[guide_sum_plain]
+other = "%[1]s, Eastern Lion'ın %[2]v Hz frekanstaki %[3]s serisidir ve seri, %[4]v ila %[5]v kW aralığını %[6]d model ile kapsar; bu modeller %[7]s için tedarik edilir."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "tam site metni"
+[llms_intro]
+other = '''Marka: Eastern Lion (福建东方电机). Site: %[1]s
+1987'de Fujian'ın Fuan şehrinde kuruldu. Dizel jeneratör setleri, fırçalı ve fırçasız
+alternatör üreticisi; 2 kW'tan 2000 kW'a kadar, 50 Hz ve 60 Hz. Kendi atölyeleri: alternatör
+üretimi, jeneratör seti montajı, tam yük testi. Yılda yaklaşık 15.000 alternatör ve 2.000
+jeneratör seti. Çin'de 35 satış ve servis merkezi. Rusya, Endonezya, Filipinler,
+Güney Afrika, Pakistan, Birleşik Krallık ve diğer pazarlara ihracat.
+
+İletişim: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Fabrika: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Uluslararası ofis: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (marka: Eastern Lion, 福建东方电机), dizel
+> jeneratör setleri, fırçalı alternatörler ve fırçasız alternatörler üreten Çinli bir üreticidir;
+> 1987 yılında Fujian'ın Fuan şehrinde kurulmuştur. Alternatörleri ve komple jeneratör setlerini
+> kendi atölyelerinde üretir, sevkiyat öncesi her makineyi yük testinden geçirir ve tüm dünyaya
+> satar — 2 kW'tan 2000 kW'a kadar, 50 Hz ve 60 Hz; Cummins, Perkins, Yuchai, YTO, Weichai,
+> Kofo, Huachai, Longxin, Lovol, Woling, Yangdong, Yunnei, Yuxing ve Kaixun motor seçenekleriyle.
+
+## Bu site nedir
+
+- 44 ürün serisi; her biri eksiksiz bir teknik özellik tablosu (model, asıl ve yedek güç,
+  motor, alternatör, kontrol cihazı) ve indirilebilir bir csv ile
+- Güç bulucu, kW cinsinden verilen yükü onu karşılayan her modelle eşleştirir
+- Karşılaştırma aracı, dört seriye kadar seriyi yan yana gösterir
+- Her teknik özellik listesi /tr/download/ adresinden csv olarak indirilebilir
+
+## Temel bilgiler
+
+| | |
+| --- | --- |
+| Kuruluş | 1987 (Hanyang elektrik fabrikası, Fuan) |
+| Ürün gamı | 2 kW'tan 2000 kW'a kadar, 50 Hz ve 60 Hz |
+| Alternatör kapasitesi | yılda yaklaşık 15.000 alternatör |
+| Jeneratör seti kapasitesi | yılda yaklaşık 2.000 jeneratör seti |
+| Servis ağı | Çin'de 35 satış ve servis merkezi |
+| Pazarlar | Çin ve ayrıca Rusya, Endonezya, Filipinler, Güney Afrika, Pakistan, Birleşik Krallık ile diğer ülkelere ihracat |
+| Fabrika | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Uluslararası ofis | Fuzhou, Fujian, China |
+| Telefon | +86-13950513258 |
+| E-posta | sales@easternlion.cn (servis: service@easternlion.cn) |
+
+## Ürün aileleri
+
+- Dizel jeneratör setleri — /tr/products/diesel-generator-set/ (15 motor serisi, 50 Hz)
+- 60 Hz jeneratör setleri — /tr/products/60hz-diesel-generator-set/ (Amerika ve Asya'nın bazı bölgeleri için 6 seri)
+- Fırçalı alternatörler — /tr/products/brush-alternator/ (STC serisi, 8 kW'tan 500 kW'a)
+- Fırçasız alternatörler — /tr/products/brushless-alternator/ (EL serisi, SAE bağlantısı)
+
+## Uygulamalar
+
+- Uygulamaya göre jeneratör setleri — /tr/applications/ (ihtiyacınız olan güç, onu karşılayan modeller ve siparişi belirleyen teknik noktalar)
+- Veri merkezleri — /tr/applications/data-centre/
+- Hastaneler — /tr/applications/hospital/
+- Telekom istasyonları — /tr/applications/telecom/
+- Maden ve taş ocağı sahaları — /tr/applications/mining/
+- Oteller ve tatil köyleri — /tr/applications/hotel/
+- Şantiyeler — /tr/applications/construction/
+
+## Şirket
+
+- Firma profili — /tr/about/
+- Gelişim tarihi — /tr/about/history/
+- Ekibimiz — /tr/about/team/
+- Belgeler ve sertifikalar — /tr/about/qualification/
+- Atölyemiz — /tr/about/workshop/
+- Satış sonrası hizmet — /tr/service/
+- Fabrika videoları — /tr/video/
+- Sıkça sorulan sorular — /tr/faq/
+- Haberler — /tr/news/
+- İletişim — /tr/contact/
+
+## İndirmeler
+
+- Her teknik özellik listesinin csv olarak bulunduğu indirme merkezi — /tr/download/
+- Tüm serilerin tüm modelleri tek dosyada — /tr/download/all-specs.csv
+- Dil modelleri için bu sitenin tam metni — /tr/llms-full.txt
+
+## Bize nasıl ulaşılır
+
+Satış talepleri: sales@easternlion.cn — yapılandırılmış bir talep (model, yük, frekans, çizim
+referansı) bir iş günü içinde yanıtlanır. /tr/contact/ adresindeki iletişim formu, talebi doğrudan
+satış gelen kutusuna gönderir ve ikinci kanal olarak WhatsApp'ı sunar.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Ürünler"
+[llms_power_line]
+other = "Güç aralığı: %[1]v ila %[2]v kW. Frekans: %[3]v Hz. Tip: %[4]v. Seri URL'si: %[5]s"
+[llms_csv_line]
+other = "Teknik özellik listesi (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Uygulamalar"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Bir seri nasıl seçilir"
+[llms_choose_text]
+other = '''Her jeneratör seti siparişi altı karara iner: motor markası (yedek parçayı ve servis
+ortağınızın yanıt süresini belirler), asıl güç veya yedek güç görevi (asıl güç günde 8 ila 12
+saat çalışır, yedek güç acil durum yedeğidir; seti, yük yedek güç değerinin %70 ila %80'i
+aralığında kalacak şekilde boyutlandırın), gerilim ve frekans (50 Hz'te 400/230 V, 60 Hz'te
+230/400 V), gövde tipi (açık tip, sessiz kabin, konteyner, treyler), çalıştırma ve transfer
+(yedek güç setleri için elektrikli çalıştırma ve otomatik transfer şalteri) ve paralelleme
+(birden fazla set, bir güç yönetim sistemi gerektirir). Saha koşulları da önemlidir: her 1000 m
+rakım ve standart ortam sıcaklığının her 10 °C üstü, yaklaşık %3 güç kaybına yol açar.
+
+Garanti: 1 yıl veya 1000 saat. Minimum sipariş: 1 set. Gövde seçenekleri: açık tip, sessiz
+kabin, treyler ve konteyner. Çalıştırma: elektrikli, talep üzerine ATS. Güç yöneticili paralel
+sistemler mevcuttur.'''
+[llms_faq_h]
+other = "Sıkça sorulan sorular"
+[llms_service_h]
+other = "Servis ve şirket"
+[llms_contact_line]
+other = "İletişim: sales@easternlion.cn — talepler bir iş günü içinde yanıtlanır."

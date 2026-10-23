@@ -412,10 +412,10 @@
       "g": 48,
       "p": 1111,
       "h": 50,
-      "n": 0,
-      "e": "—",
+      "n": 52,
+      "e": "WD129TAD23/1500",
       "a": "—",
-      "c": "—",
+      "c": "Smartgen 6120",
       "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
     }
   ],

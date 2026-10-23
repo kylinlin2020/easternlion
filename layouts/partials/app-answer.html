@@ -8,7 +8,6 @@
 {{- $models := $page.Scratch.Get "appModels" -}}
 {{- $loads := $page.Params.loads | default (slice) -}}
 {{- $factor := $page.Params.factor | default 1.1 -}}
-{{- $zh := eq site.Language.Lang "zh" -}}
 
 {{- $min := 0 }}{{ $max := 0 -}}
 {{- if $loads -}}
@@ -29,18 +28,17 @@
     {{- end -}}
   {{- end -}}
   {{- if gt $n 0 -}}
-    {{- $engine := "" -}}
     {{- $t := .t -}}
-    {{- if in (lower $t) " by " -}}
-      {{- $words := split $t " " -}}
-      {{- range $i, $w := $words -}}
-        {{- if eq (lower $w) "by" -}}
-          {{- if lt (add $i 1) (len $words) -}}{{- $engine = index $words (add $i 1) -}}{{- end -}}
+    {{- $engine := partial "engine-brand.html" $t -}}
+    {{- if not $engine -}}
+      {{- if in (lower $t) " by " -}}
+        {{- $words := split $t " " -}}
+        {{- range $i, $w := $words -}}
+          {{- if eq (lower $w) "by" -}}
+            {{- if lt (add $i 1) (len $words) -}}{{- $engine = index $words (add $i 1) -}}{{- end -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
-    {{- else -}}
-      {{- $engine = replaceRE "^[0-9]+HZ\\s*" $t "" -}}
-      {{- $engine = replaceRE "\\s*(发动机)?系列.*$" $engine "" -}}
     {{- end -}}
     {{- $fit = $fit | append (dict "engine" $engine "n" $n "t" .t "u" .u "hz" .hz "min" .min "max" .max) -}}
   {{- end -}}
@@ -60,27 +58,22 @@
 {{- end -}}
 {{- $seen = "" -}}
 {{- range $fit -}}
-  {{- if and (lt (len $names) 3) (not (strings.Contains $seen (printf "|%s|" .engine))) -}}
+  {{- if and (lt (len $names) 3) (ne .engine "") (not (strings.Contains $seen (printf "|%s|" .engine))) -}}
     {{- $seen = printf "%s|%s|" $seen .engine -}}
     {{- $names = $names | append .engine -}}
   {{- end -}}
 {{- end -}}
 {{- $names = $names | first 3 -}}
-{{- $engines := delimit $names (cond $zh "、" ", ") -}}
+{{- $engines := delimit $names (i18n "list_sep") -}}
 {{- $hzText := "" -}}
 {{- if eq (len $hzList) 1 -}}
   {{- $hzText = printf "%v" (index $hzList 0) -}}
 {{- else if gt (len $hzList) 1 -}}
-  {{- $hzText = printf "%v and %v" (index $hzList 0) (index $hzList 1) -}}
+  {{- $hzText = printf (i18n "and_pair") (index $hzList 0) (index $hzList 1) -}}
 {{- end -}}
 
-{{- $summary := "" -}}
 {{- $name := $page.Params.app_name | default $page.Title -}}
-{{- if $zh -}}
-  {{- $summary = printf "对于%[1]s，建议选用%[2]v到%[3]v kW的备用柴油发电机组；东方电机采用%[4]s发动机生产%[5]s Hz机型，可提供开式、静音罩壳、拖车、ATS与并联方案，出厂前每台机组均进行满载测试。" $name $lo $hi $engines $hzText -}}
-{{- else -}}
-  {{- $summary = printf "For %[1]s the standby diesel generator set you need runs from %[2]v to %[3]v kW; Eastern Lion builds these sets around the %[4]s engines in %[5]s Hz, in open frame, silent canopy, trailer, ATS and parallel configurations, and every set is tested at full load before shipment." $name $lo $hi $engines $hzText -}}
-{{- end -}}
+{{- $summary := printf (i18n "app_summary_tpl") $name $lo $hi $engines $hzText -}}
 
 {{- $page.Scratch.Set "appSummary" $summary -}}
 {{- $page.Scratch.Set "appRange" (dict "min" $lo "max" $hi "engines" $engines "hz" $hzText) -}}

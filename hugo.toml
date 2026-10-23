@@ -14,16 +14,18 @@ timeZone             = "Asia/Shanghai"
 capitalizeListTitles = false
 
 # ---------------------------------------------------------------
-#  Languages
-#  The site currently ships English only. To publish a Chinese
-#  version later: create content.zh/ (copy of content/ with translated
-#  markdown), uncomment the [languages.zh] block below and add
-#  "defaultContentLanguage = 'en'" (already set).
+#  Languages — twelve in total. Every language needs:
+#    * its own [languages.<lang>] block (name, languageCode, weight,
+#      contentDir; languageDirection = "rtl" for arabic/persian)
+#    * content.<lang>/  — translated markdown, mirror of content/
+#    * i18n/<lang>.toml — translated UI strings, mirror of i18n/en.toml
+#    * a flag in layouts/partials/flag.html (key = language code)
 #  The UI strings live in i18n/en.toml and i18n/zh.toml.
 # ---------------------------------------------------------------
 [languages]
   [languages.en]
     languageName = "English"
+    languageCode = "en-US"
     weight = 1
     contentDir = "content"
     [languages.en.params]
@@ -31,6 +33,7 @@ capitalizeListTitles = false
 
   [languages.zh]
     languageName = "简体中文"
+    languageCode = "zh-CN"
     weight = 2
     contentDir = "content.zh"
     [languages.zh.params]
@@ -39,6 +42,98 @@ capitalizeListTitles = false
       address     = "中国福建省福安市坂中工业区下洋36号"
       officeAddress = "中国福建省福州市台江区洋中街道东洋中路融信洋中城2号楼4层23室办公室"
       description = "福建东方电机股份有限公司是著名的中国发电机和柴油发电机组专业生产厂家，拥有 30 多年发展历史，产品涵盖 2-2000kW 柴油发电机组、有刷发电机与无刷交流发电机，出口全球 40 多个国家和地区。"
+
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru-RU"
+    weight = 3
+    contentDir = "content.ru"
+    [languages.ru.params]
+      languageNameInNav = "Русский"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd — профессиональный производитель дизель-генераторных установок и альтернаторов с более чем 30-летним опытом, экспорт более чем в 40 стран."
+
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es-ES"
+    weight = 4
+    contentDir = "content.es"
+    [languages.es.params]
+      languageNameInNav = "Español"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd es un fabricante profesional de grupos electrógenos y alternadores, con más de 30 años de experiencia y exportación a más de 40 países."
+
+  [languages.pt]
+    languageName = "Português"
+    languageCode = "pt-BR"
+    weight = 5
+    contentDir = "content.pt"
+    [languages.pt.params]
+      languageNameInNav = "Português"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd é um fabricante profissional de geradores diesel e alternadores, com mais de 30 anos de experiência e exportação para mais de 40 países."
+
+  [languages.ar]
+    languageName = "العربية"
+    languageCode = "ar"
+    languageDirection = "rtl"
+    weight = 6
+    contentDir = "content.ar"
+    [languages.ar.params]
+      languageNameInNav = "العربية"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd مصنع محترف لمولدات الطاقة بالديزل والمولدات المتزامنة، بخبرة تزيد عن 30 عامًا وتصدير إلى أكثر من 40 دولة."
+
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr-FR"
+    weight = 7
+    contentDir = "content.fr"
+    [languages.fr.params]
+      languageNameInNav = "Français"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd est un fabricant professionnel de groupes électrogènes et d'alternateurs, avec plus de 30 ans d'expérience et des exportations vers plus de 40 pays."
+
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-TR"
+    weight = 8
+    contentDir = "content.tr"
+    [languages.tr.params]
+      languageNameInNav = "Türkçe"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd; 30 yılı aşan tecrübesi ve 40'tan fazla ülkeye ihracatıyla jeneratör ve alternatör üreticisidir."
+
+  [languages.id]
+    languageName = "Bahasa Indonesia"
+    languageCode = "id-ID"
+    weight = 9
+    contentDir = "content.id"
+    [languages.id.params]
+      languageNameInNav = "Bahasa Indonesia"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd adalah produsen genset dan alternator profesional dengan pengalaman lebih dari 30 tahun dan ekspor ke lebih dari 40 negara."
+
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    languageCode = "vi-VN"
+    weight = 10
+    contentDir = "content.vi"
+    [languages.vi.params]
+      languageNameInNav = "Tiếng Việt"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd là nhà sản xuất máy phát điện diesel và alternator chuyên nghiệp, với hơn 30 năm kinh nghiệm và xuất khẩu sang hơn 40 quốc gia."
+
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    weight = 11
+    contentDir = "content.de"
+    [languages.de.params]
+      languageNameInNav = "Deutsch"
+      description = "Fuan Eastern Lion Electric Machines Co., Ltd ist ein professioneller Hersteller von Diesel-Generatorsets und Alternatoren mit über 30 Jahren Erfahrung und Export in über 40 Länder."
+
+  [languages.fa]
+    languageName = "فارسی"
+    languageCode = "fa-IR"
+    languageDirection = "rtl"
+    weight = 12
+    contentDir = "content.fa"
+    [languages.fa.params]
+      languageNameInNav = "فارسی"
+      description = "شرکت Fuan Eastern Lion Electric Machines Co., Ltd تولیدکننده حرفه‌ای ژنراتورهای دیزلی و آلترناتور با بیش از 30 سال تجربه و صادرات به بیش از 40 کشور است."
 
 [params]
   company       = "Fuan Eastern Lion Electric Machines Co., Ltd"

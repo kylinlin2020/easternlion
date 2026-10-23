@@ -1,0 +1,988 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "الرئيسية"
+[nav_products]
+other = "المنتجات"
+[nav_company]
+other = "نبذة عن الشركة"
+[nav_service]
+other = "الخدمات"
+[nav_video]
+other = "الفيديو"
+[nav_faq]
+other = "الأسئلة الشائعة"
+[nav_contact]
+other = "اتصل بنا"
+
+[menu_company_profile]
+other = "نبذة عن الشركة"
+[menu_history]
+other = "تاريخ التطوّر"
+[menu_team]
+other = "فريقنا"
+[menu_qualification]
+other = "المؤهلات"
+[menu_news]
+other = "مركز الأخبار"
+[menu_workshop]
+other = "ورشة الإنتاج"
+
+[about_us]
+other = "من نحن"
+[product_center]
+other = "مركز المنتجات"
+[product_category]
+other = "فئات المنتجات"
+
+[footer_quick_links]
+other = "روابط سريعة"
+[footer_company_profile]
+other = "نبذة عن الشركة"
+[footer_product_category]
+other = "فئات المنتجات"
+[footer_golden_supplier]
+other = "المورّد الذهبي في الصين"
+[footer_tel]
+other = "الهاتف"
+[footer_email]
+other = "البريد الإلكتروني"
+[footer_web]
+other = "الموقع الإلكتروني"
+[footer_copyright]
+other = "حقوق النشر © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. جميع الحقوق محفوظة."
+
+[float_telephone]
+other = "الهاتف"
+[float_email]
+other = "البريد الإلكتروني"
+[float_message]
+other = "اترك رسالة"
+
+[search_placeholder]
+other = "أدخل كلمة البحث"
+[language_label]
+other = "العربية"
+
+[product_availability]
+other = "التوفر"
+[product_quantity]
+other = "الكمية"
+[product_in_stock]
+other = "متوفر في المخزون"
+[product_inquire]
+other = "اطلب عرض سعر"
+[product_add_basket]
+other = "محادثة على WhatsApp"
+[product_description]
+other = "وصف المنتج"
+[product_share]
+other = "شارك على:"
+[product_category_label]
+other = "الفئة"
+[product_rating_note]
+other = "القديرات إرشادية. يُرجى التواصل معنا للحصول على أحدث ورقة بيانات وتأكيد التوفر."
+
+[contact_get_in_touch]
+other = "تواصل معنا"
+[contact_intl]
+other = "القسم الدولي"
+[contact_manufacturer]
+other = "الشركة المصنّعة"
+[contact_more_info]
+other = "تواصل معنا لمزيد من المعلومات."
+[contact_name]
+other = "اسمك *"
+[contact_email]
+other = "بريدك الإلكتروني *"
+[contact_phone]
+other = "الهاتف / WhatsApp"
+[contact_company]
+other = "الشركة"
+[contact_product]
+other = "المنتج الذي يهمّك"
+[contact_message]
+other = "رسالتك *"
+[contact_submit]
+other = "اتصل بنا"
+
+[news_views]
+other = "المشاهدات"
+[news_author]
+other = "الكاتب"
+[news_publish_time]
+other = "وقت النشر"
+[news_origin]
+other = "المصدر"
+[news_site]
+other = "الموقع"
+[news_sidebar_title]
+other = "الأخبار"
+[news_back]
+other = "العودة إلى الأخبار"
+[news_read_more]
+other = "اقرأ المزيد"
+
+[search_results]
+other = "نتائج البحث عن"
+[not_found]
+other = "الصفحة غير موجودة"
+[not_found_text]
+other = "قد تكون الصفحة التي تبحث عنها قد نُقلت أو لم تعد موجودة."
+[back_home]
+other = "العودة إلى الرئيسية"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "مولد تبادلي بمفرشات"
+[cat_brushless_alternator]
+other = "مولد تبادلي بدون مفرشات"
+[cat_diesel_generator_set]
+other = "مجموعة مولدات ديزل"
+[cat_50hz_diesel_generator_set]
+other = "مجموعة مولدات ديزل 50HZ"
+[cat_60hz_diesel_generator_set]
+other = "مجموعة مولدات ديزل 60HZ"
+[cat_engine_cummins]
+other = "سلسلة بمحرك Cummins"
+[cat_engine_cummins_2]
+other = "محرك Cummins"
+[cat_engine_huachai]
+other = "سلسلة بمحرك Huachai"
+[cat_engine_kofo]
+other = "سلسلة بمحرك Kofo"
+[cat_engine_longxin]
+other = "سلسلة بمحرك Longxin"
+[cat_engine_lovol]
+other = "سلسلة بمحرك Lovol"
+[cat_engine_perkins]
+other = "سلسلة بمحرك Perkins"
+[cat_engine_woling]
+other = "سلسلة بمحرك Woling"
+[cat_engine_wuxi]
+other = "سلسلة بمحرك Wuxi"
+[cat_engine_yangdong]
+other = "سلسلة بمحرك Yangdong"
+[cat_engine_yto]
+other = "سلسلة بمحرك Yto"
+[cat_engine_yuchai]
+other = "سلسلة بمحرك Yuchai"
+[cat_engine_yunnei]
+other = "سلسلة بمحرك Yunnei"
+[cat_engine_yuxing]
+other = "سلسلة بمحرك Yuxing"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "اطلب عرض سعر"
+[topbar_hours]
+other = "الاثنين – السبت 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "هل تحتاج إلى مجموعة مولدات لمشروعك؟"
+[cta_text]
+other = "أخبرنا بالقدرة والجهد والتطبيق — وسيردّ مهندسونا خلال يوم عمل واحد."
+[cta_button]
+other = "أرسل استفساراً"
+[hero_cta_products]
+other = "استكشف المنتجات"
+[hero_cta_quote]
+other = "اطلب عرض سعر"
+[view_details]
+other = "عرض التفاصيل"
+[why_us]
+other = "لماذا Eastern Lion"
+[why_us_title]
+other = "أكثر من 30 عاماً في صناعة مولدات تواصل العمل"
+[why_us_text]
+other = "من لفّ العضو الساكن إلى اختبار الحمل الكامل، تُجمَّع كل وحدة وتُختبَر في ورشنا الخاصة في Fujian وJiangsu."
+
+[product_center_eyebrow]
+other = "ما نصنعه"
+[hero_cta_note]
+other = "الرد خلال يوم عمل واحد"
+
+[filter_type]
+other = "النوع"
+[filter_power]
+other = "القدرة"
+[filter_hz]
+other = "التردد"
+[filter_all]
+other = "الكل"
+[filter_alternator]
+other = "المولدات التبادلية"
+[filter_genset]
+other = "مجموعات المولدات"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "موديل"
+[filter_empty]
+other = "لا يوجد موديل يطابق هذه المرشحات — يُرجى التواصل معنا للقدرات الأخرى."
+[products_coming_soon]
+other = "يجرى تحديث تشكيلة المنتجات. يُرجى التواصل معنا للحصول على الكتالوج الكامل."
+
+[related_title]
+other = "موديلات ذات صلة"
+[inquiry_title]
+other = "هل تحتاج إلى عرض سعر؟"
+[inquiry_text]
+other = "أرسل لنا القدرة والجهد والتطبيق — وسيردّ مهندسونا خلال يوم عمل واحد."
+[inquiry_button]
+other = "اطلب عرض سعر"
+[inquiry_whatsapp]
+other = "محادثة على WhatsApp"
+
+[search_empty]
+other = "لا توجد صفحة مطابقة. جرّب اسم موديل أو ماركة محرك أو نطاق قدرة."
+[search_loading]
+other = "جارٍ البحث…"
+[search_all]
+other = "عرض كل المنتجات"
+
+[form_required]
+other = "يُرجى إكمال الحقول المميّزة."
+[form_name_required]
+other = "يُرجى إدخال اسمك."
+[form_email]
+other = "يُرجى إدخال عنوان بريد إلكتروني صالح."
+[form_message_required]
+other = "يُرجى إخبارنا بما تحتاجه."
+[form_success_title]
+other = "شكراً لك، تم إرسال استفسارك"
+[form_success_text]
+other = "استلم مهندس المبيعات لدينا استفسارك وسيردّ خلال يوم عمل واحد. وقد أُرسل بريد تأكيد يتضمّن رقم استفسارك إلى صندوق بريدك."
+[form_again]
+other = "اكتب استفساراً آخر"
+
+
+[latest_news]
+other = "أحدث الأخبار"
+
+[spec_at_a_glance]
+other = "المواصفات بإيجاز"
+[spec_category]
+other = "الفئة"
+[spec_type]
+other = "النوع"
+[spec_frequency]
+other = "التردد"
+[spec_power]
+other = "نطاق القدرة"
+[spec_models]
+other = "الموديلات"
+[spec_note]
+other = "نطاقات القدرة مأخوذة من جداول القدرة القياسية 50 / 60 Hz في كل صفحة منتج. وتتوفر جهود وقدرات أخرى عند الطلب."
+
+[skip_to_content]
+other = "تخطَّ إلى المحتوى"
+
+[search_button]
+other = "بحث"
+[pager]
+other = "موديلات أخرى"
+[pager_prev]
+other = "السابق"
+[pager_next]
+other = "التالي"
+
+[search_model]
+other = "الموديل"
+
+[jump_to_model]
+other = "الانتقال إلى موديل"
+
+[alt_workshop]
+other = "إنتاج المولدات التبادلية في Eastern Lion"
+[alt_products]
+other = "المولدات التبادلية بدون مفرشات من Eastern Lion"
+[alt_packing]
+other = "التغليف والاختبار في Eastern Lion"
+
+[search_cats]
+other = "الفئات"
+[coverage_title]
+other = "أي سلسلة تغطي أي نطاق قدرة؟"
+[footer_qr]
+other = "امسح الرمز للتواصل مع فريق المبيعات"
+
+[service_process]
+other = "كيف نعمل معك"
+[step1_title]
+other = "المتطلبات"
+[step1_text]
+other = "أخبرنا بالقدرة والجهد والتردد والتطبيق — أو أرسل لنا موديلاً من تشكيلتنا."
+[step2_title]
+other = "الحل وعرض السعر"
+[step2_text]
+other = "يختار مهندسونا المحرك والمولد التبادلي ووحدة التحكم، ثم يرسلون عرض سعر كاملاً مع مدة التسليم."
+[step3_title]
+other = "الإنتاج والاختبار"
+[step3_text]
+other = "تُجمَّع الوحدة في ورشتنا الخاصة وتُختبَر بحمل كامل قبل مغادرتها المصنع."
+[step4_title]
+other = "التسليم والدعم"
+[step4_text]
+other = "الشحن البحري أو الجوي، وإرشادات التشغيل، وقطع الغيار، ودعم فني مدى الحياة."
+[applications]
+other = "التطبيقات"
+[app1_alt]
+other = "مجموعات مولدات Eastern Lion"
+[app2_alt]
+other = "التغليف والتصدير في Eastern Lion"
+[app3_alt]
+other = "قاعدة الإنتاج في Eastern Lion"
+
+[app1_title]
+other = "التطبيقات 1"
+[app1_text]
+other = "مثال على تطبيق محلي: مشروع نفق Enshi التابع للمكتب الثاني عشر للسكك الحديدية الصينية، ومشروع جسر نهر Yangtze التابع للمكتب الثالث عشر للسكك الحديدية الصينية، ومصلحة الضرائب الوطنية في Hubei، ومستشفى Wuhan Tongji، ومدرسة Zhejiang Wenzhou الإعدادية الثالثة، وشقق Zhejiang lingkun"
+[app2_title]
+other = "التطبيقات 2"
+[app2_text]
+other = "مشروع جسر الطريق السريع على نهر Yangtze في Hubei التابع للمكتب الثالث عشر للسكك الحديدية الصينية."
+[app3_title]
+other = "التطبيقات 3"
+[app3_text]
+other = "مشروع نفق Enshi التابع للمكتب الثاني عشر للسكك الحديدية الصينية."
+
+[faq_jump]
+other = "الانتقال إلى سؤال"
+[faq_cta_title]
+other = "لم تجد الإجابة؟"
+[faq_cta_text]
+other = "أرسل لنا القدرة والجهد والتطبيق وسيردّ مهندسونا خلال يوم عمل واحد."
+[faq_cta_button]
+other = "اسأل مهندسينا"
+
+[more_news]
+other = "المزيد من الأخبار"
+
+[contact_drawing]
+other = "مرجع الرسم / المواصفات (اختياري)"
+[contact_drawing_hint]
+other = "اذكر رقم رسم أو أرفق الملف عند الرد على بريدنا الإلكتروني — حينها يسعّر مهندسونا وفق رسمك تماماً."
+
+[zoom_image]
+other = "انقر للتكبير"
+[video_facade]
+other = "تشغيل الفيديو"
+
+[video_title]
+other = "شاهد ماكيناتنا"
+[video_intro]
+other = "جولة في المصنع، وخط الإنتاج، وفيديوهات اختبار مجموعات المولدات. لا يُحمَّل المشغّل إلا عند الضغط على تشغيل."
+[video_1]
+other = "مجموعات المولدات والتغليف"
+[video_2]
+other = "خط الإنتاج"
+[video_3]
+other = "قاعدة الإنتاج"
+
+[compare_add]
+other = "أضف إلى المقارنة"
+[compare_clear]
+other = "مسح"
+[compare_open]
+other = "قارن"
+[compare_models]
+other = "موديل"
+[compare_open_model]
+other = "فتح"
+[compare_title]
+other = "مقارنة الموديلات"
+[compare_power]
+other = "نطاق القدرة"
+[compare_freq]
+other = "التردد"
+[compare_count]
+other = "الموديلات"
+[compare_engine]
+other = "المحرك"
+[compare_alternator]
+other = "المولد التبادلي"
+[compare_controller]
+other = "وحدة التحكم"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "تصفّح فئات منتجات Eastern Lion: مجموعات مولدات ديزل، ومولدات تبادلية بمفرشات، ومولدات تبادلية بدون مفرشات من 2 kW إلى 2000 kW، صناعة صينية."
+[seo_tag_desc]
+other = "أخبار وتحديثات منتجات من Fuan Eastern Lion Electric Machines Co., Ltd، مصنّفة حسب الموضوع."
+[alt_factory]
+other = "مصنع مولدات Eastern Lion في Fuan، Fujian"
+
+[breadcrumb_here]
+other = "أنت هنا:"
+[footer_about]
+other = "من نحن"
+[spec_genset]
+other = "مواصفات مجموعة المولدات"
+[spec_engine]
+other = "المحرك"
+[spec_alternator]
+other = "المولد التبادلي بدون مفرشات"
+[spec_controller]
+other = "وحدة التحكم"
+[spec_datasheet]
+other = "ورقة البيانات"
+[spec_detail]
+other = "التفاصيل"
+[col_model]
+other = "الموديل"
+[col_prime_kw]
+other = "القدرة الأساسية (kW)"
+[col_prime_kva]
+other = "القدرة الأساسية (kVA)"
+[col_standby_kw]
+other = "القدرة الاحتياطية (kW)"
+[col_standby_kva]
+other = "القدرة الاحتياطية (kVA)"
+[col_engine_model]
+other = "موديل المحرك"
+[col_engine_power]
+other = "قدرة المحرك (kW)"
+[col_alt_model]
+other = "موديل المولد التبادلي"
+[col_alt_power]
+other = "قدرة المولد التبادلي (kW)"
+[col_controller]
+other = "وحدة التحكم"
+[col_datasheet]
+other = "ورقة البيانات"
+[col_50hz_kw]
+other = "خرج 50Hz (kW)"
+[col_50hz_kva]
+other = "خرج 50Hz (kVA)"
+[col_60hz_kw]
+other = "خرج 60Hz (kW)"
+[col_60hz_kva]
+other = "خرج 60Hz (kVA)"
+[col_sae_size]
+other = "مقاس SAE"
+[col_core_length]
+other = "طول القلب (mm)"
+[news_center_title]
+other = "مركز الأخبار"
+
+[finder_eyebrow]
+other = "محدّد القدرة"
+[finder_title]
+other = "أي موديل يغطي حملك؟"
+[finder_text]
+other = "اكتب القدرة التي تحتاجها وسنسرد كل موديل في هذا النطاق قادر على تحمّلها — مع المحرك والمولد التبادلي ووحدة التحكم وراء كل واحد منها."
+[finder_quick]
+other = "أحمال شائعة"
+[finder_kw]
+other = "القدرة المطلوبة"
+[finder_kw_ph]
+other = "مثال: 200"
+[finder_hz]
+other = "التردد"
+[finder_go]
+other = "ابحث عن الموديلات"
+[finder_head]
+other = "تغطي {n} سلسلة {kw} kW عند {hz} Hz"
+[finder_head_one]
+other = "تغطي سلسلة واحدة {kw} kW عند {hz} Hz"
+[finder_more]
+other = "+{n} موديل آخر في هذه السلسلة يغطي هذا الحمل"
+[finder_open]
+other = "افتح ورقة المواصفات"
+[finder_inquire]
+other = "اطلب عرض سعر"
+[finder_none]
+other = "لا يوجد موديل في هذا النطاق يغطي {kw} kW."
+[finder_none_closest]
+other = "الأقرب هو {model} ({kw} kW) — أخبرنا بالحمل وسيقوم مهندسونا باختيار الحجم المناسب لك."
+[finder_none_max]
+other = "أرسل لنا الحمل وسنقدّم عرض سعر لحل مخصّص أو بالتوازي."
+[finder_model_standby]
+other = "احتياطي"
+[finder_model_prime]
+other = "أساسي"
+[finder_model_output]
+other = "الخرج"
+[finder_more_series]
+other = "عرض {n} سلسلة أخرى"
+
+[search_spec]
+other = "الموديلات التي تغطي {kw} kW عند {hz} Hz"
+[search_spec_none]
+other = "لا يوجد موديل يغطي {kw} kW — أخبرنا بحملك وسنحدّد الحجم المناسب."
+[search_cover]
+other = "احتياطي"
+[search_standby]
+other = "احتياطي"
+[search_prime]
+other = "أساسي"
+[search_output]
+other = "الخرج"
+[inquiry_power]
+other = "القدرة المطلوبة"
+[model_nav_label]
+other = "الموديلات المجاورة"
+[model_nav_hint]
+other = "اختر موديلاً في الجدول لرؤية المقاسات المجاورة له."
+[model_nav_current]
+other = "الحالي"
+[model_nav_up]
+other = "أكبر"
+[model_nav_down]
+other = "أصغر"
+[model_nav_same]
+other = "نفس القدرة"
+[contact_models]
+other = "الموديلات المرشّحة"
+[contact_model_add_btn]
+other = "إضافة"
+[inquiry_models]
+other = "الموديلات"
+[compare_quote]
+other = "اطلب عرض سعر لهذه الموديلات الـ {n}"
+
+[spec_series]
+other = "السلسلة"
+[download_all_title]
+other = "كل قوائم المواصفات في ملف واحد"
+[download_all_text]
+other = "كل موديل في كل سلسلة مع قدراته والمحرك والمولد التبادلي ووحدة التحكم — ملف csv واحد للكتالوج بأكمله."
+[download_all_button]
+other = "حمّل كل المواصفات (CSV)"
+[download_file]
+other = "الملف"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "طباعة / PDF"
+[download_title_link]
+other = "مركز التنزيلات"
+[preview_title]
+other = "راجع استفسارك قبل إرساله"
+[preview_hint]
+other = "هكذا يصل طلبك إلى مهندسينا — ولا يزال بإمكانك تعديل النص."
+[preview_mail]
+other = "افتح في تطبيق البريد"
+[preview_copy]
+other = "انسخ النص"
+[preview_back]
+other = "العودة إلى النموذج"
+[preview_copied]
+other = "تم النسخ إلى الحافظة."
+[inquiry_salutation]
+other = "إلى فريق مبيعات Eastern Lion المحترم،"
+[inquiry_interested]
+other = "أنا مهتم بمجموعات المولدات التالية:"
+[inquiry_model]
+other = "الموديل"
+[inquiry_required_power]
+other = "القدرة المطلوبة"
+[inquiry_drawing]
+other = "مرجع الرسم / المواصفات"
+[inquiry_message]
+other = "الرسالة"
+[inquiry_contact]
+other = "بيانات التواصل"
+[inquiry_name]
+other = "الاسم"
+[inquiry_company]
+other = "الشركة"
+[inquiry_phone]
+other = "الهاتف / WhatsApp"
+[inquiry_email]
+other = "البريد الإلكتروني"
+[inquiry_footer]
+other = "أُرسل من easternlion.cn"
+[inquiry_subject]
+other = "استفسار عن مجموعة مولدات"
+[finder_title_slim]
+other = "لست متأكداً من الموديل المناسب؟"
+[finder_fold_title]
+other = "اعثر على الموديل الذي يغطي حملي"
+[compare_selected]
+other = "محدّد"
+[resume_models]
+other = "كنت تتفحّص"
+[resume_continue]
+other = "تابع الاستفسار"
+[resume_close]
+other = "إغلاق"
+[preview_whatsapp]
+other = "أرسل عبر WhatsApp"
+[preview_download]
+other = "نزّل الاستفسار"
+[contact_send]
+other = "أرسل الاستفسار"
+[preview_send]
+other = "أرسل الاستفسار"
+[preview_failed]
+other = "تعذّر إرسال الاستفسار تلقائياً. يُرجى استخدام أحد الخيارات أدناه، أو الكتابة إلى sales@easternlion.cn."
+[form_success_receipt]
+other = "اعرض ما استلمناه"
+[contact_sending]
+other = "جارٍ الإرسال…"
+[mm_model]
+other = "الموديل"
+[mm_load]
+other = "الحمل (kW)"
+[mm_hz]
+other = "التردد"
+[contact_models_hint]
+other = "أضف كل موديل تريد أن نسعّره — لكل واحد قدرته وتردده إن اختلفا. وسيردّ مهندسونا بالأسعار ومدد التسليم لكل منها."
+[contact_model_add]
+other = "أضف موديلاً آخر (مثال: GF/GFS-C200)"
+[service_schema_type]
+other = "توريد مجموعات المولدات وقطع الغيار وخدمة ما بعد البيع"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "المواصفات الرئيسية"
+[ks_power]
+other = "نطاق القدرة"
+[ks_frequency]
+other = "التردد"
+[ks_models]
+other = "الموديلات"
+[ks_engine]
+other = "المحرك"
+[ks_alternator]
+other = "المولد التبادلي"
+[ks_controller]
+other = "وحدة التحكم"
+[ks_warranty]
+other = "الضمان"
+[ks_warranty_value]
+other = "سنة واحدة أو 1000 ساعة"
+[ks_options]
+other = "الخيارات"
+[ks_options_value]
+other = "هيكل مكشوف، كابينة عازلة للصوت، مقطورة، مفتاح نقل تلقائي (ATS) وأنظمة التوازي"
+[ks_moq]
+other = "الحد الأدنى للطلب"
+[ks_moq_value]
+other = "مجموعة واحدة"
+[product_copy_link]
+other = "انسخ الرابط"
+[product_link_copied]
+other = "تم نسخ الرابط"
+[guide_title]
+other = "كيف تختار هذه السلسلة"
+[guide_intro]
+other = "ستّ قرارات تغطي تقريباً كل طلب لمجموعة مولدات. وفيما يلي كيفية اتخاذ كل منها — وما تمنحك إياه هذه السلسلة."
+[guide_col_decision]
+other = "قرارك"
+[guide_col_how]
+other = "كيف تتخذه"
+[guide_col_this]
+other = "هذه السلسلة"
+[guide_engine]
+other = "ماركة المحرك"
+[guide_engine_how]
+other = "المحرك يحدّد توفر قطع الغيار وزمن استجابة شريك الخدمة المحلي. قارن شبكة الخدمة أولاً والسعر ثانياً."
+[guide_engine_none]
+other = "المولد التبادلي فقط"
+[guide_engine_count]
+other = "%v موديل في هذه السلسلة"
+[guide_duty]
+other = "أساسي أم احتياطي"
+[guide_duty_how]
+other = "القدرة الأساسية للمجموعات التي تعمل من 8 إلى 12 ساعة يومياً، والاحتياطية للنسخ الاحتياطي الطارئ. اختر حجم المجموعة بحيث يقع حملك عند 70 إلى 80 % من القدرة الاحتياطية — فهذا يُبقي المحرك بين 50 % و75 % من الحمل، حيث يكون استهلاك الوقود في أفضل حالاته."
+[guide_duty_value]
+other = "احتياطية %v–%v kW، أساسية %v–%v kW"
+[guide_voltage]
+other = "الجهد والتردد"
+[guide_voltage_how]
+other = "400/230 V عند 50 Hz لآسيا وأوروبا وأفريقيا والشرق الأوسط، و230/400 V عند 60 Hz للأمريكتين. ويجب أن يتوافق كل من المولد التبادلي ولوحة التحكم مع الشبكة التي تتصل بها."
+[guide_voltage_50]
+other = "50 Hz، 400/230 V"
+[guide_voltage_60]
+other = "60 Hz، 230/400 V"
+[guide_enclosure]
+other = "التغليف"
+[guide_enclosure_how]
+other = "هيكل مكشوف لغرفة الماكينات، وكابينة عازلة للصوت لموقع حضري في الهواء الطلق (نحو 65 dB(A) على مسافة 7 m)، وحاوية لوحدة بقدرة 1000 kW، ومقطورة للمجموعة المتنقلة."
+[guide_enclosure_value]
+other = "خيارات الهيكل المكشوف والكابينة العازلة للصوت والمقطورة والحاوية"
+[guide_starting]
+other = "التشغيل والنقل"
+[guide_starting_how]
+other = "تحتاج المجموعة الطارئة إلى تشغيل كهربائي ومفتاح نقل تلقائي، وإلا بقيت المجموعة معطّلة حتى انقطاع الشبكة. ويظل التشغيل اليدوي وبالهواء متاحاً للمهام الخاصة."
+[guide_starting_value]
+other = "تشغيل كهربائي، ومفتاح نقل تلقائي (ATS) يدوي وتلقائي عند الطلب"
+[guide_parallel]
+other = "التوازي"
+[guide_parallel_how]
+other = "أكثر من مجموعة واحدة يعني نظام إدارة قدرة، ومفتاح نقل أكبر، ولوحة تحكم تتيح للمجموعات تقاسم الحمل والتبادل في التحمّل."
+[guide_parallel_value]
+other = "أنظمة توازٍ مع إدارة القدرة"
+[guide_environment]
+other = "ظروف الموقع"
+[guide_environment_how]
+other = "كل 1000 m من الارتفاع وكل 10 °C فوق الحرارة المحيطة القياسية يكلّفان نحو 3 % من القدرة، كما يستلزم الموقع الملحي أو المغبّر كابينة وفترة صيانة أقصر."
+[guide_environment_value]
+other = "قدرة قياسية عند 0–50 °C، مع تخفيض القدرة عند الطلب"
+[guide_foot]
+other = "أرسل لنا الحمل والجهد والموقع، وسنردّ عليك بالموديل المحدّد والسعر ومدة التسليم."
+[wa_from]
+other = "استفسار من easternlion.cn"
+[wa_series]
+other = "السلسلة"
+[wa_model]
+other = "الموديل"
+[wa_power]
+other = "القدرة المطلوبة"
+[wa_standby]
+other = "القدرة الاحتياطية"
+[wa_link]
+other = "الرابط"
+[search_guide]
+other = "كيف تختار"
+[search_guide_more]
+other = "اقرأ الدليل الكامل"
+[search_compare]
+other = "قارن"
+[search_models]
+other = "موديل"
+[inquiry_ref_label]
+other = "رقم استفسارك:"
+[form_success_whatsapp]
+other = "هل تحتاجه في وقت أقرب؟ راسلنا على"
+[app_eyebrow]
+other = "التطبيقات"
+[app_index_title]
+other = "مجموعات المولدات حسب التطبيق"
+[app_index_text]
+other = "ابدأ من المهمة التي يجب أن تؤديها مجموعتك. تعرض كل صفحة تطبيق القدرة التي تحتاجها، والموديلات الاحتياطية التي تغطيها، والنقاط الفنية المهمة في الموقع، والموديلات التي نصنعها لها."
+[app_sizing_title]
+other = "كيف تُحدَّد حجم المجموعة"
+[app_sizing_text]
+other = "وضع الاحتياط: على المجموعة أن تحمل كامل الحمل المتصل بالإضافة إلى تيار البدء، لذلك نختار حجمها أكبر من حمل التشغيل. ويسرد الجدول أدناه القدرات الاحتياطية للموديلات الحقيقية لكل حمل نموذجي في هذا التطبيق."
+[app_sizing_load]
+other = "الحمل النموذجي"
+[app_sizing_standby]
+other = "القدرة الاحتياطية الواجب النظر إليها"
+[app_sizing_models]
+other = "الموديلات التي تغطيه"
+[app_sizing_note]
+other = "تتبع القدرات المعيار ISO 8528. ويعتمد الموديل النهائي على الجهد، واستقلالية الوقود، والتغليف، ودرجة الحرارة المحيطة - أرسل لنا الحمل وسنؤكّده كتابياً."
+[app_sizing_oversize]
+other = "اطلب منّا حلاً يتجاوز 2000 kW"
+[app_requirements_title]
+other = "ما يحتاجه هذا التطبيق"
+[app_series_title]
+other = "السلسلة المستخدمة لهذه المهمة"
+[app_model_word]
+other = "موديل"
+[app_faq_title]
+other = "أسئلة يطرحها المشترون حول هذا التطبيق"
+[app_fact_load]
+other = "نطاق القدرة"
+[app_fact_duty]
+other = "وضع التشغيل"
+[app_fact_duty_value]
+other = "احتياطي"
+[app_fact_hz]
+other = "التردد"
+[app_fact_engine]
+other = "المحركات"
+[app_cta_title]
+other = "أخبرنا بالحمل والموقع"
+[app_cta_text]
+other = "أرسل حمل التشغيل والجهد والمكان الذي ستعمل فيه المجموعة. ويردّ مهندسونا بالموديل والتخطيط والسعر خلال يوم عمل واحد."
+[app_cta_button]
+other = "اطلب عرض سعر"
+[app_wa_text]
+other = "استفسار: مجموعة مولدات %s"
+[app_other_title]
+other = "تطبيقات أخرى"
+[datasheet_sub]
+other = "ورقة مواصفات مجموعة المولدات"
+[datasheet_print]
+other = "اطبع أو احفظ بصيغة PDF"
+[datasheet_back]
+other = "العودة إلى السلسلة"
+[datasheet_contact]
+other = "استفسارك"
+[datasheet_note]
+other = "ملاحظة"
+[datasheet_note_text]
+other = "تتبع القدرات المعيار ISO 8528. ويعتمد التكوين النهائي على الجهد، واستقلالية الوقود، والتغليف، ودرجة الحرارة المحيطة."
+[download_datasheet]
+other = "ورقة البيانات"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "الموديلات التي تغطيه:"
+[mm_no_cover]
+other = "لا يوجد موديل في الكتالوج يغطي هذا الحمل."
+[mm_picked]
+other = "مختار مسبقاً"
+[ui_close]
+other = "إغلاق"
+[ui_remove]
+other = "إزالة"
+[lang_label]
+other = "تغيير اللغة"
+[nav_menu]
+other = "القائمة"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "س"
+[list_sep]
+other = "، "
+[and_pair]
+other = "%[1]v و%[2]v"
+[kind_genset]
+other = "مجموعة مولدات ديزل"
+[kind_alternator]
+other = "مولد تبادلي"
+[app_summary_tpl]
+other = "بالنسبة إلى %[1]s تحتاج مجموعة مولدات الديزل الاحتياطية التي تبحث عنها إلى قدرة من %[2]v إلى %[3]v kW؛ وتصنع Eastern Lion هذه المجموعات حول محركات %[4]s بتردد %[5]s Hz، بهيكل مكشوف أو كابينة عازلة للصوت أو مقطورة أو مفتاح نقل تلقائي (ATS) أو تكوينات التوازي، وتُختبَر كل مجموعة بحمل كامل قبل الشحن."
+[guide_sum_engine]
+other = "%[1]s هي سلسلة مجموعات مولدات ديزل بتردد %[2]v Hz من Eastern Lion، مصمَّمة حول محرك %[3]s، وتغطي من %[4]v إلى %[5]v kW في %[6]d موديل. وتُستخدم في %[7]s."
+[guide_sum_plain]
+other = "%[1]s هي سلسلة %[3]s بتردد %[2]v Hz من Eastern Lion تغطي من %[4]v إلى %[5]v kW في %[6]d موديل، وتُورَّد إلى %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "النص الكامل للموقع"
+[llms_intro]
+other = '''العلامة التجارية: Eastern Lion (福建东方电机). الموقع: %[1]s
+تأسست عام 1987 في Fuan، Fujian. شركة مصنّعة لمجموعات مولدات الديزل، والمولدات التبادلية
+بمفرشات، والمولدات التبادلية بدون مفرشات، من 2 kW إلى 2000 kW، بتردد 50 Hz و60 Hz. ورش خاصة:
+إنتاج المولدات التبادلية، وتجميع مجموعات المولدات، والاختبار بحمل كامل. نحو 15,000 مولد تبادلي
+و2,000 مجموعة مولدات سنوياً. 35 قاعدة بيع وخدمة في الصين. تصدير إلى روسيا وإندونيسيا والفلبين
+وجنوب أفريقيا وباكستان والمملكة المتحدة وأسواق أخرى.
+
+الاتصال: sales@easternlion.cn، +86-13950513258، service@easternlion.cn.
+المصنع: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+المكتب الدولي: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (العلامة التجارية: Eastern Lion، 福建东方电机) شركة صينية
+> مصنّعة لمجموعات مولدات الديزل، والمولدات التبادلية بمفرشات، والمولدات التبادلية بدون مفرشات،
+> تأسست عام 1987 في Fuan، Fujian. وتصنع المولدات التبادلية ومجموعات المولدات الكاملة في ورشها
+> الخاصة، وتختبر كل ماكينة بحمل كامل قبل الشحن، وتبيعها في جميع أنحاء العالم — من 2 kW إلى 2000 kW،
+> بتردد 50 Hz و60 Hz، مع خيارات محركات Cummins وPerkins وYuchai وYTO وWeichai وKofo وHuachai
+> وLongxin وLovol وWoling وYangdong وYunnei وYuxing وKaixun.
+
+## ما هو هذا الموقع
+
+- 44 سلسلة منتجات، لكل منها جدول مواصفات كامل (الموديل، والقدرة الأساسية والاحتياطية،
+  والمحرك، والمولد التبادلي، ووحدة التحكم) وملف csv قابل للتنزيل
+- يطابق محدّد القدرة الحمل بالـ kW مع كل موديل يغطيه
+- تضع أداة المقارنة ما يصل إلى أربع سلاسل جنباً إلى جنب
+- كل قائمة مواصفات متاحة بصيغة csv على /ar/download/
+
+## حقائق رئيسية
+
+| | |
+| --- | --- |
+| التأسيس | 1987 (مصنع Hanyang الكهربائي، Fuan) |
+| نطاق المنتجات | من 2 kW إلى 2000 kW، بتردد 50 Hz و60 Hz |
+| طاقة المولدات التبادلية | نحو 15,000 مولد تبادلي سنوياً |
+| طاقة مجموعات المولدات | نحو 2,000 مجموعة مولدات سنوياً |
+| شبكة الخدمة | 35 قاعدة بيع وخدمة في الصين |
+| الأسواق | الصين إضافةً إلى التصدير إلى روسيا وإندونيسيا والفلبين وجنوب أفريقيا وباكستان والمملكة المتحدة وغيرها |
+| المصنع | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| المكتب الدولي | Fuzhou, Fujian, China |
+| الهاتف | +86-13950513258 |
+| البريد الإلكتروني | sales@easternlion.cn (الخدمة: service@easternlion.cn) |
+
+## عائلات المنتجات
+
+- مجموعات مولدات ديزل — /ar/products/diesel-generator-set/ (15 سلسلة محركات، 50 Hz)
+- مجموعات مولدات 60 Hz — /ar/products/60hz-diesel-generator-set/ (6 سلاسل للأمريكتين وأجزاء من آسيا)
+- المولدات التبادلية بمفرشات — /ar/products/brush-alternator/ (سلسلة STC، من 8 kW إلى 500 kW)
+- المولدات التبادلية بدون مفرشات — /ar/products/brushless-alternator/ (سلسلة EL، اقتران SAE)
+
+## التطبيقات
+
+- مجموعات المولدات حسب التطبيق — /ar/applications/ (القدرة التي تحتاجها، والموديلات التي تغطيها، والنقاط الفنية التي تحدّد الطلب)
+- مراكز البيانات — /ar/applications/data-centre/
+- المستشفيات — /ar/applications/hospital/
+- مواقع الاتصالات — /ar/applications/telecom/
+- مواقع التعدين والمحاجر — /ar/applications/mining/
+- الفنادق والمنتجعات — /ar/applications/hotel/
+- مواقع الإنشاءات — /ar/applications/construction/
+
+## الشركة
+
+- نبذة عن الشركة — /ar/about/
+- تاريخ التطوّر — /ar/about/history/
+- فريقنا — /ar/about/team/
+- المؤهلات والشهادات — /ar/about/qualification/
+- ورشتنا — /ar/about/workshop/
+- خدمة ما بعد البيع — /ar/service/
+- فيديوهات المصنع — /ar/video/
+- الأسئلة الشائعة — /ar/faq/
+- الأخبار — /ar/news/
+- اتصل بنا — /ar/contact/
+
+## التنزيلات
+
+- مركز التنزيلات مع كل قائمة مواصفات بصيغة csv — /ar/download/
+- كل موديلات كل السلاسل في ملف واحد — /ar/download/all-specs.csv
+- النص الكامل لهذا الموقع لنماذج اللغة — /ar/llms-full.txt
+
+## كيف تصل إلينا
+
+استفسارات المبيعات: sales@easternlion.cn — يُردّ على الاستفسار المنظَّم (الموديل، والحمل، والتردد،
+ومرجع الرسم) خلال يوم عمل واحد. ويرسل نموذج الاتصال على /ar/contact/ الاستفسار
+مباشرةً إلى بريد المبيعات ويعرض WhatsApp كقناة ثانية.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "المنتجات"
+[llms_power_line]
+other = "نطاق القدرة: %[1]v إلى %[2]v kW. التردد: %[3]v Hz. النوع: %[4]v. رابط السلسلة: %[5]s"
+[llms_csv_line]
+other = "قائمة المواصفات (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "التطبيقات"
+[llms_url_line]
+other = "الرابط: %[1]s"
+[llms_choose_h]
+other = "كيف تختار سلسلة"
+[llms_choose_text]
+other = '''كل طلب لمجموعة مولدات يختصر إلى ستّ قرارات: ماركة المحرك (تحدّد قطع الغيار
+وزمن استجابة شريك الخدمة)، والقدرة الأساسية أم الاحتياطية (الأساسية تعمل من 8 إلى 12 ساعة
+يومياً، والاحتياطية للنسخ الاحتياطي الطارئ؛ اختر حجم المجموعة بحيث يقع الحمل عند 70 إلى 80 % من
+القدرة الاحتياطية)، والجهد والتردد (400/230 V عند 50 Hz، و230/400 V عند 60 Hz)، والتغليف
+(هيكل مكشوف، كابينة عازلة للصوت، حاوية، مقطورة)، والتشغيل والنقل (تشغيل كهربائي مع
+مفتاح نقل تلقائي للمجموعات الاحتياطية) والتوازي (أكثر من مجموعة واحدة يحتاج نظام إدارة قدرة).
+وتهمّ ظروف الموقع أيضاً: كل 1000 m من الارتفاع وكل 10 °C فوق الحرارة المحيطة القياسية يكلّفان
+نحو 3 % من القدرة.
+
+الضمان: سنة واحدة أو 1000 ساعة. الحد الأدنى للطلب: مجموعة واحدة. خيارات التغليف: هيكل
+مكشوف، كابينة عازلة للصوت، مقطورة وحاوية. التشغيل: كهربائي، مع مفتاح نقل تلقائي (ATS) عند الطلب.
+وتتوفر أنظمة التوازي مع إدارة القدرة.'''
+[llms_faq_h]
+other = "الأسئلة الشائعة"
+[llms_service_h]
+other = "الخدمة والشركة"
+[llms_contact_line]
+other = "الاتصال: sales@easternlion.cn — يُردّ على الاستفسارات خلال يوم عمل واحد."

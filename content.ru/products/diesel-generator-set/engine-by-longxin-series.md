@@ -1,0 +1,396 @@
+{
+  "title": "Дизель-генераторные установки с двигателями Longxin",
+  "description": "Дизель-генераторная установка серии Longxin, 50 Hz, первичная и резервная мощность, данные по двигателю, альтернатору и контроллеру.",
+  "summary": "Дизель-генераторная установка серии Longxin, 50 Hz, первичная и резервная мощность, данные по двигателю, альтернатору и контроллеру.",
+  "banner_image": "/images/banner/product.jpg",
+  "banner_title": "Описание продукции",
+  "image": "/images/products/engine-by-longxin-series.jpg",
+  "images": [
+    "/images/products/engine-by-longxin-series.jpg"
+  ],
+  "category": "Дизель-генераторные установки",
+  "weight": 100,
+  "breadcrumb": [
+    {
+      "name": "Продукция",
+      "url": "/products/"
+    },
+    {
+      "name": "Дизель-генераторные установки",
+      "url": "/products/diesel-generator-set/"
+    },
+    {
+      "name": "Дизель-генераторные установки 50HZ",
+      "url": "/products/50hz-diesel-generator-set/"
+    }
+  ],
+  "columns": [
+    "Model",
+    "Prime power (kW)",
+    "Prime power (kVA)",
+    "Standby power (kW)",
+    "Standby power (kVA)",
+    "Engine model",
+    "Engine power (kW)",
+    "Alternator model",
+    "Alternator power (kW)",
+    "Controller",
+    "Datasheet"
+  ],
+  "rows": [
+    [
+      "GFS-W33",
+      "24",
+      "30",
+      "27",
+      "33",
+      "K4100D",
+      "30.1",
+      "EL 184G",
+      "25",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W33",
+      "24",
+      "30",
+      "27",
+      "33",
+      "ZH4100D",
+      "30.1",
+      "EL 184G",
+      "25",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W44",
+      "32",
+      "40",
+      "36",
+      "44",
+      "K4100ZD",
+      "41",
+      "EL 184J",
+      "32",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W56",
+      "40",
+      "50",
+      "44",
+      "56",
+      "ZH4105ZD",
+      "56",
+      "EL 224D",
+      "40",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "ZH4105ZD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "ZH4105ZLD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W67",
+      "48",
+      "60",
+      "53",
+      "67",
+      "R4105ZD",
+      "56",
+      "EL 224E",
+      "48",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W94",
+      "68",
+      "85",
+      "76",
+      "94",
+      "R6105ZD",
+      "84",
+      "EL 224G",
+      "68",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W111",
+      "80",
+      "100",
+      "89",
+      "111",
+      "R6105AZLD",
+      "110",
+      "EL 274C",
+      "80",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W139",
+      "100",
+      "125",
+      "111",
+      "139",
+      "R6105IZLD",
+      "132",
+      "EL 274D",
+      "96",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W153",
+      "110",
+      "138",
+      "122",
+      "153",
+      "R6105IZLD",
+      "132",
+      "EL 274E",
+      "112",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W153",
+      "110",
+      "138",
+      "122",
+      "153",
+      "R6105IZLD",
+      "132",
+      "EL 274E",
+      "112",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W178",
+      "128",
+      "160",
+      "142",
+      "178",
+      "R6108ZLD",
+      "155",
+      "EL 274F",
+      "128",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W178",
+      "128",
+      "160",
+      "142",
+      "178",
+      "R6108ZLD",
+      "155",
+      "EL 274F",
+      "128",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W222",
+      "160",
+      "200",
+      "178",
+      "222",
+      "6126ZLD新",
+      "215",
+      "EL 274H",
+      "160",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W250",
+      "180",
+      "225",
+      "200",
+      "250",
+      "6126ZLD新",
+      "215",
+      "EL 274J",
+      "184",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W278",
+      "200",
+      "250",
+      "222",
+      "278",
+      "6126ZLD-1新",
+      "260",
+      "EL 274K",
+      "200",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W328",
+      "236",
+      "295",
+      "262",
+      "328",
+      "WD618",
+      "308",
+      "EL 314D",
+      "236",
+      "RUIFEN6120",
+      "Detail"
+    ],
+    [
+      "GFS-W361",
+      "260",
+      "325",
+      "289",
+      "361",
+      "WD618",
+      "308",
+      "EL 314E",
+      "260",
+      "RUIFEN6120",
+      "Detail"
+    ]
+  ],
+  "power_min": 24,
+  "power_max": 289,
+  "hz": 50,
+  "product_kind": "genset",
+  "comparables": [
+    {
+      "t": "Дизель-генераторные установки с двигателями Cummins 2",
+      "g": 200,
+      "p": 1311,
+      "h": 50,
+      "n": 34,
+      "e": "MTA11-G2A",
+      "a": "EL 314E",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-cummins-2/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Cummins",
+      "g": 22,
+      "p": 444,
+      "h": 50,
+      "n": 40,
+      "e": "4BTA3.9-G2",
+      "a": "EL 274K",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-cummins/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Huachai",
+      "g": 13,
+      "p": 289,
+      "h": 50,
+      "n": 27,
+      "e": "2105D",
+      "a": "EL 224C",
+      "c": "RUIFEN6120",
+      "u": "/products/diesel-generator-set/engine-by-huachai-series/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Kofo",
+      "g": 10,
+      "p": 338,
+      "h": 50,
+      "n": 24,
+      "e": "K4100DS",
+      "a": "EL 184G",
+      "c": "RUIFEN6120",
+      "u": "/products/diesel-generator-set/engine-by-kofo-series/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Lovol",
+      "g": 25,
+      "p": 158,
+      "h": 50,
+      "n": 13,
+      "e": "1003G",
+      "a": "EL 274C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-lovol-series/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Perkins",
+      "g": 7.2,
+      "p": 2000,
+      "h": 50,
+      "n": 54,
+      "e": "403A-15G1",
+      "a": "EL 224G",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-perkins-series/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Woling",
+      "g": 128,
+      "p": 889,
+      "h": 50,
+      "n": 22,
+      "e": "D114系列WLD171",
+      "a": "EL 404D",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-woling-series/"
+    },
+    {
+      "t": "Дизель-генераторные установки с двигателями Wuxi",
+      "g": 48,
+      "p": 1111,
+      "h": 50,
+      "n": 52,
+      "e": "WD129TAD23/1500",
+      "a": "EL 354C",
+      "c": "Smartgen 6120",
+      "u": "/products/diesel-generator-set/engine-by-wuxi-series/"
+    }
+  ],
+  "model_count": 19,
+  "engine_top": "R6105IZLD",
+  "alternator_top": "EL 224E",
+  "controller_top": "RUIFEN6120",
+  "sae_top": "",
+  "outputs": [
+    "html",
+    "csv",
+    "datasheet"
+  ]
+}
+Дизель-генераторные установки Eastern Lion серии Longxin оснащаются дизельными двигателями Longxin, нашими собственными бесщеточными альтернаторами и надёжной панелью управления. В таблице ниже приведены стандартные модели 400/230 V, 50 Hz с первичной и резервной мощностью по ISO 8528. Открытое исполнение, шумозащитный кожух, прицепное исполнение, автоматический ввод резерва (ATS) и параллельные конфигурации доступны по запросу.
+
+Все генераторные установки проходят испытание под нагрузкой перед отгрузкой. Пожалуйста, свяжитесь с нами, чтобы получить подробную спецификацию, цены и сроки поставки.

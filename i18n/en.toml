@@ -840,3 +840,149 @@ other = "Remove"
 other = "Change language"
 [nav_menu]
 other = "Menu"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "Q"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v and %[2]v"
+[kind_genset]
+other = "diesel generator set"
+[kind_alternator]
+other = "alternator"
+[app_summary_tpl]
+other = "For %[1]s the standby diesel generator set you need runs from %[2]v to %[3]v kW; Eastern Lion builds these sets around the %[4]s engines in %[5]s Hz, in open frame, silent canopy, trailer, ATS and parallel configurations, and every set is tested at full load before shipment."
+[guide_sum_engine]
+other = "%[1]s is a %[2]v Hz diesel generator set series from Eastern Lion, built around the %[3]s engine, covering %[4]v to %[5]v kW in %[6]d models. It is used for %[7]s."
+[guide_sum_plain]
+other = "%[1]s is an Eastern Lion %[2]v Hz %[3]s series covering %[4]v to %[5]v kW in %[6]d models, supplied to %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "full site text"
+[llms_intro]
+other = '''Brand: Eastern Lion (福建东方电机). Site: %[1]s
+Founded 1987 in Fuan, Fujian. Manufacturer of diesel generator sets, brush alternators and
+brushless alternators, 2 kW to 2000 kW, 50 Hz and 60 Hz. Own workshops: alternator
+production, generator set assembly, full load testing. About 15,000 alternators and 2,000
+generator sets per year. 35 sales and service bases in China. Exports to Russia, Indonesia, the
+Philippines, South Africa, Pakistan, the United Kingdom and other markets.
+
+Contact: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Factory: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+International office: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (brand: Eastern Lion, 福建东方电机) is a Chinese
+> manufacturer of diesel generator sets, brush alternators and brushless alternators, founded in
+> 1987 in Fuan, Fujian. It builds alternators and complete generator sets in its own workshops,
+> load tests every machine before shipment, and sells them worldwide — 2 kW to 2000 kW, 50 Hz and
+> 60 Hz, with Cummins, Perkins, Yuchai, YTO, Weichai, Kofo, Huachai, Longxin, Lovol, Woling,
+> Yangdong, Yunnei, Yuxing and Kaixun engine options.
+
+## What this site is
+
+- 44 product series, each with a full specification table (model, prime and standby power,
+  engine, alternator, controller) and a downloadable csv
+- The power finder matches a load in kW to every model that covers it
+- The comparison tool puts up to four series side by side
+- Every specification list is available as csv at /download/
+
+## Key facts
+
+| | |
+| --- | --- |
+| Founded | 1987 (Hanyang electric plant, Fuan) |
+| Product range | 2 kW to 2000 kW, 50 Hz and 60 Hz |
+| Alternator capacity | about 15,000 alternators per year |
+| Generator set capacity | about 2,000 generator sets per year |
+| Service network | 35 sales and service bases in China |
+| Markets | China plus exports to Russia, Indonesia, the Philippines, South Africa, Pakistan, the UK and others |
+| Factory | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| International office | Fuzhou, Fujian, China |
+| Phone | +86-13950513258 |
+| E-mail | sales@easternlion.cn (service: service@easternlion.cn) |
+
+## Product families
+
+- Diesel generator sets — /products/diesel-generator-set/ (15 engine series, 50 Hz)
+- 60 Hz generator sets — /products/60hz-diesel-generator-set/ (6 series for the Americas and parts of Asia)
+- Brush alternators — /products/brush-alternator/ (STC series, 8 kW to 500 kW)
+- Brushless alternators — /products/brushless-alternator/ (EL series, SAE coupling)
+
+## Applications
+
+- Generator sets by application — /applications/ (the power you need, the models that cover it and the technical points that decide the order)
+- Data centres — /applications/data-centre/
+- Hospitals — /applications/hospital/
+- Telecom sites — /applications/telecom/
+- Mining and quarry sites — /applications/mining/
+- Hotels and resorts — /applications/hotel/
+- Construction sites — /applications/construction/
+
+## Company
+
+- Company profile — /about/
+- Development history — /about/history/
+- Our team — /about/team/
+- Qualification and certificates — /about/qualification/
+- Our workshop — /about/workshop/
+- After-sales service — /service/
+- Factory videos — /video/
+- Frequently asked questions — /faq/
+- News — /news/
+- Contact — /contact/
+
+## Downloads
+
+- Download centre with every specification list as csv — /download/
+- All models of all series in one file — /download/all-specs.csv
+- The full text of this site for language models — /llms-full.txt
+
+## How to reach us
+
+Sales inquiries: sales@easternlion.cn — a structured inquiry (model, load, frequency, drawing
+reference) is answered within one working day. The contact form on /contact/ sends the inquiry
+directly to the sales inbox and offers WhatsApp as a second channel.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Products"
+[llms_power_line]
+other = "Power range: %[1]v to %[2]v kW. Frequency: %[3]v Hz. Type: %[4]v. Series URL: %[5]s"
+[llms_csv_line]
+other = "Specification list (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Applications"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "How to choose a series"
+[llms_choose_text]
+other = '''Every generator set order comes down to six decisions: the engine brand (it decides the spare
+parts and the response time of your service partner), prime or standby duty (prime runs 8 to 12
+hours a day, standby is for emergency backup; size the set so the load sits at 70 to 80 % of the
+standby rating), voltage and frequency (400/230 V at 50 Hz, 230/400 V at 60 Hz), the enclosure
+(open frame, silent canopy, container, trailer), starting and transfer (electric start with an
+automatic transfer switch for standby sets) and paralleling (more than one set needs a power
+management system). Site conditions matter too: every 1000 m of altitude and every 10 °C above
+the standard ambient costs about 3 % of the rating.
+
+Warranty: 1 year or 1000 hours. Minimum order: 1 set. Enclosure options: open frame, silent
+canopy, trailer and container. Starting: electric, with an ATS on request. Parallel systems with
+power management are available.'''
+[llms_faq_h]
+other = "Frequently asked questions"
+[llms_service_h]
+other = "Service and company"
+[llms_contact_line]
+other = "Contact: sales@easternlion.cn — inquiries are answered within one working day."

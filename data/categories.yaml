@@ -4,6 +4,16 @@
   image: /images/home/cat-brush.jpg
   description: STC series brush alternators from 8 kW to 500 kW.
   description_zh: "STC 系列有刷交流发电机，功率范围 8-500kW。"
+  description_ru: "Щеточные альтернаторы серии STC мощностью от 8 kW до 500 kW."
+  description_es: "Alternadores con escobillas de la serie STC de 8 kW a 500 kW."
+  description_pt: "Alternadores com escovas da série STC de 8 kW a 500 kW."
+  description_ar: "مولدات تبادلية بمفارش من سلسلة STC بقدرة من 8 kW إلى 500 kW."
+  description_fr: "Alternateurs à balais de la série STC de 8 kW à 500 kW."
+  description_tr: "STC serisi fırçalı alternatörler, 8 kW ile 500 kW arası."
+  description_id: "Alternator sikat seri STC dari 8 kW hingga 500 kW."
+  description_vi: "Máy phát điện xoay chiều chổi than dòng STC từ 8 kW đến 500 kW."
+  description_de: "Bürsten-Alternatoren der Baureihe STC von 8 kW bis 500 kW."
+  description_fa: "آلترناتورهای زغالی سری STC از 8 kW تا 500 kW."
 
 - name: Diesel Generator Set
   key: cat_diesel_generator_set
@@ -11,6 +21,16 @@
   image: /images/home/cat-diesel.jpg
   description: 50 Hz and 60 Hz generator sets powered by Cummins, Perkins, Yuchai, YTO and other engines.
   description_zh: "50Hz 与 60Hz 柴油发电机组，可选康明斯、珀金斯、玉柴、玉动等发动机。"
+  description_ru: "Дизель-генераторные установки 50 Hz и 60 Hz с двигателями Cummins, Perkins, Yuchai, YTO и других производителей."
+  description_es: "Grupos electrógenos de 50 Hz y 60 Hz accionados por motores Cummins, Perkins, Yuchai, YTO y otros."
+  description_pt: "Geradores diesel de 50 Hz e 60 Hz acionados por motores Cummins, Perkins, Yuchai, YTO e outros."
+  description_ar: "مجموعات مولدات ديزل 50 Hz و60 Hz تعمل بمحركات Cummins وPerkins وYuchai وYTO وغيرها."
+  description_fr: "Groupes électrogènes 50 Hz et 60 Hz entraînés par des moteurs Cummins, Perkins, Yuchai, YTO et autres."
+  description_tr: "Cummins, Perkins, Yuchai, YTO ve diğer motorlarla çalışan 50 Hz ve 60 Hz dizel jeneratör setleri."
+  description_id: "Genset diesel 50 Hz dan 60 Hz yang ditenagai mesin Cummins, Perkins, Yuchai, YTO, dan lainnya."
+  description_vi: "Bộ phát điện diesel 50 Hz và 60 Hz chạy bằng động cơ Cummins, Perkins, Yuchai, YTO và các loại khác."
+  description_de: "Diesel-Generatorsets mit 50 Hz und 60 Hz, angetrieben von Motoren von Cummins, Perkins, Yuchai, YTO und anderen."
+  description_fa: "ژنراتورهای دیزلی 50 Hz و 60 Hz با موتورهای Cummins، Perkins، Yuchai، YTO و دیگر موتورها."
 
 - name: Brushless Alternator
   key: cat_brushless_alternator
@@ -18,3 +38,13 @@
   image: /images/home/cat-brushless.jpg
   description: EL series brushless alternators with SAE couplings.
   description_zh: "EL 系列无刷交流发电机，配备 SAE 标准法兰接口。"
+  description_ru: "Бесщеточные альтернаторы серии EL с соединениями SAE."
+  description_es: "Alternadores sin escobillas de la serie EL con acoplamientos SAE."
+  description_pt: "Alternadores sem escovas da série EL com acoplamentos SAE."
+  description_ar: "مولدات تبادلية بدون فرش من سلسلة EL مع وصلات SAE."
+  description_fr: "Alternateurs sans balais de la série EL avec accouplements SAE."
+  description_tr: "SAE kaplinli EL serisi fırçasız alternatörler."
+  description_id: "Alternator tanpa sikat seri EL dengan kopling SAE."
+  description_vi: "Máy phát điện xoay chiều không chổi than dòng EL với khớp nối SAE."
+  description_de: "Bürstenlose Alternatoren der Baureihe EL mit SAE-Anschlüssen."
+  description_fa: "آلترناتورهای بدون زغال سری EL با کوپلینگ SAE."

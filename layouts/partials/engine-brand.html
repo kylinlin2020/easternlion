@@ -1,0 +1,16 @@
+{{- /* The engine brand inside a series title, whatever language the title is
+       written in — the brands stay latin in every translation, so a search
+       works where the english "Engine By X" split does not.
+       Call: {{ partial "engine-brand.html" .Title }}   →  "Cummins" or "" */ -}}
+{{- $t := lower . -}}
+{{- $found := "" -}}
+{{- range slice "Cummins" "Perkins" "Yuchai" "YTO" "Lovol" "Volvo" "MTU" "Deutz" "Weichai" "Changchai" "Duofang" "Wuxi" "Kofo" "Huachai" "Longxin" "Woling" "Yangdong" "Yunnei" "Yuxing" "Kaixun" -}}
+  {{- if and (not $found) (in $t (lower .)) -}}{{- $found = . -}}{{- end -}}
+{{- end -}}
+{{- /* chinese titles spell the brands in chinese — match those too */ -}}
+{{- if and (not $found) (eq site.Language.Lang "zh") -}}
+  {{- range slice "康明斯" "珀金斯" "玉柴" "玉动" "潍柴" "科发" "华柴" "龙信" "卧龙" "扬动" "云内" "玉兴" "凯迅" "无锡" -}}
+    {{- if and (not $found) (in $t .) -}}{{- $found = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $found -}}

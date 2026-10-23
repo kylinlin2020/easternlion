@@ -142,8 +142,9 @@
 {{- $items := slice -}}
 {{- $i := 1 -}}
 {{- range site.Data.faq -}}
-  {{- $q := .q }}{{- if eq site.Language.Lang "zh" }}{{- $q = .q_zh }}{{- end -}}
-  {{- $a := .a }}{{- if eq site.Language.Lang "zh" }}{{- $a = .a_zh }}{{- end -}}
+  {{- $lang := site.Language.Lang -}}
+  {{- $q := index . (printf "q_%s" $lang) | default .q -}}
+  {{- $a := index . (printf "a_%s" $lang) | default .a -}}
   {{- $items = $items | append (dict
       "@type" "Question"
       "name" $q

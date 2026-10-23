@@ -85,7 +85,7 @@
     <div class="faq-list">
       {{- range . }}
       <div class="faq-item">
-        <div class="faq-q"><b>{{ if eq site.Language.Lang "zh" }}问{{ else }}Q{{ end }}</b> {{ .q }}</div>
+        <div class="faq-q"><b>{{ i18n "faq_q" }}</b> {{ .q }}</div>
         <div class="faq-a">
           {{ partial "icon.html" (dict "name" "chat") }}
           <span>{{ .a }}</span>

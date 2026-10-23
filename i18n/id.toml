@@ -1,0 +1,990 @@
+# =============================================================
+#  UI strings — English (default)
+#  Copy this file to i18n/<lang>.toml and translate the values to
+#  add a language. Then add a matching [languages.<lang>] block in
+#  hugo.toml and a content.<lang>/ directory.
+# =============================================================
+
+[nav_home]
+other = "Beranda"
+[nav_products]
+other = "Produk"
+[nav_company]
+other = "Profil Perusahaan"
+[nav_service]
+other = "Layanan"
+[nav_video]
+other = "Video"
+[nav_faq]
+other = "Tanya Jawab"
+[nav_contact]
+other = "Hubungi Kami"
+
+[menu_company_profile]
+other = "Profil Perusahaan"
+[menu_history]
+other = "Riwayat Perkembangan"
+[menu_team]
+other = "Tim Kami"
+[menu_qualification]
+other = "Sertifikasi"
+[menu_news]
+other = "Pusat Berita"
+[menu_workshop]
+other = "Bengkel Kami"
+
+[about_us]
+other = "Tentang Kami"
+[product_center]
+other = "Pusat Produk"
+[product_category]
+other = "Kategori Produk"
+
+[footer_quick_links]
+other = "Tautan Cepat"
+[footer_company_profile]
+other = "Profil Perusahaan"
+[footer_product_category]
+other = "Kategori Produk"
+[footer_golden_supplier]
+other = "Pemasok Emas di Tiongkok"
+[footer_tel]
+other = "Telp"
+[footer_email]
+other = "Email"
+[footer_web]
+other = "Situs Web"
+[footer_copyright]
+other = "Hak Cipta © 2019 Fuan Eastern Lion Electric Machines Co., Ltd. Seluruh hak cipta dilindungi."
+
+[float_telephone]
+other = "Telepon"
+[float_email]
+other = "Email"
+[float_message]
+other = "Tinggalkan Pesan"
+
+[search_placeholder]
+other = "Masukkan kata kunci"
+[language_label]
+other = "Bahasa Inggris"
+
+[product_availability]
+other = "Ketersediaan"
+[product_quantity]
+other = "Jumlah"
+[product_in_stock]
+other = "Tersedia"
+[product_inquire]
+other = "Tanyakan"
+[product_add_basket]
+other = "Chat via WhatsApp"
+[product_description]
+other = "Deskripsi Produk"
+[product_share]
+other = "Bagikan ke:"
+[product_category_label]
+other = "Kategori"
+[product_rating_note]
+other = "Peringkat bersifat indikatif. Silakan hubungi kami untuk lembar data terbaru dan konfirmasi ketersediaan."
+
+[contact_get_in_touch]
+other = "Hubungi Kami"
+[contact_intl]
+other = "Departemen Internasional"
+[contact_manufacturer]
+other = "Produsen"
+[contact_more_info]
+other = "Hubungi kami untuk informasi lebih lanjut."
+[contact_name]
+other = "Nama Anda *"
+[contact_email]
+other = "Email Anda *"
+[contact_phone]
+other = "Telepon / WhatsApp"
+[contact_company]
+other = "Perusahaan"
+[contact_product]
+other = "Produk yang Anda minati"
+[contact_message]
+other = "Pesan Anda *"
+[contact_submit]
+other = "Hubungi Kami"
+
+[news_views]
+other = "Dilihat"
+[news_author]
+other = "Penulis"
+[news_publish_time]
+other = "Waktu Terbit"
+[news_origin]
+other = "Asal"
+[news_site]
+other = "Situs"
+[news_sidebar_title]
+other = "Berita"
+[news_back]
+other = "Kembali ke Berita"
+[news_read_more]
+other = "Baca Selengkapnya"
+
+[search_results]
+other = "Hasil pencarian untuk"
+[not_found]
+other = "Halaman Tidak Ditemukan"
+[not_found_text]
+other = "Halaman yang Anda cari mungkin telah dipindahkan atau tidak lagi tersedia."
+[back_home]
+other = "Kembali ke Beranda"
+
+# --- product category names (sidebar / footer) ---
+
+[cat_brush_alternator]
+other = "Alternator Bersikat"
+[cat_brushless_alternator]
+other = "Alternator Tanpa Sikat"
+[cat_diesel_generator_set]
+other = "Genset Diesel"
+[cat_50hz_diesel_generator_set]
+other = "Genset Diesel 50HZ"
+[cat_60hz_diesel_generator_set]
+other = "Genset Diesel 60HZ"
+[cat_engine_cummins]
+other = "Mesin Seri Cummins"
+[cat_engine_cummins_2]
+other = "Mesin Cummins"
+[cat_engine_huachai]
+other = "Mesin Seri Huachai"
+[cat_engine_kofo]
+other = "Mesin Seri Kofo"
+[cat_engine_longxin]
+other = "Mesin Seri Longxin"
+[cat_engine_lovol]
+other = "Mesin Seri Lovol"
+[cat_engine_perkins]
+other = "Mesin Seri Perkins"
+[cat_engine_woling]
+other = "Mesin Seri Woling"
+[cat_engine_wuxi]
+other = "Mesin Seri Wuxi"
+[cat_engine_yangdong]
+other = "Mesin Seri Yangdong"
+[cat_engine_yto]
+other = "Mesin Seri Yto"
+[cat_engine_yuchai]
+other = "Mesin Seri Yuchai"
+[cat_engine_yunnei]
+other = "Mesin Seri Yunnei"
+[cat_engine_yuxing]
+other = "Mesin Seri Yuxing"
+
+# --- new UI strings (modern design) ---
+[quote_cta]
+other = "Dapatkan Penawaran"
+[topbar_hours]
+other = "Sen – Sab 08:30–18:00 (GMT+8)"
+[cta_title]
+other = "Membutuhkan genset untuk proyek Anda?"
+[cta_text]
+other = "Sampaikan daya, tegangan, dan aplikasi Anda — engineer kami akan membalas dalam satu hari kerja."
+[cta_button]
+other = "Kirim permintaan penawaran"
+[hero_cta_products]
+other = "Jelajahi produk"
+[hero_cta_quote]
+other = "Minta penawaran"
+[view_details]
+other = "Lihat detail"
+[why_us]
+other = "Mengapa Eastern Lion"
+[why_us_title]
+other = "30+ tahun membangun genset yang selalu beroperasi"
+[why_us_text]
+other = "Dari penggulungan stator hingga uji beban penuh, setiap unit dirakit dan diverifikasi di bengkel kami sendiri di Fujian dan Jiangsu."
+
+[product_center_eyebrow]
+other = "Yang kami produksi"
+[hero_cta_note]
+other = "Balasan dalam satu hari kerja"
+
+[filter_type]
+other = "Tipe"
+[filter_power]
+other = "Daya"
+[filter_hz]
+other = "Frekuensi"
+[filter_all]
+other = "Semua"
+[filter_alternator]
+other = "Alternator"
+[filter_genset]
+other = "Genset"
+[filter_power_50]
+other = "≤ 50 kW"
+[filter_power_200]
+other = "50 – 200 kW"
+[filter_power_500]
+other = "200 – 500 kW"
+[filter_power_1000]
+other = "> 500 kW"
+[filter_models]
+other = "model"
+[filter_empty]
+other = "Tidak ada model yang cocok dengan filter ini — silakan hubungi kami untuk peringkat daya lainnya."
+[products_coming_soon]
+other = "Rangkaian produk sedang diperbarui. Silakan hubungi kami untuk katalog lengkap."
+
+[related_title]
+other = "Model terkait"
+[inquiry_title]
+other = "Membutuhkan penawaran?"
+[inquiry_text]
+other = "Kirimkan daya, tegangan, dan aplikasi kepada kami — engineer kami akan membalas dalam satu hari kerja."
+[inquiry_button]
+other = "Minta penawaran"
+[inquiry_whatsapp]
+other = "Chat via WhatsApp"
+
+[search_empty]
+other = "Tidak ada halaman yang cocok. Coba nama model, merek mesin, atau rentang daya."
+[search_loading]
+other = "Mencari…"
+[search_all]
+other = "Lihat semua produk"
+
+[form_required]
+other = "Harap lengkapi kolom yang ditandai."
+[form_name_required]
+other = "Harap masukkan nama Anda."
+[form_email]
+other = "Harap masukkan alamat email yang valid."
+[form_message_required]
+other = "Harap beri tahu kami apa yang Anda butuhkan."
+[form_success_title]
+other = "Terima kasih, permintaan penawaran Anda telah terkirim"
+[form_success_text]
+other = "Engineer penjualan kami telah menerima permintaan Anda dan akan membalas dalam satu hari kerja. Email konfirmasi dengan nomor referensi permintaan Anda sedang dikirim ke kotak masuk Anda."
+[form_again]
+other = "Kirim permintaan lain"
+
+
+[latest_news]
+other = "Berita terkini"
+
+[spec_at_a_glance]
+other = "Ringkasan spesifikasi"
+[spec_category]
+other = "Kategori"
+[spec_type]
+other = "Tipe"
+[spec_frequency]
+other = "Frekuensi"
+[spec_power]
+other = "Rentang daya"
+[spec_models]
+other = "Model"
+[spec_note]
+other = "Rentang daya diambil dari tabel standar 50 / 60 Hz pada setiap halaman produk. Tegangan dan peringkat daya lainnya tersedia atas permintaan."
+
+[skip_to_content]
+other = "Langsung ke konten"
+
+[search_button]
+other = "Cari"
+[pager]
+other = "Model lainnya"
+[pager_prev]
+other = "Sebelumnya"
+[pager_next]
+other = "Berikutnya"
+
+[search_model]
+other = "Model"
+
+[jump_to_model]
+other = "Lompat ke model"
+
+[alt_workshop]
+other = "Produksi alternator Eastern Lion"
+[alt_products]
+other = "Alternator tanpa sikat Eastern Lion"
+[alt_packing]
+other = "Pengemasan dan pengujian Eastern Lion"
+
+[search_cats]
+other = "Kategori"
+[coverage_title]
+other = "Seri mana yang mencakup rentang daya mana?"
+[footer_qr]
+other = "Pindai untuk menghubungi tim penjualan kami"
+
+[service_process]
+other = "Bagaimana kami bekerja sama dengan Anda"
+[step1_title]
+other = "Kebutuhan"
+[step1_text]
+other = "Sampaikan daya, tegangan, frekuensi, dan aplikasi Anda — atau kirimkan model dari rangkaian kami."
+[step2_title]
+other = "Solusi & penawaran"
+[step2_text]
+other = "Engineer kami memilih mesin, alternator, dan pengontrol, lalu mengirimkan penawaran lengkap beserta waktu produksi."
+[step3_title]
+other = "Produksi & pengujian"
+[step3_text]
+other = "Unit dirakit di bengkel kami sendiri dan diuji beban sebelum keluar dari pabrik."
+[step4_title]
+other = "Pengiriman & dukungan"
+[step4_text]
+other = "Pengiriman laut atau udara, panduan komisioning, suku cadang, dan dukungan teknis seumur hidup."
+[applications]
+other = "Aplikasi"
+[app1_alt]
+other = "Genset Eastern Lion"
+[app2_alt]
+other = "Pengemasan dan ekspor Eastern Lion"
+[app3_alt]
+other = "Basis produksi Eastern Lion"
+
+[app1_title]
+other = "Aplikasi 1"
+[app1_text]
+other = "Contoh penggunaan di dalam negeri: proyek Terowongan Enshi China Railway Twelve Bureau, proyek Jembatan Sungai Changjiang China Railway Thirteen Bureau, Kantor Pajak Nasional Hubei, Rumah Sakit Tongji Wuhan, Sekolah Menengah Ketiga Wenzhou Zhejiang, Apartemen Lingkun Zhejiang"
+[app2_title]
+other = "Aplikasi 2"
+[app2_text]
+other = "Proyek Jembatan Jalan Tol Sungai Yangtze Hubei dari China Railway Thirteen Bureau."
+[app3_title]
+other = "Aplikasi 3"
+[app3_text]
+other = "Proyek Terowongan Enshi dari China Railway Twelve Bureau."
+
+[faq_jump]
+other = "Lompat ke pertanyaan"
+[faq_cta_title]
+other = "Tidak menemukan jawabannya?"
+[faq_cta_text]
+other = "Kirimkan daya, tegangan, dan aplikasi kepada kami dan engineer kami akan membalas dalam satu hari kerja."
+[faq_cta_button]
+other = "Tanyakan kepada engineer kami"
+
+[more_news]
+other = "Berita lainnya"
+
+[contact_drawing]
+other = "Referensi gambar / spesifikasi (opsional)"
+[contact_drawing_hint]
+other = "Sebutkan nomor gambar atau lampirkan berkasnya saat membalas email kami — engineer kami kemudian menghitung penawaran sesuai gambar Anda."
+
+[zoom_image]
+other = "Klik untuk memperbesar"
+[video_facade]
+other = "Putar video"
+
+[video_title]
+other = "Lihat mesin kami"
+[video_intro]
+other = "Video tur pabrik, lini produksi, dan pengujian genset. Pemutar hanya dimuat saat Anda menekan tombol putar."
+[video_1]
+other = "Genset dan pengemasan"
+[video_2]
+other = "Lini produksi"
+[video_3]
+other = "Basis produksi"
+
+[compare_add]
+other = "Tambahkan ke perbandingan"
+[compare_clear]
+other = "Hapus"
+[compare_open]
+other = "Bandingkan"
+[compare_models]
+other = "model"
+[compare_open_model]
+other = "Buka"
+[compare_title]
+other = "Perbandingan model"
+[compare_power]
+other = "Rentang daya"
+[compare_freq]
+other = "Frekuensi"
+[compare_count]
+other = "Model"
+[compare_engine]
+other = "Mesin"
+[compare_alternator]
+other = "Alternator"
+[compare_controller]
+other = "Pengontrol"
+
+[site_short_name]
+other = "Eastern Lion"
+[seo_taxonomy_desc]
+other = "Jelajahi kategori produk Eastern Lion: genset diesel, alternator bersikat, dan alternator tanpa sikat dari 2 kW hingga 2000 kW, buatan Tiongkok."
+[seo_tag_desc]
+other = "Berita dan pembaruan produk dari Fuan Eastern Lion Electric Machines Co., Ltd, dikelompokkan menurut topik."
+[alt_factory]
+other = "Pabrik genset Eastern Lion di Fuan, Fujian"
+
+[breadcrumb_here]
+other = "Anda berada di sini:"
+[footer_about]
+other = "Tentang Kami"
+[spec_genset]
+other = "Spesifikasi Genset"
+[spec_engine]
+other = "Mesin"
+[spec_alternator]
+other = "Alternator Tanpa Sikat"
+[spec_controller]
+other = "Pengontrol"
+[spec_datasheet]
+other = "Lembar data"
+[spec_detail]
+other = "Detail"
+[col_model]
+other = "Model"
+[col_prime_kw]
+other = "Daya primer (kW)"
+[col_prime_kva]
+other = "Daya primer (kVA)"
+[col_standby_kw]
+other = "Daya cadangan (kW)"
+[col_standby_kva]
+other = "Daya cadangan (kVA)"
+[col_engine_model]
+other = "Model mesin"
+[col_engine_power]
+other = "Daya mesin (kW)"
+[col_alt_model]
+other = "Model alternator"
+[col_alt_power]
+other = "Daya alternator (kW)"
+[col_controller]
+other = "Pengontrol"
+[col_datasheet]
+other = "Lembar data"
+[col_50hz_kw]
+other = "Keluaran 50Hz (kW)"
+[col_50hz_kva]
+other = "Keluaran 50Hz (kVA)"
+[col_60hz_kw]
+other = "Keluaran 60Hz (kW)"
+[col_60hz_kva]
+other = "Keluaran 60Hz (kVA)"
+[col_sae_size]
+other = "Ukuran SAE"
+[col_core_length]
+other = "Panjang inti (mm)"
+[news_center_title]
+other = "Pusat Berita"
+
+[finder_eyebrow]
+other = "Pencarian daya"
+[finder_title]
+other = "Model mana yang menangani beban Anda?"
+[finder_text]
+other = "Ketik daya yang Anda butuhkan dan kami akan menampilkan setiap model dalam rentang ini yang mampu menanganinya — beserta mesin, alternator, dan pengontrol di balik setiap model."
+[finder_quick]
+other = "Beban umum"
+[finder_kw]
+other = "Daya yang dibutuhkan"
+[finder_kw_ph]
+other = "mis. 200"
+[finder_hz]
+other = "Frekuensi"
+[finder_go]
+other = "Temukan model"
+[finder_head]
+other = "{n} seri mencakup {kw} kW pada {hz} Hz"
+[finder_head_one]
+other = "1 seri mencakup {kw} kW pada {hz} Hz"
+[finder_more]
+other = "+{n} model lain dalam seri ini mencakup beban ini"
+[finder_open]
+other = "Buka lembar spesifikasi"
+[finder_inquire]
+other = "Dapatkan penawaran"
+[finder_none]
+other = "Tidak ada model dalam rentang ini yang mencakup {kw} kW."
+[finder_none_closest]
+other = "Yang paling mendekati adalah {model} ({kw} kW) — beri tahu kami beban Anda dan engineer kami akan menghitung ukurannya untuk Anda."
+[finder_none_max]
+other = "Kirimkan beban Anda dan kami akan mengajukan penawaran untuk solusi khusus atau sistem paralel."
+[finder_model_standby]
+other = "cadangan"
+[finder_model_prime]
+other = "primer"
+[finder_model_output]
+other = "keluaran"
+[finder_more_series]
+other = "Tampilkan {n} seri lagi"
+
+[search_spec]
+other = "Model yang mencakup {kw} kW pada {hz} Hz"
+[search_spec_none]
+other = "Tidak ada model yang mencakup {kw} kW — beri tahu kami beban Anda dan kami akan menghitung ukurannya."
+[search_cover]
+other = "cadangan"
+[search_standby]
+other = "cadangan"
+[search_prime]
+other = "primer"
+[search_output]
+other = "keluaran"
+[inquiry_power]
+other = "Daya yang dibutuhkan"
+[model_nav_label]
+other = "Model sebelahnya"
+[model_nav_hint]
+other = "Pilih model di tabel untuk melihat ukuran di sebelahnya."
+[model_nav_current]
+other = "saat ini"
+[model_nav_up]
+other = "lebih besar"
+[model_nav_down]
+other = "lebih kecil"
+[model_nav_same]
+other = "daya sama"
+[contact_models]
+other = "Model kandidat"
+[contact_model_add_btn]
+other = "Tambah"
+[inquiry_models]
+other = "Model"
+[compare_quote]
+other = "Minta penawaran untuk {n} model ini"
+
+[spec_series]
+other = "Seri"
+[download_all_title]
+other = "Seluruh daftar spesifikasi dalam satu berkas"
+[download_all_text]
+other = "Setiap model dari setiap seri lengkap dengan peringkat daya, mesin, alternator, dan pengontrolnya — satu berkas csv untuk seluruh katalog."
+[download_all_button]
+other = "Unduh semua spesifikasi (CSV)"
+[download_file]
+other = "Berkas"
+[download_csv]
+other = "CSV"
+[download_print]
+other = "Cetak / PDF"
+[download_title_link]
+other = "Pusat Unduhan"
+[preview_title]
+other = "Periksa permintaan penawaran Anda sebelum dikirim"
+[preview_hint]
+other = "Begini cara permintaan Anda sampai ke engineer kami — Anda masih dapat mengubah teksnya."
+[preview_mail]
+other = "Buka di aplikasi email saya"
+[preview_copy]
+other = "Salin teks"
+[preview_back]
+other = "Kembali ke formulir"
+[preview_copied]
+other = "Disalin ke papan klip."
+[inquiry_salutation]
+other = "Kepada tim penjualan Eastern Lion,"
+[inquiry_interested]
+other = "Saya tertarik dengan genset berikut:"
+[inquiry_model]
+other = "Model"
+[inquiry_required_power]
+other = "Daya yang dibutuhkan"
+[inquiry_drawing]
+other = "Referensi gambar / spesifikasi"
+[inquiry_message]
+other = "Pesan"
+[inquiry_contact]
+other = "Kontak"
+[inquiry_name]
+other = "Nama"
+[inquiry_company]
+other = "Perusahaan"
+[inquiry_phone]
+other = "Telepon / WhatsApp"
+[inquiry_email]
+other = "Email"
+[inquiry_footer]
+other = "Dikirim dari easternlion.cn"
+[inquiry_subject]
+other = "Permintaan penawaran genset"
+[finder_title_slim]
+other = "Tidak yakin model mana yang cocok?"
+[finder_fold_title]
+other = "Temukan model yang menangani beban saya"
+[compare_selected]
+other = "dipilih"
+[resume_models]
+other = "Anda sebelumnya melihat"
+[resume_continue]
+other = "Lanjutkan permintaan"
+[resume_close]
+other = "Tutup"
+[preview_whatsapp]
+other = "Kirim via WhatsApp"
+[preview_download]
+other = "Unduh permintaan"
+[contact_send]
+other = "Kirim permintaan"
+[preview_send]
+other = "Kirim permintaan"
+[preview_failed]
+other = "Permintaan tidak dapat dikirim secara otomatis. Silakan gunakan salah satu opsi di bawah, atau kirim email ke sales@easternlion.cn."
+[form_success_receipt]
+other = "Tampilkan apa yang kami terima"
+[contact_sending]
+other = "Mengirim…"
+[mm_model]
+other = "Model"
+[mm_load]
+other = "Beban (kW)"
+[mm_hz]
+other = "Frekuensi"
+[contact_models_hint]
+other = "Tambahkan setiap model yang ingin Anda mintakan penawarannya — masing-masing dengan daya dan frekuensinya sendiri jika berbeda. Engineer kami akan membalas dengan harga dan waktu produksi untuk masing-masing model."
+[contact_model_add]
+other = "Tambahkan model lain (mis. GF/GFS-C200)"
+[service_schema_type]
+other = "Pasokan genset, suku cadang, dan layanan purna jual"
+[footer_whatsapp]
+other = "WhatsApp"
+[contact_whatsapp]
+other = "WhatsApp"
+[product_key_specs]
+other = "Spesifikasi utama"
+[ks_power]
+other = "Rentang daya"
+[ks_frequency]
+other = "Frekuensi"
+[ks_models]
+other = "Model"
+[ks_engine]
+other = "Mesin"
+[ks_alternator]
+other = "Alternator"
+[ks_controller]
+other = "Pengontrol"
+[ks_warranty]
+other = "Garansi"
+[ks_warranty_value]
+other = "1 tahun atau 1000 jam"
+[ks_options]
+other = "Opsi"
+[ks_options_value]
+other = "Rangka terbuka, canopy senyap, trailer, ATS, dan sistem paralel"
+[ks_moq]
+other = "Jumlah pesanan minimum"
+[ks_moq_value]
+other = "1 unit"
+[product_copy_link]
+other = "Salin tautan"
+[product_link_copied]
+other = "Tautan disalin"
+[guide_title]
+other = "Cara memilih seri ini"
+[guide_intro]
+other = "Enam keputusan mencakup hampir semua pemesanan genset. Berikut cara mengambil setiap keputusan — dan apa yang seri ini tawarkan kepada Anda."
+[guide_col_decision]
+other = "Keputusan Anda"
+[guide_col_how]
+other = "Cara menentukannya"
+[guide_col_this]
+other = "Seri ini"
+[guide_engine]
+other = "Merek mesin"
+[guide_engine_how]
+other = "Mesin menentukan ketersediaan suku cadang dan waktu tanggap mitra layanan Anda. Utamakan jaringan layanan, harga di urutan kedua."
+[guide_engine_none]
+other = "Hanya alternator"
+[guide_engine_count]
+other = "%v model dalam seri ini"
+[guide_duty]
+other = "Primer atau cadangan"
+[guide_duty_how]
+other = "Daya primer untuk genset yang beroperasi 8 hingga 12 jam sehari, daya cadangan untuk cadangan darurat. Pilih ukuran genset agar beban Anda berada pada 70 hingga 80 % dari peringkat daya cadangan — hal itu menjaga mesin pada beban 50 % hingga 75 %, di mana konsumsi bahan bakar paling efisien."
+[guide_duty_value]
+other = "Cadangan %v–%v kW, primer %v–%v kW"
+[guide_voltage]
+other = "Tegangan dan frekuensi"
+[guide_voltage_how]
+other = "400/230 V pada 50 Hz untuk Asia, Eropa, Afrika, dan Timur Tengah; 230/400 V pada 60 Hz untuk Amerika. Alternator dan panel kendali harus sama-sama sesuai dengan jaringan yang Anda hubungkan."
+[guide_voltage_50]
+other = "50 Hz, 400/230 V"
+[guide_voltage_60]
+other = "60 Hz, 230/400 V"
+[guide_enclosure]
+other = "Rumah genset"
+[guide_enclosure_how]
+other = "Rangka terbuka untuk ruang mesin, canopy senyap untuk lokasi perkotaan di luar ruang (sekitar 65 dB(A) pada jarak 7 m), kontainer untuk blok 1000 kW, dan trailer untuk genset yang berpindah tempat."
+[guide_enclosure_value]
+other = "Opsi rangka terbuka, canopy senyap, trailer, dan kontainer"
+[guide_starting]
+other = "Penghidupan dan transfer"
+[guide_starting_how]
+other = "Genset darurat memerlukan penghidupan listrik dan saklar transfer otomatis, jika tidak genset akan menganggur sampai jaringan listrik padam. Penghidupan manual dan udara tetap tersedia untuk keperluan khusus."
+[guide_starting_value]
+other = "Penghidupan listrik, ATS (otomatis dan manual) atas permintaan"
+[guide_parallel]
+other = "Paralelisasi"
+[guide_parallel_how]
+other = "Lebih dari satu genset berarti sistem manajemen daya, saklar transfer yang lebih besar, dan panel kendali yang memungkinkan genset berbagi beban dan saling mengambil alih."
+[guide_parallel_value]
+other = "Sistem paralel dengan manajemen daya"
+[guide_environment]
+other = "Kondisi lokasi"
+[guide_environment_how]
+other = "Setiap 1000 m ketinggian dan setiap 10 °C di atas suhu ambien standar mengurangi sekitar 3 % dari peringkat daya, dan lokasi dengan semburan garam atau berdebu memerlukan canopy serta interval layanan yang lebih singkat."
+[guide_environment_value]
+other = "Peringkat standar pada 0–50 °C, penurunan daya atas permintaan"
+[guide_foot]
+other = "Kirimkan beban, tegangan, dan lokasi Anda kepada kami, dan kami akan mengirimkan model yang tepat, harga, dan waktu pengirimannya."
+[wa_from]
+other = "Permintaan penawaran dari easternlion.cn"
+[wa_series]
+other = "Seri"
+[wa_model]
+other = "Model"
+[wa_power]
+other = "Daya yang dibutuhkan"
+[wa_standby]
+other = "Peringkat daya cadangan"
+[wa_link]
+other = "Tautan"
+[search_guide]
+other = "Cara memilih"
+[search_guide_more]
+other = "Baca panduan lengkap"
+[search_compare]
+other = "Bandingkan"
+[search_models]
+other = "model"
+[inquiry_ref_label]
+other = "Nomor referensi permintaan Anda:"
+[form_success_whatsapp]
+other = "Membutuhkannya lebih cepat? Kirim pesan kepada kami via"
+[app_eyebrow]
+other = "Aplikasi"
+[app_index_title]
+other = "Genset menurut aplikasi"
+[app_index_text]
+other = "Mulai dari pekerjaan yang harus dilakukan genset Anda. Setiap halaman aplikasi menampilkan daya yang Anda butuhkan, model daya cadangan yang mencakupnya, poin teknis penting di lokasi, dan model yang kami produksi untuknya."
+[app_sizing_title]
+other = "Cara menentukan ukuran genset"
+[app_sizing_text]
+other = "Untuk daya cadangan: genset harus menanggung seluruh beban terhubung beserta arus awal, sehingga kami menentukan ukurannya di atas beban berjalan. Tabel di bawah memuat peringkat daya cadangan model sungguhan untuk setiap beban khas pada aplikasi ini."
+[app_sizing_load]
+other = "Beban khas"
+[app_sizing_standby]
+other = "Daya cadangan yang perlu dipertimbangkan"
+[app_sizing_models]
+other = "Model yang mencakupnya"
+[app_sizing_note]
+other = "Peringkat daya mengikuti ISO 8528. Model akhir bergantung pada tegangan, otonomi bahan bakar, desain rumah genset, dan suhu ambien - kirimkan beban Anda kepada kami dan kami akan mengonfirmasinya secara tertulis."
+[app_sizing_oversize]
+other = "Hubungi kami untuk solusi di atas 2000 kW"
+[app_requirements_title]
+other = "Yang dibutuhkan aplikasi ini"
+[app_series_title]
+other = "Seri yang digunakan untuk pekerjaan ini"
+[app_model_word]
+other = "model"
+[app_faq_title]
+other = "Pertanyaan yang sering diajukan pembeli tentang aplikasi ini"
+[app_fact_load]
+other = "Rentang daya"
+[app_fact_duty]
+other = "Mode operasi"
+[app_fact_duty_value]
+other = "Cadangan"
+[app_fact_hz]
+other = "Frekuensi"
+[app_fact_engine]
+other = "Mesin"
+[app_cta_title]
+other = "Sampaikan beban dan lokasi Anda"
+[app_cta_text]
+other = "Kirimkan beban berjalan, tegangan, dan lokasi tempat genset akan beroperasi. Engineer kami akan menjawab dengan model, tata letak, dan harga dalam satu hari kerja."
+[app_cta_button]
+other = "Minta penawaran"
+[app_wa_text]
+other = "Permintaan penawaran: genset %s"
+[app_other_title]
+other = "Aplikasi lainnya"
+[datasheet_sub]
+other = "Lembar spesifikasi genset"
+[datasheet_print]
+other = "Cetak atau simpan sebagai PDF"
+[datasheet_back]
+other = "Kembali ke seri"
+[datasheet_contact]
+other = "Permintaan Anda"
+[datasheet_note]
+other = "Catatan"
+[datasheet_note_text]
+other = "Peringkat daya mengikuti ISO 8528. Konfigurasi akhir bergantung pada tegangan, otonomi bahan bakar, desain rumah genset, dan suhu ambien."
+[download_datasheet]
+other = "Lembar data"
+[float_whatsapp]
+other = "WhatsApp"
+[mm_covers]
+other = "Model yang mencakupnya:"
+[mm_no_cover]
+other = "Tidak ada model dalam katalog yang mencakup beban tersebut."
+[mm_picked]
+other = "sudah dipilih"
+[ui_close]
+other = "Tutup"
+[ui_remove]
+other = "Hapus"
+[lang_label]
+other = "Ganti bahasa"
+[nav_menu]
+other = "Menu"
+
+# ---------------------------------------------------------------
+#  Generated sentences and language-model files (added with the
+#  twelve-language release). Keys whose value holds printf
+#  placeholders — *_tpl, llms_intro, llms_power_line, llms_csv_line,
+#  llms_url_line — must keep the %[n] verbs exactly where they are.
+# ---------------------------------------------------------------
+[faq_q]
+other = "T"
+[list_sep]
+other = ", "
+[and_pair]
+other = "%[1]v dan %[2]v"
+[kind_genset]
+other = "genset diesel"
+[kind_alternator]
+other = "alternator"
+[app_summary_tpl]
+other = "Untuk %[1]s, genset diesel daya cadangan yang Anda butuhkan berkisar dari %[2]v hingga %[3]v kW; Eastern Lion membangun genset ini dengan mesin %[4]s dalam %[5]s Hz, pada konfigurasi rangka terbuka, canopy senyap, trailer, ATS, dan paralel, dan setiap genset diuji beban penuh sebelum pengiriman."
+[guide_sum_engine]
+other = "%[1]s adalah seri genset diesel %[2]v Hz dari Eastern Lion, dibangun dengan mesin %[3]s, mencakup %[4]v hingga %[5]v kW dalam %[6]d model. Seri ini digunakan untuk %[7]s."
+[guide_sum_plain]
+other = "%[1]s adalah seri %[2]v Hz %[3]s dari Eastern Lion yang mencakup %[4]v hingga %[5]v kW dalam %[6]d model, dipasok ke %[7]s."
+
+# ---- llms.txt (one markdown body per language, kept as a literal string) ----
+[llms_ftitle]
+other = "teks situs lengkap"
+[llms_intro]
+other = '''Merek: Eastern Lion (福建东方电机). Situs: %[1]s
+Didirikan pada 1987 di Fuan, Fujian. Produsen genset diesel, alternator bersikat, dan
+alternator tanpa sikat, 2 kW hingga 2000 kW, 50 Hz dan 60 Hz. Bengkel sendiri: produksi
+alternator, perakitan genset, pengujian beban penuh. Sekitar 15.000 alternator dan 2.000
+genset per tahun. 35 basis penjualan dan layanan di Tiongkok. Ekspor ke Rusia, Indonesia,
+Filipina, Afrika Selatan, Pakistan, Inggris, dan pasar lainnya.
+
+Kontak: sales@easternlion.cn, +86-13950513258, service@easternlion.cn.
+Pabrik: No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China.
+Kantor internasional: Building #2, 4/F, Office 23, Part 12, Rongxinyangzhong City, East
+Yangzhong Road, Yangzhong Street, Taijiang District, Fuzhou, Fujian, China.'''
+[llms_body]
+other = '''# Eastern Lion — Fuan Eastern Lion Electric Machines Co., Ltd
+
+> Fuan Eastern Lion Electric Machines Co., Ltd (merek: Eastern Lion, 福建东方电机) adalah
+> produsen genset diesel, alternator bersikat, dan alternator tanpa sikat asal Tiongkok,
+> didirikan pada 1987 di Fuan, Fujian. Perusahaan membangun alternator dan genset lengkap di
+> bengkelnya sendiri, menguji beban setiap mesin sebelum pengiriman, dan menjualnya ke seluruh
+> dunia — 2 kW hingga 2000 kW, 50 Hz dan 60 Hz, dengan pilihan mesin Cummins, Perkins, Yuchai,
+> YTO, Weichai, Kofo, Huachai, Longxin, Lovol, Woling, Yangdong, Yunnei, Yuxing, dan Kaixun.
+
+## Apa isi situs ini
+
+- 44 seri produk, masing-masing dengan tabel spesifikasi lengkap (model, daya primer dan
+  daya cadangan, mesin, alternator, pengontrol) serta berkas csv yang dapat diunduh
+- Pencarian daya memasangkan beban dalam kW dengan setiap model yang mampu menanganinya
+- Alat perbandingan menampilkan hingga empat seri berdampingan
+- Setiap daftar spesifikasi tersedia dalam format csv di /id/download/
+
+## Fakta utama
+
+| | |
+| --- | --- |
+| Didirikan | 1987 (pabrik listrik Hanyang, Fuan) |
+| Rentang produk | 2 kW hingga 2000 kW, 50 Hz dan 60 Hz |
+| Kapasitas alternator | sekitar 15.000 alternator per tahun |
+| Kapasitas genset | sekitar 2.000 genset per tahun |
+| Jaringan layanan | 35 basis penjualan dan layanan di Tiongkok |
+| Pasar | Tiongkok serta ekspor ke Rusia, Indonesia, Filipina, Afrika Selatan, Pakistan, Inggris, dan lainnya |
+| Pabrik | No.36 XiaYang, BanZhong Industry Area, Fuan, Fujian, China |
+| Kantor internasional | Fuzhou, Fujian, China |
+| Telepon | +86-13950513258 |
+| Email | sales@easternlion.cn (layanan: service@easternlion.cn) |
+
+## Keluarga produk
+
+- Genset diesel — /id/products/diesel-generator-set/ (15 seri mesin, 50 Hz)
+- Genset 60 Hz — /id/products/60hz-diesel-generator-set/ (6 seri untuk Amerika dan sebagian Asia)
+- Alternator bersikat — /id/products/brush-alternator/ (seri STC, 8 kW hingga 500 kW)
+- Alternator tanpa sikat — /id/products/brushless-alternator/ (seri EL, kopling SAE)
+
+## Aplikasi
+
+- Genset menurut aplikasi — /id/applications/ (daya yang Anda butuhkan, model yang mencakupnya, dan poin teknis yang menentukan pemesanan)
+- Pusat data — /id/applications/data-centre/
+- Rumah sakit — /id/applications/hospital/
+- Situs telekomunikasi — /id/applications/telecom/
+- Tambang dan lokasi penggalian — /id/applications/mining/
+- Hotel dan resor — /id/applications/hotel/
+- Lokasi konstruksi — /id/applications/construction/
+
+## Perusahaan
+
+- Profil perusahaan — /id/about/
+- Riwayat perkembangan — /id/about/history/
+- Tim kami — /id/about/team/
+- Sertifikasi dan sertifikat — /id/about/qualification/
+- Bengkel kami — /id/about/workshop/
+- Layanan purna jual — /id/service/
+- Video pabrik — /id/video/
+- Pertanyaan yang sering diajukan — /id/faq/
+- Berita — /id/news/
+- Kontak — /id/contact/
+
+## Unduhan
+
+- Pusat unduhan dengan seluruh daftar spesifikasi dalam format csv — /id/download/
+- Semua model dari semua seri dalam satu berkas — /id/download/all-specs.csv
+- Teks lengkap situs ini untuk model bahasa — /id/llms-full.txt
+
+## Cara menghubungi kami
+
+Permintaan penjualan: sales@easternlion.cn — permintaan yang terstruktur (model, beban,
+frekuensi, referensi gambar) dijawab dalam satu hari kerja. Formulir kontak di /id/contact/
+mengirimkan permintaan langsung ke kotak masuk penjualan dan menawarkan WhatsApp sebagai
+kanal kedua.'''
+
+# ---- llms-full.txt (the long file is generated; only its prose lives here) ----
+[llms_products_h]
+other = "Produk"
+[llms_power_line]
+other = "Rentang daya: %[1]v hingga %[2]v kW. Frekuensi: %[3]v Hz. Tipe: %[4]v. URL seri: %[5]s"
+[llms_csv_line]
+other = "Daftar spesifikasi (csv): %[1]sspec.csv"
+[llms_applications_h]
+other = "Aplikasi"
+[llms_url_line]
+other = "URL: %[1]s"
+[llms_choose_h]
+other = "Cara memilih seri"
+[llms_choose_text]
+other = '''Setiap pemesanan genset pada dasarnya terdiri dari enam keputusan: merek mesin (menentukan
+suku cadang dan waktu tanggap mitra layanan Anda), mode operasi primer atau cadangan (primer
+beroperasi 8 hingga 12 jam sehari, cadangan untuk keadaan darurat; pilih ukuran genset agar
+beban berada pada 70 hingga 80 % dari peringkat daya cadangan), tegangan dan frekuensi
+(400/230 V pada 50 Hz, 230/400 V pada 60 Hz), rumah genset (rangka terbuka, canopy senyap,
+kontainer, trailer), penghidupan dan transfer (penghidupan listrik dengan saklar transfer
+otomatis untuk genset cadangan), serta paralelisasi (lebih dari satu genset memerlukan sistem
+manajemen daya). Kondisi lokasi juga berpengaruh: setiap 1000 m ketinggian dan setiap 10 °C
+di atas suhu ambien standar mengurangi sekitar 3 % dari peringkat daya.
+
+Garansi: 1 tahun atau 1000 jam. Jumlah pesanan minimum: 1 unit. Opsi rumah genset: rangka
+terbuka, canopy senyap, trailer, dan kontainer. Penghidupan: listrik, dengan ATS atas
+permintaan. Sistem paralel dengan manajemen daya tersedia.'''
+[llms_faq_h]
+other = "Pertanyaan yang sering diajukan"
+[llms_service_h]
+other = "Layanan dan perusahaan"
+[llms_contact_line]
+other = "Kontak: sales@easternlion.cn — permintaan penawaran dijawab dalam satu hari kerja."
