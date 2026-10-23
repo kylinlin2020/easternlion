@@ -904,39 +904,39 @@ other = '''# 东方电机 — 福建东方电机股份有限公司
 
 ## 产品系列
 
-- 柴油发电机组 — /zh/products/diesel-generator-set/（15 个发动机系列，50Hz）
-- 60Hz 发电机组 — /zh/products/60hz-diesel-generator-set/（6 个系列，面向美洲及部分亚洲市场）
-- 有刷交流发电机 — /zh/products/brush-alternator/（STC 系列，8kW – 500kW）
-- 无刷交流发电机 — /zh/products/brushless-alternator/（EL 系列，SAE 法兰）
+- [柴油发电机组](https://www.easternlion.cn/zh/products/diesel-generator-set/)（15 个发动机系列，50Hz）
+- [60Hz 发电机组](https://www.easternlion.cn/zh/products/60hz-diesel-generator-set/)（6 个系列，面向美洲及部分亚洲市场）
+- [有刷交流发电机](https://www.easternlion.cn/zh/products/brush-alternator/)（STC 系列，8kW – 500kW）
+- [无刷交流发电机](https://www.easternlion.cn/zh/products/brushless-alternator/)（EL 系列，SAE 法兰）
 
 ## 应用场景
 
-- 按应用场景选择发电机组 — /zh/applications/（每个场景给出所需功率、可选机型与技术要点）
-- 数据中心 — /zh/applications/data-centre/
-- 医院 — /zh/applications/hospital/
-- 通信站点 — /zh/applications/telecom/
-- 矿山与采石场 — /zh/applications/mining/
-- 酒店与度假村 — /zh/applications/hotel/
-- 建筑工地 — /zh/applications/construction/
+- [按应用场景选择发电机组](https://www.easternlion.cn/zh/applications/)（每个场景给出所需功率、可选机型与技术要点）
+- [数据中心](https://www.easternlion.cn/zh/applications/data-centre/)
+- [医院](https://www.easternlion.cn/zh/applications/hospital/)
+- [通信站点](https://www.easternlion.cn/zh/applications/telecom/)
+- [矿山与采石场](https://www.easternlion.cn/zh/applications/mining/)
+- [酒店与度假村](https://www.easternlion.cn/zh/applications/hotel/)
+- [建筑工地](https://www.easternlion.cn/zh/applications/construction/)
 
 ## 公司
 
-- 公司简介 — /zh/about/
-- 发展历程 — /zh/about/history/
-- 我们的团队 — /zh/about/team/
-- 资质证书 — /zh/about/qualification/
-- 车间实景 — /zh/about/workshop/
-- 售后服务 — /zh/service/
-- 工厂视频 — /zh/video/
-- 常见问题 — /zh/faq/
-- 新闻资讯 — /zh/news/
-- 联系我们 — /zh/contact/
+- [公司简介](https://www.easternlion.cn/zh/about/)
+- [发展历程](https://www.easternlion.cn/zh/about/history/)
+- [我们的团队](https://www.easternlion.cn/zh/about/team/)
+- [资质证书](https://www.easternlion.cn/zh/about/qualification/)
+- [车间实景](https://www.easternlion.cn/zh/about/workshop/)
+- [售后服务](https://www.easternlion.cn/zh/service/)
+- [工厂视频](https://www.easternlion.cn/zh/video/)
+- [常见问题](https://www.easternlion.cn/zh/faq/)
+- [新闻资讯](https://www.easternlion.cn/zh/news/)
+- [联系我们](https://www.easternlion.cn/zh/contact/)
 
 ## 下载
 
-- 全部规格表（CSV）下载中心 — /zh/download/
-- 整本目录一个文件 — /zh/download/all-specs.csv
-- 供语言模型使用的全文 — /zh/llms-full.txt
+- [全部规格表（CSV）下载中心](https://www.easternlion.cn/zh/download/)
+- [整本目录一个文件](https://www.easternlion.cn/zh/download/all-specs.csv)
+- [供语言模型使用的全文](https://www.easternlion.cn/zh/llms-full.txt)
 
 ## 联系方式
 
