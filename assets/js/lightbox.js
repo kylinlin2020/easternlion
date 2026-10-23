@@ -76,6 +76,7 @@
   var gbox = document.createElement('div');
   gbox.className = 'lightbox';
   gbox.id = 'gallery-lightbox';
+  gbox.hidden = true;
   gbox.setAttribute('aria-hidden', 'true');
   gbox.innerHTML =
     '<button class="lightbox-close" type="button" aria-label="' + closeLabel + '">' + closeSvg + '</button>' +

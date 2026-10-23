@@ -4209,20 +4209,18 @@ a.mn-item:hover .mn-name { color: var(--amber-600); }
   background: var(--surface);
 }
 
-/* Lightbox */
-.lightbox {
+/* Gallery lightbox (scoped so the simple [data-lb] lightbox is unaffected) */
+#gallery-lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.95);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s ease, visibility .3s ease;
 }
-.lightbox:not([hidden]) { opacity: 1; visibility: visible; }
+#gallery-lightbox.is-open { display: flex; }
+#gallery-lightbox[hidden] { display: none; }
 .lightbox-close {
   position: absolute;
   top: 24px;
